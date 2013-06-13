@@ -1,0 +1,40 @@
+{% include header-theme-wet-boew-en.html %}            
+
+<div id="wb-core"><div id="wb-core-in" class="equalize">
+<div id="wb-main" role="main"><div id="wb-main-in">
+<!-- MainContentStart -->
+<h1 id="wb-cont">{{ page.title }}</h1>
+
+<ul class="button-group">
+{% if page.content_editable == false %}{% elsif site.content_editable == false and page.content_editable != true %}
+{% elsif page.content_editable == true or site.content_editable == true %}
+<li><a id="edit-page" href="http://prose.io/#wet-boew/wet-boew-jekyll/edit/{{ site.branch }}/{{ page.path }}" class="button"><span class="wb-icon-paper-pencil"></span>Edit this page</a></li>
+{% endif %}
+{% if page.content_revision_history == false %}{% elsif site.content_revision_history == false and page.content_revision_history != true %}
+{% elsif page.content_revision_history == true or site.content_revision_history == true %}
+<li><a href="https://github.com/wet-boew/wet-boew-jekyll/commits/{{ site.branch }}/{{ page.path }}" class="button"><span class="wb-icon-info"></span>Revision history</a></li>
+{% endif %}
+{% if page.content_questions_comments == false %}{% elsif site.content_questions_comments == false and page.content_questions_comments != true %}
+{% elsif page.content_questions_comments == true or site.content_questions_comments == true %}
+<li><a href="https://github.com/wet-boew/wet-boew-jekyll/issues/new" class="button"><span class="wb-icon-question"></span>Questions or comments?</a></li>
+{% endif %}
+</ul>
+
+{{ content }}
+
+{% if page.modified == null or page.modified == '' %}{% elsif page.date_modified == false %}{% elsif site.date_modified == false and page.date_modified != true %}
+{% else %}
+<dl id="wet-date-mod" role="contentinfo">
+<dt>Date modified:</dt><dd><span><time>{{ page.modified }}</time></span></dd>
+</dl>
+{% endif %}
+<div class="clear"></div>
+<!-- MainContentEnd -->
+</div></div>
+{% if page.secondary_menu == false %}{% elsif site.secondary_menu == false and page.secondary_menu != true %}
+{% elsif page.secondary_menu == true or site.secondary_menu == true %}
+{% include secondary-menu-en.html %}
+{% endif %}
+</div></div>
+
+{% include footer-theme-wet-boew-en.html %}  

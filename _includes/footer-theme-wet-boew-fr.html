@@ -1,0 +1,58 @@
+<div id="wb-foot"><div id="wb-foot-in"><footer><h2{% if page.secondary_menu == false %}{% elsif site.secondary_menu == false and page.secondary_menu != true %}{% else %} id="wb-nav"{% endif %}>Pied de page</h2>
+<!-- FooterStart -->
+<nav role="navigation"><div id="wet-sft"><h3>Pied de page du site</h3><div id="wet-sft-in">
+<section><div class="span-2"><h4 class="wet-col-head"><a href="#">À propos de nous</a></h4>
+<ul>
+<li><a href="#">Notre mandat</a></li>
+<li><a href="#">Notre histoire</a></li>
+</ul>
+</div></section>
+<section><div class="span-2"><h4 class="wet-col-head"><a href="#">Contactez-nous</a></h4>
+<address>
+<ul>
+<li><a href="#">Numéros de téléphone</a></li>
+<li><a href="#">Nos bureaux</a></li>
+</ul>
+</address>
+</div></section>
+<section><div class="span-2"><h4 class="wet-col-head"><a href="#">Nouvelles</a></h4>
+<ul>
+<li><a href="#">Communiqués</a></li>
+<li><a href="#">Avix aux médias</a></li>
+<li><a href="#">Multimédia</a></li>
+</ul>
+</div></section>
+<section><div class="span-2"><h4 class="wet-col-head"><a href="#">Restez branchés</a></h4>
+<ul>
+<li><a rel="external" href="#">YouTube</a></li>
+<li><a rel="external" href="#">Twitter</a></li>
+<li><a href="#">Flux</a></li>
+</ul>
+</div></section>
+</div></div></nav>
+<!-- FooterEnd -->
+</footer>
+</div></div></div>
+
+<!-- ScriptsStart -->
+<script src="http://wet-boew.github.io/wet-boew/dist/js/settings.js"></script>
+<!--[if lte IE 8]>
+<script src="http://wet-boew.github.io/wet-boew/dist/theme-wet-boew/js/theme-ie-min.js"></script>
+<script src="http://wet-boew.github.io/wet-boew/dist/js/pe-ap-ie-min.js"></script>
+<script src="http://wet-boew.github.io/wet-boew/dist/js/jquerymobile/jquery.mobile-ie.min.js"></script>
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<script src="http://wet-boew.github.io/wet-boew/dist/theme-wet-boew/js/theme-min.js"></script>
+<script src="http://wet-boew.github.io/wet-boew/dist/js/pe-ap-min.js"></script>
+<script src="http://wet-boew.github.io/wet-boew/dist/js/jquerymobile/jquery.mobile.min.js"></script>
+<!--<![endif]-->
+<!-- ScriptsEnd -->
+
+<!-- CustomScriptsStart -->
+<script src="http://wet-boew.github.io/wet-boew-jekyll/assets/javascripts/global.js"></script>
+{% if page.script_src and page.script_src contains '.js' %}
+<link rel='stylesheet' href='{{ page.script_src }}' />
+{% endif %}
+<!-- CustomScriptsEnd -->
+</body>
+</html>
