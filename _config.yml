@@ -1,9 +1,9 @@
 # standard jekyll configuration
 
-title_en: Documentation - Web Experience Toolkit&#160;(WET)
-title_fr: Documentation - Boîte à outils de l'expérience Web&#160;(BOEW)
-description_en: Documentation for the Web Experience Toolkit (WET).
-description_fr: Documentation pour la Boîte à outils de l'expérience Web (BOEW).
+title_en: "Documentation - Web Experience Toolkit&#160;(WET)"
+title_fr: "Documentation - Boîte à outils de l'expérience Web&#160;(BOEW)"
+description_en: "Documentation for the Web Experience Toolkit (WET)."
+description_fr: "Documentation pour la Boîte à outils de l'expérience Web (BOEW)."
 languages: true
 search: false
 subsite: false
@@ -14,15 +14,15 @@ content_revision_history: true
 content_questions_comments: true
 date_modified: false
 secondary_menu: false
-secondary_menu_include:
-url: http://wet-boew.github.io/wet-boew-documentation/
-repo_name: wet-boew-documentation
-branch: master
+secondary_menu_include: null
+url: "http://wet-boew.github.io/wet-boew-documentation/"
+repo_name: "wet-boew-documentation"
+branch: "master"
 
 #global settings, no need to change these
-root_url: http://wet-boew.github.io/wet-boew-documentation/
-org_name: wet-boew
-prose_url: http://prose.io
+root_url: "http://wet-boew.github.io/wet-boew-documentation/"
+org_name: "wet-boew"
+prose_url: "http://prose.io"
 
 # default build settings for running locally, no need to edit
 pymgemnts: true
