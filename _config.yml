@@ -28,3 +28,5 @@ prose_url: "http://prose.io"
 pymgemnts: true
 exclude: ['README.md']
 
+# Ensure URLs are meaningful
+permalink: /:title
