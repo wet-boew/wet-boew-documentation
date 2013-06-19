@@ -1,5 +1,5 @@
 ---
 published: true
 layout: "default-theme-wet-boew-en"
-filename_root: "index"
+filename_fr: "index-fr"
 ---
