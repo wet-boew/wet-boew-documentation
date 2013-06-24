@@ -2,7 +2,7 @@
 <div id="wet-bc"><h2>Breadcrumb trail</h2><div id="wet-bc-in">
 <ol>
 <li><a href="http://wet-boew.github.io/wet-boew-documentation/index-en.html">Home</a></li>
-{% unless page.url contains 'wet-boew-documentation/index-en.html' %}
+{% unless page.url == '/index-en.html' %}
 <li><a href="http://wet-boew.github.io/wet-boew/wet-boew-documentation/index-en.html">WET documentation</a></li>
 {% endunless %}
 <li>{{ page.title }}</li>
