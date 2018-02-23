@@ -1,58 +1,44 @@
-<div id="wb-foot"><div id="wb-foot-in"><footer><h2{% if page.secondary_menu == false %}{% elsif site.secondary_menu == false and page.secondary_menu != true %}{% else %} id="wb-nav"{% endif %}>Footer</h2>
-<!-- FooterStart -->
-<nav role="navigation"><div id="wet-sft"><h3>Site footer</h3><div id="wet-sft-in">
-<section><div class="span-2"><h4 class="wet-col-head"><a href="#">About us</a></h4>
-<ul>
-<li><a href="#">Our Mandate</a></li>
-<li><a href="#">Our history</a></li>
-</ul>
-</div></section>
-<section><div class="span-2"><h4 class="wet-col-head"><a href="#">Contact us</a></h4>
-<address>
-<ul>
-<li><a href="#">Phone numbers</a></li>
-<li><a href="#">Office locations</a></li>
-</ul>
-</address>
-</div></section>
-<section><div class="span-2"><h4 class="wet-col-head"><a href="#">News</a></h4>
-<ul>
-<li><a href="#">News releases</a></li>
-<li><a href="#">Media advisories</a></li>
-<li><a href="#">Multimedia</a></li>
-</ul>
-</div></section>
-<section><div class="span-2"><h4 class="wet-col-head"><a href="#">Stay connected</a></h4>
-<ul>
-<li><a rel="external" href="#">YouTube</a></li>
-<li><a rel="external" href="#">Twitter</a></li>
-<li><a href="#">Feeds</a></li>
-</ul>
-</div></section>
-</div></div></nav>
-<!-- FooterEnd -->
+<footer role="contentinfo" id="wb-info" class="visible-sm visible-md visible-lg wb-navcurr">
+	<div class="container">
+		<nav role="navigation" class="row">
+			<h2>About this site</h2>
+			<section class="col-sm-3">
+				<h3>Contact us</h3>
+				<ul class="list-unstyled">
+					<li><a href="https://github.com/wet-boew/wet-boew/issues/new">Questions or comments?</a></li>
+				</ul>
+			</section>
+			<section class="col-sm-3">
+				<h3>About</h3>
+				<ul class="list-unstyled">
+					<li><a href="../../index-en.html#about">About the Web Experience Toolkit</a></li>
+					<li><a rel="external" href="http://www.tbs-sct.gc.ca/ws-nw/index-eng.asp">About the Web Standards</a></li>
+				</ul>
+			</section>
+			<section class="col-sm-3">
+				<h3>News</h3>
+				<ul class="list-unstyled">
+					<li><a href="https://github.com/wet-boew/wet-boew/pulse">Recent project activity</a></li>
+					<li><a href="https://github.com/wet-boew/wet-boew/graphs">Project statistics</a></li>
+				</ul>
+			</section>
+			<section class="col-sm-3">
+				<h3>Stay connected</h3>
+				<ul class="list-unstyled">
+					<li><a rel="external" href="https://twitter.com/WebExpToolkit">Twitter</a></li>
+				</ul>
+			</section>		</nav>
+	</div>
 </footer>
-</div></div></div>
 
-<!-- ScriptsStart -->
-<script src="http://wet-boew.github.io/wet-boew/dist/js/settings.js"></script>
-<!--[if lte IE 8]>
-<script src="http://wet-boew.github.io/wet-boew/dist/theme-wet-boew/js/theme-ie-min.js"></script>
-<script src="http://wet-boew.github.io/wet-boew/dist/js/pe-ap-ie-min.js"></script>
-<script src="http://wet-boew.github.io/wet-boew/dist/js/jquerymobile/jquery.mobile-ie.min.js"></script>
-<![endif]-->
-<!--[if gt IE 8]><!-->
-<script src="http://wet-boew.github.io/wet-boew/dist/theme-wet-boew/js/theme-min.js"></script>
-<script src="http://wet-boew.github.io/wet-boew/dist/js/pe-ap-min.js"></script>
-<script src="http://wet-boew.github.io/wet-boew/dist/js/jquerymobile/jquery.mobile.min.js"></script>
+<!--[if gte IE 9 | !IE ]><!-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+<script src="https://wet-boew.github.io/wet-boew/js/wet-boew.js"></script>
 <!--<![endif]-->
-<!-- ScriptsEnd -->
 
-<!-- CustomScriptsStart -->
-<script src="http://wet-boew.github.io/wet-boew-jekyll/assets/javascripts/global.js"></script>
-{% if page.script_src and page.script_src contains '.js' %}
-<link rel='stylesheet' href='{{ page.script_src }}' />
-{% endif %}
-<!-- CustomScriptsEnd -->
+<!--[if lt IE 9]>
+<script src="https://wet-boew.github.io/wet-boew/js/ie8-wet-boew2.js"></script>
+
+<![endif]-->
 </body>
 </html>
