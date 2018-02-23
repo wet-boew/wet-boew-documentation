@@ -1,10 +1,16 @@
-
-<div id="wet-bc"><h2>Breadcrumb trail</h2><div id="wet-bc-in">
-<ol>
-<li><a href="http://wet-boew.github.io/wet-boew-documentation/index-en.html">Home</a></li>
+<nav role="navigation" id="wb-bc" property="breadcrumb">
+	<h2>You are here:</h2>
+	<div class="container">
+		<div class="row">
+			<ol class="breadcrumb">
+				<li>
+					<a href="https://wet-boew.github.io/wet-boew/index-en.html">Home</a>
+				</li>
 {% unless page.url == '/index-en.html' %}
-<li><a href="http://wet-boew.github.io/wet-boew/wet-boew-documentation/index-en.html">Documentation</a></li>
+<li><a href="https://wet-boew.github.io/wet-boew-documentation/index-en.html">Documentation</a></li>
 {% endunless %}
 <li>{{ page.title }}</li>
-</ol>
-</div></div>
+			</ol>
+		</div>
+	</div>
+</nav>

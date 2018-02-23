@@ -11,15 +11,15 @@
 {% assign content_questions_comments = true %}
 {% endif %}
 {% if content_editable == true or content_revision_history == true or content_questions_comments == true %}
-<ul class="button-group">
+<ul class="list-inline">
 {% if content_editable == true %}
-<li><a id="edit-page" href="http://prose.io/#{{ site.org_name }}/{{ site.repo_name }}/edit/{{ site.branch }}/{{ page.path }}" class="button">Edit this page</a></li>
+<li><a class="btn btn-default" id="edit-page" href="http://prose.io/#{{ site.org_name }}/{{ site.repo_name }}/edit/{{ site.branch }}/{{ page.path }}">Edit this page</a></li>
 {% endif %}
 {% if content_revision_history == true %}
-<li><a href="https://github.com/{{ site.org_name }}/{{ site.repo_name }}/commits/{{ site.branch }}/{{ page.path }}" class="button">Revision history</a></li>
+<li><a class="btn btn-default" href="https://github.com/{{ site.org_name }}/{{ site.repo_name }}/commits/{{ site.branch }}/{{ page.path }}">Revision history</a></li>
 {% endif %}
 {% if content_questions_comments == true %}
-<li><a href="https://github.com/{{ site.org_name }}/{{ site.repo_name }}/issues/new" class="button">Questions or comments?</a></li>
+<li><a class="btn btn-default" href="https://github.com/{{ site.org_name }}/{{ site.repo_name }}/issues/new">Questions or comments?</a></li>
 {% endif %}
 </ul>
 {% endif %}
