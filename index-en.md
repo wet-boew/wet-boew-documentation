@@ -35,7 +35,6 @@ modified: 2018-02-21
 
 Location: 200 promenade du portage, Gatineau, Room 2D302
 
-* February 23, 2018 (Invitation sent)
 * March 14, 2018 (Invitation sent)
 * April 19, 2018
 * May 17, 2018
@@ -49,6 +48,7 @@ Location: 200 promenade du portage, Gatineau, Room 2D302
 * January 17, 2018
 * February 21, 2019
 
-### Meeting summary
+Previous meeting:
+* February 23, 2018
 
-Brief description of what has been discussed during the meeting.
+[Read the summary of the previous meeting](gouvernance/meeting.html)
