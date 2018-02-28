@@ -30,9 +30,6 @@ Documents created via those meeting will be published on the wet-boew website.
 
 Documents created via those meeting will be published on the wet-boew website.
 
-### Date of next meeting
-
-* February 22, at 1pm
 
 
 ## To participate
@@ -198,9 +195,9 @@ Label color: #fbca04
 * Need: Evidence - When there is two opposite idea that conflict, providing evidence for each point of view will help to understand and take a design decision.
 * Need: More information - There is not enough information provided in the issue to take an action that would resolve it.
 * Need: Replicate issue - Someone, usually different of the issue author, need to replicate the described issue with a fresh independent wet-boew copy in a different environment.
-* Need: Record finding - Means that some piece of information described in the issue need to be replicated in the documentation or in the working example. For example, any described test case should be replicated in the documentation for future reference.
+* Need: Record finding - Means that some piece of information described in the issue need to be replicated in the documentation or in the working example. For example, any described test case (test example) should be replicated in the documentation for future reference.
 * Need: Second opinion - A solution is provided, but prior to be applied it needs to be backed.
-* Need: Tests case - Test name with step by step with a code sample (if needed) then what is the expected results. Code sample and expected result would describe the test state before and after the fix is applied
+* Need: Tests example - Test name with step by step with a code sample (if needed) then what is the expected results. Code sample and expected result would describe the test state before and after the fix is applied
 * Need: Testing - The issue need testing.
 * Need: Use case - The usefulness to be more detailed. Defining what is the desired outcome.
 
@@ -246,7 +243,7 @@ Identify what state the issue is currently under. Useful when they are open for 
 Label color: #EE8310
 
 * State: Going stale - Historically used to identify a issue that didn't got immediate and active public interest.
-* State: Last call - An official deadline is now set where a decision could be made relatively about the current issue. In order word, interested party should speak up if they don't want the issue to be closed.
+* State: Last call - An official deadline is set which the issue are going to be closed if nothing new is presented. Usually this is because a resolution or a decision has been proposed and we are going to assume it is accepted as is.
 * State: On hold - Represent an issue that need to be considered for a future major milestone.
 * State: Not supported - The issue is about unsupported feature or block of code.
 * State: Ready for implementation - Means that the topic was discussed thoroughly and a solution are defined and it's now ready to be implemented.

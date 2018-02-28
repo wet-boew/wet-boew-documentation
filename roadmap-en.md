@@ -23,6 +23,7 @@ Notes:
 		* [#8147](https://github.com/wet-boew/wet-boew/pull/8147)
 	* **What that means?:** WET developer would need to re-run "script/setup" on each of their local instance.
 	* **Know issue:** GCWeb build script, and other theme, need to be updated. Their build script are currently broken.
+		* [#8296 - Package WET 4 on NPM](https://github.com/wet-boew/wet-boew/issues/8296)
 
 ### Roadmap
 
@@ -54,7 +55,7 @@ Latest version: 4.0.27 released on 2017-12-14
 	</tr>
 	<tr>
 		<th>5.0 (alpha)</th>
-		<td>2018</td>
+		<td>alpha mid/end of 2018</td>
 		<td></td>
 		<td></td>
 	</tr>
