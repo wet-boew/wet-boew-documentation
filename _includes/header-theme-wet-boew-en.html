@@ -16,24 +16,32 @@
 	<link href="https://wet-boew.github.io/wet-boew/theme-wet-boew/assets/favicon.ico" rel="icon" type="image/x-icon" />
 	<link rel="stylesheet" href="https://wet-boew.github.io/wet-boew/theme-wet-boew/css/theme.css" />
 	<!--<![endif]-->
-	
+
 	<!--[if lt IE 9]>
 	<link href="https://wet-boew.github.io/wet-boew/theme-wet-boew/assets/favicon.ico" rel="shortcut icon" />
 	<link rel="stylesheet" href="https://wet-boew.github.io/wet-boew/theme-wet-boew/css/ie8-theme.css" />
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
 	<script src="https://wet-boew.github.io/wet-boew/wet-boew/js/ie8-wet-boew.js"></script>
 	<![endif]-->
-	
+
 	<noscript><link rel="stylesheet" href="https://wet-boew.github.io/wet-boew/wet-boew/css/noscript.css" /></noscript>
 
-<!-- CustomCSSStart -->
+<!-- CustomStart -->
 {% if page.css_href and page.css_href contains '.css' %}
 <link rel='stylesheet' href='{{ page.css_href }}' />
+{% endif %}{% if page.script_src and page.script_src contains '.js' %}
+<script src='{{ page.script_src }}'></script>
+{% endif %}{% if page.script_src2 and page.script_src2 contains '.js' %}
+<script src='{{ page.script_src2 }}'></script>
+{% endif %}{% if page.script_src3 and page.script_src3 contains '.js' %}
+<script src='{{ page.script_src3 }}'></script>
+{% endif %}{% if page.script_src4 and page.script_src4 contains '.js' %}
+<script src='{{ page.script_src4 }}'></script>
 {% endif %}
-<!-- CustomCSSEnd -->
+<!-- CustomEnd -->
 </head>
 <body vocab="http://schema.org/" typeof="WebPage">
-		
+
 <ul id="wb-tphp">
 	<li class="wb-slc">
 		<a class="wb-sl" href="#wb-cont">Skip to main content</a>
@@ -79,15 +87,15 @@
 	<section id="wb-srch" class="col-md-4 visible-md visible-lg">
 		<h2>Search</h2>
 		<form action="https://google.ca/search" method="get" role="search" class="form-inline">
-	
+
 			<div class="form-group">
 				<label for="wb-srch-q">Search website</label>
 				<input id="wb-srch-q" class="form-control" name="q" type="search" value="" size="27" maxlength="150" />
 				<input type="hidden" name="q" value="site:wet-boew.github.io OR site:github.com/wet-boew/" />
 			</div>
-	
+
 			<button type="submit" id="wb-srch-sub" class="btn btn-default">Search</button>
-	
+
 		</form>
 	</section>
 			</div>

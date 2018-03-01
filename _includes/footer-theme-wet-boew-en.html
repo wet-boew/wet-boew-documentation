@@ -40,5 +40,8 @@
 <script src="https://wet-boew.github.io/wet-boew/js/ie8-wet-boew2.js"></script>
 
 <![endif]-->
+{% if page.script_pgbttm_src and page.script_pgbttm_src contains '.js' %}
+<script src='{{ page.script_pgbttm_src }}'></script>
+{% endif %}
 </body>
 </html>
