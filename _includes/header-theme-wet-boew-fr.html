@@ -30,11 +30,14 @@ wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licenc
 <noscript><link rel="stylesheet" href="https://wet-boew.github.io/wet-boew/dist/theme-wet-boew/css/theme-ns-min.css" /></noscript>
 <!--<![endif]-->
 
-<!-- CustomCSSStart -->
+<!-- CustomStart -->
 {% if page.css_href and page.css_href contains '.css' %}
 <link rel='stylesheet' href='{{ page.css_href }}' />
 {% endif %}
-<!-- CustomCSSEnd -->
+{% if page.script_href and page.script_href contains '.js' %}
+<script src='{{ page.script_href }}'></script>
+{% endif %}
+<!-- CustomEnd -->
 </head>
 
 <body><div id="wb-body{% if page.secondary_menu == false %}{% elsif site.secondary_menu == false and page.secondary_menu != true %}{% elsif page.secondary_menu == true or site.secondary_menu == true %}-sec{% endif %}">

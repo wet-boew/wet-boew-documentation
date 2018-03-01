@@ -4,13 +4,13 @@ layout: default-theme-wet-boew-en
 filename_fr: index-fr
 title: Projects - Web Experience Toolkit (WET) documentation
 description: List of projects related to WET.
-modified: 2018-02-21
+modified: 2018-03-01
 ---
 
 
 ## Active project
 
-Updated:
+Updated: 2018-03-01
 
 
 ### Accessibility
@@ -18,24 +18,69 @@ Updated:
 * Documenting basic HTML design pattern
 * WCAG 2.1 Level AA conformance check for existing features
 * **History:**
-	* (2018-02-20) Continuation of the previously described status.
-	* (2018-02-13) Validation of issue labeled "Work: Accessibility" which are open and the closed ones with the label "State: Going Stale".
+	* (2018-02-27) Same as previous status and working on [#5994](https://github.com/wet-boew/wet-boew/issues/5994)
+	* (2018-02-20) Same as previous status.
+	* (2018-02-13) Validation of issue labelled "Work: Accessibility" which are open and the closed ones with the label "State: Going Stale".
 
 
 ### Design system
-Design system to standardize the visual language and user experience of GC collaborative tools. The system will encompass visual elements, components and communications.
-* **Last updated:** February 9, 2018
-* **Current status:** Environmental scan and research for clean styling
+Design system to standardize the visual language and user experience of our digital collaboration tools. The system will encompass visual elements, components and communications.
+* **Last updated:** February 26, 2018
+* **Current status:** Basic visual for forms
 * **Current project phase:** Phase I - Visual and basic elements.
-* **Deliverable:** Prototype downloadable in photoshop, Illustrator and Adobe XD files.
+* **Deliverable:** Prototype downloadable in photoshop, Illustrator and Adobe XD files. And eventually the corresponding HTML code conforming to WCAG 2.0/2.1 Level AA.
+* **Notes:** That design system might replace the wet-boew style guide.
+* **Project homepage:** [#GCDigital Design System](https://gctools-outilsgc.gitbooks.io/-gcdigital-design-system/content/)
 * **History:**
+	* (2018-02-26) Basic visual for forms
 	* (2018-02-13) Working on the visual look for the design system.
-	* (2018-02-09) Initial entry
+
+### PDF generator
+Create a new feature that would allow the user to obtain a PDF printable version of the page. The PDF printable version are different from the web printable version in the sense that it would be possible to control and well define how the content of the webpage would transposed into a paper base format.
+* **Current status:** Refining the projects description and research.
+* **Deliverable:** A feature that generate a PDF from a webpage.
+* **Goal:** Change the current practice which consist in uploading a standalone PDF version of the content and include a reference to that uploaded PDF in the content. At the same time, it would reduce the risk of have both version no in sync when a content update is applied.
+* **Project lead:** David Elisma
+* **History:**
+	* (2018-02-22) Refining the projects description and research.
+
+## Inactive project with prototype
+
+Any taker? The following projects are currently incomplete and perhaps not ready to get merged into wet-boew. However a considerable amount of work was completed and they might only to be tuned. If you are interested, please contact wet-boew project lead or let's know your interests by opening a new github issue on the [wet-boew main project](https://github.com/wet-boew/wet-boew). Idem if you are aware of incomplete project that should be added at this list.
+
+### Feature calc
+A calculator helper plugin to provide a basic math calculation (addition, subtraction, multiplication, division) engine. The requirement for calculations that could be implemented via WET-assisted HTML came about during the migration of web pages where inline Javascript was not supported.
+* **Github:** [PR #8212](https://github.com/wet-boew/wet-boew/pull/8212)
+* **What left:**
+	* Address various reported issue in the PR.
+	* Run test
+	* Evaluation of WCAG compliance
+	* Complete the plugin documentation API
+	* Create a French working example
+
+
+### Step form
+This component provides the ability to break a form into steps. To be use when Web forms are long/contain lot of information.
+* **Github:** [PR #7913](https://github.com/wet-boew/wet-boew/pull/7913)
+* **Working example:** [TheKodester - Steps Form](http://www.thekodester.ca/demos/formvalid/steps)
+* **What left:**
+	* Run test
+	* Evaluation of WCAG compliance
+	* Complete the plugin documentation API such:
+		* Basic HTML interface
+		* Enhanced HTML interface
+		* Data structure
+		* Function
+		* Visual (Wireframe and CSS) for each UI variation
+	* Review how the plugin work on mobile, tablet and desktop mode. Note if it should act differently depending of the view.
+	* Prepare i18n text to be inserted in the master i18n spreadsheet
+	* Translate the French working example
+	* Review the plugin javascript
 
 
 ## Projects with no official team lead
 
-An high interest was expressed for the following projects. Some work was already been completed and we are looking to have an official team lead for it.
+An considerable interest was expressed for the following projects. Some work was already been completed and we are looking to have an official team lead to move it forward.
 
 ### React variant
 Use WET feature through a React web application
@@ -44,7 +89,7 @@ Github related issue:
 * [#8150 - wet-toolkit integration with React Redux](https://github.com/wet-boew/wet-boew/issues/8150)
 
 Working example:
-* Todo: Insert link here
+* [First prototype - Test case #2018-3](testcase/2018-3.html)
 
 Next step:
 * Identify top WET features to make it React compatible
