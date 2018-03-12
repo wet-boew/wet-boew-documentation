@@ -77,7 +77,7 @@ Documents created via those meeting will be published on the wet-boew website.
 6. Result of PR review
 	1. Test passed and PR are merged in.
 	2. Error was found and change are requested
-	3. Concern was raised and 
+	3. Concern was raised and
 		* Instruction are provided on how to address concern, or
 		* More details need to be provided to describe the concern, or
 		* A mitigation plan would be proposed to address the concern
@@ -191,11 +191,11 @@ Identify what is needed to move the issue forward.
 
 Label color: #fbca04
 
-* Need: Analysis - The issue need to deep dive to find or propose a solution.
+* Need: Analysis / Research - Need to be deep dive to find a solution or perform research.
 * Need: Evidence - When there is two opposite idea that conflict, providing evidence for each point of view will help to understand and take a design decision.
 * Need: More information - There is not enough information provided in the issue to take an action that would resolve it.
-* Need: Replicate issue - Someone, usually different of the issue author, need to replicate the described issue with a fresh independent wet-boew copy in a different environment.
 * Need: Record finding - Means that some piece of information described in the issue need to be replicated in the documentation or in the working example. For example, any described test case (test example) should be replicated in the documentation for future reference.
+* Need: Replicate issue - Someone, usually different of the issue author, need to replicate the described issue with a fresh independent wet-boew copy in a different environment.
 * Need: Second opinion - A solution is provided, but prior to be applied it needs to be backed.
 * Need: Tests example - Test name with step by step with a code sample (if needed) then what is the expected results. Code sample and expected result would describe the test state before and after the fix is applied
 * Need: Testing - The issue need testing.
