@@ -26,10 +26,12 @@ modified: 2018-02-21
 	* Suggestion of assessement
 * Test case
 	* AT support for heading in summary element
-		* [Test 2018-1 - with heading inside summary](test-case/2018-1.html)
+		* [Test 2018-1 - with heading inside summary](testcase/2018-1.html)
 		* Test 2018-2 - with no heading inside summary
+		* [Test 2018-3 - a ReactJS working example](testcase/2018-3.html)
 
 * [Internal project governance](governance/index-en.html)
+	* [Roadmap meeting summary](gouvernance/meeting.html)
 
 ## Roadmap meeting
 
