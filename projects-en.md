@@ -17,6 +17,7 @@ Updated: 2018-03-01
 * Reviewing and validating open github issue
 * Documenting basic HTML design pattern
 * WCAG 2.1 Level AA conformance check for existing features
+* Evaluate web accessiblity compliance for wb5 features
 * **History:**
 	* (2018-02-27) Same as previous status and working on [#5994](https://github.com/wet-boew/wet-boew/issues/5994)
 	* (2018-02-20) Same as previous status.

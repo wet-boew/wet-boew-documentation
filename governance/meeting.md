@@ -10,6 +10,14 @@ Summary of what has been discussed at the meeting.
 
 ## Roadmap
 
+2018-03-14 ( 9 participants )
+* Re-introduce and walk through the new [wet-boew documentation](https://wet-boew.github.io/wet-boew-documentation/index-en.html) website.
+* We openly discussed about the current projects like the design system and the accessiblity project.
+* Introduced and general discussion about what each section means and their purpose.
+* We have talk, high level discussion, about what are the requirement for next version of WET. Like the need to better support web apps, be more modular, be less opiniated, have an easy way to setup dev environment (build)
+* Collected a list of interested member to be part of a WB5 committee/group/task force.
+* WB5 commitee will report to roadmap and wb5 discussion would be aside the roadmap meeting
+
 2018-02-23 ( 2 participants )
 * Introduce and walk through the new [wet-boew documentation](https://wet-boew.github.io/wet-boew-documentation/index-en.html) website.
 * Improvement for the wet-boew documentation are welcome, submit your suggestion through a github issue or a PR.
