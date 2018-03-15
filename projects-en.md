@@ -17,10 +17,11 @@ Updated: 2018-03-01
 * Reviewing and validating open github issue
 * Documenting basic HTML design pattern
 * WCAG 2.1 Level AA conformance check for existing features
-* Evaluate web accessiblity compliance for wb5 features
+* Evaluate web accessibility compliance for wb5 features
+* **Last updated:** March 14, 2018
+* **Progress check history**: 2018-03-14; 2018-02-27; 2018-02-20
 * **History:**
-	* (2018-02-27) Same as previous status and working on [#5994](https://github.com/wet-boew/wet-boew/issues/5994)
-	* (2018-02-20) Same as previous status.
+	* (2018-03-14) On going - review github issues and fixing current open issue.
 	* (2018-02-13) Validation of issue labelled "Work: Accessibility" which are open and the closed ones with the label "State: Going Stale".
 
 
@@ -36,8 +37,27 @@ Design system to standardize the visual language and user experience of our digi
 	* (2018-02-26) Basic visual for forms
 	* (2018-02-13) Working on the visual look for the design system.
 
+### Improved datalist (autocomplete/suggestion)
+Simulate a datalist that work uniformly through browser implementation and contains more functionality compared as described in the HTML5.3 spec such as
+* Limit the number of display results
+* Provide the option on how to apply the filter (ex: startWith; word; any; Levenshtein distance; conditional filter)
+* Be able to customize the displayed suggestion. A suggestion can include link, images and other thing
+* Be able to highlight the filtered keyword, like bolding the text filter character in suggestion
+* Be able to load suggestion from a JSON file, CSV or have it binded to another features
+* Be keyboard accessible as per the accessible default pattern
+* Be able to force the user to choose a displayed option
+* Be able to include a catch all default option that would always appear as an option
+* Fix datalist related [github issue](https://github.com/wet-boew/wet-boew/issues?q=is%3Aopen+is%3Aissue+label%3A%22Feature%3A+Datalist%22)
+* **Last updated:** March 14, 2018
+* **Project lead:** Pierre Dubois
+* **Research:**
+	* [Datalist JSON suggestion](research/1-datalist-JSON-suggestion.html)
+* **History:**
+	* (2018-03-12) Defining the requirement
+
 ### PDF generator
 Create a new feature that would allow the user to obtain a PDF printable version of the page. The PDF printable version are different from the web printable version in the sense that it would be possible to control and well define how the content of the webpage would transposed into a paper base format.
+* **Last updated:** March 1, 2018
 * **Current status:** Refining the projects description and research.
 * **Deliverable:** A feature that generate a PDF from a webpage.
 * **Goal:** Change the current practice which consist in uploading a standalone PDF version of the content and include a reference to that uploaded PDF in the content. At the same time, it would reduce the risk of have both version no in sync when a content update is applied.
@@ -51,6 +71,7 @@ Any taker? The following projects are currently incomplete and perhaps not ready
 
 ### Feature calc
 A calculator helper plugin to provide a basic math calculation (addition, subtraction, multiplication, division) engine. The requirement for calculations that could be implemented via WET-assisted HTML came about during the migration of web pages where inline Javascript was not supported.
+* **Last updated:** March 1, 2018
 * **Github:** [PR #8212](https://github.com/wet-boew/wet-boew/pull/8212)
 * **What left:**
 	* Address various reported issue in the PR.
@@ -62,6 +83,7 @@ A calculator helper plugin to provide a basic math calculation (addition, subtra
 
 ### Step form
 This component provides the ability to break a form into steps. To be use when Web forms are long/contain lot of information.
+* **Last updated:** March 1, 2018
 * **Github:** [PR #7913](https://github.com/wet-boew/wet-boew/pull/7913)
 * **Working example:** [TheKodester - Steps Form](http://www.thekodester.ca/demos/formvalid/steps)
 * **What left:**
@@ -84,6 +106,9 @@ This component provides the ability to break a form into steps. To be use when W
 An considerable interest was expressed for the following projects. Some work was already been completed and we are looking to have an official team lead to move it forward.
 
 ### React variant
+
+**Last updated:** March 1, 2018
+
 Use WET feature through a React web application
 
 Github related issue:
@@ -108,11 +133,15 @@ The following project idea (feature request) was brought up, but there is no kno
 
 ### Angular
 
+**Last updated:** March 1, 2018
+
 Need for more documentation on how WET can be integrated with Angular. For instruction on how pages can be designed to ensure the "Basic HTML mode" continue to work as expected. For instruction on how to design web interface that support Basic HTML and the angular enhanced mode.
 
 * [Github wet-boew issue #8206](https://github.com/wet-boew/wet-boew/issues/8206)
 
 ### Compare product
+
+**Last updated:** March 1, 2018
 
 To have an easy way to compare multiple product side by side. A feature similar as we can found when a user want to buy a new camera on a web site and he want to compare side by side the specification for two different model of camera in order to decide which one would fit best his needs.
 

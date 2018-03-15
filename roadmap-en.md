@@ -14,16 +14,26 @@ modified: 2018-02-09
 
 Notes:
 
-* 2018-02-23 - Major update on the build script.
-	* **Github related PR and issue**: 
+* 2018-02-23 - Major, update on the build script.
+	* **Github related PR and issue**:
 		* [#8295](https://github.com/wet-boew/wet-boew/pull/8295)
 		* [#8253](https://github.com/wet-boew/wet-boew/pull/8253)
 		* [#8247](https://github.com/wet-boew/wet-boew/issues/8247)
 		* [#8228](https://github.com/wet-boew/wet-boew/pull/8228)
 		* [#8147](https://github.com/wet-boew/wet-boew/pull/8147)
-	* **What that means?:** WET developer would need to re-run "script/setup" on each of their local instance.
-	* **Know issue:** GCWeb build script, and other theme, need to be updated. Their build script are currently broken.
-		* [#8296 - Package WET 4 on NPM](https://github.com/wet-boew/wet-boew/issues/8296)
+		* [GCWeb] [#1330](https://github.com/wet-boew/GCWeb/pull/1330)
+	* **What that means?:** WET developer would need to run "script/setup" on each of their local wet-boew related instance.
+	* **Know issue:** [GCWeb] Some JS dependency used by the theme plugin are missing
+		* See working example: [Template HTML 5](http://wet-boew.github.io/themes-dist/GCWeb/demos/data-json/template-en.html)
+* 2018-03-14 [GCWeb] Minor, update to the GCWeb feature
+	* Major change to the markup
+	* Added one feature tile template
+	* Old markup still supported and mark as deprecated
+* 2018-03-14 - [GCWeb] Minor, add new feature to datalist
+	* Load suggestion from a JSON file
+	* Limit the number of displayed items
+	* Control the behaviour of how the suggestion filtering is applied
+
 
 ### Roadmap
 
