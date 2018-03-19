@@ -4,7 +4,7 @@ layout: default-theme-wet-boew-en
 filename_fr: index-fr
 title: Web Experience Toolkit (WET) documentation
 description: Web Experience Toolkit (WET) documentation
-modified: 2018-02-21
+modified: 2018-03-19
 ---
 
 * Roadmap
@@ -18,6 +18,7 @@ modified: 2018-02-21
 	* UX findings
 	* Design pattern
 	* UX report
+		* [Filtering interface with performance meter](ux-reports/2018-1.html)
 	* Suggestion for UX research
 * Assessement
 	* WCAG 2.0/2.1 Level AA
@@ -33,12 +34,26 @@ modified: 2018-02-21
 * [Internal project governance](governance/index-en.html)
 	* [Roadmap meeting summary](gouvernance/meeting.html)
 
-## Roadmap meeting
+## Meeting
 
+### Technical review meeting
+Location: teleconference with web conference
+When: Every week alternating between Wednesday (from 11h00 to 12h00) and Thursday (from 10h00 to 11h00)
+
+### WET-BOEW code sprint
+Location: 200 promenade du portage, Gatineau
+When: Every week on Tuesday from 9h30 to 15h30
+Goal: You can work on WET related projects and have on-site support.
+Type: Unstructured, which means there is no official agenda. From time to time, and if needed, there can be a structured code sprint.
+To join: Contact Pierre Dubois, you can find his contact information on gccollab or on gcconnect or on twitter via @duboi5p
+
+### Roadmap
 Location: 200 promenade du portage, Gatineau, Room 2D302
 
-* March 14, 2018 (Invitation sent)
 * April 19, 2018
+	* New project: Improved datalist (active) 
+	* New project: Postal code lookup (backlog)
+	* UX research & UX finding: Filtering interface with performance meter
 * May 17, 2018
 * June 20, 2018
 * July 19, 2018
@@ -49,8 +64,5 @@ Location: 200 promenade du portage, Gatineau, Room 2D302
 * December 20, 2018
 * January 17, 2018
 * February 21, 2019
-
-Previous meeting:
-* February 23, 2018
 
 [Read the summary of the previous meeting](gouvernance/meeting.html)
