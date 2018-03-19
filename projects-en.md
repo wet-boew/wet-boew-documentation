@@ -4,7 +4,7 @@ layout: default-theme-wet-boew-en
 filename_fr: index-fr
 title: Projects - Web Experience Toolkit (WET) documentation
 description: List of projects related to WET.
-modified: 2018-03-01
+modified: 2018-03-19
 ---
 
 
@@ -64,6 +64,20 @@ Create a new feature that would allow the user to obtain a PDF printable version
 * **Project lead:** David Elisma
 * **History:**
 	* (2018-02-22) Refining the projects description and research.
+
+
+## Backlog project
+
+### Postal code lookup for maps or to refine/classify a result set
+Having a postal code lookup where it would display relative result on a map, or show a list of results classify by the closest to the farest. Having the posibility to set a threshold, like within 50 km of the entered postal code,...
+* **Last updated:** March 19, 2018
+* **Current status:** Need resources to initiate the project documentations and initial research. 
+* **Goal:** Have a form that receive a postal code to refine a result set or show an area on a map.
+* **Project lead:** Pierre Dubois
+* **Work order reference:** b4731
+* **Similar projects:**
+	* [Find a passport service location near you](http://www.cic.gc.ca/english/passport/map/map.asp)
+	* [Find a Service Canada Office](http://www.servicecanada.gc.ca/tbsc-fsco/sc-hme.jsp?lang=eng)
 
 ## Inactive project with prototype
 
