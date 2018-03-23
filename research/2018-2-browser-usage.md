@@ -35,39 +35,39 @@ Environmental scan of top browser and platforms statistic in order to provide gu
 
 Period: March 1, 2017 to February 28, 2018
 
-The following list of browser and platform are ordered by the usage statistic percentage.
-Source: Can't be disclosed.
+The following list of browser and platform are ordered by the usage statistic percentage. The source and the actual value can't be disclosed.
 
 #### Browser:
 
-1. IE11
-2. Chrome
-3. Safari
-4. Mobile Safari
+* IE11
+* Chrome
+* Safari
+* Mobile Safari
 
 The following are above the threshold
 
-5. Chrome Mobile
-6. Edge
-7. Firefox
-8. Samsung
+* Chrome Mobile
+* Edge
+* Firefox
+* Samsung
 
 #### Platform:
 
-1. Windows 7
-2. Windows 10
-3. Android
+* Windows 7
+* Windows 10
+* Android
 
 The following are above the threshold
 
-4. Windows 8.1
-5. Mobile iOS
-6. OS X
+* Windows 8.1
+* Mobile iOS
+* OS X
 
 ### W3Counter
 
 Period: February 2018
-Source: https://www.w3counter.com/globalstats.php?year=2018&month=2
+
+Source: [https://www.w3counter.com/globalstats.php?year=2018&month=2](https://www.w3counter.com/globalstats.php?year=2018&month=2)
 
 #### Browser:
 
@@ -98,7 +98,7 @@ Period: February 2018
 
 #### Browser:
 
-Source: http://gs.statcounter.com/browser-market-share
+Source: [http://gs.statcounter.com/browser-market-share](http://gs.statcounter.com/browser-market-share)
 
 1. Chrome: 57.46%
 2. Safari: 14.39%
@@ -109,7 +109,7 @@ Source: http://gs.statcounter.com/browser-market-share
 
 #### Platform:
 
-Source: http://gs.statcounter.com/os-market-share
+Source: [http://gs.statcounter.com/os-market-share](http://gs.statcounter.com/os-market-share)
 
 1. Android: 40.11%
 2. Windows: 39.69%
@@ -123,7 +123,7 @@ Source: http://gs.statcounter.com/os-market-share
 
 Period: February 2018
 
-Source: http://gs.statcounter.com/browser-market-share/all/canada
+Source: [http://gs.statcounter.com/browser-market-share/all/canada](http://gs.statcounter.com/browser-market-share/all/canada)
 
 #### Browser:
 
@@ -136,7 +136,7 @@ Source: http://gs.statcounter.com/browser-market-share/all/canada
 
 #### Platform:
 
-Source: http://gs.statcounter.com/os-market-share/all/canada
+Source: [http://gs.statcounter.com/os-market-share/all/canada](http://gs.statcounter.com/os-market-share/all/canada)
 
 2. Windows: 41.72%
 3. iOS: 25.7%
@@ -148,7 +148,8 @@ Source: http://gs.statcounter.com/os-market-share/all/canada
 ### Wikimedia
 
 Period: March 1, 2017 to February 28, 2018
-Source: https://analytics.wikimedia.org/dashboards/browsers/#all-sites-by-browser
+
+Source: [https://analytics.wikimedia.org/dashboards/browsers/#all-sites-by-browser](https://analytics.wikimedia.org/dashboards/browsers/#all-sites-by-browser)
 
 Browser:
 
