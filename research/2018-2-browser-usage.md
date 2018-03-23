@@ -10,7 +10,7 @@ modified: 2018-03-23
 
 Environmental scan of top browser and platforms statistic in order to provide guidance for testing and to better define what browser need to be supported. Usually, the browser supported include the popular ones and the latest version of every major browser.
 
-## List of supported browser (Conclusion)
+## List of top browser (Conclusion)
 
 1. Chrome
 2. Chrome mobile
