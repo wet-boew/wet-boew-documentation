@@ -69,3 +69,146 @@ Here a list of similar tools that was found on a February 2018 research
 * Load suggestion from an array of string in a JSON file
 * Be able to limit the number of displayed suggestion
 * Be able to change the filtering behaviour like Any, StartWith, Word
+
+### Feature that might worth to considerate
+
+* Should we allow the suggested options to be grouped? Like what the ```optgroup``` element do with the ```select``` element.
+
+### Resources
+
+* [The ```list``` attribute - HTML 5.3 W3C Working Draft](https://www.w3.org/TR/html53/sec-forms.html#the-list-attribute) - contains information when used in combination with ```multiple``` attribute.
+* [The ```datalist``` element - HTML 5.3 W3C Working Draft](https://www.w3.org/TR/html53/sec-forms.html#elementdef-datalist)
+* [The ```datalist``` element - HTML living standard](https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element)
+* [```multiple``` attribute  - HTML living standard](https://html.spec.whatwg.org/multipage/input.html#the-multiple-attribute) - Contains a visual example of a customized datalist
+* ARIA default role: [listbox](https://www.w3.org/TR/wai-aria-1.1/#listbox)
+* [Developing a Keyboad Interface - WAI ARIA practices](https://www.w3.org/TR/wai-aria-practices-1.1/#keyboard)
+* [Listbox - WAI ARIA practices](https://www.w3.org/TR/wai-aria-practices-1.1/#Listbox)
+* [Scrollable listbox example - WAI ARIA practices](https://www.w3.org/TR/wai-aria-practices-1.1/examples/listbox/listbox-scrollable.html)
+* [Collapsible Dropdown Listbox Example - WAI ARIA practice](https://www.w3.org/TR/wai-aria-practices-1.1/examples/listbox/listbox-collapsible.html)
+* [Example Listbox with Reaarangeable Options - WAI ARIA practice](https://www.w3.org/TR/wai-aria-practices-1.1/examples/listbox/listbox-rearrangeable.html)
+* [Grids: Interactive Tabular Data and Layout Container - WAI ARIA practice](https://www.w3.org/TR/wai-aria-practices-1.1/#grid)
+* [Example 3: Scrollable Search Results - WAI ARIA practice](https://www.w3.org/TR/wai-aria-practices-1.1/examples/grid/LayoutGrids.html#ex3_label)
+
+
+> To be keyboard accessible, authors SHOULD manage focus of descendants for all instances of this role, as described in Managing Focus.
+> - listbox (role) - WAI ARIA 1.1
+
+> the interaction model conveyed by the listbox role to assistive technologies does not support interacting with elements inside of an option. Because of these traits of the listbox widget, it does not provide an accessible way to present a list of interactive elements, such as links, buttons, or checkboxes. To present a list of interactive elements, see the grid pattern.
+> Listbox - WAI ARIA parctices
+
+## Test case
+
+* See the design pattern information described in [Listbox - WAI ARAI practices](https://www.w3.org/TR/wai-aria-practices-1.1/#Listbox)
+
+## Wireframe
+
+### Visual
+
+![Wireframe - visual representation of the User interface]({{ "2018-assets/1-datalist-wireframe.png" }})
+
+### Behaviour
+
+Conditional submission:
+* The proposed list of items are suggestions and choosing an item from the list is totally optional.
+* If the typed suggestions are not in the list, then the submission would be redirected to a specific page that would take care of the text entered by the user
+* The user need to choose an item in that list in order to submit
+* An item might trigger a different action, like simply redirecting to a different page and an another item will do a standard from submission with server side processing.
+
+### Code sample
+
+Take a look also at the working example from the WAI ARIA practices cite in the resources which have clue on how the enhanced user interface should be coded. 
+
+Simple datalist
+```
+<input list="datalist-id" />
+
+<datalist id="datalist-id">
+	<option>Lorem ipsum</option>
+	<option>dolor sit amet</option>
+	<option>consectetur</option>
+	<option>adipiscing elit</option>
+</datalist>
+```
+
+With a minimalist template, like the suggestion is loaded from a JSON files
+```
+<input list="datalist-id" />
+
+<datalist id="datalist-id">
+	<template>
+		<option>{{ Suggestion }}</option>
+	</template>
+</datalist>
+```
+
+A highly customized template where that content can'nt be holded by the datalist element. That kind of content would need to be in a overlay.
+```
+<input list="datalist-id" />
+
+<datalist id="datalist-id">
+	<template>
+		<div class="row">
+			<div class="col-xs-1">
+				<p>:-)</p>
+			</div>
+			<div class="col-xs-11">
+				<p>{{ Suggestion }}</p>
+			</div>
+		</div>
+	</template>
+</datalist>
+```
+
+A highly customized template with fallback on standard datalist implementation
+```
+<input list="datalist-id" />
+
+<datalist id="datalist-id">
+	<template>
+		<div class="row">
+			<div class="col-xs-1">
+				<p>:-)</p>
+			</div>
+			<div class="col-xs-11">
+				<p>{{ Suggestion }}</p>
+			</div>
+		</div>
+	</template>
+	<option>Lorem ipsum</option>
+	<option>dolor sit amet</option>
+	<option>consectetur</option>
+	<option>adipiscing elit</option>
+</datalist>
+```
+* Review the template as per the information and examples in the WAI ARIA practice
+
+Fieldflow plain working example
+```
+<div class="wb-fieldflow">
+	<p>Please something, something....</p>
+	<ul>
+		<li><a href="redirect/page-1.html">Lorem ipsum</a></li>
+		<li><a href="redirect/page-2.html">dolor sit amet</a></li>
+		<li><a href="redirect/page-3.html">consectetur</a></li>
+		<li><a href="redirect/page-4.html">adipiscing elit</a></li>
+	</ul>
+</div>
+```
+
+Fieldflow with datalist working example
+```
+<div class="wb-fieldflow" data-wb-fieldflow='{"renderas":"datalist"}'>
+	<p>Please something, something....</p>
+	<ul>
+		<li><a href="redirect/page-1.html">Lorem ipsum</a></li>
+		<li><a href="redirect/page-2.html">dolor sit amet</a></li>
+		<li><a href="redirect/page-3.html">consectetur</a></li>
+		<li><a href="redirect/page-4.html">adipiscing elit</a></li>
+	</ul>
+</div>
+```
+* It might need an new configuration to specify a custom template
+* The unordered list will be transform into option in the datalist
+* By default, the user would need to choose a valid option.
+* Fallback on form submission default, that might need to be a new configuration (When the typed option is not available)
+* Support for multiple selection
