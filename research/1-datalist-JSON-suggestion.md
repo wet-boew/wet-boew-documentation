@@ -3,7 +3,7 @@ published: true
 layout: default-theme-wet-boew-en
 title: 1 - Datalist JSON suggestion - Research and finding - Web Experience Toolkit (WET) documentation
 description: Design decision followed by WET.
-modified: 2018-02-13
+modified: 2018-03-29
 ---
 
 ## Purpose
@@ -21,7 +21,8 @@ Customizable autocomple feature.
 * Follow design pattern of a datalist for accessiblity.
 * Have uniform and consistant behavior from various browser. Like IE11, Chrome, Firefox, Edge
 * Support grouping of items, like ```<optgroup>``` do for ```<select>```
-* Be able to configure how the filtering is applied: startWith, word, any
+* Be able to configure where the filtering is applied: startWith, word, any
+* Be able to configure how the filtering is applied: Exact Match, SoundEx, Levenshtein distance.
 * Be able to highlight the typed character found within the displayed result. Like putting it in bold so the user can easilly make the liaison between the typed character and the suggested results.
 * Having a persistant results, like an "others" options.
 
@@ -30,10 +31,6 @@ Customizable autocomple feature.
 Here a list of similar tools that was found on a February 2018 research
 
 * [jQuery accessible autocomplete list (with some ARIA)](https://a11y.nicolas-hoffmann.net/autocomplete-list/)
-	* The UI and the interaction pattern is interesting and seems to address some of the requirement.
-	* It don't support loading suggestion from a JSON file.
-	* The javascript code don't seems to be optimized, there is a lot of repeative code.
-	* The solution simulate the "suggestion" panel, more testing need to be done.
 * mfranzke - datalist-polyfill
 	* JSFiddle - [https://jsfiddle.net/mfranzke/s6awjfze/](https://jsfiddle.net/mfranzke/s6awjfze/)
 	* Github - https://github.com/mfranzke/datalist-polyfill
@@ -69,6 +66,7 @@ Here a list of similar tools that was found on a February 2018 research
 * Load suggestion from an array of string in a JSON file
 * Be able to limit the number of displayed suggestion
 * Be able to change the filtering behaviour like Any, StartWith, Word
+* Be able to use a pattern match with would match suggestion that are 80% closer to what the user typed in. This is to accommodates even if there some typos in the inputs. Like: [Soundex](https://en.wikipedia.org/wiki/Soundex), [Levenshtein distance](https://en.wikipedia.org/wiki/Levenshtein_distance) 
 
 ### Feature that might worth to considerate
 
@@ -89,12 +87,15 @@ Here a list of similar tools that was found on a February 2018 research
 * [Grids: Interactive Tabular Data and Layout Container - WAI ARIA practice](https://www.w3.org/TR/wai-aria-practices-1.1/#grid)
 * [Example 3: Scrollable Search Results - WAI ARIA practice](https://www.w3.org/TR/wai-aria-practices-1.1/examples/grid/LayoutGrids.html#ex3_label)
 
+### Quote from spec
 
 > To be keyboard accessible, authors SHOULD manage focus of descendants for all instances of this role, as described in Managing Focus.
-> - listbox (role) - WAI ARIA 1.1
+
+Source: listbox (role) - WAI ARIA 1.1
 
 > the interaction model conveyed by the listbox role to assistive technologies does not support interacting with elements inside of an option. Because of these traits of the listbox widget, it does not provide an accessible way to present a list of interactive elements, such as links, buttons, or checkboxes. To present a list of interactive elements, see the grid pattern.
-> Listbox - WAI ARIA parctices
+
+Source: Listbox - WAI ARIA parctices
 
 ## Test case
 
@@ -212,3 +213,38 @@ Fieldflow with datalist working example
 * By default, the user would need to choose a valid option.
 * Fallback on form submission default, that might need to be a new configuration (When the typed option is not available)
 * Support for multiple selection
+
+## Review of existing tools
+
+### jQuery accessible autocomplete list (with some ARIA)
+
+Working example: [jQuery accessible autocomplete list (with some ARIA)](https://a11y.nicolas-hoffmann.net/autocomplete-list/)
+Source code: [Github.com/nico3333fr/jquery-acc [...] autocomplete-list-aria.js](https://github.com/nico3333fr/jquery-accessible-autocomplete-list-aria/blob/master/jquery-accessible-autocomplete-list-aria.js)
+
+* The UI and the interaction pattern is interesting and seems to address some of the requirement.
+* It don't support loading suggestion from a JSON file.
+* The javascript code don't seems to be optimized, there is a lot of repeative code.
+* The solution simulate the "suggestion" panel. It use only ```<div>``` but it is enhanced with ARIA ```role=listbox``` for the panel and ```role=option``` for each individual options. ```tabindex=-1``` is used on options 
+* Pressing the down arrow when the focus are on the input don't show the suggested list.
+* Instructions, for screen reader only, are inserted just before the input field
+* Info about the displayed result, for screen reader only, are inserted just before the input field. That block have the attribute ```aria-live=polite```
+* It contains an options to limits the number of displayed result.
+* It contains an options used as "fallback" but it didn't work on the demo, and didn't work on mouse click.
+
+
+### mfranzke - datalist-polyfill
+
+Working example: [JSFiddle](https://jsfiddle.net/mfranzke/s6awjfze/)
+Source code: [Github.com/mfranzke/datalist-polyfill](https://github.com/mfranzke/datalist-polyfill)
+
+* It's a polyfill, it don't work if the browser already support it.
+* Main purpose, add the datalist feature in Safari and IE9-10
+* Can be a good candidate to replace the existing datalist polyfill in WET
+
+### Accessible autocomplete
+
+Working example: [Accessible autocomplete](https://haltersweb.github.io/Accessibility/autocomplete.html)
+Source code: 
+* Javascript - [https://github.com/haltersweb/Accessibility/blob/gh-pages/js/autocomplete.js](https://github.com/haltersweb/Accessibility/blob/gh-pages/js/autocomplete.js)
+* CSS - [https://github.com/haltersweb/Accessibility/blob/gh-pages/css/autocomplete.css](https://github.com/haltersweb/Accessibility/blob/gh-pages/css/autocomplete.css)
+
