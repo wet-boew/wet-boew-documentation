@@ -248,3 +248,22 @@ Source code:
 * Javascript - [https://github.com/haltersweb/Accessibility/blob/gh-pages/js/autocomplete.js](https://github.com/haltersweb/Accessibility/blob/gh-pages/js/autocomplete.js)
 * CSS - [https://github.com/haltersweb/Accessibility/blob/gh-pages/css/autocomplete.css](https://github.com/haltersweb/Accessibility/blob/gh-pages/css/autocomplete.css)
 
+* When resizing, the overlay is not aligned with the input text.
+* The relation between the typed letter and the displayed results seems to be disconected. The displayed result seems to be tie to the number of typed letter.
+* If the input already have an value, like "aa", then when refocusing in the input, the suggestion is not displayed, but we can change the input value by navigating with the top and down arrow on the keyboard. Unless if the input initial value is one from the suggested options.
+* Interesting use of ```aria-activedescendant``` attribute to notify what item has been selected.
+* This solution seems to use a shadow DOM on the input field.
+* Use of ```aria-live=assertive``` to notify the screen reader user. But after a second the notification messaage is removed from the DOM.
+
+
+### selectWoo & Select2
+
+Working example:
+* [SelectWoo Accessibility Testing Samples](https://woocommerce.github.io/selectWoo/accessibility-testing/)
+* [Select2](https://select2.org/)
+
+Source code:
+* Fork from woocommerce: [https://github.com/woocommerce/selectWoo](https://github.com/woocommerce/selectWoo)
+* Upstream: [https://github.com/select2/select2](https://github.com/select2/select2)
+
+* Large jQuery plugin that contains ~5876 line of javascript code and ~485 line of CSS code
