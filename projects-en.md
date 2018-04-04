@@ -19,7 +19,7 @@ Updated: 2018-03-01
 * WCAG 2.1 Level AA conformance check for existing features
 * Evaluate web accessibility compliance for wb5 features
 * **Last updated:** March 14, 2018
-* **Progress check history**: 2018-03-14; 2018-02-27; 2018-02-20
+* **Progress check history**: 2018-04-03; 2018-03-14; 2018-02-27; 2018-02-20
 * **History:**
 	* (2018-03-14) On going - review github issues and fixing current open issue.
 	* (2018-02-13) Validation of issue labelled "Work: Accessibility" which are open and the closed ones with the label "State: Going Stale".
