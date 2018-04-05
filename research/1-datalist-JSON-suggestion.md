@@ -35,8 +35,12 @@ Here a list of similar tools that was found on a February 2018 research
 	* JSFiddle - [https://jsfiddle.net/mfranzke/s6awjfze/](https://jsfiddle.net/mfranzke/s6awjfze/)
 	* Github - https://github.com/mfranzke/datalist-polyfill
 * [Accessible autocomplete](https://haltersweb.github.io/Accessibility/autocomplete.html)
+* [SelectWoo Accessibility Testing Samples](https://woocommerce.github.io/selectWoo/accessibility-testing/)
+* [Chosen](https://harvesthq.github.io/chosen/)
 * [Web Search Engine with Autocorrect and Autofill feature](https://github.com/Pavan18/Web-Search-Engine-with-Autocorrect-and-Autofill-feature)
+	* A mashup of server side and client side. Not very re-usable for the need here.
 * [Android Autofill Framework](https://github.com/googlesamples/android-AutofillFramework)
+	* Android specific application. Not very re-usable for the need here.
 * [React autosuggest](https://github.com/moroshko/react-autosuggest)
 * [Datalist JSON suggestion](https://github.com/wet-boew/GCWeb/tree/master/src/plugins/suggest)
 
@@ -49,24 +53,24 @@ Here a list of similar tools that was found on a February 2018 research
 
 ### Feature request description
 
-* The autofill needs to have a text field where users can type, and the options related to what they typed appear below. 
-* The autofill should have the option “filter as you type” 
+* The autofill needs to have a text field where users can type, and the options related to what they typed appear below.
+* The autofill should have the option “filter as you type”
     * Filter as you type: Will populate a list of relevant task containing the characters in series as user types; the list updates for each new character added
     * As the user types, it does not need to be the first word in the task it can be any word within the task that will pick up the options.
 * When the user is typing they should not see the entire task list that consists of up to 200 tasks
-* Users must select one of the items from the options, they cannot type whatever they want and submit. 
-* There needs to be an “other” option accompanying the tasks at all time, so that if the tasks don’t apply to that user, they have an option to select something. 
+* Users must select one of the items from the options, they cannot type whatever they want and submit.
+* There needs to be an “other” option accompanying the tasks at all time, so that if the tasks don’t apply to that user, they have an option to select something.
 * The autofill needs to pull the data from the excel spreadsheet that we provide.
 * The autofill should allow for the number of tasks to be unlimited so that when we add new tasks in the future it will be some form of a data dump.
 * When an option is not available in the list, upon submission, redirect the user to a page where it would be able to submit the new items.
 * When an option is not available in the list, let use what the user typed as the value.
 * Limit number of displayed items.
 * Load suggestion from a JSON dataset.
-* Specify what kind of filtering, first matching character in the suggestions, first character of a word, any character. 
+* Specify what kind of filtering, first matching character in the suggestions, first character of a word, any character.
 * Load suggestion from an array of string in a JSON file
 * Be able to limit the number of displayed suggestion
 * Be able to change the filtering behaviour like Any, StartWith, Word
-* Be able to use a pattern match with would match suggestion that are 80% closer to what the user typed in. This is to accommodates even if there some typos in the inputs. Like: [Soundex](https://en.wikipedia.org/wiki/Soundex), [Levenshtein distance](https://en.wikipedia.org/wiki/Levenshtein_distance) 
+* Be able to use a pattern match with would match suggestion that are 80% closer to what the user typed in. This is to accommodates even if there some typos in the inputs. Like: [Soundex](https://en.wikipedia.org/wiki/Soundex), [Levenshtein distance](https://en.wikipedia.org/wiki/Levenshtein_distance)
 
 ### Feature that might worth to considerate
 
@@ -117,7 +121,7 @@ Conditional submission:
 
 ### Code sample
 
-Take a look also at the working example from the WAI ARIA practices cite in the resources which have clue on how the enhanced user interface should be coded. 
+Take a look also at the working example from the WAI ARIA practices cite in the resources which have clue on how the enhanced user interface should be coded.
 
 Simple datalist
 ```
@@ -224,13 +228,12 @@ Source code: [Github.com/nico3333fr/jquery-acc [...] autocomplete-list-aria.js](
 * The UI and the interaction pattern is interesting and seems to address some of the requirement.
 * It don't support loading suggestion from a JSON file.
 * The javascript code don't seems to be optimized, there is a lot of repeative code.
-* The solution simulate the "suggestion" panel. It use only ```<div>``` but it is enhanced with ARIA ```role=listbox``` for the panel and ```role=option``` for each individual options. ```tabindex=-1``` is used on options 
+* The solution simulate the "suggestion" panel. It use only ```<div>``` but it is enhanced with ARIA ```role=listbox``` for the panel and ```role=option``` for each individual options. ```tabindex=-1``` is used on options
 * Pressing the down arrow when the focus are on the input don't show the suggested list.
 * Instructions, for screen reader only, are inserted just before the input field
 * Info about the displayed result, for screen reader only, are inserted just before the input field. That block have the attribute ```aria-live=polite```
 * It contains an options to limits the number of displayed result.
 * It contains an options used as "fallback" but it didn't work on the demo, and didn't work on mouse click.
-
 
 ### mfranzke - datalist-polyfill
 
@@ -244,19 +247,18 @@ Source code: [Github.com/mfranzke/datalist-polyfill](https://github.com/mfranzke
 ### Accessible autocomplete
 
 Working example: [Accessible autocomplete](https://haltersweb.github.io/Accessibility/autocomplete.html)
-Source code: 
+Source code:
 * Javascript - [https://github.com/haltersweb/Accessibility/blob/gh-pages/js/autocomplete.js](https://github.com/haltersweb/Accessibility/blob/gh-pages/js/autocomplete.js)
 * CSS - [https://github.com/haltersweb/Accessibility/blob/gh-pages/css/autocomplete.css](https://github.com/haltersweb/Accessibility/blob/gh-pages/css/autocomplete.css)
 
 * When resizing, the overlay is not aligned with the input text.
-* The relation between the typed letter and the displayed results seems to be disconected. The displayed result seems to be tie to the number of typed letter.
+* The relation between the typed letter and the displayed results seems to be disconnected. The displayed result seems to be tie to the number of typed letter.
 * If the input already have an value, like "aa", then when refocusing in the input, the suggestion is not displayed, but we can change the input value by navigating with the top and down arrow on the keyboard. Unless if the input initial value is one from the suggested options.
 * Interesting use of ```aria-activedescendant``` attribute to notify what item has been selected.
 * This solution seems to use a shadow DOM on the input field.
-* Use of ```aria-live=assertive``` to notify the screen reader user. But after a second the notification messaage is removed from the DOM.
+* Use of ```aria-live=assertive``` to notify the screen reader user. But after a second the notification message is removed from the DOM.
 
-
-### selectWoo & Select2
+### selectWoo and Select2
 
 Working example:
 * [SelectWoo Accessibility Testing Samples](https://woocommerce.github.io/selectWoo/accessibility-testing/)
@@ -267,3 +269,44 @@ Source code:
 * Upstream: [https://github.com/select2/select2](https://github.com/select2/select2)
 
 * Large jQuery plugin that contains ~5876 line of javascript code and ~485 line of CSS code
+* One difference between Upstream and woocommerce fork is:
+	* The upstream identify the items as ```treeitem``` in ```group``` or  ```tree``` for multi select and the woocommerce as ```option``` in ```listbox```
+	* The upstream use ```aria-selected``` and the woocommerce use ```data-selected```
+* It use ```aria-activedescendant``` to identify the items that is selected.
+* Nice visual example with multiple selection. When items are selected, the role ````presentation``` should not be used on the "x" span which act as a button to remove the tag.
+* The multi selection aria, with the label are regrouped in a span with the role ```combobox```
+* Custom layout (via templating) for the suggestion list need to be managed through javascript. See the working example for [Ajax (remote data)](https://select2.org/data-sources/ajax)
+* SelectWoo - Keyboard navigation for multiple is not ideal, when selecting we can not use down arrow to select a second option.
+* SelectWoo - Down arrow do not display the options
+
+### Chosen
+
+Working example: [Chosen is a library for making long, unwieldy select boxes more friendly.](https://harvesthq.github.io/chosen/)
+Source code: [Github.com/harvesthq/chosen](https://github.com/harvesthq/chosen)
+
+* Use overlay, but the content is not enhanced with aria code.
+* It's enhance a basic select box into a interactive selection box with filtering
+
+### React autosuggest
+
+Working example: [Reach autosuggest](http://react-autosuggest.js.org/)
+Source code: [github.com/moroshko/react-autosuggest](https://github.com/moroshko/react-autosuggest)
+
+
+### Datalist JSON suggestion
+
+Working example: [Datalist JSON suggestion](http://wet-boew.github.io/themes-dist/GCWeb/demos/suggest/suggest-en.html)
+Source code: [github.com/wet-boew/GCWeb](https://github.com/wet-boew/GCWeb/tree/master/src/plugins/suggest)
+
+## Identified modules
+
+* Single selection
+* Multiple selection
+* Allowing free input
+* Select from predefined list only
+* Group of content
+* Custom template for suggestion
+* Persistent option
+* Fallback for unkown entered item
+* Gathering the suggested data
+* Find for items matching at 80%
