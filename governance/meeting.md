@@ -26,6 +26,25 @@ Summary of what has been discussed at the meeting.
 
 Technical review meeting are out of scope by default unless there is a project interest.
 
+2018-04-05 ( 4 participants )
+* Talk about what browser is supported for current release of WET
+	* 5% and more from [statistic](http://wet-boew.github.io/wet-boew-documentation/research/2018-2-browser-usage.html)
+	* Latest and previous released version of major desktop and mobile browser
+	* FF, [FF ESR](https://www.mozilla.org/en-US/firefox/organizations/), Chrome, IE11, Edge, Safari, Chrome mobile, Safari mobile
+	* Running on Windows 7, Windows 10, android, iOS, MacOS
+	* Update the prefix CSS tool [wet-boew issues #8339](https://github.com/wet-boew/wet-boew/issues/8339)
+	* Update the browser list for saucelab testing [browser.json](https://github.com/wet-boew/wet-boew/blob/master/browsers.json)
+* [wet-boew issue #7631](https://github.com/wet-boew/wet-boew/issues/7631) - Moving the italic issue forward, the next step are:
+	* Create a page that summarize the issue, the real concern and the suggested fixes.
+	* Poke the communauty and the appropriate web standards office
+	* Define a usability testing plan and create test cases of the issue and the suggested fixes.
+	* Goal: obtain enough data to create a design decision
+	* At the end, a design desion will be released with 
+* Suggested to use documentation badge like : [https://inch-ci.org/learn_more](https://inch-ci.org/learn_more)
+* Suggested to review how we use SauceLabs (it was timing out) and re-activate it
+* Try to move forward the Issue template - [wet-boew issues 8316](https://github.com/wet-boew/wet-boew/issues/8316)
+* Nick will look at how we can implement AMD for wet feature.
+
 2018-02-28 ( 6 participants )
 * Member as been requested to send their priority issue they want to move forward
 * Identify for the next meeting Github wet-boew repository that have a low/no activity and close their issue tracker.
