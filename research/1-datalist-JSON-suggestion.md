@@ -218,6 +218,28 @@ Fieldflow with datalist working example
 * Fallback on form submission default, that might need to be a new configuration (When the typed option is not available)
 * Support for multiple selection
 
+
+```
+<label for="myid">Label</label>
+<select id="myid" data-wb5-enhance="autofill@autofillTemplateID">
+	<option value="L">Lorem ipsum</option>
+	<option value="D">dolor sit amet</option>
+	<option value="C">consectetur</option>
+	<option value="A">adipiscing elit</option>
+</select>
+<template id="autofillTemplateID">
+	<div class="row" data-wb5-for="(option, index) in select.children()">
+		<div class="col-xs-1">
+			<p>:-)</p>
+		</div>
+		<div class="col-xs-11">
+			<p><button data-wb5-on="click@selectOption(index)">{{ option.text }}</button></p>
+		</div>
+	</div>
+	<button data-wb5-on="click@selectOption( select.children().length - 1 )">Default option</button>
+</template>
+
+```
 ## Review of existing tools
 
 ### jQuery accessible autocomplete list (with some ARIA)
@@ -227,13 +249,13 @@ Source code: [Github.com/nico3333fr/jquery-acc [...] autocomplete-list-aria.js](
 
 * The UI and the interaction pattern is interesting and seems to address some of the requirement.
 * It don't support loading suggestion from a JSON file.
-* The javascript code don't seems to be optimized, there is a lot of repeative code.
+* The javascript code don't seems to be optimized, there is a lot of repetitive code.
 * The solution simulate the "suggestion" panel. It use only ```<div>``` but it is enhanced with ARIA ```role=listbox``` for the panel and ```role=option``` for each individual options. ```tabindex=-1``` is used on options
 * Pressing the down arrow when the focus are on the input don't show the suggested list.
 * Instructions, for screen reader only, are inserted just before the input field
 * Info about the displayed result, for screen reader only, are inserted just before the input field. That block have the attribute ```aria-live=polite```
 * It contains an options to limits the number of displayed result.
-* It contains an options used as "fallback" but it didn't work on the demo, and didn't work on mouse click.
+* It contains an options used as "fall-back" but it didn't work on the demo, and didn't work on mouse click.
 
 ### mfranzke - datalist-polyfill
 
@@ -292,21 +314,45 @@ Source code: [Github.com/harvesthq/chosen](https://github.com/harvesthq/chosen)
 Working example: [Reach autosuggest](http://react-autosuggest.js.org/)
 Source code: [github.com/moroshko/react-autosuggest](https://github.com/moroshko/react-autosuggest)
 
+* We can only re-use the design pattern, not the code
+* It use wai-aria role ```option``` and ```listbox``` to enhance the accessibility, even for custom render.
+* For multiple, each group have it's own ```listbox```
+* The user can not use the "down" arrow to simply show all the result
+* Custom render, the style is only created with ```span```
+* Custom render, the image is a decorative image
+* Nice interface, showing the selected option but the user can modify it through an "edit" button link and then all the option is displayed in a overlay and they user can select from a scrolable list.
 
 ### Datalist JSON suggestion
 
 Working example: [Datalist JSON suggestion](http://wet-boew.github.io/themes-dist/GCWeb/demos/suggest/suggest-en.html)
 Source code: [github.com/wet-boew/GCWeb](https://github.com/wet-boew/GCWeb/tree/master/src/plugins/suggest)
 
-## Identified modules
+* Load suggestion from a JSON file
+* Only provide datalist feature as it was implemented by the browser. So it can be inconsistent depending of the browser vendor.
+* Can limit the number of displayed result
+* There is some basic mode to filter items, like startWith, words and any. But the browser implementation has precedence. like in IE11 it's always start with and the mode "any" or "word" are not supported.
 
-* Single selection
-* Multiple selection
-* Allowing free input
-* Select from predefined list only
-* Group of content
-* Custom template for suggestion
-* Persistent option
-* Fallback for unkown entered item
-* Gathering the suggested data
-* Find for items matching at 80%
+
+## List of modules
+
+* Type of selection
+	* Single selection
+	* Multiple selection
+* Type of input
+	* Free input, means the user can enter his own value. (HTML datalist element model)
+	* Predefined list, means the user need to choose one item in the list. (HTML select element model)
+* Type of layout for suggestion
+	* Plain, only straight forward items, a simple string is displayed for each item. Will use the role ```option``` and ```listbox```
+	* Grouped, use two listbox or use the role ```grid```
+	* Customized layout, the suggestion should use the role ```grid```. Includes scenario:
+		* Persistent option, at the bottom
+		* Input field to filter the suggested items
+* Fieldflow
+	* Fallback for unknown items when the items is just a suggestions
+* Gathering the list of suggested items. From HTML content, JSON file, CSV
+* Type of filtering
+	* Start with
+	* Any
+	* Word
+	* Find items that are matching at 80% validated with different matching algorithm (SoundEx)
+
