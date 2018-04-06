@@ -425,7 +425,9 @@ Predefined list
 
 ### Enhanced interface
 
-Free input
+The interface as the same for Predefined option and Free input. The difference is the "predefined option" will log a custom error message if the input don't match one items in list of suggested items.
+
+
 ```
 <div role="combobox" aria-expanded="true" aria-owns="datalist_id" aria-haspopup="listbox">
     <input aria-autocomplete="list" aria-controls="datalist_id" aria-activedescendant="wb_auto_1">
@@ -464,7 +466,78 @@ Free input
 ```
 
 
+
+## Design pattern - Single selection with customized layout
+
+* Custom layout should be detected when the template do not only contains an "option" elements or "optgroup" for select.
+* The content to be used as the actual value of the input need to be specified, like via a configuration with a CSS selector value relative to the "row".
+* Custom layout require to use the "grid".
+* May require a mapping from datasource in the page or from an external JSON file. For in page mapping use ```data-wb5-slot``` attribute where its value is the slot name.
+
+### Predefined list
+
+This example kept simple list items, but the intention is to display inside a custom interface with a fallback.
+
+The template will be created in a new ```<div role="grid">```
+
+The next example re-use the option as the data provider. The "value" are the filterable content
+
+```
+<select data-wb5-enhance="combobox">
+	<template>
+		<ul role="row">
+			<li role="gridcell" data-wb5-for="option in select.options()">{{ option.text }}</li>
+		</ul>
+		<div role="row">
+			<div role="gridcell">
+				<button data-wb5-on="click@$emit('select', 'sit')">Default persistent option</button>
+			</div>
+		</div>
+	</template>
+	<option value="Lorem">Lorem</option>
+	<option value="ipsum">ipsum</option>
+	<option value="dolor">dolor</option>
+	<option value="sit">sit</option>
+</select>
+
+```
+
+
+
+### (incomplete) predefined list with custom layout of items
+
+
+```
+<select data-wb5-enhance="combobox" data-wb5-provider="html@mySuggestionList" data-wb5-config='{"prvdr": { "image": "CSS Selector",...}  }'>
+	<template>
+		<div class="row" data-wb5-for="(option, index) in select.options()">
+			<div class="col-xs-1">
+				<p>:-)</p>
+			</div>
+			<div class="col-xs-11">
+				<p><button data-wb5-on="click@selectOption(index)">{{ value }}</button></p>
+			</div>
+		</div>
+		<button data-wb5-on="click@selectOption( select.children().length - 1 )">Default option</button>
+	</template>
+	<option>Lorem</option>
+	<option>ipsum</option>
+	<option>dolor</option>
+	<option>sit</option>
+</select>
+
+{ hidden }
+	<div class="hidden" id="mySuggestionList">
+		<div data-wb5-slot="value">Item 1</div>
+	</div>
+{/ hidden }
+
+```
+
+
 ## Tasklist
+
+* Find an alternative to ```data-wb5``` like ```data-wb-exp``` for wet-boew experiment or something similar
 
 Fieldflow
 * Add the "combobox" renderas
