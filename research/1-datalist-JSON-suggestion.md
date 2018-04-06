@@ -306,7 +306,7 @@ Source code:
 	* The upstream identify the items as ```treeitem``` in ```group``` or  ```tree``` for multi select and the woocommerce as ```option``` in ```listbox```
 	* The upstream use ```aria-selected``` and the woocommerce use ```data-selected```
 * It use ```aria-activedescendant``` to identify the items that is selected.
-* Nice visual example with multiple selection. When items are selected, the role ````presentation``` should not be used on the "x" span which act as a button to remove the tag.
+* Nice visual example with multiple selection. When items are selected, the role ```presentation``` should not be used on the "x" span which act as a button to remove the tag.
 * The multi selection aria, with the label are regrouped in a span with the role ```combobox```
 * Custom layout (via templating) for the suggestion list need to be managed through javascript. See the working example for [Ajax (remote data)](https://select2.org/data-sources/ajax)
 * SelectWoo - Keyboard navigation for multiple is not ideal, when selecting we can not use down arrow to select a second option.
@@ -486,7 +486,7 @@ The next example re-use the option as the data provider. The "value" are the fil
 <select data-wb5-enhance="combobox">
 	<template>
 		<ul role="row">
-			<li role="gridcell" data-wb5-for="option in select.options()">{{ option.text }}</li>
+			<li role="gridcell" data-wb5-for="option in select.options()" data-wb5-on="click@$emit('select', option.value )">{{ option.text }}</li>
 		</ul>
 		<div role="row">
 			<div role="gridcell">
@@ -499,13 +499,31 @@ The next example re-use the option as the data provider. The "value" are the fil
 	<option value="dolor">dolor</option>
 	<option value="sit">sit</option>
 </select>
-
 ```
 
+### Free input
 
+```
+<input list="datalist_id" data-wb5-enhance="combobox">
+<datalist id="datalist_id">
+	<template>
+		<ul role="row">
+			<li role="gridcell" data-wb5-for="option in datalist.options()" data-wb5-on="click@$emit('select', option.value )">{{ option.text }}</li>
+		</ul>
+		<div role="row">
+			<div role="gridcell">
+				<button data-wb5-on="click@$emit('select', input.value)">{{ input.value }}</button>
+			</div>
+		</div>
+	</template>
+	<option>Lorem</option>
+	<option>ipsum</option>
+	<option>dolor</option>
+	<option>sit</option>
+</datalist>
+```
 
 ### (incomplete) predefined list with custom layout of items
-
 
 ```
 <select data-wb5-enhance="combobox" data-wb5-provider="html@mySuggestionList" data-wb5-config='{"prvdr": { "image": "CSS Selector",...}  }'>
@@ -542,3 +560,153 @@ The next example re-use the option as the data provider. The "value" are the fil
 Fieldflow
 * Add the "combobox" renderas
 * Add the configuration option "fallback" with support to pass the value of the "input"
+
+
+## Early prototype requirement
+
+* Predefined list - Single selection with a customized layout for the overlay and the dynamic suggest items are simple.
+* Free input - Single selection with a customized layout for the overlay and the dynamic suggest items are simple.
+
+
+### Code sample and expected results
+
+**Scenario:** The user need to select one option. In order to select an option, the user can filter the suggested list, there is a persistant available option regardless the filter. A second phase will to limit the number of display of result with pagination.
+
+**Template requirement:** As the display is not a linear list, the template must implement the grid.
+
+#### before initialization (Basic)
+
+Author code:
+```
+<label for="id_select">Please choose an option</label>
+<select id="id_select" data-wb5-enhance="combobox" name="selLoremIpsum">
+	<template>
+		<ul role="row">
+			<li role="gridcell" data-wb5-for="option in select.options()" data-wb5-on="click@$emit('select', option.value )">{{ option.text }}</li>
+		</ul>
+		<div role="row">
+			<div role="gridcell">
+				<button data-wb5-on="click@$emit('select', 'sit')">Default persistent option</button>
+			</div>
+		</div>
+	</template>
+	<option value="Lorem">Lorem</option>
+	<option value="ipsum">ipsum</option>
+	<option value="dolor">dolor</option>
+	<option value="sit">sit</option>
+</select>
+```
+
+#### on initialization (Enhanced)
+
+The enhanced code, on initialization, will look like:
+```
+<div role="combobox" aria-expanded="false" aria-haspopup="grid">
+    <input aria-autocomplete="list" aria-controls="wb_auto_1" name="selLoremIpsum">
+</div>
+```
+
+Note:
+* If the value of the input don't match one of the available items, then the input would contains a custom error message. An empty value for the input should be valid if the required attribute is not set to "true" on the ```select```
+* The user only see a input[type=text] confirming the enhancement has worked
+* Consider to not "pre-create" the list of suggestion. It may be more efficiant to create the suggestion list when the user hit that text field.
+
+#### on focus (Enhanced)
+
+The enhanced code, on focus, will look like:
+```
+<div role="combobox" aria-expanded="true" aria-owns="wb_auto_1" aria-haspopup="grid">
+    <input aria-autocomplete="list" aria-controls="wb_auto_1" name="selLoremIpsum" />
+</div>
+<div id="wb_auto_1" role="grid" class="overlay">
+	<ul role="row">
+		<li id="wb_auto_2" role="gridcell" data-wb5-on="click@$emit('select', 'Lorem' )">Lorem</li>
+		<li id="wb_auto_3" role="gridcell" data-wb5-on="click@$emit('select', 'ipsum' )">ipsum</li>
+		<li id="wb_auto_4" role="gridcell" data-wb5-on="click@$emit('select', 'dolor' )">dolor</li>
+		<li id="wb_auto_5" role="gridcell" data-wb5-on="click@$emit('select', 'sit' )">sit</li>
+	</ul>
+	<div role="row">
+		<div role="gridcell">
+			<button data-wb5-on="click@$emit('select', 'sit')">Default persistent option</button>
+		</div>
+	</div>
+</div>
+```
+
+
+#### on selecting an item (Enhanced)
+
+The item "ipsum" is currently focused.
+
+```
+<div role="combobox" aria-expanded="true" aria-owns="wb_auto_1" aria-haspopup="grid">
+    <input aria-autocomplete="list" aria-controls="wb_auto_1" name="selLoremIpsum"  aria-activedescendant="wb_auto_3" />
+</div>
+<div id="wb_auto_1" role="grid" class="overlay">
+	<ul role="row">
+		<li id="wb_auto_2" role="gridcell" data-wb5-on="click@$emit('select', 'Lorem' )">Lorem</li>
+		<li class="active" id="wb_auto_3" role="gridcell" data-wb5-on="click@$emit('select', 'ipsum' )">ipsum</li>
+		<li id="wb_auto_4" role="gridcell" data-wb5-on="click@$emit('select', 'dolor' )">dolor</li>
+		<li id="wb_auto_5" role="gridcell" data-wb5-on="click@$emit('select', 'sit' )">sit</li>
+	</ul>
+	<div role="row">
+		<div role="gridcell">
+			<button data-wb5-on="click@$emit('select', 'sit')">Default persistent option</button>
+		</div>
+	</div>
+</div>
+```
+
+#### after selecting an item (Enhanced)
+
+The item "dolor" is selected by the user.
+
+```
+<div role="combobox" aria-expanded="true" aria-owns="wb_auto_1" aria-haspopup="grid">
+    <input aria-autocomplete="list" aria-controls="wb_auto_1" name="selLoremIpsum" value="dolor" />
+</div>
+<div id="wb_auto_1" role="grid" class="overlay">
+	<ul role="row">
+		<li id="wb_auto_2" role="gridcell" data-wb5-on="click@$emit('select', 'Lorem' )">Lorem</li>
+		<li id="wb_auto_3" role="gridcell" data-wb5-on="click@$emit('select', 'ipsum' )">ipsum</li>
+		<li id="wb_auto_4" role="gridcell" data-wb5-on="click@$emit('select', 'dolor' )">dolor</li>
+		<li id="wb_auto_5" role="gridcell" data-wb5-on="click@$emit('select', 'sit' )">sit</li>
+	</ul>
+	<div role="row">
+		<div role="gridcell">
+			<button data-wb5-on="click@$emit('select', 'sit')">Default persistent option</button>
+		</div>
+	</div>
+</div>
+```
+
+#### on focus out (Enhanced)
+
+The focus is move to the next element, the grid overlay are hidden and the user has selected the option "dolor" before focusing out.
+
+```
+<div role="combobox" aria-expanded="false" aria-owns="wb_auto_1" aria-haspopup="grid">
+    <input aria-autocomplete="list" aria-controls="wb_auto_1" name="selLoremIpsum" value="dolor">
+</div>
+<div id="wb_auto_1" role="grid" class="hidden">
+	<ul role="row">
+		<li id="wb_auto_2" role="gridcell" data-wb5-on="click@$emit('select', 'Lorem' )">Lorem</li>
+		<li id="wb_auto_3" role="gridcell" data-wb5-on="click@$emit('select', 'ipsum' )">ipsum</li>
+		<li id="wb_auto_4" role="gridcell" data-wb5-on="click@$emit('select', 'dolor' )">dolor</li>
+		<li id="wb_auto_5" role="gridcell" data-wb5-on="click@$emit('select', 'sit' )">sit</li>
+	</ul>
+	<div role="row">
+		<div role="gridcell">
+			<button data-wb5-on="click@$emit('select', 'sit')">Default persistent option</button>
+		</div>
+	</div>
+</div>
+```
+
+#### on resize when open (Enhanced)
+
+? Close the overlay or recalculate the possition of the overlay.
+
+#### on validation error (Enhanced)
+
+This may require the form validation plugin in order to display the error message. However, on error, this plugin would set the custom error message to the input text field.
