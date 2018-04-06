@@ -90,6 +90,8 @@ Here a list of similar tools that was found on a February 2018 research
 * [Example Listbox with Reaarangeable Options - WAI ARIA practice](https://www.w3.org/TR/wai-aria-practices-1.1/examples/listbox/listbox-rearrangeable.html)
 * [Grids: Interactive Tabular Data and Layout Container - WAI ARIA practice](https://www.w3.org/TR/wai-aria-practices-1.1/#grid)
 * [Example 3: Scrollable Search Results - WAI ARIA practice](https://www.w3.org/TR/wai-aria-practices-1.1/examples/grid/LayoutGrids.html#ex3_label)
+* [```combobox``` (role)](https://www.w3.org/TR/wai-aria-1.1/#combobox)
+* [```aria-autocomplete``` (property)](https://www.w3.org/TR/wai-aria-1.1/#aria-autocomplete)
 
 ### Quote from spec
 
@@ -99,7 +101,16 @@ Source: listbox (role) - WAI ARIA 1.1
 
 > the interaction model conveyed by the listbox role to assistive technologies does not support interacting with elements inside of an option. Because of these traits of the listbox widget, it does not provide an accessible way to present a list of interactive elements, such as links, buttons, or checkboxes. To present a list of interactive elements, see the grid pattern.
 
-Source: Listbox - WAI ARIA parctices
+Source: Listbox - WAI ARIA practices
+
+> A composite widget containing a single-line textbox and another element, such as a listbox or grid, that can dynamically pop up to help the user set the value of the textbox.
+
+Source: combobox (role) - WAI ARIA 1.1
+
+> For instance, a combobox where the value of aria-autocomplete would be none is a search field that displays suggested values by listing the 5 most recently used search terms without any filtering of the list based on the user's input.
+
+Source: aria-autocomplete (property) - WAI ARIA 1.1
+
 
 ## Test case
 
@@ -356,3 +367,105 @@ Source code: [github.com/wet-boew/GCWeb](https://github.com/wet-boew/GCWeb/tree/
 	* Word
 	* Find items that are matching at 80% validated with different matching algorithm (SoundEx)
 
+## Behaviour
+
+* For predefined list, it the input value don't match the suggestion, then the input should be have a custom error ```input.setCustomValidity('"' + input.value + '"' don't match one of the suggestions")```
+* ? Use the "defaultValue" attribute to set the default value.
+* Use the behaviour defined by aria 1.1 comboxbox role
+* Detect if it's a simple listbox or a grid or a dialog
+
+## Design pattern - Single selection
+
+### Basic HTML interface
+
+Free input
+```
+<input list="datalist_id">
+<datalist id="datalist_id">
+	<option>Lorem</option>
+	<option>ipsum</option>
+	<option>dolor</option>
+	<option>sit</option>
+</datalist>
+```
+
+```
+<div class="wb-fieldflow" data-wb-fieldflow='{"renderas":"combobox", "fallback": { [action object] } }'>
+	<p>Please something, something....</p>
+	<ul>
+		<li><a href="redirect/page-1.html">Lorem ipsum</a></li>
+		<li><a href="redirect/page-2.html">dolor sit amet</a></li>
+		<li><a href="redirect/page-3.html">consectetur</a></li>
+		<li><a href="redirect/page-4.html">adipiscing elit</a></li>
+	</ul>
+</div>
+```
+
+Predefined list
+```
+<select>
+	<option>Lorem</option>
+	<option>ipsum</option>
+	<option>dolor</option>
+	<option>sit</option>
+</select>
+```
+
+```
+<div class="wb-fieldflow" data-wb-fieldflow='{"renderas":"combobox"}'>
+	<p>Please something, something....</p>
+	<ul>
+		<li><a href="redirect/page-1.html">Lorem ipsum</a></li>
+		<li><a href="redirect/page-2.html">dolor sit amet</a></li>
+		<li><a href="redirect/page-3.html">consectetur</a></li>
+		<li><a href="redirect/page-4.html">adipiscing elit</a></li>
+	</ul>
+</div>
+```
+
+### Enhanced interface
+
+Free input
+```
+<div role="combobox" aria-expanded="true" aria-owns="datalist_id" aria-haspopup="listbox">
+    <input aria-autocomplete="list" aria-controls="datalist_id" aria-activedescendant="wb_auto_1">
+</div>
+<ul id="datalist_id" role="listbox">
+    <li id="wb_auto_1" role="option">Lorem</li>
+    <li id="wb_auto_2" role="option">ipsum</li>
+    <li id="wb_auto_3" role="option">dolor</li>
+    <li id="wb_auto_4" role="option">sit</li>
+</ul>
+```
+
+```
+{ hidden }
+	<div class="wb-fieldflow" data-wb-fieldflow='{"renderas":"combobox", "fallback": { [action object] } }'>
+		<p>Please something, something....</p>
+		<ul>
+			<li id="wb_auto_7"><a href="redirect/page-1.html">Lorem ipsum</a></li>
+			<li id="wb_auto_8"><a href="redirect/page-2.html">dolor sit amet</a></li>
+			<li id="wb_auto_9"><a href="redirect/page-3.html">consectetur</a></li>
+			<li id="wb_auto_10"><a href="redirect/page-4.html">adipiscing elit</a></li>
+		</ul>
+	</div>
+{/ hidden }
+
+<div role="combobox" aria-expanded="true" aria-owns="wb_auto_6" aria-haspopup="listbox">
+	<label for="wb_auto_5">Please something, something.... </label>
+    <input id="wb_auto_5" aria-autocomplete="list" aria-controls="wb_auto_6" aria-activedescendant="wb_auto_1">
+</div>
+<ul id="wb_auto_6" role="listbox">
+    <li role="option" data-wb-fieldflow='{"bind":"wb_auto_7","actions":[{"action":"redir","url":"redirect/page-1.html"}]}'>Lorem ipsum</li>
+    <li role="option" data-wb-fieldflow='{"bind":"wb_auto_8","actions":[{"action":"redir","url":"redirect/page-2.html"}]}'>dolor sit amet</li>
+    <li role="option" data-wb-fieldflow='{"bind":"wb_auto_9","actions":[{"action":"redir","url":"redirect/page-3.html"}]}'>consectetur</li>
+    <li role="option" data-wb-fieldflow='{"bind":"wb_auto_10","actions":[{"action":"redir","url":"redirect/page-4.html"}]}'>adipiscing elit</li>
+</ul>
+```
+
+
+## Tasklist
+
+Fieldflow
+* Add the "combobox" renderas
+* Add the configuration option "fallback" with support to pass the value of the "input"
