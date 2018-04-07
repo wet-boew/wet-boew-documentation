@@ -579,16 +579,13 @@ Fieldflow
 Author code:
 ```
 <label for="id_select">Please choose an option</label>
-<select id="id_select" data-wb5-enhance="combobox" name="selLoremIpsum">
+<select id="id_select" data-wb5-enhance="combobox@listbox" name="selLoremIpsum">
 	<template>
-		<ul role="row">
-			<li role="gridcell" data-wb5-for="option in select.options()" data-wb5-on="click@$emit('select', option.value )">{{ option.text }}</li>
+		<ul>
+			<li role="option" data-wb5-for="option in select.options()" data-wb5-on="click@$emit('select', option.value )">{{ option.text }}</li>
 		</ul>
-		<div role="row">
-			<div role="gridcell">
-				<button data-wb5-on="click@$emit('select', 'sit')">Default persistent option</button>
-			</div>
-		</div>
+		<hr class="brdr-bttm">
+		<p role="option" data-wb5-on="click@$emit('select', 'sit')">Default persistent option</p>
 	</template>
 	<option value="Lorem">Lorem</option>
 	<option value="ipsum">ipsum</option>
@@ -601,8 +598,11 @@ Author code:
 
 The enhanced code, on initialization, will look like:
 ```
-<div role="combobox" aria-expanded="false" aria-haspopup="grid">
-    <input aria-autocomplete="list" aria-controls="wb_auto_1" name="selLoremIpsum">
+<label for="id_select">Please choose an option</label>
+<div role="combobox" aria-expanded="false" aria-haspopup="listbox" aria-owns="wb_auto_1">
+    <input id="id_select" aria-autocomplete="list" aria-controls="wb_auto_1" name="selLoremIpsum" aria-activedescendant="" />
+</div>
+<div id="wb_auto_1" role="listbox">
 </div>
 ```
 
@@ -615,21 +615,19 @@ Note:
 
 The enhanced code, on focus, will look like:
 ```
-<div role="combobox" aria-expanded="true" aria-owns="wb_auto_1" aria-haspopup="grid">
-    <input aria-autocomplete="list" aria-controls="wb_auto_1" name="selLoremIpsum" />
+<label for="id_select">Please choose an option</label>
+<div role="combobox" aria-expanded="true" aria-haspopup="listbox" aria-owns="wb_auto_1">
+    <input id="id_select" aria-autocomplete="list" aria-controls="wb_auto_1" name="selLoremIpsum" aria-activedescendant="" />
 </div>
-<div id="wb_auto_1" role="grid" class="overlay">
-	<ul role="row">
-		<li id="wb_auto_2" role="gridcell" data-wb5-on="click@$emit('select', 'Lorem' )">Lorem</li>
-		<li id="wb_auto_3" role="gridcell" data-wb5-on="click@$emit('select', 'ipsum' )">ipsum</li>
-		<li id="wb_auto_4" role="gridcell" data-wb5-on="click@$emit('select', 'dolor' )">dolor</li>
-		<li id="wb_auto_5" role="gridcell" data-wb5-on="click@$emit('select', 'sit' )">sit</li>
+<div id="wb_auto_1" role="listbox" class="overlay">
+	<ul>
+		<li id="wb_auto_2" role="option" data-wb5-on="click@$emit('select', 'Lorem' )">Lorem</li>
+		<li id="wb_auto_3" role="option" data-wb5-on="click@$emit('select', 'ipsum' )">ipsum</li>
+		<li id="wb_auto_4" role="option" data-wb5-on="click@$emit('select', 'dolor' )">dolor</li>
+		<li id="wb_auto_5" role="option" data-wb5-on="click@$emit('select', 'sit' )">sit</li>
 	</ul>
-	<div role="row">
-		<div role="gridcell">
-			<button data-wb5-on="click@$emit('select', 'sit')">Default persistent option</button>
-		</div>
-	</div>
+	<hr class="brdr-bttm">
+	<p id="wb_auto_6" role="option" data-wb5-on="click@$emit('select', 'sit')">Default persistent option</p>
 </div>
 ```
 
@@ -639,44 +637,43 @@ The enhanced code, on focus, will look like:
 The item "ipsum" is currently focused.
 
 ```
-<div role="combobox" aria-expanded="true" aria-owns="wb_auto_1" aria-haspopup="grid">
-    <input aria-autocomplete="list" aria-controls="wb_auto_1" name="selLoremIpsum"  aria-activedescendant="wb_auto_3" />
+<label for="id_select">Please choose an option</label>
+<div role="combobox" aria-expanded="true" aria-haspopup="listbox" aria-owns="wb_auto_1">
+    <input id="id_select" aria-autocomplete="list" aria-controls="wb_auto_1" name="selLoremIpsum" aria-activedescendant="wb_auto_3" />
 </div>
-<div id="wb_auto_1" role="grid" class="overlay">
-	<ul role="row">
-		<li id="wb_auto_2" role="gridcell" data-wb5-on="click@$emit('select', 'Lorem' )">Lorem</li>
-		<li class="active" id="wb_auto_3" role="gridcell" data-wb5-on="click@$emit('select', 'ipsum' )">ipsum</li>
-		<li id="wb_auto_4" role="gridcell" data-wb5-on="click@$emit('select', 'dolor' )">dolor</li>
-		<li id="wb_auto_5" role="gridcell" data-wb5-on="click@$emit('select', 'sit' )">sit</li>
+<div id="wb_auto_1" role="listbox" class="overlay">
+	<ul>
+		<li id="wb_auto_2" role="option" data-wb5-on="click@$emit('select', 'Lorem' )">Lorem</li>
+		<li aria-selected="true" id="wb_auto_3" role="option" data-wb5-on="click@$emit('select', 'ipsum' )">ipsum</li>
+		<li id="wb_auto_4" role="option" data-wb5-on="click@$emit('select', 'dolor' )">dolor</li>
+		<li id="wb_auto_5" role="option" data-wb5-on="click@$emit('select', 'sit' )">sit</li>
 	</ul>
-	<div role="row">
-		<div role="gridcell">
-			<button data-wb5-on="click@$emit('select', 'sit')">Default persistent option</button>
-		</div>
-	</div>
+	<hr class="brdr-bttm">
+	<p id="wb_auto_6" role="option" data-wb5-on="click@$emit('select', 'sit')">Default persistent option</p>
 </div>
+
 ```
+
+Only the item with the role ```option``` will be selectable, as that is the design pattern for listbox. If other element need to be selectable then it should be rendered as a grid.
 
 #### after selecting an item (Enhanced)
 
 The item "dolor" is selected by the user.
 
 ```
-<div role="combobox" aria-expanded="true" aria-owns="wb_auto_1" aria-haspopup="grid">
-    <input aria-autocomplete="list" aria-controls="wb_auto_1" name="selLoremIpsum" value="dolor" />
+<label for="id_select">Please choose an option</label>
+<div role="combobox" aria-expanded="true" aria-haspopup="listbox" aria-owns="wb_auto_1">
+    <input id="id_select" aria-autocomplete="list" aria-controls="wb_auto_1" name="selLoremIpsum" aria-activedescendant="" value="dolor" />
 </div>
-<div id="wb_auto_1" role="grid" class="overlay">
-	<ul role="row">
-		<li id="wb_auto_2" role="gridcell" data-wb5-on="click@$emit('select', 'Lorem' )">Lorem</li>
-		<li id="wb_auto_3" role="gridcell" data-wb5-on="click@$emit('select', 'ipsum' )">ipsum</li>
-		<li id="wb_auto_4" role="gridcell" data-wb5-on="click@$emit('select', 'dolor' )">dolor</li>
-		<li id="wb_auto_5" role="gridcell" data-wb5-on="click@$emit('select', 'sit' )">sit</li>
+<div id="wb_auto_1" role="listbox" class="overlay">
+	<ul>
+		<li id="wb_auto_2" role="option" data-wb5-on="click@$emit('select', 'Lorem' )">Lorem</li>
+		<li id="wb_auto_3" role="option" data-wb5-on="click@$emit('select', 'ipsum' )">ipsum</li>
+		<li id="wb_auto_4" role="option" data-wb5-on="click@$emit('select', 'dolor' )">dolor</li>
+		<li id="wb_auto_5" role="option" data-wb5-on="click@$emit('select', 'sit' )">sit</li>
 	</ul>
-	<div role="row">
-		<div role="gridcell">
-			<button data-wb5-on="click@$emit('select', 'sit')">Default persistent option</button>
-		</div>
-	</div>
+	<hr class="brdr-bttm">
+	<p id="wb_auto_6" role="option" data-wb5-on="click@$emit('select', 'sit')">Default persistent option</p>
 </div>
 ```
 
@@ -685,21 +682,19 @@ The item "dolor" is selected by the user.
 The focus is move to the next element, the grid overlay are hidden and the user has selected the option "dolor" before focusing out.
 
 ```
-<div role="combobox" aria-expanded="false" aria-owns="wb_auto_1" aria-haspopup="grid">
-    <input aria-autocomplete="list" aria-controls="wb_auto_1" name="selLoremIpsum" value="dolor">
+<label for="id_select">Please choose an option</label>
+<div role="combobox" aria-expanded="true" aria-haspopup="listbox" aria-owns="wb_auto_1">
+    <input id="id_select" aria-autocomplete="list" aria-controls="wb_auto_1" name="selLoremIpsum" aria-activedescendant="" value="dolor" />
 </div>
-<div id="wb_auto_1" role="grid" class="hidden">
-	<ul role="row">
-		<li id="wb_auto_2" role="gridcell" data-wb5-on="click@$emit('select', 'Lorem' )">Lorem</li>
-		<li id="wb_auto_3" role="gridcell" data-wb5-on="click@$emit('select', 'ipsum' )">ipsum</li>
-		<li id="wb_auto_4" role="gridcell" data-wb5-on="click@$emit('select', 'dolor' )">dolor</li>
-		<li id="wb_auto_5" role="gridcell" data-wb5-on="click@$emit('select', 'sit' )">sit</li>
+<div id="wb_auto_1" role="listbox" class="hidden">
+	<ul>
+		<li id="wb_auto_2" role="option" data-wb5-on="click@$emit('select', 'Lorem' )">Lorem</li>
+		<li id="wb_auto_3" role="option" data-wb5-on="click@$emit('select', 'ipsum' )">ipsum</li>
+		<li id="wb_auto_4" role="option" data-wb5-on="click@$emit('select', 'dolor' )">dolor</li>
+		<li id="wb_auto_5" role="option" data-wb5-on="click@$emit('select', 'sit' )">sit</li>
 	</ul>
-	<div role="row">
-		<div role="gridcell">
-			<button data-wb5-on="click@$emit('select', 'sit')">Default persistent option</button>
-		</div>
-	</div>
+	<hr class="brdr-bttm">
+	<p id="wb_auto_6" role="option" data-wb5-on="click@$emit('select', 'sit')">Default persistent option</p>
 </div>
 ```
 
