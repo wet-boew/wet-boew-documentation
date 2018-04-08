@@ -8,7 +8,7 @@ modified: 2018-03-29
 
 ## Purpose
 
-Customizable autocomple feature.
+Customizable autocomplete feature.
 
 ## Requirements
 
@@ -25,6 +25,10 @@ Customizable autocomple feature.
 * Be able to configure how the filtering is applied: Exact Match, SoundEx, Levenshtein distance.
 * Be able to highlight the typed character found within the displayed result. Like putting it in bold so the user can easilly make the liaison between the typed character and the suggested results.
 * Having a persistant results, like an "others" options.
+
+## Early prototype
+
+* [2018-04-08 - combobox prototype](2018-1-combobox-example.html)
 
 ## Similar tools
 
