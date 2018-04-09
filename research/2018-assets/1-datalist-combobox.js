@@ -179,10 +179,31 @@ var componentName = "wb-combobox",
 		return dataProv;
 	},
 
+	IE11templatePolyfill = function( elm ) {
+		if ( elm.content ) {
+			return;
+		}
+		// Polyfill Template for IE11
+
+		var elPlate = elm,
+			qContent,
+			docContent;
+
+		qContent = elPlate.childNodes;
+		docContent = doc.createDocumentFragment();
+
+		while ( qContent[ 0 ] ) {
+			docContent.appendChild( qContent[ 0 ] );
+		}
+
+		elPlate.content = docContent;
+	},
+
 	// Parse string HTML into DOM fragment
 	parseHTML = function( html ) {
 		var t = document.createElement('template');
 		t.innerHTML = html;
+		IE11templatePolyfill( t );
 		return t.content.cloneNode(true);
 	},
 
@@ -200,56 +221,68 @@ var componentName = "wb-combobox",
 
 
 		// Get the template if any, or use the default ones
+		var template,
+			tmplId = sourceElm.getAttribute("data-wb5-template");
 
-		var template = sourceElm.querySelector( "template" );
+		if ( !tmplId ) {
+			template = sourceElm.querySelector( "template" );
+		} else {
+			template = doc.getElementById( tmplId );
+		}
+
 
 		var clone;
 
 		if ( template ) {
+			
+			IE11templatePolyfill( template );
 
-			// Parse the template and find the iterator
-			clone = template.content.cloneNode( true );
-
-			var iteratorTmpl = clone.querySelector( "[data-wb5-for]" );
-
-			// Extract the iterator property
-			var iteratorCmd = iteratorTmpl.getAttribute( "data-wb5-for" );
-
-			// Remove the for attribute
-			iteratorTmpl.removeAttribute( "data-wb5-for" );
-
-			// Parse For
-			var forParsed = parseFor( iteratorCmd );
-
-			// Get the object to be iterated
-			var options = getObjectAt( dataProvider, forParsed.for );
-			var i;
-
-			// Iterate
-			var opts_len = options.length;
-			for( i =0; i < opts_len; i++) {
-				var optItm = iteratorTmpl.cloneNode( true );
-				// Assign it an unique id
-				optItm.id = wb.getId();
-
-				// Parse the mustache and recreate the DOM fragment
-				var outerHTMLClone = optItm.outerHTML,
-					regExMustache = /{{\s?([^}]*)\s?}}/g;
-				outerHTMLClone = outerHTMLClone.replace( regExMustache, function( a, b ) {
-					var dt = {};
-					dt[ forParsed.alias ] = options[ i ];
-					b = b.trim();
-					return getObjectAt( dt, b );
-				} );
-				optItm = parseHTML( outerHTMLClone );
-
-				iteratorTmpl.parentNode.appendChild( optItm );
-			}
-
-			iteratorTmpl.parentNode.removeChild( iteratorTmpl );
+			clone = template.content.cloneNode( true );		
+		} else {
+			console.log( "no Template, fallback on defaults");
+			clone = $( "<ul><li data-wb5-for='o in select' data-wb5-selectvalue='{{o.textContent}}'>{{o.textContent}}</li></ul>" ).get( 0 );
 		}
 
+		// Parse the template and find the iterator
 
+		var iteratorTmpl = clone.querySelector( "[data-wb5-for]" );
+
+		// Extract the iterator property
+		var iteratorCmd = iteratorTmpl.getAttribute( "data-wb5-for" );
+
+		// Remove the for attribute
+		iteratorTmpl.removeAttribute( "data-wb5-for" );
+
+		// Parse For
+		var forParsed = parseFor( iteratorCmd );
+
+		// Get the object to be iterated
+		var options = getObjectAt( dataProvider, forParsed.for );
+		var i;
+
+		// Iterate
+		var opts_len = options.length;
+		for( i =0; i < opts_len; i++) {
+			var optItm = iteratorTmpl.cloneNode( true );
+			// Assign it an unique id
+			optItm.id = wb.getId();
+
+			// Parse the mustache and recreate the DOM fragment
+			var outerHTMLClone = optItm.outerHTML,
+				regExMustache = /{{\s?([^}]*)\s?}}/g;
+			outerHTMLClone = outerHTMLClone.replace( regExMustache, function( a, b ) {
+				var dt = {};
+				dt[ forParsed.alias ] = options[ i ];
+				b = b.trim();
+				return getObjectAt( dt, b );
+			} );
+			optItm = parseHTML( outerHTMLClone );
+
+			iteratorTmpl.parentNode.appendChild( optItm );
+		}
+
+		iteratorTmpl.parentNode.removeChild( iteratorTmpl );
+		
 
 		listbox.innerHTML = "";
 		listbox.appendChild( clone );
