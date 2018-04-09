@@ -47,19 +47,20 @@ Prototype of an ```select``` box transformed into a customized ```combobox```.
 
 
 <label for="id_select">Please choose an option</label>
-<select id="id_select" class="wb-combobox" name="selLoremIpsum">
-	<template>
-		<ul class="list-unstyled">
-			<li role="option" data-wb5-for="autofillItem in select.options" data-wb5-selectvalue="{% raw %}{{autofillItem.textContent.toUpperCase()}}{% endraw %}">{% raw %}{{ autofillItem.textContent }}{% endraw %}</li>
-		</ul>
-		<hr class="brdr-bttm mrgn-tp-sm mrgn-bttm-sm">
-		<p role="option" data-wb5-selectvalue="my default value">Default persistent option</p>
-	</template>
+<select id="id_select" class="wb-combobox" name="selLoremIpsum" data-wb5-template="id_select_template">
 	<option value="Lorem">Lorem</option>
 	<option value="ipsum">ipsum</option>
 	<option value="dolor">dolor</option>
 	<option value="sit">sit</option>
 </select>
+
+<template id="id_select_template">
+	<ul class="list-unstyled">
+		<li role="option" data-wb5-for="autofillItem in select.options" data-wb5-selectvalue="{% raw %}{{autofillItem.textContent.toUpperCase()}}{% endraw %}">{% raw %}{{ autofillItem.textContent }}{% endraw %}</li>
+	</ul>
+	<hr class="brdr-bttm mrgn-tp-sm mrgn-bttm-sm">
+	<p role="option" data-wb5-selectvalue="my default value">Default persistent option</p>
+</template>
 
 <p><a href="#">A dummy link for tab sequence testing</a></p>
 
