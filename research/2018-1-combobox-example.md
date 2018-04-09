@@ -47,7 +47,7 @@ Prototype of an ```select``` box transformed into a customized ```combobox```.
 
 
 <label for="id_select">Please choose an option</label>
-<select id="id_select" class="wb-combobox" name="selLoremIpsum" data-wb5-template="id_select_template">
+<select id="id_select" class="wb-combobox" name="selLoremIpsum" data-wb5-template="id_select_template" data-wb-filter-type="any">
 	<option value="Lorem">Lorem</option>
 	<option value="ipsum">ipsum</option>
 	<option value="dolor">dolor</option>
