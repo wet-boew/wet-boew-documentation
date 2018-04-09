@@ -88,6 +88,14 @@ var componentName = "wb-combobox",
 			$elm.hide();
 
 
+			// IE11 add support for string normalization
+			Modernizr.load( {
+				test: Modernizr.stringnormalize,
+				nope: [
+					"site!deps/unorm" + wb.getMode() + ".js"
+				]
+			} );
+
 			console.log( "### Interface created" );
 
 
@@ -207,6 +215,15 @@ var componentName = "wb-combobox",
 		return t.content.cloneNode(true);
 	},
 
+	// Remove accent and normalize the string
+	//
+	// str: String to be normalized
+	// return: A normalized string with no accent
+	//
+	unAccent = function( str ) {
+		return str.normalize( "NFD" ).replace( /[\u0300-\u036f]/g, "" );
+	},
+
 	updateResults = function( input, shouldShowAll ) {
 
 		var listbox = doc.getElementById( input.getAttribute( "aria-controls" ) );
@@ -260,9 +277,33 @@ var componentName = "wb-combobox",
 		var options = getObjectAt( dataProvider, forParsed.for );
 		var i;
 
+
+		// Do we need to apply a filter? (if data-wb-filter-type attribute is set)
+		var filterType = sourceElm.getAttribute( "data-wb-filter-type" );
+		var filterableValueInstruction = iteratorTmpl.getAttribute( "data-wb5-selectvalue" ).match( new RegExp( /{{\s?([^}]*)\s?}}/ ) )[ 1 ];
+		var filter = unAccent( input.value ).toLowerCase();
+
 		// Iterate
 		var opts_len = options.length;
 		for( i =0; i < opts_len; i++) {
+
+			var dt = {};
+			dt[ forParsed.alias ] = options[ i ];
+
+			var lstOptionValue = unAccent( getObjectAt( dt, filterableValueInstruction ) ).toLowerCase();
+
+			// Check if we need to filter
+			if ( filterType && filterType === "any" && lstOptionValue.indexOf( filter ) === -1 ) {
+				continue;
+			} else if ( filterType && filterType === "startWith" && lstOptionValue.indexOf( filter ) !== 0 ) {
+				continue;
+			} else if ( filterType && filterType === "word" && 
+				( lstOptionValue.indexOf( filter ) !== 0 || !lstOptionValue.match( new RegExp( "\\s" + filter ) ) ) ) {
+				continue;
+			}
+
+
+
 			var optItm = iteratorTmpl.cloneNode( true );
 			// Assign it an unique id
 			optItm.id = wb.getId();
@@ -271,10 +312,7 @@ var componentName = "wb-combobox",
 			var outerHTMLClone = optItm.outerHTML,
 				regExMustache = /{{\s?([^}]*)\s?}}/g;
 			outerHTMLClone = outerHTMLClone.replace( regExMustache, function( a, b ) {
-				var dt = {};
-				dt[ forParsed.alias ] = options[ i ];
-				b = b.trim();
-				return getObjectAt( dt, b );
+				return getObjectAt( dt, b.trim() );
 			} );
 			optItm = parseHTML( outerHTMLClone );
 
@@ -321,11 +359,6 @@ $document.on( "click vclick touchstart focusin", "body", function( evt ) {
 });
 
 
-// Key up
-
-// Key down
-
-
 // Focus
 $document.on( "focus click", "[role=combobox] input", function( event, data ) {
 
@@ -337,6 +370,27 @@ $document.on( "focus click", "[role=combobox] input", function( event, data ) {
 	}
 });
 
+
+// keyup
+$document.on( "keyup", "[role=combobox] input", function( evt ) {
+	var key = evt.which || evt.keyCode;
+
+
+	switch (key) {
+		case KeyCode.UP:
+		case KeyCode.DOWN:
+		case KeyCode.ESC:
+		case KeyCode.RETURN:
+		case KeyCode.HOME:
+		case KeyCode.END:
+			evt.preventDefault();
+			return;
+		default:
+			setTimeout( function() {
+				updateResults( evt.target, false );
+			}, 1 );
+	}
+});
 
 // keydown
 $document.on( "keydown", "[role=combobox] input", function( evt ) {
@@ -408,23 +462,38 @@ $document.on( "keydown", "[role=combobox] input", function( evt ) {
 
 	switch (key) {
 		case KeyCode.UP:
-			if (activeIndex <= 0) {
+
+			// Move focus to and select the previous option. If focus is on the first option do nothing
+			if (activeIndex === -1) {
 				activeIndex = resultsCount - 1;
 			}
-			else {
+			else if ( activeIndex !== 0 ) {
 				activeIndex--;
 			}
 
 			break;
 		case KeyCode.DOWN:
-			// Get the next items, walk the DOM until we find it
 
-			if (activeIndex === -1 || activeIndex >= resultsCount - 1) {
+			// Move focus to and select next option. If focus is on the first option do nothing
+			if ( activeIndex === -1 ) {
 				activeIndex = 0;
 			}
-			else {
+			else if ( activeIndex < resultsCount ) {
 				activeIndex++;
 			}
+
+			break;
+
+		case KeyCode.HOME:
+
+			// Move focus to and selects the first option
+			activeIndex = 0;
+			break;
+
+		case KeyCode.END:
+
+			// Move focus to and selects the last option
+			activeIndex = resultsCount - 1;
 
 			break;
 
