@@ -311,7 +311,7 @@ $document.on( "click vclick touchstart focusin", "body", function( evt ) {
 	// Close the overlay listbox
 
 
-	if (!currentlyOpened || currentlyOpened.contains(evt.target)) {
+	if (!currentlyOpened || currentlyOpened.parentElement.contains(evt.target)) {
 		return;
 	}
 
@@ -327,12 +327,14 @@ $document.on( "click vclick touchstart focusin", "body", function( evt ) {
 
 
 // Focus
-$document.on( "focus", "[role=combobox] input", function( event ) {
+$document.on( "focus click", "[role=combobox] input", function( event, data ) {
 
-	// Open the overlay
-	setTimeout( function() {
-		updateResults( event.target, false );
-	}, 1 );
+	if ( !currentlyOpened ) {
+		// Open the overlay
+		setTimeout( function() {
+			updateResults( event.target, false );
+		}, 1 );
+	}
 });
 
 
@@ -520,7 +522,17 @@ $document.on( "mouseover", "[role=listbox] [role=option][data-wb5-selectvalue]",
 // Listbox click
 $document.on( "click", "[role=listbox] [role=option][data-wb5-selectvalue]", function( event, data ) {
 
+	// Get the input
+	var $input = $( currentlyOpened.querySelector( "input" ) );
+
+	// Select the options
 	$( event.target ).trigger( "mouseover" ).trigger( "wb.select" );
+
+	// Set the focus back on the input
+	$input.trigger( "focus" );
+
+	// Hide the overlay
+	hideListbox();
 
 } );
 
