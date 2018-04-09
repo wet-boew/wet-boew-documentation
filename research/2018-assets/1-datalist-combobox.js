@@ -88,6 +88,8 @@ var componentName = "wb-combobox",
 			$elm.hide();
 
 
+			Modernizr.addTest( "stringnormalize", "normalize" in String );
+
 			// IE11 add support for string normalization
 			Modernizr.load( {
 				test: Modernizr.stringnormalize,
@@ -226,16 +228,46 @@ var componentName = "wb-combobox",
 
 	updateResults = function( input, shouldShowAll ) {
 
+
+
+
 		var listbox = doc.getElementById( input.getAttribute( "aria-controls" ) );
 
 		var $combobox = $( input ).parent();
 
 		var sourceElm = doc.getElementById( $combobox.data().sourceElm );
 
+
+
+		// Are we waiting to load result?
+		if ( sourceElm.dataset.wbWaiting ) {
+			return;
+		}
+
+		// Do we need to load something?
+		if( sourceElm.dataset.wbLoad ) {
+			// Load the JSON suggestion and wait before to move forward
+			sourceElm.dataset.wbWaiting = "Loading";
+
+			// Load the JSON file
+			$( sourceElm ).trigger( {
+				type: "json-fetch.wb",
+				fetch: {
+					url: sourceElm.dataset.wbLoad
+				}
+			} );
+			return;
+		}
+
+
 		var dataProvider = {};
 
 		dataProvider[ sourceElm.nodeName.toLowerCase() ] = sourceElm;
 
+		// Load the suggestion, if any
+		if ( sourceElm.dataset.wbSuggestions ) {
+			dataProvider[ "wbLoad" ] = JSON.parse(sourceElm.dataset.wbSuggestions);
+		}
 
 		// Get the template if any, or use the default ones
 		var template,
@@ -262,65 +294,85 @@ var componentName = "wb-combobox",
 
 		// Parse the template and find the iterator
 
-		var iteratorTmpl = clone.querySelector( "[data-wb5-for]" );
+		var iteratorTmplAll = clone.querySelectorAll( "[data-wb5-for]" ),
+			j_len = iteratorTmplAll.length,
+			j;
+		for( j = 0; j < j_len; j ++ ) {
 
-		// Extract the iterator property
-		var iteratorCmd = iteratorTmpl.getAttribute( "data-wb5-for" );
+			var iteratorTmpl = iteratorTmplAll[ j ];
 
-		// Remove the for attribute
-		iteratorTmpl.removeAttribute( "data-wb5-for" );
+			// Extract the iterator property
+			var iteratorCmd = iteratorTmpl.getAttribute( "data-wb5-for" );
 
-		// Parse For
-		var forParsed = parseFor( iteratorCmd );
+			// Remove the for attribute
+			iteratorTmpl.removeAttribute( "data-wb5-for" );
 
-		// Get the object to be iterated
-		var options = getObjectAt( dataProvider, forParsed.for );
-		var i;
+			// Parse For
+			var forParsed = parseFor( iteratorCmd );
 
+			// Get the object to be iterated
+			var options = getObjectAt( dataProvider, forParsed.for );
+			var i;
 
-		// Do we need to apply a filter? (if data-wb-filter-type attribute is set)
-		var filterType = sourceElm.getAttribute( "data-wb-filter-type" );
-		var filterableValueInstruction = iteratorTmpl.getAttribute( "data-wb5-selectvalue" ).match( new RegExp( /{{\s?([^}]*)\s?}}/ ) )[ 1 ];
-		var filter = unAccent( input.value ).toLowerCase();
-
-		// Iterate
-		var opts_len = options.length;
-		for( i =0; i < opts_len; i++) {
-
-			var dt = {};
-			dt[ forParsed.alias ] = options[ i ];
-
-			var lstOptionValue = unAccent( getObjectAt( dt, filterableValueInstruction ) ).toLowerCase();
-
-			// Check if we need to filter
-			if ( filterType && filterType === "any" && lstOptionValue.indexOf( filter ) === -1 ) {
-				continue;
-			} else if ( filterType && filterType === "startWith" && lstOptionValue.indexOf( filter ) !== 0 ) {
-				continue;
-			} else if ( filterType && filterType === "word" && 
-				( lstOptionValue.indexOf( filter ) !== 0 || !lstOptionValue.match( new RegExp( "\\s" + filter ) ) ) ) {
-				continue;
+			if ( !options ) {
+				throw "Iterator not found";
 			}
 
+			// Do we need to apply a filter? (if data-wb-filter-type attribute is set)
+			var filterType = sourceElm.getAttribute( "data-wb-filter-type" );
+			var filterableValueInstruction = iteratorTmpl.getAttribute( "data-wb5-selectvalue" ).match( new RegExp( /{{\s?([^}]*)\s?}}/ ) )[ 1 ];
+			var filter = unAccent( input.value ).toLowerCase();
+
+			// Iterate
+			var opts_len = options.length;
+
+			// Are we limiting the number of results?
+			var limit = parseInt( sourceElm.dataset.wbLimit || opts_len ),
+				nbItems = 0;
+
+			for( i =0; i < opts_len; i++) {
+
+				var dt = {};
+				dt[ forParsed.alias ] = options[ i ];
+
+				var lstOptionValue = unAccent( getObjectAt( dt, filterableValueInstruction ) ).toLowerCase();
+
+				// Check if we need to filter
+				if ( filterType && filterType === "any" && lstOptionValue.indexOf( filter ) === -1 ) {
+					continue;
+				} else if ( filterType && filterType === "startWith" && lstOptionValue.indexOf( filter ) !== 0 ) {
+					continue;
+				} else if ( filterType && filterType === "word" && 
+					( lstOptionValue.indexOf( filter ) !== 0 || !lstOptionValue.match( new RegExp( "\\s" + filter ) ) ) ) {
+					continue;
+				}
 
 
-			var optItm = iteratorTmpl.cloneNode( true );
-			// Assign it an unique id
-			optItm.id = wb.getId();
 
-			// Parse the mustache and recreate the DOM fragment
-			var outerHTMLClone = optItm.outerHTML,
-				regExMustache = /{{\s?([^}]*)\s?}}/g;
-			outerHTMLClone = outerHTMLClone.replace( regExMustache, function( a, b ) {
-				return getObjectAt( dt, b.trim() );
-			} );
-			optItm = parseHTML( outerHTMLClone );
+				var optItm = iteratorTmpl.cloneNode( true );
+				// Assign it an unique id
+				optItm.id = wb.getId();
 
-			iteratorTmpl.parentNode.appendChild( optItm );
-		}
+				// Parse the mustache and recreate the DOM fragment
+				var outerHTMLClone = optItm.outerHTML,
+					regExMustache = /{{\s?([^}]*)\s?}}/g;
+				outerHTMLClone = outerHTMLClone.replace( regExMustache, function( a, b ) {
+					return getObjectAt( dt, b.trim() );
+				} );
+				optItm = parseHTML( outerHTMLClone );
 
-		iteratorTmpl.parentNode.removeChild( iteratorTmpl );
+				iteratorTmpl.parentNode.appendChild( optItm );
+
+				nbItems = nbItems + 1;
+
+				if ( nbItems >= limit ) {
+					break;
+				}
+			}
+
+			iteratorTmpl.parentNode.removeChild( iteratorTmpl );
 		
+		}
 
 		listbox.innerHTML = "";
 		listbox.appendChild( clone );
@@ -341,7 +393,30 @@ var componentName = "wb-combobox",
 
 	;
 
+// JSON suggestion fetched
+$document.on( "json-fetched.wb", selector, function( evt ) {
 
+	var elm = evt.target,
+		suggestions = evt.fetch.response;
+
+	// Attach the JSON list to the datalist element
+	elm.dataset.wbSuggestions = JSON.stringify( suggestions );
+
+	// Remove the reference as it not needed anymore
+	delete elm.dataset.wbLoad;
+	delete elm.dataset.wbWaiting;
+
+	var input = doc.querySelector( "[data-source-elm=" + elm.id + "] input" );
+
+	// Show only if the input still the active elements
+	if ( input === doc.activeElement ) {
+		// Get the input and show options
+		updateResults( input, false );
+	} else {
+		// Validate his value to know if it is ok
+	}
+
+});
 
 
 // Outside activity detection
