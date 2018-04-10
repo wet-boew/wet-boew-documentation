@@ -4,8 +4,10 @@ layout: default-theme-wet-boew-en
 title: Combobox test 1 - Datalist JSON suggestion - Research and finding
 description: Prototype a demo of ReactJS that use wet-boew feature in order to define better the needs of having a ReactJS variant.
 modified: 2018-04-09
+
 script_pgbttm_src: //wet-boew.github.io/themes-dist/GCWeb/GCWeb/js/theme.min.js
 script_pgbttm2_src: 2018-assets/1-datalist-combobox.js
+script_pgbttm3_src: //wet-boew.github.io/themes-dist/GCWeb/wet-boew/js/deps/jsonpointer.js
 ---
 
 Prototype of an ```select``` box transformed into a customized ```combobox```.
