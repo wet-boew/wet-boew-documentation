@@ -15,6 +15,8 @@ Prototype of an ```select``` box transformed into a customized ```combobox```.
 
 {::nomarkdown}
 
+{% raw %}
+
 <div class="wb-prettify all-pre linenums"></div>
 
 <style>
@@ -29,10 +31,10 @@ Prototype of an ```select``` box transformed into a customized ```combobox```.
 	padding: 0;
 	position: absolute;
 	top: 1.7em;
-	z-index: 9999; 
+	z-index: 9999;
 	/* Note about z-index
-	
-	Ideally it should be set to 1, but the <footer id="wb-info"> has a z-index set to 5, 
+
+	Ideally it should be set to 1, but the <footer id="wb-info"> has a z-index set to 5,
 	 */
 }
 
@@ -64,7 +66,7 @@ Prototype of an ```select``` box transformed into a customized ```combobox```.
 
 <template id="id_select_template">
 	<ul class="list-unstyled">
-		<li role="option" data-wb5-for="autofillItem in select.options" data-wb5-selectvalue="{% raw %}{{autofillItem.textContent.toUpperCase()}}{% endraw %}">{% raw %}{{ autofillItem.textContent }}{% endraw %}</li>
+		<li role="option" data-wb5-for="autofillItem in select.options" data-wb5-selectvalue="{{autofillItem.textContent.toUpperCase()}}">{{ autofillItem.textContent }}</li>
 	</ul>
 	<hr class="brdr-bttm mrgn-tp-sm mrgn-bttm-sm">
 	<p role="option" data-wb5-selectvalue="my default value">Default persistent option</p>
@@ -81,7 +83,7 @@ Prototype of an ```select``` box transformed into a customized ```combobox```.
 &lt;select id=&quot;id_select&quot; class=&quot;wb-combobox&quot; name=&quot;selLoremIpsum&quot;&gt;
 	&lt;template&gt;
 		&lt;ul class=&quot;list-unstyled&quot;&gt;
-			&lt;li role=&quot;option&quot; data-wb5-for=&quot;autofillItem in select.options&quot; data-wb5-selectvalue=&quot;{% raw %}{{autofillItem.textContent.toUpperCase()}}{% endraw %}&quot;&gt;{% raw %}{{ autofillItem.textContent }}{% endraw %}&lt;/li&gt;
+			&lt;li role=&quot;option&quot; data-wb5-for=&quot;autofillItem in select.options&quot; data-wb5-selectvalue=&quot;{{autofillItem.textContent.toUpperCase()}}&quot;&gt;{{ autofillItem.textContent }}&lt;/li&gt;
 		&lt;/ul&gt;
 		&lt;hr class=&quot;brdr-bttm mrgn-tp-sm mrgn-bttm-sm&quot;&gt;
 		&lt;p role=&quot;option&quot; data-wb5-selectvalue=&quot;my default value&quot;&gt;Default persistent option&lt;/p&gt;
@@ -105,10 +107,10 @@ Prototype of an ```select``` box transformed into a customized ```combobox```.
 	padding: 0;
 	position: absolute;
 	top: 1.7em;
-	z-index: 9999; 
+	z-index: 9999;
 	/* Note about z-index
-	
-	Ideally it should be set to 1, but the <footer id="wb-info"> has a z-index set to 5, 
+
+	Ideally it should be set to 1, but the <footer id="wb-info"> has a z-index set to 5,
 	 */
 }
 
@@ -433,5 +435,5 @@ Prototype of an ```select``` box transformed into a customized ```combobox```.
 
 <p><a href="#">A dummy link for tab sequence testing</a></p>
 
-
+{% endraw %}
 {:/}
