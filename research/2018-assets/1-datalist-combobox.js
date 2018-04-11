@@ -228,9 +228,6 @@ var componentName = "wb-combobox",
 
 	updateResults = function( input, shouldShowAll ) {
 
-
-
-
 		var listbox = doc.getElementById( input.getAttribute( "aria-controls" ) );
 
 		var $combobox = $( input ).parent();
@@ -389,6 +386,43 @@ var componentName = "wb-combobox",
 
 		// unset the reference at the overlay currently opened
 		currentlyOpened = null;
+	},
+
+	isSourceElmSelect = function( input ){
+		return ( doc.getElementById( $( input ).parent().data().sourceElm ).nodeName === "SELECT");
+	},
+	validateSelection = function( input ) {
+
+		// Ensure the input value is valid, if the source is a select element
+		if ( !isSourceElmSelect ){
+			return;
+		}
+
+		// As this feature filter suggestion as we type, the valid value should be already in the actual listbox
+
+		var overlayElmId = input.getAttribute( 'aria-controls' ),
+			overlay = doc.getElementById( overlayElmId ),
+			options = overlay.querySelectorAll( "[role=option]" ),
+			inputValue = input.value,
+			i, i_len = options.length,
+			isValid;
+
+		for( i = 0; i < i_len; i = i + 1 ){
+			if ( inputValue === options[ i ].dataset.wb5Selectvalue ) {
+				isValid = true;
+				break;
+			}
+		}
+
+		if ( !isValid ) {
+			// Show the error message
+			input.setCustomValidity( "You need to choose a valid options" );
+			console.log( "input state: ERROR" );
+		} else {
+			// Ensure there is no error message
+			input.setCustomValidity( "" );
+			console.log( "input state: VALID" );
+		}
 	}
 
 	;
@@ -428,9 +462,10 @@ $document.on( "click vclick touchstart focusin", "body", function( evt ) {
 		return;
 	}
 
-	hideListbox();
-
-	console.log( "### Close Overlay" );
+	setTimeout( function() {
+		hideListbox();
+	}, 1 );
+	
 });
 
 
@@ -443,6 +478,14 @@ $document.on( "focus click", "[role=combobox] input", function( event, data ) {
 			updateResults( event.target, false );
 		}, 1 );
 	}
+});
+
+// Blur
+$document.on( "blur", "[role=combobox] input", function( event, data ) {
+
+	// Validate the input
+	validateSelection( event.target );
+
 });
 
 
@@ -689,7 +732,6 @@ $document.on( "wb.select", "[role=listbox] [role=option][data-wb5-selectvalue]",
 	var input = doc.querySelector( "[aria-activedescendant=" + elm.id + "]");
 
 	input.value = elm.dataset.wb5Selectvalue;
-
 
 } );
 
