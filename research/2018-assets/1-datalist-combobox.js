@@ -89,6 +89,22 @@ var componentName = "wb-combobox",
 			$ui.get( 0 ).dataset.sourceElm = elm;
 			docFragmentSourceUI.appendChild( elm );
 
+			// Polyfill IE11 for documents fragment
+			if ( typeof docFragmentSourceUI.getElementById !== "function" ) {
+				docFragmentSourceUI.getElementById = function( elmID ) {
+					var child = this.childNodes,
+						i, i_cache,
+						i_len = child.length;
+
+					for ( i = 0; i < i_len; i = i + 1 ) {
+						i_cache = child[ i ];
+						if ( i_cache.id === elmID ) {
+							return i_cache;
+						}
+					}
+				}
+			}
+
 			Modernizr.addTest( "stringnormalize", "normalize" in String );
 
 			// IE11 add support for string normalization
