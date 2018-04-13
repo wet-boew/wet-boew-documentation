@@ -59,7 +59,7 @@ Prototype of an ```select``` box transformed into a customized ```combobox``` wi
 	<form action="#" method="get" id="validation-example">
 		<div class="form-group">
 			<label for="id_select">Please choose an option</label>
-			<select id="id_select" class="wb-combobox" name="selLoremIpsum" data-wb5-template="id_select_template" data-wb-filter-type="any" data-wb-limit="7" data-wb-load="demos/suggest/demo/suggest-en.json#/suggestions">
+			<select id="id_select" class="wb-combobox" name="selLoremIpsum" data-wb5-template="id_select_template" data-wb-filter-type="any" data-wb-limit="7" data-wb-load="//wet-boew.github.io/themes-dist/GCWeb/demos/suggest/demo/suggest-en.json#/suggestions">
 				<option value="Lorem">Lorem</option>
 				<option value="ipsum">ipsum</option>
 				<option value="dolor">dolor</option>
@@ -83,7 +83,7 @@ Prototype of an ```select``` box transformed into a customized ```combobox``` wi
 	<form action="#" method="get" id="validation-example2">
 		<div class="form-group">
 			<label for="id_select2">Please choose an option</label>
-			<select id="id_select2" class="wb-combobox" required name="selLoremIpsum" data-wb5-template="id_select2_template" data-wb-filter-type="any" data-wb-limit="7" data-wb-load="demos/suggest/demo/suggest-en.json#/suggestions">
+			<select id="id_select2" class="wb-combobox" required name="selLoremIpsum" data-wb5-template="id_select2_template" data-wb-filter-type="any" data-wb-limit="7" data-wb-load="//wet-boew.github.io/themes-dist/GCWeb/demos/suggest/demo/suggest-en.json#/suggestions">
 				<option value="Lorem">Lorem</option>
 				<option value="ipsum">ipsum</option>
 				<option value="dolor">dolor</option>
@@ -107,7 +107,7 @@ Prototype of an ```select``` box transformed into a customized ```combobox``` wi
 <form action="#" method="get" id="validation-example3">
 	<div class="form-group">
 		<label for="id_select3">Please choose an option</label>
-		<select id="id_select3" class="wb-combobox" name="selLoremIpsum" data-wb5-template="id_select3_template" data-wb-filter-type="any" data-wb-limit="7" data-wb-load="demos/suggest/demo/suggest-en.json#/suggestions">
+		<select id="id_select3" class="wb-combobox" name="selLoremIpsum" data-wb5-template="id_select3_template" data-wb-filter-type="any" data-wb-limit="7" data-wb-load="//wet-boew.github.io/themes-dist/GCWeb/demos/suggest/demo/suggest-en.json#/suggestions">
 			<option value="Lorem">Lorem</option>
 			<option value="ipsum">ipsum</option>
 			<option value="dolor">dolor</option>
@@ -126,7 +126,7 @@ Prototype of an ```select``` box transformed into a customized ```combobox``` wi
 
 <h2>In page only</h2>
 <label for="id_select4">Please choose an option</label>
-<select id="id_select4" class="wb-combobox" required name="selLoremIpsum" data-wb5-template="id_select3_template" data-wb-filter-type="any" data-wb-limit="7" data-wb-load="demos/suggest/demo/suggest-en.json#/suggestions">
+<select id="id_select4" class="wb-combobox" required name="selLoremIpsum" data-wb5-template="id_select3_template" data-wb-filter-type="any" data-wb-limit="7" data-wb-load="//wet-boew.github.io/themes-dist/GCWeb/demos/suggest/demo/suggest-en.json#/suggestions">
 	<option value="Lorem">Lorem</option>
 	<option value="ipsum">ipsum</option>
 	<option value="dolor">dolor</option>
@@ -141,7 +141,7 @@ Prototype of an ```select``` box transformed into a customized ```combobox``` wi
 	&lt;form action="#" method="get" id="validation-example"&gt;
 		&lt;div class="form-group"&gt;
 			&lt;label for="id_select"&gt;Please choose an option&lt;/label&gt;
-			&lt;select id="id_select" class="wb-combobox" name="selLoremIpsum" data-wb5-template="id_select_template" data-wb-filter-type="any" data-wb-limit="7" data-wb-load="demos/suggest/demo/suggest-en.json#/suggestions"&gt;
+			&lt;select id="id_select" class="wb-combobox" name="selLoremIpsum" data-wb5-template="id_select_template" data-wb-filter-type="any" data-wb-limit="7" data-wb-load="//wet-boew.github.io/themes-dist/GCWeb/demos/suggest/demo/suggest-en.json#/suggestions"&gt;
 				&lt;option value="Lorem"&gt;Lorem&lt;/option&gt;
 				&lt;option value="ipsum"&gt;ipsum&lt;/option&gt;
 				&lt;option value="dolor"&gt;dolor&lt;/option&gt;
@@ -165,7 +165,7 @@ Prototype of an ```select``` box transformed into a customized ```combobox``` wi
 	&lt;form action="#" method="get" id="validation-example2"&gt;
 		&lt;div class="form-group"&gt;
 			&lt;label for="id_select2"&gt;Please choose an option&lt;/label&gt;
-			&lt;select id="id_select2" class="wb-combobox" required name="selLoremIpsum" data-wb5-template="id_select2_template" data-wb-filter-type="any" data-wb-limit="7" data-wb-load="demos/suggest/demo/suggest-en.json#/suggestions"&gt;
+			&lt;select id="id_select2" class="wb-combobox" required name="selLoremIpsum" data-wb5-template="id_select2_template" data-wb-filter-type="any" data-wb-limit="7" data-wb-load="//wet-boew.github.io/themes-dist/GCWeb/demos/suggest/demo/suggest-en.json#/suggestions"&gt;
 				&lt;option value="Lorem"&gt;Lorem&lt;/option&gt;
 				&lt;option value="ipsum"&gt;ipsum&lt;/option&gt;
 				&lt;option value="dolor"&gt;dolor&lt;/option&gt;
@@ -189,7 +189,7 @@ Prototype of an ```select``` box transformed into a customized ```combobox``` wi
 &lt;form action="#" method="get" id="validation-example3"&gt;
 	&lt;div class="form-group"&gt;
 		&lt;label for="id_select3"&gt;Please choose an option&lt;/label&gt;
-		&lt;select id="id_select3" class="wb-combobox" name="selLoremIpsum" data-wb5-template="id_select3_template" data-wb-filter-type="any" data-wb-limit="7" data-wb-load="demos/suggest/demo/suggest-en.json#/suggestions"&gt;
+		&lt;select id="id_select3" class="wb-combobox" name="selLoremIpsum" data-wb5-template="id_select3_template" data-wb-filter-type="any" data-wb-limit="7" data-wb-load="//wet-boew.github.io/themes-dist/GCWeb/demos/suggest/demo/suggest-en.json#/suggestions"&gt;
 			&lt;option value="Lorem"&gt;Lorem&lt;/option&gt;
 			&lt;option value="ipsum"&gt;ipsum&lt;/option&gt;
 			&lt;option value="dolor"&gt;dolor&lt;/option&gt;
@@ -208,7 +208,7 @@ Prototype of an ```select``` box transformed into a customized ```combobox``` wi
 
 &lt;h2&gt;In page only&lt;/h2&gt;
 &lt;label for="id_select4"&gt;Please choose an option&lt;/label&gt;
-&lt;select id="id_select4" class="wb-combobox" required name="selLoremIpsum" data-wb5-template="id_select3_template" data-wb-filter-type="any" data-wb-limit="7" data-wb-load="demos/suggest/demo/suggest-en.json#/suggestions"&gt;
+&lt;select id="id_select4" class="wb-combobox" required name="selLoremIpsum" data-wb5-template="id_select3_template" data-wb-filter-type="any" data-wb-limit="7" data-wb-load="//wet-boew.github.io/themes-dist/GCWeb/demos/suggest/demo/suggest-en.json#/suggestions"&gt;
 	&lt;option value="Lorem"&gt;Lorem&lt;/option&gt;
 	&lt;option value="ipsum"&gt;ipsum&lt;/option&gt;
 	&lt;option value="dolor"&gt;dolor&lt;/option&gt;
