@@ -29,6 +29,8 @@ Customizable autocomplete feature.
 ## Early prototype
 
 * [2018-04-08 - combobox prototype](2018-1-combobox-example.html)
+* [2018-04-11 - combobox prototype 2 - Async loading](2018-1-combobox-prototype-2.html)
+* [2018-04-13 - combobox prototype 3 - Validation](2018-1-combobox-prototype-3.html)
 
 ## Similar tools
 
