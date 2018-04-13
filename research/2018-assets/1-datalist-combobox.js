@@ -40,7 +40,7 @@ var componentName = "wb-combobox",
 	currentlyOpened,
 	isLastActiveKeyboardSelect,
 
-
+	docFragmentSourceUI = doc.createDocumentFragment(),
 
 	/**
 	 * @method init
@@ -73,7 +73,7 @@ var componentName = "wb-combobox",
 
 			var ui = "<div class='combobox-wrapper'>" +
 					"<div role='combobox' aria-expanded='false' aria-haspopup='listbox' aria-owns='" + idListBox + "' data-source-elm='" + selectNewId + "'>" +
-					"<input id='" + elm.id + "' aria-autocomplete='list' aria-controls='" + idListBox + "' name='selLoremIpsum' aria-activedescendant='' />" +
+					"<input autocomplete='off' data-rule-fromListbox='true' id='" + elm.id + "' aria-autocomplete='list' aria-controls='" + idListBox + "' name='selLoremIpsum' aria-activedescendant='' />" +
 					"</div>" +
 					"<div id='" + idListBox + "' role='listbox' class='hidden'>" +
 					"</div>" +
@@ -85,8 +85,9 @@ var componentName = "wb-combobox",
 			var $ui = $( ui );
 			$elm.after( $ui );
 
-			$elm.hide();
-
+			// Set a reference to the select and detach it from the live DOM
+			$ui.get( 0 ).dataset.sourceElm = elm;
+			docFragmentSourceUI.appendChild( elm );
 
 			Modernizr.addTest( "stringnormalize", "normalize" in String );
 
@@ -97,8 +98,6 @@ var componentName = "wb-combobox",
 					"site!deps/unorm" + wb.getMode() + ".js"
 				]
 			} );
-
-			console.log( "### Interface created" );
 
 
 
@@ -232,9 +231,8 @@ var componentName = "wb-combobox",
 
 		var $combobox = $( input ).parent();
 
-		var sourceElm = doc.getElementById( $combobox.data().sourceElm );
-
-
+		//var sourceElm = doc.getElementById( $combobox.data().sourceElm );
+		var sourceElm = docFragmentSourceUI.getElementById( input.parentNode.dataset.sourceElm );
 
 		// Are we waiting to load result?
 		if ( sourceElm.dataset.wbWaiting ) {
@@ -247,7 +245,7 @@ var componentName = "wb-combobox",
 			sourceElm.dataset.wbWaiting = "Loading";
 
 			// Load the JSON file
-			$( sourceElm ).trigger( {
+			$combobox.trigger( {
 				type: "json-fetch.wb",
 				fetch: {
 					url: sourceElm.dataset.wbLoad
@@ -388,14 +386,26 @@ var componentName = "wb-combobox",
 		currentlyOpened = null;
 	},
 
-	isSourceElmSelect = function( input ){
-		return ( doc.getElementById( $( input ).parent().data().sourceElm ).nodeName === "SELECT");
-	},
+
 	validateSelection = function( input ) {
 
+		var scrElement = docFragmentSourceUI.getElementById( $( input ).parent().get( 0 ).dataset.sourceElm ),
+			isJqueryValidIntegration = input.form && input.form.parentNode.classList.contains( "wb-frmvld" );
 		// Ensure the input value is valid, if the source is a select element
-		if ( !isSourceElmSelect ){
+		if ( scrElement.nodeName !== "SELECT" ){
 			return;
+		}
+
+
+		// is it required?
+		if ( scrElement.getAttribute( "required" ) === null && input.value === "" )  {
+			input.setCustomValidity( "" );
+			if ( isJqueryValidIntegration ) {
+				$( input ).valid();
+			}
+			console.log( "no error Empty");
+
+			return true;
 		}
 
 		// As this feature filter suggestion as we type, the valid value should be already in the actual listbox
@@ -414,33 +424,56 @@ var componentName = "wb-combobox",
 			}
 		}
 
+
 		if ( !isValid ) {
 			// Show the error message
 			input.setCustomValidity( "You need to choose a valid options" );
-			console.log( "input state: ERROR" );
+
+			if ( isJqueryValidIntegration ) {
+				$( input ).valid();
+			}
+			return false;
 		} else {
+
 			// Ensure there is no error message
 			input.setCustomValidity( "" );
-			console.log( "input state: VALID" );
+
+			if ( isJqueryValidIntegration ) {
+				$( input ).valid();
+			}
+			return true;
 		}
+
 	}
 
 	;
 
+
+$document.on( "wb-ready.wb", function( event ) {
+    if( $.validator ) {
+		$.validator.addMethod( "fromListbox", function( value, element ){
+			return element.checkValidity();
+		}, "You need to choose a valid options");
+    }
+});
+
 // JSON suggestion fetched
-$document.on( "json-fetched.wb", selector, function( evt ) {
+$document.on( "json-fetched.wb", "[role=combobox]", function( evt ) {
 
 	var elm = evt.target,
 		suggestions = evt.fetch.response;
 
+	// Get the source element
+	var sourceElm = docFragmentSourceUI.getElementById( elm.dataset.sourceElm );
+
 	// Attach the JSON list to the datalist element
-	elm.dataset.wbSuggestions = JSON.stringify( suggestions );
+	sourceElm.dataset.wbSuggestions = JSON.stringify( suggestions );
 
 	// Remove the reference as it not needed anymore
-	delete elm.dataset.wbLoad;
-	delete elm.dataset.wbWaiting;
+	delete sourceElm.dataset.wbLoad;
+	delete sourceElm.dataset.wbWaiting;
 
-	var input = doc.querySelector( "[data-source-elm=" + elm.id + "] input" );
+	var input = doc.querySelector( "[data-source-elm=" + sourceElm.id + "] input" );
 
 	// Show only if the input still the active elements
 	if ( input === doc.activeElement ) {
@@ -478,21 +511,29 @@ $document.on( "focus click", "[role=combobox] input", function( event, data ) {
 			updateResults( event.target, false );
 		}, 1 );
 	}
+
 });
 
+
+// In WET5, we should use the "blur" in order to validate the input
 // Blur
 $document.on( "blur", "[role=combobox] input", function( event, data ) {
 
 	// Validate the input
-	validateSelection( event.target );
+	setTimeout( function(){
+		validateSelection( event.target );
+
+	}, 100 );
 
 });
 
 
+
+
 // keyup
 $document.on( "keyup", "[role=combobox] input", function( evt ) {
-	var key = evt.which || evt.keyCode;
-
+	var key = evt.which || evt.keyCode,
+		isInError = evt.target.classList.contains( "error" );
 
 	switch (key) {
 		case KeyCode.UP:
@@ -502,12 +543,24 @@ $document.on( "keyup", "[role=combobox] input", function( evt ) {
 		case KeyCode.HOME:
 		case KeyCode.END:
 			evt.preventDefault();
+
+			if ( isInError ) {
+				setTimeout( function() {
+					validateSelection( evt.target );
+				}, 100 );
+			}
+
 			return;
 		default:
 			setTimeout( function() {
 				updateResults( evt.target, false );
-			}, 1 );
+				if ( isInError ) {
+					validateSelection( evt.target );
+				}
+			}, 100 );
 	}
+
+
 });
 
 // keydown
@@ -619,6 +672,8 @@ $document.on( "keydown", "[role=combobox] input", function( evt ) {
 
 			$( options[ activeIndex ] ).trigger( "wb.select" );
 
+			hideListbox();
+			evt.preventDefault(); // Need to prevent default here because when the combobox is within a form, the form are submited
 			return;
 		case KeyCode.TAB:
 
@@ -669,7 +724,6 @@ $document.on( "keydown", "[role=combobox] input", function( evt ) {
 		);
 	}
 
-
 });
 
 // Change active descendant on mouse hover
@@ -705,6 +759,7 @@ $document.on( "mouseover", "[role=listbox] [role=option][data-wb5-selectvalue]",
 	);
 
 } );
+
 
 // Listbox click
 $document.on( "click", "[role=listbox] [role=option][data-wb5-selectvalue]", function( event, data ) {

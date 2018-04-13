@@ -18,9 +18,10 @@ Updated: 2018-03-01
 * Documenting basic HTML design pattern
 * WCAG 2.1 Level AA conformance check for existing features
 * Evaluate web accessibility compliance for wb5 features
-* **Last updated:** March 14, 2018
-* **Progress check history**: 2018-04-03; 2018-03-14; 2018-02-27; 2018-02-20
+* **Last updated:** April 10, 2018
+* **Progress check history**: 2018-04-10; 2018-04-03; 2018-03-14; 2018-02-27; 2018-02-20
 * **History:**
+	* (2018-04-10) PR submited for pie chart labeling
 	* (2018-03-14) On going - review github issues and fixing current open issue.
 	* (2018-02-13) Validation of issue labelled "Work: Accessibility" which are open and the closed ones with the label "State: Going Stale".
 
@@ -48,12 +49,32 @@ Simulate a datalist that work uniformly through browser implementation and conta
 * Be able to force the user to choose a displayed option
 * Be able to include a catch all default option that would always appear as an option
 * Fix datalist related [github issue](https://github.com/wet-boew/wet-boew/issues?q=is%3Aopen+is%3Aissue+label%3A%22Feature%3A+Datalist%22)
-* **Last updated:** March 14, 2018
-* **Project lead:** Pierre Dubois
+* **Last updated:** April 13, 2018
+* **Project lead and developper:** Pierre Dubois
+* **Collaborator:**
+	* Ivan Hughes - Refined the requirement and did initial environmental scan.
 * **Research:**
 	* [Datalist JSON suggestion](research/1-datalist-JSON-suggestion.html)
+* **Prototype:**
+	* [2018-04-08 - combobox prototype](research/2018-1-combobox-example.html)
+	* [2018-04-11 - combobox prototype 2 - Async loading](research/2018-1-combobox-prototype-2.html)
+	* [2018-04-13 - combobox prototype 3 - Validation](research/2018-1-combobox-prototype-3.html)
 * **History:**
+	* (2018-04-13) Close to release a minimal viable product.
 	* (2018-03-12) Defining the requirement
+
+### Boolean filtering for WET filter feature
+Provide the option regarding how the space is interpretated during filtering content with the filter plugin. 
+* Interprete space as "OR", "AND", "XOR" or "AS IS" instruction.
+* **Last updated:** April 10, 2018
+* **Project lead:** Neil Mispelaar
+
+### Server side error message integration with form validation feature
+Harmonize the error message displayed when in browser error is combined with server side errors
+* **Last udpated:** April 11, 2018
+* **Project lead:** Stéphane Ducharme
+* **History:**
+	* (2018-04-11) Early exploratory prototype
 
 ### PDF generator
 Create a new feature that would allow the user to obtain a PDF printable version of the page. The PDF printable version are different from the web printable version in the sense that it would be possible to control and well define how the content of the webpage would transposed into a paper base format.
