@@ -76,13 +76,13 @@ According to spec a ```datalist``` is an implementation of a listbox as emulated
 <h2>Default - Template outside the datalist</h2>
 <form action="#">
 	<div class="form-group">
-		<label for="input-id-1">Surveys</label>
-		<input class="wb-combobox" id="input-id-1" list="datalist-id-1" />
+		<label for="input-id-1a">Surveys</label>
+		<input class="wb-combobox" id="input-id-1a" list="datalist-id-1a" />
 	</div>
-	<datalist id="datalist-id-1" data-wb-load="//wet-boew.github.io/themes-dist/GCWeb/demos/suggest/demo/suggest-en.json#/suggestions" data-wb5-template="template-id-1">
+	<datalist id="datalist-id-1a" data-wb-load="//wet-boew.github.io/themes-dist/GCWeb/demos/suggest/demo/suggest-en.json#/suggestions" data-wb5-template="template-id-1a">
 		<option value="horay"></option>
 	</datalist>
-	<template id="template-id-1">
+	<template id="template-id-1a">
 		<option data-wb5-for="opt in datalist.options" data-wb5-selectvalue="{{ opt.value }}">{{ opt.value }}</option>
 		<option data-wb5-for="opt in wbLoad" data-wb5-selectvalue="{{ opt }}">{{ opt }}</option>
 	</template>
@@ -92,19 +92,37 @@ According to spec a ```datalist``` is an implementation of a listbox as emulated
 <h2>Default - Template customized</h2>
 <form action="#">
 	<div class="form-group">
-		<label for="input-id-1a">Surveys</label>
-		<input class="wb-combobox" id="input-id-1" list="datalist-id-1a" />
+		<label for="input-id-1b">Surveys</label>
+		<input class="wb-combobox" id="input-id-1b" list="datalist-id-1b" />
 	</div>
-	<datalist id="datalist-id-1a" data-wb-load="//wet-boew.github.io/themes-dist/GCWeb/demos/suggest/demo/suggest-en.json#/suggestions" data-wb5-template="template-id-1a">
+	<datalist id="datalist-id-1b" data-wb-load="//wet-boew.github.io/themes-dist/GCWeb/demos/suggest/demo/suggest-en.json#/suggestions" data-wb5-template="template-id-1b">
 		<option value="horay"></option>
 	</datalist>
-	<template id="template-id-1a">
+	<template id="template-id-1b">
 		<ul>
 			<li data-wb5-for="opt in datalist.options" data-wb5-selectvalue="{{ opt.value }}">{{ opt.value }}</li>
 			<li data-wb5-for="opt in wbLoad" data-wb5-selectvalue="{{ opt }}">{{ opt }}</li>
 		</ul>
 	</template>
 </form>
+
+<h2>Show after x character is typed</h2>
+<form action="#">
+	<div class="form-group">
+		<label for="input-id-1c">Surveys</label>
+		<input class="wb-combobox" id="input-id-1c" list="datalist-id-1c" data-wb-open-min-len="2" />
+	</div>
+	<datalist id="datalist-id-1c" data-wb-load="//wet-boew.github.io/themes-dist/GCWeb/demos/suggest/demo/suggest-en.json#/suggestions" data-wb5-template="template-id-1c">
+		<option value="horay"></option>
+	</datalist>
+	<template id="template-id-1c">
+		<ul>
+			<li data-wb5-for="opt in datalist.options" data-wb5-selectvalue="{{ opt.value }}">{{ opt.value }}</li>
+			<li data-wb5-for="opt in wbLoad" data-wb5-selectvalue="{{ opt }}">{{ opt }}</li>
+		</ul>
+	</template>
+</form>
+
 
 <h2>With a limit</h2>
 
@@ -232,13 +250,13 @@ According to spec a ```datalist``` is an implementation of a listbox as emulated
 &lt;h2&gt;Default - Template outside the datalist&lt;/h2&gt;
 &lt;form action="#"&gt;
 	&lt;div class="form-group"&gt;
-		&lt;label for="input-id-1"&gt;Surveys&lt;/label&gt;
-		&lt;input class="wb-combobox" id="input-id-1" list="datalist-id-1" /&gt;
+		&lt;label for="input-id-1a"&gt;Surveys&lt;/label&gt;
+		&lt;input class="wb-combobox" id="input-id-1a" list="datalist-id-1a" /&gt;
 	&lt;/div&gt;
-	&lt;datalist id="datalist-id-1" data-wb-load="//wet-boew.github.io/themes-dist/GCWeb/demos/suggest/demo/suggest-en.json#/suggestions" data-wb5-template="template-id-1"&gt;
+	&lt;datalist id="datalist-id-1a" data-wb-load="//wet-boew.github.io/themes-dist/GCWeb/demos/suggest/demo/suggest-en.json#/suggestions" data-wb5-template="template-id-1a"&gt;
 		&lt;option value="horay"&gt;&lt;/option&gt;
 	&lt;/datalist&gt;
-	&lt;template id="template-id-1"&gt;
+	&lt;template id="template-id-1a"&gt;
 		&lt;option data-wb5-for="opt in datalist.options" data-wb5-selectvalue="{{ opt.value }}"&gt;{{ opt.value }}&lt;/option&gt;
 		&lt;option data-wb5-for="opt in wbLoad" data-wb5-selectvalue="{{ opt }}"&gt;{{ opt }}&lt;/option&gt;
 	&lt;/template&gt;
@@ -248,13 +266,30 @@ According to spec a ```datalist``` is an implementation of a listbox as emulated
 &lt;h2&gt;Default - Template customized&lt;/h2&gt;
 &lt;form action="#"&gt;
 	&lt;div class="form-group"&gt;
-		&lt;label for="input-id-1a"&gt;Surveys&lt;/label&gt;
-		&lt;input class="wb-combobox" id="input-id-1" list="datalist-id-1a" /&gt;
+		&lt;label for="input-id-1b"&gt;Surveys&lt;/label&gt;
+		&lt;input class="wb-combobox" id="input-id-1b" list="datalist-id-1b" /&gt;
 	&lt;/div&gt;
-	&lt;datalist id="datalist-id-1a" data-wb-load="//wet-boew.github.io/themes-dist/GCWeb/demos/suggest/demo/suggest-en.json#/suggestions" data-wb5-template="template-id-1a"&gt;
+	&lt;datalist id="datalist-id-1b" data-wb-load="//wet-boew.github.io/themes-dist/GCWeb/demos/suggest/demo/suggest-en.json#/suggestions" data-wb5-template="template-id-1b"&gt;
 		&lt;option value="horay"&gt;&lt;/option&gt;
 	&lt;/datalist&gt;
-	&lt;template id="template-id-1a"&gt;
+	&lt;template id="template-id-1b"&gt;
+		&lt;ul&gt;
+			&lt;li data-wb5-for="opt in datalist.options" data-wb5-selectvalue="{{ opt.value }}"&gt;{{ opt.value }}&lt;/li&gt;
+			&lt;li data-wb5-for="opt in wbLoad" data-wb5-selectvalue="{{ opt }}"&gt;{{ opt }}&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/template&gt;
+&lt;/form&gt;
+
+&lt;h2&gt;Show after x character is typed&lt;/h2&gt;
+&lt;form action="#"&gt;
+	&lt;div class="form-group"&gt;
+		&lt;label for="input-id-1c"&gt;Surveys&lt;/label&gt;
+		&lt;input class="wb-combobox" id="input-id-1c" list="datalist-id-1c" data-wb-open-min-len="2" /&gt;
+	&lt;/div&gt;
+	&lt;datalist id="datalist-id-1c" data-wb-load="//wet-boew.github.io/themes-dist/GCWeb/demos/suggest/demo/suggest-en.json#/suggestions" data-wb5-template="template-id-1c"&gt;
+		&lt;option value="horay"&gt;&lt;/option&gt;
+	&lt;/datalist&gt;
+	&lt;template id="template-id-1c"&gt;
 		&lt;ul&gt;
 			&lt;li data-wb5-for="opt in datalist.options" data-wb5-selectvalue="{{ opt.value }}"&gt;{{ opt.value }}&lt;/li&gt;
 			&lt;li data-wb5-for="opt in wbLoad" data-wb5-selectvalue="{{ opt }}"&gt;{{ opt }}&lt;/li&gt;

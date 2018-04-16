@@ -319,6 +319,12 @@ var componentName = "wb-combobox",
 			return;
 		}
 
+		if ( sourceElm.nodeName === "DATALIST" && listbox.classList.contains( "hidden" ) ) {
+			if ( behaviouralElm.dataset.wbOpenMinLen && input.value.length < parseInt( behaviouralElm.dataset.wbOpenMinLen ) ) {
+				return;
+			}
+		}
+
 		var dataProvider = {};
 
 		dataProvider[ sourceElm.nodeName.toLowerCase() ] = sourceElm;
