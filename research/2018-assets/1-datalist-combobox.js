@@ -66,28 +66,74 @@ var componentName = "wb-combobox",
 			);
 
 
+			var idListBox = wb.getId(),
+				selectNewId = wb.getId(),
+				inputName = elm.name;
+
+
 			// Transform the select into a input text field
 
-			var idListBox = wb.getId(),
-				selectNewId =  wb.getId();
+			var isInput = elm.nodeName === "INPUT",
+				isSelect = elm.nodeName === "SELECT";
 
-			var ui = "<div class='combobox-wrapper'>" +
-					"<div role='combobox' aria-expanded='false' aria-haspopup='listbox' aria-owns='" + idListBox + "' data-source-elm='" + selectNewId + "'>" +
-					"<input autocomplete='off' data-rule-fromListbox='true' id='" + elm.id + "' aria-autocomplete='list' aria-controls='" + idListBox + "' name='selLoremIpsum' aria-activedescendant='' />" +
-					"</div>" +
-					"<div id='" + idListBox + "' role='listbox' class='hidden'>" +
-					"</div>" +
-					"</div>";
+			if ( ! (isInput || isSelect) ) {
+				throw "combobox must be set on input or select element only";
+			}
 
-			elm.id = selectNewId;
+			if ( isInput ) {
 
-			// Add it after the select box
-			var $ui = $( ui );
-			$elm.after( $ui );
+				// Check if it is linked to a datalist
+				var datalistID = elm.getAttribute( "list" ),
+					datalist = datalistID && doc.getElementById( datalistID );
 
-			// Set a reference to the select and detach it from the live DOM
-			$ui.get( 0 ).dataset.sourceElm = elm;
-			docFragmentSourceUI.appendChild( elm );
+				if ( !datalist ) {
+					throw "A list must be set"
+				}
+
+
+				// Just set the property at the input and set the surrounding UI
+
+
+				elm.setAttribute( "autocomplete", "off" );
+				elm.setAttribute( "data-rule-fromListbox", "true" );
+				elm.setAttribute( "aria-autocomplete", "list" );
+				elm.setAttribute( "aria-controls", idListBox );
+				elm.setAttribute( "aria-activedescendant", "" );
+
+				elm.removeAttribute( "list" );
+
+
+
+				var $cmbBox = $elm.wrap( "<div role='combobox' aria-expanded='false' aria-haspopup='listbox' aria-owns='" + idListBox + "' data-source-elm='" + datalistID + "'>" ).parent();
+
+				$cmbBox.append( "<div id='" + idListBox + "' role='listbox' class='hidden'>" );
+
+				$cmbBox.wrap( "<div class='combobox-wrapper'>" );
+
+				// The datalist pattern is different from the select pattern.
+				// In order to make it work, we need find out the input and then enhance those.
+
+			} else {
+
+				var ui = "<div class='combobox-wrapper'>" +
+						"<div role='combobox' aria-expanded='false' aria-haspopup='listbox' aria-owns='" + idListBox + "' data-source-elm='" + selectNewId + "'>" +
+						"<input autocomplete='off' data-rule-fromListbox='true' id='" + elm.id + "' aria-autocomplete='list' aria-controls='" + idListBox + "' name='" + inputName + "' aria-activedescendant='' />" +
+						"</div>" +
+						"<div id='" + idListBox + "' role='listbox' class='hidden'>" +
+						"</div>" +
+						"</div>";
+
+				elm.id = selectNewId;
+
+				// Add it after the select box
+				var $ui = $( ui );
+				$elm.after( $ui );
+
+				// Set a reference to the select and detach it from the live DOM
+				$ui.get( 0 ).dataset.sourceElm = elm;
+				docFragmentSourceUI.appendChild( elm );
+
+			}
 
 			// Polyfill IE11 for documents fragment
 			if ( typeof docFragmentSourceUI.getElementById !== "function" ) {
@@ -102,6 +148,7 @@ var componentName = "wb-combobox",
 							return i_cache;
 						}
 					}
+					return false;
 				}
 			}
 
@@ -248,7 +295,9 @@ var componentName = "wb-combobox",
 		var $combobox = $( input ).parent();
 
 		//var sourceElm = doc.getElementById( $combobox.data().sourceElm );
-		var sourceElm = docFragmentSourceUI.getElementById( input.parentNode.dataset.sourceElm );
+		var sourceElm = docFragmentSourceUI.getElementById( input.parentNode.dataset.sourceElm ) || doc.getElementById( input.parentNode.dataset.sourceElm );
+
+		var behaviouralElm = (sourceElm.nodeName === "SELECT"? sourceElm : input );
 
 		// Are we waiting to load result?
 		if ( sourceElm.dataset.wbWaiting ) {
@@ -270,10 +319,10 @@ var componentName = "wb-combobox",
 			return;
 		}
 
-
 		var dataProvider = {};
 
 		dataProvider[ sourceElm.nodeName.toLowerCase() ] = sourceElm;
+
 
 		// Load the suggestion, if any
 		if ( sourceElm.dataset.wbSuggestions ) {
@@ -307,7 +356,12 @@ var componentName = "wb-combobox",
 
 		var iteratorTmplAll = clone.querySelectorAll( "[data-wb5-for]" ),
 			j_len = iteratorTmplAll.length,
-			j;
+			j,
+
+			// Are we limiting the number of results?
+			limit = parseInt( behaviouralElm.dataset.wbLimit || 0 ),
+			nbItems = 0;
+
 		for( j = 0; j < j_len; j ++ ) {
 
 			var iteratorTmpl = iteratorTmplAll[ j ];
@@ -330,16 +384,13 @@ var componentName = "wb-combobox",
 			}
 
 			// Do we need to apply a filter? (if data-wb-filter-type attribute is set)
-			var filterType = sourceElm.getAttribute( "data-wb-filter-type" );
-			var filterableValueInstruction = iteratorTmpl.getAttribute( "data-wb5-selectvalue" ).match( new RegExp( /{{\s?([^}]*)\s?}}/ ) )[ 1 ];
+			var filterType = behaviouralElm.getAttribute( "data-wb-filter-type" ) || "any";
+			var filterableValueInstruction = iteratorTmpl.getAttribute( "data-wb5-selectvalue" ).match( new RegExp( /{{\s?([^}]*)\s?}}/ ) )[ 1 ].trim();
 			var filter = unAccent( input.value ).toLowerCase();
 
 			// Iterate
 			var opts_len = options.length;
 
-			// Are we limiting the number of results?
-			var limit = parseInt( sourceElm.dataset.wbLimit || opts_len ),
-				nbItems = 0;
 
 			for( i =0; i < opts_len; i++) {
 
@@ -351,10 +402,10 @@ var componentName = "wb-combobox",
 				// Check if we need to filter
 				if ( filterType && filterType === "any" && lstOptionValue.indexOf( filter ) === -1 ) {
 					continue;
-				} else if ( filterType && filterType === "startWith" && lstOptionValue.indexOf( filter ) !== 0 ) {
+				} else if ( filterType && filterType.toLowerCase() === "startwith" && lstOptionValue.indexOf( filter ) !== 0 ) {
 					continue;
 				} else if ( filterType && filterType === "word" && 
-					( lstOptionValue.indexOf( filter ) !== 0 || !lstOptionValue.match( new RegExp( "\\s" + filter ) ) ) ) {
+					( lstOptionValue.indexOf( filter ) !== 0 && !lstOptionValue.match( new RegExp( "\\s" + filter ) ) ) ) {
 					continue;
 				}
 
@@ -370,13 +421,17 @@ var componentName = "wb-combobox",
 				outerHTMLClone = outerHTMLClone.replace( regExMustache, function( a, b ) {
 					return getObjectAt( dt, b.trim() );
 				} );
+
+				// Is there "option" tag in that template? if so we need to convert them into "p" as <option> can't be children of <div>
+				outerHTMLClone = outerHTMLClone.replace( /<option/g, "<p role='option'").replace( /option>/g, "p>" );
+
 				optItm = parseHTML( outerHTMLClone );
 
 				iteratorTmpl.parentNode.appendChild( optItm );
 
 				nbItems = nbItems + 1;
 
-				if ( nbItems >= limit ) {
+				if ( limit && nbItems >= limit ) {
 					break;
 				}
 			}
@@ -405,7 +460,7 @@ var componentName = "wb-combobox",
 
 	validateSelection = function( input ) {
 
-		var scrElement = docFragmentSourceUI.getElementById( $( input ).parent().get( 0 ).dataset.sourceElm ),
+		var scrElement = docFragmentSourceUI.getElementById( $( input ).parent().get( 0 ).dataset.sourceElm ) || doc.getElementById( $( input ).parent().get( 0 ).dataset.sourceElm ),
 			isJqueryValidIntegration = input.form && input.form.parentNode.classList.contains( "wb-frmvld" );
 		// Ensure the input value is valid, if the source is a select element
 		if ( scrElement.nodeName !== "SELECT" ){
@@ -480,7 +535,7 @@ $document.on( "json-fetched.wb", "[role=combobox]", function( evt ) {
 		suggestions = evt.fetch.response;
 
 	// Get the source element
-	var sourceElm = docFragmentSourceUI.getElementById( elm.dataset.sourceElm );
+	var sourceElm = docFragmentSourceUI.getElementById( elm.dataset.sourceElm ) || doc.getElementById( elm.dataset.sourceElm );
 
 	// Attach the JSON list to the datalist element
 	sourceElm.dataset.wbSuggestions = JSON.stringify( suggestions );
