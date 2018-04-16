@@ -355,7 +355,7 @@ var componentName = "wb-combobox",
 			clone = template.content.cloneNode( true );		
 		} else {
 			console.log( "no Template, fallback on defaults");
-			clone = $( "<ul><li data-wb5-for='o in select' data-wb5-selectvalue='{{o.textContent}}'>{{o.textContent}}</li></ul>" ).get( 0 );
+			clone = $( "<ul><li role='option' data-wb5-for='o in select' data-wb5-selectvalue='{{o.textContent}}'>{{o.textContent}}</li></ul>" ).get( 0 );
 		}
 
 		// Parse the template and find the iterator
@@ -458,6 +458,9 @@ var componentName = "wb-combobox",
 			$overlay = $( "#" + overlayElmId );
 
 		$overlay.addClass( "hidden" );
+
+		// Fire a onChange Event on the combobox
+		$( currentlyOpened ).trigger( "change" );
 
 		// unset the reference at the overlay currently opened
 		currentlyOpened = null;
