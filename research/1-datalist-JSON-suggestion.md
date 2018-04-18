@@ -30,7 +30,12 @@ Customizable autocomplete feature.
 
 * [2018-04-08 - combobox prototype](2018-1-combobox-example.html)
 * [2018-04-11 - combobox prototype 2 - Async loading](2018-1-combobox-prototype-2.html)
-* [2018-04-13 - combobox prototype 3 - Validation](2018-1-combobox-prototype-3.html)
+* [2018-04-13 - combobox prototype 3 - Validation and form integration](2018-1-combobox-prototype-3.html)
+* [2018-04-16 - combobox prototype 4 - Allow free text input (datalist)](2018-1-combobox-prototype-4.html)
+* [2018-04-16 - combobox prototype 5 - Limiting number of result and type of filter](2018-1-combobox-prototype-5.html)
+* [2018-04-18 - combobox prototype 6 - Fieldflow integration and down arrow](2018-1-combobox-prototype-6.html)
+
+[UX feedback from early prototype](#uxproto)
 
 ## Similar tools
 
@@ -711,3 +716,100 @@ The focus is move to the next element, the grid overlay are hidden and the user 
 #### on validation error (Enhanced)
 
 This may require the form validation plugin in order to display the error message. However, on error, this plugin would set the custom error message to the input text field.
+
+{::nomarkdown}
+<h2 id="uxproto">Developper note during the creation of the early prototype</h2>
+{:/}
+
+### 2018-04-18
+
+General notes
+* The simplier version of the combobox work well. 
+* When the ```select``` is transformed into a combobox, the original select id value are moved into the new component and the original select are detached from the DOM. One of the concern with that approach is there is not event binding for a detached DOM elements.
+* A polyfill was needed IE11 in order to support the function ```getElementById``` for DOM fragment.
+* Added the same filter type as the GCWeb suggest plugin
+* Recommend to drop the suggest plugin for the next release of WET and have it replaced by this one.
+* When not setting a limit and when there is a lot of suggestion items, then the lisbox overflow bellow the fold. Migh a need to have that fixed through CSS and add a scroll bar.
+* Only briefly tested on mobile device with an Android phone.
+* When loading async data, it required data-JSON, but data-JSON is only defined in the GCWeb theme for now. That is causing a little bit of issue the wet-boew framework have difficulties to load the dependencies. A work around with to move the focus between two combobox, then it start to work. Moving focus because the JSON data are only loaded when the input receive the focus, not before.
+* The emulator for the javascript expression defined in the iterator inside a template work great. It allow to call some JS utility like ```.toLowerCase()``` for string object and to retreive sub-properties like ```select.options```.
+* The case when there is no items displayed, may need to be better handled. Right now it will only show a list with no item.
+
+Integration with WET validation plugin
+* The WET validation plugin seems to ignore any errors set as allowed by the HTML5 spec
+* During the first trial of integrating with the validation plugin, the input field was moving in the webpage and that was preventing the user to choose an items in the listbox.
+* As this became a new form element composed from multiple other element, the use of a timer was needed to prevent the input to auto validate. WET validation plugin usually validate on blur, and when the field is in error state it re-validate on change.
+* A considerable timing, 100 milisecond, was needed prior to start to validate the input when a user was clicking with the mouse on an item inside the listbox.
+* There were no issue when navigating with the keyboard because the input didn't focusout or blur
+* A special check was needed to only validate the combobox value only after the input has blur and didn't got the focus back. Then after the validation, the WET validation plugin is called to enforce and do its correct error labeling
+* There is no validation when the combobox is used as a clone of the datalist HTML element.
+
+Templating
+* The use of a template for the listbox was a neat feature and eased the customization.
+* IE11 don't like having a template element defined inside the select element. Because of that, the template need to be defined outside the select element and refered via an id.
+* The early prototype miss the use of a template for the transformation into a combobox. That was obvious during the try of integrating the combobox plugin with fieldflow.
+* Combining the async data with the static option was easy with the templating system.
+* Using the attribute ```data-wb5-selectvalue``` seems to be a little hack. I would recommend to look to use a better binding like figure out how we can bind between a template and sub-template.
+
+Async loading
+* It was not possible to re-use the JSON loading of the GCWeb suggest plugin because the hook was on any element that have the attribute ```data-wb-suggest```. The attribute ```wb-load``` was used instead for the purpose of specifying an external JSON source file.
+
+Datalist
+* When the combobox is used as a datalist, it is possible to set to open the listbox after X number of character is typed. like ```data-wb-open-min-len="2"``` will only show the listbox after two character is typed.
+* There was a question of what kind of configuration is set to the ```datalist``` element vs ```input``` element.
+	- It was decided that any configuration that relate to the behaviour of the combobox should be defined on the ```input```
+	- The configuration set on the ```datalist``` would need to be limited to gathering the "option" item and to define how the listbox should be rendered.
+
+Integration with fieldflow
+* The integration with fieldflow are colliding a little bit. Fieldflow as per design are not manipulating the existing DOM, it is hidding it from the user and then inject his own UI after it. And the fieldflow UI are just a front end and when an action need to be run (like redirecting the user to a page), it is retreived from the original source element.
+* The current integration go like this
+	1. Fieldflow is initiated
+	2. Fieldflow trigger an event to render a combobox field
+	3. The custom event hook, trigger the fieldflow event that woudl render a select field
+	4. The new select field is prepared to be transform into a combobox field
+	5. The select is transformed into a combobox field.
+* The issue with using a textbox instead of a select/radio/checkbox, is the information about the selected item need to be transfered to the input.
+* I realize that I needed to have a combobox template follow by a combobox sub-template because in order to handle the "onChange" event already built in fieldflow, the combobox control need to contains the CSS class ```wb-fieldflow-init```.
+* When I tried to copy the data attribute from the source element into the other element, the doulble quote was causing an issue because of the method I used to parse expression set through double mustaches ```{{}}```. The method I used was to transform the fragment into a string, to the double mustache replacement and then re-create the fragment. A better way, like binding, would need to be investigated.
+
+{::nomarkdown}
+<h2 id="uxproto">UX feedback from early prototype</h2>
+{:/}
+
+
+### From early prototype 1 to 5
+
+Date: April 18, 2018
+UX research lead: Ivan Hughes
+Tester: With less than five coworker
+Prototype tested: Select transformed into a comboxbox along with the WET validation plugin. Number of display result are limited to 7 and there is a possibility of 200.
+Commented by the developer: April 18, 2018
+
+#### Tested with group one
+* The interface don't show a clear clue that the user need to choose one of the options.
+	- A CSS down arrows was added to the right of the input field for the subsequent testing. But it was not possible to display the list when the down arrow was clicked (as it was required some programming).
+
+Other than that, the overall was fine. 
+
+#### Testing with group two
+
+The CSS that was added and not inlcuded into prototype 1 to 5
+```
+[role=combobox]:after {
+	content: "\25BC\a0";
+}
+```
+
+* Suggested to remove the arrow, as it didn't show the listbox
+	- The solution will be that interaction with that arrow will open up the listbox. The arrow would need to be styled in a way that it feel to be integral part of the textbox, not beside.
+* Suggested to wait for the user to type something prior to display the listbox
+	- For a context where the user need to choose a pre-defined option, I don't recommend having that behavior. But that behavior make sense if the input allow free text entry.
+* It was not obvious they were more than 200 items in the listbox. UX tester felt that the number of available item was limited to the one displayed.
+	- Best option will be to display on the top of the listbox a status text like "showing 7 of 200 items". That might require to use the "grid" layout instead of the "listbox". Also it will require to support binding in the templating
+* It was noted the default style of the listbox didn't match the style of an open ```<select>``` element
+	- CSS would need to be developed in order to match the style
+* It wasn't clear where was the limit of the listbox, like the bottom of the listbox just faded into the other content of the page, so it was hard, quite imposible to make that distinction.
+	- Defining a CSS that would provide more emphasis on the listbox overlay. 
+
+
+
