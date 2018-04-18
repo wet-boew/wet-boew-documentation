@@ -62,7 +62,9 @@ Here a list of similar tools that was found on a February 2018 research
 	* Try to choose a flight, the dropdown item are customized
 * National Help Desk: http://srmis-sigdi-iagent.prv
 
-### Feature request description
+## Feature request description
+
+last review: April 6, 2018
 
 * The autofill needs to have a text field where users can type, and the options related to what they typed appear below.
 * The autofill should have the option “filter as you type”
@@ -87,7 +89,7 @@ Here a list of similar tools that was found on a February 2018 research
 
 * Should we allow the suggested options to be grouped? Like what the ```optgroup``` element do with the ```select``` element.
 
-### Resources
+## Resources
 
 * [The ```list``` attribute - HTML 5.3 W3C Working Draft](https://www.w3.org/TR/html53/sec-forms.html#the-list-attribute) - contains information when used in combination with ```multiple``` attribute.
 * [The ```datalist``` element - HTML 5.3 W3C Working Draft](https://www.w3.org/TR/html53/sec-forms.html#elementdef-datalist)
@@ -122,6 +124,15 @@ Source: combobox (role) - WAI ARIA 1.1
 
 Source: aria-autocomplete (property) - WAI ARIA 1.1
 
+## User Road Map / User story for Autofill
+
+From: Ivan Hughes as April 16, 2018
+
+* Step 1:  User answers question 'What was the purpose of your visit to our website today'", The user then proceeds to the autofill box.”  
+* Step 2: No tasks will be shown as default for the user
+* Step 3: User begins to type and autofill begins to auto-suggest tasks based on the Master Task List.  On the back end the javascript would check what theme, then institution and then program. If the user types “CPP” then the user should only see tasks that are related to CPP such as “Apply for the Canada Pension Plan, “Apply for Canada Pension Plan Disability (CPP-D) Benefit”, etc.
+* Step 4: User can either click enter or use mouse to pick the task that relates most to what they typed.
+* Step 5: If none of the options is the one the user wants the user can then select other.
 
 ## Test case
 
@@ -718,7 +729,7 @@ The focus is move to the next element, the grid overlay are hidden and the user 
 This may require the form validation plugin in order to display the error message. However, on error, this plugin would set the custom error message to the input text field.
 
 {::nomarkdown}
-<h2 id="uxproto">Developper note during the creation of the early prototype</h2>
+<h2 id="devnote">Developper note during the creation of the early prototype</h2>
 {:/}
 
 ### 2018-04-18
