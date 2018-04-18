@@ -1,5 +1,3 @@
-
-
 /**
  * @title WET-BOEW combobox plugin
  * @overview Plugin contained to show an example of how to create your custom WET plugin
@@ -104,7 +102,7 @@ var componentName = "wb-combobox",
 
 
 
-				var $cmbBox = $elm.wrap( "<div role='combobox' aria-expanded='false' aria-haspopup='listbox' aria-owns='" + idListBox + "' data-source-elm='" + datalistID + "'>" ).parent();
+				var $cmbBox = $elm.wrap( "<div class='wb-fieldflow-init' role='combobox' aria-expanded='false' aria-haspopup='listbox' aria-owns='" + idListBox + "' data-source-elm='" + datalistID + "'>" ).parent();
 
 				$cmbBox.append( "<div id='" + idListBox + "' role='listbox' class='hidden'>" );
 
@@ -116,7 +114,7 @@ var componentName = "wb-combobox",
 			} else {
 
 				var ui = "<div class='combobox-wrapper'>" +
-						"<div role='combobox' aria-expanded='false' aria-haspopup='listbox' aria-owns='" + idListBox + "' data-source-elm='" + selectNewId + "'>" +
+						"<div class='wb-fieldflow-init' role='combobox' aria-expanded='false' aria-haspopup='listbox' aria-owns='" + idListBox + "' data-source-elm='" + selectNewId + "'>" +
 						"<input autocomplete='off' data-rule-fromListbox='true' id='" + elm.id + "' aria-autocomplete='list' aria-controls='" + idListBox + "' name='" + inputName + "' aria-activedescendant='' />" +
 						"</div>" +
 						"<div id='" + idListBox + "' role='listbox' class='hidden'>" +
@@ -421,11 +419,13 @@ var componentName = "wb-combobox",
 				// Assign it an unique id
 				optItm.id = wb.getId();
 
+
+
 				// Parse the mustache and recreate the DOM fragment
 				var outerHTMLClone = optItm.outerHTML,
 					regExMustache = /{{\s?([^}]*)\s?}}/g;
 				outerHTMLClone = outerHTMLClone.replace( regExMustache, function( a, b ) {
-					return getObjectAt( dt, b.trim() );
+					return getObjectAt( dt, b.trim() ).toString().replace( /"/g, "&quot;" );
 				} );
 
 				// Is there "option" tag in that template? if so we need to convert them into "p" as <option> can't be children of <div>
@@ -455,22 +455,34 @@ var componentName = "wb-combobox",
 
 	hideListbox = function( ) {
 		var overlayElmId = currentlyOpened.getAttribute( 'aria-owns' ),
-			$overlay = $( "#" + overlayElmId );
+			$overlay = $( "#" + overlayElmId ),
+			input = currentlyOpened.getElementsByTagName( "input" )[ 0 ],
+			sourceElm = docFragmentSourceUI.getElementById( input.parentNode.dataset.sourceElm ) || doc.getElementById( input.parentNode.dataset.sourceElm );
 
 		$overlay.addClass( "hidden" );
-
-		// Fire a onChange Event on the combobox
-		$( currentlyOpened ).trigger( "change" );
 
 		// unset the reference at the overlay currently opened
 		currentlyOpened = null;
 	},
 
+	onChange = function( elm ) {
+
+		validateSelection( elm );
+
+/*
+		$( elm.parentNode ).trigger( "change", 
+		{
+			value : elm.value
+
+		} );
+		*/
+	},
 
 	validateSelection = function( input ) {
 
 		var scrElement = docFragmentSourceUI.getElementById( $( input ).parent().get( 0 ).dataset.sourceElm ) || doc.getElementById( $( input ).parent().get( 0 ).dataset.sourceElm ),
 			isJqueryValidIntegration = input.form && input.form.parentNode.classList.contains( "wb-frmvld" );
+
 		// Ensure the input value is valid, if the source is a select element
 		if ( scrElement.nodeName !== "SELECT" ){
 			return;
@@ -601,7 +613,7 @@ $document.on( "blur", "[role=combobox] input", function( event, data ) {
 
 	// Validate the input
 	setTimeout( function(){
-		validateSelection( event.target );
+		onChange( event.target );
 
 	}, 100 );
 
@@ -626,7 +638,7 @@ $document.on( "keyup", "[role=combobox] input", function( evt ) {
 
 			if ( isInError ) {
 				setTimeout( function() {
-					validateSelection( evt.target );
+					onChange( evt.target );
 				}, 100 );
 			}
 
@@ -635,7 +647,7 @@ $document.on( "keyup", "[role=combobox] input", function( evt ) {
 			setTimeout( function() {
 				updateResults( evt.target, false );
 				if ( isInError ) {
-					validateSelection( evt.target );
+					onChange( evt.target );
 				}
 			}, 100 );
 	}
@@ -876,6 +888,3 @@ $document.on( "timerpoke.wb " + initEvent, selector, init );
 // Add the timer poke to initialize the plugin
 wb.add( selector );
 } )( jQuery, window, document, wb );
-
-
-
