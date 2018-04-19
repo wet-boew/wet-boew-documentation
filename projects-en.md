@@ -25,7 +25,6 @@ Updated: 2018-03-01
 	* (2018-03-14) On going - review github issues and fixing current open issue.
 	* (2018-02-13) Validation of issue labelled "Work: Accessibility" which are open and the closed ones with the label "State: Going Stale".
 
-
 ### Design system
 Design system to standardize the visual language and user experience of our digital collaboration tools. The system will encompass visual elements, components and communications.
 * **Last updated:** February 26, 2018
@@ -49,7 +48,7 @@ Simulate a datalist that work uniformly through browser implementation and conta
 * Be able to force the user to choose a displayed option
 * Be able to include a catch all default option that would always appear as an option
 * Fix datalist related [github issue](https://github.com/wet-boew/wet-boew/issues?q=is%3Aopen+is%3Aissue+label%3A%22Feature%3A+Datalist%22)
-* **Last updated:** April 13, 2018
+* **Last updated:** April 18, 2018
 * **Project lead and developper:** Pierre Dubois
 * **Collaborator:**
 	* Ivan Hughes - Refined the requirement and did initial environmental scan.
@@ -59,15 +58,22 @@ Simulate a datalist that work uniformly through browser implementation and conta
 	* [2018-04-08 - combobox prototype](research/2018-1-combobox-example.html)
 	* [2018-04-11 - combobox prototype 2 - Async loading](research/2018-1-combobox-prototype-2.html)
 	* [2018-04-13 - combobox prototype 3 - Validation](research/2018-1-combobox-prototype-3.html)
+	* [2018-04-16 - combobox prototype 4 - Allow free text input (datalist)](2018-1-combobox-prototype-4.html)
+	* [2018-04-16 - combobox prototype 5 - Limiting number of result and type of filter](2018-1-combobox-prototype-5.html)
+	* [2018-04-18 - combobox prototype 6 - Fieldflow integration and down arrow](2018-1-combobox-prototype-6.html)
 * **History:**
+	* (2018-04-18) Prototype working but a few improvement need to be done, see developer note and UX early testing note
 	* (2018-04-13) Close to release a minimal viable product.
 	* (2018-03-12) Defining the requirement
 
 ### Boolean filtering for WET filter feature
-Provide the option regarding how the space is interpretated during filtering content with the filter plugin. 
-* Interprete space as "OR", "AND", "XOR" or "AS IS" instruction.
-* **Last updated:** April 10, 2018
+Provide the option regarding how the space is interpretated during filtering content with the filter plugin.
+* Interprete space as "OR", "AND", "XOR" or "EXACT" logical instruction. May include a location instruction such as "Anywhere", "startWith", "word".
+* **Last updated:** April 17, 2018
 * **Project lead:** Neil Mispelaar
+* **History:**
+	* (2018-04-18) Early prototype, working on test and documentation material
+	* (2018-04-10) Project initiation
 
 ### Server side error message integration with form validation feature
 Harmonize the error message displayed when in browser error is combined with server side errors
@@ -92,7 +98,7 @@ Create a new feature that would allow the user to obtain a PDF printable version
 ### Postal code lookup for maps or to refine/classify a result set
 Having a postal code lookup where it would display relative result on a map, or show a list of results classify by the closest to the farest. Having the posibility to set a threshold, like within 50 km of the entered postal code,...
 * **Last updated:** March 19, 2018
-* **Current status:** Need resources to initiate the project documentations and initial research. 
+* **Current status:** Need resources to initiate the project documentations and initial research.
 * **Goal:** Have a form that receive a postal code to refine a result set or show an area on a map.
 * **Project lead:** Pierre Dubois
 * **Work order reference:** b4731

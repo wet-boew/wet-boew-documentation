@@ -32,7 +32,7 @@ modified: 2018-03-19
 		* [Test 2018-3 - a ReactJS working example](testcase/2018-3.html)
 
 * [Internal project governance](governance/index-en.html)
-	* [Roadmap meeting summary](gouvernance/meeting.html)
+	* [Roadmap meeting summary](governance/meeting.html)
 
 ## Meeting
 
@@ -51,7 +51,7 @@ To join: Contact Pierre Dubois, you can find his contact information on gccollab
 Location: 200 promenade du portage, Gatineau, Room 2D302
 
 * April 19, 2018
-	* New project: Improved datalist (active) 
+	* New project: Improved datalist (active)
 	* New project: Postal code lookup (backlog)
 	* UX research & UX finding: Filtering interface with performance meter
 * May 17, 2018
@@ -65,4 +65,4 @@ Location: 200 promenade du portage, Gatineau, Room 2D302
 * January 17, 2018
 * February 21, 2019
 
-[Read the summary of the previous meeting](gouvernance/meeting.html)
+[Read the summary of the previous meeting](governance/meeting.html)

@@ -22,6 +22,7 @@ The following design decision can be obseleted if you find they are not valid an
 	</ul>
 </section>
 
+<!--
 <section>
 	<h2>Limited AT support</h2>
 
@@ -35,16 +36,20 @@ The following design decision can be obseleted if you find they are not valid an
 	<p>Design decision issued from usability research.</p>
 
 </section>
+-->
 
 <section>
-	<h2>Submited (Awaiting approval)</h2>
+	<h2>Awaiting approval</h2>
 
-	<p>Design decision to be presented at the next roadmap WET-BOEW meeting</p>
+	<p>Design decision to be presented at the roadmap WET-BOEW meeting</p>
+	<ul>
+		<li><a href="3.html">Design 3 - Browser supported</a></li>
+	</ul>
 
 </section>
 
 <section>
-	<h2>Proposed</h2>
+	<h2>Draft</h2>
 
 	<p>Design decision that required some additional testing or information before to be officially submited</p>
 
@@ -60,13 +65,6 @@ The following design decision can be obseleted if you find they are not valid an
 </section>
 
 <section>
-	<h2>Draft</h2>
-
-	<p>There is no draft currently.</p>
-
-</section>
-
-<section>
 	<h2>Obselete</h2>
 
 	<p>There is no obseleted direction currently.</p>
@@ -75,5 +73,8 @@ The following design decision can be obseleted if you find they are not valid an
 </div>
 {:/}
 
+## Design notes
 
+* [2018-1: Basic HTML mode and progressive enhancement](note-2018-1.html)
+* [2018-2: WET API/Blueprint](note-2018-2.html)
 
