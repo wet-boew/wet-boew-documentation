@@ -26,6 +26,12 @@ Summary of what has been discussed at the meeting.
 
 Technical review meeting are out of scope by default unless there is a project interest.
 
+2018-04-11 ( 4 paticipants )
+* WET feature API/Blueprint
+	* It should include the translation string
+* i18n (brainstorming)
+	* French and English are the official supported language.
+	* Use of other language that is not officially supported would be the responsibility of the person/organisation that require to use it. Our i18n design approach would need to continue to support the possibility of having multiple/infinity language. A notice explaining that approach would be included near the i18n information.
 2018-04-05 ( 4 participants )
 * Talk about what browser is supported for current release of WET
 	* 5% and more from [statistic](http://wet-boew.github.io/wet-boew-documentation/research/2018-2-browser-usage.html)
@@ -39,7 +45,7 @@ Technical review meeting are out of scope by default unless there is a project i
 	* Poke the communauty and the appropriate web standards office
 	* Define a usability testing plan and create test cases of the issue and the suggested fixes.
 	* Goal: obtain enough data to create a design decision
-	* At the end, a design desion will be released with 
+	* At the end, a design desion will be released with
 * Suggested to use documentation badge like : [https://inch-ci.org/learn_more](https://inch-ci.org/learn_more)
 * Suggested to review how we use SauceLabs (it was timing out) and re-activate it
 * Try to move forward the Issue template - [wet-boew issues 8316](https://github.com/wet-boew/wet-boew/issues/8316)
@@ -55,4 +61,3 @@ Technical review meeting are out of scope by default unless there is a project i
 		* Modify the readme and explain how to submit a issue through the wet-boew main project.
 * Suggestions: Create a issue.md template file to provide more guidance for when submiting new issue on Github
 	* Eric D. would look to submit a PR
- 
