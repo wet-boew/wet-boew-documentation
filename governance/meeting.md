@@ -10,6 +10,16 @@ Summary of what has been discussed at the meeting.
 
 ## Roadmap
 
+2018-04-19 ( 9 participants )
+* Design decision approved:
+	* Design decision 1: Use SVG with img element instead of object
+	* Design decision 2: Browser supported
+* Design proposal :
+	* 2018-4: Basic HTML and progressive enhancement
+	* 2018-5: WET API/Blueprint
+* UX research :
+	* Filtering interface with performance meter
+
 2018-03-14 ( 9 participants )
 * Re-introduce and walk through the new [wet-boew documentation](https://wet-boew.github.io/wet-boew-documentation/index-en.html) website.
 * We openly discussed about the current projects like the design system and the accessiblity project.
