@@ -13,12 +13,12 @@ The following design decision can be obseleted if you find they are not valid an
 
 {::nomarkdown}
 <div class="wb-filter">
-
 <section>
-	<h2>Pattern</h2>
+	<h2>Current</h2>
 
 	<ul>
-		<li><a href="1.html">Design 1 - Use SVG with img element instead of object</a></li>
+		<li><a href="1.html">Design decision 1: Use SVG with img element instead of object</a> (Pattern)</li>
+		<li><a href="2.html">Design decision 2: Browser supported</a> (Support scope)</li>
 	</ul>
 </section>
 
@@ -39,14 +39,24 @@ The following design decision can be obseleted if you find they are not valid an
 -->
 
 <section>
-	<h2>Awaiting approval</h2>
+	<h2>Proposed</h2>
 
-	<p>Design decision to be presented at the roadmap WET-BOEW meeting</p>
 	<ul>
-		<li><a href="3.html">Design 3 - Browser supported</a></li>
+		<li><a href="draft-2018-4.html">Basic HTML mode and progressive enhancement</a></li>
+		<li><a href="draft-2018-5.html">WET API/Blueprint</a></li>
 	</ul>
 
+
 </section>
+
+<!--
+<section>
+	<h2>Ready</h2>
+
+	<p>Design decision ready to be presented at the roadmap WET-BOEW meeting.</p>
+
+</section>
+-->
 
 <section>
 	<h2>Draft</h2>
@@ -54,7 +64,7 @@ The following design decision can be obseleted if you find they are not valid an
 	<p>Design decision that required some additional testing or information before to be officially submited</p>
 
 	<ul>
-		<li><a href="2.html">Avoid to use heading in summary element.</a>
+		<li><a href="draft-2018-2.html">Avoid to use heading in summary element.</a>
 			<ul>
 				<li>Write test case with and without an heading in summary</li>
 				<li>Need AT testing</li>
@@ -73,8 +83,5 @@ The following design decision can be obseleted if you find they are not valid an
 </div>
 {:/}
 
-## Design notes
 
-* [2018-1: Basic HTML mode and progressive enhancement](note-2018-1.html)
-* [2018-2: WET API/Blueprint](note-2018-2.html)
 

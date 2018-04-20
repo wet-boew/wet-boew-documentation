@@ -50,10 +50,6 @@ To join: Contact Pierre Dubois, you can find his contact information on gccollab
 ### Roadmap
 Location: 200 promenade du portage, Gatineau, Room 2D302
 
-* April 19, 2018
-	* New project: Improved datalist (active)
-	* New project: Postal code lookup (backlog)
-	* UX research & UX finding: Filtering interface with performance meter
 * May 17, 2018
 * June 20, 2018
 * July 19, 2018
