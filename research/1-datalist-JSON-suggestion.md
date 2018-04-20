@@ -822,5 +822,20 @@ The CSS that was added and not inlcuded into prototype 1 to 5
 * It wasn't clear where was the limit of the listbox, like the bottom of the listbox just faded into the other content of the page, so it was hard, quite imposible to make that distinction.
 	- Defining a CSS that would provide more emphasis on the listbox overlay. 
 
+### 2018-04-20 - Status update
+{::nomarkdown}
 
+{% raw %}
+<p>Todo:</p>
+<ul>
+	<li><del>Add different filter type, like "any", "word", "startWith" like datalist suggest</del> Tested and work <code>data-wb-filter-type="startWith"</code></li>
+	<li><del>Make it work with a datalist and let the text box be open</del></li>
+	<li>Add a callback for filtering, this will open the door for soundEx matching</li>
+	<li>Do the integration with Fieldflow</li>
+	<li><del>Align with "suggest" plugin or make "suggest" plugin deprecated and change it to fallback on this one.</del> - I am dropping wb-suggest and provide example how to do it with this plugin, unless requested by the communauty.</li>
+</ul>
 
+{% endraw %}
+{:/}
+
+See the code in 2018-1-combobox-prototype-WIP.html
