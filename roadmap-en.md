@@ -14,6 +14,26 @@ modified: 2018-04-24
 
 ### Pre-release notes of WET v4.0.29
 
+2018-05-03
+* [PR #8371](https://github.com/wet-boew/wet-boew/pull/8371) - Bump jQuery to final 1.x and 2.x releases
+	* For implementers, Update jQuery CDN link
+		```
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		```
+* [PR #8374](https://github.com/wet-boew/wet-boew/pull/8374) - Boostrap bump to 3.3.7
+	* (To be confirmed) Might have sligh change to:
+		- Anchor
+		- Forms
+		- Modal
+* Various update to the Build script
+* (not merge) [PR #8382](https://github.com/wet-boew/wet-boew/pull/8382) - [Sign on off](http://wet-boew.github.io/v4.0-ci/theme/content-signedon-en.html) template
+	* The class ```btn``` was removed from the paragraph with the fullname of the logged user.
+	* This change don't break any current implementation, but it that design pattern is used we recommend to remove the class ```btn``` on the paragraph.
+	* Old style can be reproduced by applying the following CSS classname ```visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block visible-print-inline-block mrgn-rght-md``` instead of ```btn```
+* Technical note for GCWeb - Need to be considered at the release
+	* Ensure the [package.lock](https://github.com/wet-boew/GCWeb/blob/master/package-lock.json#L9023) point to the latest commit of WET-BOEW
+	* A solution is to run ```npm install``` and then submit a PR with the latest updated ```package.lock```
+
 2018-04-24
 * Planned for the week of August 20, 2018
 
