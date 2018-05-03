@@ -41,7 +41,7 @@ modified: 2018-05-03
 
 [Looking to download stable release of WET?](http://wet-boew.github.io/wet-boew/docs/versions/dwnld-en.html)
 
-Latest version: 4.0.28 released on 2018-04-23
+Latest version: 4.0.28.1 released on 2018-04-27
 
 {::nomarkdown}
 
