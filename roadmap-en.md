@@ -4,7 +4,7 @@ layout: default-theme-wet-boew-en
 filename_fr: index-fr
 title: Roadmap - Web Experience Toolkit (WET) documentation
 description: Web Experience Toolkit (WET) documentation
-modified: 2018-03-19
+modified: 2018-05-03
 ---
 
 
@@ -12,44 +12,36 @@ modified: 2018-03-19
 
 [Nightly build](https://github.com/wet-boew/wet-boew-dist/archive/v4.0-dist.zip)
 
-Notes:
+### Pre-release notes of WET v4.0.29
 
-* Release of WET v4.0.28
-	* 2018-04-18:
-		* Planned for the week of April 23rd
-		* Going to release only WET and GCWeb. Project lead would need to be defined for other theme prior their release.
-* Major, update on the build script.
-	* 2018-04-10:
-		* Fixed the known issue [GCWeb #1343](https://github.com/wet-boew/GCWeb/pull/1343)
-	* 2018-02-23:
-		* **Github related PR and issue**:
-			* [#8295](https://github.com/wet-boew/wet-boew/pull/8295)
-			* [#8253](https://github.com/wet-boew/wet-boew/pull/8253)
-			* [#8247](https://github.com/wet-boew/wet-boew/issues/8247)
-			* [#8228](https://github.com/wet-boew/wet-boew/pull/8228)
-			* [#8147](https://github.com/wet-boew/wet-boew/pull/8147)
-			* [GCWeb] [#1330](https://github.com/wet-boew/GCWeb/pull/1330)
-		* **What that means?:** WET developer would need to run "script/setup" on each of their local wet-boew related instance.
-		* **Know issue:** [GCWeb] Some JS dependency used by the theme plugin are missing
-			* See working example: [Template HTML 5](http://wet-boew.github.io/themes-dist/GCWeb/demos/data-json/template-en.html)
-* [GCWeb] Minor, update to the GCWeb feature
-	* 2018-03-14:
-		* Major change to the markup
-		* Added one feature tile template
-		* Old markup still supported and mark as deprecated
-* [GCWeb] Minor, add new feature to datalist
-	* 2018-04-18:
-		* Removal of this feature, it will be replaced by the combobox using the listbox overlay
-	* 2018-03-14:
-		* Load suggestion from a JSON file
-		* Limit the number of displayed items
-		* Control the behaviour of how the suggestion filtering is applied
+2018-05-03
+* [PR #8371](https://github.com/wet-boew/wet-boew/pull/8371) - Bump jQuery to final 1.x and 2.x releases
+	* For implementers, Update jQuery CDN link
+		```
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		```
+* [PR #8374](https://github.com/wet-boew/wet-boew/pull/8374) - Boostrap bump to 3.3.7
+	* (To be confirmed) Might have sligh change to:
+		- Anchor
+		- Forms
+		- Modal
+* Various update to the Build script
+* (not merge) [PR #8382](https://github.com/wet-boew/wet-boew/pull/8382) - [Sign on off](http://wet-boew.github.io/v4.0-ci/theme/content-signedon-en.html) template
+	* The class ```btn``` was removed from the paragraph with the fullname of the logged user.
+	* This change don't break any current implementation, but it that design pattern is used we recommend to remove the class ```btn``` on the paragraph.
+	* Old style can be reproduced by applying the following CSS classname ```visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block visible-print-inline-block mrgn-rght-md``` instead of ```btn```
+* Technical note for GCWeb - Need to be considered at the release
+	* Ensure the [package.lock](https://github.com/wet-boew/GCWeb/blob/master/package-lock.json#L9023) point to the latest commit of WET-BOEW
+	* A solution is to run ```npm install``` and then submit a PR with the latest updated ```package.lock```
+
+2018-04-24
+* Planned for the week of August 20, 2018
 
 ### Roadmap
 
 [Looking to download stable release of WET?](http://wet-boew.github.io/wet-boew/docs/versions/dwnld-en.html)
 
-Latest version: 4.0.27 released on 2017-12-14
+Latest version: 4.0.28.1 released on 2018-04-27
 
 {::nomarkdown}
 
@@ -62,9 +54,9 @@ Latest version: 4.0.27 released on 2017-12-14
 		<th>Notes</th>
 	</tr>
 	<tr>
-		<th>4.0.28 (dev)</th>
-		<td>2018-04-23</td>
-		<td>Bug fixes</td>
+		<th>4.0.29 (dev)</th>
+		<td>2018-08-20</td>
+		<td></td>
 		<td></td>
 	</tr>
 	<tr>
@@ -100,9 +92,9 @@ Latest released version: 4.0.27 on
 		<th>Notes</th>
 	</tr>
 	<tr>
-		<th>4.0.28 (dev)</th>
-		<td>2018-04-23</td>
-		<td>Bug fixes</td>
+		<th>4.0.29 (dev)</th>
+		<td>2018-08-20</td>
+		<td>Looking to be up to IA spec 1.5</td>
 		<td></td>
 	</tr>
 </table>
@@ -545,4 +537,38 @@ Latest released version: 4.0.27 on
 </section>
 
 {:/}
+
+## Archived pre-release notes
+
+### v4.0.28
+
+* 2018-04-18:
+	* Planned for the week of April 23rd
+	* Going to release only WET and GCWeb. Project lead would need to be defined for other theme prior their release.
+* Major, update on the build script.
+	* 2018-04-10:
+		* Fixed the known issue [GCWeb #1343](https://github.com/wet-boew/GCWeb/pull/1343)
+	* 2018-02-23:
+		* **Github related PR and issue**:
+			* [#8295](https://github.com/wet-boew/wet-boew/pull/8295)
+			* [#8253](https://github.com/wet-boew/wet-boew/pull/8253)
+			* [#8247](https://github.com/wet-boew/wet-boew/issues/8247)
+			* [#8228](https://github.com/wet-boew/wet-boew/pull/8228)
+			* [#8147](https://github.com/wet-boew/wet-boew/pull/8147)
+			* [GCWeb] [#1330](https://github.com/wet-boew/GCWeb/pull/1330)
+		* **What that means?:** WET developer would need to run "script/setup" on each of their local wet-boew related instance.
+		* **Know issue:** [GCWeb] Some JS dependency used by the theme plugin are missing
+			* See working example: [Template HTML 5](http://wet-boew.github.io/themes-dist/GCWeb/demos/data-json/template-en.html)
+* [GCWeb] Minor, update to the GCWeb feature
+	* 2018-03-14:
+		* Major change to the markup
+		* Added one feature tile template
+		* Old markup still supported and mark as deprecated
+* [GCWeb] Minor, add new feature to datalist
+	* 2018-04-18:
+		* Removal of this feature, it will be replaced by the combobox using the listbox overlay
+	* 2018-03-14:
+		* Load suggestion from a JSON file
+		* Limit the number of displayed items
+		* Control the behaviour of how the suggestion filtering is applied
 

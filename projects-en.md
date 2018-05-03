@@ -4,13 +4,13 @@ layout: default-theme-wet-boew-en
 filename_fr: index-fr
 title: Projects - Web Experience Toolkit (WET) documentation
 description: List of projects related to WET.
-modified: 2018-03-19
+modified: 2018-04-17
 ---
 
 
 ## Active project
 
-Updated: 2018-03-01
+Updated: 2018-04-17
 
 
 ### Accessibility
