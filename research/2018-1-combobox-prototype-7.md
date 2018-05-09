@@ -91,9 +91,9 @@ Prototype of an ```select``` box transformed into a customized ```combobox``` wi
 	</div>
 </template>
 
-<p><a href="#">A dummy link for tab sequence testing</a></p>
+<a href="2018-assets/1-datalist-combobox-2.js">Combobo javascript code</a>
 
-<pre><code>&lt;style&Gt;
+<pre><code>&lt;style&gt;
 /* Overlay default style */
 [role=listbox] {
 	min-width: 230px;
@@ -106,7 +106,7 @@ Prototype of an ```select``` box transformed into a customized ```combobox``` wi
 	top: 1.7em;
 	z-index: 9999;
 	/* Note about z-index
-	Ideally it should be set to 1, but the &lt;footer id="wb-info"&Gt; has a z-index set to 5,
+	Ideally it should be set to 1, but the &lt;footer id="wb-info"&gt; has a z-index set to 5,
 	 */
 }
 /* Active state style */
@@ -125,47 +125,47 @@ Prototype of an ```select``` box transformed into a customized ```combobox``` wi
 [role=combobox]:after {
 	content: "\25BC\a0";
 }
-&lt;/style&Gt;
+&lt;/style&gt;
 
 
-&lt;label for="id_select"&Gt;Please choose an option&lt;/label&Gt;
-&lt;select id="id_select" class="wb-combobox" name="selLoremIpsum" data-wb5-template="sub-template-listbox@tmplItems"&Gt;
-	&lt;option value="Lorem"&Gt;Lorem&lt;/option&Gt;
-	&lt;option value="ipsum"&Gt;ipsum&lt;/option&Gt;
-	&lt;option value="dolor"&Gt;dolor&lt;/option&Gt;
-	&lt;option value="sit"&Gt;sit&lt;/option&Gt;
-&lt;/select&Gt;
+&lt;label for="id_select"&gt;Please choose an option&lt;/label&gt;
+&lt;select id="id_select" class="wb-combobox" name="selLoremIpsum" data-wb5-template="sub-template-listbox@tmplItems"&gt;
+	&lt;option value="Lorem"&gt;Lorem&lt;/option&gt;
+	&lt;option value="ipsum"&gt;ipsum&lt;/option&gt;
+	&lt;option value="dolor"&gt;dolor&lt;/option&gt;
+	&lt;option value="sit"&gt;sit&lt;/option&gt;
+&lt;/select&gt;
 
-&lt;template id="tmplItems"&Gt;
-	&lt;ul class="list-unstyled"&Gt;
-		&lt;li role="option" data-wb5-for="autofillItem in select.options" data-wb5-selectvalue="{{autofillItem.textContent.toUpperCase()}}"&Gt;{{ autofillItem.textContent }}&lt;/li&Gt;
-	&lt;/ul&Gt;
-	&lt;hr class="brdr-bttm mrgn-tp-sm mrgn-bttm-sm"&Gt;
-	&lt;p role="option" data-wb5-selectvalue="my default value"&Gt;Default persistent option&lt;/p&Gt;
-&lt;/template&Gt;
+&lt;template id="tmplItems"&gt;
+	&lt;ul class="list-unstyled"&gt;
+		&lt;li role="option" data-wb5-for="autofillItem in select.options" data-wb5-selectvalue="{{autofillItem.textContent.toUpperCase()}}"&gt;{{ autofillItem.textContent }}&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;hr class="brdr-bttm mrgn-tp-sm mrgn-bttm-sm"&gt;
+	&lt;p role="option" data-wb5-selectvalue="my default value"&gt;Default persistent option&lt;/p&gt;
+&lt;/template&gt;
 
 
-&lt;template id="combobox_simple_template"&Gt;
-	&lt;div class="combobox-wrapper"&Gt;
-		&lt;div role="combobox" aria-expanded="false" aria-haspopup="listbox" data-wb5-bind="aria-owns@popupId"&Gt;
-			&lt;input autocomplete="off" data-rule-fromListbox="true" data-wb5-bind="id@fieldId, aria-controls@popupId, name@fieldName, value@selectValue" aria-autocomplete="list" aria-activedescendant="" required /&Gt;
-		&lt;/div&Gt;
-		&lt;div data-wb5-bind="id@popupId" role="listbox" class="hidden"&Gt;
-			&lt;template data-slot-elm="" data-wb5-template="sub-template-listbox"&Gt;
-				&lt;ul class="list-unstyled"&Gt;
+&lt;template id="combobox_simple_template"&gt;
+	&lt;div class="combobox-wrapper"&gt;
+		&lt;div role="combobox" aria-expanded="false" aria-haspopup="listbox" data-wb5-bind="aria-owns@popupId"&gt;
+			&lt;input autocomplete="off" data-rule-fromListbox="true" data-wb5-bind="id@fieldId, aria-controls@popupId, name@fieldName, value@selectValue" aria-autocomplete="list" aria-activedescendant="" required /&gt;
+		&lt;/div&gt;
+		&lt;div data-wb5-bind="id@popupId" role="listbox" class="hidden"&gt;
+			&lt;template data-slot-elm="" data-wb5-template="sub-template-listbox"&gt;
+				&lt;ul class="list-unstyled"&gt;
 					&lt;li 
 						class="brdr-bttm" 
 						role="option" 
 						data-wb5-for="option in options" 
 						data-wb5-if="!parent.filter.length || option.value.indexOf(parent.filter) !== -1"
-						data-wb5-on="select@select(option.value); live@parent.nbdispItem(wb-nbNode)" &Gt;{{ option.textContent }}&lt;/li&Gt;
-				&lt;/ul&Gt;
-			&lt;/template&Gt;
-		&lt;/div&Gt;
-	&lt;/div&Gt;
-&lt;/template&Gt;
+						data-wb5-on="select@select(option.value); live@parent.nbdispItem(wb-nbNode)" &gt;{{ option.textContent }}&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/template&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/template&gt;
 
-&lt;p&Gt;&lt;a href="#"&Gt;A dummy link for tab sequence testing&lt;/a&Gt;&lt;/p&Gt;</code></pre>
+&lt;p&gt;&lt;a href="2018-assets/1-datalist-combobox-2.js"&gt;Combobo javascript code&lt;/a&gt;&lt;/p&gt;</code></pre>
 
 {% endraw %}
 {:/}
