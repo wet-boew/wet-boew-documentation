@@ -3,7 +3,7 @@ published: true
 layout: default-theme-wet-boew-en
 title: 1 - Datalist JSON suggestion - Research and finding - Web Experience Toolkit (WET) documentation
 description: Design decision followed by WET.
-modified: 2018-03-29
+modified: 2018-05-09
 ---
 
 ## Purpose
@@ -34,6 +34,7 @@ Customizable autocomplete feature.
 * [2018-04-16 - combobox prototype 4 - Allow free text input (datalist)](2018-1-combobox-prototype-4.html)
 * [2018-04-16 - combobox prototype 5 - Limiting number of result and type of filter](2018-1-combobox-prototype-5.html)
 * [2018-04-18 - combobox prototype 6 - Fieldflow integration and down arrow](2018-1-combobox-prototype-6.html)
+* [2018-05-09 - combobox prototype 7 - By using a reactive template engine](2018-1-combobox-prototype-7.html)
 
 [UX feedback from early prototype](#uxproto)
 
