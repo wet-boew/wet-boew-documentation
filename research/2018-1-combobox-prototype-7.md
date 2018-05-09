@@ -62,15 +62,6 @@ Prototype of an ```select``` box transformed into a customized ```combobox``` wi
 	<option value="sit">sit</option>
 </select>
 
-<template id="tmplItems">
-	<ul class="list-unstyled">
-		<li role="option" data-wb5-for="autofillItem in select.options" data-wb5-selectvalue="{{autofillItem.textContent.toUpperCase()}}">{{ autofillItem.textContent }}</li>
-	</ul>
-	<hr class="brdr-bttm mrgn-tp-sm mrgn-bttm-sm">
-	<p role="option" data-wb5-selectvalue="my default value">Default persistent option</p>
-</template>
-
-
 <template id="combobox_simple_template">
 	<div class="combobox-wrapper">
 		<div role="combobox" aria-expanded="false" aria-haspopup="listbox" data-wb5-bind="aria-owns@popupId">
@@ -135,15 +126,6 @@ Prototype of an ```select``` box transformed into a customized ```combobox``` wi
 	&lt;option value="dolor"&gt;dolor&lt;/option&gt;
 	&lt;option value="sit"&gt;sit&lt;/option&gt;
 &lt;/select&gt;
-
-&lt;template id="tmplItems"&gt;
-	&lt;ul class="list-unstyled"&gt;
-		&lt;li role="option" data-wb5-for="autofillItem in select.options" data-wb5-selectvalue="{{autofillItem.textContent.toUpperCase()}}"&gt;{{ autofillItem.textContent }}&lt;/li&gt;
-	&lt;/ul&gt;
-	&lt;hr class="brdr-bttm mrgn-tp-sm mrgn-bttm-sm"&gt;
-	&lt;p role="option" data-wb5-selectvalue="my default value"&gt;Default persistent option&lt;/p&gt;
-&lt;/template&gt;
-
 
 &lt;template id="combobox_simple_template"&gt;
 	&lt;div class="combobox-wrapper"&gt;
