@@ -97,18 +97,27 @@ Note: The text-alternative version will be provided later on.
 
 ### Plugin pieces and how they are extended/overwrited in themes
 
-![Plugin pieces and how they are extended/overwrited in themes]({{ "2018-assets/3-plugin-pieces.jpg" }})
+{% raw %}
+
+<img scr="2018-assets/3-plugin-pieces.jpg" class="img-responsive" alt="" />
+
+{% endraw %}
 
 ### Flow of WET 5 internal
 
-![Flow of WET 5 internal]({{ "2018-assets/3-wet5-flow-internal.jpg" }})
+{% raw %}
+<img scr="2018-assets/3-wet5-flow-internal.jpg" class="img-responsive" alt="" />
+{% endraw %}
 
 ### WET feature blueprint
 
-![WET feature blueprint]({{ "2018-assets/3-wet-feature-blueprint.jpg" }})
+{% raw %}
+<img scr="2018-assets/3-wet-feature-blueprint.jpg" class="img-responsive" alt="" />
+{% endraw %}
 
 ### WET 5 live cycle flow
 
-![WET 5 live cycle flow]({{ "2018-assets/3-wet5-live-cycle-flow.jpg" }})
-
+{% raw %}
+<img scr="2018-assets/3-wet5-live-cycle-flow.jpg" class="img-responsive" alt="" />
+{% endraw %}
  
