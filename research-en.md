@@ -13,7 +13,9 @@ List of finding and ongoing research related to WET and it's features
 ## Ongoing
 
 * [Datalist JSON suggestion](research/1-datalist-JSON-suggestion.html)
-	* Status: Evaluating and finding similar tools
+	* Status: In progress
+
+* [WET 5 kickoff documentation material](research/2018-3-wet5-kickoff.html))
 
 ## Published report
 
