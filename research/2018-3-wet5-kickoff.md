@@ -99,25 +99,25 @@ Note: The text-alternative version will be provided later on.
 
 {% raw %}
 
-<img scr="2018-assets/3-plugin-pieces.jpg" class="img-responsive" alt="" />
+<img src="2018-assets/3-plugin-pieces.jpg" class="img-responsive" alt="" />
 
 {% endraw %}
 
 ### Flow of WET 5 internal
 
 {% raw %}
-<img scr="2018-assets/3-wet5-flow-internal.jpg" class="img-responsive" alt="" />
+<img src="2018-assets/3-wet5-flow-internal.jpg" class="img-responsive" alt="" />
 {% endraw %}
 
 ### WET feature blueprint
 
 {% raw %}
-<img scr="2018-assets/3-wet-feature-blueprint.jpg" class="img-responsive" alt="" />
+<img src="2018-assets/3-wet-feature-blueprint.jpg" class="img-responsive" alt="" />
 {% endraw %}
 
 ### WET 5 live cycle flow
 
 {% raw %}
-<img scr="2018-assets/3-wet5-live-cycle-flow.jpg" class="img-responsive" alt="" />
+<img src="2018-assets/3-wet5-live-cycle-flow.jpg" class="img-responsive" alt="" />
 {% endraw %}
  
