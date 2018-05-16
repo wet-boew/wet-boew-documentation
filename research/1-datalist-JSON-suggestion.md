@@ -35,6 +35,7 @@ Customizable autocomplete feature.
 * [2018-04-16 - combobox prototype 5 - Limiting number of result and type of filter](2018-1-combobox-prototype-5.html)
 * [2018-04-18 - combobox prototype 6 - Fieldflow integration and down arrow](2018-1-combobox-prototype-6.html)
 * [2018-05-09 - combobox prototype 7 - By using a reactive template engine](2018-1-combobox-prototype-7.html)
+* [2018-05-16 - combobox prototype 8 - Fieldflow integration with default action if no match found by using a reactive template engine](2018-1-combobox-prototype-8.html)
 
 [UX feedback from early prototype](#uxproto)
 
