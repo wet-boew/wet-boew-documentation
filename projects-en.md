@@ -10,7 +10,7 @@ modified: 2018-04-17
 
 ## Active project
 
-Updated: 2018-04-17
+Updated: 2018-05-17
 
 
 ### Accessibility
@@ -18,9 +18,10 @@ Updated: 2018-04-17
 * Documenting basic HTML design pattern
 * WCAG 2.1 Level AA conformance check for existing features
 * Evaluate web accessibility compliance for wb5 features
-* **Last updated:** April 10, 2018
-* **Progress check history**: 2018-04-10; 2018-04-03; 2018-03-14; 2018-02-27; 2018-02-20
+* **Last updated:** May 17, 2018
+* **Progress check history**: 2018-05-17; 2018-04-10; 2018-04-03; 2018-03-14; 2018-02-27; 2018-02-20
 * **History:**
+	* (2018-05-27) WIP: #552 (Mobile checklist) and #8238 (Validation error in Mobile menu)
 	* (2018-04-10) PR submited for pie chart labeling
 	* (2018-03-14) On going - review github issues and fixing current open issue.
 	* (2018-02-13) Validation of issue labelled "Work: Accessibility" which are open and the closed ones with the label "State: Going Stale".
@@ -34,10 +35,12 @@ Design system to standardize the visual language and user experience of our digi
 * **Notes:** That design system might replace the wet-boew style guide.
 * **Project homepage:** [#GCDigital Design System](https://gctools-outilsgc.gitbooks.io/-gcdigital-design-system/content/)
 * **History:**
+	* (2018-05-17) Seems to have started phase II
 	* (2018-02-26) Basic visual for forms
 	* (2018-02-13) Working on the visual look for the design system.
 
-### Improved datalist (autocomplete/suggestion)
+### Combobox (autocomplete/suggestion)
+[ was: Improved datalist (autocomplete/suggestion) ]
 Simulate a datalist that work uniformly through browser implementation and contains more functionality compared as described in the HTML5.3 spec such as
 * Limit the number of display results
 * Provide the option on how to apply the filter (ex: startWith; word; any; Levenshtein distance; conditional filter)
@@ -48,7 +51,7 @@ Simulate a datalist that work uniformly through browser implementation and conta
 * Be able to force the user to choose a displayed option
 * Be able to include a catch all default option that would always appear as an option
 * Fix datalist related [github issue](https://github.com/wet-boew/wet-boew/issues?q=is%3Aopen+is%3Aissue+label%3A%22Feature%3A+Datalist%22)
-* **Last updated:** April 18, 2018
+* **Last updated:** May 17, 2018
 * **Project lead and developper:** Pierre Dubois
 * **Collaborator:**
 	* Ivan Hughes - Refined the requirement and did initial environmental scan.
@@ -58,10 +61,13 @@ Simulate a datalist that work uniformly through browser implementation and conta
 	* [2018-04-08 - combobox prototype](research/2018-1-combobox-example.html)
 	* [2018-04-11 - combobox prototype 2 - Async loading](research/2018-1-combobox-prototype-2.html)
 	* [2018-04-13 - combobox prototype 3 - Validation](research/2018-1-combobox-prototype-3.html)
-	* [2018-04-16 - combobox prototype 4 - Allow free text input (datalist)](2018-1-combobox-prototype-4.html)
-	* [2018-04-16 - combobox prototype 5 - Limiting number of result and type of filter](2018-1-combobox-prototype-5.html)
-	* [2018-04-18 - combobox prototype 6 - Fieldflow integration and down arrow](2018-1-combobox-prototype-6.html)
+	* [2018-04-16 - combobox prototype 4 - Allow free text input (datalist)](research/2018-1-combobox-prototype-4.html)
+	* [2018-04-16 - combobox prototype 5 - Limiting number of result and type of filter](research/2018-1-combobox-prototype-5.html)
+	* [2018-04-18 - combobox prototype 6 - Fieldflow integration and down arrow](research/2018-1-combobox-prototype-6.html)
+	* [2018-05-09 - combobox prototype 7 - By using a reactive template engine](research/2018-1-combobox-prototype-7.html)
+	* [2018-05-16 - combobox prototype 8 - Fieldflow integration with default action if no match found by using a reactive template engine](research/2018-1-combobox-prototype-8.html)
 * **History:**
+	* (2018-05-17) Prototype fully working as expected, now it's code cleanup and optimisation
 	* (2018-04-18) Prototype working but a few improvement need to be done, see developer note and UX early testing note
 	* (2018-04-13) Close to release a minimal viable product.
 	* (2018-03-12) Defining the requirement
@@ -69,17 +75,19 @@ Simulate a datalist that work uniformly through browser implementation and conta
 ### Boolean filtering for WET filter feature
 Provide the option regarding how the space is interpretated during filtering content with the filter plugin.
 * Interprete space as "OR", "AND", "XOR" or "EXACT" logical instruction. May include a location instruction such as "Anywhere", "startWith", "word".
-* **Last updated:** April 17, 2018
+* **Last updated:** May 17, 2018
 * **Project lead:** Neil Mispelaar
 * **History:**
+	* (2018-05-17) PR submited ([#8383](https://github.com/wet-boew/wet-boew/pull/8383)), additional fix to come
 	* (2018-04-18) Early prototype, working on test and documentation material
 	* (2018-04-10) Project initiation
 
 ### Server side error message integration with form validation feature
 Harmonize the error message displayed when in browser error is combined with server side errors
-* **Last udpated:** April 11, 2018
+* **Last udpated:** May 17, 2018
 * **Project lead:** Stéphane Ducharme
 * **History:**
+	* (2018-05-17) Work for single input or select, but not when it is combined together.
 	* (2018-04-11) Early exploratory prototype
 
 ### PDF generator

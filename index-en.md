@@ -32,7 +32,7 @@ modified: 2018-03-19
 		* [Test 2018-3 - a ReactJS working example](testcase/2018-3.html)
 
 * [Internal project governance](governance/index-en.html)
-	* [Roadmap meeting summary](governance/meeting.html)
+	* [Meeting summary](governance/meeting.html)
 
 ## Meeting
 

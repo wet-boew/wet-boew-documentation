@@ -14,6 +14,10 @@ modified: 2018-05-03
 
 ### Pre-release notes of WET v4.0.29
 
+2018-05-17
+* [PR #8382](https://github.com/wet-boew/wet-boew/pull/8382#discussion_r185848811)
+	* The markup for the "sign in/sign out" user interface template has changed. The paragraph with the ```btn``` class was changed for "sign in as" design pattern. It was replaced by a span with the class ```mrgn-rght-md```.
+
 2018-05-03
 * [PR #8371](https://github.com/wet-boew/wet-boew/pull/8371) - Bump jQuery to final 1.x and 2.x releases
 	* For implementers, Update jQuery CDN link
