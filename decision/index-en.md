@@ -19,7 +19,7 @@ The following design decision can be obseleted if you find they are not valid an
 	<ul>
 		<li><a href="1.html">Design decision 1: Use SVG with img element instead of object</a> (Pattern)</li>
 		<li><a href="2.html">Design decision 2: Browser supported</a> (Support scope)</li>
-		<li><a href="5.html">WET API/Blueprint</a></li>
+		<li><a href="3.html">Design decision 3: WET API/Blueprint</a></li>
 	</ul>
 </section>
 
