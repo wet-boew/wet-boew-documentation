@@ -1,7 +1,7 @@
 ---
 published: true
 layout: default-theme-wet-boew-en
-title: Meeting summary - WET-BOEW documentatin
+title: Meeting summary - WET-BOEW documentation
 description: Summary of what has been discussed at the meeting.
 modified: 2018-03-19
 ---
@@ -9,6 +9,13 @@ modified: 2018-03-19
 Summary of what has been discussed at the meeting.
 
 ## Roadmap
+
+2018-05-17 ( 6 participants )
+* Design decision:
+	* Design decision 5: WET API/Blueprint
+		*  Approved
+	* 2018-4: Basic HTML and progressive enhancement
+		* Waiting for more feedback, see [#8357](https://github.com/wet-boew/wet-boew/issues/8357)
 
 2018-04-19 ( 9 participants )
 * Design decision approved:
@@ -71,3 +78,36 @@ Technical review meeting are out of scope by default unless there is a project i
 		* Modify the readme and explain how to submit a issue through the wet-boew main project.
 * Suggestions: Create a issue.md template file to provide more guidance for when submiting new issue on Github
 	* Eric D. would look to submit a PR
+
+## Special meeting
+
+### WET 5 Kickoff - May 10
+
+[Documentation material presented](../research/2018-3-wet5-kickoff.html)
+
+15 participant (8 in person and 7 in teleconference)
+
+Summary
+* The high level concept for WET 5 core was well received.
+* It was suggested to switch over ES6 and use thrid party service such Babel to run ES6 on browser that don't support it
+* Some concern was express in regards of what the build system could be to support the WET 5 product.
+* It was recommended to documents and do more research about the needs from the user of WET.
+* Next WET 5 meeting would be more topic specific, like focusing on the core, the build, testing, etc.
+* The overall project monitoring will be done through the WET Roadmap meeting.
+
+List of todo:
+* Reach out and try to being active on social media.
+* Create a page with of thing that need to be addressed and/or taken care of.
+* Build small prototype and have it tested with different audience (web developer, web author, WET core developer)
+* Produce a documentation that could be easilly aligned with the TBS Digital Standard
+* Find contributor across the spectrum and seek their feedback on the product.
+* Develop a plan and a strategy to address concern between moving from WET 4 to WET 5.
+* Develop a plan and a strategy to address some WET user fears, like removing the jQuery library from WET core.
+
+Suggestion/Idea 
+* Use a top bar overlay to advertise the user that he are in the Basic HTML mode
+* Having two build system, one for quick local developpement and the full build that may require nodeJS. Some opposition was expressed about having two different type of build.
+* Support and promote mobile first design
+* Create a business plan about the markup for WET 5, use focus group and explore if it makes senses
+* Consider a way to have organisation to lead some WET plugin.
+
