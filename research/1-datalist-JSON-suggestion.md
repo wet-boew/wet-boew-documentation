@@ -36,8 +36,22 @@ Customizable autocomplete feature.
 * [2018-04-18 - combobox prototype 6 - Fieldflow integration and down arrow](2018-1-combobox-prototype-6.html)
 * [2018-05-09 - combobox prototype 7 - By using a reactive template engine](2018-1-combobox-prototype-7.html)
 * [2018-05-16 - combobox prototype 8 - Fieldflow integration with default action if no match found by using a reactive template engine](2018-1-combobox-prototype-8.html)
+* [2018-05-16 - combobox prototype 9 - Fieldflow and async load](2018-1-combobox-prototype-9.html) (Might not work)
+* [2018-05-28 - combobox prototype 10 - Fieldflow and default and async load - With reactive engine](2018-1-combobox-prototype-10.html)
 
 [UX feedback from early prototype](#uxproto)
+
+### Remarks
+
+**Terminology issue:** There is a confusion about the right terminology to properly name this features. Some call it auto-complete, other call it datalist and other call it combobox.
+
+Here the definition we will now use forward. It's based on how it is descrbied in W3C ARIA specification.
+
+* **Autocomplete:** The autocomple is a mode of the combobox where it will pre-fill the input based on suggested options. [ref. Combobox WAI ARIA Practices 1.1](https://www.w3.org/TR/wai-aria-practices-1.1/#x3-7-combo-box)
+* **Datalist:** It's one of the multiple type of popup for a combobox. "Datalist" term is defined and introduced by the HTML5 spec. It's equivalent is the ```listbox``` role as defined per WAI Aria spec. [ref. Combobox WAI ARIA Practices 1.1](https://www.w3.org/TR/wai-aria-practices-1.1/#x3-7-combo-box); [ref. The datalist element, HTML 5.3](https://www.w3.org/TR/html53/sec-forms.html#the-datalist-element)
+* **Combobox:** A Combobox is a combinaison of two element, an input box and a popup. It is use to suggest a list of options at the user and usually the user can navigate through the information inside the popup in order to choose the right one. A combobox can have a popup that is: a listbox, a grid, a tree or a dialog. [ref. Combobox WAI ARIA Practices 1.1](https://www.w3.org/TR/wai-aria-practices-1.1/#x3-7-combo-box)
+
+All this research documents, as May 28 - 2018, is about the "combobox functionality", the initial version only support listbox and don't support autocomplete feature.
 
 ## Similar tools
 
@@ -56,6 +70,7 @@ Here a list of similar tools that was found on a February 2018 research
 	* Android specific application. Not very re-usable for the need here.
 * [React autosuggest](https://github.com/moroshko/react-autosuggest)
 * [Datalist JSON suggestion](https://github.com/wet-boew/GCWeb/tree/master/src/plugins/suggest)
+* (Added on May 28, [suggested on May 23](https://github.com/wet-boew/wet-boew-documentation/pull/69#issuecomment-391518380])) [github/auto-complete-element](https://github.com/github/auto-complete-element)
 
 ### Website using custom datalist
 * [http://wet-boew.github.io/themes-dist/GCWeb/demos/suggest/suggest-en.html](http://wet-boew.github.io/themes-dist/GCWeb/demos/suggest/suggest-en.html)

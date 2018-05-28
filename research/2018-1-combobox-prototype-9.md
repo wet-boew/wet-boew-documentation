@@ -19,6 +19,8 @@ If the typed content are not from the list, then it redirect the user into a gen
 {% raw %}
 
 
+<script src="2018-assets/proto-9-cbxFieldflow.js"></script>
+
 <style>
 /* Overlay default style */
 [role=listbox] {
