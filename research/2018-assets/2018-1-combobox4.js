@@ -30,14 +30,14 @@ var componentName = "wb-combobox",
 						"class=\"brdr-bttm\" " +
 						"role=\"option\" " +
 						"data-wb5-for=\"option in wbLoad\" " +
-						"data-wb5-if=\"!parent.filter.length || parent.config.compareMe(option,parent.filter)\" " +
+						"data-wb5-if=\"!parent.filter.length || parent.config.compareLowerCase(option,parent.filter)\" " +
 						"data-wb5-on=\"select@select(option); live@parent.nbdispItem(wb-nbNode)\" >{{ option }}</li>" +
 					" -->" +
 					"<li " +
 						"class=\"\" " +
 						"role=\"option\" " +
 						"data-wb5-for=\"option in options\" " +
-						"data-wb5-if=\"!parent.filter.length || parent.config.compareMe(option.value,parent.filter)\" " +
+						"data-wb5-if=\"!parent.filter.length || parent.config.compareLowerCase(option.value,parent.filter)\" " +
 						"data-wb5-on=\"select@select(option.value); live@parent.nbdispItem(wb-nbNode)\" >{{ option.textContent }}</li>" +
 				"</ul>" +
 			"</template>" +
