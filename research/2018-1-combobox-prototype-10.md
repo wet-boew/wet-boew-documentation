@@ -114,7 +114,7 @@ This prototype include :
 						class="brdr-bttm" 
 						role="option" 
 						data-wb5-for="option in options" 
-						data-wb5-if="!parent.filter.length || parent.config.compareMe(option.value,parent.filter) || parent.config.similarText(option.value,parent.filter,'75')"
+						data-wb5-if="!parent.filter.length || parent.config.compareLowerCase(option.value,parent.filter) || parent.config.similarText(option.value,parent.filter,'75')"
 						data-wb5-on="select@select(option.value); live@parent.nbdispItem(wb-nbNode)" >{{ option.textContent }}</li>
 				</ul>
 				<p role="option" data-wb5-on="select@select('default')">Default</p>
@@ -166,7 +166,7 @@ This prototype include :
 						class="brdr-bttm" 
 						role="option" 
 						data-wb5-for="option in wbLoad" 
-						data-wb5-if="!parent.filter.length || parent.config.compareMe(option,parent.filter)"
+						data-wb5-if="!parent.filter.length || parent.config.compareLowerCase(option,parent.filter)"
 						data-wb5-on="select@select(option); live@parent.nbdispItem(wb-nbNode)" >{{ option }}</li>
 				</ul>
 			</template>
@@ -265,7 +265,7 @@ This prototype include :
 						class="brdr-bttm" 
 						role="option" 
 						data-wb5-for="option in options" 
-						data-wb5-if="!parent.filter.length || parent.config.compareMe(option.value,parent.filter) || parent.config.similarText(option.value,parent.filter,'75')"
+						data-wb5-if="!parent.filter.length || parent.config.compareLowerCase(option.value,parent.filter) || parent.config.similarText(option.value,parent.filter,'75')"
 						data-wb5-on="select@select(option.value); live@parent.nbdispItem(wb-nbNode)" &gt;{{ option.textContent }}&lt;/li&gt;
 				&lt;/ul&gt;
 				&lt;p role="optionss" data-wb5-on="select@select('default')"&gt;Default&lt;/p&gt;
@@ -317,13 +317,117 @@ This prototype include :
 						class="brdr-bttm" 
 						role="option" 
 						data-wb5-for="option in wbLoad" 
-						data-wb5-if="!parent.filter.length || parent.config.compareMe(option,parent.filter)"
+						data-wb5-if="!parent.filter.length || parent.config.compareLowerCase(option,parent.filter)"
 						data-wb5-on="select@select(option); live@parent.nbdispItem(wb-nbNode)" &gt;{{ option }}&lt;/li&gt;
 				&lt;/ul&gt;
 			&lt;/template&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
 &lt;/template&gt;</code></pre>
+
+<h2>JS Update for the similar text compare function</h2>
+<pre><code>similarText: function( str1, str2, passRatio ) {
+
+// Function to compare the distance between two word.
+function matchDistance( s1, s2 ) {
+	var arr = [];
+	
+	for ( var i = 0; i <= s1.length; i++ ) {
+		var lastValue = i;
+
+		for ( var j = 0; j <= s2.length; j++ ) {
+			if ( i === 0 ) {
+				arr[j] = j;
+			}
+			else {
+				if ( j > 0 ) {
+					var newValue = arr[ j - 1 ];
+					if ( s1.charAt( i - 1 ) !== s2.charAt( j - 1 ) ) {
+						newValue = Math.min( Math.min( newValue, lastValue ), arr[ j ] ) + 1;
+					}
+				arr[ j - 1 ] = lastValue;
+					lastValue = newValue;
+				}
+			}
+		}
+		if ( i > 0 ) {
+			arr[ s2.length ] = lastValue;
+		}
+	}
+	return arr[ s2.length ];	
+}
+
+function similartextCheck( s1, s2 ) {
+
+	s1 = s1.replace( /[\-\/]|_/g, " " ).replace( /[^\w\s]|_/g, "" ).trim().toLowerCase();
+	s2 = s2.replace( /[\-\/]|_/g, " " ).replace( /[^\w\s]|_/g, "" ).trim().toLowerCase();
+	
+	var arrShorter = s1.split( " " ),
+		arrLonger  = s2.split( " " );
+
+	if ( s1.length > s2.length ) {
+		arrShorter = s2.split( " " );		
+		arrLonger  = s1.split( " " );
+	}	
+	
+
+	if ( !arrLonger.length || !arrShorter.length ) {
+		return 100;
+	}
+
+	var matchChars = 0,
+		maxChars = 0,
+		longer = "",
+		shorter = "";
+	
+	for ( var i = 0; i < arrShorter.length; i++ ) {				
+		var bestMatch = 0,
+			fullLength = 0,
+			fullMatch = false;
+
+		for ( var j=0; j < arrLonger.length; j++ ) {			
+			
+			shorter = arrShorter[ i ];
+			longer = arrLonger[ j ];
+		
+			if( longer.indexOf( shorter ) >= 0 ) {
+
+				var currentMatch = longer.length;	
+				
+				if ( ( !fullMatch ) || ( currentMatch < bestMatch ) ) {
+					bestMatch = longer.length;
+					fullLength = longer.length;
+				}
+				fullMatch = true;							
+			}
+			else if( !fullMatch ) {
+				currentMatch = longer.length - matchDistance( shorter, longer );
+						
+				if( currentMatch > bestMatch ) {
+					bestMatch  = currentMatch;
+					fullLength = longer.length;
+				}
+			}
+		}
+		matchChars = matchChars + bestMatch;		
+		maxChars = maxChars + fullLength;
+	}
+
+	if ( matchChars === 0 ) {
+		return 0;
+	}
+
+	return ( matchChars / maxChars ) * 100;
+}
+
+// Check agains the pass Ratio
+var result = similartextCheck( str1, str2 );
+passRatio = parseInt( passRatio );
+if ( result >= passRatio ) {
+	return true;
+}
+return false;
+}</code></pre>
 
 {% endraw %}
 {:/}
