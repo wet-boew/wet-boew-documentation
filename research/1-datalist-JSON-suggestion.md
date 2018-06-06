@@ -856,3 +856,10 @@ The CSS that was added and not inlcuded into prototype 1 to 5
 {:/}
 
 See the code in 2018-1-combobox-prototype-WIP.html
+
+### 2018-06-06 - Status update
+
+* Improved the combobox backend and allowing to fully customize the template as per the user needs
+* See the Prototype 10 for a working example and code sample
+* Integrate well with Fieldflow and provide a use case for the ifNoneDefault option in fieldflow.
+* It only support the listbox popup
