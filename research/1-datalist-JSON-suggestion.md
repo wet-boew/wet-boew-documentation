@@ -863,3 +863,84 @@ See the code in 2018-1-combobox-prototype-WIP.html
 * See the Prototype 10 for a working example and code sample
 * Integrate well with Fieldflow and provide a use case for the ifNoneDefault option in fieldflow.
 * It only support the listbox popup
+
+### Notes on experimental structure of the Javascript Object for the combo box
+
+Working documents on how the information structure that are templated to generate the combobox should be ideally structured
+
+{::nomarkdown}
+
+{% raw %}
+<pre>
+Plugin core structure
+
+* input
+* listbox
+	- option
+
+// Events for core structure are directly monitored in the code to allow bi-directional binding
+
+// Note: During "for" iteraction, number of true items is cumulated under the "active" properties of the object being iterated
+
+------------
+
+Combobox default template - Enhanced
+
+<template id="combobox_simple_template">
+	<div class="combobox-wrapper">
+		<div role="combobox" aria-expanded="false" aria-haspopup="listbox" data-wb5-bind="aria-owns@popupId">
+			<input autocomplete="off" data-rule-fromListbox="true" data-wb5-bind="id@fieldId, aria-controls@popupId, value@selectValue" aria-autocomplete="list" aria-activedescendant="" />
+		</div>
+		<div data-wb5-bind="id@popupId" role="listbox" class="hidden">
+			<template data-slot-elm="" data-wb5-template="sub-template-listbox">
+				<ul class="list-unstyled">
+					<li 
+						class="brdr-bttm" 
+						role="option" 
+						data-wb5-for="option in options" 
+						data-wb5-if="!parent.filter.length || option.value.indexOf(parent.filter) !== -1"
+						data-wb5-on="select@select(option.value); live@parent.nbdispItem(wb-nbNode)" >{{ option.textContent }}</li>
+				</ul>
+				<p role="option" data-wb5-on="select@select('default')">Default</p>
+			</template>
+		</div>
+	</div>
+</template>
+
+--------------
+
+Combobox JSON instance structure
+
+Baseline plugin
+{
+	settings: {}, // Settings defined on the instance
+	elm: {} // main DOM element
+}
+
+Special reactive attribute on Array
+{
+	wbLen: Lenght of the array before it get iterated
+	wbActive: Number of array item that passed the "if" condition
+}
+
+Combobox
+{
+	popupId: wb.getId(), // ID for the listbox
+	fieldId: false, // ID for the input
+	fieldName: "", // Name for the input (if undefined, no attribute)
+	filter: "", // Two-way binding with the input value. The filter is the current selected value
+	options: [], // Array of available option
+	config: settings,
+	i18n: {},
+	horay: "testMe",
+	select: function(v) {
+		this.selectValue = v;
+	},
+	nbdispItem: function(x) {
+		this.cntdisplayeditem = x;
+	}
+}
+
+</pre>
+{% endraw %}
+{:/}
