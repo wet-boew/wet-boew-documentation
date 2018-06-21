@@ -38,8 +38,15 @@ Customizable autocomplete feature.
 * [2018-05-16 - combobox prototype 8 - Fieldflow integration with default action if no match found by using a reactive template engine](2018-1-combobox-prototype-8.html)
 * [2018-05-16 - combobox prototype 9 - Fieldflow and async load](2018-1-combobox-prototype-9.html) (Might not work)
 * [2018-05-28 - combobox prototype 10 - Fieldflow and default and async load - With reactive engine](2018-1-combobox-prototype-10.html)
+* [2018-06-21 - Template playground prototype - Render UI by using the combobox templating system](2018-1-template-playground-prototype.html)
 
 [UX feedback from early prototype](#uxproto)
+
+### Others
+
+* [2018-06-21 - Template playground prototype - Render UI by using the combobox templating system](2018-1-template-playground-prototype.html)
+* [2018-06-21 - Combobox documentation for WET plugin - Draft in handlebar (.hbs)](2018-1-documatation-draft.hbs)
+
 
 ### Remarks
 
