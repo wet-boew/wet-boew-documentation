@@ -1,0 +1,365 @@
+---
+{
+	"title": "Combobox",
+	"language": "en",
+	"category": "Plugins",
+	"categoryfile": "plugins",
+	"description": "Insert a combobox in a page.",
+	"altLangPrefix": "combobox",
+	"dateModified": "2018-06-28"
+}
+---
+<div class="wb-prettify all-pre hide"></div>
+
+<p property="description">Use of combobox in a page</p>
+
+
+<h2>Combobox feature overview</h2>
+
+<ul>
+	<li>Transform a input with a datalist into a combobox</li>
+	<li>Transform a select to a combobox</li>
+	<li>Progressive enhanced the available option with a list of suggestion loaded from a file, like JSON</li>
+	<li>Customize the feature for a better integration</li>
+</ul>
+
+<p>The current implementation is quite similar as the datalist browser implementation. You will be able to standardized it's behaviour because the HTML 5 datalist behaviour are not consistant across broswer and device.</p> 
+
+<h3>W3C references</h3>
+
+<p>This feature is a <strong>combobox</strong> with a <strong>listbox</strong> popup. The HTML 5 datalist is an implementation of that design pattern.</p>
+
+<p>Core reference:</p>
+<ul>
+	<li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/#combobox">Combo box - WAI ARIA practices 1.1</a></li>
+	<li><a href="https://www.w3.org/TR/wai-aria-1.1/#combobox"><code>combobox</code> (role) - WAI ARIA 1.1</a></li>
+	<li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/#Listbox">Litsbox - WAI ARIA practices 1.1</a></li>
+	<li><a href="https://www.w3.org/TR/wai-aria-1.1/#listbox"><code>listbox</code> (role) - WAI ARIA 1.1</a></li>
+</ul>
+
+<p>Other reference:</p>
+<ul>
+	<li><a href="https://www.w3.org/TR/wai-aria-1.1/#aria-autocomplete"><code>aria-autocomplete</code> (property)</a></li>
+	<li><a href="https://www.w3.org/TR/html53/sec-forms.html#elementdef-datalist">The <code>datalist</code> element - HTML 5.3 W3C Working Draft</a></li>
+	<li><a href="https://html.spec.whatwg.org/multipage/form-elements.html#the-datalist-element">The <code>datalist</code> element - HTML living standard</a></li>
+	<li><a href="https://www.w3.org/TR/html53/sec-forms.html#the-list-attribute">The <code>list</code> attribute - HTML 5.3 W3C Working Draft</a> - contains information when used in combination with <code>multiple</code> attribute.</li>
+	<li><a href="https://html.spec.whatwg.org/multipage/input.html#the-multiple-attribute"><code>multiple</code> attribute  - HTML living standard</a> - Contains a visual example of a customized datalist</li>
+	<li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/#keyboard">Developing a Keyboad Interface - WAI ARIA practices</a></li>
+	<li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/examples/listbox/listbox-scrollable.html">Scrollable listbox example - WAI ARIA practices</a></li>
+	<li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/examples/listbox/listbox-collapsible.html">Collapsible Dropdown Listbox Example - WAI ARIA practice</a></li>
+	<li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/examples/listbox/listbox-rearrangeable.html">Example Listbox with Reaarangeable Options - WAI ARIA practice</a></li>
+	<li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/#grid">Grids: Interactive Tabular Data and Layout Container - WAI ARIA practice</a></li>
+	<li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/examples/grid/LayoutGrids.html#ex3_label">Example 3: Scrollable Search Results - WAI ARIA practice</a></li>
+</ul>
+
+<h2>Implemented behaviours</h2>
+
+<p>End user:</p>
+<ul>
+	<li>An user can type free text and the popup is used to show a list of suggestions. This is the same behaviour as how the <code>datalist</code> element work.<li>
+	<li>An user can only choose one of the option in the listbox. The input text is used to filter and reduce the number of available options.</li>
+</ul>
+
+<p>Configurable behavious:</p>
+<ul>
+	<li>Load suggestion from an external file, like JSON or CSV</li>
+	<li>Limit the number of displayed option</li>
+	<li>Show option that look like the filter text</li>
+	<li>Ensure the input are in error state if it's value don't match option</li>
+</ul>
+
+<p>Unsupported feature</p>
+<ul>
+	<li>Autocomplete (Autofill)</li>
+	<li>Multiple selection</li>
+	<li>Input element other than type text</li>
+	<li>Having a different value compared to the content displayed by the input box</li>
+</ul>
+
+<p>UI transformation<p>
+<ul>
+	<li>
+		<p>An <code>input</code> type <code>text</code> with a suggestion list provided from a datalist</p>
+		<ul>
+			<li>The combo box allow free text input.</li>
+			<li>The datalist element might have a reference to load further option from an external datasource</li>
+			<li>The input can be reused and the combo box container and the listbox and be inserted around</li>
+			<li>The input might host the combo box configuration</li>
+		</ul>
+		<p>Advantage: It standadize how it display across the browser and it allow a better behaviour control through it's configuration.</p>
+		<details>
+			<summary>Consideration for futur improvement</summary>
+			<p>The combo box behaviour might change depending of the type of input. For example:</p>
+			<ul>
+				<li>An input type date may show a grid popup. That grid popup represent a months and the user can navigate to next/previous months and years.</li>
+				<li>An input type time may show a list of suggested time.</li>
+				<li>An input type color may show a grid popup with color wheel.</li>
+			</ul>
+		</details>
+	</li>
+	<li>
+		<p>A <code>select</code> with no multiple selection</p>
+		<ul>
+			<li>Each options children would be an option in the listbox</li>
+			<li>The textContent of the option is displayed in the listbox, but the value of the option would be set as the value of the input text upon selection.</li>
+			<li>The filter is applied agains the value and not the textContent property of the option element</li>
+			<li>The required attribute is mapped to the input.</li>
+			<li>The value set on the input must match one of the options</li>
+			<li>The select can load options from an external datasource</li>
+			<li>The select element would be detached from the DOM and replaced by the combobox.</li>
+			<li>The name attribute of the select element are transposed to the name attribute of the input</li>
+		</ul>
+	</li>
+	<li>
+		<p>From a javascript object</p>
+		<ul>
+			<li>It must contains all the information to display the User Interface and ensure the UI integrate into the form<li>
+			<li>It may include a custom template that compasate for the missing information to build the UI</li>
+			<li>It need to contain an array of string or an array of object used to define the combo box options</li>
+			<li>The template is used to do that mapping</li>
+		</ul>
+	</li>
+</ul>
+
+
+<h2>Template</h2>
+
+<h3>Wireframe</h3>
+
+<p>Image 1</p>
+
+<p>Image 2</p>
+
+
+<h3>JS Object Context</p>
+<p>Markup in JSON-LD</p>
+<pre><code>{
+	"@context": {
+		"popupId": {
+			"@id": https://wet-boew.github.io/vocab-beta/combobox/popupid",
+			"@type": "https://wet-boew.github.io/vocab-beta/core#id"
+		}
+		"options": {
+			"@id": "https://wet-boew.github.io/vocab-beta/combobox/options",
+			"@type": {
+				"@id": "http://www.w3.org/2001/XMLSchema#string",
+				"@container": "@list"
+			}
+		}
+	}
+}</code></pre>
+<p><code>https://wet-boew.github.io/vocab-beta/combobox/</code></p>
+<dl>
+	<dt>popupid</dt>
+	<dd>Popup identifier</dd>
+
+	<dt>options</dt>
+	<dd>List of options</dd>
+</dl>
+
+
+<h3>Basic template<h3>
+
+<h4>Input element with datalist</h4>
+<div class="row">
+	<div class="col-sm-6 col-md-3">
+		<h5>Example</h5>
+		<pre><code>&lt;label for="input-id"&gt;Input label&lt;/label&gt;
+&lt;input id="input-id" type="text" list="suggestion-id" name="inputName" /&gt;
+&lt;datalist id="suggestion-id"&gt;
+	&lt;option&gt;Suggestion 1&lt;/option&gt;
+	&lt;option&gt;Suggestion 2&lt;/option&gt;
+	&lt;option&gt;Suggestion 3&lt;/option&gt;
+&lt;/datalist&gt;</code></pre>
+	</div>
+	<div class="col-sm-6 col-md-3">
+		<h5>Data selector (When read)</h5>
+		<p>Goal: Mapping from DOM to JS object</p>
+<!-- it select TextContent property, other mapping can be set before -->
+<!-- post action can be set before -->
+<!-- Temporary variable can be set before -->
+<!-- The Dolard sign is use to reference a temporary variable, if the temporary variable don't exist, then it do nothing -->
+<!-- If the selector return a "nodeList" then it is an array -->
+		<pre><code>.wb-cbx
+
+{
+	@detach: [
+		"input"
+	],
+	@propSelect: {
+		options: "value || textContent"
+	},
+	@var: {
+		datalistId: "input[list]"
+	},
+	options: "#$datalistId option"
+}</code></pre>
+
+	</div>
+	<div class="col-sm-6 col-md-3">
+		<h5>JS Object</h5>
+		<p>What the JS Object look like after the mapping</p>
+		<pre><code>{
+	popupId: "suggestion-id",
+	options: [
+		"Suggestion 1",
+		"Suggestion 2",
+		"Suggestion 3"
+	]
+}</code></pre>
+	</div>
+	<div class="col-sm-6 col-md-3">
+		<h5>Template</h5>
+		<p>How to transform the JS Object into HTML</p>
+		<pre><code>&lt;input type="text" data-wb5-bind="list@popupId" /&gt;
+&lt;datalist data-wb5-bind="id@popupId"&gt;
+	&lt;template data-wb5-for="term in options"&gt;
+		&lt;option&gt;{{term}}&lt;/option&gt;
+	&lt;/template&gt;
+&lt;/datalist&gt;</code></pre>
+	</div>
+</div>
+
+
+<h4>Select element</h4>
+<div class="row">
+	<div class="col-sm-6 col-md-3">
+		<h5>Example</h5>
+		<pre><code>&lt;label for="select-id"&gt;Input label&lt;/label&gt;
+&lt;select id="select-id" name="selectName"&gt;
+	&lt;option&gt;Choice 1&lt;/option&gt;
+	&lt;option&gt;Choice 2&lt;/option&gt;
+	&lt;option&gt;Choice 3&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+	</div>
+	<div class="col-sm-6 col-md-3">
+		<h5>Data selector (When read)</h5>
+		<p>Goal: Mapping from DOM to JS object</p>
+		<pre><code>.wb-cbx
+
+{
+	@detach: [
+		"select"
+	],
+	@propSelect: {
+		options: "value || textContent"
+	},
+	@var: {
+		datalistId: "input[list]"
+	},
+	options: "option"
+}</code></pre>
+
+	</div>
+	<div class="col-sm-6 col-md-3">
+		<h5>JS Object</h5>
+		<pre><code>{
+	options: [
+		"Choice 1",
+		"Choice 2",
+		"Choice 3"
+	]
+}</code></pre>
+	</div>
+	<div class="col-sm-6 col-md-3">
+		<h5>Template</h5>
+		<p>HTML</p>
+		<pre><code>&lt;select&gt;
+	&lt;template data-wb5-for="term in options"&gt;
+		&lt;option&gt;{{term}}&lt;/option&gt;
+	&lt;/template&gt;
+&lt;/select&gt;</code></pre>
+	</div>
+</div>
+
+
+
+
+<h3>Enhanced Interface</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+<section>
+	<h2>Working example</h2>
+	<ul>
+		<li><a href="../../../demos/twitter/twitter-en.html">English example</a></li>
+		<li><a href="../../../demos/twitter/twitter-fr.html">French example</a></li>
+	</ul>
+</section>
+
+<section>
+	<h2>How to implement</h2>
+	<strong>Determine the type of timeline at <a rel="external" href="https://dev.twitter.com/web/overview">Twitter for Websites</a></strong>
+
+	<ol>
+		<li>Create you html embedded timline link using <a rel="external" href="https://publish.twitter.com/">Twitter Publish</a> tool or learn more about query generation at <a rel="external" href="https://dev.twitter.com/web/embedded-timelines/search">Embedded Search Timeline</a>.
+			<pre><code>&lt;a class=&quot;twitter-timeline&quot; href=&quot;https://twitter.com/WebExpToolkit&quot; data-tweet-limit=&quot;3&quot; &gt;Tweets by @WebExpToolkit&lt;/a&gt;</code></pre>
+		</li>
+		<li>Wrap the html embedded timline link with a <code>div</code> element with <code>class="wb-twitter"</code>.
+			<pre><code>&lt;div class="wb-twitter"&gt;&lt;/div&gt;</code></pre>
+		</li>
+		<li>
+			With this example your final code should be:
+			<pre><code>&lt;div class=&quot;wb-twitter&quot;&gt;
+&lt;a class=&quot;twitter-timeline&quot; href=&quot;https://twitter.com/WebExpToolkit&quot; data-tweet-limit=&quot;3&quot; &gt;Tweets by @WebExpToolkit&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+		</li>
+	</ol>
+</section>
+
+<section>
+	<h2>Configuration options</h2>
+	<p>All configuration options are detailed in <a rel="external" href="https://dev.twitter.com/web/overview">Twitter for Websites</a> documentation.</p>
+</section>
+
+<section>
+	<h2>Events</h2>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Event</th>
+				<th>Trigger</th>
+				<th>What it does</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><code>wb-init.wb-twitter</code></td>
+				<td>Triggered manually (e.g., <code>$( ".wb-twitter" ).trigger( "wb-init.wb-twitter" );</code>).</td>
+				<td>Used to manually initialize the Twitter embedded timeline. <strong>Note:</strong> The Twitter embedded timeline will be initialized automatically unless the required markup is added after the page has already loaded.</td>
+			</tr>
+			<tr>
+				<td><code>wb-ready.wb-twitter</code> (v4.0.5+)</td>
+				<td>Triggered automatically after the Twitter embedded timeline initializes.</td>
+				<td>Used to identify where the Twitter embedded timeline was initialized (target of the event).
+					<pre><code>$( document ).on( "wb-ready.wb-twitter", ".wb-twitter", function( event ) {
+});</code></pre>
+					<pre><code>$( ".wb-twitter" ).on( "wb-ready.wb-twitter", function( event ) {
+});</code></pre>
+				</td>
+			</tr>
+			<tr>
+				<td><code>wb-ready.wb</code> (v4.0.5+)</td>
+				<td>Triggered automatically when WET has finished loading and executing.</td>
+				<td>Used to identify when all WET plugins and polyfills have finished loading and executing.
+					<pre><code>$( document ).on( "wb-ready.wb", function( event ) {
+});</code></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</section>
+
+<section>
+	<h2>Source code</h2>
+	<p><a href="https://github.com/wet-boew/wet-boew/tree/master/src/plugins/[***]">[***] plugin source code on GitHub</a></p>
+</section>
