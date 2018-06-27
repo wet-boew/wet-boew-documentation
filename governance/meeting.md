@@ -3,16 +3,21 @@ published: true
 layout: default-theme-wet-boew-en
 title: Meeting summary - WET-BOEW documentation
 description: Summary of what has been discussed at the meeting.
-modified: 2018-03-19
+modified: 2018-06-26
 ---
 
 Summary of what has been discussed at the meeting.
 
 ## Roadmap
 
+2018-06-20 ( 6 participants )
+* Desing decision approved:
+	* Design decision 4: Basic HTML mode and progressive enhancement
+* Review list of projects and added a few inactive known projects in order to expose them better.
+
 2018-05-17 ( 6 participants )
 * Design decision:
-	* Design decision 5: WET API/Blueprint
+	* Design decision 3: WET API/Blueprint
 		*  Approved
 	* 2018-4: Basic HTML and progressive enhancement
 		* Waiting for more feedback, see [#8357](https://github.com/wet-boew/wet-boew/issues/8357)
