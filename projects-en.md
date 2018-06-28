@@ -4,7 +4,7 @@ layout: default-theme-wet-boew-en
 filename_fr: index-fr
 title: Projects - Web Experience Toolkit (WET) documentation
 description: List of projects related to WET.
-modified: 2018-04-17
+modified: {}
 ---
 
 
@@ -213,7 +213,7 @@ A calculator helper plugin to provide a basic math calculation (addition, subtra
 This component provides the ability to break a form into steps. To be use when Web forms are long/contain lot of information.
 * **Last updated:** March 1, 2018
 * **Github:** [PR #7913](https://github.com/wet-boew/wet-boew/pull/7913)
-* **Working example:** [TheKodester - Steps Form](http://www.thekodester.ca/demos/formvalid/steps)
+* **Working example:** [TheKodester - Steps Form](https://www.thekodester.ca/wet/formvalid/steps)
 * **What left:**
 	* Run test
 	* Evaluation of WCAG compliance
