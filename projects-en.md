@@ -108,6 +108,8 @@ Create a new feature that would allow the user to obtain a PDF printable version
 * **History:**
 	* (2018-02-22) Refining the projects description and research.
 
+### Migration to WCAG 2.1 Level AA
+See the Accessibility project.
 
 ## Backlog project
 

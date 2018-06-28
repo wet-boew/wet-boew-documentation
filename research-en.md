@@ -4,7 +4,7 @@ layout: default-theme-wet-boew-en
 filename_fr: index-fr
 title: Research and finding - Web Experience Toolkit (WET) documentation
 description: List of ongoing research and findings related to WET and it's features
-modified: 2018-03-23
+modified: 2018-06-28
 ---
 
 List of finding and ongoing research related to WET and it's features
@@ -14,6 +14,7 @@ List of finding and ongoing research related to WET and it's features
 
 * [Datalist JSON suggestion](research/1-datalist-JSON-suggestion.html)
 	* Status: In progress
+* [2018-5 - WCAG 2.1 Level AA implementation](research/2018-5-WCAG21.html)
 * [2018-4 - WET 5 project](research/2018-4-wet5-project.html))
 
 
