@@ -3,7 +3,7 @@ published: true
 layout: default-theme-wet-boew-en
 title: Design decision
 description: Design decision followed by WET.
-modified: 2018-05-17
+modified: {}
 ---
 
 The following are design decision for WET. Those decision are used for providing guidance on how to design content, features and theme. These design decision would be reviewed by the WET-BOEW Roadmap group.
@@ -43,7 +43,7 @@ The following design decision can be obseleted if you find they are not valid an
 	<h2>Proposed</h2>
 
 	<ul>
-		<li><a href="draft-2018-4.html">Basic HTML mode and progressive enhancement</a></li>
+		<li><a href="4.html">Basic HTML mode and progressive enhancement</a></li>
 	</ul>
 
 
@@ -82,6 +82,3 @@ The following design decision can be obseleted if you find they are not valid an
 </section>
 </div>
 {:/}
-
-
-
