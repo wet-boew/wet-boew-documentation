@@ -43,7 +43,7 @@ The following design decision can be obseleted if you find they are not valid an
 	<h2>Proposed</h2>
 
 	<ul>
-		<li><a href="draft-2018-4.html">Basic HTML mode and progressive enhancement</a></li>
+		<li><a href="4.html">Basic HTML mode and progressive enhancement</a></li>
 	</ul>
 
 
@@ -82,6 +82,3 @@ The following design decision can be obseleted if you find they are not valid an
 </section>
 </div>
 {:/}
-
-
-
