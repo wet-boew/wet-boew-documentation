@@ -3,7 +3,7 @@ published: true
 layout: default-theme-wet-boew-en
 title: WET 5 - WET-BOEW documentation
 description: Project description page for WET 5
-modified: 2018-03-19
+modified: 2018-07-05
 ---
 
 We have start our planning to develop WET 5
@@ -68,3 +68,6 @@ Let us know and we can match you with a group.
 * Create a business plan about the markup for WET 5, use focus group and explore if it makes senses
 * Consider a way to have organisation to lead some WET plugin.
 
+## Research and exploration
+
+* [Exploration 1 - Headless framework, component interaction driven from markup, data first design](2018-6-wb5-exploration-1.html)

@@ -12,11 +12,14 @@ List of finding and ongoing research related to WET and it's features
 
 ## Ongoing
 
-* [Datalist JSON suggestion](research/1-datalist-JSON-suggestion.html)
+* [2018-1 - Datalist JSON suggestion](research/1-datalist-JSON-suggestion.html)
+	* Status: Experimental-stable plugin ready, developing documenation and working example in progress
+* [2018-4 - WET 5 project](research/2018-4-wet5-project.html)
 	* Status: In progress
 * [2018-5 - WCAG 2.1 Level AA implementation](research/2018-5-WCAG21.html)
-* [2018-4 - WET 5 project](research/2018-4-wet5-project.html)
-
+	* Status: On hold
+* [2018-6 - WB5 exploration 1](research/2018-1-wb5-exploration-1.html)
+	* Status: In progress
 
 ## Published report
 
