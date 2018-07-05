@@ -3,7 +3,7 @@ published: true
 layout: default-theme-wet-boew-en
 title: Design decision
 description: Design decision followed by WET.
-modified: 2018-05-17
+modified: 2018-07-05
 ---
 
 The following are design decision for WET. Those decision are used for providing guidance on how to design content, features and theme. These design decision would be reviewed by the WET-BOEW Roadmap group.
@@ -20,6 +20,7 @@ The following design decision can be obseleted if you find they are not valid an
 		<li><a href="1.html">Design decision 1: Use SVG with img element instead of object</a> (Pattern)</li>
 		<li><a href="2.html">Design decision 2: Browser supported</a> (Support scope)</li>
 		<li><a href="3.html">Design decision 3: WET API/Blueprint</a></li>
+		<li><a href="4.html">Design decision 4: Basic HTML mode and progressive enhancement</a></li>
 	</ul>
 </section>
 
@@ -37,18 +38,17 @@ The following design decision can be obseleted if you find they are not valid an
 	<p>Design decision issued from usability research.</p>
 
 </section>
--->
+
 
 <section>
 	<h2>Proposed</h2>
 
 	<ul>
-		<li><a href="4.html">Basic HTML mode and progressive enhancement</a></li>
 	</ul>
 
 
 </section>
-
+-->
 <!--
 <section>
 	<h2>Ready</h2>
@@ -68,6 +68,7 @@ The following design decision can be obseleted if you find they are not valid an
 			<ul>
 				<li>Write test case with and without an heading in summary</li>
 				<li>Need AT testing</li>
+				<li>Github related issue <a href="https://github.com/wet-boew/wet-boew/issues/7314">wet-boew/wet-boew#7314</a></li> 
 			</ul>
 		</li>
 	</ul>
