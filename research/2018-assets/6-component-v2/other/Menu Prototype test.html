@@ -1,0 +1,111 @@
+<head>
+
+<!-- Download Intercooler.js -->
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://intercoolerreleases-leaddynocom.netdna-ssl.com/intercooler-1.2.1.min.js"></script>
+
+<!-- CSS -->
+
+<link rel="stylesheet" type="text/css" href="theme.css">
+<link rel="stylesheet" type="text/css" href="ie8-theme.css">
+<link rel="stylesheet" type="text/css" href="ie8-wet-boew.css">
+<link rel="stylesheet" type="text/css" href="messages.css">
+<link rel="stylesheet" type="text/css" href="wet-boew.css">
+
+</head>
+<!-- Mega Menu Intercooler Prototype -->
+
+<body>
+
+	<button id="testButton">Click Me</button>
+
+
+	<nav role="navigation" id="wb-sm" class="wb-menu visible-md visible-lg" data-trgt="mb-pnl" typeof="SiteNavigationElement">
+
+		<div class="pnl-strt container nvbar">
+			<h2 class="wb-inv">Topics menu</h2>
+				<div class="row">
+				
+					<ul class="list-inline menu" role="menubar">
+						
+						<li>
+						
+							<a onmouseenter="openDropdownBox('jobs')" onmouseleave="closeDropdownBox('jobs')" id="testId" class="item">AAA</a>
+							
+							<ul id="jobs" class="sm list-unstyled" role="menu"> <!-- open -->
+                        
+								<li>
+                            
+									<a href="http://www.jobbank.gc.ca/home-eng.do?lang=eng" role="menuitem">Job Bank</a>
+									
+								</li>
+								
+							</ul>
+								
+                        </li>
+							
+						</li>
+						
+						<li>
+						
+							<a class="item">BBB</a>
+							
+						</li>
+						
+						<li>
+						
+							<a class="item">CCC</a>
+							
+						</li>
+						
+						<li>
+						
+							<a class="item">DDD</a>
+							
+						</li>
+				
+				
+				
+				
+				</div>
+				
+			</h2>
+			
+		</div>
+		
+	</nav>
+	
+</body>
+
+
+<script>
+
+	
+	function openDropdownBox(name) {
+		document.getElementById(name).classList.add("open");
+	}
+	
+	function closeDropdownBox(name)	{
+		document.getElementById(name).classList.remove("open");
+	}
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
