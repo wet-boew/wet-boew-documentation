@@ -18,7 +18,7 @@ List of finding and ongoing research related to WET and it's features
 	* Status: In progress
 * [2018-5 - WCAG 2.1 Level AA implementation](research/2018-5-WCAG21.html)
 	* Status: On hold
-* [2018-6 - WB5 exploration 1](research/2018-1-wb5-exploration-1.html)
+* [2018-6 - WB5 exploration 1](research/2018-6-wb5-exploration-1.html)
 	* Status: In progress
 
 ## Published report
