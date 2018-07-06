@@ -1,0 +1,30 @@
+ {
+	"class": "wb-tabs",
+	"name": "tabs1",
+	"template": "<div data-wb5-bind=\"class@type, id@id\"> <ul role=\"tablist\"> <li data-wb5-for=\"tab in tabs\"> <a data-wb5-bind=\"href@tab.id\" data-wb5-text=\"tab.title\"></a> </li> </ul> <div class=\"tabpanels\"> <div data-wb5-for=\"tab in tabs\" data-wb5-bind=\"id@tab.id, class@tab.transition\" role=\"tabpanel\"> <a data-wb5-bind=\"href@tab.link\"><figure> <img class=\"img-responsive\" data-wb5-bind=\"src@tab.image, alt@tab.imageAltText\"/> <figcaption> <p data-wb5-text=\"tab.caption\"></p> </figcaption> </figure> </a> </div> </div> </div>",
+	"data": {
+		"type": "wb-tabs carousel-s2",
+		"id": "tabs_1",
+		"tabs":[
+				{
+					"title": "Tab 1",
+					"id": "panel_1",
+					"transition": "in fade",
+					"link": "#",
+					"image": "../img/test/Success-carousel.png",
+					"imageAltText": "Two women study plans at a contruction site",
+					"caption": "Public Service Success Stories"
+				},
+				{
+					"title": "Tab 2",
+					"id": "panel_2",
+					"transition": "out fade",
+					"link": "#",
+					"image": "../img/test/25-eng.png",
+					"imageAltText": "Twenty-Fifth Annual Report to the Prime Minister on the Public Service of Canada",
+					"caption": "Twenty-Fifth Annual Report to the Prime Minister on the Public Service of Canada"
+				}
+
+		]
+	}
+}

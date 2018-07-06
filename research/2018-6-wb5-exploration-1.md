@@ -44,6 +44,14 @@ This philosophy is to define first the pieces of key data. Then enhance it with 
 The goal is to have the minimum HTML in a page and only use an API to build the page from the ground up. Including the theme and initiating the plugin.
 
 
+### Headless prototype 1
+
+* [Working Example](2018-assets/6-headless-v1/testPage.html)
+* [Source code](https://github.com/wet-boew/wet-boew-documentation/tree/master/research/2018-assets/6-headless-v1/)
+
+**Note:** 
+* All the content information is provided via a JSON API call, which is a static file for now.
+
 ## Component interaction driven from markup
 
 The goal is to let the web author to use whatever markup he need to acheive his designs and then enhance that markup from functional instruction. Those functional instruction are re-usable in other context.
@@ -52,7 +60,7 @@ For example, a carousel will be markup (set by the web author), a timer that cha
 
 Move from CDD model (Component development design) to a LDD model (Logic development design)
 
-### Working example
+### Component prototype 1
 
 Just copy and paste the following in your web server
 
@@ -101,6 +109,24 @@ Just copy and paste the following in your web server
 </body>
 </html>
 ```
+
+### Component prototype 2
+
+* [Working Example](2018-assets/6-component-v2/Main.html)
+* [Source code](https://github.com/wet-boew/wet-boew-documentation/tree/master/research/2018-assets/6-component-v2/)
+
+What it's include:
+* Loaded in: Combo Box, Navigation Bar, Carousel and Photo Gallery (also French button, Canada logo and favicon)
+* Photo Gallery Loaded in
+* Navigation Bar has drop down menus that technically drop down but disappear as you move your mouse from the parent
+
+On development:
+* Have the navigation bar bug fixed by adding a timer
+* Add a quick inline css to format the photo gallery
+* Make the carousel functional
+* Move all the functions into separate js files using the code structure that Pierre and Mario have provided
+* Continue to try to implement intercooler (possibly knockout)
+* Try to re-use the combobox code that was recently developed
 
 ## Templating/Rendering
 

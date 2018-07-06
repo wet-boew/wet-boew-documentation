@@ -1,0 +1,20 @@
+{
+	"class": "wb-feeds",
+	"id": "feeds_1",
+	"name": "feed1",
+	"template": "<section data-wb5-bind=\"id@id\" class=\"wb-feeds limit-15\"> <h2 data-wb5-text=\"title\"></h2> <ul data-wb5-bind=\"class@type\"> <li data-wb5-for=\"feed in feeds\"> <a data-wb5-text=\"feed.name\" data-wb5-bind=\"href@feed.url, data-ajax@feed.JSON\"rel=\"external\"></a> </li> </ul> <div class=\"clearfix\"></div></section>",
+	"data": {
+		"id": "feeds_1",
+		"type": "feeds-cont list-inline",
+		"heading": "h2",
+		"title": "Recent Photos",
+		"feeds":[
+				{
+					"url": "https://www.flickr.com/photos/clerkgc/",
+					"JSON": "https://api.flickr.com/services/feeds/photos_public.gne?id=148772103@N08&format=json",
+					"name": "Clerk of the Privy Council Flickr"
+				}
+
+		]
+	}
+}

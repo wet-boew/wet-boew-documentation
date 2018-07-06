@@ -1,0 +1,24 @@
+{
+	"class": "wb-feeds",
+	"id": "feeds_1",
+	"name": "feed1",
+	"template": "<section data-wb5-bind=\"id@id\" class=\"wb-feeds limit-15\"> <h2 data-wb5-text=\"title\"></h2> <ul data-wb5-bind=\"class@type\"> <li data-wb5-for=\"feed in feeds\"> <a data-wb5-text=\"feed.name\" data-wb5-bind=\"href@feed.url, data-ajax@feed.JSON\"rel=\"external\"></a> </li> </ul> <div class=\"clearfix\"></div></section>",
+	"data": {
+		"id": "feeds_3",
+		"type": "list-unstyled lst-spcd",
+		"heading": "h2",
+		"title": "Messages",
+		"feeds":[
+				{
+					"url": "#",
+					"JSON": "",
+					"name": "Message from the Clerk to all Public Servants on National Public Service Week"
+				},
+				{
+					"url": "#",
+					"JSON": "",
+					"name": "Message from the Clerk to all public servants for annual Mental Health Week"
+				}
+		]
+	}
+}
