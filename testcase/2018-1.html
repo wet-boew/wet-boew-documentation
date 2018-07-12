@@ -1,14 +1,36 @@
-<html>
-  <body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Detail / summary test case: Heading inside summary</title>
+</head>
+
+<body>
+  <details>
+    <summary>
+      <h4>Summary containing a h4 element</h4>
+    </summary>
+    <p>
+      Details body paragraph
+    </p>
+    Unwrapped text
+    <div>Some content in a div with
+      <a href="#">a link</a>
+    </div>
     <details>
       <summary>
-        <h4>h4 within summary</h4>
+        A nested detail / summary where summary contains a<br>
+        <h5>heading along with unwrapped text</h5>
       </summary>
       <p>
         Details body paragraph
       </p>
       Unwrapped text
-      <div>Some content in a div with <a href="#">a link</a></div>
+      <div>Some content in a div with
+        <a href="#">a link</a>
+      </div>
     </details>
-  </body>
+  </details>
+</body>
+
 </html>

@@ -1,14 +1,35 @@
-<html>
-  <body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Detail / summary test case: Unwrapped text inside summary</title>
+</head>
+
+<body>
+  <details>
+    <summary>
+      Summary containing only unwrapped text
+    </summary>
+    <p>
+      Details body paragraph
+    </p>
+    Unwrapped text
+    <div>Some content in a div with
+      <a href="#">a link</a>
+    </div>
     <details>
       <summary>
-        Plain text within summary
+        A nested detail / summary
       </summary>
       <p>
         Details body paragraph
       </p>
       Unwrapped text
-      <div>Some content in a div with <a href="#">a link</a></div>
+      <div>Some content in a div with
+        <a href="#">a link</a>
+      </div>
     </details>
-  </body>
+  </details>
+</body>
+
 </html>
