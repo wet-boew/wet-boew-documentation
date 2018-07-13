@@ -1,0 +1,20 @@
+{
+	"class": "wb-feeds",
+	"id": "feeds_1",
+	"name": "feed1",
+	"template": "feeds",
+	"data": {
+		"id": "feeds_1",
+		"type": "feeds-cont list-inline",
+		"heading": "h2",
+		"title": "Recent Photos",
+		"feeds":[
+				{
+					"url": "https://www.flickr.com/photos/clerkgc/",
+					"JSON": "https://api.flickr.com/services/feeds/photos_public.gne?id=148772103@N08&format=json",
+					"name": "Clerk of the Privy Council Flickr"
+				}
+
+		]
+	}
+}
