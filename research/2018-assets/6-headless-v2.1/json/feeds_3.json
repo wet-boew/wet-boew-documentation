@@ -1,0 +1,24 @@
+{
+	"class": "wb-feeds",
+	"id": "feeds_1",
+	"name": "feed1",
+	"template": "feeds",
+	"data": {
+		"id": "feeds_3",
+		"type": "list-unstyled lst-spcd",
+		"heading": "h2",
+		"title": "Messages",
+		"feeds":[
+				{
+					"url": "#",
+					"JSON": "",
+					"name": "Message from the Clerk to all Public Servants on National Public Service Week"
+				},
+				{
+					"url": "#",
+					"JSON": "",
+					"name": "Message from the Clerk to all public servants for annual Mental Health Week"
+				}
+		]
+	}
+}

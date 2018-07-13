@@ -3,11 +3,18 @@ published: true
 layout: default-theme-wet-boew-en
 title: WET 5 - Exploration 1
 description: Exploration 1 - Headless framework, component interaction driven from markup, data first design
-modified: 2018-07-05
+modified: 2018-07-13
 ---
 
-This documents is to summarize the work in creating an headless framework, component interaction driven from markup and data first design.
+This documents is to summarize the work in creating an headless framework, component interaction driven from markup and **data first design**.
 
+Latest prototye (as 2018-07-13) :
+
+* Headless (version 2.1 - [Source code](https://github.com/wet-boew/wet-boew-documentation/tree/master/research/2018-assets/6-headless-v2.1/))
+	* [Test Page](2018-assets/6-headless-v2.1/testPage.html)
+	* [Content Page](2018-assets/6-headless-v2.1/content-en.html)
+* Component (version 3 - [Source code](https://github.com/wet-boew/wet-boew-documentation/tree/master/research/2018-assets/6-component-v3/))
+	* [Working Example](2018-assets/6-component-v3/docs/index.html)
 
 ## Ressources
 
@@ -46,11 +53,33 @@ The goal is to have the minimum HTML in a page and only use an API to build the 
 
 ### Headless prototype 1
 
+Publish on: 2018-07-05
+
 * [Working Example](2018-assets/6-headless-v1/testPage.html)
 * [Source code](https://github.com/wet-boew/wet-boew-documentation/tree/master/research/2018-assets/6-headless-v1/)
 
 **Note:** 
 * All the content information is provided via a JSON API call, which is a static file for now.
+
+### Headless prototype 2
+
+Publish on: 2018-07-13
+
+* Working Example
+        * [Test Page](2018-assets/6-headless-v2/testPage.html)
+        * [Content Page](2018-assets/6-headless-v2/content-en.html)
+* [Source code](https://github.com/wet-boew/wet-boew-documentation/tree/master/research/2018-assets/6-headless-v2/)
+
+### Headless prototype 2.1
+
+Publish on: 2018-07-13
+
+This is a slightly better version of the demo. The scripts was cleanup to be easier to read.
+
+* Working Example
+	* [Test Page](2018-assets/6-headless-v2.1/testPage.html)
+	* [Content Page](2018-assets/6-headless-v2.1/content-en.html)
+* [Source code](https://github.com/wet-boew/wet-boew-documentation/tree/master/research/2018-assets/6-headless-v2.1/)
 
 ## Component interaction driven from markup
 
@@ -61,6 +90,8 @@ For example, a carousel will be markup (set by the web author), a timer that cha
 Move from CDD model (Component development design) to a LDD model (Logic development design)
 
 ### Component prototype 1
+
+Publish on: 2018-07-05
 
 Just copy and paste the following in your web server
 
@@ -112,6 +143,8 @@ Just copy and paste the following in your web server
 
 ### Component prototype 2
 
+Publish on: 2018-07-05
+
 * [Working Example](2018-assets/6-component-v2/Main.html)
 * [Source code](https://github.com/wet-boew/wet-boew-documentation/tree/master/research/2018-assets/6-component-v2/)
 
@@ -128,6 +161,18 @@ On development:
 * Continue to try to implement intercooler (possibly knockout)
 * Try to re-use the combobox code that was recently developed
 
+### Component prototype 3
+
+Publish on: 2018-07-13
+
+* [Working Example](2018-assets/6-component-v3/docs/index.html)
+* [Source code](https://github.com/wet-boew/wet-boew-documentation/tree/master/research/2018-assets/6-component-v3/)
+
+
 ## Templating/Rendering
 
-Need to research for a templating engine
+Need to research for a templating engine. Consider to reuse or by inspired by the template engine create for the combobox.
+
+## Data store
+
+Create a central data store for the headless broswing information and for the component information.

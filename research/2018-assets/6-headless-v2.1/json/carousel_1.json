@@ -1,0 +1,30 @@
+ {
+	"class": "wb-tabs",
+	"name": "tabs1",
+	"template": "carousel-with-images",
+	"data": {
+		"type": "wb-tabs carousel-s2",
+		"id": "tabs_1",
+		"tabs":[
+				{
+					"title": "Tab 1",
+					"id": "panel_1",
+					"transition": "in fade",
+					"link": "#",
+					"image": "./assets/Success-carousel.png",
+					"imageAltText": "Two women study plans at a contruction site",
+					"caption": "Public Service Success Stories"
+				},
+				{
+					"title": "Tab 2",
+					"id": "panel_2",
+					"transition": "out fade",
+					"link": "#",
+					"image": "./assets/25-eng.png",
+					"imageAltText": "Twenty-Fifth Annual Report to the Prime Minister on the Public Service of Canada",
+					"caption": "Twenty-Fifth Annual Report to the Prime Minister on the Public Service of Canada"
+				}
+
+		]
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"class": "wb-feeds",
+	"id": "feeds_1",
+	"name": "feed1",
+	"template": "feeds",
+	"data": {
+		"id": "feeds_4",
+		"type": "list-unstyled lst-spcd",
+		"heading": "h2",
+		"title": "Parliamentary Appearances",
+		"feeds":[
+				{
+					"url": "#",
+					"JSON": "",
+					"name": "Appearance at Standing Committee on Public Accounts"
+				}
+		]
+	}
+}
