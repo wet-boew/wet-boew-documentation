@@ -1,79 +1,115 @@
 
 // Convert native detail/summary to accessible cross-browser syntax
-// This implementation is not robust due to string manipulations
-// and should be treated only as a proof of concept
 
-(function(){
+function convertDetailSummary() {
 
-  var detailsElements = document.querySelectorAll("details");
+	var nextId = 0;
 
-  [].forEach.call(detailsElements, convertToButton);
+	var detailsElements = document.querySelectorAll( "details" );
 
-  function convertToButton(details) {
+	// Reverse order so that nested details are converted first
+	detailsElements = Array.prototype.slice.call(detailsElements).reverse();
+	detailsElements.forEach( convertToButton );
 
-    // Create new wrapper element to replace <details>
-    var newDetails = document.createElement("div");
-    newDetails.classList.add("__detailSummary");
-    var newHTML = "";
+	function convertToButton( detailsElement ) {
 
-    // Get content of <summary> and other content
-    var detailsHTML = details.innerHTML.split("<summary>")[1].split("</summary>");
-    var summaryContent = detailsHTML[0];
-    var detailsContent = detailsHTML[1];
+		var open = detailsElement.hasAttribute( "open" );
 
-    var headingLevel = 0;
+		// Create unique ID
+		var id = nextId++;
 
-    // Check for a header within the summary
-    if (summaryContent.split("<h").length > 1) {
-      headingLevel = summaryContent.split("<h")[1][0];
+		// Create new wrapper <div> to replace <details>
+		var wrapperDiv = document.createElement( "div" );
+		wrapperDiv.classList.add( "__detailSummary" );
+		wrapperDiv.setAttribute( "id", "__detailSummary" + id );
 
-      // Remove header tags from summary content
-      summaryContent = summaryContent.split(">")[1].split("</")[0];
+		// Create new <div> to wrap expanding details
+		var expanding = document.createElement( "div" );
+		expanding.classList.add( "__details" );
+		expanding.setAttribute( "id", "__detail" + id );
+		expanding.setAttribute( "aria-labelledby", "__summary" + id );
+		expanding.setAttribute( "role", "region" );
+		if ( !open ) {
+			expanding.setAttribute( "hidden", "" );
+		}
 
-      // Wrap <button> with appropriate header tag
-      newHTML += "<h" + headingLevel + ">";
-    }
+		// Create new <button> to replace <summary>
+		var button = document.createElement( "button" );
+		button.classList.add( "__summary" );
+		button.setAttribute( "id", "__summary" + id );
+		button.setAttribute( "aria-expanded", open ? "true" : "false" );
+		button.setAttribute( "aria-controls", "__detail" + id );
 
-    // Repackage <summary> into <button> which toggles the details
-    newHTML += "<button class='__summary'>" + summaryContent + "</button>";
+		// Separate <summary> from other content
+		var details = detailsElement.cloneNode( true );
+		var summary = details.querySelector( "summary" );
+		details.removeChild( summary );
 
-    // Close header tag, if opened
-    if (headingLevel > 0) {
-      newHTML += "</h" + headingLevel + ">";
-    }
+		// Check for a header within the summary
+		var heading = summary.querySelector( "h1, h2, h3, h4, h5, h6" );
 
-    // Repackage details into <div> whose visibility is toggled
-    newHTML += "<div class='__details'>" + detailsContent + "</div>";
-    newDetails.innerHTML = newHTML;
+		if ( heading !== null ) {
+			// Replace summary with <heading><button>...</button></heading>
+			var headingText = heading.innerHTML;
+			button.innerHTML = headingText;
+			heading.innerHTML = "";
+			heading.appendChild( button );
+			summary = heading;
+		} else {
+			// Replace summary with <button>...</button>
+			button.innerHTML = summary.innerHTML;
+			summary = button;
+		}
 
-    // Replace <details> with new element
-    details.parentNode.replaceChild(newDetails, details);
+		// Since we cannot use :before on the button, add a span for expand/collapse icon
+		var expandIcon = document.createElement("span");
+		expandIcon.classList.add("__expandIcon");
+		button.appendChild(expandIcon);
 
-    // Listen for enter and spacebar
-    newDetails.firstChild.addEventListener("keydown", function(event){
-      if (event.which !== 13 && event.which !== 32) {
-        return true;
-      }
-      event.preventDefault();
-      toggleExpanded(newDetails);
-      return true;
-    });
+		expanding.innerHTML = details.innerHTML;
+		wrapperDiv.appendChild( summary );
+		wrapperDiv.appendChild( expanding );
 
-    // Listen for click
-    newDetails.firstChild.addEventListener("click", function(event){
-      event.preventDefault();
-      toggleExpanded(newDetails);
-      return true;
-    });
+		// Replace <details> with new element
+		detailsElement.parentNode.replaceChild( wrapperDiv, detailsElement );
 
-  }
+	}
 
-  function toggleExpanded(details) {
-    var summary = details.querySelector("button");
-    var content = details.querySelector("div.__details");
-    var expanded = summary.getAttribute("aria-expanded") === "true";
-    summary.setAttribute("aria-expanded", expanded ? "false" : "true");
-    expanded ? content.classList.remove("__expanded") : content.classList.add("__expanded");
-  }
+	function toggleExpanded( button ) {
+		var open = button.getAttribute( "aria-expanded" ) === "true";
+		var id = button.getAttribute( "id" ).split( "__summary" )[1];
+		var expanding = document.getElementById( "__detail" + id );
+		if ( open ) {
+			button.setAttribute( "aria-expanded", "false" );
+			expanding.setAttribute( "hidden", "" );
+		} else {
+			button.setAttribute( "aria-expanded", "true" );
+			expanding.removeAttribute( "hidden" );
+		}
+	}
 
-  })();
+	// Add event listeners to all the buttons
+	// Note: this must be done after all replacements have occured
+	// or else we lose the event handlers on nested elements
+	var buttons = document.querySelectorAll( "button.__summary" );
+	[].forEach.call( buttons, function(button) {
+		// Listen for enter, spacebar, and click
+		button.addEventListener( "keydown", function( event ) {
+			if ( event.which === 1 || event.which === 13 || event.which === 32 ) {
+				event.preventDefault();
+				toggleExpanded( event.target );
+			}
+			return true;
+		} );
+		button.addEventListener( "click", function( event ) {
+			if ( event.which === 1 ) {
+				event.preventDefault();
+				toggleExpanded( event.target );
+			}
+			return true;
+		} );
+	});
+
+};
+
+convertDetailSummary();
