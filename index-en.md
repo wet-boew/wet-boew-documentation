@@ -25,6 +25,7 @@ modified: 2018-03-19
 	* Browser compatibilty
 	* Assistive technologies
 	* Suggestion of assessement
+	* [AT support for detail / summary with suggestion](assessment/2018-1.html)
 * Test case
 	* AT support for heading in summary element
 		* [Test 2018-1 - with heading inside summary](testcase/2018-1.html)

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>JS omnifill: Detail / summary test case: Heading inside summary</title>
+  <link rel="stylesheet" href="details.css">
+</head>
+
+<body>
+  <details>
+    <summary>
+      <h4>Summary containing a h4 element</h4>
+    </summary>
+    <p>
+      Details body paragraph
+    </p>
+    Unwrapped text
+    <div>Some content in a div with
+      <a href="#">a link</a>
+    </div>
+    <details>
+      <summary>
+        A nested detail / summary where summary contains a<br>
+        <h5>heading along with unwrapped text</h5>
+      </summary>
+      <p>
+        Details body paragraph
+      </p>
+      Unwrapped text
+      <div>Some content in a div with
+        <a href="#">a link</a>
+      </div>
+    </details>
+  </details>
+</body>
+<script src="details.js"></script>
+</html>
