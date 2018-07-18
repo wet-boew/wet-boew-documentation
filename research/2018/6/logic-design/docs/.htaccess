@@ -1,0 +1,38 @@
+# ----------------------------------------------------------------------
+# | Directory Normalization                                             |
+# ----------------------------------------------------------------------
+DirectoryIndex /index.html
+
+# ----------------------------------------------------------------------
+# | Rewrite                                                |
+# ----------------------------------------------------------------------
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule . index.html [L]
+
+# ----------------------------------------------------------------------
+# | File concatenation                                                 |
+# ----------------------------------------------------------------------
+
+# Allow concatenation from within specific files.
+#
+# e.g.:
+#
+#   If you have the following lines in a file called, for
+#   example, `main.combined.js`:
+#
+#       <!--#include file="js/jquery.js" -->
+#       <!--#include file="js/jquery.timer.js" -->
+#
+#   Apache will replace those lines with the content of the
+#   specified files.
+
+<IfModule mod_include.c>
+    <FilesMatch "\.json$">
+        Options +Includes
+        AddOutputFilterByType INCLUDES  application/json
+        SetOutputFilter INCLUDES
+    </FilesMatch>
+</IfModule>
+
