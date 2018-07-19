@@ -2,7 +2,7 @@
  * timer.js - a timer module that will create a repetative timer on an element
  * @returns {void}
  */
-define( [ "module/core/debug", "module/event" ], function( lDebug, lEvent ) {
+define( [ "module/core/debug", "module/event" , "module/element"], function( lDebug, lEvent, element ) {
 
     var defaults = {
         name: "timerpoke",
@@ -31,9 +31,13 @@ define( [ "module/core/debug", "module/event" ], function( lDebug, lEvent ) {
 
         var properties = getProperties( defaults, options );
 
-		var tid = setInterval( function( event, node ) {
-			node.dispatchEvent( event ), lDebug.log( "recieved :: " +  event.type );
-        }, properties.speed*1000 , lEvent.create( properties.name ), this );
+		for ( let node of element.nodes( this, selector ) ) {
+
+			var tid = setInterval( function( event, nde ) {
+				nde.dispatchEvent( event );
+	        }, properties.speed*1000 , lEvent.create( properties.name ), node );
+		}
+
 	}
 
 	return {
