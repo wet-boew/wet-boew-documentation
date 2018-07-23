@@ -1,5 +1,11 @@
-define( [], function( deps ) {
-	"use strict";
+/**
+ * Number class
+ * @author topgallant
+ * @version 1.0
+ */
+
+define( function() {
+	"use strict" ;
 
 	/*
 	* Returns a RFC4122 compliant Global Unique ID (GUID).
@@ -9,12 +15,12 @@ define( [], function( deps ) {
 	function guid() {
 		return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace( /[xy]/g, function( replacementChar ) {
 			var rand = Math.random() * 16 | 0,
-				newChar = replacementChar === "x" ? rand : ( rand & 0x3 | 0x8 );
-			return newChar.toString( 16 );
-		} );
+				newChar = replacementChar === "x" ? rand : ( rand & 0x3 | 0x8 ) ;
+			return newChar.toString( 16 ) ;
+		} ) ;
 	}
 
 	return {
 		guid: guid
 	}
-} );
+} ) ;

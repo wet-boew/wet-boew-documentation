@@ -1,6 +1,9 @@
 /**
- *
+ * Time class
+ * @author topgallant
+ * @version 1.0
  */
+
 define( [ "module/core/pad" ], function( Pad) {
     "use strict";
 

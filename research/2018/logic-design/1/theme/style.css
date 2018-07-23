@@ -1,0 +1,24 @@
+/* Base theme */
+
+.body {
+    background:url(flag.gif) #fff center center no-repeat;
+}
+
+.js body {
+   background-image: none !important;
+}
+
+.advertisement
+{
+	min-height: 10em;
+}
+
+.advertisement .item
+{
+    display: none;
+}
+
+.advertisement .item.active
+{
+    display: inline-block;
+}

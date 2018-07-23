@@ -8,8 +8,9 @@
     <!--
 		Static theme reference
 		-->
-	<link rel="stylesheet" href="https://theme.cdn.gc.test/gcweb/4/0/28/1/css/theme.min.css">
-	<noscript><link rel="stylesheet" href="https://theme.cdn.gc.test/gcweb/4/0/28/1/css/noscript.min.css" /></noscript>
+	<link rel="stylesheet" href="http://theme.cloud-gc.test/gcweb/4/0/28/1/css/theme.min.css">
+		<link rel="stylesheet" href="http://theme.cloud-gc.test/style.css">
+	<noscript><link rel="stylesheet" href="http://theme.cloud-gc.test/gcweb/4/0/28/1/css/noscript.min.css" /></noscript>
 	<!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER -->
 	<script>dataLayer1 = [];</script>
 	<!-- End Google Tag Manager -->
@@ -40,7 +41,7 @@
 	</section>
 	<div class="row">
 	<div class="brand col-xs-8 col-sm-9 col-md-6">
-	<a href="https://www.canada.ca/en.html"><img src="https://theme.cdn.gc.test/gcweb/4/0/28/1//assets/sig-blk-en.svg" alt=""><span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></a>
+	<a href="http://www.canada.ca/en.html"><img src="http://theme.cloud-gc.test/gcweb/4/0/28/1//assets/sig-blk-en.svg" alt=""><span class="wb-inv"> Government of Canada / <span lang="fr">Gouvernement du Canada</span></span></a>
 	</div>
 	<section class="wb-mb-links col-xs-4 col-sm-3 visible-sm visible-xs" id="wb-glb-mn">
 	<h2>Search and menus</h2>
@@ -99,15 +100,68 @@
 	<h1 property="name" id="wb-cont">Content page</h1>
 
 
-	<div class="coolthing" data-wb5="timer@.coolthing .item">
-		<ul data-wb5='profile@.item@{"activeclass": "active", "increment": "1"}'>
-			<li><a class="item active">Lorem ipsum dolor sit.</a></li>
-			<li><a class="item">Cum, iusto tenetur nam.</a></li>
-			<li><a class="item">Ex, est non beatae!</a></li>
-			<li><a class="item">Repellendus excepturi dolorum exercitationem!</a></li>
-			<li><a class="item">Facere sit tempore totam.</a></li>
-		</ul>
-	</div>
+  <div class="container advertisement" data-wb5='fetch@@{ "url": "ads.json" }'>
+        <template>
+        	<div data-wb5='timer@.row@{ "eventname": "increment" }'>
+                <div class="row" id="maincarousel" data-wb5='reveal@.item'>
+
+      	  		<section class="item">
+      	  			<h2>Lorem ipsum dolor sit.</h2>
+      	  			<figure>
+      	  				<img src="https://picsum.photos/1170/347?image=0" alt="Lorem ipsum dolor sit amet." class="img-responsive">
+      	  				<figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</figcaption>
+      	  			</figure>
+      	  		</section>
+      	  		<section class="item">
+      	  			<h2>Lorem ipsum dolor.</h2>
+      	  			<figure>
+      	  				<img src="https://picsum.photos/1170/347?image=1" alt="Lorem ipsum dolor sit amet." class="img-responsive">
+      	  				<figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum!</figcaption>
+      	  			</figure>
+      	  		</section>
+      	  		<section class="item">
+      	  			<h2>Lorem ipsum dolor sit.</h2>
+      	  			<figure>
+      	  				<img src="https://picsum.photos/1170/347?image=2" alt="Lorem ipsum dolor sit amet." class="img-responsive">
+      	  				<figcaption>Lorem ipsum dolor sit amet.</figcaption>
+      	  			</figure>
+      	  		</section>
+      	  		<section class="item">
+      	  			<h2>Lorem ipsum dolor.</h2>
+      	  			<figure>
+      	  				<img src="https://picsum.photos/1170/347?image=3" alt="Lorem ipsum dolor sit amet." class="img-responsive">
+      	  				<figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing.</figcaption>
+      	  			</figure>
+      	  		</section>
+      	  		<section class="item">
+      	  			<h2>Lorem ipsum dolor sit amet, consectetur.</h2>
+      	  			<figure>
+      	  				<img src="https://picsum.photos/1170/347?image=4" alt="Lorem ipsum dolor sit amet." class="img-responsive">
+      	  				<figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, harum!</figcaption>
+      	  			</figure>
+      	  		</section>
+        	  	</div>
+              <ul class="list-inline">
+                  <li><a role="button" data-wb5='broadcast@#maincarousel@{"eventname":"stop decrement"}'>
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only"  tabindex="0">Previous</span>
+                  </a></li>
+                  <li><a role="button" data-wb5='broadcast@@{"eventname":"start"}'>
+                    <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                    <span class="sr-only"  tabindex="0">Play</span>
+                  </a></li>
+                  <li><a role="button" data-wb5='broadcast@@{"eventname":"stop"}'>
+                    <span class="glyphicon glyphicon-pause" aria-hidden="true"></span>
+                    <span class="sr-only"  tabindex="0">Pause</span>
+                  </a></li>
+                  <li><a role="button" data-wb5='broadcast@#maincarousel@{"eventname":"stop increment"}'>
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only" tabindex="0">Next</span>
+                  </a></li>
+              </ul>
+            </div>
+        </template>
+  </div>
 
 
 
@@ -216,7 +270,7 @@
 	<a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a>
 	</div>
 	<div class="col-xs-6 col-md-3 col-lg-2 text-right">
-	<img src="https://theme.cdn.gc.test/gcweb/4/0/28/1/assets/wmms-blk.svg" alt="Symbol of the Government of Canada">
+	<img src="http://theme.cloud-gc.test/gcweb/4/0/28/1/assets/wmms-blk.svg" alt="Symbol of the Government of Canada">
 	</div>
 	</div>
 	</div>
@@ -225,6 +279,6 @@
 	<!--
 		WET 5 / Distributed Logic Base
 		-->
-    <script src="https://wet-boew.cdn.test/require.js" data-main="https://wet-boew.cdn.test/wb5"></script>
+    <script src="http://wb.cloud-gc.test/require.js" data-main="http://wb.cloud-gc.test/wb5"></script>
 </body>
 </html>

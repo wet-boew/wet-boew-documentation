@@ -1,5 +1,13 @@
-define( [ "module/core/pad" ], function( pad ) {
-	"use strict"
+/**
+ * Date class
+ * @author topgallant
+ * @version 1.0
+ * @requires PadUtil
+ */
+
+define( [ "module/core/pad" ], function( PadUtil ) {
+	"use strict" ;
+
 	/*
 	 * Converts the date to a date-object. The input can be:
 	 * <ul>
@@ -14,18 +22,18 @@ define( [ "module/core/pad" ], function( pad ) {
 	 * @return {Date | NaN}
 	 */
 	function convert( dateValue ) {
-		var dateConstructor = dateValue.constructor;
+		var dateConstructor = dateValue.constructor ;
 
 		switch ( dateConstructor ) {
 		case Date:
-			return dateConstructor;
+			return dateConstructor ;
 		case Array:
-			return new Date( dateValue[ 0 ], dateValue[ 1 ], dateValue[ 2 ] );
+			return new Date( dateValue[ 0 ], dateValue[ 1 ], dateValue[ 2 ] ) ;
 		case Number:
 		case String:
-			return new Date( dateValue );
+			return new Date( dateValue ) ;
 		default:
-			return typeof dateValue === "object" ? new Date( dateValue.year, dateValue.month, dateValue.date ) : NaN;
+			return typeof dateValue === "object" ? new Date( dateValue.year, dateValue.month, dateValue.date ) : NaN ;
 		}
 	}
 
@@ -42,12 +50,12 @@ define( [ "module/core/pad" ], function( pad ) {
 	 * NaN if dateValue1 or dateValue2 is an illegal date
 	 */
 	function compare( dateValue1, dateValue2 ) {
-		var convert = wb.date.convert;
+		var convert = wb.date.convert ;
 
 		if ( isFinite( dateValue1 = convert( dateValue1 ).valueOf() ) && isFinite( dateValue2 = convert( dateValue2 ).valueOf() ) ) {
-			return ( dateValue1 > dateValue2 ) - ( dateValue1 < dateValue2 );
+			return ( dateValue1 > dateValue2 ) - ( dateValue1 < dateValue2 ) ;
 		}
-		return NaN;
+		return NaN ;
 	}
 
 	/*
@@ -63,10 +71,10 @@ define( [ "module/core/pad" ], function( pad ) {
 	 * returns "2012-04-27 13:46"
 	 */
 	function toDateISO( dateValue, withTime ) {
-		var date = convert( dateValue );
+		var date = convert( dateValue ) ;
 
-		return date.getFullYear() + "-" + pad( date.getMonth() + 1, 2, "0" ) + "-" + pad( date.getDate(), 2, "0" ) +
-			( withTime ? " " + pad( date.getHours(), 2, "0" ) + ":" + pad( date.getMinutes(), 2, "0" ) : "" );
+		return date.getFullYear() + "-" + PadUtil.start( date.getMonth() + 1, 2, "0" ) + "-" + PadUtil.start( date.getDate(), 2, "0" ) +
+			( withTime ? " " + PadUtil.start( date.getHours(), 2, "0" ) + ":" + PadUtil.start( date.getMinutes(), 2, "0" ) : "" ) ;
 	}
 
 	/*
@@ -76,12 +84,12 @@ define( [ "module/core/pad" ], function( pad ) {
 	 * @return {Date}
 	 */
 	function fromDateISO( dateISO ) {
-		var date = null;
+		var date = null ;
 
 		if ( dateISO && dateISO.match( /\d{4}-\d{2}-\d{2}/ ) ) {
-			date = new Date( dateISO.substr( 0, 4 ), dateISO.substr( 5, 2 ) - 1, dateISO.substr( 8, 2 ), 0, 0, 0, 0 );
+			date = new Date( dateISO.substr( 0, 4 ), dateISO.substr( 5, 2 ) - 1, dateISO.substr( 8, 2 ), 0, 0, 0, 0 ) ;
 		}
-		return date;
+		return date ;
 	}
 
 	return {
@@ -89,5 +97,5 @@ define( [ "module/core/pad" ], function( pad ) {
 		compare: compare,
 		toDateISO: toDateISO,
 		fromDateISO: fromDateISO
-	}
-} );
+	} ;
+} ) ;

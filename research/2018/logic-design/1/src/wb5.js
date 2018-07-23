@@ -18,18 +18,29 @@ if ( !window.hasOwnProperty( "Promise" ) ) {
 	polyfills.push( "polyfills/promise" );
 }
 
+require.config( {
+    paths: {
+        mustache: "vendor/mustache/mustache"
+    },
+    shim: {
+        "mustache": {
+            exports: "Mustache"
+        }
+    }
+} );
+
 // =======================
 // = Stage the logic set =
 // =======================
-require( [ "module/element"  ].concat( polyfills ), function( element ) {
+require( [ "module/element"  ].concat( polyfills ), function( ElementUtil ) {
 
 	var insertListener = function( event ) {
 		if ( event.animationName === "nodeInserted" ) {
 			let node = event.target,
-				action = element.parse( node.dataset.wb5 );
+				action = ElementUtil.parse( node.dataset.wb5 );
 
 			require( [ "module/" + action.command ], function( worker ) {
-				worker.handle.call( node, action.selector, action.options );
+				worker.handle( node, action.selector, action.options );
 			} );
 		}
 	};
