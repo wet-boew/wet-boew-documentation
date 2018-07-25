@@ -3,18 +3,14 @@ published: true
 layout: default-theme-wet-boew-en
 title: WET 5 - Exploration 1
 description: Exploration 1 - Headless framework, component interaction driven from markup, data first design
-modified: 2018-07-13
+modified: 2018-07-25
 ---
 
 This documents is to summarize the work in creating an headless framework, component interaction driven from markup and **data first design**.
 
-Latest prototye (as 2018-07-13) :
+Latest prototye (as 2018-07-25) :
 
-* Headless (version 2.1 - [Source code](https://github.com/wet-boew/wet-boew-documentation/tree/master/research/2018-assets/6-headless-v2.1/))
-	* [Test Page](2018-assets/6-headless-v2.1/testPage.html)
-	* [Content Page](2018-assets/6-headless-v2.1/content-en.html)
-* Component (version 3 - [Source code](https://github.com/wet-boew/wet-boew-documentation/tree/master/research/2018-assets/6-component-v3/))
-	* [Working Example](2018-assets/6-component-v3/docs/index.html)
+* [Link to be added, see "Logic Design prototype 1" section]
 
 ## Ressources
 
@@ -176,3 +172,24 @@ Need to research for a templating engine. Consider to reuse or by inspired by th
 ## Data store
 
 Create a central data store for the headless broswing information and for the component information.
+
+{% raw %}
+
+<h2>Logic Design prototype 1<span class="label label-warning">High level docs incomplete</span></h2>
+
+{% endraw %}
+
+It's a combination of the work completed for the headless prototype and the component prototype plus a few addition.
+
+Publish on: 2018-07-23
+
+* [Source code (all files)](https://github.com/wet-boew/wet-boew-documentation/tree/master/research/2018/logic-design/1)
+
+About this demo:
+* require "fetch" and "Promise". They are polyfilled is they not supported.
+* Use "RequireJS" as the dependency loader
+* Use "Mustache" as the template engine
+
+File description
+* [Core of wb5](https://github.com/wet-boew/wet-boew-documentation/blob/master/research/2018/logic-design/1/src/wb5.js)(js)
+        * Wait for the completion of not perceptible CSS animation before to initiate. Any mutation would trigger the CSS animation event and the plugin would re-run again or adjust his state.
