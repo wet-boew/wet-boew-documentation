@@ -4,7 +4,7 @@ layout: default-theme-wet-boew-en
 filename_fr: index-fr
 title: Web Experience Toolkit (WET) documentation
 description: Web Experience Toolkit (WET) documentation
-modified: 2018-03-19
+modified: 2018-07-26
 ---
 
 * Roadmap
@@ -50,7 +50,6 @@ To join: Contact Pierre Dubois, you can find his contact information on gccollab
 ### Roadmap
 Location: 200 promenade du portage, Gatineau, Room 2D302
 
-* July 26, 2018
 * August 16, 2018
 * September 20, 2018
 * October 18, 2018

@@ -4,13 +4,13 @@ layout: default-theme-wet-boew-en
 filename_fr: index-fr
 title: Projects - Web Experience Toolkit (WET) documentation
 description: List of projects related to WET.
-modified: 2018-04-17
+modified: 2018-07-26
 ---
 
 
 ## Active project
 
-Updated: 2018-05-17
+Updated: 2018-07-26
 
 
 ### Accessibility
@@ -18,9 +18,10 @@ Updated: 2018-05-17
 * Documenting basic HTML design pattern
 * WCAG 2.1 Level AA conformance check for existing features
 * Evaluate web accessibility compliance for wb5 features
-* **Last updated:** June 20, 2018
-* **Progress check history**: 2018-06-20; 2018-05-17; 2018-04-10; 2018-04-03; 2018-03-14; 2018-02-27; 2018-02-20
+* **Last updated:** July 26, 2018
+* **Progress check history**: 2018-07-26; 2018-06-20; 2018-05-17; 2018-04-10; 2018-04-03; 2018-03-14; 2018-02-27; 2018-02-20
 * **History:**
+	* (2018-07-26) Created a github project to triage accessibility related issue - [https://github.com/wet-boew/wet-boew/projects/2](https://github.com/wet-boew/wet-boew/projects/2)
 	* (2018-06-20) Tested a few issue reproducibility, fixed #8400 (Tabs on Google Chrome) 
 	* (2018-05-17) WIP: #552 (Mobile checklist) and #8238 (Validation error in Mobile menu)
 	* (2018-04-10) PR submited for pie chart labeling
@@ -53,7 +54,7 @@ Simulate a datalist that work uniformly through browser implementation and conta
 * Be able to force the user to choose a displayed option
 * Be able to include a catch all default option that would always appear as an option
 * Fix datalist related [github issue](https://github.com/wet-boew/wet-boew/issues?q=is%3Aopen+is%3Aissue+label%3A%22Feature%3A+Datalist%22)
-* **Last updated:** June 20, 2018
+* **Last updated:** July 26, 2018
 * **Project lead and developper:** Pierre Dubois
 * **Collaborator:**
 	* Ivan Hughes - Refined the requirement and did initial environmental scan.
@@ -72,6 +73,7 @@ Simulate a datalist that work uniformly through browser implementation and conta
 	* [2018-05-28 - combobox prototype 10 - Fieldflow and default and async load - With reactive engine](research/2018-1-combobox-prototype-10.html)
 	* [2018-06-21 - Template playground prototype - Render UI by using the combobox templating system](research/2018-1-template-playground-prototype.html)
 * **History:**
+	* (2018-07-26) Still experimental, started to create independant set of working example pages. 
 	* (2018-06-20) Experimental stable plugin was released on Canada.ca. It support the conversion from a select to a combo box and added combo box render for fieldflow. Next is to create the docs and various working example. There is also a template playground which render a template from a JS object.
 	* (2018-05-17) Prototype fully working as expected, now it's code cleanup and optimisation
 	* (2018-04-18) Prototype working but a few improvement need to be done, see developer note and UX early testing note
@@ -91,9 +93,10 @@ Provide the option regarding how the space is interpretated during filtering con
 
 ### Server side error message integration with form validation feature
 Harmonize the error message displayed when in browser error is combined with server side errors
-* **Last udpated:** June 17, 2018
+* **Last udpated:** July 26, 2018
 * **Project lead:** Stéphane Ducharme
 * **History:**
+	* (2018-07-26) Project almost completed, going in peer review process.
 	* (2018-06-20) WIP with the working example creation and testing the solution.
 	* (2018-05-17) Work for single input or select, but not when it is combined together.
 	* (2018-04-11) Early exploratory prototype
@@ -110,6 +113,24 @@ Create a new feature that would allow the user to obtain a PDF printable version
 
 ### Migration to WCAG 2.1 Level AA
 See the Accessibility project.
+
+### Checkbox based filtering
+Leverage CSS classes and checkboxes to apply content filtering. A feature like the filter plugin but without keyword filtering through a text field. This functionality might be required for publishing the Digital Playbook on Canada.ca
+* **Example:** [6. Use open standards and solutions (draft)](https://canada-ca.github.io/digital-playbook-guide-numerique/views-vues/standards-normes/en/6-use-open-standards-solutions.html)
+	* The filter can be displayed when the user click on the "Show filters" button
+	* An right overlay appear with a structured content on how filter can be applied
+	* There is an option to apply persistant filter
+	* Filter can be grouped, a parent would apply some of all sub-filter term.
+* **Prototype source code:** [https://github.com/canada-ca/digital-playbook-guide-numerique/blob/master/assets-atouts/js/filter-interface-filtre.js](https://github.com/canada-ca/digital-playbook-guide-numerique/blob/master/assets-atouts/js/filter-interface-filtre.js)
+* **Last updated:** July 26, 2018
+* **Project lead:** Pierre Dubois
+* **What left:** Planning the integration of the prototype into WET
+
+### Score system for triggering action with Field flow
+Through a questionnaire, having each question that provide a score. And when a specific score is reach or when it is manually trigger (like at the end of the questionnaire) A results adapted to the score obtained will be displayed.
+* **Last updated:** July 26, 2018
+* **Project lead:** Pierre Dubois
+* **What left:** Create one or a few use cases
 
 ## Backlog project
 
@@ -169,17 +190,6 @@ Upgrade the geomap plugin to use the latest version of open layer v3.x.
 * **PR:** [#7889](https://github.com/wet-boew/wet-boew/pull/7889)
 * **What left:**
 	* Ensure there is no breaking change for old geomap markup that use open layer v2.x. The expectation is WET geomap coded as showed in the WET working example would continue to work as is without requiring any markup change. Like having a fallback for OSM basemap example.
-
-### Checkbox based filtering
-Leverage CSS classes and checkboxes to apply content filtering. A feature like the filter plugin but without keyword filtering through a text field. This functionality might be required for publishing the Digital Playbook on Canada.ca
-* **Example:** [6. Use open standards and solutions (draft)](https://canada-ca.github.io/digital-playbook-guide-numerique/views-vues/standards-normes/en/6-use-open-standards-solutions.html)
-	* The filter can be displayed when the user click on the "Show filters" button
-	* An right overlay appear with a structured content on how filter can be applied
-	* There is an option to apply persistant filter
-	* Filter can be grouped, a parent would apply some of all sub-filter term.
-* **Prototype source code:** [https://github.com/canada-ca/digital-playbook-guide-numerique/blob/master/assets-atouts/js/filter-interface-filtre.js](https://github.com/canada-ca/digital-playbook-guide-numerique/blob/master/assets-atouts/js/filter-interface-filtre.js)
-* **Last updated:** June 20, 2018
-* **What left:** Planning the integration of the prototype into WET
 
 ### Responsive table (Table saw)
 Transform data table into responsive table that are mobile friendly. There is four mode: Stack, Swipe, Toggle and display the table as is in large view.
