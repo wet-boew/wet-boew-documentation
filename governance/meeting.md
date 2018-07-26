@@ -3,12 +3,31 @@ published: true
 layout: default-theme-wet-boew-en
 title: Meeting summary - WET-BOEW documentation
 description: Summary of what has been discussed at the meeting.
-modified: 2018-06-26
+modified: 2018-07-26
 ---
 
 Summary of what has been discussed at the meeting.
 
 ## Roadmap
+
+2018-07-26 ( 10 participants )
+* Reviewed of all the project
+* Presented an early draft of the first test suites we would have in WET.
+	* Heading inside ```<summary>``` element
+		* [Temporary live example](https://duboisp.github.io/wet-boew-documentation/assessment/2018-1.html)
+		* [Source code](https://github.com/juleskuehn/wet-boew-documentation/tree/detailSummary)
+* Presented the new [GCWeb home page](http://wet-boew.github.io/themes-dist/GCWeb/index-en.html)
+	* More aligned with the Content and IA spec structure
+	* Status label to show the current conformance and backlog items
+	* Would be possible to have a detailled history and analysis done for each template. Like the [index pages](http://wet-boew.github.io/themes-dist/GCWeb/index/index.html).
+	* Can include departemental specific template. Like [ESDC campaing template](http://wet-boew.github.io/themes-dist/GCWeb/campaign2-en.html)
+* WET 5
+	* Briefly walked through the work done for the prototype
+	* Next WET Roadmap meeting, it will be a presentation of a "functional" WET 5 prototype which should be available to initiate some testing.
+	* Will focus on a Data first design approach.
+* Test suite and potential future design decision (Best practice)
+	* Test suites for heading inside ```<summary>``` element once completed may result by drafting a new Design decision
+	* Some work will be intiated to draft a best practice to avoid to use ```placeholder``` attribute. Once the test suites created, tested and the design decision drafted/approved then any CSS customization for the placeholder attribute and related issue about a non-conforming color contrast issue might be close. It's behaviour would be fully delegated to how Browser vendor implement that feature and we will promote and update our working example to not use the ```placeholder``` attribute.
 
 2018-06-20 ( 6 participants )
 * Desing decision approved:
