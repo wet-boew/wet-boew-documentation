@@ -10,7 +10,7 @@ The current exploratory direction for WET 5 is that of a **data-first design**. 
 
 There are currently two parts to the WET 5 research : a headless framework, and component interation driven from markup (coined LDD).
 
-[Link to latest prototye (as 2018-07-27)](#combined-prototype-1) 
+[Link to latest prototype (as 2018-07-27)](#combined-prototype-1) 
 
 ## Resources
 
@@ -147,12 +147,12 @@ In this demo, there is limited functionality. The Navigation Menu and Photo Gall
 * [Working Example](2018-assets/6-component-v2/Main.html)
 * [Source code](https://github.com/wet-boew/wet-boew-documentation/tree/master/research/2018-assets/6-component-v2/)
 
-On development:
-* Have the navigation bar bug fixed by adding a timer
-* Add a quick inline css to format the photo gallery
+Development notes:
+* Fix the navigation bar by using a timer
+* Format the photo gallery with CSS
 * Make the carousel functional
-* Move all the functions into separate js files using the code structure that Pierre and Mario have provided
-* Continue to try to implement intercooler (possibly knockout)
+* Seperate the JS functions into seperate modules
+* Research intercooler and knockout
 * Try to re-use the combobox code that was recently developed
 
 ### Component prototype 3
