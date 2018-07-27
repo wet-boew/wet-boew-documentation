@@ -28,9 +28,13 @@ modified: 2018-03-19
 	* [AT support for detail / summary with suggestion](assessment/2018-1.html)
 * Test case
 	* AT support for heading in summary element
-		* [Test 2018-1 - with heading inside summary](testcase/2018-1.html)
-		* [Test 2018-2 - with no heading inside summary](testcase/2018-2.html)
+		* [Test 2018-1 - Vanilla HTML with heading inside summary](testcase/2018-1.html)
+		* [Test 2018-2 - Vanilla HTML with no heading inside summary](testcase/2018-2.html)
 		* [Test 2018-3 - a ReactJS working example](testcase/2018-3.html)
+		* [Test 2018-4 - Proposed omnifill with heading inside summary](testcase/2018-4.html)
+		* [Test 2018-5 - Proposed omnifill with no heading inside summary](testcase/2018-5.html)
+		* [Test 2018-6 - WET 4 behaviour with heading inside summary](testcase/2018-6.html)
+		* [Test 2018-7 - WET 4 behaviour with no heading inside summary](testcase/2018-7.html)
 
 * [Internal project governance](governance/index-en.html)
 	* [Meeting summary](governance/meeting.html)
