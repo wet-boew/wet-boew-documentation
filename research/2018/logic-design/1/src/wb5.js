@@ -10,12 +10,16 @@
 
 let polyfills = [];
 
-if ( !window.hasOwnProperty( "fetch" ) ) {
+if ( !'fetch' in window ) {
 	polyfills.push( "polyfills/fetch" );
 }
 
-if ( !window.hasOwnProperty( "Promise" ) ) {
+if ( !'Promise' in window ) {
 	polyfills.push( "polyfills/promise" );
+}
+
+if ( typeof Object.assign != 'function' ) {
+	polyfills.push( "polyfills/assign" );
 }
 
 require.config( {
@@ -32,12 +36,12 @@ require.config( {
 // =======================
 // = Stage the logic set =
 // =======================
-require( [ "module/element"  ].concat( polyfills ), function( ElementUtil ) {
+require( [ "module/element"  ].concat( polyfills ), function( wbElement ) {
 
 	var insertListener = function( event ) {
 		if ( event.animationName === "nodeInserted" ) {
 			let node = event.target,
-				action = ElementUtil.parse( node.dataset.wb5 );
+				action = wbElement.parse( node.dataset.wb5 );
 
 			require( [ "module/" + action.command ], function( worker ) {
 				worker.handle( node, action.selector, action.options );
