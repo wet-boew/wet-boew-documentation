@@ -2,7 +2,7 @@
  * timer.js - a timer module that will create a repetative timer on an element
  * @returns {void}
  */
-define( [ "module/element", "module/core/object" ], function( ElementUtil, ObjectUtil ) {
+define( [ "module/element" ], function( wbElement ) {
     "use strict";
 
 	/**
@@ -43,12 +43,14 @@ define( [ "module/element", "module/core/object" ], function( ElementUtil, Objec
 	function handle( $elm, selector, options ) {
 
 		let properties =  Object.assign({ eventname: "click keypress", toggleclass : "toggle" }, options),
-		    listener = ( properties.eventname !== "click keypress" )
-                ? function( event ) { ElementUtil.toggle( classname ) }
-                : function( event ) { if ( a11yClick( event ) ) { ElementUtil.toggle( classname ) } };
+		nodes = wbElement.nodes( $elm, selector );
 
-		for ( let node of element.nodes( $elm, selector ) ) {
-				element.addListenerMulti( node, eventname, listener );
+		let listener = ( properties.eventname !== "click keypress" )
+                ? function( event ) { wbElement.toggle( nodes, properties.toggleclass ) }
+                : function( event ) { if ( a11yClick( event ) ) { wbElement.toggle( nodes, properties.toggleclass ) } };
+
+		for ( let node of nodes ) {
+				wbElement.addListener( node, properties.eventname, listener );
 		}
 
 	}

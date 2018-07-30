@@ -31,6 +31,13 @@
     display: inline-block;
 }
 
+.advertisement figcaption
+{
+	background: #335075;
+	color: #fff;
+	line-height: 3em;
+}
+
 .relative { position: relative;}
 
 

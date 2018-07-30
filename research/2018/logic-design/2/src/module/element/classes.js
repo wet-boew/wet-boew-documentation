@@ -7,6 +7,19 @@
 define( function() {
     "use strict";
 
+	function isArrayLike( o ) {
+	    if ( o &&                                // o is not null, undefined, etc.
+	        typeof o === "object" &&            // o is an object
+	        isFinite( o.length ) &&               // o.length is a finite number
+	        o.length >= 0 &&                    // o.length is non-negative
+	        o.length === Math.floor( o.length ) &&  // o.length is an integer
+	        o.length < 4294967296 ) {
+			return true;
+			}
+
+	        return false;                       // Otherwise it is not
+	}
+
     /**
      * toggle a class on an element
      * @private
@@ -60,10 +73,28 @@ define( function() {
 		return $elm.classList.contains( classname );
 	}
 
+	/**
+	 * insures that all elements are arrays
+	 * @private
+	 * @param {String|Object|Array|Boolean|Number} paramName Describe this parameter
+	 * @returns Describe what it returns
+	 * @type String|Object|Array|Boolean|Number
+	 */
+
+	function arrayify( $elm, func, classname ) {
+		if ( !isArrayLike( $elm ) ) {
+			$elm =  [ $elm ];
+		}
+
+		for ( var i = $elm.length - 1; i >= 0; i-- ) {
+			func( $elm[ i ], classname );
+		}
+	}
+
 	return {
-		toggle: toggle,
-		add: add,
+		toggle: function( elm, classname ) { arrayify( elm, toggle, classname ) },
+		add: function( elm, classname ) { arrayify( elm, add, classname ) },
 		has: has,
-		remove: remove
+		remove: function( elm, classname ) { arrayify( elm, remove, classname ) }
 	};
-} );
+});

@@ -13,7 +13,7 @@
 					<h2>Promotions</h2>
 					<p>Example of the carousel feature in WET 5</p>
 				</header>
-				<div class="canvas relative mrgn-bttm-lg row">
+				<div class="canvas relative mrgn-bttm-lg row" data-wb5="state" data-wb5-selector="nav li:nth-child(2) a" data-wb5-options='{"eventname": { "stop": "play", "start": "pause" }}'>
 					<nav class="">
 	  		          <ul class="list-inline">
 	  		              <li>
@@ -22,18 +22,16 @@
 	  		                	<span class="sr-only"  tabindex="0">Previous</span>
 	  						  </a>
 	  				  	  </li>
-	  		              <li>
-	  						  <a role="button" data-wb5="broadcast" data-wb5-broadcast-options='{"eventname":"start"}'>
+	  		              <li >
+	  						  <a role="button" class="pause sr-only" data-wb5="broadcast" data-wb5-broadcast-options='{"eventname":"start"}'>
 	  		                	  	<span class="glyphicon glyphicon-play" aria-hidden="true"></span>
 	  		                		<span class="sr-only"  tabindex="0">Play</span>
 	  		               	  </a>
-	  					  </li>
-	  		              <li>
-	  						  <a role="button" data-wb5="broadcast" data-wb5-broadcast-options='{"eventname":"stop"}'>
+	  						  <a role="button" class="play" data-wb5="broadcast" data-wb5-broadcast-options='{"eventname":"stop"}'>
 	  		                	  <span class="glyphicon glyphicon-pause" aria-hidden="true"></span>
 	  		                	  <span class="sr-only"  tabindex="0">Pause</span>
 	  		              	  </a>
-	  				  	  </li>
+	  					  </li>
 	  		              <li>
 	  						  <a role="button" data-wb5="broadcast" data-wb5-broadcast-options='{"eventname":"stop increment"}'>
 	  		                	  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>

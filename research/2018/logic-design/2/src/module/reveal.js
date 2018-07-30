@@ -2,7 +2,7 @@
  * timer.js - a timer module that will create a repetative timer on an element
  * @returns {void}
  */
-define( [ "module/core/object", "module/element" , "module/core/debug"], function( ObjectUtil , ElementUtil , DebugUtil) {
+define( [ "module/core/object", "module/element" ], function( ObjectUtil , ElementUtil) {
 
     function find( $children, classname )
     {
@@ -40,15 +40,25 @@ define( [ "module/core/object", "module/element" , "module/core/debug"], functio
 
 			let advance = ( event.type === "increment") ? 1 : -1,
 			    current = find( children, properties.classname ),
-                total = children.length - 1;
+                total = children.length - 1,
+				next = 0;
 
-            if ( ( (current + advance) > total ) || ( ( current + advance ) < 0 ) )
-            {
-                return reveal( children, properties.classname, 0 );
-            }
 
-            return reveal( children, properties.classname, current + advance );
+			if ( current + advance < total )
+			{
+				next = current + advance;
+				next = ( next < 0 ) ? total + next : next;
+				return reveal( children, properties.classname, next )
+			}
 
+			if ( current + advance > total )
+			{
+				next = current + advance;
+				next = ( next > total ) ? total - next : next;
+				return reveal( children, properties.classname,  next  );
+			}
+
+			return reveal( children, properties.classname, next);
         });
 
 	}
