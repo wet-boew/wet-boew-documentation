@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+.__detailSummary {
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	margin-bottom: .25em;
+}
+
+button.__summary {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+	color: #295376;
+	width: 100%;
+	text-align:left;
+	padding: 5px 15px;
+}
+
+button.__summary[aria-expanded="true"] {
+	border-bottom: 1px solid #ddd;
+	margin-bottom: .25em;
+}
+
+button.__summary:focus,
+button.__summary:hover {
+	text-decoration: underline;
+	color: #0000ff;
+}
+
+button.__summary[aria-expanded="false"]:focus span.__expandIcon,
+button.__summary[aria-expanded="false"]:hover span.__expandIcon {
+	background-image: url('arrow-right-bluer.svg');
+}
+
+button.__summary[aria-expanded="true"]:focus span.__expandIcon,
+button.__summary[aria-expanded="true"]:hover span.__expandIcon {
+	background-image: url('arrow-down-bluer.svg');
+}
+
+button.__summary:focus {
+	outline: dotted 1px black;
+}
+
+span.__expandIcon {
+	display: block;
+	float: left;
+	height: 22px;
+	width: 9px;
+	margin-right: 8px;
+	background-position: center center;
+  background-size: 9px 10px;
+	background-repeat: no-repeat;
+}
+
+button.__summary[aria-expanded="false"] span.__expandIcon {
+	background-image: url('arrow-right-blue.svg');
+}
+
+button.__summary[aria-expanded="true"] span.__expandIcon {
+	background-image: url('arrow-down-blue.svg');
+}
+
+div.__details {
+	padding-bottom: 1em;
+	padding-left: 1.1em;
+	padding-right: 1.1em;
+}
+
+.__summary h1,
+.__summary h2,
+.__summary h3,
+.__summary h4,
+.__summary h5,
+.__summary h6 {
+	margin: 0;
+	padding: 0;
+}
