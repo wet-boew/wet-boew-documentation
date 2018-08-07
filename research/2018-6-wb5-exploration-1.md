@@ -196,8 +196,8 @@ Published on: 2018-07-27
 This version combines Headless V2.1 and Component V4. The carousel is loaded in with AJAX, then made functional by the RequireJS modules. 
 A **readme** file is included, containing basic explanations of each file.
 
-* [Working Example]()
-* [Source code]()
+* [Working Example]() (Coming Soon)
+* [Source code]() (Coming Soon)
 
 
 ## Miscellaneous
