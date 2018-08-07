@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="utf-8"/>
+  <title>Test case 2018-4 - Proposed omnifill with heading inside summary</title>
+  <link rel="stylesheet" href="assets/2018-4.css">
+</head>
+
+<body>
+  <details>
+    <summary>
+      <h4>Summary containing a h4 element</h4>
+    </summary>
+    <p>
+      Details body paragraph
+    </p>
+    Unwrapped text
+    <div>Some content in a div with
+      <a href="#">a link</a>
+    </div>
+    <details>
+      <summary>
+        <h5>Nested summary containing h5 element</h5>
+      </summary>
+      <p>
+        Details body paragraph
+      </p>
+      Unwrapped text
+      <div>Some content in a div with
+        <a href="#">a link</a>
+      </div>
+    </details>
+  </details>
+</body>
+<script src="assets/2018-4.js"></script>
+</html>
