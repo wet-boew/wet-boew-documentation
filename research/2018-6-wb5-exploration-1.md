@@ -60,8 +60,8 @@ Published on: 2018-07-13
 This demo can switch between two pages without refreshing the browser, using only an AJAX call.
 
 * Working Example
-        * [Test Page](2018-assets/6-headless-v2/testPage.html)
-        * [Content Page](2018-assets/6-headless-v2/content-en.html)
+	* [Test Page](2018-assets/6-headless-v2/testPage.html)
+	* [Content Page](2018-assets/6-headless-v2/content-en.html)
 * [Source code](https://github.com/wet-boew/wet-boew-documentation/tree/master/research/2018-assets/6-headless-v2/)
 
 ### Headless Prototype 2.1
@@ -71,8 +71,8 @@ Published on: 2018-07-13
 A slight improvement over version 2, with cleaner scripts for better readability.
 
 * Working Example
-        * [Test Page](2018-assets/6-headless-v2.1/testPage.html)
-        * [Content Page](2018-assets/6-headless-v2.1/content-en.html)
+	* [Test Page](2018-assets/6-headless-v2.1/testPage.html)
+	* [Content Page](2018-assets/6-headless-v2.1/content-en.html)
 * [Source code](https://github.com/wet-boew/wet-boew-documentation/tree/master/research/2018-assets/6-headless-v2.1/)
 
 ## Component interaction driven from markup
