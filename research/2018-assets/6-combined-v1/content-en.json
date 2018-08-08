@@ -1,0 +1,256 @@
+{"title" : "Content page - Canada.ca",
+"lang" : "en",
+"date" : "1867-07-01",
+"html" : [
+  {"<>":"h1","property":"name","id":"wb-cont","html":"Content page"},
+  {"<>":"p","html":[
+      {"<>":"strong","html":[
+          {"<>":"span","html":"Return to "},
+          {"<>":"a","class":"pjax","href":"./clerk-en.html","html":"Clerk of the Privy Council"}
+        ]}
+    ]},
+  {"<>":"p","html":"The above link will use PJAX (pushState + AJAX) to load in a new page without refreshing the browser."},
+  {"<>":"section","html":[
+      {"<>":"h2","html":[
+          {"<>":"span","html":"Heading 2 ("},
+          {"<>":"code","html":"h2"},
+          {"<>":"span","html":")"}
+        ]},
+      {"<>":"section","html":[
+          {"<>":"h3","html":[
+              {"<>":"span","html":"Heading 3 "},
+              {"<>":"code","html":"h3"},
+              {"<>":"span","html":")"}
+            ]},
+          {"<>":"section","html":[
+              {"<>":"h4","html":[
+                  {"<>":"span","html":"Heading 4 ("},
+                  {"<>":"code","html":"h4"},
+                  {"<>":"span","html":")"}
+                ]},
+              {"<>":"section","html":[
+                  {"<>":"h5","html":[
+                      {"<>":"span","html":"Heading 5 ("},
+                      {"<>":"code","html":"h5"},
+                      {"<>":"span","html":")"}
+                    ]},
+                  {"<>":"section","html":[
+                      {"<>":"h6","html":[
+                          {"<>":"span","html":"Heading 6 ("},
+                          {"<>":"code","html":"h6"},
+                          {"<>":"span","html":")"}
+                        ]},
+                      {"<>":"p","html":"Paragraph - default appearance"}
+                    ]}
+                ]}
+            ]}
+        ]}
+    ]},
+  {"<>":"p","html":[
+      {"<>":"a","href":"#","html":"Link"}
+    ]},
+  {"<>":"ul","html":[
+      {"<>":"li","html":[
+          {"<>":"span","html":"unordered list ("},
+          {"<>":"code","html":"ul"},
+          {"<>":"span","html":") - level 1"},
+          {"<>":"ul","html":[
+              {"<>":"li","html":[
+                  {"<>":"span","html":"unordered list ("},
+                  {"<>":"code","html":"ul"},
+                  {"<>":"span","html":") - level 2"},
+                  {"<>":"ul","html":[
+                      {"<>":"li","html":[
+                          {"<>":"span","html":"unordered list ("},
+                          {"<>":"code","html":"ul"},
+                          {"<>":"span","html":") - level 3"}
+                        ]}
+                    ]}
+                ]}
+            ]}
+        ]}
+    ]},
+  {"<>":"ol","html":[
+      {"<>":"li","html":[
+          {"<>":"span","html":"ordered list ("},
+          {"<>":"code","html":"ol"},
+          {"<>":"span","html":") - level 1"}
+        ]},
+      {"<>":"li","html":[
+          {"<>":"span","html":"ordered list ("},
+          {"<>":"code","html":"ol"},
+          {"<>":"span","html":") - level 1"},
+          {"<>":"ol","html":[
+              {"<>":"li","html":[
+                  {"<>":"span","html":"ordered list ("},
+                  {"<>":"code","html":"ol"},
+                  {"<>":"span","html":") - level 2"}
+                ]},
+              {"<>":"li","html":[
+                  {"<>":"span","html":"ordered list ("},
+                  {"<>":"code","html":"ol"},
+                  {"<>":"span","html":") - level 2"},
+                  {"<>":"ol","html":[
+                      {"<>":"li","html":[
+                          {"<>":"span","html":"ordered list ("},
+                          {"<>":"code","html":"ol"},
+                          {"<>":"span","html":") - level 3"}
+                        ]},
+                      {"<>":"li","html":[
+                          {"<>":"span","html":"ordered list ("},
+                          {"<>":"code","html":"ol"},
+                          {"<>":"span","html":") - level 3"}
+                        ]}
+                    ]}
+                ]}
+            ]}
+        ]}
+    ]},
+  {"<>":"table","class":"table table-striped","html":[
+      {"<>":"caption","html":"Table caption"},
+      {"<>":"thead","html":[
+          {"<>":"tr","html":[
+              {"<>":"th","scope":"col","html":[
+                  {"<>":"span","html":"Table header ("},
+                  {"<>":"code","html":"th"},
+                  {"<>":"span","html":")"}
+                ]},
+              {"<>":"th","scope":"col","html":[
+                  {"<>":"span","html":"Table header ("},
+                  {"<>":"code","html":"th"},
+                  {"<>":"span","html":")"}
+                ]},
+              {"<>":"th","scope":"col","html":[
+                  {"<>":"span","html":"Table header ("},
+                  {"<>":"code","html":"th"},
+                  {"<>":"span","html":")"}
+                ]},
+              {"<>":"th","scope":"col","html":[
+                  {"<>":"span","html":"Table header ("},
+                  {"<>":"code","html":"th"},
+                  {"<>":"span","html":")"}
+                ]}
+            ]}
+        ]},
+      {"<>":"tbody","html":[
+          {"<>":"tr","html":[
+              {"<>":"td","html":[
+                  {"<>":"span","html":"Table data "},
+                  {"<>":"code","html":"td"},
+                  {"<>":"span","html":")"}
+                ]},
+              {"<>":"td","html":[
+                  {"<>":"span","html":"Table data "},
+                  {"<>":"code","html":"td"},
+                  {"<>":"span","html":")"}
+                ]},
+              {"<>":"td","html":[
+                  {"<>":"span","html":"Table data "},
+                  {"<>":"code","html":"td"},
+                  {"<>":"span","html":")"}
+                ]},
+              {"<>":"td","html":[
+                  {"<>":"span","html":"Table data "},
+                  {"<>":"code","html":"td"},
+                  {"<>":"span","html":")"}
+                ]}
+            ]},
+          {"<>":"tr","html":[
+              {"<>":"td","html":[
+                  {"<>":"span","html":"Table data "},
+                  {"<>":"code","html":"td"},
+                  {"<>":"span","html":")"}
+                ]},
+              {"<>":"td","html":[
+                  {"<>":"span","html":"Table data "},
+                  {"<>":"code","html":"td"},
+                  {"<>":"span","html":")"}
+                ]},
+              {"<>":"td","html":[
+                  {"<>":"span","html":"Table data "},
+                  {"<>":"code","html":"td"},
+                  {"<>":"span","html":")"}
+                ]},
+              {"<>":"td","html":[
+                  {"<>":"span","html":"Table data "},
+                  {"<>":"code","html":"td"},
+                  {"<>":"span","html":")"}
+                ]}
+            ]},
+          {"<>":"tr","html":[
+              {"<>":"td","html":[
+                  {"<>":"span","html":"Table data "},
+                  {"<>":"code","html":"td"},
+                  {"<>":"span","html":")"}
+                ]},
+              {"<>":"td","html":[
+                  {"<>":"span","html":"Table data "},
+                  {"<>":"code","html":"td"},
+                  {"<>":"span","html":")"}
+                ]},
+              {"<>":"td","html":[
+                  {"<>":"span","html":"Table data "},
+                  {"<>":"code","html":"td"},
+                  {"<>":"span","html":")"}
+                ]},
+              {"<>":"td","html":[
+                  {"<>":"span","html":"Table data "},
+                  {"<>":"code","html":"td"},
+                  {"<>":"span","html":")"}
+                ]}
+            ]}
+        ]}
+    ]},
+  {"<>":"form","method":"post","action":"#","class":"form-horizontal","html":[
+      {"<>":"div","class":"form-group","html":[
+          {"<>":"label","for":"data1","class":"col-sm-3 control-label","html":[
+              {"<>":"span","html":"Form "},
+              {"<>":"code","html":"input"}
+            ]},
+          {"<>":"div","class":"col-sm-9","html":[
+              {"<>":"input","id":"data1","name":"data1","class":"form-control","type":"text","html":""}
+            ]}
+        ]},
+      {"<>":"div","class":"form-group","html":[
+          {"<>":"label","for":"data2","class":"col-sm-3 control-label","html":[
+              {"<>":"span","html":"Form "},
+              {"<>":"code","html":"textarea"}
+            ]},
+          {"<>":"div","class":"col-sm-9","html":[
+              {"<>":"textarea","id":"data2","rows":"3","cols":"15","name":"data2","class":"form-control","html":""}
+            ]}
+        ]},
+      {"<>":"div","class":"form-group","html":[
+          {"<>":"label","for":"data4","class":"col-sm-3 control-label","html":[
+              {"<>":"span","html":"Form "},
+              {"<>":"code","html":"select"}
+            ]},
+          {"<>":"div","class":"col-sm-9","html":[
+{"<>":"select","name":"data4","id":"data4","class":"form-control","html":
+              [
+                {"<>":"option","value":"1","html":"Option 1"},
+                {"<>":"option","value":"2","html":"Option 2"},
+                {"<>":"option","value":"3","html":"Option 3"},
+                {"<>":"option","value":"4","html":"Option 4"}
+              ]}
+
+            ]}
+        ]},
+      {"<>":"div","class":"form-group","html":[
+          {"<>":"div","class":"col-sm-offset-3 col-sm-9","html":[
+              {"<>":"button","type":"submit","class":"btn btn-primary","html":"Submit"}
+            ]}
+        ]}
+    ]},
+  {"<>":"blockquote","html":[
+      {"<>":"p","html":[
+          {"<>":"code","html":"blockquote"}
+        ]},
+      {"<>":"footer","html":[
+          {"<>":"code","html":"footer"},
+          {"<>":"cite","html":[
+              {"<>":"code","html":"cite"}
+            ]}
+        ]}
+    ]}
+]}

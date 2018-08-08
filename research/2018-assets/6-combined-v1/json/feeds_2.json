@@ -1,0 +1,30 @@
+{
+	"class": "wb-feeds",
+	"id": "feeds_1",
+	"name": "feed1",
+	"template": "feeds",
+	"data": {
+		"id": "feeds_2",
+		"type": "list-unstyled lst-spcd",
+		"heading": "h2",
+		"title": "Speeches",
+		"feeds":[
+				{
+					"url": "#",
+					"JSON": "",
+					"name": "Remarks by Michael Wernick, Clerk of the Privy Council, at the Finance Canada Town Hall"
+				},
+				{
+					"url": "#",
+					"JSON": "",
+					"name": "Remarks by Michael Wernick, Clerk of the Privy Council, at the Public Service Commission's 2018 All-Staff Forum"
+				},
+				{
+					"url": "#",
+					"JSON": "",
+					"name": "Remarks by Michael Wernick, Clerk of the Privy Council, at the 2018 Security Summit"
+				}
+
+		]
+	}
+}

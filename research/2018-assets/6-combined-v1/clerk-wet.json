@@ -1,0 +1,227 @@
+{"title" : "Clerk of the Privy Council - Canada.ca",
+"lang" : "en",
+"date" : "2018-07-06",
+"html" : [
+    {"<>":"h1","property":"name","id":"wb-cont","dir":"ltr","html":"${pageTitle}"},
+    {"<>":"div","html":[
+        {"<>":"div","class":"row","html":[
+            {"<>":"div","class":"col-md-9","html":[
+                {"<>":"p","html":"${introText}"}
+              ]},
+            {"<>":"div","class":"col-md-3","html":[
+                {"<>":"section","class":"followus mrgn-bttm-md","html":[
+                    {"<>":"h2","html":"Follow:"},
+                    {"<>":"ul","html":[
+                        {"<>":"li","html":[
+                            {"<>":"a","rel":"external","class":"facebook","href":"https://www.facebook.com/ClerkGC/","html":[
+                                {"<>":"span","class":"wb-inv","html":"Facebook"}
+                              ]}
+                          ]},
+                        {"<>":"li","html":[
+                            {"<>":"a","rel":"external","class":"twitter","href":"https://twitter.com/Clerk_GC","html":[
+                                {"<>":"span","class":"wb-inv","html":"Twitter"}
+                              ]}
+                          ]}
+                      ]}
+                  ]}
+              ]}
+          ]},
+        {"<>":"hr","html":""},
+        {"<>":"div","class":"row","html":[
+            {"<>":"div","class":"col-md-8","html":[
+                {"<>":"template","class":"wb-generic-ph","data-wb-data":"${section1.components.carousel_1}","html":""},
+                {"<>":"h2","html":"${section1.sectionTitle}"},
+                {"<>":"div","class":"row","html":[
+                    {"<>":"div","class":"col-md-6","html":[
+                        {"<>":"h3","class":"h5","html":[
+                            {"<>":"a","class":"pjax", "href":"./content-en.html","html":"${section1.section1-1.sectionTitle}"}
+                          ]},
+                        {"<>":"p","html":"${section1.section1-1.sectionText}"}
+                      ]},
+                    {"<>":"div","class":"col-md-6","html":[
+                        {"<>":"h3","class":"h5","html":[
+                            {"<>":"a","href":"#","html":"${section1.section1-2.sectionTitle}"}
+                          ]},
+                        {"<>":"p","html":"${section1.section1-2.sectionText}"}
+                      ]}
+                  ]},
+                {"<>":"div","class":"row","html":[
+                    {"<>":"div","class":"col-md-6","html":[
+                        {"<>":"h3","class":"h5","html":[
+                            {"<>":"a","href":"#","html":"${section1.section1-3.sectionTitle}"}
+                          ]},
+                        {"<>":"p","html":"${section1.section1-3.sectionText}"}
+                      ]},
+                    {"<>":"div","class":"col-md-6","html":[
+                        {"<>":"h3","class":"h5","html":[
+                            {"<>":"a","href":"#","html":"${section1.section1-4.sectionTitle}"}
+                          ]},
+                        {"<>":"p","html":"${section1.section1-4.sectionText}"}
+                      ]}
+                  ]},
+                {"<>":"div","class":"row","html":[
+                    {"<>":"div","class":"col-md-6","html":[
+                        {"<>":"h3","class":"h5","html":[
+                            {"<>":"strong","html":[
+                                {"<>":"a","href":"#","html":"${section1.section1-5.sectionTitle}"}
+                              ]}
+                          ]},
+                        {"<>":"p","html":"${section1.section1-5.sectionText}"}
+                      ]},
+                    {"<>":"div","class":"col-md-6","html":[
+                        {"<>":"h3","class":"h5","html":[
+                            {"<>":"a","href":"#","html":"${section1.section1-6.sectionTitle}"}
+                          ]},
+                        {"<>":"p","html":"${section1.section1-6.sectionText}"}
+                      ]}
+                  ]},
+                {"<>":"div","class":"row","html":[
+                    {"<>":"div","class":"col-md-6","html":[
+                        {"<>":"section","class":"gc-drmt","html":[
+                            {"<>":"h3","class":"h5","html":[
+                                {"<>":"a","href":"#","html":"${section1.section1-7.sectionTitle}"}
+                              ]},
+                            {"<>":"p","html":"${section1.section1-7.sectionText}"}
+                          ]}
+                      ]},
+                    {"<>":"div","class":"col-md-6","html":[
+                        {"<>":"section","class":"gc-drmt","html":[
+                            {"<>":"h3","class":"h5","html":[
+                                {"<>":"a","href":"#","html":"${section1.section1-8.sectionTitle}"}
+                              ]},
+                            {"<>":"p","html":"${section1.section1-8.sectionText}"}
+                          ]}
+                      ]}
+                  ]},
+                {"<>":"div","class":"row","html":[
+                    {"<>":"div","class":"col-md-6","html":[
+                        {"<>":"br","html":""},
+                        {"<>":"a","href":"#","html":[
+                            {"<>":"img","src":"${section1.images.image1.src}","alt":"${section1.images.image1.alt}","class":"img-responsive","width":"360","height":"180","html":""}
+                          ]}
+                      ]},
+                    {"<>":"div","class":"col-md-6","html":[
+                        {"<>":"br","html":""},
+                        {"<>":"a","href":"#","html":[
+                            {"<>":"img","src":"${section1.images.image2.src}","alt":"${section1.images.image2.alt}","class":"img-responsive","width":"360","height":"180","html":""}
+                          ]}
+                      ]}
+                  ]}
+              ]},
+            {"<>":"div","class":"col-md-4","html":[
+                {"<>":"a","href":"http://www.tpsgc-pwgsc.gc.ca/remuneration-compensation/services-paye-pay-services/systeme-paye-employes-pay-system-employees/index-eng.html","html":[
+                    {"<>":"img","src":"${section2.images.image1.src}","alt":"${section2.images.image1.alt}","class":"img-responsive","width":"360","height":"180","html":""}
+                  ]},
+                {"<>":"br","html":""},
+                {"<>":"a","href":"#","html":[
+                    {"<>":"img","src":"${section2.images.image2.src}","alt":"${section2.images.image2.slt}","class":"img-responsive","html":""}
+                  ]},
+                {"<>":"br","html":""},
+                {"<>":"section","class":"lnkbx well","html":[
+                    {"<>":"template","class":"wb-generic-ph","data-wb-data":"${section2.components.feeds_2}","html":""}
+                  ]},
+                {"<>":"section","class":"lnkbx well","html":[
+                    {"<>":"template","class":"wb-generic-ph","data-wb-data":"${section2.components.feeds_3}","html":""}
+                  ]},
+                {"<>":"section","class":"lnkbx well","html":[
+                    {"<>":"template","class":"wb-generic-ph","data-wb-data":"${section2.components.feeds_4}","html":""}
+                  ]},
+                {"<>":"section","class":"lnkbx well","html":[
+                    {"<>":"h2","class":"mrgn-tp-0","html":"Contact us"},
+                    {"<>":"ul","html":[
+                        {"<>":"li","html":[
+                        {"<>":"a","href":"#","title":"Contact the Clerk of the Privy Council","html":"Contact the Clerk of the Privy Council"}
+                      ]}
+                  ]}
+              ]}
+          ]}
+          ]},
+        {"<>":"div","class":"row","html":[
+            {"<>":"div","class":"col-md-9","html":[
+                    {"<>":"template","class":"wb-generic-ph","data-wb-data":"${section3.components.feeds_1}","html":""}
+              ]},
+            {"<>":"div","class":"col-md-3","html":"\n    "}
+          ]}
+      ]}
+  ],
+
+"data": {
+  "pageTitle": "Clerk of the Privy Council",
+  "introText": "As Head of the Federal Public Service, the Clerk of the Privy Council ensures that the Government of Canada has the policy, management and human resources capacity it needs to design and deliver high quality programs and services to and for Canadians.",
+  "section1": {
+      "sectionTitle": "Services and Information",
+        "section1-1": {
+          "sectionTitle": "Click Me!",
+          "sectionText" : "The above link will use PJAX (pushState + AJAX) to load in a new page without refreshing the browser."
+        },
+        "section1-2":{
+          "sectionTitle": "Canada.ca Home Page",
+          "sectionText" : "An external link loaded with HTTP as normal."
+        },
+        "section1-3": {
+          "sectionTitle": "Role of the Clerk",
+          "sectionText" : "Learn more about the role of the Clerk, meet the current Clerk and those who came before."
+        },
+        "section1-4": {
+          "sectionTitle": "Meet the Clerk",
+          "sectionText" : "Michael Wernick was appointed Clerk of the Privy Council and Secretary to the Cabinet in January 2016."
+        },
+        "section1-5":{
+          "sectionTitle": "Blueprint 2020 and public service renewal",
+          "sectionText" : "Read about what the government is doing to enable a capable and high-performing public service that embraces innovation, transformation and continuous renewal."
+        },
+        "section1-6":{
+          "sectionTitle": "Public service success stories",
+          "sectionText" : "Learn more about public service success stories and some of the many awards that recognize departments, agencies and individuals for their work and commitment to serving Canadians."
+        },
+        "section1-7":{
+          "sectionTitle": "Deputy Minister champions and committees",
+          "sectionText" : "List of Deputy Minister champions and the horizontal policy and management committees on which they serve."
+        },
+        "section1-8":{
+          "sectionTitle": "Statistical information on Canada’s public service",
+          "sectionText" : "Access demographic snapshots and other statistical information on employee populations, regional figures, historical trends and more."
+        },
+      "images": {
+        "image1": {
+          "src":"./assets/div-eng.png",
+          "alt":"Diversity and inclusion"
+        },
+        "image2": {
+          "src":"./assets/button-eng.png",
+          "alt":"Mental health in the workplace"
+        } 
+      },
+      "components": {
+        "carousel_1" : "json/carousel_1_V3.json"
+      }
+    },
+  "section2": {
+      "sectionTitle": "Sidebar",
+      "images":{
+        "image1": {
+          "src":"./assets/PPS_Button_1_ENG.png",
+          "alt":"Pay problems? Click here."
+        },
+        "image2": {
+          "src":"./assets/DM-Accountabilities-eng.PNG",
+          "alt":"Deputy Minister Accountabilities"
+        }
+      },
+      "components":{
+        "feeds_2": "json/feeds_2.json",
+        "feeds_3": "json/feeds_3.json",
+        "feeds_4": "json/feeds_4.json"
+      }
+    },
+  "section3": {
+      "sectionTitle": "ImageFeed",
+      "components": {
+        "feeds_1": "json/feeds_1.json"
+      }
+    }
+  
+}
+
+}
+

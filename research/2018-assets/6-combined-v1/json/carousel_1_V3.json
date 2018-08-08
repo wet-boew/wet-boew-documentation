@@ -1,0 +1,9 @@
+ {
+ 	"template": "carousel-wb5",
+ 	"data": {
+ 		"tabs": [
+ 			{ "title" : "Tab 1", "imageurl" : "./assets/Success-carousel.png", "alt": "Lorem ipsum dolor sit amet.", "text": "Public Service Success Stories"},
+ 			{ "title" : "Tab 2", "imageurl" : "./assets/25-eng.png", "alt": "Lorem ipsum dolor sit amet.", "text": "Twenty-Fifth Annual Report to the Prime Minister on the Public Service of Canada"}
+ 		]
+ 	}
+ }
