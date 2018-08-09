@@ -3,74 +3,72 @@ published: true
 layout: default-theme-wet-boew-en
 title: WET 5 - Exploration 1
 description: Exploration 1 - Headless framework, component interaction driven from markup, data first design
-modified: 2018-07-25
+modified: 2018-07-27
 ---
 
-This documents is to summarize the work in creating an headless framework, component interaction driven from markup and **data first design**.
+The current exploratory direction for WET 5 is that of a **data-first design**. This design philosophy focuses on the key data of a page first, and the presentation of that data second. With data defined first, different HTML/CSS structures and themes may be applied for different platforms.
 
-Latest prototye (as 2018-07-25) :
+There are currently two parts to the WET 5 research : a headless framework, and component interation driven from markup (coined LDD).
 
-* [Link to be added, see "Logic Design prototype 1" section]
+[Link to latest prototype (as 2018-07-27)](#combined-prototype-1) 
 
-## Ressources
+## Resources
 
 * [JSON2HTML](http://json2html.com/builder/)
-	* Example of horizontal transformation from HTML to JSON and vice versa.
+        * Example of horizontal transformation from HTML to JSON and vice versa.
 * [json:api](http://jsonapi.org/)
-	* JSON strucuture to exchanges information
-	* Communcation protocol (RESTful) to exchange information between the client and the server
+        * JSON strucuture to exchanges information
+        * Communcation protocol (RESTful) to exchange information between the client and the server
 * [Require.js](https://requirejs.org/)
-	* Javascript library loader
+        * Javascript library loader
 * [Quilljs](https://quilljs.com/)
-	* WYSIWYG / Rich text editor that are API based
+        * WYSIWYG / Rich text editor that are API based
 * [Knockout](http://knockoutjs.com/)
-	* A JS framework based on data binding
+        * A JS framework based on data binding
 * [intercooler.js](http://intercoolerjs.org/)
-	* A JS framework event based declared through HTML attribute. There is no initialization.
+        * A JS framework event based declared through HTML attribute. There is no initialization.
 * [Github masterbee/wet-boew-next-development](https://github.com/masterbee/wet-boew-next-development)
-	* High level prototype showing component interaction driven from markup.
+        * High level prototype showing component interaction driven from markup.
 * [Github masterbee/wet-boew-next](https://github.com/masterbee/wet-boew-next)
-	* High level view of the file system structure that can be for WET5. It's also include the high level prototype.
+        * High level view of the file system structure that can be for WET5. It's also include the high level prototype.
 * [Template playground prototype - Combo box](2018-1-template-playground-prototype.html)
-	* Template logic generator based on the state of a JS object. (It's reactive)
+        * Template logic generator based on the state of a JS object. (It's reactive)
 * [JSON-LD Playground](https://json-ld.org/playground/)
-	* Transforming a JSON-LD
+        * Transforming a JSON-LD
 * [JSON-LD W3C Standard](https://www.w3.org/TR/json-ld/)
-	* Exchange data format in JSON of RDF tripples
+        * Exchange data format in JSON of RDF tripples
 
-## Data first design
+## Headless Framework
 
-This philosophy is to define first the pieces of key data. Then enhance it with HTML/CSS markup for mobile/tablet/deskop. Then the JS interaction layer.
-
-## Headless browser
-
-The goal is to have the minimum HTML in a page and only use an API to build the page from the ground up. Including the theme and initiating the plugin.
+The goal of the 'headless' webpage is to have the minimum amout of HTML and instead use a JSON API to build the page. This includes loading in the theme and plugins using JSON. In any of the following prototype, view the page source to better understand this concept.
 
 
-### Headless prototype 1
+### Headless Prototype 1
 
-Publish on: 2018-07-05
+Published on: 2018-07-05
+
+All the content information is provided via a JSON API call, which is a static file for now.
 
 * [Working Example](2018-assets/6-headless-v1/testPage.html)
 * [Source code](https://github.com/wet-boew/wet-boew-documentation/tree/master/research/2018-assets/6-headless-v1/)
 
-**Note:** 
-* All the content information is provided via a JSON API call, which is a static file for now.
 
-### Headless prototype 2
+### Headless Prototype 2
 
-Publish on: 2018-07-13
+Published on: 2018-07-13
+
+This demo can switch between two pages without refreshing the browser, using only an AJAX call.
 
 * Working Example
-        * [Test Page](2018-assets/6-headless-v2/testPage.html)
-        * [Content Page](2018-assets/6-headless-v2/content-en.html)
+	* [Test Page](2018-assets/6-headless-v2/testPage.html)
+	* [Content Page](2018-assets/6-headless-v2/content-en.html)
 * [Source code](https://github.com/wet-boew/wet-boew-documentation/tree/master/research/2018-assets/6-headless-v2/)
 
-### Headless prototype 2.1
+### Headless Prototype 2.1
 
-Publish on: 2018-07-13
+Published on: 2018-07-13
 
-This is a slightly better version of the demo. The scripts was cleanup to be easier to read.
+A slight improvement over version 2, with cleaner scripts for better readability.
 
 * Working Example
 	* [Test Page](2018-assets/6-headless-v2.1/testPage.html)
@@ -79,17 +77,20 @@ This is a slightly better version of the demo. The scripts was cleanup to be eas
 
 ## Component interaction driven from markup
 
-The goal is to let the web author to use whatever markup he need to acheive his designs and then enhance that markup from functional instruction. Those functional instruction are re-usable in other context.
+In WET 5, a goal is to move away from using the component classes, instead attaching logic directly to the page markup. Thus, we move from a Component Development Design model to a Logic Development Design model (LDD).
 
-For example, a carousel will be markup (set by the web author), a timer that change the slide, a next button, a previous button and a play/pause button that stop or start the timer.
+A web author may use whatever markup is needed, and then enhance that markup with reuseable, modular bits of Javascript logic.
 
-Move from CDD model (Component development design) to a LDD model (Logic development design)
+For instance, the markup for a carousel may be a simple series of images. Attached to this would be a 'timer' module, 'next', 'previous' and 'play/pause' button modules, and a 'hide/show' module. These individual modules would interact to modify the markup and create the carousel.
+
+The purpose of this is to increase flexibility, possibility of designs, and ease maintenance.
 
 ### Component prototype 1
 
-Publish on: 2018-07-05
+Published on: 2018-07-05
 
-Just copy and paste the following in your web server
+Copy and paste the following in your web server.
+This code implements a timer module that periodically adds to the text.
 
 **JS - wb5.js**
 ```
@@ -139,57 +140,70 @@ Just copy and paste the following in your web server
 
 ### Component prototype 2
 
-Publish on: 2018-07-05
+Published on: 2018-07-05
+
+In this demo, there is limited functionality. The Navigation Menu and Photo Gallery are partially functional.
 
 * [Working Example](2018-assets/6-component-v2/Main.html)
 * [Source code](https://github.com/wet-boew/wet-boew-documentation/tree/master/research/2018-assets/6-component-v2/)
 
-What it's include:
-* Loaded in: Combo Box, Navigation Bar, Carousel and Photo Gallery (also French button, Canada logo and favicon)
-* Photo Gallery Loaded in
-* Navigation Bar has drop down menus that technically drop down but disappear as you move your mouse from the parent
-
-On development:
-* Have the navigation bar bug fixed by adding a timer
-* Add a quick inline css to format the photo gallery
+Development notes:
+* Fix the navigation bar by using a timer
+* Format the photo gallery with CSS
 * Make the carousel functional
-* Move all the functions into separate js files using the code structure that Pierre and Mario have provided
-* Continue to try to implement intercooler (possibly knockout)
+* Seperate the JS functions into seperate modules
+* Research intercooler and knockout
 * Try to re-use the combobox code that was recently developed
 
 ### Component prototype 3
 
-Publish on: 2018-07-13
+Published on: 2018-07-13
+
+Photo Gallery functionality has been extended, but is still limited. This example introduces RequireJS.
 
 * [Working Example](2018-assets/6-component-v3/docs/index.html)
 * [Source code](https://github.com/wet-boew/wet-boew-documentation/tree/master/research/2018-assets/6-component-v3/)
 
-
-## Templating/Rendering
-
-Need to research for a templating engine. Consider to reuse or by inspired by the template engine create for the combobox.
-
-## Data store
-
-Create a central data store for the headless broswing information and for the component information.
-
 {% raw %}
 
-<h2>Logic Design prototype 1<span class="label label-warning">High level docs incomplete</span></h2>
+<h3>Component Prototype 4       <span class="label label-warning">High level docs incomplete</span></h2>
 
 {% endraw %}
 
-It's a combination of the work completed for the headless prototype and the component prototype plus a few addition.
+Published on: 2018-07-23
 
-Publish on: 2018-07-23
+Using different code from the previous prototypes, this demo implements a carousel through several small modules loaded in with RequireJS.
 
 * [Source code (all files)](https://github.com/wet-boew/wet-boew-documentation/tree/master/research/2018/logic-design/1)
 
 About this demo:
-* require "fetch" and "Promise". They are polyfilled is they not supported.
+* Requires "Fetch" and "Promise". They are polyfilled if they not supported.
 * Use "RequireJS" as the dependency loader
 * Use "Mustache" as the template engine
 
 File description
-* [Core of wb5](https://github.com/wet-boew/wet-boew-documentation/blob/master/research/2018/logic-design/1/src/wb5.js)(js)
-        * Wait for the completion of not perceptible CSS animation before to initiate. Any mutation would trigger the CSS animation event and the plugin would re-run again or adjust his state.
+* [Core of wb5](https://github.com/wet-boew/wet-boew-documentation/blob/master/research/2018/logic-design/1/src/wb5.js) (js)
+        * This main file is used to load in logic modules. It uses a CSS trick to dispatch an event whenever an element with the 'data-wb5' attribute is loaded. This event is used to initialise the modules.
+
+## Combined Prototypes
+
+The following prototypes seek to combine the work on the Headless Framework and Markup-Based Interaction.
+
+### Combined Prototype 1
+
+Published on: 2018-07-27
+
+This version combines Headless V2.1 and Component V4. The carousel is loaded in with AJAX, then made functional by the RequireJS modules. 
+A **readme** file is included, containing basic explanations of each file.
+
+* [Working Example](2018-assets/6-combined-v1/clerk-wet.html)
+* [Source code](https://github.com/wet-boew/wet-boew-documentation/tree/master/research/2018-assets/6-combined-v1)
+
+
+## Miscellaneous
+### Templating/Rendering
+A templating engine is required to marry the data and the structure. Currently, two templating systems are being used: Mustache, and the templating engine created for the combobox. In the future, an upgraded version of the combobox engine may suffice.
+
+### Data store
+
+Create a central data store for the headless broswing information and for the component information.
