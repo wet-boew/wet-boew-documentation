@@ -223,3 +223,4 @@ In the current headless prototype, json2html is being used to transmit data and 
 * Since the JSON is line-per-line equivalent to the source HTML, the data object is rigidly tied to the page structure, and contains unnecessary information such as DOM elements.
 * json2html does not allow for both text and child elements in the body of an element.
 * Arrays can not be used in the data object
+Research is being done to find a better format for page data.
