@@ -1,7 +1,7 @@
 ---
 published: true
 layout: default-theme-wet-boew-en
-title: 2018-7: Checkbox filtering
+title: 2018-7 - Checkbox filtering
 description: Developper notes on adding a checkbox filtering capability in WET
 modified: 2018-08-09
 ---
