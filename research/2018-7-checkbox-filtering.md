@@ -3,7 +3,7 @@ published: true
 layout: default-theme-wet-boew-en
 title: 2018-7 - Checkbox filtering
 description: Developper notes on adding a checkbox filtering capability in WET
-modified: 2018-08-09
+modified: 2018-08-10
 ---
 
 Developper notes on adding a checkbox filtering capability in WET
@@ -277,23 +277,23 @@ Tag filter
 			* The "technologies" is abreviated to "tech"
 
 Button
-	* Clear All
-		* Identified through a specific id ```deselecttags```
-		* It's logic behind seem to be hard-coded and can't be defined through the UI
-		* By default it is strike out and disable
-		* After a "tag" is selected, the button is enable and the strike out removed.
-		* When clicking, it deselect all the tags
-	* Select All
-		* Identified because the parent (2nd parent) ```div``` have an id that match the group of checkboxes.
-			* ```<div class="sbbox sbbox-default" id="filter-levels">```
-		* When click, it will select all the items in the group
-		* As all the items is checked by default, this button are strike out and disable
-		* The button is enable when one or more checkbox in his group are unselected
-	* Only
-		* Slibling to the corresponding checkbox
-		* It's value is explicitly defined through the data attribute ```data-value```
-		* When click, it deselect all other checkboxes in the group and keep the checkbox with the same value selected
-		* Those button and checkboxes are regrouped under an id named "{group name}-content" like ```<div id="filter-techniques-content"```
+* Clear All
+	* Identified through a specific id ```deselecttags```
+	* It's logic behind seem to be hard-coded and can't be defined through the UI
+	* By default it is strike out and disable
+	* After a "tag" is selected, the button is enable and the strike out removed.
+	* When clicking, it deselect all the tags
+* Select All
+	* Identified because the parent (2nd parent) ```div``` have an id that match the group of checkboxes.
+		* ```<div class="sbbox sbbox-default" id="filter-levels">```
+	* When click, it will select all the items in the group
+	* As all the items is checked by default, this button are strike out and disable
+	* The button is enable when one or more checkbox in his group are unselected
+* Only
+	* Slibling to the corresponding checkbox
+	* It's value is explicitly defined through the data attribute ```data-value```
+	* When click, it deselect all other checkboxes in the group and keep the checkbox with the same value selected
+	* Those button and checkboxes are regrouped under an id named "{group name}-content" like ```<div id="filter-techniques-content"```
 
 ## Integration to WET filter - Prototype 2
 
