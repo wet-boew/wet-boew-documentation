@@ -185,6 +185,15 @@ File description
 * [Core of wb5](https://github.com/wet-boew/wet-boew-documentation/blob/master/research/2018/logic-design/1/src/wb5.js) (js)
         * This main file is used to load in logic modules. It uses a CSS trick to dispatch an event whenever an element with the 'data-wb5' attribute is loaded. This event is used to initialise the modules.
 
+### Component Prototype 5
+
+Published on: 2018-08-10
+
+Using the same modules as the carousel in V4, along with a single new module, this prototype implements a countdown/stopwatch.
+
+* [Working Example](2018-assets/6-headless-v1/testPage.html)
+* [Source code](https://github.com/wet-boew/wet-boew-documentation/tree/master/research/2018-assets/6-headless-v1/)
+
 ## Combined Prototypes
 
 The following prototypes seek to combine the work on the Headless Framework and Markup-Based Interaction.
@@ -207,3 +216,10 @@ A templating engine is required to marry the data and the structure. Currently, 
 ### Data store
 
 Create a central data store for the headless broswing information and for the component information.
+
+### Page data as JSON
+
+In the current headless prototype, json2html is being used to transmit data and build pages from JSON. However, this has a few drawbacks:
+* Since the JSON is line-per-line equivalent to the source HTML, the data object is rigidly tied to the page structure, and contains unnecessary information such as DOM elements.
+* json2html does not allow for both text and child elements in the body of an element.
+* Arrays can not be used in the data object
