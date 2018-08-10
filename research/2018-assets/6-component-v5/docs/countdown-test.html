@@ -1,0 +1,27 @@
+<html>
+<!-- CSS -->
+<style>
+h2::after {
+    content: attr(data-wb5-count-value);
+</style>
+<!---------------->
+
+
+	<!--#include virtual="partials/head.html" -->
+<body class="">
+	<!--#include virtual="partials/header.html" -->
+
+<main role="main" property="mainContentOfPage" class="container" >
+<h1 property="name" id="wb-cont">Countdown Timer</h1>
+
+<div class="container advertisment">
+	<section data-wb5='count timer' data-wb5-timer-options='{ "eventname": "decrement", "speed": "1"}'>
+		<h2 data-wb5-count-value="5"></h2>
+	</section>
+</div>
+
+<!--#include virtual="partials/footer.html" -->
+<!--#include virtual="partials/scripts.html" -->
+
+</body>
+</html>
