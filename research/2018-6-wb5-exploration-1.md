@@ -191,8 +191,8 @@ Published on: 2018-08-10
 
 Using the same modules as the carousel in V4, along with a single new module, this prototype implements a countdown/stopwatch.
 
-* [Working Example](2018-assets/6-headless-v1/testPage.html)
-* [Source code](https://github.com/wet-boew/wet-boew-documentation/tree/master/research/2018-assets/6-headless-v1/)
+* [Working Example](2018-assets/6-component-v5/docs/countdown-test.html)
+* [Source code](https://github.com/wet-boew/wet-boew-documentation/tree/master/research/2018-assets/6-component-v5/)
 
 ## Combined Prototypes
 
