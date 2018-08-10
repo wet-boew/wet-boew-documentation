@@ -3,7 +3,7 @@ published: true
 layout: default-theme-wet-boew-en
 title: Exploratory prototype 2 - 2018-7 Checkbox filtering - Research and finding
 description: Exploratory prototype 2 that check a few possibility
-modified: 2018-06-20
+modified: 2018-08-10
 
 script_pgbttm_src: //wet-boew.github.io/themes-dist/GCWeb/GCWeb/js/theme.min.js
 script_pgbttm2_src: 2018-assets/2018-7-proto-2.js
