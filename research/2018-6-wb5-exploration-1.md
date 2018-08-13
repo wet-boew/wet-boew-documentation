@@ -166,7 +166,7 @@ Photo Gallery functionality has been extended, but is still limited. This exampl
 
 {% raw %}
 
-<h3>Component Prototype 4       <span class="label label-warning">High level docs incomplete</span></h2>
+<h3>Component Prototype 4       <span class="label label-warning">High level docs incomplete</span></h3>
 
 {% endraw %}
 
