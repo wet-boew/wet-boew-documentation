@@ -18,6 +18,128 @@ Leverage CSS classes and checkboxes to apply content filtering. A feature like t
 
 Progressive goal: Support the feature provided by the prototype 1 and ensure the plugin is not directly tie or bind to the business content of the page.
 
+
+### User requirement
+
+* Apply boolean content filter from a UI
+* Apply content filter by using URL query parameter
+* Remind the last filter state, if confirmed by the user
+* Support exclusive filter, which fully change the page structure
+* Checkbox that trigger the state on/off of inner checkboxes
+
+
+### Behaviour recommendation (as 2018-08-13)
+
+This following statements is to define the interaction pattern for the checkbox filtering. Those statements are defined by the analysis bellow and as per other factor such as best practice, standards, usability, accessibility principle.
+
+Checkbox state
+* a "check" checkbox should show content, if uncheck the associated should be hidden.
+
+User interface
+* Filter interface should be located prior the main content impacted by the filtering. A the minimal a link should be provided before.
+* Exclusive filter appear before filtering multiple sub-section.
+* Table of content, if present, reflect the page structure as displayed.
+* If the filtering interface are inside a popup, such a dialog, then when opening it should show the current state of the filtering to avoid confusion with the user. Especially when time has lapsed between closing and re-opening the popup.
+
+Applying filter
+* **Immediatly when the checkbox is check:** The checkbox should contains a reference to the a container where the filter is applied. Like by using ```aria-controls``` attributes. That attribute allow AT to navigate directly to the controlled elements.
+* **Trigger by an Apply button click:** Apply the filter set by the filtering controler. This button must contains an attribute ```aria-controls``` to create a link to the main content that has been filtered.
+
+Filter controler
+* It should'n be limited to checkbox
+* Should be extendable to filter by:
+	* using a dropdown ```<select>```
+	* using radio ```<input type="radio">```
+	* using a toggle button ```<button>``` or ```<input type="button">```
+* The attribute "value" define the filter CSS class name key
+
+Grouping filter controler
+* It's defined by the name attribute.
+* Controls that share the same name attribute are know to be in the same group.
+* Multiple filter in the same group are applied like an "And" operator
+* Filter applied between group are applied like an "Or" operator
+
+Content design to support exclusive filter
+* It is up to the author to design the content being compatible with exclusive filter
+* A page can have more than one exclusive filter.
+* Multiple exclusive filter might collide.
+* Content displayed after each exclusive state and each collision are applied need to be conform to WCAG 2.0 Level AA. 
+* Exclusive filter impact the page structure, a quick review is to evaluate if the page structure don't skip the displayed heading sequence.
+* It's show the item where the exclusive filter is applied, it show all children, it show parent heading and hide the sibling.
+* Exclusive filter in the same group are treated like "OR" operator.
+* Exclusive filter are applied first then regular filter.
+
+Filter behaviour
+* Exclusive filter "on"
+	* Show the targeted elements
+	* Show children of the target elements
+	* Show only the parents header elements
+	* Hide sibling elements.
+* Exclusive filter "off"
+	* Display content as if there were no filter applied
+* Regular filter "on"
+	* Show the target element
+	* Show children.
+* Regular filter "off"
+	* Hide the target element
+* Show heading on hidden section/pieces.
+	* heading in hidden section could contain a CSS class name like ```show-on-filter-out``` to force displaying the heading. 
+	* Behaviour: 
+		* Opacity is set to ```50%``` which fade out the font color (set on the container)
+		* Font size are forced to be the same as the paragraph size, so ```1em``` (for all children ```*```)
+		* Font weight is forced to normal (for all children ```*```)
+		* Margin are set to none on the container and to any inner heading (```h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6```)
+	* Subsection hidden in a hiden section wont be displayed.
+
+### Technical behaviour
+
+How to identify section controlled by a filter behaviour
+* The page can have multiple sub-section that is controled by the same filter control
+* Need a quick way to retreive all those section. there is two options:
+	* Identifying the section by using a CSS class
+	* Identifying the section by using a data attribute
+		* This solution look very clean
+		* Don't conflic with existing CSS class name for styling
+		* Don't enforce the web author to use a naming convention to avoid collision with CSS
+* Let the default section to be the "main" elements? Do we simply apply to the overall pages and force the user to define the main content area where the filtering is applied?
+
+How to make the difference between "Exclusive filter" and "Regular filter"
+* Use the attribute ```data-wb5-tags``` for "Regular filter"
+* Use the attribute ```data-wb5-etags``` for "Exclusive filter"
+* Tags used in "etags" or in "tags" could colide.
+
+How to define the initial state of the content and checkbox
+* Regular filter:
+	* **Check** 
+		* Default means the content is visible
+		* If it means the content is hidden, then the label must be explicit.
+	* **Uncheck** 
+		* Default means the content is hidden
+		* If it means the content is visible, then the label must be explicit.
+* Exclusive filter
+	* **Check** means the content represent exclusivelly that tagged content.
+	* **Uncheck** means it is ignored.
+* If "check", it's initial state are know to be "on" ```stateon = "show"```
+* If "uncheck", it's initial state are know to be "off" ```stateoff = "hide"```
+* The content tagging define if the filter are exclusive or not
+
+Configuring filter through the URL parameter
+* Seek for an integration with the URL mapping plugin.
+
+Persistant state
+* Might need to be cook in as their is no generalized plugin to save the plugin sate.
+
+Filter control grouping
+* The ```name``` attribute will be use to identify grouping
+* Apply button would collect the filters controller state from the form which own the actual button.
+
+How to do negative filter
+* An exclusive filter where content should be filtered out?
+	* Do we check for presence of the "value" in the normal tagging, and then they will be removed?
+	* Do we create a new data attribute?
+	* Do we exclude that feature for now? Is it needed?
+	* Do we use a prefix, like an exclamation mark "!"
+
 ## Relevant reference
 
 Working example: 
@@ -310,7 +432,7 @@ It use the id of the checkbox as the CSS class name to apply the filter.
 
 <details>
 	<summary>Source Code</summary>
-	<pre><code>&gt;script&lt;
+	<pre><code>&lt;script&gt;
 ( function( $, window, wb ) {
 "use strict";
 
@@ -334,8 +456,8 @@ var defaultStore = {
 window.mystore = store;
 
 // Sort the controller
-// * -&lt; Controller that change a state in the store (like the checkbox)
-// * -&lt; Controller that initiate the change (like the button)
+// * -&gt; Controller that change a state in the store (like the checkbox)
+// * -&gt; Controller that initiate the change (like the button)
 // A controller can be in both category
 
 // Initialize the result set, for binding
@@ -547,7 +669,7 @@ $document.on( "timerpoke.wb " + initEvent, selector, init );
 wb.add( selector );
 
 } )( jQuery, window, wb );
-&gt;/script&lt;</code></pre>
+&lt;/script&gt;</code></pre>
 </details>
 {% endraw %}
 {:/}
@@ -555,40 +677,40 @@ wb.add( selector );
 ### Plugin structure overview - theorical first draft
 
 Views
-	* Filter textbox
-	* Combobox (may have its own filter store)
-	* Checkbox filter (when check it add/remove a filtering object to the store)
+* Filter textbox
+* Combobox (may have its own filter store)
+* Checkbox filter (when check it add/remove a filtering object to the store)
 
 Model
-	* Type: Store "Filter"
-	* name: Default
-	* content: (list of filter and filter group)
-		* Object structure
-			* Filtertype: [List] Search | jQuery | CSS selector
-			* Filter: [String]
-			* config: [Object] like: RegEx, PlainText if the filtertype is search
-			* persistant: [boolean] True | False
+* Type: Store "Filter"
+* name: Default
+* content: (list of filter and filter group)
+	* Object structure
+		* Filtertype: [List] Search | jQuery | CSS selector
+		* Filter: [String]
+		* config: [Object] like: RegEx, PlainText if the filtertype is search
+		* persistant: [boolean] True | False
 
 
 Controller
-	* Apply the filter in the UI or a "target"
-	* This filter is initiate when the list of filter change
-	* Each "target" have a result filter model
-	* Like Apply filter to :
-		* Page content, or
-		* Data table, or
-		* Send to API, or
-		* Listbox in a combobox, or
-		* To a data store
+* Apply the filter in the UI or a "target"
+* This filter is initiate when the list of filter change
+* Each "target" have a result filter model
+* Like Apply filter to :
+	* Page content, or
+	* Data table, or
+	* Send to API, or
+	* Listbox in a combobox, or
+	* To a data store
 
 Model
-	* Result filter workspace
-		* Object Structure
-			* items, counts
+* Result filter workspace
+	* Object Structure
+		* items, counts
 
 View
-	* Display result UI
-	* Optionally displaying the result may include badge, like the number of items. This is a requirement for the long index page based on the Content and IA spec.
+* Display result UI
+* Optionally displaying the result may include badge, like the number of items. This is a requirement for the long index page based on the Content and IA spec.
 
 ## Integration to WET filter - Prototype 3
 
@@ -599,3 +721,6 @@ Todo:
 * Remodel in a way that it's rely less on how the HTML is structured.
 * Expand to support filtering to be completed by radio button, button and select box.
 * Add support for "live" filtering, whitout requiring the user to push a button called "Apply"
+* Use data-attribute instead of class name
+* Let exclusive filters be defined by how the content was tagged and not how the controller is implemented.
+
