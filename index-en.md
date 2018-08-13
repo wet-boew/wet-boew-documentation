@@ -35,6 +35,10 @@ modified: 2018-07-26
 		* [Test 2018-5 - Proposed omnifill with no heading inside summary](testcase/2018-5.html)
 		* [Test 2018-6 - WET 4 behaviour with heading inside summary](testcase/2018-6.html)
 		* [Test 2018-7 - WET 4 behaviour with no heading inside summary](testcase/2018-7.html)
+		* [Test 2018-8 - Proposed WET omnifill with heading inside summary](../testcase/2018-8.html)
+		* [Test 2018-9 - Proposed WET omnifill with no heading inside summary](../testcase/2018-9.html)
+		* [Test 2018-10 - Proposed WET omnifill with heading inside summary (less ARIA)](../testcase/2018-10.html)
+		* [Test 2018-11 - Proposed WET omnifill with no heading inside summary (less ARIA)](../testcase/2018-11.html)
 
 * [Internal project governance](governance/index-en.html)
 	* [Meeting summary](governance/meeting.html)
