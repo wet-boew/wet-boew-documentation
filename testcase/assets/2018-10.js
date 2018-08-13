@@ -38,8 +38,8 @@ function convertDetailSummary() {
 		var expanding = document.createElement( "div" );
 		expanding.classList.add( "__details" );
 		expanding.setAttribute( "id", "__detail" + id );
-		expanding.setAttribute( "aria-labelledby", "__summary" + id );
-		expanding.setAttribute( "role", "region" );
+		// expanding.setAttribute( "aria-labelledby", "__summary" + id );
+		// expanding.setAttribute( "role", "region" );
 		if ( !open ) {
 			expanding.setAttribute( "hidden", "" );
 		}
@@ -48,7 +48,7 @@ function convertDetailSummary() {
 		var button = document.createElement( "button" );
 		button.setAttribute( "id", "__summary" + id );
 		button.setAttribute( "aria-expanded", open ? "true" : "false" );
-		button.setAttribute( "aria-controls", "__detail" + id );
+		// button.setAttribute( "aria-controls", "__detail" + id );
 		button.classList.add( "__summary" );
 
 		// Separate <summary> from other content
@@ -112,9 +112,9 @@ function convertDetailSummary() {
 	// or else we lose the event handlers on nested elements
 	var buttons = document.querySelectorAll( "button.__summary" );
 	[].forEach.call( buttons, function(button) {
-		// Listen for enter, spacebar, and click
+		// Listen for enter (13), spacebar (32), and click (1)
 		button.addEventListener( "keydown", function( event ) {
-			if ( event.which === 1 || event.which === 13 || event.which === 32 ) {
+			if ( event.which === 13 || event.which === 32 ) {
 				event.preventDefault();
 				toggleExpanded( event.target );
 			}
