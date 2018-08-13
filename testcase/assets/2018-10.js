@@ -112,9 +112,9 @@ function convertDetailSummary() {
 	// or else we lose the event handlers on nested elements
 	var buttons = document.querySelectorAll( "button.__summary" );
 	[].forEach.call( buttons, function(button) {
-		// Listen for enter, spacebar, and click
+		// Listen for enter (13), spacebar (32), and click (1)
 		button.addEventListener( "keydown", function( event ) {
-			if ( event.which === 1 || event.which === 13 || event.which === 32 ) {
+			if ( event.which === 13 || event.which === 32 ) {
 				event.preventDefault();
 				toggleExpanded( event.target );
 			}
@@ -124,6 +124,13 @@ function convertDetailSummary() {
 			if ( event.which === 1 ) {
 				event.preventDefault();
 				toggleExpanded( event.target );
+			}
+			return true;
+		} );
+		button.addEventListener( "keyup", function( event ) {
+			if ( event.which === 32 ) {
+				event.preventDefault();
+				return false;
 			}
 			return true;
 		} );

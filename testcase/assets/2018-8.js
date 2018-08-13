@@ -127,6 +127,13 @@ function convertDetailSummary() {
 			}
 			return true;
 		} );
+		button.addEventListener( "keyup", function( event ) {
+			if ( event.which === 32 ) {
+				event.preventDefault();
+				return false;
+			}
+			return true;
+		} );
 	});
 
 };
