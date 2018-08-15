@@ -812,9 +812,218 @@ Usability
 ## Integration to WET filter - Prototype 4
 
 
+### Source code
+
+#### HTML
+
+The filterable content need to be an container and the filter plugin is applied to that container. Like prototype 3.
+
+The following will be the filterable UI. See the use of the attribute ```aria-controls```. This plugin only support when the attribute ```aria-controls``` only contains one id.
+
+
+{::nomarkdown}
+{% raw %}
+<pre><code>&lt;h3&gt;Show/Hide content details&lt;/h3&gt;
+&lt;input aria-controls="fiterableContentContainer" type="checkbox" id="test-cd" value="content-details" /&gt; &lt;label for="test-cd"&gt;Content Details&lt;/label&gt;
+&lt;br /&gt;
+
+&lt;p class="text-muted"&gt;Not checked by default, and the associate block of content is tagged by default with the CSS &lt;code&gt;wb-fltr-out2&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3&gt;Table of content&lt;/h3&gt;
+
+
+&lt;input aria-controls="fiterableContentContainer" type="checkbox" id="test-chkFilter2" value="sintro" checked /&gt; &lt;label for="test-chkFilter2"&gt;Standard intro&lt;/label&gt;
+&lt;br /&gt;
+
+&lt;input aria-controls="fiterableContentContainer" type="checkbox" id="test-chkFilter3" value="guidelines" checked /&gt; &lt;label for="test-chkFilter3"&gt;Guidlines&lt;/label&gt;
+&lt;br /&gt;
+
+&lt;input aria-controls="fiterableContentContainer" type="checkbox" id="test-chkFilter4" value="related" checked /&gt; &lt;label for="test-chkFilter4"&gt;Related guidelines&lt;/label&gt;
+&lt;br /&gt;
+
+
+&lt;input aria-controls="fiterableContentContainer" type="checkbox" id="test-chkFilter" value="guideline" checked /&gt; &lt;label for="test-chkFilter"&gt;6.1 Leverage open standards and embrace leading practices, including use of open source software where appropriate
+&lt;/label&gt;
+&lt;br /&gt;
+
+&lt;h3&gt;Sub section filtering for section 6.1&lt;/h3&gt;
+&lt;input aria-controls="fiterableContentContainer" type="checkbox" id="test-8" value="intro" checked /&gt; &lt;label for="test-8"&gt;introduction&lt;/label&gt;
+&lt;br /&gt;
+
+&lt;input aria-controls="fiterableContentContainer" type="checkbox" id="test-3" value="checklist" checked /&gt; &lt;label for="test-3"&gt;checklist&lt;/label&gt; &lt;span class="text-muted"&gt;(The section heading remain visible because they are marked at such)&lt;/span&gt;
+&lt;br /&gt;
+
+&lt;input aria-controls="fiterableContentContainer" type="checkbox" id="test-4" value="guides" checked /&gt; &lt;label for="test-4"&gt;guides&lt;/label&gt;
+&lt;br /&gt;
+
+&lt;input aria-controls="fiterableContentContainer" type="checkbox" id="test-5" value="solutions" checked /&gt; &lt;label for="test-5"&gt;solutions&lt;/label&gt;
+&lt;br /&gt;
+
+&lt;input aria-controls="fiterableContentContainer" type="checkbox" id="test-6" value="similar" checked /&gt; &lt;label for="test-6"&gt;similar&lt;/label&gt;
+&lt;br /&gt;
+
+&lt;p class="text-muted"&gt;Check means it is displayed, uncheck means the content are hidden.&lt;/p&gt;
+
+&lt;h3&gt;Exclusive filter&lt;/h3&gt;
+&lt;input aria-controls="fiterableContentContainer" type="checkbox" id="test-7" value="architectural" /&gt; &lt;label for="test-7"&gt;Build it rights&lt;/label&gt;
+&lt;br /&gt;
+
+&lt;p class="text-muted"&gt;The exclusive filter that is toggled is defined by how the tagging is done. An exclusive tag will be prefixed with an asterik &lt;code&gt;*&lt;/code&gt;. Exclusive filter will only hide the sibling.&lt;/p&gt;</code></pre>
+{% endraw %}
+{:/}
+
+#### CSS
+
+Update the filter.js CSS to accomodate this new type of filtering.
+
+{::nomarkdown}
+{% raw %}
+<pre><code>.wb-fltr-exclusive > *:not( .wb-fltr-in ) {
+	display: none !important;
+}
+
+.wb-fltr-out2 {
+	opacity: .5;
+}
+.wb-fltr-out2 .wb-fltr-fade {
+	font-size: 1em;
+}
+.wb-fltr-out2 :not( .wb-fltr-fade ) {
+	display: none !important;
+}</code></pre>
+{% endraw %}
+{:/}
+
+#### Javascript
+
+{::nomarkdown}
+{% raw %}
+<pre><code>// Web Experience Toolkit - WET-BOEW
+// Author: @duboisp
+( function( $, window, document, wb ) {
+"use strict";
+
+var componentName = "wb-contentfilter",
+	selector = "." + componentName,
+	controlerName = componentName + "-ctrl",
+	selectorCtrl = "." + controlerName,
+	initEvent = "wb-init" + selector,
+	$document = wb.doc,
+
+	init = function( event ) {
+		var elm = wb.init( event, componentName, selector ),
+			$elm;
+
+		if ( elm ) {
+			$elm = $( elm );
+
+			// Find the controlers, this element must have an id. It assume the controller only control one content-filtering section
+			var controlers = $.find("[aria-controls=" + elm.id + "]");
+
+			if ( controlers.length === 0 ) {
+				console.warn( "Need to add a default controller");
+			}
+
+			// Add a class for event binding.
+			$( controlers ).addClass( controlerName );
+
+			wb.ready( $elm, componentName );
+		}
+	};
+
+// Add or Remove filter when the checkbox is selected
+$document.on( "click", "input:checkbox" + selectorCtrl, function( event )  {
+
+	var elm = event.currentTarget,
+		filterTag = elm.value,
+		state = !!elm.checked,
+		controlsId = elm.getAttribute( "aria-controls" ),
+		relatedPotential = document.querySelectorAll( "#" + controlsId + " [data-wb5-tags*=" + filterTag + "]" ),
+		related = [],
+		relatedExclusive = [],
+		relatedNot = [],
+		relatedExlcusiveNot = [],
+		relatedExclusiveRem = [],
+		i, i_len, j, j_len,
+		currentElm, tagList, tag, lastIndex;
+
+	// Filter down the ones that matched the initial DOM search
+	i_len = relatedPotential.length;
+	for( i = 0; i < i_len; i = i + 1 ) {
+		currentElm = relatedPotential[ i ];
+		
+		tagList = currentElm.dataset.wb5Tags.split( " " );
+
+		j_len = tagList.length;
+		for( j = 0; j < j_len; j = j + 1 ) {
+
+			tag = tagList[ j ];
+			lastIndex = tag.lastIndexOf( filterTag );
+
+			// Go next, in the case the elements have multiple tags
+			if ( lastIndex === -1 ) {
+				continue;
+			}
+
+			// Validate the type of filter
+			if ( ( state && filterTag === tag ) || ( !state && "!" + filterTag === tag ) ) {
+				related.push( currentElm );
+				break;
+			} else if ( ( !state && filterTag === tag ) || ( state && "!" + filterTag === tag ) ) {
+				relatedNot.push( currentElm );
+				break;	
+			} else if ( state && "*" + filterTag === tag ) {
+				relatedExclusive.push( currentElm );
+				break;
+			} else if ( !state && "*" + filterTag === tag ) {
+				relatedExclusiveRem.push( currentElm );
+				break;
+			}
+		}
+	}
+
+	// Apply exclusive filter
+	// Hide each sibling that is not scoped in the related Exclusive
+	i_len = relatedExclusive.length;
+	for( i = 0; i < i_len; i = i + 1 ) {
+		currentElm = relatedExclusive[ i ];
+		currentElm.classList.add( "wb-fltr-in" );
+		currentElm.parentNode.classList.add( "wb-fltr-exclusive" );
+	}
+
+	// Remove Exclusive filter
+	i_len = relatedExclusiveRem.length;
+	for( i = 0; i < i_len; i = i + 1 ) {
+		currentElm = relatedExclusiveRem[ i ];
+		currentElm.classList.remove( "wb-fltr-in" );
+
+		// Remove the parent CSS selector only if this was the last one
+		if( !currentElm.parentNode.getElementsByClassName( "wb-fltr-in" ).length ) {
+			$( currentElm.parentNode ).removeClass( "wb-fltr-exclusive" );
+		}
+	}
+
+	// Apply filter out
+	$( relatedNot ).addClass( "wb-fltr-out2" );
+
+	// Apply filter in
+	$( related ).removeClass( "wb-fltr-out2" );
+});
+
+
+$document.on( "timerpoke.wb " + initEvent, selector, init );
+
+wb.add( selector );
+
+} )( jQuery, window, document, wb );
+</code></pre>
+{% endraw %}
+{:/}
+
+
 ## Intergration to WET filter - Edge prototype
 
-Same as prototype 3, but initiatialized work to add an "Apply button" and groupping support
+Same as prototype 3, but initiatialized the work to add an "Apply button" and groupping support
 
 {::nomarkdown}
 {% raw %}
