@@ -6,11 +6,31 @@ description: Exploratory prototype 3 that check a few possibility
 modified: 2018-08-10
 
 script_pgbttm_src: //wet-boew.github.io/themes-dist/GCWeb/GCWeb/js/theme.min.js
-script_pgbttm2_src: 2018-assets/2018-7-proto-2.js
+script_pgbttm2_src: 2018-assets/2018-7-proto-3.js
 ---
 
 {::nomarkdown}
 {% raw %}
+
+<style>
+
+.wb-fltr-exclusive > *:not( .wb-fltr-in ) {
+	display: none !important;
+}
+
+.wb-fltr-out2 {
+	opacity: .5;
+}
+.wb-fltr-out2 .wb-fltr-fade {
+	font-size: 1em;
+}
+.wb-fltr-out2 :not( .wb-fltr-fade ) {
+	display: none !important;
+}
+
+
+</style>
+
 
 <div class="row">
 <div class="col-lg-9 col-md-8">
@@ -18,24 +38,108 @@ script_pgbttm2_src: 2018-assets/2018-7-proto-2.js
 </h1>
 </div>
 <div class="col-lg-3 col-md-4">
+	<!--
 <ul class="list-unstyled text-right">
   <li><a href="#feedback-popup" aria-controls="feedback-popup" class="wb-lbx" role="button">Give feedback about this page</a></li>
   <li><a href="https://github.com/canada-ca/digital-playbook-guide-numerique/tree/master/en/6-use-open-standards-solutions.md">View content source on GitHub</a></li>
   <li><a href="https://github.com/canada-ca/digital-playbook-guide-numerique/tree/master/views-vues/standards-normes/en/6-use-open-standards-solutions.md">View template source on GitHub</a></li>
   <li><a href="#filter-panel" aria-controls="filter-panel" class="overlay-lnk btn btn-primary" role="button">Show filters</a></li>
 </ul>
-
+-->
 </div>
 </div>
 
 
+<h2>Filter - Prototype 3</h2>
 
-<h2>Current filters list</h2>
 
-<ul id="currentFilterList">
-	<li>None</li>
-</ul>
+<h3>Show/Hide content details</h3>
+<input class="ctrlFilter" type="checkbox" id="test-cd" value="content-details" /> <label for="test-cd">Content Details</label>
+<br />
 
+<p class="text-muted">Not checked by default, and the associate block of content is tagged by default with the CSS <code>wb-fltr-out2</code></p>
+
+<h3>Table of content</h3>
+
+
+<input class="ctrlFilter" type="checkbox" id="test-chkFilter2" value="sintro" checked /> <label for="test-chkFilter2">Standard intro</label>
+<br />
+
+<input class="ctrlFilter" type="checkbox" id="test-chkFilter3" value="guidelines" checked /> <label for="test-chkFilter3">Guidlines</label>
+<br />
+
+<input class="ctrlFilter" type="checkbox" id="test-chkFilter4" value="related" checked /> <label for="test-chkFilter4">Related guidelines</label>
+<br />
+
+
+<input class="ctrlFilter" type="checkbox" id="test-chkFilter" value="guideline" checked /> <label for="test-chkFilter">6.1 Leverage open standards and embrace leading practices, including use of open source software where appropriate
+</label>
+<br />
+
+
+
+<h3>Sub section filtering for section 6.1</h3>
+
+
+
+<input class="ctrlFilter" type="checkbox" id="test-8" value="intro" checked /> <label for="test-8">introduction</label>
+<br />
+
+<input class="ctrlFilter" type="checkbox" id="test-3" value="checklist" checked /> <label for="test-3">checklist</label> <span class="text-muted">(The section heading remain visible because they are marked at such)</span>
+<br />
+
+<input class="ctrlFilter" type="checkbox" id="test-4" value="guides" checked /> <label for="test-4">guides</label>
+<br />
+
+<input class="ctrlFilter" type="checkbox" id="test-5" value="solutions" checked /> <label for="test-5">solutions</label>
+<br />
+
+<input class="ctrlFilter" type="checkbox" id="test-6" value="similar" checked /> <label for="test-6">similar</label>
+<br />
+
+<p class="text-muted">Check means it is displayed, uncheck means the content are hidden.</p>
+
+<h3>Exclusive filter</h3>
+<input class="ctrlFilter" type="checkbox" id="test-7" value="architectural" /> <label for="test-7">Build it rights</label>
+<br />
+
+<p class="text-muted">The exclusive filter that is toggled is defined by how the tagging is done. An exclusive tag will be prefixed with an asterik <code>*</code>. Exclusive filter will only hide the sibling.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
 
 <section id="feedback-popup" class="mfp-hide modal-dialog modal-content overlay-def">
   <header class="modal-header">
@@ -78,11 +182,13 @@ script_pgbttm2_src: 2018-assets/2018-7-proto-2.js
 
 <fieldset>
   <legend>Section type</legend>
-  <ul class="list-unstyled">
-  	<!-- 
+  <ul class="list-unstyled"
+
+  	data-wb5-developper-note='
 		
 		The attribute "aria-controls" can not be used on those checkbox, because their action are not immediate. That is why the attribute "data-wb5-link" is used, which contains IDs refs.
-  	-->
+
+  	'>
     <li><input checked="checked" type="checkbox" id="dpgn-section-intro-standard" data-wb5-link="testID" data-wb5-group="" /> <label for="dpgn-section-intro-standard">Introduction (for a standard)</label></li>
     <li><input type="checkbox" id="dpgn-section-guidelines" data-wb5-link="testID" /> <label for="dpgn-section-guidelines">Guidelines (list for a standard)</label></li>
     <li><input type="checkbox" id="dpgn-section-guidelines-related" data-wb5-link="testID" /> <label for="dpgn-section-guidelines-related">Related guidelines (list for a standard)</label></li>
@@ -118,6 +224,8 @@ script_pgbttm2_src: 2018-assets/2018-7-proto-2.js
 </form>
 </div>
 </section>
+-->
+
 
 <div class="text-center">
 <ul class="pagination">  
@@ -180,7 +288,7 @@ script_pgbttm2_src: 2018-assets/2018-7-proto-2.js
 		<p>
 		<strong>[TODO: Add/revise introductory text]</strong>
 		</p>
-		<details class="hide" data-wb5-tags="content-details">
+		<details class="wb-fltr-out2" data-wb5-tags="content-details">
 			<summary>Content details</summary>
 			<ul>
 			<li><strong>Digital&#160;Standard:</strong> <a href="/digital-playbook-guide-numerique/en/6-use-open-standards-solutions.html">6. Use open standards and solutions (draft)</a></li>
@@ -191,7 +299,7 @@ script_pgbttm2_src: 2018-assets/2018-7-proto-2.js
 		<p>
 		Build technology that uses open standards to ensure your system works and communicates with other products or systems, and can easily be upgraded and expanded.
 		</p>
-		<details class="hide" data-wb5-tags="content-details">
+		<details class="wb-fltr-out2" data-wb5-tags="content-details">
 			<summary>Content details</summary>
 			<ul>
 			<li><strong>Digital&#160;Standard:</strong> <a href="/digital-playbook-guide-numerique/en/6-use-open-standards-solutions.html">6. Use open standards and solutions (draft)</a></li>
@@ -202,7 +310,7 @@ script_pgbttm2_src: 2018-assets/2018-7-proto-2.js
 		<p>
 		Adopting and using open standards means you can:
 		</p>
-		<details class="hide" data-wb5-tags="content-details">
+		<details class="wb-fltr-out2" data-wb5-tags="content-details">
 			<summary>Content details</summary>
 			<ul>
 			<li><strong>Digital&#160;Standard:</strong> <a href="/digital-playbook-guide-numerique/en/6-use-open-standards-solutions.html">6. Use open standards and solutions (draft)</a></li>
@@ -213,7 +321,7 @@ script_pgbttm2_src: 2018-assets/2018-7-proto-2.js
 		<ul class="lst-spcd">
 		<li>
 		move between different technologies when you need to, avoiding vendor lock-in
-		<details class="hide" data-wb5-tags="content-details">
+		<details class="wb-fltr-out2" data-wb5-tags="content-details">
 			<summary>Content details</summary>
 			<ul>
 			<li><strong>Digital&#160;Standard:</strong> <a href="/digital-playbook-guide-numerique/en/6-use-open-standards-solutions.html">6. Use open standards and solutions (draft)</a></li>
@@ -224,7 +332,7 @@ script_pgbttm2_src: 2018-assets/2018-7-proto-2.js
 		</li>
 		<li>
 		quickly and easily change your service when you need to
-		<details class="hide" data-wb5-tags="content-details">
+		<details class="wb-fltr-out2" data-wb5-tags="content-details">
 			<summary>Content details</summary>
 			<ul>
 			<li><strong>Digital&#160;Standard:</strong> <a href="/digital-playbook-guide-numerique/en/6-use-open-standards-solutions.html">6. Use open standards and solutions (draft)</a></li>
@@ -268,12 +376,12 @@ script_pgbttm2_src: 2018-assets/2018-7-proto-2.js
 		</p>
 	</div>
 	<section data-wb5-tags="checklist">
-		<h3><span class="glyphicon glyphicon-check text-success" aria-hidden="true"></span>
+		<h3 class="wb-fltr-fade"><span class="wb-fltr-fade glyphicon glyphicon-check text-success" aria-hidden="true"></span>
 		Checklist</h3>
 		<p>
 		<strong>[TODO: Add/revise checklist items]</strong>
 		</p>
-		<details class="hide" data-wb5-tags="content-details">
+		<details class="wb-fltr-out2" data-wb5-tags="content-details">
 			<summary>Content details</summary>
 			<ul>
 			<li><strong>Digital&#160;Standard:</strong> <a href="/digital-playbook-guide-numerique/en/6-use-open-standards-solutions.html">6. Use open standards and solutions (draft)</a></li>
@@ -294,22 +402,22 @@ script_pgbttm2_src: 2018-assets/2018-7-proto-2.js
 		<li>
 		Ensure that software can be deployed on a variety of commodity hardware types
 		</li>
-		<li data-wb5-etags="architectural">
+		<li data-wb5-tags="*architectural">
 		Use open source standards, solutions, components, and leading practices.
 		</li>
-		<li data-wb5-etags="architectural">
+		<li data-wb5-tags="*architectural">
 		Enforce this order of preference: open source first, then platform-agnostic COTS, then proprietary COTS, and lastly custom-built.
 		</li>
-		<li data-wb5-etags="architectural">
+		<li data-wb5-tags="*architectural">
 		Design for resiliency.
 		</li>
-		<li data-wb5-etags="architectural">
+		<li data-wb5-tags="*architectural">
 		Ensure response times meet user needs, and critical services are highly available.
 		</li>
-		<li data-wb5-etags="architectural">
+		<li data-wb5-tags="*architectural">
 		Support zero-downtime deployments for planned and unplanned maintenance.
 		</li>
-		<li data-wb5-etags="architectural">
+		<li data-wb5-tags="*architectural">
 		Use distributed architectures, assume failure will happen, handle errors gracefully, and monitor actively.
 		</li>
 		<li>
@@ -356,7 +464,7 @@ script_pgbttm2_src: 2018-assets/2018-7-proto-2.js
 		</li>
 		<li data-wb5-tags="automated">
 		Before going into production, develop the appropriate processes to ensure that training data is tested for unintended biases and other factors that may unfairly impact outcomes.
-		<details data-wb5-tags="content-details" class="hide">
+		<details data-wb5-tags="content-details" class="wb-fltr-out2">
 			<summary>Content details</summary>
 			<ul>
 			<li><strong>Digital&#160;Standard:</strong> <a href="/digital-playbook-guide-numerique/en/6-use-open-standards-solutions.html">6. Use open standards and solutions (draft)</a></li>
@@ -374,7 +482,7 @@ script_pgbttm2_src: 2018-assets/2018-7-proto-2.js
 		<p>
 		<strong>[TODO: Add/revise implementation guide items]</strong>
 		</p>
-		<details data-wb5-tags="content-details" class="hide">
+		<details data-wb5-tags="content-details" class="wb-fltr-out2">
 			<summary>Content details</summary>
 			<ul>
 			<li><strong>Digital&#160;Standard:</strong> <a href="/digital-playbook-guide-numerique/en/6-use-open-standards-solutions.html">6. Use open standards and solutions (draft)</a></li>
@@ -392,10 +500,10 @@ script_pgbttm2_src: 2018-assets/2018-7-proto-2.js
 		<li>
 		<a href="https://www.tresor.gouv.qc.ca/fileadmin/PDF/ressources_informationnelles/logiciels_libres/ctp.pdf">Logiciels libres et ouverts - Guide d’analyse du coût total de propriété (Québec)</a>
 		</li>
-		<li data-wb5-etags="architectural">
+		<li data-wb5-tags="*architectural">
 		<a href="https://www.gov.uk/service-manual/technology/working-with-open-standards">Working with open standards (Service Manual (UK))</a>
 		</li>
-		<li data-wb5-etags="architectural">
+		<li data-wb5-tags="*architectural">
 		<a href="https://www.gov.uk/service-manual/technology/choosing-technology-an-introduction">Choosing technology: an introduction (Service Manual (UK))</a>
 		</li>
 		<li>
@@ -502,10 +610,10 @@ script_pgbttm2_src: 2018-assets/2018-7-proto-2.js
 		<li>
 		<a href="https://www.dta.gov.au/standard/7-open-standards-and-common-platforms/">7. Use open standards and common platforms (Digital Service Standard (AU))</a>
 		</li>
-		<li data-wb5-etags="architectural">
+		<li data-wb5-tags="*architectural">
 		<a href="https://canada-ca.github.io/digital-playbook-guide-numerique/views-vues/gc-earb-ceai/fr/ceai-gc.html#use-open-standards-and-solutions-by-default">1. Use Open Standards and Solutions by Default (Digital Architectural Standards (GC))</a>
 		</li>
-		<li data-wb5-etags="architectural">
+		<li data-wb5-tags="*architectural">
 		<a href="https://canada-ca.github.io/digital-playbook-guide-numerique/views-vues/gc-earb-ceai/en/gc-earb.html#design-for-performance-availability-and-scalability">5. Design for Performance, Availability, and Scalability (Digital Architectural Standards (GC))</a>
 		</li>
 		<li>
@@ -560,7 +668,7 @@ script_pgbttm2_src: 2018-assets/2018-7-proto-2.js
 		</ul>
 	</div>
 	<section data-wb5-tags="checklist">
-		<h3><span class="glyphicon glyphicon-check text-success" aria-hidden="true"></span>
+		<h3 class="wb-fltr-fade"><span class="wb-fltr-fade glyphicon glyphicon-check text-success" aria-hidden="true"></span>
 		Checklist</h3>
 		<p>
 		<strong>[TODO: Add/revise checklist items]</strong>
@@ -582,35 +690,35 @@ script_pgbttm2_src: 2018-assets/2018-7-proto-2.js
 		<li>
 		Static assets are served through a content delivery network <strong>(Digital Services Playbook (US))</strong>
 		</li>
-		<li data-wb5-etags="architectural">
+		<li data-wb5-tags="*architectural">
 		Leverage and reuse existing solutions, components, and processes.
 		</li>
-		<li data-wb5-etags="architectural">
+		<li data-wb5-tags="*architectural">
 		Select enterprise and cluster solutions over department-specific solutions.
 		</li>
-		<li data-wb5-etags="architectural">
+		<li data-wb5-tags="*architectural">
 		Achieve simplification by minimizing duplication of components and adhering to relevant standards.
 		</li>
-		<li data-wb5-etags="architectural">
+		<li data-wb5-tags="*architectural">
 		Inform the GC EARB about departmental investments and innovations.
 		</li>
-		<li data-wb5-etags="architectural">
+		<li data-wb5-tags="*architectural">
 		Run applications in containers.
 		</li>
-		<li data-wb5-etags="architectural">
+		<li data-wb5-tags="*architectural">
 		Leverage enterprise digital exchange components such as the GC Service Bus, Digital Exchange Platform, and the API Store, based on fit-for-use.
 		</li>
 		</ul>
 		<section>
 		<h5 id="cloud-services">Cloud services</h5>
 		<ul class="lst-spcd">
-		<li data-wb5-etags="architectural">
+		<li data-wb5-tags="*architectural">
 		Enforce this order of preference: Software as a Service (SaaS) first, then Platform as a Service (PaaS), and lastly Infrastructure as a Service (IaaS).
 		</li>
-		<li data-wb5-etags="architectural">
+		<li data-wb5-tags="*architectural">
 		Enforce this order of preference: Public cloud first, then Hybrid cloud, then Private cloud, and lastly non-cloud (on-premises) solutions.
 		</li>
-		<li data-wb5-etags="architectural">
+		<li data-wb5-tags="*architectural">
 		Design for cloud mobility and develop an exit strategy to avoid vendor lock-in.
 		</li>
 		<li>
@@ -641,35 +749,35 @@ script_pgbttm2_src: 2018-assets/2018-7-proto-2.js
 		<strong>[TODO: Add/revise implementation guide items]</strong>
 		</p>
 		<ul class="lst-spcd">
-		<li data-wb5-etags="architectural">
+		<li data-wb5-tags="*architectural">
 		<a href="https://www.canada.ca/en/treasury-board-secretariat/services/government-communications/canada-content-information-architecture-specification.html">Canada.ca Content and Information Architecture Specification</a>
 		</li>
-		<li data-wb5-etags="architectural">
+		<li data-wb5-tags="*architectural">
 		<a href="https://www.canada.ca/en/treasury-board-secretariat/services/government-communications/canada-content-style-guide.html">Canada.ca Content Style Guide</a>
 		</li>
 		</ul>
 		<section>
 		<h5 id="cloud-services-1">Cloud services</h5>
 		<ul class="lst-spcd">
-		<li data-wb5-etags="architectural">
+		<li data-wb5-tags="*architectural">
 		<a href="https://www.canada.ca/en/treasury-board-secretariat/services/information-technology/cloud-computing/government-canada-right-cloud-selection-guidance.html">Government of Canada Right Cloud Selection Guidance</a>
 		</li>
-		<li data-wb5-etags="architectural">
+		<li data-wb5-tags="*architectural">
 		<a href="https://www.canada.ca/en/treasury-board-secretariat/services/information-technology/cloud-computing/government-canada-security-control-profile-cloud-based-it-services.html">Government of Canada Security Control Profile for Cloud-Based GC IT Services</a>
 		</li>
-		<li data-wb5-etags="architectural">
+		<li data-wb5-tags="*architectural">
 		<a href="https://www.canada.ca/en/treasury-board-secretariat/services/information-technology/cloud-computing/government-canada-cloud-adoption-strategy.html">Government of Canada Cloud Adoption Strategy</a>
 		</li>
-		<li data-wb5-etags="architectural">
+		<li data-wb5-tags="*architectural">
 		<a href="https://www.canada.ca/en/treasury-board-secretariat/services/information-technology/cloud-computing/gc-white-paper-data-sovereignty-public-cloud.html">Government of Canada White Paper: Data Sovereignty and Public Cloud</a>
 		</li>
-		<li data-wb5-etags="architectural">
+		<li data-wb5-tags="*architectural">
 		<a href="https://www.canada.ca/en/treasury-board-secretariat/services/information-technology/cloud-computing/cloud-security-risk-management-approach-procedures.html">Government of Canada Cloud Security Risk Management Approach and Procedures</a>
 		</li>
-		<li data-wb5-etags="architectural">
+		<li data-wb5-tags="*architectural">
 		<a href="https://www.canada.ca/en/treasury-board-secretariat/services/access-information-privacy/security-identity-management/direction-secure-use-commercial-cloud-services-spin.html">Direction on the Secure Use of Commercial Cloud Services: Security Policy Implementation Notice (SPIN)</a>
 		</li>
-		<li data-wb5-etags="architectural">
+		<li data-wb5-tags="*architectural">
 		<a href="https://www.canada.ca/en/treasury-board-secretariat/services/information-technology/policy-implementation-notices/direction-electronic-data-residency.html">Direction for Electronic Data Residency</a>
 		</li>
 		</ul>
@@ -682,12 +790,12 @@ script_pgbttm2_src: 2018-assets/2018-7-proto-2.js
 		<strong>[TODO: Add/revise reusable solutions]</strong>
 		</p>
 		<ul class="lst-spcd">
-		<li data-wb5-etags="architectural">
+		<li data-wb5-tags="*architectural">
 		<a href="http://wet-boew.github.io/wet-boew/index-en.html">Web Experience Toolkit (WET)</a>
 		</li>
 		</ul>
 	</section>
-	<section data-wb5-etags="similar">
+	<section data-wb5-tags="similar">
 		<h3><span class="glyphicon glyphicon-bookmark text-muted" aria-hidden="true"></span>
 		Similar resources</h3>
 		<ul class="lst-spcd">
@@ -700,13 +808,13 @@ script_pgbttm2_src: 2018-assets/2018-7-proto-2.js
 		<li>
 		<a href="http://www.gcpedia.gc.ca/wiki/DDPlayBook_Do#2._Reuse.2C_improve_and_share_technological_solutions_where_appropriate">2. Reuse, improve and share technological solutions where appropriate (Do - Digital Design Playbook (ISED)) (internal to GC only)</a>
 		</li>
-		<li data-wb5-etags="architectural">
+		<li data-wb5-tags="*architectural">
 		<a href="https://canada-ca.github.io/digital-playbook-guide-numerique/views-vues/gc-earb-ceai/en/gc-earb.html#maximize-reuse">2. Maximize Reuse (Digital Architectural Standards (GC))</a>
 		</li>
-		<li data-wb5-etags="architectural">
+		<li data-wb5-tags="*architectural">
 		<a href="https://canada-ca.github.io/digital-playbook-guide-numerique/views-vues/gc-earb-ceai/en/gc-earb.html#enable-interoperability">6. Enable Interoperability (Digital Architectural Standards (GC))</a>
 		</li>
-		<li data-wb5-etags="architectural">
+		<li data-wb5-tags="*architectural">
 		<a href="https://canada-ca.github.io/digital-playbook-guide-numerique/views-vues/gc-earb-ceai/en/gc-earb.html#use-cloud-first">9. Use Cloud First (Digital Architectural Standards Principles (GC))</a>
 		</li>
 		<li>
@@ -737,19 +845,19 @@ script_pgbttm2_src: 2018-assets/2018-7-proto-2.js
 		</p>
 	</div>
 	<section data-wb5-tags="checklist" class="dpgn-section-checklist">
-		<h3><span class="glyphicon glyphicon-check text-success" aria-hidden="true"></span>
+		<h3 class="wb-fltr-fade"><span class="glyphicon glyphicon-check text-success" aria-hidden="true"></span>
 		Checklist</h3>
 		<p>
 		<strong>[TODO: Add/revise checklist items]</strong>
 		</p>
 		<ul class="lst-spcd">
-		<li data-wb5-etags="architectural" class="dpgn-digital-architectural-enable-interoperability-1 dpgn-digital-architectural">
+		<li data-wb5-tags="*architectural" class="dpgn-digital-architectural-enable-interoperability-1 dpgn-digital-architectural">
 		Expose all functionality as services.
 		</li>
-		<li data-wb5-etags="architectural" class="dpgn-digital-architectural-enable-interoperability-2 dpgn-digital-architectural">
+		<li data-wb5-tags="*architectural" class="dpgn-digital-architectural-enable-interoperability-2 dpgn-digital-architectural">
 		Use microservices built around business capabilities. Scope each service to a single purpose.
 		</li>
-		<li data-wb5-etags="architectural" class="dpgn-digital-architectural-enable-interoperability-3 dpgn-digital-architectural">
+		<li data-wb5-tags="*architectural" class="dpgn-digital-architectural-enable-interoperability-3 dpgn-digital-architectural">
 		Run each service in its own process and have it communicate with other services through a well-defined interface, such as an HTTPS-based application programming interface (API).
 		</li>
 		<li>
@@ -779,13 +887,13 @@ script_pgbttm2_src: 2018-assets/2018-7-proto-2.js
 		<strong>[TODO: Add/revise implementation guide items]</strong>
 		</p>
 		<ul class="lst-spcd">
-		<li data-wb5-etags="architectural" class="dpgn-digital-architectural dpgn-digital-architectural-open-standards-solutions dpgn-digital-architectural-enable-interoperability">
+		<li data-wb5-tags="*architectural" class="dpgn-digital-architectural dpgn-digital-architectural-open-standards-solutions dpgn-digital-architectural-enable-interoperability">
 		<a href="https://www.gov.uk/guidance/gds-api-technical-and-data-standards">API technical and data standards (Government Digital Service (UK))</a>
 		</li>
-		<li data-wb5-etags="architectural" class="dpgn-digital-architectural dpgn-digital-architectural-enable-interoperability">
+		<li data-wb5-tags="*architectural" class="dpgn-digital-architectural dpgn-digital-architectural-enable-interoperability">
 		<a href="https://gdstechnology.blog.gov.uk/2018/02/13/developing-cross-government-api-data-and-technical-standards/">Developing cross-government API data and technical standards (Government Digital Service blog (UK))</a>
 		</li>
-		<li data-wb5-etags="architectural" class="dpgn-digital-architectural dpgn-digital-architectural-open-standards-solutions dpgn-architectural-enable-interoperability">
+		<li data-wb5-tags="*architectural" class="dpgn-digital-architectural dpgn-digital-architectural-open-standards-solutions dpgn-architectural-enable-interoperability">
 		<a href="https://www.dta.gov.au/standard/design-guides/api/">Application Programming Interfaces (APIs) (Digital Service Standard (AU))</a>
 		</li>
 		</ul>
@@ -819,7 +927,7 @@ script_pgbttm2_src: 2018-assets/2018-7-proto-2.js
 		</p>
 	</div>
 	<section data-wb5-tags="checklist" class="dpgn-section-checklist">
-		<h3><span class="glyphicon glyphicon-check text-success" aria-hidden="true"></span>
+		<h3 class="wb-fltr-fade"><span class="glyphicon glyphicon-check text-success" aria-hidden="true"></span>
 		Checklist</h3>
 		<p>
 		<strong>[TODO: Add/revise checklist items]</strong>

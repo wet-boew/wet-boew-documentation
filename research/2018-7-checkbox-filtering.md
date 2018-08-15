@@ -714,7 +714,10 @@ View
 
 ## Integration to WET filter - Prototype 3
 
-Todo:
+[Working example](2018-7-prototype-3.html)
+
+Todo was:
+* Reuse existing checkbox filtering code (prototype 1)
 * Remove or replace buisness content specific
 * Remove the URL parsing, redirect to the URL mapping instead
 * Update the mecanism on how the content is tagged for filtering and how the filtering user interface is created.
@@ -723,4 +726,578 @@ Todo:
 * Add support for "live" filtering, whitout requiring the user to push a button called "Apply"
 * Use data-attribute instead of class name
 * Let exclusive filters be defined by how the content was tagged and not how the controller is implemented.
+
+
+Findings
+* Didn't re-use prototype 1 code
+	* Contains multiple module
+		* Checkbox grouping check/uncheck
+		* Filter set by URL query
+		* Save/Restore Filter
+	* Hard link between the checkbox id and the CSS class to apply filtering
+	* To not leverage the ```value``` attribute on checkbox
+	* To not leverage the ```checked``` state of the checkbox. just if got clicked
+	* All check vs all uncheck are expressing the same state equivalent to all check.
+	* Current checkbox state do not represent current state of the filtered page. Because if require the user to apply the filter.
+	* The checkbox filter are in a popup. So:
+		* There is a high risk of an user can assume the checkbox state represent the current filtered state of the page
+		* That is an issue if the checkbox state has changed but not applied, then the overlay is closed then re-opened.
+	* Cannot reset to the default checked states.
+	* Exclusive filter behaviours is mixed and unclear by reviewing the code of how it is applied.
+* Live filtering work well
+* Exclusive filter are defined in the content.
+* Not filter are defined in the content
+* Asterik is used to define an exclusive filter
+* Exclamation mark is used to defined a "not" filter.
+* The initial filtered state of the page is defined by the web author.
+* Left for next prototype:
+	* **Filter grouping:** A mecanism will need to be build in to allow that. See use case where there is checkboxes and it is also posible to only select one items. The field name will be use for grouping.
+	* **Button "Apply filter":** Applying filter async require to scan all the input field and build a filter query
+	* **Filter through query string:** Require to update the state of related input field
+	* **Save filter state:** Require to update the state of related input field.
+	* **Develop a local filter store:** This is to enable applying async filter, query filter and saving filter
+	* **Filter exclusive:** Allow to use a "Only" button where exclusively select one filter in the group
+	* **Filter reverse:** Use the exclamation mark to reverse the default check state of the input.
+* The author can let some pieces force display when the parent container is hidden. 
+	* Styled : Opacity set to 50% and font-size forced to be 1em.
+* Exclusive filter only hide the sibling.
+* Exclusive not filter are not supported.
+* A filter tag applied will show the section. [ If checked, it means it is displayed ]
+* A filter tag removed will hide the section. [ If unchecked, it means it is hidden and the proper CSS class name is used in the content.]
+
+
+### How it works
+
+On page load: the content must be in sync with the default state of the filtering UI.
+
+Content (prep-work)
+* Content are tagged with the data attribute ```data-wb5-tags```
+* The content of ```data-wb5-tags``` is a set of unique space delimited tokens
+* The filtering behaviour is applied on how the content is tagged
+* A block of content can be tagged "not tag". So it will desapear when that tag is not present.
+* The not tag is expressed by prefixing the tag with an exclamation mark like: "!guide"
+* An exclusive tag is identify by an asterix prefix like "*guide"
+* An exclusive tag hide sibling*
+* It is up to the web author to manage and organise how the content is tagged and to ensure there is no conflict.
+
+Filtering UI
+* The filtering UI are unaware of the current page state. So the default UI state must be put in sync by the web author when creating the page.
+* The filtering UI apply or remove filtering tag.
+* The "value" of the input is used to toggle the state of the "filtered by" tag list. 
+* A checked checkbox have the "on" state, which means the content is visible. The tag are not present in the filtered by tag list.
+* An unchecked checkbox have the "off" state, which means the content is hidden. The tag is added to the filtered by tag list.
+
+Behaviour
+* Assume the default state of the content match the default state of the filtering UI
+* State **off:** The content is hidden, the CSS class ```wb-fltr-out``` is added to tagged content
+* State **on:** The content is visible, the CSS class ```wb-fltr-out``` is removed to tagged content
+* State **off - Not tag:** The content is visible, the CSS class ```wb-fltr-out``` is removed to tagged content
+* State **on - Not tag:** The content is hidden, the CSS class ```wb-fltr-out``` is added to tagged content
+* State **on - Exclusive tag:** The content is visible and untagged exclusive sibling are hidden
+* State **off - Exclusive tag:** The content is visible and sibling too, like when the content is not tagged
+* State **on - Exclusive not tag:** Not supported, use regular tagging to emulate a similar behaviour.
+* State **off - Exclusive not tag:** Not supprted.
+
+Accessibilty
+* Each different state that is reproducible by doing all filtering combinaison must be tested. Especially when:
+	* Filter can applied across other filterable section with different tag.
+	* Filterable section contains heading
+	* Exclusive tagging
+
+Usability
+* Web author can add the CSS class ```wb-fltr-fade``` to fade a persisting header of an hidden section. Like the when the "checklist" section are hidden in the prototype.
+
+
+
+## Integration to WET filter - Prototype 4
+
+
+## Intergration to WET filter - Edge prototype
+
+Same as prototype 3, but initiatialized work to add an "Apply button" and groupping support
+
+{::nomarkdown}
+{% raw %}
+<details>
+	<summary>HTML - UI with the apply button</summary>
+	<pre><code>&lt;form&gt;
+
+&lt;!-- content-details --&gt;
+	&lt;h2&gt;Development Stage&lt;/h2&gt;
+
+	&lt;ul&gt;
+		&lt;li&gt;&lt;input type="checkbox" id="finput-1" value="alpha" /&gt; &lt;label for="finput-1"&gt;Alpha&lt;/label&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;input type="checkbox" id="finput-2" value="beta" /&gt; &lt;label for="finput-2"&gt;Beta&lt;/label&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;input type="checkbox" id="finput-3" value="live" /&gt; &lt;label for="finput-3"&gt;Live&lt;/label&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+
+
+	&lt;h2&gt;Section Type&lt;/h2&gt;
+
+	&lt;ul&gt;
+		&lt;li&gt;&lt;input type="checkbox" id="finput-4" value="sintro" checked /&gt; &lt;label for="finput-4"&gt;Introduction (for a standard)&lt;/label&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;input type="checkbox" id="finput-5" value="guidelines" checked /&gt; &lt;label for="finput-5"&gt;Guidelines (list for a standard)&lt;/label&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;input type="checkbox" id="finput-6" value="related" checked /&gt; &lt;label for="finput-6"&gt;Related guidelines (list ofr a standard)&lt;/label&gt;&lt;/li&gt;
+
+		&lt;li&gt;&lt;input type="checkbox" id="finput-7" /&gt; &lt;label for="finput-7"&gt;Guideline (for a standard)&lt;/label&gt;
+
+			&lt;ul&gt;
+				&lt;li&gt;&lt;input type="checkbox" id="finput-8" value="intro" checked /&gt; &lt;label for="finput-8"&gt;Introduction (for a guideline)&lt;/label&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;input type="checkbox" id="finput-9" value="checklist" checked /&gt; &lt;label for="finput-9"&gt;Checklist (for a guideline)&lt;/label&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;input type="checkbox" id="finput-10" value="guides" checked /&gt; &lt;label for="finput-10"&gt;Implementation guides (for a guideline)&lt;/label&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;input type="checkbox" id="finput-11" value="solutions" checked /&gt; &lt;label for="finput-11"&gt;Reusable solutions (for a guideline)&lt;/label&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;input type="checkbox" id="finput-12" value="similar" checked /&gt; &lt;label for="finput-12"&gt;Similar resoures (for a guideline)&lt;/label&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+
+		&lt;/li&gt;
+	&lt;/ul&gt;
+
+	&lt;h2&gt;Exclusive filters&lt;/h2&gt;
+
+	&lt;ul&gt;
+		&lt;li&gt;&lt;input type="checkbox" id="finput-13" value="architectural" /&gt; &lt;label for="finput-13"&gt;Build it rights&lt;/label&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+
+	&lt;input type="button"  aria-controls="testID" value="Apply filters" /&gt;
+&lt;/form&gt;</code></pre>
+</details>
+
+<details>
+	<summary>Javascript - Source code</summary>
+	<pre><code>( function( $, window, document, wb ) {
+"use strict";
+
+// The filter plugin is initialized on each target. So the "Result Filter" working space are defined by default.
+
+// Let find their controler's
+
+var currentFilterList = [];
+
+var store = {};
+
+var defaultStore = {
+		filters: {},
+		filterGroup: [],
+		applied: {
+			filters: [],
+			filterGroup: []
+		}
+	};
+
+window.mystore = store;
+
+
+var store2 = {
+	related: [],
+	relatedExclusive: [],
+	relatedNot: [],
+	relatedExclusiveRem: []
+}
+
+// What happen when there is multiple filter under the same field name
+//	- Group them together
+//	- Apply any filter rule
+// OR
+//	- Get all the value for the group for each input state
+//	- Build the filter
+//
+// Like filter with the same named group are "AND" operator
+// Question: Do we require the field to have a name in order to be in scope????? That is necessary for a form submit. OR no name means no groupping???
+
+
+
+
+// Initialize the result set, for binding
+
+
+// The optimal way to set the plugin it is on the container itself, it will be less performant if the plugin are set on the controller directly.
+
+var componentName = "wb-contentfilter",
+	selector = "." + componentName,
+	controlerName = componentName + "-ctrl",
+	selectorCtrl = "." + controlerName,
+	initEvent = "wb-init" + selector,
+	$document = wb.doc,
+	defaults = { },
+	i18n, i18nText,
+
+	init = function( event ) {
+		var elm = wb.init( event, componentName, selector ),
+			$elm,
+			settings;
+
+		if ( elm ) {
+			$elm = $( elm );
+
+			settings = $.extend( true, {}, defaults, window[ componentName ], wb.getData( $elm, componentName ) );
+			$elm.data( settings );
+
+
+			if ( !elm.id ) {
+				elm.id = wb.getId();
+			}
+
+
+			// Find the controlers
+			//var controlers = $.find("[aria-controls=" + elm.id + "], [data-wb5-link=" + elm.id + "]");
+			var controlers = $.find("[aria-controls=" + elm.id + "]");
+
+			if ( controlers.length === 0 ) {
+				console.warn( "Need to add a default controller");
+			}
+
+			// Add a class for event hook.
+			$( controlers ).addClass( controlerName );
+
+			// Debug: Log all the controler
+			console.log( controlers );
+
+			// Create the store working space for this instance
+			store[ elm.id ] = $.extend( true, {}, defaultStore );
+
+
+			// TODO: Restore a saved state
+
+			wb.ready( $elm, componentName );
+		}
+	};
+
+function GetFilterValue( elm ) {
+	return {
+		fTag: elm.value,
+		state: !!( elm.checked || elm.hasAttributes( "data-wb5-checked") )
+	}
+}
+
+$document.on( "click", "input:checkbox.ctrlFilter" + "" + "", function( event )  {
+
+	var elm = event.currentTarget,
+		filterTag = elm.value,
+		state = !!elm.checked,
+		elmGroupName = elm.name,
+		filters = [];
+
+	// Retreive all filter in the same group
+	if ( elmGroupName ) {
+		var inputs = document.querySelectorAll( "[name=" + elmGroupName + "]" );
+
+		for( var i = 0; i < inputs.length; i++ ) {
+			filters.push( GetFilterValue( inputs[ i ] ) )
+		}
+
+	} else {
+		filters.push( GetFilterValue( elm ) );
+	}
+
+	applyFilter( filterTag, state)
+});
+
+
+
+/*
+
+		filters = [
+			[
+tag1			{ fTag: "tag1", state: true },   // tag1 AND tag2 AND tag3
+tag2			{ fTag: "tag2", state: false },  // tag1 AND tag2 AND tag3
+tag3			{ fTag: "tag3", state: true }    // tag1 AND tag2 AND tag3
+			],
+			[
+tag4			{ fTag: "tag4", state: true }
+			]	
+		]
+
+
+Here the boolean operation
+( tag1 AND tag2 AND tag3 ) OR tag4
+
+
+If "tag1" value would be something like "tag1 tag5" then
+
+( ( tag1 OR tag5) AND tag2 AND tag3 ) OR tag4
+
+If "tag1" value would be something like "tag1&tag5" then
+
+( ( tag1 AND tag5 ) AND tag2 AND tag3 ) OR tag4
+
+
+------ Or a structure like
+
+filters = {
+	name: [
+		{ Filter object },
+		{ Filter object }
+	],
+	fieldID: [
+		{ Filter object }
+	],
+	GeneratedID: [
+		{ Filter object }
+	]
+}
+
+// GeneratedID are not state that can be saved.
+// A structure like that will allow to "overwrite" existing filters.
+
+
+*/
+
+
+
+// Build list of filters, in the store
+// Then apply the filters
+
+
+// Is this filter are in "on" or "off" state?
+// If in "on" state
+// 		-> Normal: It will show the section
+//		-> Not: It will hide the section
+// If in "off" state
+//		-> Normal: It will hide the section
+//		-> Not: It will show the section
+//
+// If in Exclusive "on" state
+//		-> Normal: Will hide all the sibling and show only itseft
+// If in Exclusive "off" state
+//		-> Normal: Will show all the sibling and show itseft
+function applyFilter( filterTag, state ) {
+
+	if ( ! filterTag ) {
+		return;
+	}
+
+	var currentFilter = {};
+	// Retreive current filter and only apply new filter
+
+	// Get potential related elements
+	var relatedPotential = document.querySelectorAll( "[data-wb5-tags*=" + filterTag + "]" );
+	var related = [],
+		relatedExclusive = [],
+		relatedNot = [],
+		relatedExclusiveRem = [];
+
+	// Filter down the ones that match
+	for( var i = 0; i < relatedPotential.length; i++ ) {
+		var currentElm = relatedPotential[ i ];
+
+		var dtTags = currentElm.dataset.wb5Tags,
+			tagList = dtTags.split( " " );
+
+		for( var j = 0; j < tagList.length; j++ ) {
+
+			var tag = tagList[ j ],
+				lastIndex = tag.lastIndexOf( filterTag );
+
+			if ( lastIndex === -1 ) {
+				continue;
+			}
+
+			// Validate the type of filter
+			if ( filterTag === tag ) {
+
+				// Related, regular filtering
+				if ( state ) {
+					related.push( currentElm );
+				} else {
+					relatedNot.push( currentElm );
+				}
+				break;
+			} else if ( "*" + filterTag === tag ) {
+
+				// Exclusive tag
+				if ( state ) {
+					relatedExclusive.push( currentElm );
+				} else {
+					relatedExclusiveRem.push( currentElm );
+				}
+				break;
+			} else if ( "!" + filterTag === tag ) {
+
+				// Not tag
+				if ( state ) {
+					relatedNot.push( currentElm );
+				} else {
+					related.push( currentElm );
+				}
+				break;
+			}
+		}
+	}
+
+	// Order of applying filter
+	//
+	// 1. Apply Exclusive filter
+	// 2. Apply Exclusive Not filter
+	// 3. Apply filter
+	// 4. Apply Not filter
+
+	// For exclusive, Add a tag to the element, then add a CSS to the parent which will hide all the children except the one that match the subCSS class.
+
+	// Add exclusive filter
+	for( var i = 0; i < relatedExclusive.length; i ++ ) {
+		var currentElm = relatedExclusive[ i ];
+
+		// Hide each sibling that is not scoped in the related Exclusive
+		$( currentElm ).addClass( "wb-fltr-in" );
+
+		// Add the group CSS class
+		currentElm.parentNode.classList.add( "wb-fltr-exclusive" );
+	}
+
+	// Remove Exclusive filter
+	for( var i = 0; i < relatedExclusiveRem.length; i ++ ) {
+		var currentElm = relatedExclusiveRem[ i ];
+
+		// Remove it visible protected state
+		$( currentElm ).removeClass( "wb-fltr-in" );
+
+		// Remove the parent CSS selector only if this was the last children
+		if( !currentElm.parentNode.getElementsByClassName( "wb-fltr-in" ).length ) {
+			$( currentElm.parentNode ).removeClass( "wb-fltr-exclusive" );
+		}
+	}
+
+	// Filter out
+	$( relatedNot ).addClass( "wb-fltr-out2" );
+
+	// Filter in
+	$( related ).removeClass( "wb-fltr-out2" );
+
+};
+
+/*
+// Add or Remove filter when the checkbox is selected
+$document.on( "click", "input:checkbox" + selectorCtrl + ", input:radio" + selectorCtrl, function( event )  {
+
+	// DEBUG: Display the filters
+	var $ul = $( "#currentFilterList" );
+	$ul.empty();
+	$.each( s.filters, function() {
+		$ul.append( "<li>" + this.type + " " + this.filter + "</li>" );
+	});
+
+});
+*/
+
+// Apply the filter
+$document.on( "click", "button" + selectorCtrl + ", input:button" + selectorCtrl, function( event )  {
+
+
+	var elm = event.currentTarget,
+		controlId = elm.getAttribute( "aria-controls" );
+
+	// Get the store
+	var s = store[ controlId ];
+	
+	// Get the inputs
+	var inputs = elm.form.elements;
+
+	// Build the filter for each inputs
+	for( var i = 0; i < inputs.length; i++ ) {
+
+		var input = inputs[ i ],
+			filterTag = input.value,
+			//state = !!( input.checked || input.hasAttributes( "data-wb5-checked") );
+			state = !!input.checked;
+
+			// Current State depend of the input checked state, but if the value is negative "![tag]" Then the state are reversed.
+
+		if ( input !== elm ) {
+			applyFilter( filterTag, state );
+		}
+
+	}
+
+	// Apply the filter
+	// applyFilter( store, controlId );
+
+
+	// Build the list of filters
+	var filters = [];
+
+	// Get a list of filter to apply and a list of filter already applied
+	var filtersToApply = [];
+	for( var k in s.filters ) {
+		if ( s.filters.hasOwnProperty( k ) ) {
+			var filter = s.filters[ k ];
+
+			// Is that filer was already applied? Yes go to the next one
+			if ( s.applied.filters[ k ] ) {
+				filters[ k ] = filter;
+			} else {
+				filtersToApply[ k ] = filter;
+			}
+		}
+	}
+
+	// Remove applied filter that is not needed anymore (We are putting back the page in his initial state)
+	for( var k in s.applied.filters ) {
+		if ( !filters[ k ] ) {
+
+			var filter = s.applied.filters[ k ];
+
+			switch( filter.type ) {
+
+			case "css":
+
+				var elements = window.document.querySelectorAll( filter.filter );
+
+				for ( var i = 0; i < elements.length; i = i + 1 ) {
+					elements[ i ].classList.remove( filter.addClass );
+					if ( filter.remClass ) {
+						elements[ i ].classList.add( filter.remClass );
+					}
+				}
+				break;
+
+			case "search":
+				break;
+			case "jquery":
+				break;
+			}
+		}
+	}
+
+	// Apply the new added filters
+	for( var k in filtersToApply ) {
+
+		var filter = filtersToApply[ k ];
+
+		switch( filter.type ) {
+
+		case "css":
+
+			var elements = window.document.querySelectorAll( filter.filter );
+
+			for ( var i = 0; i < elements.length; i = i + 1 ) {
+				elements[ i ].classList.add( filter.addClass );
+				if ( filter.remClass ) {
+					elements[ i ].classList.remove( filter.remClass );
+				}
+			}
+
+			filters[ k ] = filter;
+			break;
+		case "search":
+			break;
+		case "jquery":
+			break;
+		}
+
+	}
+
+	// Save the list of applied filter
+	s.applied.filters = filters;
+
+});
+
+
+$document.on( "timerpoke.wb " + initEvent, selector, init );
+
+wb.add( selector );
+
+} )( jQuery, window, document, wb );</code></pre>
+</details>
+{% endraw %}
+{:/}
 
