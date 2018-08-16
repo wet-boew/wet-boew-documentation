@@ -9,6 +9,18 @@ modified: 2018-08-10
 Developper notes on adding a checkbox filtering capability in WET
 
 
+## Prototype
+
+* Prototype 1 - [Conceptual prototype - high/medium fidelity](https://canada-ca.github.io/digital-playbook-guide-numerique/views-vues/standards-normes/en/6-use-open-standards-solutions.html)
+* Prototype 2 - [Solution exploratory prototype - low fidelity](2018-7-prototype-2.html)
+* Prototype 3 - [Initial work of integrating with WET4 - medium fidelity](2018-7-prototype-3.html)
+	* Meet only the basic and minimal user requirement
+	* Designed to be extendable to support the other user requirement
+	* For future interoperability, the plugin work by focusing on how the content is designed/created and not on how the filter UI is designed. It's all about how the content is tagged and how the content is styled/organized. It assumed the default state of the filter UI represent the default state of the content.
+	* See all the notes in section bellow
+* Prototype 4 - Cleaner version of prototype 3 ready for WET4 plugin - high fidelity (see the source code in section bellow)
+* Edge prototype - Extension of prototype 3 to support tag grouping filter and asynchrome filtering. (see the source code in section bellow)
+
 ## Requirement
 
 Leverage CSS classes and checkboxes to apply content filtering. A feature like the filter plugin but without keyword filtering through a text field.
@@ -154,9 +166,6 @@ Source code:
 * [WET filter](https://github.com/wet-boew/wet-boew/tree/master/src/plugins/filter)
 * [Digital playbook filter plugin](https://github.com/canada-ca/digital-playbook-guide-numerique/blob/master/assets-atouts/js/filter-interface-filtre.js) (as July 7 - commit de90406)
 
-## Prototype
-
-* [Conceptual prototype - high/medium fidelity](https://canada-ca.github.io/digital-playbook-guide-numerique/views-vues/standards-normes/en/6-use-open-standards-solutions.html)
 
 ## Experimentation
 
