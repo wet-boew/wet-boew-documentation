@@ -3,7 +3,7 @@ published: true
 layout: default-theme-wet-boew-en
 title: 2018-7 - Checkbox filtering
 description: Developper notes on adding a checkbox filtering capability in WET
-modified: 2018-08-10
+modified: 2018-08-17
 ---
 
 Developper notes on adding a checkbox filtering capability in WET
@@ -18,7 +18,8 @@ Developper notes on adding a checkbox filtering capability in WET
 	* Designed to be extendable to support the other user requirement
 	* For future interoperability, the plugin work by focusing on how the content is designed/created and not on how the filter UI is designed. It's all about how the content is tagged and how the content is styled/organized. It assumed the default state of the filter UI represent the default state of the content.
 	* See all the notes in section bellow
-* Prototype 4 - Cleaner version of prototype 3 ready for WET4 plugin - high fidelity (see the source code in section bellow)
+* Prototype 4 - Cleaner version of prototype 3 ready for [WET4 plugin - high fidelity](https://github.com/duboisp/wet-boew/tree/contentfilter) (see the source code in section bellow)
+
 * Edge prototype - Extension of prototype 3 to support tag grouping filter and asynchrome filtering. (see the source code in section bellow)
 
 ## Requirement
@@ -820,6 +821,8 @@ Usability
 
 ## Integration to WET filter - Prototype 4
 
+
+See the progression in [@duboisp fork on Github](https://github.com/duboisp/wet-boew/tree/contentfilter)
 
 ### Source code
 
