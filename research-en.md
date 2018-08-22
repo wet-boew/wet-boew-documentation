@@ -22,7 +22,9 @@ List of finding and ongoing research related to WET and it's features
 * [2018-6 - WB5 exploration 1](research/2018-6-wb5-exploration-1.html)
 	* Status: In progress
 * [2018-7 - Checkbox filtering](research/2018-7-checkbox-filtering.html)
-	* Status: In progress
+	* Status: Experimental stable, ready to be use on production
+* [2018-8 - Save HTML table into CSV](research/2018-8-table-to-csv.html)
+	* Status: Experimental stable, almost ready to be use on production
 
 ## Published report
 
