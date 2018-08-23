@@ -25,6 +25,8 @@ List of finding and ongoing research related to WET and it's features
 	* Status: Experimental stable, ready to be use on production
 * [2018-8 - Save HTML table into CSV](research/2018-8-table-to-csv.html)
 	* Status: Experimental stable, almost ready to be use on production
+* [2018-9 - Suggested Improvements to Build Tools](research/2018-9-grunt.html)
+	* Status: In progress
 
 ## Published report
 
