@@ -33,7 +33,7 @@ define( [ "module/core/object", "module/element" , "module/core/debug"], functio
 
 	function handle( $elm, selector, options ) {
 
-        let properties = ObjectUtil.extend( {}, { eventname: "increment", classname: "active" }, options ),
+        let properties = Object.assign({ eventname: "increment", classname: "active" }, options ),
             children = ElementUtil.nodes( $elm, selector );
 
         ElementUtil.addListener( $elm, "increment decrement",function( event ){

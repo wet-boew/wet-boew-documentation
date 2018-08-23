@@ -42,9 +42,8 @@ define( [ "module/element", "module/core/object" ], function( ElementUtil, Objec
 
 	function handle( $elm, selector, options ) {
 
-		let eventname = ObjectUtil.get( options, "eventname", "click keypress" ),
-	        classname = ObjectUtil.get( options, "toggleclass", "toggle" ),
-		    listener = ( eventname !== "click keypress" )
+		let properties =  Object.assign({ eventname: "click keypress", toggleclass : "toggle" }, options),
+		    listener = ( properties.eventname !== "click keypress" )
                 ? function( event ) { ElementUtil.toggle( classname ) }
                 : function( event ) { if ( a11yClick( event ) ) { ElementUtil.toggle( classname ) } };
 

@@ -79,6 +79,11 @@ Here a list of similar tools that was found on a February 2018 research
 * [Datalist JSON suggestion](https://github.com/wet-boew/GCWeb/tree/master/src/plugins/suggest)
 * (Added on May 28, [suggested on May 23](https://github.com/wet-boew/wet-boew-documentation/pull/69#issuecomment-391518380])) [github/auto-complete-element](https://github.com/github/auto-complete-element)
 
+### Similar tools added on August 6th 2018 
+
+* [typeahead.js - Autocomplete library](http://twitter.github.com/typeahead.js/) ([Source Code](https://github.com/twitter/typeahead.js))
+* [DHX Combo - ComboBox with Autocomplete](https://dhtmlx.com/docs/products/dhtmlxCombo/)
+
 ### Website using custom datalist
 * [http://wet-boew.github.io/themes-dist/GCWeb/demos/suggest/suggest-en.html](http://wet-boew.github.io/themes-dist/GCWeb/demos/suggest/suggest-en.html)
 * [http://www.btb.termiumplus.gc.ca/tpv2alpha/alpha-fra.html?lang=fra](http://www.btb.termiumplus.gc.ca/tpv2alpha/alpha-fra.html?lang=fra) - Reverse engenering suggestion for when typing in the field "Terme à cherche"
