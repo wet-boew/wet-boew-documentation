@@ -19,7 +19,10 @@ Todo:
 
 ## Requirement
 
-Be able to download an HTML table into CSV (Comma Separated Value) Format.
+* **Core:** Be able to download an HTML table into CSV (Comma Separated Value) Format.
+* Support simple table where the first row is the column header and there is no row header.
+* Support table enhanced with the datatable plugin
+
 
 ## Resources
 
