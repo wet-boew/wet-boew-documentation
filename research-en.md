@@ -27,6 +27,8 @@ List of finding and ongoing research related to WET and it's features
 	* Status: Experimental stable, almost ready to be use on production
 * [2018-9 - Suggested Improvements to Build Tools](research/2018-9-grunt.html)
 	* Status: In progress
+* [2018-10 - Trigger a Fieldflow action based on score](2018-10-fieldflow-scoring-trigger.html)
+	* Status: New
 
 ## Published report
 
