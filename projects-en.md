@@ -18,9 +18,10 @@ Updated: 2018-07-26
 * Documenting basic HTML design pattern
 * WCAG 2.1 Level AA conformance check for existing features
 * Evaluate web accessibility compliance for wb5 features
-* **Last updated:** July 26, 2018
-* **Progress check history**: 2018-07-26; 2018-06-20; 2018-05-17; 2018-04-10; 2018-04-03; 2018-03-14; 2018-02-27; 2018-02-20
+* **Last updated:** August 24, 2018
+* **Progress check history**: 2018-08-24; 2018-07-26; 2018-06-20; 2018-05-17; 2018-04-10; 2018-04-03; 2018-03-14; 2018-02-27; 2018-02-20
 * **History:**
+	* (2018-08-24) Menu - Fixed the keyboard behviour of submenu (details/summary)
 	* (2018-07-26) Created a github project to triage accessibility related issue - [https://github.com/wet-boew/wet-boew/projects/2](https://github.com/wet-boew/wet-boew/projects/2)
 	* (2018-06-20) Tested a few issue reproducibility, fixed #8400 (Tabs on Google Chrome) 
 	* (2018-05-17) WIP: #552 (Mobile checklist) and #8238 (Validation error in Mobile menu)
@@ -73,6 +74,7 @@ Simulate a datalist that work uniformly through browser implementation and conta
 	* [2018-05-28 - combobox prototype 10 - Fieldflow and default and async load - With reactive engine](research/2018-1-combobox-prototype-10.html)
 	* [2018-06-21 - Template playground prototype - Render UI by using the combobox templating system](research/2018-1-template-playground-prototype.html)
 * **History:**
+	* (2018-08-24) Currently stale
 	* (2018-07-26) Still experimental, started to create independant set of working example pages. 
 	* (2018-06-20) Experimental stable plugin was released on Canada.ca. It support the conversion from a select to a combo box and added combo box render for fieldflow. Next is to create the docs and various working example. There is also a template playground which render a template from a JS object.
 	* (2018-05-17) Prototype fully working as expected, now it's code cleanup and optimisation
@@ -80,22 +82,12 @@ Simulate a datalist that work uniformly through browser implementation and conta
 	* (2018-04-13) Close to release a minimal viable product.
 	* (2018-03-12) Defining the requirement
 
-### Boolean filtering for WET filter feature
-Provide the option regarding how the space is interpretated during filtering content with the filter plugin.
-* Interprete space as "OR", "AND", "XOR" or "EXACT" logical instruction. May include a location instruction such as "Anywhere", "startWith", "word".
-* **Last updated:** June 20, 2018
-* **Project lead:** Neil Mispelaar
-* **History:**
-	* (2018-06-20) WIP - Apply a few code optimisation fix
-	* (2018-05-17) PR submited ([#8383](https://github.com/wet-boew/wet-boew/pull/8383)), additional fix to come
-	* (2018-04-18) Early prototype, working on test and documentation material
-	* (2018-04-10) Project initiation
-
 ### Server side error message integration with form validation feature
 Harmonize the error message displayed when in browser error is combined with server side errors
-* **Last udpated:** July 26, 2018
+* **Last udpated:** August 24, 2018
 * **Project lead:** Stéphane Ducharme
 * **History:**
+	* (2018-08-24) Need to apply some code optimation base on peer review comments.
 	* (2018-07-26) Project almost completed, going in peer review process.
 	* (2018-06-20) WIP with the working example creation and testing the solution.
 	* (2018-05-17) Work for single input or select, but not when it is combined together.
@@ -116,21 +108,31 @@ See the Accessibility project.
 
 ### Checkbox based filtering
 Leverage CSS classes and checkboxes to apply content filtering. A feature like the filter plugin but without keyword filtering through a text field. This functionality might be required for publishing the Digital Playbook on Canada.ca
-* **Example:** [6. Use open standards and solutions (draft)](https://canada-ca.github.io/digital-playbook-guide-numerique/views-vues/standards-normes/en/6-use-open-standards-solutions.html)
-	* The filter can be displayed when the user click on the "Show filters" button
-	* An right overlay appear with a structured content on how filter can be applied
-	* There is an option to apply persistant filter
-	* Filter can be grouped, a parent would apply some of all sub-filter term.
-* **Prototype source code:** [https://github.com/canada-ca/digital-playbook-guide-numerique/blob/master/assets-atouts/js/filter-interface-filtre.js](https://github.com/canada-ca/digital-playbook-guide-numerique/blob/master/assets-atouts/js/filter-interface-filtre.js)
-* **Last updated:** July 26, 2018
+* **Research and findings page:** [http://wet-boew.github.io/wet-boew-documentation/research/2018-7-checkbox-filtering.html](http://wet-boew.github.io/wet-boew-documentation/research/2018-7-checkbox-filtering.html)
+* **Prototype :**
+	* [Prototype 1 - Conceptual prototype - high/medium fidelity](https://github.com/canada-ca/digital-playbook-guide-numerique/blob/master/assets-atouts/js/filter-interface-filtre.js)
+	* Prototype 2 - [Solution exploratory prototype - low fidelity](http://wet-boew.github.io/wet-boew-documentation/research/2018-7-prototype-2.html)
+	* Prototype 3 - [Initial work of integrating with WET4 - medium fidelity](http://wet-boew.github.io/wet-boew-documentation/research/2018-7-prototype-3.html)
+	* Prototype 4 - [WET4 plugin - high fidelity](https://github.com/duboisp/wet-boew/tree/contentfilter)
+* **Last updated:** August 24, 2018
 * **Project lead:** Pierre Dubois
-* **What left:** Planning the integration of the prototype into WET
+* **What left:** Finishing working example, testing and documentation for an integration into WET
 
 ### Score system for triggering action with Field flow
 Through a questionnaire, having each question that provide a score. And when a specific score is reach or when it is manually trigger (like at the end of the questionnaire) A results adapted to the score obtained will be displayed.
-* **Last updated:** July 26, 2018
+* **Research and findings page:** [http://wet-boew.github.io/wet-boew-documentation/research/2018-10-fieldflow-scoring-trigger.html](http://wet-boew.github.io/wet-boew-documentation/research/2018-10-fieldflow-scoring-trigger.html)
+* **Last updated:** August 24, 2018
 * **Project lead:** Pierre Dubois
 * **What left:** Create one or a few use cases
+
+### Save HTML table into CSV
+Save a HTML table into a CVS file on the fly by using javascript. That feature are going to be implemented in the action manager.
+* **Research and findings page:** [http://wet-boew.github.io/wet-boew-documentation/research/2018-8-table-to-csv.html](http://wet-boew.github.io/wet-boew-documentation/research/2018-8-table-to-csv.html)
+* **Prototype**
+	* [Source code](https://github.com/duboisp/GCWeb/commit/6ff019dec0e31549674c5a018d0aba445658f0a9)
+* **Last updated:** August 24, 2018
+* **Project lead:** Pierre Dubois
+* **What left:** Finish working example, testing and documentation for an integration in GCWeb.
 
 ## Backlog project
 
@@ -296,3 +298,27 @@ Chalenges:
 Next step:
 * Define what is that basic interface 
 * What UX we want to provide before it gets progressive enhanced to whatever option.
+
+## Completed
+
+{::nomarkdown}
+<details>
+	<summary>Show the list of completed projects</summary>
+{:/}
+
+### Boolean filtering for WET filter feature
+Provide the option regarding how the space is interpretated during filtering content with the filter plugin.
+* Interprete space as "OR", "AND", "XOR" or "EXACT" logical instruction. May include a location instruction such as "Anywhere", "startWith", "word".
+* **Last updated:** August 24, 2018
+* **Project lead:** Neil Mispelaar
+* **History:**
+	* (2018-08-15) Project completed
+	* (2018-08-15) Code merged in WET
+	* (2018-06-20) WIP - Apply a few code optimisation fix
+	* (2018-05-17) PR submited ([#8383](https://github.com/wet-boew/wet-boew/pull/8383)), additional fix to come
+	* (2018-04-18) Early prototype, working on test and documentation material
+	* (2018-04-10) Project initiation
+
+{::nomarkdown}
+</details>
+{:/}

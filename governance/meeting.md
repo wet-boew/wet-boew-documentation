@@ -10,8 +10,15 @@ Summary of what has been discussed at the meeting.
 
 ## Roadmap
 
+2018-08-24 ( 11 participants )
+* Review of all the projects
+* It was noted the plugin "Country content" is now broken because of the API freegeoip has recently changed.
+	* Related to issue: https://github.com/wet-boew/wet-boew/issues/8365
+* Announced that WET 4.0.29 will be released in the following weeks
+* The WET 5 presentation was reported to the following week. Details for WET 5 will be published here.
+
 2018-07-26 ( 10 participants )
-* Reviewed of all the project
+* Review of all the projects
 * Presented an early draft of the first test suites we would have in WET.
 	* Heading inside ```<summary>``` element
 		* [Temporary live example](https://duboisp.github.io/wet-boew-documentation/assessment/2018-1.html)
