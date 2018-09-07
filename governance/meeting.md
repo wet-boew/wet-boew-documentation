@@ -112,6 +112,34 @@ Technical review meeting are out of scope by default unless there is a project i
 
 ## Special meeting
 
+### WET 5 initial prototype - August 31
+
+[Documenation material presented](../research/2018-11-wet5-augmented-design-presentation.html)
+
+16 participant (8 in person and 8 in teleconference)
+
+Summary
+* Presentation of the context of WET 5
+* Demonstration of the WET 5 alpha prototype by Mario B.
+	* Show what the end user will see
+	* Show how interaction pattern are implemented directly in the HTML in-page markup
+	* Explained that no build script is required to develop, it use Require.js for dependency loading
+	* Explained there is no component, all the logic via a "gear" are configured in the HTML markup
+	* Explained the WET 5 loader, which leverage the CSS 3 animation event in order to be trigger.
+	* WET 5 web page only support one mode, the standard mode.
+	* Explained how a "gear" (a javascript module compatible with the new WET5 architecture) are working
+	* Created a new "gear" and it was ready to use upon its creation.
+	* Show an enhancer hidden in WET 5 where it highlights area in the web page that are more prone to accessibility error.
+
+Prototype available here: [https://github.com/wet-boew/wet-boew-experimental/tree/release5.0-alpha](https://github.com/wet-boew/wet-boew-experimental/tree/release5.0-alpha)
+
+To setup the prototype you need:
+* Download the files and extract it in a Apache HTTP Server. Apache HTTP Server is required to apply the server side include.
+* Ensure the HTTP server support the URL rewrite
+	* If it don't support Apache Server will return you an error. In that situation, open up the .htaccess file located in "stacks/src" and remove the line that do the URL rewrite.
+* The working example is located at: stacks/docs/index.html
+* The Javascript file is located at: stacks/src
+
 ### WET 5 Kickoff - May 10
 
 [Documentation material presented](../research/2018-3-wet5-kickoff.html)
