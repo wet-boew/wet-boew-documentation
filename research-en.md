@@ -30,7 +30,8 @@ List of finding and ongoing research related to WET and it's features
 * [2018-10 - Trigger a Fieldflow action based on score](research/2018-10-fieldflow-scoring-trigger.html)
 	* Status: New
 
-## Published report
+## Published report and documents
 
+* [2018-11 - WET 5 - Augmented Design - Early prototype presentation](research/2018-11-wet5-augmented-design-presentation.html)
 * [2018-3 - WET 5 kickoff documentation material](research/2018-3-wet5-kickoff.html)
 * [2018-2 - Browser usage and platform as March 2018](research/2018-2-browser-usage.html)
