@@ -15,7 +15,7 @@ To setup it you need:
 * Download the files and extract it in a Apache HTTP Server. Apache HTTP Server is required to apply the server side include.
 * Ensure the HTTP server support the URL rewrite
 	* If it don't support Apache Server will return you an error. In that situation, open up the .htaccess file located in "stacks/src" and remove the line that do the URL rewrite.
-* The working example is located at: stacks/docs/index.html
+* The working example is located at: [stacks/docs/index.html](2018-assets/2018-11-prototype/stacks/docs/index.html)
 * The Javascript file is located at: stacks/src
 
 
