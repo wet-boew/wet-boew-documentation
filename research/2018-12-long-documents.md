@@ -27,6 +27,10 @@ Like:
 * Printing and generating a PDF
 * Merging multiple pages into one big page that would be ready for printing.
 
+### Environmental scan
+
+* Research other GC non-GC approachs
+
 ## Solution component
 
 * Merging content
