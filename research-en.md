@@ -29,6 +29,9 @@ List of finding and ongoing research related to WET and it's features
 	* Status: In progress
 * [2018-10 - Trigger a Fieldflow action based on score](research/2018-10-fieldflow-scoring-trigger.html)
 	* Status: New
+* [2018-12 - Long documents](research/2018-12-long-documents.html)
+	* Status: New
+
 
 ## Published report and documents
 
