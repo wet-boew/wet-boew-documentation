@@ -12,34 +12,40 @@ modified: 2018-05-03
 
 [Nightly build](https://github.com/wet-boew/wet-boew-dist/archive/v4.0-dist.zip)
 
-### Pre-release notes of WET v4.0.29
+### Pre-release notes of WET v4.0.30
 
-2018-05-17
-* [PR #8382](https://github.com/wet-boew/wet-boew/pull/8382#discussion_r185848811)
-	* The markup for the "sign in/sign out" user interface template has changed. The paragraph with the ```btn``` class was changed for "sign in as" design pattern. It was replaced by a span with the class ```mrgn-rght-md```.
-
-2018-05-03
-* [PR #8371](https://github.com/wet-boew/wet-boew/pull/8371) - Bump jQuery to final 1.x and 2.x releases
-	* For implementers, Update jQuery CDN link
-		```
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-		```
-* [PR #8374](https://github.com/wet-boew/wet-boew/pull/8374) - Boostrap bump to 3.3.7
-	* (To be confirmed) Might have sligh change to:
-		- Anchor
-		- Forms
-		- Modal
-* Various update to the Build script
-* (not merge) [PR #8382](https://github.com/wet-boew/wet-boew/pull/8382) - [Sign on off](http://wet-boew.github.io/v4.0-ci/theme/content-signedon-en.html) template
-	* The class ```btn``` was removed from the paragraph with the fullname of the logged user.
-	* This change don't break any current implementation, but it that design pattern is used we recommend to remove the class ```btn``` on the paragraph.
-	* Old style can be reproduced by applying the following CSS classname ```visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block visible-print-inline-block mrgn-rght-md``` instead of ```btn```
-* Technical note for GCWeb - Need to be considered at the release
-	* Ensure the [package.lock](https://github.com/wet-boew/GCWeb/blob/master/package-lock.json#L9023) point to the latest commit of WET-BOEW
-	* A solution is to run ```npm install``` and then submit a PR with the latest updated ```package.lock```
-
-2018-04-24
-* Planned for the week of August 20, 2018
+<ul>
+	<li>2018-09-20
+		<ul>
+			<li>Need to be tested
+				<ul>
+					<li>PR #8394 - Need re-build for testing</li>
+					<li>PR #8456 - Need testing</li>
+				</ul>
+			</li>
+			<li>Patch
+				<ul>
+					<li>Lightbox - Close the overlay when clicking on a same page link</li>
+					<li>GCWeb - Global - Fix lint spacing</li>
+				</ul>
+			</li>
+			<li>WET developer - Major - Build script update
+				<ul>
+					<li>Bump grunt HTML</li>
+					<li>GCWeb - Lint space in .editorconfig</li>
+					<li>GCWeb - Add lintspace grunt task</li>
+				</ul>
+			</li>
+			<li>What's new
+				<ul>
+					<li>GCWeb - Italic are going to be allowed for some use case</li>
+					<li>WET-BOEW - Country data AJAX is broken</li>
+					<li>WET-BOEW - Twitter embedded timeline is broken</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+</ul>
 
 ### Roadmap
 
@@ -576,3 +582,31 @@ Latest released version: 4.0.27 on
 		* Limit the number of displayed items
 		* Control the behaviour of how the suggestion filtering is applied
 
+### v4.0.29
+
+2018-05-17
+* [PR #8382](https://github.com/wet-boew/wet-boew/pull/8382#discussion_r185848811)
+	* The markup for the "sign in/sign out" user interface template has changed. The paragraph with the ```btn``` class was changed for "sign in as" design pattern. It was replaced by a span with the class ```mrgn-rght-md```.
+
+2018-05-03
+* [PR #8371](https://github.com/wet-boew/wet-boew/pull/8371) - Bump jQuery to final 1.x and 2.x releases
+	* For implementers, Update jQuery CDN link
+		```
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		```
+* [PR #8374](https://github.com/wet-boew/wet-boew/pull/8374) - Boostrap bump to 3.3.7
+	* (To be confirmed) Might have sligh change to:
+		- Anchor
+		- Forms
+		- Modal
+* Various update to the Build script
+* (not merge) [PR #8382](https://github.com/wet-boew/wet-boew/pull/8382) - [Sign on off](http://wet-boew.github.io/v4.0-ci/theme/content-signedon-en.html) template
+	* The class ```btn``` was removed from the paragraph with the fullname of the logged user.
+	* This change don't break any current implementation, but it that design pattern is used we recommend to remove the class ```btn``` on the paragraph.
+	* Old style can be reproduced by applying the following CSS classname ```visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block visible-print-inline-block mrgn-rght-md``` instead of ```btn```
+* Technical note for GCWeb - Need to be considered at the release
+	* Ensure the [package.lock](https://github.com/wet-boew/GCWeb/blob/master/package-lock.json#L9023) point to the latest commit of WET-BOEW
+	* A solution is to run ```npm install``` and then submit a PR with the latest updated ```package.lock```
+
+2018-04-24
+* Planned for the week of August 20, 2018
