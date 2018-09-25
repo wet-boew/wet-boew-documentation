@@ -36,7 +36,7 @@ modified: 2018-05-03
 					<li>GCWeb - Add lintspace grunt task</li>
 				</ul>
 			</li>
-			<li>What's new
+			<li>Notes
 				<ul>
 					<li>GCWeb - Italic are going to be allowed for some use case</li>
 					<li>WET-BOEW - Country data AJAX is broken</li>
