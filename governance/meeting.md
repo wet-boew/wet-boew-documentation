@@ -10,6 +10,15 @@ Summary of what has been discussed at the meeting.
 
 ## Roadmap
 
+2018-09-27 - Partial agenda
+* Ask for interest on the creation of small community to maintain a theme, like the intranet theme. Background: issue #8366.
+* Release of WET 4.0.29
+* Summary of the presentation of WET 5 demo
+* Quick demo and overview of WET 5 alpha early prototype
+* Presentation of Design Decision draft 2018-5
+* Review of project status
+* Upcomming code sprint would be structured and focused to deliver the new look of Canada.ca
+
 2018-08-24 ( 11 participants )
 * Review of all the projects
 * It was noted the plugin "Country content" is now broken because of the API freegeoip has recently changed.
