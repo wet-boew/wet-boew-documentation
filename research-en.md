@@ -9,6 +9,14 @@ modified: 2018-06-28
 
 List of finding and ongoing research related to WET and it's features
 
+## WET 5 related
+* [2018-3 - WET 5 kickoff documentation material](research/2018-3-wet5-kickoff.html)
+* [2018-6 - WB5 exploration 1](research/2018-6-wb5-exploration-1.html)
+* [2018-9 - Suggested Improvements to Build Tools](research/2018-9-grunt.html)
+* [2018-11 - WET 5 - Augmented Design - Early prototype presentation](research/2018-11-wet5-augmented-design-presentation.html)
+* [2018-11 - WET 5 alpha early prototype](research/2018-assets/2018-11-prototype/stacks/docs/index.html)
+* [2018-13 - WET 5 workshop – UXDS @ STATCAN](research/2018-13-wet5-workshop-statcan.html)
+
 
 ## Ongoing
 
@@ -35,6 +43,7 @@ List of finding and ongoing research related to WET and it's features
 
 ## Published report and documents
 
+* [2018-13 - WET 5 workshop – UXDS @ STATCAN](research/2018-13-wet5-workshop-statcan.html)
 * [2018-11 - WET 5 - Augmented Design - Early prototype presentation](research/2018-11-wet5-augmented-design-presentation.html)
 * [2018-3 - WET 5 kickoff documentation material](research/2018-3-wet5-kickoff.html)
 * [2018-2 - Browser usage and platform as March 2018](research/2018-2-browser-usage.html)
