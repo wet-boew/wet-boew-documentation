@@ -71,6 +71,7 @@ The following design decision can be obseleted if you find they are not valid an
 				<li>Github related issue <a href="https://github.com/wet-boew/wet-boew/issues/7314">wet-boew/wet-boew#7314</a></li> 
 			</ul>
 		</li>
+		<li>http://wet-boew.github.io/wet-boew-documentation/decision/index-en.html</li>
 	</ul>
 
 </section>
