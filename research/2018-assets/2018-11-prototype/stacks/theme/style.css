@@ -40,5 +40,55 @@
 
 .relative { position: relative;}
 
+.menu > .open > ul{
+    display: inline !important;
+    max-height: 1000px !important;
+    min-width: 12.5em;
+    position: absolute !important;
+    text-transform: none;
+    top: auto;
+    z-index: 500;
+    background: #ccc;
+    border-bottom: 5px solid #243850;
+    overflow: visible;
+}
 
+.open > ul >li > a{
+    text-align: left !important;
+    color: #444 !important;
+    padding: 5px 10px !important;
+    text-shadow: none !important;
+}
 
+.open > ul > li > a:hover, .open > ul > li > a:focus, .open > ul > li > a:active{
+    color: #fff !important;
+}
+.open > ul > .slflnk > a{
+    background:#bbb;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.calender td {
+    vertical-align: top;
+    height: 120px;
+    width: 100px;
+}
+
+td.active {
+    background-color: #aaa;
+}
+
+td.active a.active {
+    outline: 1px #444 dotted;
+}
