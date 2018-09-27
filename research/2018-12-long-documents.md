@@ -61,7 +61,11 @@ Like:
 
 ## Prototyping
 
-Prototype based on the Consultation Profile page:
+Prototypes of long HTML document based on the Consultation Profile page:
 * https://stratpre1.ic.gc.ca/eic/site/ui-mc-mc.nsf/eng/h_lm04876.html
 * https://stratpre1.ic.gc.ca/eic/site/ui-mc-mc.nsf/eng/lm04745.html
 * https://stratpre1.ic.gc.ca/eic/site/ui-mc-mc.nsf/eng/lm00458.html
+
+Prototypes of PDF generator from HTML content:
+* https://parall.ax/products/jspdf
+* https://gds.blog.gov.uk/2018/07/16/why-gov-uk-content-should-be-published-in-html-and-not-pdf/
