@@ -10,8 +10,7 @@ modified: 2018-07-26
 
 ## Active project
 
-Updated: 2018-07-26
-
+Updated: 2018-09-26
 
 ### Accessibility
 * Reviewing and validating open github issue
@@ -93,14 +92,15 @@ Harmonize the error message displayed when in browser error is combined with ser
 	* (2018-05-17) Work for single input or select, but not when it is combined together.
 	* (2018-04-11) Early exploratory prototype
 
-### PDF generator
+### Long documents (was PDF generator)
 Create a new feature that would allow the user to obtain a PDF printable version of the page. The PDF printable version are different from the web printable version in the sense that it would be possible to control and well define how the content of the webpage would transposed into a paper base format.
-* **Last updated:** March 1, 2018
+* **Last updated:** September 28, 2018
 * **Current status:** Refining the projects description and research.
 * **Deliverable:** A feature that generate a PDF from a webpage.
 * **Goal:** Change the current practice which consist in uploading a standalone PDF version of the content and include a reference to that uploaded PDF in the content. At the same time, it would reduce the risk of have both version no in sync when a content update is applied.
 * **Project lead:** David Elisma
 * **History:**
+	* (2018-09-28) [Writting use case and requirement](http://wet-boew.github.io/wet-boew-documentation/research/2018-12-long-documents.html)
 	* (2018-02-22) Refining the projects description and research.
 
 ### Migration to WCAG 2.1 Level AA
@@ -130,7 +130,7 @@ Save a HTML table into a CVS file on the fly by using javascript. That feature a
 * **Research and findings page:** [http://wet-boew.github.io/wet-boew-documentation/research/2018-8-table-to-csv.html](http://wet-boew.github.io/wet-boew-documentation/research/2018-8-table-to-csv.html)
 * **Prototype**
 	* [Source code](https://github.com/duboisp/GCWeb/commit/6ff019dec0e31549674c5a018d0aba445658f0a9)
-* **Last updated:** August 24, 2018
+* **Last updated:** September 28, 2018
 * **Project lead:** Pierre Dubois
 * **What left:** Finish working example, testing and documentation for an integration in GCWeb.
 
