@@ -12,7 +12,7 @@ Project lead: David Elisma
 
 ## Use case and story
 
-As a third party intermediary I am asked to keep a paper copy of many documents found on the website of a particular gouvernmental agency. Some documents are organized under one web section, others are spread accros different web sections. 
+As a third party intermediary I am asked to keep a paper copy of many documents found on the website of a particular gouvernmental agency. Some documents are organized under one web section, others are spread accros different web sections. I also need to refer back to older versions of these documents.
 
 As a content creator I need to manage and communicate updates of the long documents that I'm responsible to the different stakeholders in an easy manner. One of the main concerns I have in producing and managing long documents is the complexity and the extent of the content.
 
