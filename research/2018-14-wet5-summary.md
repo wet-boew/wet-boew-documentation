@@ -8,13 +8,13 @@ modified: 2018-09-28
 
 Summary of the WET5 project. Question or comments can be share by [opening new issue](https://github.com/wet-boew/wet-boew/issues/new).
 
-* [May 2018 - WET 5 kickoff documentation material](research/2018-3-wet5-kickoff.html)
-* [July 2018 - WB5 exploration 1](research/2018-6-wb5-exploration-1.html)
-* [August 2018 - Suggested Improvements to Build Tools](research/2018-9-grunt.html)
-* [August 2018 - Presentation of the early prototype - Augmented Design](research/2018-11-wet5-augmented-design-presentation.html)
-* [August 2018 - Prototype - alpha](research/2018-assets/2018-11-prototype/stacks/docs/index.html)
-* [September 2018 - WET 5 workshop – UXDS @ STATCAN](research/2018-13-wet5-workshop-statcan.html)
-* [September 2018 - Prototype - menu key navigation](/wet-boew-documentation/research/2018-assets/2018-11-prototype/stacks/docs/nav-demo.html)
+* [May 2018 - WET 5 kickoff documentation material](2018-3-wet5-kickoff.html)
+* [July 2018 - WB5 exploration 1](2018-6-wb5-exploration-1.html)
+* [August 2018 - Suggested Improvements to Build Tools](2018-9-grunt.html)
+* [August 2018 - Presentation of the early prototype - Augmented Design](2018-11-wet5-augmented-design-presentation.html)
+* [August 2018 - Prototype - alpha](2018-assets/2018-11-prototype/stacks/docs/index.html)
+* [September 2018 - WET 5 workshop – UXDS @ STATCAN](2018-13-wet5-workshop-statcan.html)
+* [September 2018 - Prototype - menu key navigation](2018-assets/2018-11-prototype/stacks/docs/nav-demo.html)
 * September 2018 - Question and concern was expressed during the WET Roadmap meeting
 
 ## WET 5 architecture in a nutshell, as the end of September 2018
@@ -25,7 +25,7 @@ Summary of the WET5 project. Question or comments can be share by [opening new i
 * No build script required for developement
 * Can run in parallel with WET 4 without conflict.
 * Making the product as a library not a framework.
-* There is two prototype - [Carrousel](research/2018-assets/2018-11-prototype/stacks/docs/index.html); [Key navigation](2018-assets/2018-11-prototype/stacks/docs/nav-demo.html)
+* There is two prototype - [Carrousel](2018-assets/2018-11-prototype/stacks/docs/index.html); [Key navigation](2018-assets/2018-11-prototype/stacks/docs/nav-demo.html)
 
 ## Logic Development Design
 
@@ -65,9 +65,9 @@ Question/comments from the WET Roadmap meeting of September 27, 2018
 
 Question/comments from a WET 5 workshop – UXDS @ STATCAN (Published on September 25, 2018)
 
-* [What Works (what we want to keep in WET5)](research/2018-13-wet5-workshop-statcan.html#what-works-what-we-want-to-keep-in-wet5)
-* [What doesn’t work](research/2018-13-wet5-workshop-statcan.html#what-doesnt-work)
-* [What we’d like to see in WET5](research/2018-13-wet5-workshop-statcan.html#what-wed-like-to-see-in-wet5)
+* [What Works (what we want to keep in WET5)](2018-13-wet5-workshop-statcan.html#what-works-what-we-want-to-keep-in-wet5)
+* [What doesn’t work](2018-13-wet5-workshop-statcan.html#what-doesnt-work)
+* [What we’d like to see in WET5](2018-13-wet5-workshop-statcan.html#what-wed-like-to-see-in-wet5)
 
 
 Question/comments from the WET 5 early prototype presentation of August 31

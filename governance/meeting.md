@@ -31,7 +31,7 @@ Summary of what has been discussed at the meeting.
 	* That library look like to solve a web content managment system (CMS) design issue [1] rather than helping the web publisher to meet web accessibility standard. Answer: Need to be discussed. [1] A CMS like where web publisher can't add any custom JS/CSS code.
 	* By using that UI design approach, it may require department to hire more web accessiblity expert. Answer: Need to be discussed.
 	* HTML snipped will be provided which it will be recognied to meet the accessibility guideline. But what if there is an update at that snipped? It looks like that may result with more maintenance work for the web publishing team. Answer: Need to be discussed.
-* WET 5, as current, related question and discussion will be recorded and managed via a dedicated research page.
+* WET 5, as current, related question and discussion will be recorded and managed via a [dedicated research page](/wet-boew-documentation/research/2018-14-wet5-summary.html).
 
 2018-08-24 ( 11 participants )
 * Review of all the projects
