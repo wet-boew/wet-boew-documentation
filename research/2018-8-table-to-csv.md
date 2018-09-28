@@ -79,3 +79,7 @@ Complex table, like the one supported by the WET table parser are considered out
 The download function was inspired by the FileSave.js code. But I removed all the support for unsuported browser by WET which reduced a lot the code. Also, we didn't implemented the fix which force to add the BOM to text file as no file in WET include the BOM flag.
 
 Need to consider to move the download function into the WET core.
+
+## Developer notes
+
+* 2018-09-25 - The code on how the download is trigger was updated to rely only on the anchor element. Once the anchor is created, a special click handler is added to call ```navigation.msOpenOrSaveBlob()``` function instead of using a hack by opening the blob URL in a different window. Also, that approach is more aligned with the spec and it ease the analytic download tracking.
