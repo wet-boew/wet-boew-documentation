@@ -1,5 +1,8 @@
 # WET 5 Observer Issue
 
+
+**This issue has been solved.**
+
 WET5 modules are loaded by using an observer that triggers whenever an element with a 'data-wb5' tag becomes visible.
 Because this observer triggers when an element becomes visible, and not only when the element is added to the DOM, an issue arises with elements whose visibility changes.
 In this example, a menubar contains two submenus. The submenus are hidden until they are selected in the menu bar. When the submenu is opened, the observer is triggered.
