@@ -5,17 +5,17 @@ Project lead: David Elisma
 
 ## Use case and story
 
-As a third party intermediary I am asked to keep a paper copy of many documents found on the website of a particular gouvernmental agency. Some documents are organized under one web section, others are spread accros different web sections. 
+As a third party intermediary I am asked to keep a paper copy of many documents found on the website of a particular gouvernmental agency. Some documents are organized under one web section, others are spread accros different web sections.
 
 As a content creator I need to manage and communicate updates of the long documents that I'm responsible to the different stakeholders in an easy manner. One of the main concerns I have in producing and managing long documents is the complexity and the extent of the content.
 
-As a web publisher I am asked to publish content coming in a word processing software format as a dynamic web format. I need to make sure that I comply with the mobile-first approach, all the accessibility guidelines, plain language best practices, and usability desgn aspect.  
+As a web publisher I am asked to publish content coming in a word processing software format as a dynamic web format. I need to make sure that I comply with the mobile-first approach, all the accessibility guidelines, plain language best practices, and usability desgn aspect.
 
 ## Requirement
 
-The purpose of this research is to figure out how long documents can be created, managed, update and consummed by content creators, web publishers, web users and printer users. 
+The purpose of this research is to figure out how long documents can be created, managed, update and consummed by content creators, web publishers, web users and printer users.
 
-Avoid repeated content and be more modular. 
+Avoid repeated content and be more modular.
 
 Content must be task oriented. Ideas must be organized in hierarchy.
 
@@ -62,3 +62,4 @@ Prototypes of long HTML document based on the Consultation Profile page:
 Prototypes of PDF generator from HTML content:
 * https://parall.ax/products/jspdf
 * https://gds.blog.gov.uk/2018/07/16/why-gov-uk-content-should-be-published-in-html-and-not-pdf/
+* https://www.printfriendly.com/button
