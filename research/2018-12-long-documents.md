@@ -11,8 +11,8 @@ Submissions can be made public on the WET-BOEW Github website. Having Github is 
 
 * [Sahre your idea online](https://github.com/delisma/wet-boew-documentation/issues/new) | 
 Use the Github issue tracker. (You will need a Github account to do so.)
-* [Send us an email](mailto:david.elisma@canada.ca) | 
-Send an email to [David Elisma](mailto:david.elisma@canada.ca) with your ideas or comments to make yourself heard.
+* [Send us an email](mailto:david.elisma@canada.ca?subject=Long%20document%20research%20project) | 
+Send an email to [David Elisma](mailto:david.elisma@canada.ca?subject=Long%20document%20research%20project) with your ideas or comments to make yourself heard.
 * Participate on GCconncet or gccollab | 
 Send us a short comment or idea
 * [Participate in person](http://wet-boew.github.io/wet-boew/docs/start-en.html#wet-boew-code-sprint) | 
