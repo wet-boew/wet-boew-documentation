@@ -10,12 +10,15 @@ The goal of this research project is to gather all the best practices about crea
 Submissions can be made public on the WET-BOEW Github website. Having Github is not mandatory to participate on this project. You may use any channels that work best for you.
 
 [Sahre your idea online](https://github.com/delisma/wet-boew-documentation/issues/new)
+
 Use the Github issue tracker. (You will need a Github account to do so.)
 
 [Send us an email](david.elisma@canada.ca)
+
 Send an email to [David Elisma](david.elisma@canada.ca) with your ideas or comments to make yourself heard.
 
 [Participate in person](http://wet-boew.github.io/wet-boew/docs/start-en.html#wet-boew-code-sprint)
+
 Community meetings are being held every Tuesday at 200 boul. le Portage. Dates and locations of upcoming meetings will be posted as they are arranged.
 
 ## Who is the focus of this research project
@@ -58,7 +61,6 @@ The user should understand the content flow of a long document because of effect
 When we use formatting, we need to comply with standards that are set by the person to whom we are presenting our document. In essence, this means complying with the Canada.ca Styleguide requirements.
 
 Finally, we must also ensure that the document is accurate and is understood to say what the author intended, by editing, including radical editing.
-https://www.le.ac.uk/oerresources/psychology/largedocs/page_03.htm
 
 ### Solution idea
 
@@ -84,9 +86,10 @@ Like:
 * Show progess. Use of a progress bar and of a notification area.
 * Compile and display structured data collected during the content merging (Extracting RDFa data and sumarize it at the top of the documents)
 
-### Prototyping
+### Related information
 
 Prototypes of long HTML document based on the Consultation Profile page:
+* https://www.le.ac.uk/oerresources/psychology/largedocs/page_03.htm
 * https://stratpre1.ic.gc.ca/eic/site/ui-mc-mc.nsf/eng/h_lm04876.html
 * https://stratpre1.ic.gc.ca/eic/site/ui-mc-mc.nsf/eng/lm04745.html
 * https://stratpre1.ic.gc.ca/eic/site/ui-mc-mc.nsf/eng/lm00458.html
