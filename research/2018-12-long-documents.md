@@ -84,9 +84,11 @@ Like:
 * Compile and display structured data collected during the content merging (Extracting RDFa data and sumarize it at the top of the documents)
 
 ### Related information
+Plain language and task oriented document
+* [Producing long document](https://www.le.ac.uk/oerresources/psychology/largedocs/page_03.htm)
+* Legal drafting
 
 Prototypes of long HTML document based on the Consultation Profile page:
-* https://www.le.ac.uk/oerresources/psychology/largedocs/page_03.htm
 * https://stratpre1.ic.gc.ca/eic/site/ui-mc-mc.nsf/eng/h_lm04876.html
 * https://stratpre1.ic.gc.ca/eic/site/ui-mc-mc.nsf/eng/lm04745.html
 * https://stratpre1.ic.gc.ca/eic/site/ui-mc-mc.nsf/eng/lm00458.html
