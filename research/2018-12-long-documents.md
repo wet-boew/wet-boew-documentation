@@ -1,4 +1,4 @@
-#Share and view ideas: Managing decentralized long documents
+# Share and view ideas: Managing decentralized long documents
 From [Measurement Canada](https://www.canada.ca/measurement-canada) Project lead: [David Elisma](david.elisma@canada.ca)
 
 ## Current status: Open
