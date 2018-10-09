@@ -9,13 +9,13 @@ The goal of this research project is to gather all the best practices about crea
 ## Join in: how to participate
 Submissions can be made public on the WET-BOEW Github website. Having Github is not mandatory to participate on this project. You may use any channels that work best for you.
 
-* [Sahre your idea online](https://github.com/delisma/wet-boew-documentation/issues/new)
+* [Sahre your idea online](https://github.com/delisma/wet-boew-documentation/issues/new) | 
 Use the Github issue tracker. (You will need a Github account to do so.)
-* [Send us an email](david.elisma@canada.ca)
+* [Send us an email](david.elisma@canada.ca) | 
 Send an email to [David Elisma](david.elisma@canada.ca) with your ideas or comments to make yourself heard.
-* Participate on GCconncet or gccollab
+* Participate on GCconncet or gccollab | 
 Send us a short comment or idea
-* [Participate in person](http://wet-boew.github.io/wet-boew/docs/start-en.html#wet-boew-code-sprint)
+* [Participate in person](http://wet-boew.github.io/wet-boew/docs/start-en.html#wet-boew-code-sprint) | 
 Community meetings are being held every Tuesday at 200 boul. le Portage. Dates and locations of upcoming meetings will be posted as they are arranged.
 
 ## Who is the focus of this research project
