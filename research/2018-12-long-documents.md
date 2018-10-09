@@ -1,9 +1,41 @@
+#Share and view ideas: Managing decentralized long documents
+From [Measurement Canada](https://www.canada.ca/measurement-canada) Project lead: [David Elisma](david.elisma@canada.ca)
 
-Managing decentralized long documents
+## Current status: Open
+Opened on September 18, 2018 and will be close to new input on May, 2019
 
-Project lead: David Elisma
+The goal of this research project is to gather all the best practices about creating, publishing and managing long documents
 
-## Use case and story
+## Join in: how to participate
+Submissions can be made public on the WET-BOEW Github website. Having Github is not mandatory to participate on this project. You may use any channels that work best for you.
+
+[Sahre your idea online](https://github.com/delisma/wet-boew-documentation/issues/new)
+Use the Github issue tracker. (You will need a Github account to do so.)
+
+[Send us an email](david.elisma@canada.ca)
+Send an email to [David Elisma](david.elisma@canada.ca) with your ideas or comments to make yourself heard.
+
+[Participate in person](http://wet-boew.github.io/wet-boew/docs/start-en.html#wet-boew-code-sprint)
+Community meetings are being held every Tuesday at 200 boul. le Portage. Dates and locations of upcoming meetings will be posted as they are arranged.
+
+## Who is the focus of this research project
+The research project will mainly target:
+* third party intermediaries
+* content creators
+* web publishers
+
+## Key questions for discussion
+Your ideas are sought after around 3 topics:
+* Organise ideas to best effect
+* Ensure the flow of argument
+* Providing effective signposting in the document by consistent use of appearance and layout through appropriate formatting
+* Complying with a style requirement means choosing the formatting style to follow
+
+## Attend a meeting
+Community meeting will take the form of code sprint every Tuesday from 9h30 to 15h30 at 200 promenade le Portage, Gatineau, Room 2D302. To join, contact Pierre Dubois, on gccollab, on gcconnect or on twitter via @duboi5p.
+
+## What we're working on so far
+### Use case and story
 
 As a third party intermediary I am asked to keep a paper copy of many documents found on the website of a particular gouvernmental agency. Some documents are organized under one web section, others are spread accros different web sections.
 
@@ -11,7 +43,7 @@ As a content creator I need to manage and communicate updates of the long docume
 
 As a web publisher I am asked to publish content coming in a word processing software format as a dynamic web format. I need to make sure that I comply with the mobile-first approach, all the accessibility guidelines, plain language best practices, and usability desgn aspect.
 
-## Requirement
+### Requirements
 
 The purpose of this research is to figure out how long documents can be created, managed, update and consummed by content creators, web publishers, web users and printer users.
 
@@ -28,7 +60,7 @@ When we use formatting, we need to comply with standards that are set by the per
 Finally, we must also ensure that the document is accurate and is understood to say what the author intended, by editing, including radical editing.
 https://www.le.ac.uk/oerresources/psychology/largedocs/page_03.htm
 
-## Solution idea
+### Solution idea
 
 General idea on how the issue can be solved.
 
@@ -43,7 +75,7 @@ Like:
 * CIC have went to a three year project for internal long documents
 * Research other GC non-GC approachs
 
-## Solution component
+### Solution component
 
 * Merging content
 * Cleaning content
@@ -52,7 +84,7 @@ Like:
 * Show progess. Use of a progress bar and of a notification area.
 * Compile and display structured data collected during the content merging (Extracting RDFa data and sumarize it at the top of the documents)
 
-## Prototyping
+### Prototyping
 
 Prototypes of long HTML document based on the Consultation Profile page:
 * https://stratpre1.ic.gc.ca/eic/site/ui-mc-mc.nsf/eng/h_lm04876.html
