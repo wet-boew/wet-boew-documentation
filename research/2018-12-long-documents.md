@@ -1,6 +1,7 @@
 # Share and view ideas: Managing decentralized long documents
-From [Measurement Canada](https://www.canada.ca/measurement-canada) 
-Project lead: [David Elisma](david.elisma@canada.ca)
+From [Measurement Canada](https://www.canada.ca/measurement-canada)
+
+Project lead: [David Elisma](mailto:david.elisma@canada.ca?subject=Long%20document%20research%20project)
 
 ## Current status: Open
 Opened on September 18, 2018 and will be close to new input on May, 2019
