@@ -10,6 +10,29 @@ Summary of what has been discussed at the meeting.
 
 ## Roadmap
 
+2018-09-27 - ( 5 participants )
+* Review of all projects
+* WET 4.0.29 was released
+* Mentionned the upcomming WET code sprint would be structured and focused to deliver the new look of Canada.ca
+* Presentation of Design Decision draft 2018-5 for the migration strategy of the WET 5 and WET 4 github content
+* Announced that we are looking for participants to create a WET-BOEW Codefest 2018/2019 planning commitee.
+* Summary of the presentation of WET 5 demo
+	* [Presentation](/wet-boew-documentation/research/2018-11-wet5-augmented-design-presentation.html)
+	* [Online demo](/wet-boew-documentation/research/2018-assets/2018-11-prototype/stacks/docs/index.html)
+* WET 5 - [Key navigation demo](/wet-boew-documentation/research/2018-assets/2018-11-prototype/stacks/docs/nav-demo.html)
+* Did a quick demo and overview of WET 5 alpha early prototype
+* Discussed and some questions was asked about the current WET 5 approach as demo'ed by the prototype.
+	* What would replace the basic HTML mode? Answer: There is no basic HTML mode possible with that design approach.
+	* It is know in the communauty the purpose of WET framework is to help web publisher to meet easier the web accessibility guideline. It was noted that:
+		* Having a such (WET 5) library, there is a high risk that web publisher could avoid to meet the accessibility requirement in order to meet internal goal, especially with short timeline. Answer: Need to be discussed.
+		* More error prone to accessibility error for people with average/low web accessiblity skill. Answer: Need to be discussed.
+		* May enforce each team to have their own accessiblity expert. Answer: Need to be discussed.
+	* What is the advantage of WET 5 library compared to other library? Answer: Need to be discussed.
+	* That library look like to solve a web content managment system (CMS) design issue [1] rather than helping the web publisher to meet web accessibility standard. Answer: Need to be discussed. [1] A CMS like where web publisher can't add any custom JS/CSS code.
+	* By using that UI design approach, it may require department to hire more web accessiblity expert. Answer: Need to be discussed.
+	* HTML snipped will be provided which it will be recognied to meet the accessibility guideline. But what if there is an update at that snipped? It looks like that may result with more maintenance work for the web publishing team. Answer: Need to be discussed.
+* WET 5, as current, related question and discussion will be recorded and managed via a [dedicated research page](/wet-boew-documentation/research/2018-14-wet5-summary.html).
+
 2018-08-24 ( 11 participants )
 * Review of all the projects
 * It was noted the plugin "Country content" is now broken because of the API freegeoip has recently changed.

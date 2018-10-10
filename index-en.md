@@ -59,8 +59,6 @@ To join: Contact Pierre Dubois, you can find his contact information on gccollab
 ### Roadmap
 Location: 200 promenade du portage, Gatineau, Room 2D302
 
-* August 16, 2018
-* September 20, 2018
 * October 18, 2018
 * November 22, 2018
 * December 20, 2018
