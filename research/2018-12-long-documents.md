@@ -1,7 +1,5 @@
 # Share and view ideas: Managing decentralized long documents
-From [Measurement Canada](https://www.canada.ca/measurement-canada)
-
-Project lead: [David Elisma](mailto:david.elisma@canada.ca?subject=Long%20document%20research%20project)
+From [Measurement Canada](https://www.canada.ca/measurement-canada) project lead: [David Elisma](mailto:david.elisma@canada.ca?subject=Long%20document%20research%20project)
 
 ## Current status: Open
 Opened on September 18, 2018 and will be close to new input on May, 2019
@@ -97,6 +95,6 @@ Prototypes of long HTML document based on the Consultation Profile page:
 * https://stratpre1.ic.gc.ca/eic/site/ui-mc-mc.nsf/eng/lm00458.html
 
 Prototypes of PDF generator from HTML content:
-* [JSPDF](https://parall.ax/products/jspdf)
+* [JSPDF from Parallax](https://parall.ax/products/jspdf)
 * [Why gov.uk content should be published in HTML and not PDF](https://gds.blog.gov.uk/2018/07/16/why-gov-uk-content-should-be-published-in-html-and-not-pdf/)
 * [Printfriendly button](https://www.printfriendly.com/button)
