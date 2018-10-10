@@ -25,14 +25,15 @@ The research project will mainly target:
 * web publishers
 
 ## Key questions for discussion
-Your ideas are sought after around 3 topics:
+Your ideas are sought after around 5 topics:
 * Organise ideas to best effect
 * Ensure the flow of argument
-* Providing effective signposting in the document by consistent use of appearance and layout through appropriate formatting
-* Complying with a style requirement means choosing the formatting style to follow
+* Providing effective signposting in the document
+* Complying with a style guide requirements
+* Managing print-friendly version client-side
 
 ## Attend a meeting
-Community meeting will take the form of code sprint every Tuesday from 9h30 to 15h30 at 200 promenade le Portage, Gatineau, Room 2D302. To join, contact Pierre Dubois, on gccollab, on gcconnect or on twitter via @duboi5p.
+Community meeting will take the form of code sprint every Tuesday from 9h30 to 15h30 at 200 promenade le Portage, Gatineau, Room 2D302. To join, contact Pierre Dubois, on GCcollab, on GCconnect or on Twitter via @duboi5p.
 
 ## What we're working on so far
 ### Use case and story
@@ -71,7 +72,7 @@ Like:
 
 ### Environmental scan
 
-* CIC have went to a three year project for internal long documents
+* CIC have went through a three year project to produce guidelines for internal long documents
 * Research other GC non-GC approachs
 
 ### Solution component
@@ -95,5 +96,5 @@ Prototypes of long HTML document based on the Consultation Profile page:
 
 Prototypes of PDF generator from HTML content:
 * [JSPDF](https://parall.ax/products/jspdf)
-* [Why Goverment of UK content should be published in HTML and not PDF](https://gds.blog.gov.uk/2018/07/16/why-gov-uk-content-should-be-published-in-html-and-not-pdf/)
-* [Printfirendly button](https://www.printfriendly.com/button)
+* [Why gov.uk content should be published in HTML and not PDF](https://gds.blog.gov.uk/2018/07/16/why-gov-uk-content-should-be-published-in-html-and-not-pdf/)
+* [Printfriendly button](https://www.printfriendly.com/button)
