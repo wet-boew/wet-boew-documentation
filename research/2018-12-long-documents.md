@@ -26,9 +26,9 @@ The research project will mainly target:
 
 ## Key questions for discussion
 Your ideas are sought after around 5 topics:
-* Organise ideas to best effect
-* Ensure the flow of argument
-* Providing effective signposting in the document
+* Organise ideas for the best effect
+* Ensure the flow of arguments
+* Providing effective signposting in a document
 * Complying with a style guide requirements
 * Managing print-friendly version client-side
 
