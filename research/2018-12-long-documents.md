@@ -19,7 +19,7 @@ Send us a short comment or idea
 Community meetings are being held every Tuesday at 200 boul. le Portage. Dates and locations of upcoming meetings will be posted as they are arranged.
 
 ## Who is the focus of this research project
-The research project will mainly target:
+The research project will mainly engage:
 * third party intermediaries
 * content creators
 * web publishers
