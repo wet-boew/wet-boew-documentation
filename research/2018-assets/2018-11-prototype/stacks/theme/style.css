@@ -38,6 +38,8 @@
 	line-height: 3em;
 }
 
+.relative { position: relative;}
+
 .menu > .open > ul{
     display: inline !important;
     max-height: 1000px !important;

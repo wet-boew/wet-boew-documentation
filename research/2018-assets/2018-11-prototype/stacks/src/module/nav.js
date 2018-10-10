@@ -86,7 +86,7 @@ define( [ "module/element", "module/aria" ], function( ElementUtil, AriaUtil ) {
 		for (let idx = $children.length - 1; idx >= 0; idx--) {
 			if ( ElementUtil.hasClass( $children[idx], classname) )
 			{
-				return idx
+				return idx;
 			}
 		}
 		return -1;
@@ -105,7 +105,7 @@ define( [ "module/element", "module/aria" ], function( ElementUtil, AriaUtil ) {
 		let properties = Object.assign({ eventname: "keypress", classes: "active" }, options ),
 		children = ElementUtil.nodes( $elm, selector );
 		//Add event listeners
-		listen( $elm, children, properties)
+		listen( $elm, children, properties);
 	};
 	
 	/**
@@ -123,7 +123,7 @@ define( [ "module/element", "module/aria" ], function( ElementUtil, AriaUtil ) {
 
 		let submenus = $elm.querySelectorAll("[data-wb5~=nav]")
 		for (let node of submenus){
-			AriaUtil.add(node, "expanded", false)
+			AriaUtil.add(node, "expanded", false);
 		}
 
 
@@ -140,7 +140,7 @@ define( [ "module/element", "module/aria" ], function( ElementUtil, AriaUtil ) {
 						ElementUtil.removeClass( $elm, properties.classes );
 						
 						for (var child of children){
-							ElementUtil.removeClass( child, properties.classes )
+							ElementUtil.removeClass( child, properties.classes );
 						}
 					}
                     }
@@ -158,7 +158,7 @@ define( [ "module/element", "module/aria" ], function( ElementUtil, AriaUtil ) {
 			nextElm = currentElm,
 			classesToAdd = properties.classes,
 			removeOnMove = true;
-			$elm.focus()
+			$elm.focus();
 			if ( !key ) { //invalid key press
 				return;
 			}
@@ -172,7 +172,7 @@ define( [ "module/element", "module/aria" ], function( ElementUtil, AriaUtil ) {
 					if (submenu.parentElement == currentElm || submenu.parentElement == currentElm.parentElement){
 						nextElm = submenu.querySelector( submenu.dataset.wb5NavSelector );
 						classesToAdd = JSON.parse(submenu.dataset.wb5NavOptions).classes;
-						submenu.focus()
+						submenu.focus();
 						removeOnMove = false;
 					}
 				}
@@ -190,7 +190,7 @@ define( [ "module/element", "module/aria" ], function( ElementUtil, AriaUtil ) {
 						}
 						nextElm = superMenuChildren[superMenuIndex]
 						classesToAdd = JSON.parse(supermenu.dataset.wb5NavOptions).classes;
-						supermenu.focus()
+						supermenu.focus();
 					}
 				}
 			}
@@ -201,8 +201,8 @@ define( [ "module/element", "module/aria" ], function( ElementUtil, AriaUtil ) {
 						superMenuItem = $elm.closest( supermenu.dataset.wb5NavSelector ) || $elm.parentElement.querySelector(supermenu.dataset.wb5NavSelector);
 						if (superMenuItem){
 							classesToAdd = JSON.parse(supermenu.dataset.wb5NavOptions).classes;
-							nextElm = superMenuItem
-							supermenu.focus()
+							nextElm = superMenuItem;
+							supermenu.focus();
 							event.stopPropagation();
 						}
 					}
@@ -243,10 +243,10 @@ define( [ "module/element", "module/aria" ], function( ElementUtil, AriaUtil ) {
 				ElementUtil.addClass(nextElm, classesToAdd);
 
 				if($elm.querySelector("[aria-expanded~=true]")){
-					AriaUtil.add($elm.querySelector("[aria-expanded~=true]"), "expanded", "false")
+					AriaUtil.add($elm.querySelector("[aria-expanded~=true]"), "expanded", "false");
 				}
 				if($elm.querySelector(".open [data-wb5~=nav]")){
-					AriaUtil.add($elm.querySelector(".open [data-wb5~=nav]"), "expanded", "true")
+					AriaUtil.add($elm.querySelector(".open [data-wb5~=nav]"), "expanded", "true");
 				}
 
 		}
