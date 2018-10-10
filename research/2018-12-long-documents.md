@@ -13,8 +13,8 @@ Submissions can be made public on the WET-BOEW Github website. Having Github is 
 Use the Github issue tracker. (You will need a Github account to do so.)
 * [Send us an email](mailto:david.elisma@canada.ca?subject=Long%20document%20research%20project) | 
 Send an email to [David Elisma](mailto:david.elisma@canada.ca?subject=Long%20document%20research%20project) with your ideas or comments to make yourself heard.
-* Participate on GCconncet or [GCcollab](https://gccollab.ca/groups/profile/199780/encollaborating-on-the-web-experience-toolkitfr) | 
-Send us a short comment or idea
+* Participate on [GCconnex](https://gcconnex.gc.ca/) or [GCcollab](https://gccollab.ca/groups/profile/199780/encollaborating-on-the-web-experience-toolkitfr) | 
+Send us a short comment or idea (keep in mind that GCconncx is exclusive to GoC employees)
 * [Participate in person](http://wet-boew.github.io/wet-boew/docs/start-en.html#wet-boew-code-sprint) | 
 Community meetings (code sprint) are being held every Tuesday at 200 promenade le Portage. Dates and locations of upcoming meetings will be posted as they are arranged.
 
@@ -33,7 +33,7 @@ Your ideas are sought after around 5 topics:
 * Managing print-friendly version client-side
 
 ## Attend a meeting
-Community meeting will take the form of code sprint every Tuesday from 9h30 to 15h30 at 200 promenade le Portage, Gatineau, Room 2D302. To join, contact Pierre Dubois, on GCcollab, on GCconnect or on Twitter via @duboi5p.
+Community meeting will take the form of code sprint every Tuesday from 9h30 to 15h30 at 200 promenade le Portage, Gatineau, Room 2D302. To join, contact Pierre Dubois, on GCcollab, on GCconnex or on Twitter via @duboi5p.
 
 | Location | Date and time                           | Venue                                                 |
 |----------|-----------------------------------------|-------------------------------------------------------|
