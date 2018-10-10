@@ -64,7 +64,7 @@ require( [ "module/element"  ].concat( polyfills ), function( _element ) {
 
 			let node = event.target,
 				actions = _element.inspect( node ) ;
-
+				_element.addClass( node, "wb5-inited" );
 				for ( let idx = 0 ; idx < actions.length ; idx++ ) {
 					let action = actions[ idx ] ;
 					require( [ "module/" + action.command ], function( worker ) {
@@ -81,7 +81,7 @@ require( [ "module/element"  ].concat( polyfills ), function( _element ) {
 
 	// Add the observer event binding
 	document.head.appendChild(
-		_element.css("@keyframes nodeInserted {\nfrom { opacity: 0.99; }\nto { opacity: 1; }\n}\n\n[data-wb5] {animation-duration: 0.001s;animation-name: nodeInserted;}" )
+		_element.css("@keyframes nodeInserted {\nfrom { opacity: 0.99; }\nto { opacity: 1; }\n}\n\n[data-wb5]:not(.wb5-inited) {animation-duration: 0.001s;animation-name: nodeInserted;}" )
 	);
 
 } ) ;

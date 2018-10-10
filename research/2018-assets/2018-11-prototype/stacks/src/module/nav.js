@@ -2,7 +2,7 @@
 * keys.js - allow navigation through lists with the keyboard
 * @returns {void}
 */
-define( [ "module/element" ], function( ElementUtil ) {
+define( [ "module/element", "module/aria" ], function( ElementUtil, AriaUtil ) {
 	
 	/**
 	* keycode - determines what action to take when a key is pressed
@@ -33,6 +33,9 @@ define( [ "module/element" ], function( ElementUtil ) {
 			}
 			if ( code == 40 ) { //down arrow
 				return 'in';
+			}
+			if ( code == 38 ) { //up arrow
+				return 'null';
 			}
 		}
 		else if ( orientation == "vertical"){
@@ -83,7 +86,7 @@ define( [ "module/element" ], function( ElementUtil ) {
 		for (let idx = $children.length - 1; idx >= 0; idx--) {
 			if ( ElementUtil.hasClass( $children[idx], classname) )
 			{
-				return idx
+				return idx;
 			}
 		}
 		return -1;
@@ -99,11 +102,10 @@ define( [ "module/element" ], function( ElementUtil ) {
 	*/
 	function handle( $elm, selector, options ) {
 		
-		let properties = Object.assign({ eventname: "keypress", classes: "active", orientation: "horizontal" }, options ),
+		let properties = Object.assign({ eventname: "keypress", classes: "active" }, options ),
 		children = ElementUtil.nodes( $elm, selector );
-		
 		//Add event listeners
-		listen( $elm, children, properties)
+		listen( $elm, children, properties);
 	};
 	
 	/**
@@ -116,7 +118,13 @@ define( [ "module/element" ], function( ElementUtil ) {
 	*/
 	function listen($elm, children, properties){
 		
+
 		var focusWithin = false;
+
+		let submenus = $elm.querySelectorAll("[data-wb5~=nav]")
+		for (let node of submenus){
+			AriaUtil.add(node, "expanded", false);
+		}
 
 
 		ElementUtil.addListener( $elm, "focusin", function(event){
@@ -128,11 +136,11 @@ define( [ "module/element" ], function( ElementUtil ) {
 			focusWithin = false;
                 timer = setTimeout( function() {
                     if( !focusWithin ){
-
 						if(!properties.KeepClassOnBlur){
 						ElementUtil.removeClass( $elm, properties.classes );
+						
 						for (var child of children){
-							ElementUtil.removeClass( child, properties.classes )
+							ElementUtil.removeClass( child, properties.classes );
 						}
 					}
                     }
@@ -150,7 +158,7 @@ define( [ "module/element" ], function( ElementUtil ) {
 			nextElm = currentElm,
 			classesToAdd = properties.classes,
 			removeOnMove = true;
-			$elm.focus()
+			$elm.focus();
 			if ( !key ) { //invalid key press
 				return;
 			}
@@ -164,37 +172,37 @@ define( [ "module/element" ], function( ElementUtil ) {
 					if (submenu.parentElement == currentElm || submenu.parentElement == currentElm.parentElement){
 						nextElm = submenu.querySelector( submenu.dataset.wb5NavSelector );
 						classesToAdd = JSON.parse(submenu.dataset.wb5NavOptions).classes;
-						submenu.focus()
+						submenu.focus();
 						removeOnMove = false;
 					}
 				}
 				else{	//if no submenu, then move along the nearest horizontal menu bar
-					let supermenu = $elm.closest("[data-wb5-nav-options*=horizontal]");
-					if (supermenu != $elm){
+					let supermenu = $elm.closest("[data-wb5-nav-options*=horizontal], [data-wb5-nav-options*=grid]");
+					if (supermenu && supermenu != $elm){
 						let superMenuChildren = ElementUtil.nodes(supermenu, supermenu.dataset.wb5NavSelector),
-						superMenuIndex = find(superMenuChildren, properties.classes),
+						superMenuIndex = find(superMenuChildren, JSON.parse(supermenu.dataset.wb5NavOptions).classes),
 						superMenuItem = superMenuChildren[superMenuIndex];
 
-						ElementUtil.removeClass( superMenuItem, properties.classes )
+						ElementUtil.removeClass( superMenuItem, JSON.parse(supermenu.dataset.wb5NavOptions).classes )
 						superMenuIndex++
 						if (superMenuIndex >= superMenuChildren.length){
 							superMenuIndex = 0;
 						}
 						nextElm = superMenuChildren[superMenuIndex]
 						classesToAdd = JSON.parse(supermenu.dataset.wb5NavOptions).classes;
-						supermenu.focus()
+						supermenu.focus();
 					}
 				}
 			}
 			else if( key == 'out' ) { //exit a submenu
 				let supermenu = $elm.parentElement.closest("[data-wb5~=nav]");
 					if (supermenu){
-						if (JSON.parse(supermenu.dataset.wb5NavOptions).orientation != "horizontal"){
+						if (JSON.parse(supermenu.dataset.wb5NavOptions).orientation == "vertical"){
 						superMenuItem = $elm.closest( supermenu.dataset.wb5NavSelector ) || $elm.parentElement.querySelector(supermenu.dataset.wb5NavSelector);
 						if (superMenuItem){
 							classesToAdd = JSON.parse(supermenu.dataset.wb5NavOptions).classes;
-							nextElm = superMenuItem
-							supermenu.focus()
+							nextElm = superMenuItem;
+							supermenu.focus();
 							event.stopPropagation();
 						}
 					}
@@ -231,7 +239,16 @@ define( [ "module/element" ], function( ElementUtil ) {
 				else if (nextElm.nodeName == "A"){
 					nextElm.focus();
 				}
+				//nextElm.scrollIntoView();
 				ElementUtil.addClass(nextElm, classesToAdd);
+
+				if($elm.querySelector("[aria-expanded~=true]")){
+					AriaUtil.add($elm.querySelector("[aria-expanded~=true]"), "expanded", "false");
+				}
+				if($elm.querySelector(".open [data-wb5~=nav]")){
+					AriaUtil.add($elm.querySelector(".open [data-wb5~=nav]"), "expanded", "true");
+				}
+
 		}
 			
 		});

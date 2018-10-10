@@ -92,3 +92,44 @@ td.active {
 td.active a.active {
     outline: 1px #444 dotted;
 }
+
+#menu-2>li>ul {
+    display: none;
+    border-bottom: 5px solid #243850;
+}
+
+#menu-2 li{
+    display: block;
+    border: 1px black solid;
+    background: #ccc;
+    padding: 5px;
+}
+#menu-2 li.open a{
+    color: #fff;
+}
+
+#menu-2 a{
+    text-decoration: none;
+}
+
+#menu-2 :hover, #menu-2 .open, #menu-2 .active{
+    background: #aaa;
+}
+
+
+li>ul>li>ul {
+    display: none;
+}
+
+li>ul>li.open>ul {
+    display: inline !important;
+    max-height: 1000px !important;
+    min-width: 12.5em;
+    position: absolute !important;
+    text-transform: none;
+    top: auto;
+    z-index: 500;
+    background: #ccc;
+    border-bottom: 5px solid #243850;
+    overflow: visible;
+}
