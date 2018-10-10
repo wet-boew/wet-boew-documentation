@@ -16,6 +16,7 @@ Summary of the WET5 project. Question or comments can be share by [opening new i
 * [September 2018 - WET 5 workshop – UXDS @ STATCAN](2018-13-wet5-workshop-statcan.html)
 * [September 2018 - Prototype - menu key navigation](2018-assets/2018-11-prototype/stacks/docs/nav-demo.html)
 * September 2018 - Question and concern was expressed during the WET Roadmap meeting
+* [October 2018 - Prototype - menu key navigation V2](2018-assets/2018-11-prototype/stacks/docs/nav-demo-v2.html)
 
 ## WET 5 architecture in a nutshell, as the end of September 2018
 
@@ -75,3 +76,9 @@ Question/comments from the WET 5 early prototype presentation of August 31
 * It was, in general, well received.
 * Some UX designer expressed their enthusiasm with that new approach. They liked the most the UI flexibility and being able to make change quickly.
 * One active contributor step back because that approach for WET 5 was not aligned with the web component initiative (Custom Element, shadow DOM, HTML Template, ES Module)
+
+## WET 5 prototype
+
+Published on: 2018-10-09
+A demo page for the keyboard navigation module. To demonstrate the flexibility of WET5, this module is used to create a menubar, a secondary menu, a carousel and a calender.
+* [Working Example](2018-assets/2018-11-prototype/stacks/docs/nav-demo-v2.html)

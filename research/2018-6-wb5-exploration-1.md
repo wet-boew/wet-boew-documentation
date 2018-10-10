@@ -10,7 +10,7 @@ The current exploratory direction for WET 5 is that of a **data-first design**. 
 
 There are currently two parts to the WET 5 research : a headless framework, and component interation driven from markup (coined LDD).
 
-[Link to latest prototype (as 2018-10-09)](#component-prototype-6) 
+[Link to latest prototype (as 2018-07-27)](#combined-prototype-1) 
 
 ## Resources
 
@@ -193,14 +193,6 @@ Using the same modules as the carousel in V4, along with a single new module, th
 
 * [Working Example](2018-assets/6-component-v5/docs/countdown-test.html)
 * [Source code](https://github.com/wet-boew/wet-boew-documentation/tree/master/research/2018-assets/6-component-v5/)
-
-### Component Prototype 6
-
-Published on: 2018-10-09
-
-A demo page for the keyboard navigation module. To demonstrate the flexibility of WET5, this module is used to create a menu, a carousel and a calender.
-
-* [Working Example](2018-assets/2018-11-prototype/stacks/docs/demo.html)
 
 ## Combined Prototypes
 
