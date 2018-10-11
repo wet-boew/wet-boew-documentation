@@ -15,6 +15,21 @@ modified: 2018-05-03
 ### Pre-release notes of WET v4.0.30
 
 <ul>
+	<li>2018-10-10
+		<ul>
+			<li>GCWeb
+				<ul>
+					<li>Minor - Markup change in Campaign 2 (ESDC)</li>
+				</ul>
+			</li>
+			<li>WET developer - Major - Build script update
+				<ul>
+					<li>Need to update to the latest NodeJS LTS (npm 5.10/6.x) which support relative version in package.lock.</li>
+					<li>GCWeb - Need to update to the latest NodeJS LTS (npm 5.10/6.x) which support relative version in package.lock.</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
 	<li>2018-09-20
 		<ul>
 			<li>Need to be tested
