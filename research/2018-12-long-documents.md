@@ -9,14 +9,14 @@ The goal of this research project is to gather all the best practices about crea
 ## Join in: how to participate
 Submissions can be made public on the WET-BOEW Github website. Having Github is not mandatory to participate on this project. You may use any channels that work best for you.
 
-* [Share your idea online](https://github.com/delisma/wet-boew-documentation/issues/new) | 
+* **[Share your idea online]**(https://github.com/delisma/wet-boew-documentation/issues/new) | 
 Use the Github issue tracker. (You will need a Github account to do so.)
-* [Send us an email](mailto:david.elisma@canada.ca?subject=Long%20document%20research%20project) | 
+* **[Send us an email]**(mailto:david.elisma@canada.ca?subject=Long%20document%20research%20project) | 
 Send an email to [David Elisma](mailto:david.elisma@canada.ca?subject=Long%20document%20research%20project) with your ideas or comments to make yourself heard.
-* Participate on [GCconnex](https://gcconnex.gc.ca/) or [GCcollab](https://gccollab.ca/groups/profile/199780/encollaborating-on-the-web-experience-toolkitfr) | 
-Send us a short comment or idea (keep in mind that GCconncx is exclusive to GoC employees)
-* [Participate in person](http://wet-boew.github.io/wet-boew/docs/start-en.html#wet-boew-code-sprint) | 
-Community meetings (code sprint) are being held every Tuesday at 200 promenade le Portage. Dates and locations of upcoming meetings will be posted as they are arranged.
+* **Participate on [GCconnex](https://gcconnex.gc.ca/) or [GCcollab]**(https://gccollab.ca/groups/profile/199780/encollaborating-on-the-web-experience-toolkitfr) | 
+Send us a short comment or idea (keep in mind that GCconnex is exclusive to GoC employees)
+* **[Participate in person]**(http://wet-boew.github.io/wet-boew/docs/start-en.html#wet-boew-code-sprint) | 
+Community meetings (code sprints) are being held every Tuesday at 200 promenade le Portage. Dates and locations of upcoming meetings will be posted as they are arranged.
 
 ## Who is the focus of this research project
 The research project will mainly engage:
@@ -26,8 +26,8 @@ The research project will mainly engage:
 
 ## Key questions for discussion
 Your ideas are sought after around 5 topics:
-* Organise ideas for the best effect
-* Ensure the flow of arguments
+* Organising and planning ideas for the best effect
+* Ensuring the flow of arguments in a document
 * Providing effective signposting in a document
 * Complying with a style guide requirements
 * Managing print-friendly version client-side
@@ -91,11 +91,11 @@ Like:
 * Compile and display structured data collected during the content merging (Extracting RDFa data and sumarize it at the top of the documents)
 
 ### Related information
-Plain language and task oriented document
+Documentation on plain language and task oriented documents
 * [Producing long document](https://www.le.ac.uk/oerresources/psychology/largedocs/page_03.htm)
 * Legal drafting
 
-Prototypes of long HTML document based on the Consultation Profile page:
+Prototypes of long HTML documents based on the Consultation Profile page:
 * https://stratpre1.ic.gc.ca/eic/site/ui-mc-mc.nsf/eng/h_lm04876.html
 * https://stratpre1.ic.gc.ca/eic/site/ui-mc-mc.nsf/eng/lm04745.html
 * https://stratpre1.ic.gc.ca/eic/site/ui-mc-mc.nsf/eng/lm00458.html
