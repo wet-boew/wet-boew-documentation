@@ -9,13 +9,13 @@ The goal of this research project is to gather all the best practices about crea
 ## Join in: how to participate
 Submissions can be made public on the WET-BOEW Github website. Having Github is not mandatory to participate on this project. You may use any channels that work best for you.
 
-* **[Share your idea online](https://github.com/delisma/wet-boew-documentation/issues/new)**
+*   **[Share your idea online](https://github.com/delisma/wet-boew-documentation/issues/new)**
     Use the Github issue tracker. (You will need a Github account to do so.)
-* **[Send us an email](mailto:david.elisma@canada.ca?subject=Long%20document%20research%20project)**
+*   **[Send us an email](mailto:david.elisma@canada.ca?subject=Long%20document%20research%20project)**
     Send an email to [David Elisma](mailto:david.elisma@canada.ca?subject=Long%20document%20research%20project) with your ideas or comments to make yourself heard.
-* **Participate on [GCconnex](https://gcconnex.gc.ca/) or [GCcollab](https://gccollab.ca/groups/profile/199780/encollaborating-on-the-web-experience-toolkitfr)**
+*   **Participate on [GCconnex](https://gcconnex.gc.ca/) or [GCcollab](https://gccollab.ca/groups/profile/199780/encollaborating-on-the-web-experience-toolkitfr)**
     Send us a short comment or idea (keep in mind that GCconnex is exclusive to GoC employees)
-* **[Participate in person](http://wet-boew.github.io/wet-boew/docs/start-en.html#wet-boew-code-sprint)**
+*   **[Participate in person](http://wet-boew.github.io/wet-boew/docs/start-en.html#wet-boew-code-sprint)**
     Community meetings (code sprints) are being held every Tuesday at 200 promenade le Portage. Dates and locations of upcoming meetings will be posted as they are arranged.
 
 ## Who is the focus of this research project
