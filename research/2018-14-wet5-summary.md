@@ -50,7 +50,46 @@ Summary of the WET5 project. Question or comments can be share by [opening new i
 	* Web publisher would need to stay inform with whatever changes is made.
 	* Web publisher would need to apply manually the patch, that for each published page that use that template.
 
-## Current status - as September 28
+## Project status
+
+### October 9
+
+Prototype update
+
+[Keyboard navigation module](2018-assets/2018-11-prototype/stacks/docs/nav-demo-v2.html)
+
+### October 4 
+
+Informal discussion of what is the advantages and disadvantages about current design approach of WET5
+
+Here a list of the item, determining if it is advantage or a disadvantage are opinionated. Share with us your opinion by submiting a new Github issue in the wet-boew project.
+
+* Very flexible to create amazing interaction pattern.
+* Solid alternative for department that cann't add any custom Javascript on their pages/application because web content management system restriction, like the WMS.
+* It's modularity shouldn't conflic with other library or framework.
+* Each tiny module is called "Gear"
+* Planned to be developped as a library and not as a framework.
+* Won't conflict with WET4, so it would be possible to use both at the same time
+* Planned to create documentation on how to assemble gears into a pattern that the content would meet WCAG 2.1 Level AA
+* Espected less effort for the code base maintenance.
+* Expected to last for decades
+* Expected to be stable and have a few commits occasionally.
+* Expected to require less ressource to maintain the library
+* Expected to have a wide and active community to develop and maintain a strong documentation of code sample.
+* Coding without following the official WET5 documented template/code sample:
+	* Higher risk of introducing issue that are not conforming to web accessibility standard
+	* Recommend to have the code beign reviewed by an accessibility expert.
+	* Recommend to perform a full assessement to evaluate the conformance of WCAG.
+	* Recommend to do various device testing. (browser software, mobile device, tablet,...)
+	* Recommend to test with various assistive technologies (Screen reader, ....)
+	* Recommend to have an easy access to Web Accessibility Expert resource.
+	* Recommend to test for performance, the uses of multiple gear might downgrade the web page performance.
+	* Some design pattern might require to be enhanced with WAI-ARIA if it don't pass the test or partially/not supported by the browser.
+* Implementer of WET5 code sample would need to manage an internal content inventory to ensure current implementations are conforming with the latest code sample version.
+* Might impact existing web publishing team where the required efforts for maintenance and testing are increased.
+* There is no web components. Implementating the gear as per the code sample and template would became the components.
+
+### as September 28
 
 Question/comments from the WET Roadmap meeting of September 27, 2018
 
