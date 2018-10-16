@@ -1,13 +1,13 @@
-#Profile page of Long document guide
+# Profile page of Long document guide
 
-##Overview
+## Overview
 This guide is intended to familiarize Microsoft Word users to a number of functions that can help in the creation of large documents such as manuals and reports.
 
-##Who is this guide for
+## Who is this guide for
 * Content authors
 * Administrative assistant
 
-##In this guide
+## In this guide
 1. Introduction
    * The challenge of creating and managing a long document
    * Consistency in formatting
@@ -49,15 +49,18 @@ This guide is intended to familiarize Microsoft Word users to a number of functi
 
 [View complete guide](https://www.le.ac.uk/oerresources/psychology/largedocs/page_01.htm)
 
-##Details and history
+## Details and history
+
 Published:
+
 Updated:
+
 Consulted:
 
-##For assistance
+## For assistance
 Lorem()
 
-##Related guides and help
+## Related guides and help
 * Legal drafting guide
 * [Canada.ca content style guide](https://www.canada.ca/en/treasury-board-secretariat/services/government-communications/canada-content-style-guide.html)
 * [Canada.ca Content and Information Specification](https://www.canada.ca/en/treasury-board-secretariat/services/government-communications/canada-content-information-architecture-specification.html)
