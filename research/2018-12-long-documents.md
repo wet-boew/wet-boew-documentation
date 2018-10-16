@@ -95,7 +95,7 @@ Like:
 
 ### Related information
 Documentation on plain language and task oriented documents
-* [Producing long document](https://www.le.ac.uk/oerresources/psychology/largedocs/page_03.htm)
+* [Producing long document with MS Word](2018-assets/2018-12-long-documents/2018-12-Profile-page-long-document.md)
 * Legal drafting
 
 Prototypes of long HTML documents based on the Consultation Profile page:
