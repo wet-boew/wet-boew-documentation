@@ -1,3 +1,12 @@
+---
+published: true
+layout: default-theme-wet-boew-en
+filename_fr:
+title: Research and finding - Web Experience Toolkit (WET) documentation
+description: Details on the research on best approaches on long documents 
+modified: 2018-09-18
+---
+
 # Share and view ideas: Managing decentralized long documents
 From [Measurement Canada](https://www.canada.ca/measurement-canada) project lead: [David Elisma](mailto:david.elisma@canada.ca?subject=Long%20document%20research%20project)
 
@@ -73,7 +82,7 @@ Finally, we must also ensure that the document is accurate and is understood to 
 General ideas on how the issue can be solved.
 
 Like:
-* Specifying best practices and guidelines for creating, publishing and maintaining long document on the Web
+* [Specifying best practices and guidelines for creating, publishing and maintaining long document on the Web](2018-assets/2018-12-long-documents/2018-12-Profile-page-long-document.md)
 * Merging multiple pages into one big page that would be ready for printing.
 * Generating and printing a master PDF client-side
 * Improving CSS printing
@@ -95,7 +104,7 @@ Like:
 
 ### Related information
 Documentation on plain language and task oriented documents
-* [Producing long document with MS Word](2018-assets/2018-12-long-documents/2018-12-Profile-page-long-document.md)
+* [Producing long document with MS Word](https://www.le.ac.uk/oerresources/psychology/largedocs/page_01.htm)
 * Legal drafting
 
 Prototypes of long HTML documents based on the Consultation Profile page:

@@ -1,4 +1,14 @@
+---
+published: true
+layout: default-theme-wet-boew-en
+filename_fr:
+title: Research and finding - Web Experience Toolkit (WET) documentation
+description: Guide intended to familiarize Microsoft Word users to functions that help in creating long docuem
+modified: 2018-10-16
+---
+
 # Profile page of Long document guide
+[Research](../../../../research-en.md) / [Managing decentralized long documents](../../../research/2018-12-long-documents.md)
 
 ## Overview
 This guide is intended to familiarize Microsoft Word users to a number of functions that can help in the creation of large documents such as manuals and reports.
@@ -51,7 +61,7 @@ This guide is intended to familiarize Microsoft Word users to a number of functi
 
 ## Details and history
 
-Published:
+Published: 2018-10-16
 
 Updated:
 
@@ -61,7 +71,6 @@ Consulted:
 Lorem()
 
 ## Related guides and help
-* [Managing decentralized long documents](../../../research/2018-12-long-documents.md)
 * Legal drafting guide
 * [Canada.ca content style guide](https://www.canada.ca/en/treasury-board-secretariat/services/government-communications/canada-content-style-guide.html)
 * [Canada.ca Content and Information Specification](https://www.canada.ca/en/treasury-board-secretariat/services/government-communications/canada-content-information-architecture-specification.html)
