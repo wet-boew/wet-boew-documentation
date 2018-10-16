@@ -61,6 +61,7 @@ Consulted:
 Lorem()
 
 ## Related guides and help
+* [Managing decentralized long documents](../../research/2018-12-long-documents.md)
 * Legal drafting guide
 * [Canada.ca content style guide](https://www.canada.ca/en/treasury-board-secretariat/services/government-communications/canada-content-style-guide.html)
 * [Canada.ca Content and Information Specification](https://www.canada.ca/en/treasury-board-secretariat/services/government-communications/canada-content-information-architecture-specification.html)
