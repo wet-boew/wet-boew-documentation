@@ -8,7 +8,7 @@ modified: 2018-09-18
 ---
 
 # Share and view ideas: Managing decentralized long documents
-[Research](../../../../research-en.html)
+[All research projects](../../../../research-en.html)
 
 Project lead: [David Elisma](mailto:david.elisma@canada.ca?subject=Long%20document%20research%20project)
 
