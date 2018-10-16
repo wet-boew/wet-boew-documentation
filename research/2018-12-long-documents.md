@@ -33,7 +33,7 @@ Your ideas are sought after around 5 topics:
 * Managing print-friendly version client-side
 
 ## Attend a meeting
-Community meeting will take the form of code sprint every Tuesday from 9h30 to 15h30 at 200 promenade le Portage, Gatineau, Room 2D302. To join, contact Pierre Dubois, on GCcollab, on GCconnex or on Twitter via @duboi5p.
+Community meetings will take the form of code sprint every Tuesday from 9h30 to 15h30 at 200 promenade le Portage, Gatineau, Room 2D302. To join, contact Pierre Dubois, on GCcollab, on GCconnex or on Twitter via @duboi5p.
 
 | Location | Date and time                           | Venue                                                 |
 |----------|-----------------------------------------|-------------------------------------------------------|
@@ -52,11 +52,13 @@ As a web publisher I am asked to publish content coming in a word processing sof
 
 ### Requirements
 
-The purpose of this research is to figure out how long documents can be created, managed, update and consummed by content creators, web publishers, web users and printer users.
+The purpose of this research is to figure out how long documents can be created, managed, updated and consummed by content creators, web publishers, web users and printer users.
 
-Avoid repeated content and be more modular.
+Content must avoid to be repeated through several different HTML pages to ensure an efficient maintainability.
 
-Content must be task oriented. Ideas must be organized in hierarchy.
+Content must be task oriented.
+
+Ideas must be organized in hierarchy.
 
 Content should be tagged in a way that we may assemble a print-friendly version.
 
@@ -66,20 +68,21 @@ When we use formatting, we need to comply with standards that are set by the per
 
 Finally, we must also ensure that the document is accurate and is understood to say what the author intended, by editing, including radical editing.
 
-### Solution idea
+### Ideas of posible solutions
 
-General idea on how the issue can be solved.
+General ideas on how the issue can be solved.
 
 Like:
-* Specify best practices and guidelines for creating, publishing and maintaining long document on the Web
+* Specifying best practices and guidelines for creating, publishing and maintaining long document on the Web
 * Merging multiple pages into one big page that would be ready for printing.
-* Generating and printing a master PDF
+* Generating and printing a master PDF client-side
 * Improving CSS printing
 
 ### Environmental scan
 
-* CIC have went through a three year project to produce guidelines for internal long documents
-* Research other GC non-GC approachs
+* Research other GC approach
+  * CIC have went through a three year project to produce guidelines for internal long documents
+* Research non-GC approach
 
 ### Solution component
 
