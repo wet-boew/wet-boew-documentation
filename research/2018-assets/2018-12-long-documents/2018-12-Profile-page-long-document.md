@@ -8,7 +8,7 @@ modified: 2018-10-16
 ---
 
 # Profile page of Long document guide
-[Research](../../../../research-en.md) / [Managing decentralized long documents](../../../research/2018-12-long-documents.md)
+[Research](../../../../research-en.html) / [Managing decentralized long documents](../../../research/2018-12-long-documents.html)
 
 ## Overview
 This guide is intended to familiarize Microsoft Word users to a number of functions that can help in the creation of large documents such as manuals and reports.

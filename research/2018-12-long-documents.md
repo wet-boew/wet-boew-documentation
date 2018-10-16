@@ -8,7 +8,9 @@ modified: 2018-09-18
 ---
 
 # Share and view ideas: Managing decentralized long documents
-From [Measurement Canada](https://www.canada.ca/measurement-canada) project lead: [David Elisma](mailto:david.elisma@canada.ca?subject=Long%20document%20research%20project)
+[Research](../../../../research-en.html)
+
+Project lead: [David Elisma](mailto:david.elisma@canada.ca?subject=Long%20document%20research%20project)
 
 ## Current status: Open
 Opened on September 18, 2018 and will be close to new input on May, 2019
@@ -82,7 +84,7 @@ Finally, we must also ensure that the document is accurate and is understood to 
 General ideas on how the issue can be solved.
 
 Like:
-* [Specifying best practices and guidelines for creating, publishing and maintaining long document on the Web](2018-assets/2018-12-long-documents/2018-12-Profile-page-long-document.md)
+* [Specifying best practices and guidelines for creating, publishing and maintaining long document on the Web](2018-assets/2018-12-long-documents/2018-12-Profile-page-long-document.html)
 * Merging multiple pages into one big page that would be ready for printing.
 * Generating and printing a master PDF client-side
 * Improving CSS printing
