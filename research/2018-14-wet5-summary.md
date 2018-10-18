@@ -88,6 +88,11 @@ Here a list of the item, determining if it is advantage or a disadvantage are op
 * Implementer of WET5 code sample would need to manage an internal content inventory to ensure current implementations are conforming with the latest code sample version.
 * Might impact existing web publishing team where the required efforts for maintenance and testing are increased.
 * There is no web components. Implementating the gear as per the code sample and template would became the components.
+* Ideal for web system where publisher can have custom javascript. Like in a restricted publishing environment.
+* WET 5 will contains a few automated tools to assis the web author during the WCAG confomance check.
+* Will be no markup mutation, like dual mode like basic HTML and standard we have in WET4 won't exits in WET 5.
+* Doign custom javascript coding wont be required, the gear will replace it.
+* WET 5 is binded on the final web interface, a markup which include any code enhancement, like ARIA. 
 
 ### as September 28
 
