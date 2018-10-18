@@ -15,11 +15,27 @@ modified: 2018-05-03
 ### Pre-release notes of WET v4.0.30
 
 <ul>
+	<li>20178-10-18
+		<ul>
+			<li>GCWeb
+				<ul>
+					<li>Patch - Documentation of ESDC campaign template changes. #1410</li>
+					<li>Major - Markup change in each template - Removal of Google analytic tracking code. #1411</li>
+					<li>Minor - New feature - Float first data column in a data table with row header. #1412</li>
+				</ul>
+			</li>
+			<li>WET-BOEW
+				<ul>
+					<li>Minor - Data tables - Filtering UI - Support for ```input[type=date]``` reset</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
 	<li>2018-10-10
 		<ul>
 			<li>GCWeb
 				<ul>
-					<li>Minor - Markup change in Campaign 2 (ESDC)</li>
+					<li>Minor - Markup change in Campaign 2 (ESDC) (To support equalheight plugin)</li>
 				</ul>
 			</li>
 			<li>WET developer - Major - Build script update
