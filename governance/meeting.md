@@ -3,12 +3,20 @@ published: true
 layout: default-theme-wet-boew-en
 title: Meeting summary - WET-BOEW documentation
 description: Summary of what has been discussed at the meeting.
-modified: 2018-07-26
+modified: 2018-10-18
 ---
 
 Summary of what has been discussed at the meeting.
 
 ## Roadmap
+
+2018-10-18 - ( 5 participants )
+* Review of all projects
+* As discused at the last meeting, now there is a WET 5 summary page.
+* Codefest - Kick off meeting for the planning commitee will be between October 29 - November 2
+* Approval of Design Decision #5 - Migration strategy from WET 4 to WET 5
+* Redesign of a few components in GCWeb are in progress
+* Summarized a discussion that happened during wet-boew technical review about to use figure vs heading structure. Related to [GCWeb #1408](https://github.com/wet-boew/GCWeb/issues/1408) The tehcnical review group were no real preference from a technical stand point, both semantic was fine to list features. It was agree that was more a personal choice of the developer.
 
 2018-09-27 - ( 5 participants )
 * Review of all projects
