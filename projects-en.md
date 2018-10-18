@@ -4,21 +4,21 @@ layout: default-theme-wet-boew-en
 filename_fr: index-fr
 title: Projects - Web Experience Toolkit (WET) documentation
 description: List of projects related to WET.
-modified: 2018-07-26
+modified: 2018-10-18
 ---
 
 
 ## Active project
 
-Updated: 2018-09-26
+Updated: 2018-10-18
 
 ### Accessibility
 * Reviewing and validating open github issue
 * Documenting basic HTML design pattern
 * WCAG 2.1 Level AA conformance check for existing features
 * Evaluate web accessibility compliance for wb5 features
-* **Last updated:** August 24, 2018
-* **Progress check history**: 2018-08-24; 2018-07-26; 2018-06-20; 2018-05-17; 2018-04-10; 2018-04-03; 2018-03-14; 2018-02-27; 2018-02-20
+* **Last updated:** October 18, 2018
+* **Progress check history**: 2018-10-18; 2018-08-24; 2018-07-26; 2018-06-20; 2018-05-17; 2018-04-10; 2018-04-03; 2018-03-14; 2018-02-27; 2018-02-20
 * **History:**
 	* (2018-08-24) Menu - Fixed the keyboard behviour of submenu (details/summary)
 	* (2018-07-26) Created a github project to triage accessibility related issue - [https://github.com/wet-boew/wet-boew/projects/2](https://github.com/wet-boew/wet-boew/projects/2)
@@ -28,15 +28,32 @@ Updated: 2018-09-26
 	* (2018-03-14) On going - review github issues and fixing current open issue.
 	* (2018-02-13) Validation of issue labelled "Work: Accessibility" which are open and the closed ones with the label "State: Going Stale".
 
+### Long documents (was PDF generator)
+Create a new feature that would allow the user to obtain a PDF printable version of the page. The PDF printable version are different from the web printable version in the sense that it would be possible to control and well define how the content of the webpage would transposed into a paper base format.
+* **Last updated:** October 18, 2018
+* **Current status:** Refining the projects description and research.
+* **Deliverable:** A feature that generate a PDF from a webpage.
+* **Goal:** Change the current practice which consist in uploading a standalone PDF version of the content and include a reference to that uploaded PDF in the content. At the same time, it would reduce the risk of have both version no in sync when a content update is applied.
+* **Project lead:** David Elisma
+* **History:**
+	* (2018-10-18) Improving the use case and requirement
+	* (2018-09-28) [Writting use case and requirement](http://wet-boew.github.io/wet-boew-documentation/research/2018-12-long-documents.html)
+	* (2018-02-22) Refining the projects description and research.
+
+## Going stale project
+
 ### Design system
 Design system to standardize the visual language and user experience of our digital collaboration tools. The system will encompass visual elements, components and communications.
-* **Last updated:** June 20, 2018
-* **Current status:** Basic visual for forms
-* **Current project phase:** Phase I - Visual and basic elements.
+* **Last updated:** October 18, 2018
+* **Current status:** It was observed this project was renamed to "Aurora" and a new website with code sample was lauched.
+* **Current project phase:** Unknow
 * **Deliverable:** Prototype downloadable in photoshop, Illustrator and Adobe XD files. And eventually the corresponding HTML code conforming to WCAG 2.0/2.1 Level AA.
 * **Notes:** That design system might replace the wet-boew style guide.
-* **Project homepage:** [#GCDigital Design System](https://gctools-outilsgc.gitbooks.io/-gcdigital-design-system/content/)
+* **Project homepage:** 
+	* [Aurora](https://design.gccollab.ca/#!)
+	* [#GCDigital Design System](https://gctools-outilsgc.gitbooks.io/-gcdigital-design-system/content/)
 * **History:**
+	* (2018-10-18) It was observed this project was renamed to "Aurora" and a new website with code sample was lauched.
 	* (2018-06-20) Common UI was draw. Currently they are creating prototype (HTML code) behind it. This project might get renamed in a near future.
 	* (2018-05-17) Seems to have started phase II
 	* (2018-02-26) Basic visual for forms
@@ -91,17 +108,6 @@ Harmonize the error message displayed when in browser error is combined with ser
 	* (2018-06-20) WIP with the working example creation and testing the solution.
 	* (2018-05-17) Work for single input or select, but not when it is combined together.
 	* (2018-04-11) Early exploratory prototype
-
-### Long documents (was PDF generator)
-Create a new feature that would allow the user to obtain a PDF printable version of the page. The PDF printable version are different from the web printable version in the sense that it would be possible to control and well define how the content of the webpage would transposed into a paper base format.
-* **Last updated:** September 28, 2018
-* **Current status:** Refining the projects description and research.
-* **Deliverable:** A feature that generate a PDF from a webpage.
-* **Goal:** Change the current practice which consist in uploading a standalone PDF version of the content and include a reference to that uploaded PDF in the content. At the same time, it would reduce the risk of have both version no in sync when a content update is applied.
-* **Project lead:** David Elisma
-* **History:**
-	* (2018-09-28) [Writting use case and requirement](http://wet-boew.github.io/wet-boew-documentation/research/2018-12-long-documents.html)
-	* (2018-02-22) Refining the projects description and research.
 
 ### Migration to WCAG 2.1 Level AA
 See the Accessibility project.
