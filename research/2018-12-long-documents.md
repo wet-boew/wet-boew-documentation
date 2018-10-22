@@ -8,7 +8,7 @@ modified: 2018-09-18
 ---
 
 # Share and view ideas: Managing decentralized long documents
-[All research projects](../../../../research-en.html)
+[All research projects](../../research-en.html)
 
 Project lead: [David Elisma](mailto:david.elisma@canada.ca?subject=Long%20document%20research%20project)
 
@@ -84,8 +84,10 @@ Finally, we must also ensure that the document is accurate and is understood to 
 General ideas on how the issue can be solved.
 
 Like:
-* [Specifying best practices and guidelines for creating, publishing and maintaining long document on the Web](2018-assets/2018-12-long-documents/2018-12-Profile-page-long-document.html)
-* Merging multiple pages into one big page that would be ready for printing.
+* [Classifications of long documents](2018-assets/2018-12-long-documents/2018-12-long-document-classes.html)
+* [Specifying best practices and guidelines for creating, publishing and maintaining long document on the Web](2018-assets/2018-12-long-documents/2018-12-long-document-profile-page.html)
+* Using data visualization to make large amounts of complex information easier and faster to read 
+* Merging multiple pages into one single document that would be ready for printing.
 * Generating and printing a master PDF client-side
 * Improving CSS printing
 
