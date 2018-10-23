@@ -19,6 +19,29 @@ modified: 2018-09-22
 (to be moved on a different page)
 Print CSS useful to print general-purpose document
 
+## Choosing the right format
+It’s important to choose the format that fits your content. Do not base your decision on how a format looks. This is because if your content is in the wrong format, users will not be able to find it
+
+<details>
+    <summary> Acts </summary>
+    <p> A law passed by parliament </p>
+    <dl class="dl-horizontal">
+        <dt>Usual lentgh:</dt>
+        <dd></dd>
+        <dt>Users:</dt>
+        <dd></dd>
+    </dl>
+</details>
+
+details>summaryCase study
+
+
+Consultations:  
+A proposal for change published to seek views and allow the opportunity for comment
+
+Documents incorporated by reference:  
+Legally binding documents referenced by legislation without being reproduced in legislation itself 	
+
 Policies:  
 Formal statements that provide context, direction or instruction on results, accountabilities, specific action or use to ensure compliance
 
@@ -28,20 +51,11 @@ Guidance documents provide instructions, context, additional information, or bes
 Guidance – legislative:  
 Legislative guidance (or guidance on legislation) provides information to facilitate awareness, understanding, and compliance with legislative statutory and regulatory requirements and may also describe their administration. Guidance on legislation does not establish new requirements and is not legally binding
 
-Consultations:  
-A proposal for change published to seek views and allow the opportunity for comment
-
 Research:  
 Research findings or conclusions, typically relating to sciences, engineering, psychology or technical investigation
 
-Acts:  
-A law passed by parliament
-
 Regulations:  
 Rules used to carry out the intent of statutes (Acts) enacted by the Parliament of Canada. They are instruments of legislative power and have the force of law
-
-Documents incorporated by reference:  
-Legally binding documents referenced by legislation without being reproduced in legislation itself 	
 
 Recommendations:  
 A formal proposal made by a quasi-judicial or regulatory body that must be implemented

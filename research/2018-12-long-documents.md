@@ -46,11 +46,32 @@ Your ideas are sought after around 5 topics:
 ## Attend a meeting
 Community meetings will take the form of code sprint every Tuesday from 9h30 to 15h30 at 200 promenade le Portage, Gatineau, Room 2D302. To join, contact Pierre Dubois, on GCcollab, on GCconnex or on Twitter via @duboi5p.
 
-| Location | Date and time                           | Venue                                                 |
-|----------|-----------------------------------------|-------------------------------------------------------|
-| Gatineau | October 16, 2018 9:30 a.m. to 3:30 p.m  | 200 promenade le Portage, Room 2D302 (Service Canada) |
-| Gatineau | October 23, 2018 9:30 a.m. to 3:30 p.m  | 200 promenade le Portage, Room 2D302 (Service Canada) |
-| Gatineau | October 30, 2018 9:30 a.m. to 3:30 p.m. | 200 promenade le Portage, Room 2D302 (Service Canada) |
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Location</th>
+            <th>Date and time</th>
+            <th>Venue</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Gatineau</td>
+            <td>October 30, 2018 9:30 a.m. to 3:30 p.m.</td>
+            <td>200 promenade le Portage, Room 2D302 (Service Canada)</td>
+        </tr>
+        <tr>
+            <td>Gatineau</td>
+            <td>November 6, 2018 9:30 a.m. to 3:30 p.m.</td>
+            <td>200 promenade le Portage, Room 2D302 (Service Canada)</td>
+        </tr>
+        <tr>
+            <td>Gatineau</td>
+            <td>November 13, 2018 9:30 a.m. to 3:30 p.m.</td>
+            <td>200 promenade le Portage, Room 2D302 (Service Canada)</td>
+        </tr>
+    </tbody>
+</table>
 
 ## What we're working on so far
 ### Use case and story
@@ -84,7 +105,7 @@ Finally, we must also ensure that the document is accurate and is understood to 
 General ideas on how the issue can be solved.
 
 Like:
-* [Classifications of long documents](2018-assets/2018-12-long-documents/2018-12-long-document-classes.html)
+* [Definitions and classifications of long documents](2018-assets/2018-12-long-documents/2018-12-long-document-classes.html)
 * [Specifying best practices and guidelines for creating, publishing and maintaining long document on the Web](2018-assets/2018-12-long-documents/2018-12-long-document-profile-page.html)
 * Using data visualization to make large amounts of complex information easier and faster to read 
 * Merging multiple pages into one single document that would be ready for printing.
@@ -109,6 +130,7 @@ Like:
 ### Related information
 Documentation on plain language and task oriented documents
 * [Producing long document with MS Word](https://www.le.ac.uk/oerresources/psychology/largedocs/page_01.htm)
+* [GOV.uk Content design: planning, writing and managing content](https://www.gov.uk/guidance/content-design)
 * Legal drafting
 
 Prototypes of long HTML documents based on the Consultation Profile page:
