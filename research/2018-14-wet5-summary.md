@@ -3,7 +3,7 @@ published: true
 layout: default-theme-wet-boew-en
 title: 2018-14 - WET 5 Summary
 description: Summary of the WET5 project
-modified: 2018-09-28
+modified: 2018-11-01
 ---
 
 Summary of the WET5 project. Question or comments can be share by [opening new issue](https://github.com/wet-boew/wet-boew/issues/new).
@@ -14,9 +14,11 @@ Summary of the WET5 project. Question or comments can be share by [opening new i
 * [August 2018 - Presentation of the early prototype - Augmented Design](2018-11-wet5-augmented-design-presentation.html)
 * [August 2018 - Prototype - alpha](2018-assets/2018-11-prototype/stacks/docs/index.html)
 * [September 2018 - WET 5 workshop – UXDS @ STATCAN](2018-13-wet5-workshop-statcan.html)
-* [September 2018 - Prototype - menu key navigation](2018-assets/2018-11-prototype/stacks/docs/nav-demo.html)
+* [September 2018 - Prototype - menu key navigation](2018-assets/2018-11-prototype/stacks/docs/nav-demo.html) *no longer functional*
 * September 2018 - Question and concern was expressed during the WET Roadmap meeting
 * [October 2018 - Prototype - menu key navigation V2](2018-assets/2018-11-prototype/stacks/docs/nav-demo-v2.html)
+* [November 2018 - Prototype - New GCWeb menu with WET 5 ](2018-assets/2018-11-prototype/stacks/docs/gcweb-v2-menu.html)
+
 
 ## WET 5 architecture in a nutshell, as the end of September 2018
 

@@ -59,6 +59,18 @@ require( [ "module/element"  ].concat( polyfills ), function( _element ) {
 		require( [ "css!module/accessibilty/audit/a11y-" + lang ], function() {} ) ;
 	}
 
+	let initialNodes = document.querySelectorAll( "[data-wb5]:not(.wb5-inited)" );
+	for ( let node of initialNodes ){
+		let actions = _element.inspect( node );
+			_element.addClass( node, "wb5-inited" );
+			for ( let idx = 0 ; idx < actions.length ; idx++ ) {
+				let action = actions[ idx ];
+				require( [ "module/" + action.command ], function( worker ) {
+					worker.handle( node, action.selector, action.options );
+				} );
+			}
+	}
+
 	let insertListener = function( event ) {
 		if ( event.animationName === "nodeInserted" ) {
 

@@ -1,58 +1,51 @@
 /**
- * timer.js - a timer module that will create a repetative timer on an element
- * @returns {void}
- */
-define( [ "module/element" ], function( wbElement ) {
-    "use strict";
+* Toggle gear - a module for adding/removing classes
+* @returns {void}
+*/
+define( [ "module/element", "module/event" ], function( ElementUtil, EventUtil ) {
+	"use strict";
 
 	/**
-	 * a11yClick - traps various event types to ensure that a "click" can be done with a mouse and a keyboard
-	 * @private
-	 * @param {Object} event the event object to which the user "clicked" the element
-	 * @returns whether it is a "click" or not
-	 * @type Boolean
-	 */
+	* the main function body
+	* @public
+	* @param {DOMElement} elm - element which listens for and handles events
+	* @param {String} selector - query string for target elements (defaults to elm if empty)
+	* @param {Object} options - configuration for the module
+	* @returns void
+	*/
 
-    function a11yClick( event ) {
+	function handle( elm, selector, options ) {
 
-		if ( event.type === "click" ) {
-	        return true;
-        }
+		let properties =  Object.assign({ eventname: "click keydown", classname : "toggle" }, options),
+		nodes = ElementUtil.nodes( elm, selector );
 
-        if ( event.type === "keypress" ) {
-
-	        let code = event.charCode || event.keyCode;
-
-			if ( ( code === 32 ) || ( code === 13 ) ) {
-	            return true;
-	        }
-	    }
-
-        return false;
-	}
-
-    /**
-     * the main function body
-     * @public
-     * @param {DOMElement} $elm the element for which the data-wb5 attribute is located
-     * @param {String} selector the CSS3 query string to which target the children or not
-     * @param {Object} options for the element/node
-     * @returns void
-     */
-
-	function handle( $elm, selector, options ) {
-
-		let properties =  Object.assign({ eventname: "click keypress", toggleclass : "toggle" }, options),
-		nodes = wbElement.nodes( $elm, selector );
-
-		let listener = ( properties.eventname !== "click keypress" )
-                ? function( event ) { wbElement.toggle( nodes, properties.toggleclass ) }
-                : function( event ) { if ( a11yClick( event ) ) { wbElement.toggle( nodes, properties.toggleclass ) } };
-
-		for ( let node of nodes ) {
-				wbElement.addListener( node, properties.eventname, listener );
-		}
-
+		ElementUtil.addListener( elm, properties.eventname, function( event ){
+			// 'enter' and 'space' are both valid key presses
+			if ( event.type == "keydown" ){
+				let code = event.charCode || event.keyCode;
+				if ( ( code !== 32 ) && ( code !== 13 ) ) {
+					return false;
+				}
+			}
+			for ( let node of nodes ) {
+				let evt;
+				if ( ElementUtil.hasClass( node, properties.classname ) ) {
+					ElementUtil.removeClass( node, properties.classname );
+					if (properties.aria){
+						node.setAttribute( "aria-"+properties.aria, "false");
+					}
+					evt = EventUtil.create( "toggleout" );
+				}
+				else{
+					ElementUtil.addClass(node, properties.classname);
+					if (properties.aria){
+						node.setAttribute( "aria-"+properties.aria, "true");
+					}
+					evt = EventUtil.create( "togglein" );
+				}
+				node.dispatchEvent( evt );
+			}
+		} );	
 	}
 
 	return {
