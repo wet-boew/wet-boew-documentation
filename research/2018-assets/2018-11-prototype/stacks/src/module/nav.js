@@ -1,5 +1,5 @@
 /**
-* keys.js - allow navigation through lists with the keyboard
+* Nav gear - allow navigation through lists with the keyboard
 * @returns {void}
 */
 define( [ "module/element", "module/aria" ], function( ElementUtil, AriaUtil ) {
@@ -86,11 +86,15 @@ define( [ "module/element", "module/aria" ], function( ElementUtil, AriaUtil ) {
 		for (let idx = $children.length - 1; idx >= 0; idx--) {
 			if ( ElementUtil.hasClass( $children[idx], classname) )
 			{
-				return idx
+				return idx;
 			}
 		}
 		return -1;
 	};
+	
+	function focusable( elm ){
+		return elm.matches( 'button, [href], input, select, textarea, [tabindex]' );
+	}
 	
 	/**
 	* the main function body
@@ -105,7 +109,7 @@ define( [ "module/element", "module/aria" ], function( ElementUtil, AriaUtil ) {
 		let properties = Object.assign({ eventname: "keypress", classes: "active" }, options ),
 		children = ElementUtil.nodes( $elm, selector );
 		//Add event listeners
-		listen( $elm, children, properties)
+		listen( $elm, children, properties );
 	};
 	
 	/**
@@ -118,98 +122,122 @@ define( [ "module/element", "module/aria" ], function( ElementUtil, AriaUtil ) {
 	*/
 	function listen($elm, children, properties){
 		
-
+		
 		var focusWithin = false;
-
-		let submenus = $elm.querySelectorAll("[aria-haspopup=true]")
-		for (let node of submenus){
-			AriaUtil.add(node, "expanded", false)
+		
+		let submenus = $elm.querySelectorAll( "[aria-haspopup]:not([aria-expanded])" );
+		for ( let node of submenus ) {
+			AriaUtil.add( node, "expanded", false );
 		}
-
-		ElementUtil.addListener( $elm, "focusin", function(event){
+		
+		ElementUtil.addListener( $elm, "focusin", function( event ){
 			focusWithin = true;
 		})
-
+		
 		//Remove classes on unfocus, unless otherwise specified
-		ElementUtil.addListener( $elm, "focusout", function(event){
+		ElementUtil.addListener( $elm, "focusout", function( event ){
 			focusWithin = false;
-                timer = setTimeout( function() {
-                    if( !focusWithin ){
-						if(!properties.KeepClassOnBlur){
+			timer = setTimeout( function() {
+				if( !focusWithin ) {
+					if ( !properties.KeepClassOnBlur ) {
 						ElementUtil.removeClass( $elm, properties.classes );
-						
+						if( $elm.matches( "[aria-expanded~=true]" ) ) {
+							AriaUtil.add( $elm, "expanded", "false" );
+						}
 						for (var child of children){
 							ElementUtil.removeClass( child, properties.classes )
+							if( child.matches("[aria-expanded~=true]" ) ) {
+								AriaUtil.add( child, "expanded", "false" );
+							}
 						}
 					}
-                    }
-                },1); 
+				}
+			},1); 
 		})
-
+		
 		//handle key presses
-		ElementUtil.addListener( $elm, properties.eventname, function( event ){
+		ElementUtil.addListener( $elm, "select " + properties.eventname, function( event ){
 			let advance,
-			current = find( children, properties.classes ),
-			total = children.length,
-			next = 0,
-			key = keycode( event, properties.orientation ),
-			currentElm = (current == -1) ? $elm : children[current],
-			nextElm = currentElm,
-			classesToAdd = properties.classes,
-			removeOnMove = true;
-			$elm.focus()
-			if ( !key ) { //invalid key press
+				current = find( children, properties.classes ),
+				total = children.length,
+				next = 0,
+				key = keycode( event, properties.orientation ),
+				currentElm = (current == -1) ? $elm : children[ current ],
+				nextElm = currentElm,
+				classesToAdd = properties.classes,
+				removeOnMove = true;
+			if ( !key && ( event.type != "select" ) ) { //invalid key press
 				return;
 			}
-			if ( key != 'tab' ) {	
+			if ( key != 'tab' ) {
 				event.preventDefault();	
 			}
-			if (key == 'in'){	//enter a submenu
+			if ( event.type == 'select' ) {
+
+				let target = event.target == $elm ? children[ 0 ] : event.target;
+
+				for ( let idx = children.length - 1 ; idx >= 0 ; idx-- ) {				
+					ElementUtil.removeClass( children[idx], properties.classes );
+					if ( target == children[ idx ] || children[ idx ].contains( target ) )
+					{
+						nextElm = children[ idx ];
+						continue;
+					}
+				}
+				event.stopPropagation();
+			}
+			else if ( key == 'in' ) {	//enter a submenu
 				event.stopPropagation();
 				let submenu = currentElm.querySelector( "[data-wb5~=nav]" ) || currentElm.parentElement.querySelector( "[data-wb5~=nav]" );
 				if ( submenu ) {
-					if (submenu.parentElement == currentElm || submenu.parentElement == currentElm.parentElement){
+					if ( submenu.parentElement == currentElm || submenu.parentElement == currentElm.parentElement ) {
 						nextElm = submenu.querySelector( submenu.dataset.wb5NavSelector );
 						classesToAdd = JSON.parse(submenu.dataset.wb5NavOptions).classes;
-						submenu.focus()
+						submenu.focus();
 						removeOnMove = false;
 					}
 				}
 				else{	//if no submenu, then move along the nearest horizontal menu bar
 					let supermenu = $elm.closest("[data-wb5-nav-options*=horizontal], [data-wb5-nav-options*=grid]");
-					if (supermenu && supermenu != $elm){
-						let superMenuChildren = ElementUtil.nodes(supermenu, supermenu.dataset.wb5NavSelector),
-						superMenuIndex = find(superMenuChildren, JSON.parse(supermenu.dataset.wb5NavOptions).classes),
-						superMenuItem = superMenuChildren[superMenuIndex];
-
-						ElementUtil.removeClass( superMenuItem, JSON.parse(supermenu.dataset.wb5NavOptions).classes )
-						superMenuIndex++
-						if (superMenuIndex >= superMenuChildren.length){
+					if ( supermenu && supermenu != $elm ) {
+						let superMenuChildren = ElementUtil.nodes( supermenu, supermenu.dataset.wb5NavSelector ),
+							superMenuIndex = find( superMenuChildren, JSON.parse( supermenu.dataset.wb5NavOptions ).classes ),
+							superMenuItem = superMenuChildren[ superMenuIndex ];
+						
+						ElementUtil.removeClass( superMenuItem, JSON.parse( supermenu.dataset.wb5NavOptions ).classes );
+						superMenuIndex++;
+						if ( superMenuIndex >= superMenuChildren.length ){
 							superMenuIndex = 0;
 						}
-						nextElm = superMenuChildren[superMenuIndex]
-						classesToAdd = JSON.parse(supermenu.dataset.wb5NavOptions).classes;
-						supermenu.focus()
+						nextElm = superMenuChildren[ superMenuIndex ];
+						classesToAdd = JSON.parse( supermenu.dataset.wb5NavOptions ).classes;
 					}
 				}
 			}
-			else if( key == 'out' ) { //exit a submenu
+			else if( key == 'out' || key == 'exit') { //exit a submenu
 				let supermenu = $elm.parentElement.closest("[data-wb5~=nav]");
-					if (supermenu){
-						if (JSON.parse(supermenu.dataset.wb5NavOptions).orientation == "vertical"){
-						superMenuItem = $elm.closest( supermenu.dataset.wb5NavSelector ) || $elm.parentElement.querySelector(supermenu.dataset.wb5NavSelector);
+				if ( supermenu ) {
+					if ( JSON.parse( supermenu.dataset.wb5NavOptions ).orientation == "vertical" ) {
+						superMenuItem = $elm.closest( supermenu.dataset.wb5NavSelector ) || $elm.parentElement.querySelector( supermenu.dataset.wb5NavSelector );
 						if (superMenuItem){
 							classesToAdd = JSON.parse(supermenu.dataset.wb5NavOptions).classes;
-							nextElm = superMenuItem
-							supermenu.focus()
+							nextElm = superMenuItem;
 							event.stopPropagation();
 						}
 					}
 				}
+				else if ( $elm.parentElement.querySelector( "button" ) ) {
+					$elm.parentElement.querySelector( "button" ).focus();
+					return;
+				}
+				else {
+					currentElm.blur();
+					return;
+				}
 			}
 			else if ( key == 'increment' || key == 'decrement' || key == 'up' || key =='down' ) {
-				advance = (key == 'increment' || key=='down') ? 1 : -1;
-				if (key == 'up' || key== 'down'){
+				advance = ( key == 'increment' || key=='down' ) ? 1 : -1;
+				if ( key == 'up' || key== 'down' ) {
 					advance *= parseInt(properties.width);
 				}
 				if ( current + advance < total ) {
@@ -221,37 +249,36 @@ define( [ "module/element", "module/aria" ], function( ElementUtil, AriaUtil ) {
 					next = current + advance;
 					next = ( next > total ) ? next - total : next;
 				}
-				nextElm = children[next]
+				nextElm = children[next];
 
 				event.stopPropagation();
 			}
-			if (nextElm){
-				if (removeOnMove){ //remove the class on move, unless otherwise specified
-					ElementUtil.removeClass(currentElm, properties.classes);
-					if(currentElm.matches("[aria-expanded~=true]")){
-						AriaUtil.add(currentElm, "expanded", "false")
+			if ( nextElm ) {
+				if ( removeOnMove ) { //remove the class on move, unless otherwise specified
+					ElementUtil.removeClass( currentElm, properties.classes );
+					if ( currentElm.matches( "[aria-expanded~=true]" ) ) {
+						AriaUtil.add( currentElm, "expanded", "false" );
 					}
 				}
-				let itemLink = nextElm.querySelector("a"); //focus in on A elements
-				if (itemLink){
-					if (itemLink.parentElement == nextElm){
+				let itemLink = nextElm.querySelector( "[href],[tabindex]" ); //focus in on anchor elements
+				if ( itemLink ) {
+					if ( itemLink.parentElement == nextElm ) {
 						itemLink.focus();
 					}
 				}
-				else if (nextElm.nodeName == "A"){
+				else if ( focusable(nextElm) ) {
 					nextElm.focus();
 				}
-				//nextElm.scrollIntoView();
-				ElementUtil.addClass(nextElm, classesToAdd);
-				if(nextElm.matches("[aria-expanded~=false]")){
-					AriaUtil.add(nextElm, "expanded", "true")
+				ElementUtil.addClass( nextElm, classesToAdd );
+				if ( nextElm.matches( "[aria-expanded~=false]" ) ) {
+					AriaUtil.add( nextElm, "expanded", "true" );
 				}
 
-		}
-			
+			}
+
 		});
 	};
-	
+
 	return {
 		handle: handle
 	};
