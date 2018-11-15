@@ -3,7 +3,7 @@ published: true
 layout: default-theme-wet-boew-en
 title: Design decision
 description: Design decision followed by WET.
-modified: 2018-07-05
+modified: 2018-11-15
 ---
 
 The following are design decision for WET. Those decision are used for providing guidance on how to design content, features and theme. These design decision would be reviewed by the WET-BOEW Roadmap group.
@@ -21,6 +21,7 @@ The following design decision can be obseleted if you find they are not valid an
 		<li><a href="2.html">Design decision 2: Browser supported</a> (Support scope)</li>
 		<li><a href="3.html">Design decision 3: WET API/Blueprint</a></li>
 		<li><a href="4.html">Design decision 4: Basic HTML mode and progressive enhancement</a></li>
+		<li><a href="5.html">Design Decision 5: Decision on repository migration</a></li>
 	</ul>
 </section>
 
@@ -70,8 +71,7 @@ The following design decision can be obseleted if you find they are not valid an
 				<li>Need AT testing</li>
 				<li>Github related issue <a href="https://github.com/wet-boew/wet-boew/issues/7314">wet-boew/wet-boew#7314</a></li> 
 			</ul>
-		</li>
-		<li>Design Decision 5: <a href="draft-2018-5.html">Decision on repository migration</a></li>
+		</li>		
 	</ul>
 
 </section>
