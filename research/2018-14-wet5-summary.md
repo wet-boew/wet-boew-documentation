@@ -3,7 +3,7 @@ published: true
 layout: default-theme-wet-boew-en
 title: 2018-14 - WET 5 Summary
 description: Summary of the WET5 project
-modified: 2018-11-01
+modified: 2018-11-30
 ---
 
 Summary of the WET5 project. Questions or comments can be share by [opening new issue](https://github.com/wet-boew/wet-boew/issues/new).
@@ -18,7 +18,7 @@ Summary of the WET5 project. Questions or comments can be share by [opening new 
 * September 2018 - Questions and concerns were expressed during the WET Roadmap meeting
 * [October 2018 - Prototype - menu key navigation V2](2018-assets/2018-11-prototype/stacks/docs/nav-demo-v2.html)
 * [November 2018 - Prototype - New GCWeb menu with WET 5 ](2018-assets/2018-11-prototype/stacks/docs/gcweb-v2-menu.html)
-  [November 2018 - Prototype - GCWEB menu with WET 5 V2 ](2018-assets/2018-11-prototype/stacks/docs/gcweb-v3-menu.html)
+* [November 2018 - Prototype - GCWEB menu with WET 5 V2 ](2018-assets/2018-11-prototype/stacks/docs/gcweb-v3-menu.html) [Summary](2018-assets/2018-11-prototype/docs/gcweb-menu-report)
 
 
 
@@ -55,6 +55,10 @@ Summary of the WET5 project. Questions or comments can be share by [opening new 
 	* Web publishers would need to apply the patch manually, for each published page that uses that template.
 
 ## Project status
+
+### November 30
+
+[Summary of latest demo](2018-assets/2018-11-prototype/docs/gcweb-menu-report)
 
 ### October 9
 
