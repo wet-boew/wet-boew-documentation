@@ -2,7 +2,7 @@
 * Nav gear - allow navigation through lists with the keyboard
 * @returns {void}
 */
-define( [ "module/element", "module/aria" ], function( ElementUtil, AriaUtil ) {
+define( [ "module/element", "module/aria", "module/size" ], function( ElementUtil, AriaUtil, SizeUtil ) {
 	
 	/**
 	* keycode - determines what action to take when a key is pressed
@@ -106,7 +106,7 @@ define( [ "module/element", "module/aria" ], function( ElementUtil, AriaUtil ) {
 	*/
 	function handle( $elm, selector, options ) {
 		
-		let properties = Object.assign({ eventname: "keypress", classes: "active" }, options ),
+		let properties = Object.assign({ eventname: "keypress", classes: "active", size: ">0", useAria: "true" }, options ),
 		children = ElementUtil.nodes( $elm, selector );
 		//Add event listeners
 		listen( $elm, children, properties );
@@ -131,11 +131,20 @@ define( [ "module/element", "module/aria" ], function( ElementUtil, AriaUtil ) {
 		}
 		
 		ElementUtil.addListener( $elm, "focusin", function( event ){
+			if (!SizeUtil.check(properties.size) ){
+				return;
+			}
+			
 			focusWithin = true;
 		})
 		
 		//Remove classes on unfocus, unless otherwise specified
 		ElementUtil.addListener( $elm, "focusout", function( event ){
+			if (!SizeUtil.check(properties.size) ){
+				return;
+			}
+			
+			
 			focusWithin = false;
 			timer = setTimeout( function() {
 				if( !focusWithin ) {
@@ -157,15 +166,21 @@ define( [ "module/element", "module/aria" ], function( ElementUtil, AriaUtil ) {
 		
 		//handle key presses
 		ElementUtil.addListener( $elm, "select " + properties.eventname, function( event ){
+			if (!SizeUtil.check(properties.size) ){
+				return;
+			}
+			
+			
+			
 			let advance,
-				current = find( children, properties.classes ),
-				total = children.length,
-				next = 0,
-				key = keycode( event, properties.orientation ),
-				currentElm = (current == -1) ? $elm : children[ current ],
-				nextElm = currentElm,
-				classesToAdd = properties.classes,
-				removeOnMove = true;
+			current = find( children, properties.classes ),
+			total = children.length,
+			next = 0,
+			key = keycode( event, properties.orientation ),
+			currentElm = (current == -1) ? $elm : children[ current ],
+			nextElm = currentElm,
+			classesToAdd = properties.classes,
+			removeOnMove = true;
 			if ( !key && ( event.type != "select" ) ) { //invalid key press
 				return;
 			}
@@ -173,9 +188,9 @@ define( [ "module/element", "module/aria" ], function( ElementUtil, AriaUtil ) {
 				event.preventDefault();	
 			}
 			if ( event.type == 'select' ) {
-
+				
 				let target = event.target == $elm ? children[ 0 ] : event.target;
-
+				
 				for ( let idx = children.length - 1 ; idx >= 0 ; idx-- ) {				
 					ElementUtil.removeClass( children[idx], properties.classes );
 					if ( target == children[ idx ] || children[ idx ].contains( target ) )
@@ -201,8 +216,8 @@ define( [ "module/element", "module/aria" ], function( ElementUtil, AriaUtil ) {
 					let supermenu = $elm.closest("[data-wb5-nav-options*=horizontal], [data-wb5-nav-options*=grid]");
 					if ( supermenu && supermenu != $elm ) {
 						let superMenuChildren = ElementUtil.nodes( supermenu, supermenu.dataset.wb5NavSelector ),
-							superMenuIndex = find( superMenuChildren, JSON.parse( supermenu.dataset.wb5NavOptions ).classes ),
-							superMenuItem = superMenuChildren[ superMenuIndex ];
+						superMenuIndex = find( superMenuChildren, JSON.parse( supermenu.dataset.wb5NavOptions ).classes ),
+						superMenuItem = superMenuChildren[ superMenuIndex ];
 						
 						ElementUtil.removeClass( superMenuItem, JSON.parse( supermenu.dataset.wb5NavOptions ).classes );
 						superMenuIndex++;
@@ -250,14 +265,17 @@ define( [ "module/element", "module/aria" ], function( ElementUtil, AriaUtil ) {
 					next = ( next > total ) ? next - total : next;
 				}
 				nextElm = children[next];
-
+				
 				event.stopPropagation();
 			}
 			if ( nextElm ) {
-				if ( removeOnMove ) { //remove the class on move, unless otherwise specified
+				if ( removeOnMove) { //remove the class on move, unless otherwise specified
 					ElementUtil.removeClass( currentElm, properties.classes );
-					if ( currentElm.matches( "[aria-expanded~=true]" ) ) {
-						AriaUtil.add( currentElm, "expanded", "false" );
+					if (properties.useAria == "true"){
+						
+						if ( currentElm.matches( "[aria-expanded~=true]" ) ) {
+							AriaUtil.add( currentElm, "expanded", "false" );
+						}
 					}
 				}
 				let itemLink = nextElm.querySelector( "[href],[tabindex]" ); //focus in on anchor elements
@@ -270,15 +288,17 @@ define( [ "module/element", "module/aria" ], function( ElementUtil, AriaUtil ) {
 					nextElm.focus();
 				}
 				ElementUtil.addClass( nextElm, classesToAdd );
-				if ( nextElm.matches( "[aria-expanded~=false]" ) ) {
-					AriaUtil.add( nextElm, "expanded", "true" );
+				if (properties.useAria == "true"){
+					if ( nextElm.matches( "[aria-expanded~=false]" ) ) {
+						AriaUtil.add( nextElm, "expanded", "true" );
+					}
 				}
-
+				
 			}
-
+			
 		});
 	};
-
+	
 	return {
 		handle: handle
 	};

@@ -4,7 +4,7 @@
 * @version 1.0
 */
 
-define( [ "module/element", "module/aria"], function( ElementUtil, AriaUtil ) {
+define( [ "module/element", "module/aria", "module/size"], function( ElementUtil, AriaUtil, SizeUtil ) {
 	"use strict";
 
 	/**
@@ -17,7 +17,7 @@ define( [ "module/element", "module/aria"], function( ElementUtil, AriaUtil ) {
 	*/
 	function handle( elm, selector, options ) {       
 
-		let properties = Object.assign({ classname: "open" }, options ),
+		let properties = Object.assign({ classname: "open", size: ">0" }, options ),
 		children = ElementUtil.nodes( elm, selector );
 
 		var focusWithin = false;
@@ -27,7 +27,11 @@ define( [ "module/element", "module/aria"], function( ElementUtil, AriaUtil ) {
 			AriaUtil.add( node, "expanded", false );
 		}
 
-		ElementUtil.addListener( elm, "mouseover", function( event ){
+		ElementUtil.addListener( elm, "mouseover", function( event )
+		{
+			if (!SizeUtil.check(properties.size) ){
+				return;
+			}
 			focusWithin = true;
 			setTimeout( function() {
 				if ( focusWithin ) {
@@ -39,10 +43,12 @@ define( [ "module/element", "module/aria"], function( ElementUtil, AriaUtil ) {
 					}
 				}
 			},350 );
-			
 		})
 
 		ElementUtil.addListener( elm, "mouseleave", function(event){
+			if (!SizeUtil.check(properties.size) ){
+				return;
+			}
 			focusWithin = false;
 			setTimeout( function() {
 				if ( !focusWithin ) {

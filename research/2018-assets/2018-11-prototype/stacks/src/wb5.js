@@ -71,6 +71,14 @@ require( [ "module/element"  ].concat( polyfills ), function( _element ) {
 			}
 	}
 
+	let engines = document.querySelectorAll( "[data-wb5-ext]:not(.wb5-inited)" );
+	for ( let node of engines ){
+			_element.addClass( node, "wb5-inited" );
+				require( [ "extension/" + node.getAttribute("data-wb5-ext") ], function( worker ) {
+					worker.handle( node );
+				} );
+	}
+
 	let insertListener = function( event ) {
 		if ( event.animationName === "nodeInserted" ) {
 
