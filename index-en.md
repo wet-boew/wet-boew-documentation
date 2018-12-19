@@ -19,6 +19,7 @@ modified: 2018-11-15
 	* Design pattern
 	* UX report
 		* [Filtering interface with performance meter](ux-reports/2018-1.html)
+		* [Contextual site search design research](ux-reports/2018-2.html)
 	* Suggestion for UX research
 * Assessement
 	* WCAG 2.0/2.1 Level AA
