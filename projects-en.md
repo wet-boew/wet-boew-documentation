@@ -30,13 +30,13 @@ Updated: 2018-10-18
 
 ### Long documents (was PDF generator)
 Create a new feature that would allow the user to obtain a PDF printable version of the page. The PDF printable version are different from the web printable version in the sense that it would be possible to control and well define how the content of the webpage would transposed into a paper base format.
-* **Last updated:** October 18, 2018
+* **Last updated:** November 15, 2018
 * **Current status:** Refining the projects description and research.
 * **Deliverable:** A feature that generate a PDF from a webpage.
 * **Goal:** Change the current practice which consist in uploading a standalone PDF version of the content and include a reference to that uploaded PDF in the content. At the same time, it would reduce the risk of have both version no in sync when a content update is applied.
 * **Project lead:** David Elisma
 * **History:**
-	* (2018-10-18) Improving the use case and requirement
+	* (2018-10-18; 2018-11-15) Improving the use case and requirement
 	* (2018-09-28) [Writting use case and requirement](http://wet-boew.github.io/wet-boew-documentation/research/2018-12-long-documents.html)
 	* (2018-02-22) Refining the projects description and research.
 

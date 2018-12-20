@@ -10,6 +10,14 @@ Summary of what has been discussed at the meeting.
 
 ## Roadmap
 
+2018-11-15 - ( 6 participants )
+* Briefly presented the new major changes that are applied to GCWeb. The list of all changes are published in the [GCWeb theme documentation](http://wet-boew.github.io/themes-dist/GCWeb/gcweb-theme/index.html) and [migration instruction](http://wet-boew.github.io/themes-dist/GCWeb/gcweb-theme/v2-migration.html) are available for implementer.
+* For the version number attached with GCWeb release we have discussed the idea of changing how that is done. It was proposed to have a number that are going to reflect the actual changes made to the theme instead of being in the shadow of the release of wet-boew main project. For example the current redesign, name coded "gcweb v2", require major markup change and introduce a completed reviewed menu which would not be aligned anymore with the wet-boew menu plugin. It was suggested to simply rename the repository and then do the release with the revised version number. An issue on the gcweb github repository would be open to get the communauty feedback.
+* In the light of deploying the new gcweb look in december, it was suggested to release WET 4.0.30 at the same time. It was noted that is planned in the current roadmap to release WET 4.0.30 for January 17. So, we might only do a "pre-release" of GCWeb in december and in January/February we might release it with the new version number, like v2.0.
+* Brief review of all projects, there was no updates except the long documents project has made some progess.
+* Codefest - Kick off meeting sent and scheduled for November 20
+* We discussed the idea of having the second hours of the WET roadmap reserved to raise awarness on accessibility, openely discuss about web publishing best practice or a presentation how to use WET in a efficient way. A separate invitation would be sent. The target audience are going to be the same as it was for the "Center of Expertise" and web publisher interested in the presented topic. It was suggested the topic are going to be sent two weeks in advance. The idea was well received.
+
 2018-10-18 - ( 5 participants )
 * Review of all projects
 * As discused at the last meeting, now there is a WET 5 summary page.
