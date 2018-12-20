@@ -17,7 +17,7 @@ Gears in use:
 - Broadcast - Dispatches an event from Target when Source detects an event
 - Hover - Adds/removes a class on Target while the mouse remains in Source or Source's children
 - Focus - Adds/removes a class on Target while focus remains in Source or Source's children
-- Nav - Adds/removes a class from within a set of Targets using keyboard controls and the 'select' event.
+- Set - Adds/removes a class from within a set of Targets using keyboard controls and the 'select' event.
 
 ### Engines
 
