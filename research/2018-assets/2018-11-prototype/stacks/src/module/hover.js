@@ -17,7 +17,7 @@ define( [ "module/element", "module/aria", "module/size"], function( ElementUtil
 	*/
 	function handle( elm, selector, options ) {       
 
-		let properties = Object.assign({ classname: "open", size: ">0" }, options ),
+		let properties = Object.assign({ classname: "wb5-opened", size: ">0" }, options ),
 		children = ElementUtil.nodes( elm, selector );
 
 		var focusWithin = false;

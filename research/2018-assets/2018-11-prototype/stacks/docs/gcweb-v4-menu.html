@@ -85,18 +85,31 @@
 									<!-- Nav id that was used before <nav id="wb-sm" > -->
 										<nav class="gcweb-v2" typeof="SiteNavigationElement">
 											<div class="container"
-											data-wb5-ext="menu">
+											data-wb5-ext="menu"
+											data-wb5="focus hover"
+											data-wb5-focus-options='{"classes":"wb5-open"}'
+											data-wb5-focus-selector="button"
+											data-wb5-hover-selector="button">
 											<h2 class="wb-inv">Menu</h2>
 											<button type="button" aria-haspopup="menu" aria-controls="gc-mnu" aria-expanded="false"
-											data-wb5-ext-menu="button"><span class="wb-inv">Main </span>Menu <span class="expicon glyphicon glyphicon-chevron-down"></span></button>
+											data-wb5-ext-menu="button"
+											data-wb5="toggle broadcast"
+											data-wb5-broadcast-options='{"eventname":"navEventSelect", "listener":"keydown"}'
+											data-wb5-broadcast-selector="#gc-mnu"
+											data-wb5-toggle-options='{"classname":"wb5-opened", "eventname":"keydown", "aria": "expanded"}'								
+											><span class="wb-inv">Main </span>Menu <span class="expicon glyphicon glyphicon-chevron-down"></span></button>
 											<ul id="gc-mnu" role="menu" aria-orientation="vertical"
-											data-wb5-ext-menu="menu">
+											data-wb5-ext-menu="menu"
+											data-wb5="set"
+											data-wb5-set-options='{"orientation":"vertical"}'
+											data-wb5-set-selector="#gc-mnu > li > a">
 																				
 											<li data-wb5-ext-menu="menuItem" role="none presentation">
-												<a data-wb5-ext-menu="menuItemAnchor" role="menuitem" tabindex="-1" aria-haspopup="true" aria-controls="gc-mnu-jobs" aria-expanded="false" href="#">Jobs and the workplace</a>
+												<a data-wb5-ext-menu="menuItemAnchor" role="menuitem" tabindex="0" aria-haspopup="true" aria-controls="gc-mnu-jobs" aria-expanded="false" href="#">Jobs and the workplace</a>
 												<!-- The following block is invisible -->
 												<ul data-wb5-ext-menu="submenu" id="gc-mnu-jobs" role="menu" aria-orientation="vertical">
 													<li role="none presentation">
+		
 														<a role="menuitem" tabindex="-1" href="https://www.canada.ca/en/services/jobs.html">Jobs<span class="hidden-xs hidden-sm"> and the workplace</span><span class="visible-xs-inline visible-sm-inline">: home</span></a>
 													</li>
 													<li role="separator"></li>

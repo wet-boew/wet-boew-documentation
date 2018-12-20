@@ -14,7 +14,7 @@ define( [ "module/element", "module/aria" ], function( ElementUtil, AriaUtil ) {
 	*/
 	function handle( elm, selector, options ) {
 
-		let properties = Object.assign({ classes: "active" }, options ),
+		let properties = Object.assign({ classes: "wb5-selected" }, options ),
 		children = ElementUtil.nodes( elm, selector );
 
 		var focusWithin = false;

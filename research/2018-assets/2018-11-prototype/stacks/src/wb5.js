@@ -58,26 +58,10 @@ require( [ "module/element"  ].concat( polyfills ), function( _element ) {
 
 		require( [ "css!module/accessibilty/audit/a11y-" + lang ], function() {} ) ;
 	}
+	
 
-	let initialNodes = document.querySelectorAll( "[data-wb5]:not(.wb5-inited)" );
-	for ( let node of initialNodes ){
-		let actions = _element.inspect( node );
-			_element.addClass( node, "wb5-inited" );
-			for ( let idx = 0 ; idx < actions.length ; idx++ ) {
-				let action = actions[ idx ];
-				require( [ "module/" + action.command ], function( worker ) {
-					worker.handle( node, action.selector, action.options );
-				} );
-			}
-	}
 
-	let engines = document.querySelectorAll( "[data-wb5-ext]:not(.wb5-inited)" );
-	for ( let node of engines ){
-			_element.addClass( node, "wb5-inited" );
-				require( [ "extension/" + node.getAttribute("data-wb5-ext") ], function( worker ) {
-					worker.handle( node );
-				} );
-	}
+
 
 	let insertListener = function( event ) {
 		if ( event.animationName === "nodeInserted" ) {
@@ -103,6 +87,27 @@ require( [ "module/element"  ].concat( polyfills ), function( _element ) {
 	document.head.appendChild(
 		_element.css("@keyframes nodeInserted {\nfrom { opacity: 0.99; }\nto { opacity: 1; }\n}\n\n[data-wb5]:not(.wb5-inited) {animation-duration: 0.001s;animation-name: nodeInserted;}" )
 	);
+
+	let initialNodes = document.querySelectorAll( "[data-wb5]:not(.wb5-inited)" );
+	for ( let node of initialNodes ){
+		let actions = _element.inspect( node );
+			_element.addClass( node, "wb5-inited" );
+			for ( let idx = 0 ; idx < actions.length ; idx++ ) {
+				let action = actions[ idx ];
+				require( [ "module/" + action.command ], function( worker ) {
+					worker.handle( node, action.selector, action.options );
+				} );
+			}
+	}
+
+	let engines = document.querySelectorAll( "[data-wb5-ext]" );
+	for ( let node of engines ){
+		require( [ "extension/" + node.getAttribute("data-wb5-ext") ], function( worker ) {
+			worker.handle( node );
+		} );
+	}
+
+
 
 } ) ;
 
