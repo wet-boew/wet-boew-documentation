@@ -27,6 +27,11 @@ define( [ "module/element", "module/event" ], function( ElementUtil, EventUtil )
 					return false;
 				}
 			}
+			if (event.type == "click"){ //this is bad but default behavior is worse. find a better way
+				if (event.mozInputSource == 6){
+					return;
+				}
+			}
 			for ( let node of nodes ) {
 				let evt;
 				if ( ElementUtil.hasClass( node, properties.classname ) ) {
@@ -40,6 +45,8 @@ define( [ "module/element", "module/event" ], function( ElementUtil, EventUtil )
 					ElementUtil.addClass(node, properties.classname);
 					if (properties.aria){
 						node.setAttribute( "aria-"+properties.aria, "true");
+
+						console.log("Opening node...",elm, event, node)
 					}
 					evt = EventUtil.create( "togglein" );
 				}

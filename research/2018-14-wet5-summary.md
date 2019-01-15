@@ -3,10 +3,10 @@ published: true
 layout: default-theme-wet-boew-en
 title: 2018-14 - WET 5 Summary
 description: Summary of the WET5 project
-modified: 2018-11-01
+modified: 2018-11-30
 ---
 
-Summary of the WET5 project. Question or comments can be share by [opening new issue](https://github.com/wet-boew/wet-boew/issues/new).
+Summary of the WET5 project. Questions or comments can be share by [opening new issue](https://github.com/wet-boew/wet-boew/issues/new).
 
 * [May 2018 - WET 5 kickoff documentation material](2018-3-wet5-kickoff.html)
 * [July 2018 - WB5 exploration 1](2018-6-wb5-exploration-1.html)
@@ -15,44 +15,50 @@ Summary of the WET5 project. Question or comments can be share by [opening new i
 * [August 2018 - Prototype - alpha](2018-assets/2018-11-prototype/stacks/docs/index.html)
 * [September 2018 - WET 5 workshop – UXDS @ STATCAN](2018-13-wet5-workshop-statcan.html)
 * [September 2018 - Prototype - menu key navigation](2018-assets/2018-11-prototype/stacks/docs/nav-demo.html) *no longer functional*
-* September 2018 - Question and concern was expressed during the WET Roadmap meeting
+* September 2018 - Questions and concerns were expressed during the WET Roadmap meeting
 * [October 2018 - Prototype - menu key navigation V2](2018-assets/2018-11-prototype/stacks/docs/nav-demo-v2.html)
 * [November 2018 - Prototype - New GCWeb menu with WET 5 ](2018-assets/2018-11-prototype/stacks/docs/gcweb-v2-menu.html)
+* [November 2018 - Prototype - GCWEB menu with WET 5 V2 ](2018-assets/2018-11-prototype/stacks/docs/gcweb-v3-menu.html) [Summary](2018-assets/2018-11-prototype/docs/gcweb-menu-report)
+
 
 
 ## WET 5 architecture in a nutshell, as the end of September 2018
 
 * [Presention of WET 5 architecture](2018-11-wet5-augmented-design-presentation.html)
-* Logic Development Design (LDD) approach to component
-* More modular, dependencies loading via an AMD architecture
+* Logic Development Design (LDD) approach to components
+* More modular. Dependencies loaded via an AMD architecture
 * No build script required for developement
 * Can run in parallel with WET 4 without conflict.
 * Making the product as a library not a framework.
-* There is two prototype - [Carrousel](2018-assets/2018-11-prototype/stacks/docs/index.html); [Key navigation](2018-assets/2018-11-prototype/stacks/docs/nav-demo.html)
+* There are two prototypes - [Carrousel](2018-assets/2018-11-prototype/stacks/docs/index.html); [Key navigation](2018-assets/2018-11-prototype/stacks/docs/nav-demo.html)
 
 ## Logic Development Design
 
 * There is no markup transformation on page load.
-* Web publisher code the user interface in their final state.
-* Logic "gear" are integrated within the DOM nodes.
-* Each "gear" are independent from any DOM nodes.
-* When "gear" need to play with DOM nodes, as such reference are provided through CSS selector configured within the DOM node via a ```data-*``` attributes.
+* Web publisher codes the user interface in their final state.
+* Logic "gears" are integrated within the DOM nodes.
+* Each "gear" is independent from any DOM nodes.
+* When "gears" need to play with DOM nodes, as such reference are provided through CSS selector configured within the DOM node via a ```data-*``` attributes.
 * Gears are independant and can work together.
 
 ### That means
 
 * Easier and quicker for the web publisher to update an UI based on UX research or on business needs.
 * Less noticeable technical debt compared to Component Development Design approach 
-* More template and documentation will be provided to create UI conform with web accessibility standard.
-* Not following an approved template or deliverately modifying an existing one means:
-	* Increase web publisher responsability for publishing web content that meet web accessibility standard
-	* May require to do full WCAG assesement
-	* May require to test the modified template with multiple assistive technologies to ensure it's [accessibility supported](https://www.w3.org/TR/UNDERSTANDING-WCAG20/conformance.html#uc-accessibility-support-head).
+* More templates and documentation will be provided to create UI which conform with web accessibility standards.
+* Not following an approved template or deliberately modifying an existing one means:
+	* Increase web publisher responsibility for publishing web content that meet web accessibility standards
+	* May require a full WCAG assesement
+	* May require testing the modified template with multiple assistive technologies to ensure it's [accessibility supported](https://www.w3.org/TR/UNDERSTANDING-WCAG20/conformance.html#uc-accessibility-support-head).
 * If a template or documentation get updated, that means:
-	* Web publisher would need to stay inform with whatever changes is made.
-	* Web publisher would need to apply manually the patch, that for each published page that use that template.
+	* Web publishers would need to stay informed with whatever changes are made.
+	* Web publishers would need to apply the patch manually, for each published page that uses that template.
 
 ## Project status
+
+### November 30
+
+[Summary of latest demo](2018-assets/2018-11-prototype/docs/gcweb-menu-report)
 
 ### October 9
 
