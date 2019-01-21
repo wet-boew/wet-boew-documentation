@@ -42,6 +42,7 @@ The conversation flow seems to be set into one unique path.
 	* Create wireframe.
 	* List a few basic requirement to meet web accessibility
 	* Create a story that illustrate each iteraction scenario/functionality of the enhancned interface.
+	* Do an environmental scan of existing similar tools
 * Feature integration
 	* Create wireframe
 	* Create functional HTML prototype
