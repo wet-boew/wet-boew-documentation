@@ -3,12 +3,20 @@ published: true
 layout: default-theme-wet-boew-en
 title: Meeting summary - WET-BOEW documentation
 description: Summary of what has been discussed at the meeting.
-modified: 2018-10-18
+modified: 2019-01-21
 ---
 
 Summary of what has been discussed at the meeting.
 
 ## Roadmap
+
+2019-01-17
+Meeting canceled
+
+2018-12-17 (4 participants )
+* Briefly showed the last update that are applied to GCWeb and going to be applied to Canada.ca
+* WET codefest organising commitee has initiated the planning work for the event. The date and location are not set yet.
+* Re-iterated about the versionning number that GCWeb are going to use.
 
 2018-11-15 - ( 6 participants )
 * Briefly presented the new major changes that are applied to GCWeb. The list of all changes are published in the [GCWeb theme documentation](http://wet-boew.github.io/themes-dist/GCWeb/gcweb-theme/index.html) and [migration instruction](http://wet-boew.github.io/themes-dist/GCWeb/gcweb-theme/v2-migration.html) are available for implementer.
