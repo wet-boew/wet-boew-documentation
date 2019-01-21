@@ -21,20 +21,20 @@ modified: 2018-11-30
 
 Visually, esthetically, the interaction pattern and it's configuration look easy to use from a author perspective. It's rendered interactive user interface of a chat provide a nice user perception of an intimate website experience.
 
-However, a quick look at the rendered content markup and the source code of the page has revealled a lot of web accessibilty error and potential error. The type of error I have found are comprehensive for a developper that have a limited or acquired wrong knowledge of web accessibility. We can presume there would be a lot of work to complete before to use that feature on a website that must meet WCAG 2.0 Level AA.
+However, a quick look at the rendered content markup and the source code of the page has revealled a lot of web accessibilty error and potential error. Baed on the type of error there could be a considerable effort and testing to make that feature conforming to the web accessibility guideline.
 
 The conversation flow seems to be set into one unique path.  
 
 #### Finding
 
 * Nice concept of tranforming a simple form into a conversation.
-* It abuse of the use of web-component because there is a lost of semantic in different place. Like there is no HTML semantic that differentiate each pieces of the conversation like a list or sectioning.
-* The focus are not visible in that working example.
+* There is a lot of web-components.  More HTML semantic that differentiate each pieces of the conversation like a list or sectioning would be a must.
+* The focus are not always visible in that working example.
 * We can not access to all controls via the keyboard. For example the toogle to switch the conversation into a form and vice-versa.
-* The answer provided in the conversation can be removed or modified. It can only be done via mouse and its behaviour aren't predictable. One click modify and the second click delete the last answer. And it can't be operated via keyboard.
-* There is an attribute "role" that have an invalid value and other markup issue.
+* Answer provided in the conversation can be removed or modified. It can only be done via mouse, not keyboard operable, and its behaviour aren't fully predictable in that UI. One click modify and the second click delete the last answer.
+* There is an attribute "role" that have an invalid value and there various other minor markup issue.
 * The input in the conversation are validated, like if the question require an email, the converstaion verifiy if the email is valid, but it only show the error in the input placeholder and are not persistant.
-* All the field seem to be required, even the ones that are not marked as optional in the source code.
+* All the field seem to be required, even the ones that are not marked as optional in the source code. But if the input is a type-text, it accept empty value.
 
 ## Plan draft
 
