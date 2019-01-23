@@ -77,6 +77,14 @@ Provide a visual indication that show the current forms steps.
 * **History:**
 	* (2019-01-22) Prototype created, starting the integration into GCWeb
 
+### Interactive forms
+Investigate on various solution to provide more interactiveness to standards forms
+* **Project lead:** Pierre Dubois
+* **Current status:** Looking at form converted into chat
+* **Last update:** January 23, 2019
+* **History:**
+	* (2019-01-21) Initiated research 2019-15 - Exploration of a chat like design pattern
+
 ## Related but untracked
 
 ### Design system
