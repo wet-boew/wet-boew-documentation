@@ -4,13 +4,12 @@ layout: default-theme-wet-boew-en
 filename_fr: index-fr
 title: Projects - Web Experience Toolkit (WET) documentation
 description: List of projects related to WET.
-modified: 2018-10-18
+modified: 2019-01-13
 ---
-
 
 ## Active project
 
-Updated: 2018-10-18
+Updated: 2010-01-23
 
 ### Accessibility
 * Reviewing and validating open github issue
@@ -36,11 +35,49 @@ Create a new feature that would allow the user to obtain a PDF printable version
 * **Goal:** Change the current practice which consist in uploading a standalone PDF version of the content and include a reference to that uploaded PDF in the content. At the same time, it would reduce the risk of have both version no in sync when a content update is applied.
 * **Project lead:** David Elisma
 * **History:**
-	* (2018-10-18; 2018-11-15) Improving the use case and requirement
+	* (2018-10-18; 2019-01-15) Improving use case and requirement
 	* (2018-09-28) [Writting use case and requirement](http://wet-boew.github.io/wet-boew-documentation/research/2018-12-long-documents.html)
 	* (2018-02-22) Refining the projects description and research.
 
-## Going stale project
+### Server side error message integration with form validation feature
+Harmonize the error message displayed when in browser error is combined with server side errors
+* **Last udpated:** January 23, 2019
+* **Project lead:** Stéphane Ducharme
+* **History:**
+	* (2019-01-07) Fixing some issues and code optimisation.
+	* (2018-08-24) Need to apply some code optimation base on peer review comments.
+	* (2018-07-26) Project almost completed, going in peer review process.
+	* (2018-06-20) WIP with the working example creation and testing the solution.
+	* (2018-05-17) Work for single input or select, but not when it is combined together.
+	* (2018-04-11) Early exploratory prototype
+
+### Support CORS with feed plugin
+Bypassing the yahoo API call when fetching an ATOM feed that inside the scope defined by CORS (Cross-origin resource sharing).
+* **Project lead:** Ilya Pak
+* **Current status:** PR #8534 submited
+* **Last updated:** January 23, 2019
+* **History:**
+	* (2019-01-18) Making the CORS as default and removing Yahoo API
+	* (2018-12-13) Added CORS option to JSON feed plugin
+	* (2018-06-27) Project initialized and Local prototype was created which take the ATOM feed and turn it into JSON format similar to the yahoo API call
+
+### Horizontal definition list  
+Be able to specify a relative with for the definition title because the default one is sometime restrictive in some content design.
+* **Project lead:** Samar ElAmir
+* **Current status:** Protype created, starting the integration into WET-BOEW
+* **Last updated:** January 22, 2019
+* **History:**
+	* (2019-01-22) Protype created, starting the integration into WET-BOEW
+
+### Steps visual indicator
+Provide a visual indication that show the current forms steps.
+* **Project lead:** Samar ElAmir
+* **Current status:** Prototype created, starting the integration into GCWeb
+* **Last updated:** January 22, 2019
+* **History:**
+	* (2019-01-22) Prototype created, starting the integration into GCWeb
+
+## Related but untracked
 
 ### Design system
 Design system to standardize the visual language and user experience of our digital collaboration tools. The system will encompass visual elements, components and communications.
@@ -58,6 +95,8 @@ Design system to standardize the visual language and user experience of our digi
 	* (2018-05-17) Seems to have started phase II
 	* (2018-02-26) Basic visual for forms
 	* (2018-02-13) Working on the visual look for the design system.
+
+## Going stale project
 
 ### Combobox (autocomplete/suggestion)
 [ was: Improved datalist (autocomplete/suggestion) ]
@@ -97,17 +136,6 @@ Simulate a datalist that work uniformly through browser implementation and conta
 	* (2018-04-18) Prototype working but a few improvement need to be done, see developer note and UX early testing note
 	* (2018-04-13) Close to release a minimal viable product.
 	* (2018-03-12) Defining the requirement
-
-### Server side error message integration with form validation feature
-Harmonize the error message displayed when in browser error is combined with server side errors
-* **Last udpated:** August 24, 2018
-* **Project lead:** Stéphane Ducharme
-* **History:**
-	* (2018-08-24) Need to apply some code optimation base on peer review comments.
-	* (2018-07-26) Project almost completed, going in peer review process.
-	* (2018-06-20) WIP with the working example creation and testing the solution.
-	* (2018-05-17) Work for single input or select, but not when it is combined together.
-	* (2018-04-11) Early exploratory prototype
 
 ### Migration to WCAG 2.1 Level AA
 See the Accessibility project.
@@ -161,12 +189,6 @@ Goal is to have a base jekyll variant to improve contribution. At the end we wou
 * **Work in progress PR:** [wet-boew-jekyll PR #110](https://github.com/wet-boew/wet-boew-jekyll/pull/110)
 * **Project lead:** Nick Schonning
 * **Current status:** Defining requirement
-
-### Support CORS with feed plugin
-Bypassing the yahoo API call when fetching an ATOM feed that inside the scope defined by CORS (Cross-origin resource sharing).
-* **Project lead:** Ilya Pak
-* **Current status:** Local prototype was created which take the ATOM feed and turn it into JSON format similar to the yahoo API call
-* **Last updated:** June 27, 2018
 
 ### Flagging insecure dependencies [Build script]
 Look at Retire.js for flagging insecure dependencies in WET.
