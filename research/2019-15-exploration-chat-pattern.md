@@ -3,7 +3,7 @@ published: true
 layout: default-theme-wet-boew-en
 title: 2019-15 - Exploration of a chat like design pattern
 description: Exploration of a chat like design pattern
-modified: 2018-11-30
+modified: 2019-01-25
 ---
 
 ## Goal
@@ -13,6 +13,25 @@ modified: 2018-11-30
 * Draft an high level plan.
 
 ## Some existing tools
+
+### BotUI
+
+* Github: [https://github.com/botui](https://github.com/botui)
+* Example: [A JavaScript framework to build UI for your bot](https://botui.org/)
+
+Good starter kit / example to build a simple, reliable, robust, and nonetheless accessible bot. 
+
+### Quriobot
+
+* Example: [Build your own chatbot](https://quriobot.com/)
+
+Neat design and well built features wise. The possibility to go back in the conversation and the UI feedback on every input keeps the user engaged and supported in their journey.
+
+### Landbot.io
+
+* Example: [Transforms websites into Conversational Experiences](https://landbot.io/)
+
+Pretty straight forward example of what a conversational form is conceptually. Note that there is a possibility to resume a conversation that happened in the past, which is a great feature in theory. In the back-end, a decision tree is defined on a draw board, which makes it easy to build your own conversational form or chat bot.
 
 ### Conversatinal-form
 
@@ -25,7 +44,7 @@ However, a quick look at the rendered content markup and the source code of the 
 
 The conversation flow seems to be set into one unique path.  
 
-#### Finding
+#### Findings
 
 * Nice concept of tranforming a simple form into a conversation.
 * There is a lot of web-components.  More HTML semantic that differentiate each pieces of the conversation like a list or sectioning would be a must.
@@ -90,3 +109,92 @@ The conversation flow seems to be set into one unique path.
 * Set the configuration to the input if those are related to the input and the data collected
 * For radio or checkbox, use the legend of the fieldset container as the "configurable label". Other makrup can be consider, like heading but we should target for a consistant markup.
 
+### Sizes
+
+The thresholds are:
+* Under and equal to 350 pixels of height:
+	* Basic interface is visible. Static button, on-page wizard and top banner notifications are used.
+* Above 350 pixels of height:
+	* Enhanced interface is visible. Floating button and notification badges are used.
+* Under or equal to 550 pixels of width:
+	* Enhanced interface is visible. Floating button, notification badges and fullscreen wizard are used.
+* Above 550 pixels of width:
+	* Enhanced interface is visible. Floating button, notification badges and overlay wizard are used.
+
+## Wireframe and Prototyping
+
+Semantically, the entire code related to the chat wizard should be located right after the closing main tag, assuming the chat is general and not directly related to the content. If the chat is related to the context of the page, then it should be placed underneath the H1 tag, rught before the first H2.
+
+### Closed State
+
+The closed state is a state in which the user can only see a floating chat "bubble" to open the wizard, if the screen meets or exceed the screen size requirements. Under the size requirements, a static button can be found where the rest of the semantic for the wizard is.
+
+#### Submit basic form
+
+Needs content here.
+
+### Stand-By State
+
+In this state, the user hasn't opened the wizard yet, so the feature is equal to the Closed state. What differenciate the Stand-by state with the Closed one, Stand-by encourages the user to click on the bubble to open the wizard, with a notification.
+
+### Opened State
+
+#### Overlay
+
+See images below. This is where the core of the feature is.
+
+#### Fullscreen
+
+Same window as in the overlay version, but taking the entire screen.
+
+#### Basic Form
+
+Simple plain form as an alternative to the conversational form, spitting out the same results at the end of the line.
+
+### Focus order
+
+Default focus order matches the document structure, which is top to bottom and left to right. The focus is cyclic and keeps the user trapped in the form, but it can be escaped by selecting the close button at the end of the cycle. When the user sends a message, the next focus 
+
+### Actions
+
+#### Submit and options buttons
+
+Sends a message from the user, in answer to the question from the bot.
+
+#### Close button
+
+Closes the the chat wizard, erasing the conversation and going back to showing only the bubble.
+
+#### Minimize button
+
+This button minimizes the chat wizard to its initial close state, but keeps the conversation "active". Opening it back would resume the conversation from where it was left off.
+
+#### Switch button
+
+This button makes a switch between the conversational form and the basic form. It can be found besides the Close button and the Minimize button.
+
+### Rules
+
+* All fields must be optional
+* User must be able to switch between basic form and conversational form (chat wizard) at all time
+* Form has to be linear, which means no decisional tree, only one path
+* No Form validation should be used, only inputs allowed are:
+	* Text
+	* Radio
+	* Checkbox
+	* Select
+* Form submition must be handled client-side only
+
+### Conceptual Prototype
+
+Available here: [Chat wizard concept prototype](https://gormanproductions.ca/lab/chat-wizard-prototype/chat-bot-en.html)
+
+### Visual 
+
+![Wireframe - visual representation of the UI - Overview]({{ "2019-asets/1-wizard-overview-wireframe.jpeg" }})
+
+![Wireframe - visual representation of the UI - Mobile]({{ "2019-asets/2-mobile-wizard-wireframe.jpeg" }})
+
+![Wireframe - visual representation of the UI - Wizard Window]({{ "2019-asets/3-window-wizard-wireframe.jpeg" }})
+
+![Wireframe - visual representation of the UI - Basic Form]({{ "2019-asets/4-form-wizard-wireframe.jpeg" }})
