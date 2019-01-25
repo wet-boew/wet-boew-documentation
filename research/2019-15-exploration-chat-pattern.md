@@ -191,10 +191,14 @@ Available here: [Chat wizard concept prototype](https://gormanproductions.ca/lab
 
 ### Visual 
 
-![Wireframe - visual representation of the UI - Overview]({{ "2019-assets/1-wizard-overview-wireframe.jpeg" }})
+{::nomarkdown}
 
-![Wireframe - visual representation of the UI - Mobile]({{ "2019-assets/2-mobile-wizard-wireframe.jpeg" }})
+{% raw %}
 
-![Wireframe - visual representation of the UI - Wizard Window]({{ "2019-assets/3-window-wizard-wireframe.jpeg" }})
+<img src="2019-assets/1-wizard-overview-wireframe.jpeg" alt="Wireframe - visual representation of the UI - Overview" class="img-responsive" />
+<img src="2019-assets/2-mobile-wizard-wireframe.jpeg" alt="Wireframe - visual representation of the UI - Mobile" class="img-responsive" />
+<img src="2019-assets/3-window-wizard-wireframe.jpeg" alt="Wireframe - visual representation of the UI - Wizard Window" class="img-responsive" />
+<img src="2019-assets/4-form-wizard-wireframe.jpeg" alt="Wireframe - visual representation of the UI - Basic Form" class="img-responsive" />
 
-![Wireframe - visual representation of the UI - Basic Form]({{ "2019-assets/4-form-wizard-wireframe.jpeg" }})
+{% endraw %}
+{:/}

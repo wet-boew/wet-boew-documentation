@@ -23,7 +23,7 @@ List of finding and ongoing research related to WET and it's features
 	* Status: In slow progress
 * [2018-12 - Long documents](research/2018-12-long-documents.html)
 	* Status: In progress
-* [2019-15 - Exploration of a chat like design pattern](research/2019-1-exploration-chat-pattern.html)
+* [2019-15 - Exploration of a chat like design pattern](research/2019-15-exploration-chat-pattern.html)
 	* Status: In progress
 
 ## Stale/on hold
