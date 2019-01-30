@@ -121,6 +121,26 @@ The thresholds are:
 * Above 550 pixels of width:
 	* Enhanced interface is visible. Floating button, notification badges and overlay wizard are used.
 
+## Rules
+
+* All fields must be optional
+* User must be able to switch between basic form and conversational form (chat wizard) at all time
+* Form has to be linear, which means no decisional tree, only one path
+* No Form validation should be used, only inputs allowed are:
+	* Text
+	* Radio
+	* Checkbox
+	* Select
+* Form submition must be handled client-side only
+
+### Alpha Version
+
+* Chat bot will support checkboxes and radio buttons only
+
+## To think about
+
+* What to do with the print version (if applicable)
+
 ## Wireframe and Prototyping
 
 Semantically, the entire code related to the chat wizard should be located right after the closing main tag, assuming the chat is general and not directly related to the content. If the chat is related to the context of the page, then it should be placed underneath the H1 tag, rught before the first H2.
@@ -173,18 +193,6 @@ This button minimizes the chat wizard to its initial close state, but keeps the 
 
 This button makes a switch between the conversational form and the basic form. It can be found besides the Close button and the Minimize button.
 
-### Rules
-
-* All fields must be optional
-* User must be able to switch between basic form and conversational form (chat wizard) at all time
-* Form has to be linear, which means no decisional tree, only one path
-* No Form validation should be used, only inputs allowed are:
-	* Text
-	* Radio
-	* Checkbox
-	* Select
-* Form submition must be handled client-side only
-
 ### Conceptual Prototype
 
 Available here: [Chat wizard concept prototype](https://gormanproductions.ca/lab/chat-wizard-prototype/chat-bot-en.html)
@@ -202,3 +210,76 @@ Available here: [Chat wizard concept prototype](https://gormanproductions.ca/lab
 
 {% endraw %}
 {:/}
+
+### Prototype 1
+
+Markup Basic Structure
+
+{::nomarkdown}
+
+{% raw %}
+
+<pre>
+<code>
+&lt;aside class="chtbt-container"&gt;
+	&lt;header class="chtbt-header"&gt;
+		&lt;h2 class="chtbt-title"&gt;I can help you find the information you need&lt;/h2&gt;
+	&lt;/header&gt;
+	&lt;div class="chtbt-body"&gt;
+		&lt;div class="chtbt-message-container"&gt;
+			&lt;h3 class="wb-inv"&gt;Conversation history&lt;/h3&gt;
+			&lt;section&gt;
+				&lt;div class="row"&gt;
+					&lt;div class="col-xs-9"&gt;
+						&lt;div class="chtbt-message"&gt;
+							&lt;div class="chtbt-bot-avatar"&gt;
+								&lt;span class="glyphicon glyphicon-user"&gt;&lt;/span&gt;
+							&lt;/div&gt;
+							&lt;h4&gt;Hi! I can help direct you to programs and services you might be interested in. Would you like to get started by answering a few questions?&lt;/h4&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;div class="row"&gt;
+					&lt;div class="col-xs-9 col-xs-offset-3"&gt;
+						&lt;div class="chtbt-message"&gt;
+							&lt;p&gt;Yes&lt;/p&gt;
+							&lt;p class="chtbt-rollback"&gt;&lt;a href="#"&gt;Modify this answer&lt;/a&gt;&lt;/p&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/section&gt;
+		&lt;/div&gt;
+		&lt;form class="chtbt-interaction-container"&gt;
+			&lt;h3 class="wb-inv"&gt;Conversation interaction&lt;/h3&gt;
+			&lt;fieldset&gt;
+				&lt;legend&gt;Are you:&lt;/legend&gt;
+				&lt;ul class="list-inline"&gt;
+					&lt;li&gt;
+						&lt;label&gt;
+							&lt;input type="radio" value="young" name="q2" /&gt;
+							a young Canadian
+						&lt;/label&gt;
+					&lt;/li&gt;
+					&lt;li&gt;
+						&lt;label&gt;
+							&lt;input type="radio" value="emloyer" name="q2" /&gt;
+							an employer or organization looking for funding to support youth
+						&lt;/label&gt;
+					&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/fieldset&gt;
+			&lt;button type="submit" class="btn btn-default"&gt;Back&lt;/button&gt;
+			&lt;button type="submit" class="btn btn-primary"&gt;Next step&lt;/button&gt;
+			&lt;button type="submit" class="btn btn-link"&gt;Skip this step&lt;/button&gt;
+		&lt;/form&gt;
+	&lt;/div&gt;
+&lt;/aside&gt;
+</code>
+</pre>
+
+{% endraw %}
+{:/}
+
+### Prototype 2
+
+[See the HTML Code](../research/2019-15-exploration-chat-pattern-prototype-2.html)
