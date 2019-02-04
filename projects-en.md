@@ -7,6 +7,124 @@ description: List of projects related to WET.
 modified: 2019-01-13
 ---
 
+{::nomarkdown}
+<style>
+progress {
+/* Positioning */
+position: fixed;
+left: 0;
+top: 0;
+z-index: 15000;
+
+/* Dimensions */
+width: 100%;
+height: 5px;
+
+/* Reset the appearance */
+-webkit-appearance: none;
+ -moz-appearance: none;
+	  appearance: none;
+
+/* Get rid of the default border in Firefox/Opera. */
+border: none;
+
+/* Progress bar container for Firefox/IE10+ */
+background-color: transparent;
+
+/* Progress bar value for IE10+ */
+color: red;
+}
+
+progress::-webkit-progress-bar {
+  background-color: transparent;
+}
+
+progress::-webkit-progress-value {
+  background-color: red;
+}
+
+progress::-moz-progress-bar {
+  background-color: red;
+}
+
+.progress-container {
+width: 100%;
+background-color: transparent;
+position: fixed;
+top: 0;
+left: 0;
+height: 5px;
+display: block;
+}
+.progress-bar {
+background-color: red;
+width: 0%;
+display: block;
+height: inherit;
+}
+</style>
+<progress value="0">
+	<div class="progress-container">
+		<span class="progress-bar"></span>
+	</div>
+</progress>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+<script>
+$(document).ready(function() {
+var getMax = function(){
+return $(document).height() - $(window).height();
+}
+
+var getValue = function(){
+return $(window).scrollTop();
+}
+
+if ('max' in document.createElement('progress')) {
+// Browser supports progress element
+var progressBar = $('progress');
+
+// Set the Max attr for the first time
+progressBar.attr({ max: getMax() });
+
+$(document).on('scroll', function(){
+  // On scroll only Value attr needs to be calculated
+  progressBar.attr({ value: getValue() });
+});
+
+$(window).resize(function(){
+  // On resize, both Max/Value attr needs to be calculated
+  progressBar.attr({ max: getMax(), value: getValue() });
+}); 
+
+} else {
+
+var progressBar = $('.progress-bar'), 
+	max = getMax(), 
+	value, width;
+
+var getWidth = function() {
+  // Calculate width in percentage
+  value = getValue();            
+  width = (value/max) * 100;
+  width = width + '%';
+  return width;
+}
+
+var setWidth = function(){
+  progressBar.css({ width: getWidth() });
+}
+
+$(document).on('scroll', setWidth);
+$(window).on('resize', function(){
+  // Need to reset the Max attr
+  max = getMax();
+  setWidth();
+});
+}
+});
+</script>
+{:/}
+
 ## Active project
 
 Updated: 2010-01-23
@@ -334,6 +452,12 @@ Chalenges:
 Next step:
 * Define what is that basic interface 
 * What UX we want to provide before it gets progressive enhanced to whatever option.
+
+### Reading Progress Bar
+
+**Last updated:** February 4, 2019
+
+Have a progress bar at the top of certain reports, which gives the reader an overview of how far in the page they are at. So becomes basically a reading progress bar.
 
 ## Completed
 
