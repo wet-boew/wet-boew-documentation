@@ -287,3 +287,11 @@ Markup Basic Structure
 ### Prototype 3
 
 [See the HTML Code](../research/2019-15-exploration-chat-pattern-prototype-3.html)
+
+### Prototype 4
+
+[See the HTML Code](../research/2019-15-exploration-chat-pattern-prototype-4.html)
+
+### Prototype Demo
+
+[See the HTML Code](../research/2019-15-exploration-chat-pattern-prototype.html)
