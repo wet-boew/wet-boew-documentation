@@ -135,7 +135,7 @@ The thresholds are:
 
 ### Alpha Version
 
-* Chat bot will support checkboxes and radio buttons only
+* Chat bot will support radio buttons only
 
 ## To think about
 
@@ -203,10 +203,10 @@ Available here: [Chat wizard concept prototype](https://gormanproductions.ca/lab
 
 {% raw %}
 
-<img src="2019-assets/1-wizard-overview-wireframe.jpeg" alt="Wireframe - visual representation of the UI - Overview" class="img-responsive" />
-<img src="2019-assets/2-mobile-wizard-wireframe.jpeg" alt="Wireframe - visual representation of the UI - Mobile" class="img-responsive" />
-<img src="2019-assets/3-window-wizard-wireframe.jpeg" alt="Wireframe - visual representation of the UI - Wizard Window" class="img-responsive" />
-<img src="2019-assets/4-form-wizard-wireframe.jpeg" alt="Wireframe - visual representation of the UI - Basic Form" class="img-responsive" />
+<img src="2019-assets/1-wizard-overview-wireframe.jpeg" alt="Wireframe - visual representation of the UI - Overview" class="img-responsive" width="400" />
+<img src="2019-assets/2-mobile-wizard-wireframe.jpeg" alt="Wireframe - visual representation of the UI - Mobile" class="img-responsive" width="400" />
+<img src="2019-assets/3-window-wizard-wireframe.jpeg" alt="Wireframe - visual representation of the UI - Wizard Window" class="img-responsive" width="400" />
+<img src="2019-assets/4-form-wizard-wireframe.jpeg" alt="Wireframe - visual representation of the UI - Basic Form" class="img-responsive" width="400" />
 
 {% endraw %}
 {:/}
@@ -219,6 +219,8 @@ Markup Basic Structure
 
 {% raw %}
 
+<details>
+<summary>See HTML Code</summary>
 <pre>
 <code>
 &lt;aside class="chtbt-container"&gt;
@@ -276,6 +278,7 @@ Markup Basic Structure
 &lt;/aside&gt;
 </code>
 </pre>
+</details>
 
 {% endraw %}
 {:/}
@@ -295,3 +298,17 @@ Markup Basic Structure
 ### Prototype Demo
 
 [See the HTML Code](../research/2019-15-exploration-chat-pattern-prototype.html)
+
+## Accessibility
+
+On the accessibility side, the followings are potentially at risk: 
+
+* The submit button becomes disabled when the question change;
+* The three-dot waiting message from the bot;
+* The “more than 5 seconds” animation on the bubble from the page load, and the non-ability to close the welcome message.
+* The wait time between questions, when the bot speaks, etc.
+
+## To Do
+
+* Three-dot waiting animation reacts weirdly on IE11;
+* Missing aria-label and aria-live in a few spots.
