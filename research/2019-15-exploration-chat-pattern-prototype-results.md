@@ -12,8 +12,10 @@ Prototype 4: With Data.
 
 {% raw %}
 
-<div class="col-xs-12 cntnt-here">
-   <!-- Results here --> 
+<div class="row mrgn-tp-lg mrgn-bttm-lg">
+  <div class="col-xs-12 cntnt-here">
+    <!-- Results here -->
+  </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 <script>
