@@ -767,7 +767,7 @@ var dataoutput = [],
 	current = datainput.questions[datainput.header.first];
 
 // If chatbot is found, initiate
-function initiateChtbt($selector, $input="JSON") {
+function initiateChtbt($selector, input) {
 	buildChtbt($selector);
 
 	var $basic = $(".chtbt-basic"), 
@@ -910,7 +910,7 @@ function appendReply($selector, $answer) {
 
 if($(".wb-chtbt").length) {
 	$chtbt = $(".wb-chtbt");
-	initiateChtbt($chtbt);
+	initiateChtbt($chtbt, "JSON");
 }
 </script>
 
