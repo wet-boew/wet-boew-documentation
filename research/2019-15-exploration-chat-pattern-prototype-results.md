@@ -15,6 +15,7 @@ Prototype 4: With Data.
 <div class="col-xs-12 cntnt-here">
    <!-- Results here --> 
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 <script>
 // GET parameters	
 if(findGetParameter('describe')) {
