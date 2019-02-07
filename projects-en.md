@@ -127,7 +127,7 @@ $(window).on('resize', function(){
 
 ## Active project
 
-Updated: 2010-01-23
+Updated: 2019-02-07
 
 ### Accessibility
 * Reviewing and validating open github issue
@@ -202,6 +202,14 @@ Investigate on various solution to provide more interactiveness to standards for
 * **Last update:** January 23, 2019
 * **History:**
 	* (2019-01-21) Initiated research 2019-15 - Exploration of a chat like design pattern
+
+### Reading Progress Bar/indicator
+
+**Last updated:** February 4, 2019
+
+Have a progress bar at the top of certain reports, which gives the reader an overview of how far in the page they are at. So becomes basically a reading progress bar.
+
+(As seen at the top of the window on this current page.)
 
 ## Related but untracked
 
@@ -452,12 +460,6 @@ Chalenges:
 Next step:
 * Define what is that basic interface 
 * What UX we want to provide before it gets progressive enhanced to whatever option.
-
-### Reading Progress Bar
-
-**Last updated:** February 4, 2019
-
-Have a progress bar at the top of certain reports, which gives the reader an overview of how far in the page they are at. So becomes basically a reading progress bar.
 
 ## Completed
 
