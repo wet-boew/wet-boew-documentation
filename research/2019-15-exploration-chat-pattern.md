@@ -11,6 +11,9 @@ modified: 2019-01-25
 * Evaluate the accessibility level of a chat like web interface.
 * Draft a list of some technical accessibility design requirement.
 * Draft an high level plan.
+* Prototype that plan.
+* Improve that prototype.
+* Go Live.
 
 ## Some existing tools
 
@@ -84,14 +87,14 @@ The conversation flow seems to be set into one unique path.
 ### Web accessibility 
 * Ensure that all control can be controled via keyboard
 * Feature integration ( page wide )
-	* Have the button to open up the conversation after and outside the main content of the page, unless it's going to be specific at the page content.
+	* Have the button to open up the conversation after and outside the main content of the page, unless it's going to be specific at the page content (to discuss).
 	* Add a "skip to conversion" in the skip navigation links
-	* The button should became static after the main content when the page footer became visible
+	* The button should become static after the main content when the page footer become visible (to discuss).
 * Feature integration (in page)
 	* Ensure the surrounding text introduce the conversation and provide the static form alternative version
 * Enhanced interface
-	* Can use CSS to have the button floating in the bottom-right, but this should be disabled in small screen
-	* When activated, the screen reader user should be immediatly aware of both version and how he can switch between them
+	* Can use CSS to have the button floating in the bottom-right, but this should be reviewed in small screen.
+	* When activated, there must be a way for a screen reader user to navigate through both versions and how they can switch between basic and enhanced.
 	* The conversion should be in a list or section.
 	* A skip link, after the input should be provided to jump in the past conservation.
 	* Ensure the interface contain all the necessary instruction, like how to modify what has been entered, etc...
@@ -121,9 +124,9 @@ The thresholds are:
 * Above 550 pixels of width:
 	* Enhanced interface is visible. Floating button, notification badges and overlay wizard are used.
 
-## Rules
+### Rules
 
-* All fields must be optional
+* All fields must be required for now. Or, include a version with all fields being optional in a future release
 * User must be able to switch between basic form and conversational form (chat wizard) at all time
 * Form has to be linear, which means no decisional tree, only one path
 * No Form validation should be used, only inputs allowed are:
@@ -133,13 +136,31 @@ The thresholds are:
 	* Select
 * Form submition must be handled client-side only
 
-### Alpha Version
+### Accessibility
 
-* Chat bot will support radio buttons only
+On the accessibility side, the followings are potentially at risk: 
 
-## To think about
+* The submit button becomes disabled when the question change;
+* The “more than 5 seconds” animation on the bubble from the page load, and the non-ability to close the welcome message.
+* The wait time between questions, when the bot speaks, etc.
 
-* What to do with the print version (if applicable)
+### Minor issues to fix
+
+* Three-dot waiting animation reacts weirdly on IE11.
+
+### To think about
+
+* What to do with the print version (if applicable).
+* Change the plugin's name?
+* Add a "skip to conversion" in the skip navigation links.
+
+### First Release
+
+* Supports radio buttons only.
+* No basic html interface support.
+* No "Skip this step" or "Back one step" links.
+* No "Edit answer" button to roll-back in the conversation.
+* Fields in the form can be optional, but they are all required in the chat (you have to finish your conversation).
 
 ## Wireframe and Prototyping
 
@@ -177,13 +198,9 @@ Default focus order matches the document structure, which is top to bottom and l
 
 ### Actions
 
-#### Submit and options buttons
+#### Submit button and options
 
-Sends a message from the user, in answer to the question from the bot.
-
-#### Close button
-
-Closes the the chat wizard, erasing the conversation and going back to showing only the bubble.
+Options are inputs to fill, while Submit button sends the selected input value to the conversation in a message from the user, in answer to the question from the bot.
 
 #### Minimize button
 
@@ -191,11 +208,7 @@ This button minimizes the chat wizard to its initial close state, but keeps the 
 
 #### Switch button
 
-This button makes a switch between the conversational form and the basic form. It can be found besides the Close button and the Minimize button.
-
-### Conceptual Prototype
-
-Available here: [Chat wizard concept prototype](https://gormanproductions.ca/lab/chat-wizard-prototype/chat-bot-en.html)
+This button makes a switch between the conversational form and the basic form. It can be found in the header of the chat window.
 
 ### Visual 
 
@@ -203,13 +216,41 @@ Available here: [Chat wizard concept prototype](https://gormanproductions.ca/lab
 
 {% raw %}
 
-<img src="2019-assets/1-wizard-overview-wireframe.jpeg" alt="Wireframe - visual representation of the UI - Overview" class="img-responsive" width="400" />
-<img src="2019-assets/2-mobile-wizard-wireframe.jpeg" alt="Wireframe - visual representation of the UI - Mobile" class="img-responsive" width="400" />
-<img src="2019-assets/3-window-wizard-wireframe.jpeg" alt="Wireframe - visual representation of the UI - Wizard Window" class="img-responsive" width="400" />
-<img src="2019-assets/4-form-wizard-wireframe.jpeg" alt="Wireframe - visual representation of the UI - Basic Form" class="img-responsive" width="400" />
+<div class="wb-tabs">
+	<div class="tabpanels">
+		<details id="details-panel10">
+			<summary>Desktop</summary>
+			<p>
+				<img src="2019-assets/1-wizard-overview-wireframe.jpeg" alt="Wireframe - visual representation of the UI - Overview" class="img-responsive" width="400" />
+			</p>
+		</details>
+		<details id="details-panel20">
+			<summary>Mobile</summary>
+			<p>
+				<img src="2019-assets/2-mobile-wizard-wireframe.jpeg" alt="Wireframe - visual representation of the UI - Mobile" class="img-responsive" width="400" />
+			</p>
+		</details>
+		<details id="details-panel30">
+			<summary>Window</summary>
+			<p>
+				<img src="2019-assets/3-window-wizard-wireframe.jpeg" alt="Wireframe - visual representation of the UI - Wizard Window" class="img-responsive" width="400" />
+			</p>
+		</details>
+		<details id="details-panel40">
+			<summary>Form</summary>
+			<p>
+				<img src="2019-assets/4-form-wizard-wireframe.jpeg" alt="Wireframe - visual representation of the UI - Basic Form" class="img-responsive" width="400" />
+			</p>
+		</details>
+	</div>
+</div>
 
 {% endraw %}
 {:/}
+
+### Conceptual Prototype
+
+Available here: [Chat wizard concept prototype](https://gormanproductions.ca/lab/chat-wizard-prototype/chat-bot-en.html)
 
 ### Prototype 1
 
@@ -299,16 +340,6 @@ Markup Basic Structure
 
 [See the HTML Code](../research/2019-15-exploration-chat-pattern-prototype.html)
 
-## Accessibility
+## How-to
 
-On the accessibility side, the followings are potentially at risk: 
-
-* The submit button becomes disabled when the question change;
-* The three-dot waiting message from the bot;
-* The “more than 5 seconds” animation on the bubble from the page load, and the non-ability to close the welcome message.
-* The wait time between questions, when the bot speaks, etc.
-
-## To Do
-
-* Three-dot waiting animation reacts weirdly on IE11;
-* Missing aria-label and aria-live in a few spots.
+Add a form to a page, including the "wb-chtbt" class, and using the right data-attributes in that form (to be continued...)
