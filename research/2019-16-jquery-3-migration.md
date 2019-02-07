@@ -28,7 +28,6 @@ modified: 2019-02-07
 * Do we / should we get the Canada Digital team to spread the word? 
 * Do we tweet? 
 * Do we need a page that explains the impacts of the project – and once the project is done – what it means for those folks upgrading (especially the folks that have custom tools that leverage jquery 2.x) 
-* So many questions 
 
 ## GitHub Issue Discussion 
 
