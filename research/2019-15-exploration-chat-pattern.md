@@ -144,7 +144,7 @@ On the accessibility side, the followings are potentially at risk:
 * The “more than 5 seconds” animation on the bubble from the page load, and the non-ability to close the welcome message.
 * The wait time between questions, when the bot speaks, etc.
 
-### Minor issues to fix
+### Minor issues
 
 * Three-dot waiting animation reacts weirdly on IE11.
 
@@ -153,6 +153,7 @@ On the accessibility side, the followings are potentially at risk:
 * What to do with the print version (if applicable).
 * Change the plugin's name?
 * Add a "skip to conversion" in the skip navigation links.
+* FRENCH VERSION
 
 ### First Release
 
@@ -215,33 +216,36 @@ This button makes a switch between the conversational form and the basic form. I
 {::nomarkdown}
 
 {% raw %}
-
-<div class="wb-tabs">
-	<div class="tabpanels">
-		<details id="details-panel10">
-			<summary>Desktop</summary>
-			<p>
-				<img src="2019-assets/1-wizard-overview-wireframe.jpeg" alt="Wireframe - visual representation of the UI - Overview" class="img-responsive" width="400" />
-			</p>
-		</details>
-		<details id="details-panel20">
-			<summary>Mobile</summary>
-			<p>
-				<img src="2019-assets/2-mobile-wizard-wireframe.jpeg" alt="Wireframe - visual representation of the UI - Mobile" class="img-responsive" width="400" />
-			</p>
-		</details>
-		<details id="details-panel30">
-			<summary>Window</summary>
-			<p>
-				<img src="2019-assets/3-window-wizard-wireframe.jpeg" alt="Wireframe - visual representation of the UI - Wizard Window" class="img-responsive" width="400" />
-			</p>
-		</details>
-		<details id="details-panel40">
-			<summary>Form</summary>
-			<p>
-				<img src="2019-assets/4-form-wizard-wireframe.jpeg" alt="Wireframe - visual representation of the UI - Basic Form" class="img-responsive" width="400" />
-			</p>
-		</details>
+<div class="row">
+	<div class="col-md-6">
+		<div class="wb-tabs">
+			<div class="tabpanels">
+				<details id="details-panel10">
+					<summary>Desktop</summary>
+					<p class="text-center">
+						<img src="2019-assets/1-wizard-overview-wireframe.jpeg" alt="Wireframe - visual representation of the UI - Overview" class="img-responsive" width="400" />
+					</p>
+				</details>
+				<details id="details-panel20">
+					<summary>Mobile</summary>
+					<p class="text-center">
+						<img src="2019-assets/2-mobile-wizard-wireframe.jpeg" alt="Wireframe - visual representation of the UI - Mobile" class="img-responsive" width="400" />
+					</p>
+				</details>
+				<details id="details-panel30">
+					<summary>Window</summary>
+					<p class="text-center">
+						<img src="2019-assets/3-window-wizard-wireframe.jpeg" alt="Wireframe - visual representation of the UI - Wizard Window" class="img-responsive" width="400" />
+					</p>
+				</details>
+				<details id="details-panel40">
+					<summary>Form</summary>
+					<p class="text-center">
+						<img src="2019-assets/4-form-wizard-wireframe.jpeg" alt="Wireframe - visual representation of the UI - Basic Form" class="img-responsive" width="400" />
+					</p>
+				</details>
+			</div>
+		</div>
 	</div>
 </div>
 
@@ -338,7 +342,11 @@ Markup Basic Structure
 
 ### Prototype Demo
 
-[See the HTML Code](../research/2019-15-exploration-chat-pattern-prototype.html)
+[See the Demo](../research/2019-15-exploration-chat-pattern-prototype.html)
+
+### Most up-to-date Prototype
+
+[See the Demo](../research/2019-15-exploration-chat-pattern-prototype-form.html)
 
 ## How-to
 
