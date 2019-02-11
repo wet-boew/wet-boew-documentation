@@ -6,6 +6,8 @@ description: Exploration of a jQuery 3 migration
 modified: 2019-02-07
 ---
 
+## Project Description
+
 WET 4.x will include an upgrade to jQuery 3.3.1. This page is being used to coordinate testing, develop code, and document the work that needs to be done to perform the upgrade. Apart from the research listed below, we’ve also attached some useful links to official jQuery upgrade guides, if you needed more information.
 
 ## On this page 
@@ -40,20 +42,24 @@ We'd recommend that you have a look at the official jQuery change log and upgrad
 
 ### Development Site
 
-The following site has a build of my fork and jquery3-migration branch:
+The following links are to the development site (latest build to my jquery3-migration branch) and a link directly to the branch code:
 
 * [Development Site](https://wet-boew-jquery-3-migration.netlify.com/index-en.html)
 * [GitHub jQuery 3 Fork](https://github.com/neilmispelaar/wet-boew/tree/jquery3-migration)
 
 
+### Test status
+
+To do
+
 ### WET Plugins
 
-<table>
+<table class="table table-hover table-responsive">
     <thead>
-        <th>Name</th>
-        <th>Breaking Change Code Present</th>
-        <th>Current Status</th>
-        <th>Requires Change</th>
+        <th scope="col">Name</th>
+        <th scope="col">Breaking Change Code Present</th>
+        <th scope="col">Requires Change</th>
+        <th scope="col">Current Status</th>
     </thead>
     <tbody>
         {% for plugin in site.data.jquery3migration.plugins %}
