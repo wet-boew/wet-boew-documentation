@@ -15,7 +15,7 @@ WET 4.x will include an upgrade to jQuery 3.3.1. This page is being used to coor
 * [To do](#to-do)
 * [Future discussion topics](#Future-discussion-topics)
 * [GitHub issue discussion](#GitHub-issue-discussion)
-
+* [Out of scope](#out-of-scope)
 
 ## Good to know 
 
@@ -25,18 +25,26 @@ We're upgrading jQuery from version 2.2.4 to 3.3.1. During testing, we will incl
 
 ### Security issues
 
-jQuery 2.2.4 is no longer being patched or upgrade by the jQuery team. As a result, it potentially poses a greater risk. 
+The major issue here is that jQuery 2.2.4 is no longer being patched or supported.
 
 ### Change log and upgrade guide
 
 We'd recommend that you have a look at the official jQuery change log and upgrade guide to get an idea of all the important changes and have some accurate information on hand if something is not clear.
 
-* [Blog Post](https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/)
 * [Summary of Important Changes](https://jquery.com/upgrade-guide/3.0/#summary-of-important-changes)
-* [jQuery Core 3.0 Upgrade Guide](https://jquery.com/upgrade-guide/3.0/#summary-of-important-changes): most of the changes that were included in jQuery 3.0 can be read about in this upgrade guide.
-    
+* [jQuery Core 3.0 Upgrade Guide](https://jquery.com/upgrade-guide/3.0/#summary-of-important-changes)
+* [jQuery 3 launch blog post](https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/)
+
 
 ## Test plan 
+
+### Development Site
+
+The following site has a build of my fork and jquery3-migration branch:
+
+* [Development Site](https://wet-boew-jquery-3-migration.netlify.com/index-en.html)
+* [GitHub jQuery 3 Fork](https://github.com/neilmispelaar/wet-boew/tree/jquery3-migration)
+
 
 ### WET Plugins
 
@@ -93,3 +101,12 @@ To do
 ## GitHub issue discussion 
 
 * [GitHub Issue Discussion](https://github.com/wet-boew/wet-boew/issues/8557)
+
+
+## Out of scope  
+
+### Usefulness of jQuery 
+
+There is a debate to be had about how useful jQuery is in today's modern browser environments. Most modern browsers support newer JavaScript APIs which allow for complex query selection (`[document.querySelectorAll](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll)`) without a third party library like jQuery. These native JavaScript API calls will likely also be more performant than third party libraries as well. 
+
+Thankfully, the purpose of this research page is to determine the path forward for the upgrade to jQuery 3. Conversations about the future use of jQuery are out of scope for this project.
