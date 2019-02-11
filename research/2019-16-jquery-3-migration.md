@@ -35,6 +35,7 @@ We'd recommend that you have a look at the official jQuery change log and upgrad
 
 * [Summary of Important Changes](https://jquery.com/upgrade-guide/3.0/#summary-of-important-changes)
 * [jQuery Core 3.0 Upgrade Guide](https://jquery.com/upgrade-guide/3.0/#summary-of-important-changes)
+* [jQuery 3 Migrate Plugin](https://github.com/jquery/jquery-migrate#migrate-older-jquery-code-to-jquery-30)
 * [jQuery 3 launch blog post](https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/)
 
 
