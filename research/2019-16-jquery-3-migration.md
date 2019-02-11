@@ -10,6 +10,18 @@ modified: 2019-02-07
 
 * Migrate WET 4 to jQuery 3
 
+## Test Loop in Jekyll
+
+<ul>
+{% for plugin in site.data.jquery3migration.plugins %}
+  <li>
+    <a href="https://github.com/{{ plugin.year }}">
+      {{ plugin.name }}
+    </a>
+  </li>
+{% endfor %}
+</ul>
+
 ## To Do
 
 * Investigate and determine what version of jQuery should go into the next version of WET (3.3.1 / slim vs other?) 
