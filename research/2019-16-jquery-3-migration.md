@@ -10,16 +10,33 @@ modified: 2019-02-07
 
 * Migrate WET 4 to jQuery 3
 
-## Test Loop in Jekyll
+## WET Plugin Testing
+
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Breaking Change Code Present</th>
+        <th>Current Status</th>
+    </thead>
+    <tbody>
+        {% for plugin in site.data.jquery3migration.plugins %}
+        <tr>
+            <td><a href="{{ plugin.href.jquery3 }}">{{ plugin.name }}</a></td>
+            <td>{{ plugin.name }}</td>
+            <td>{{ plugin.status }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+## Canada.ca Theme Plugin Testing
 
 <ul>
-{% for plugin in site.data.jquery3migration.plugins %}
+
   <li>
-    <a href="https://github.com/{{ plugin.year }}">
-      {{ plugin.name }}
-    </a>
+   
   </li>
-{% endfor %}
+
 </ul>
 
 ## To Do
