@@ -6,19 +6,15 @@ description: Exploration of a jQuery 3 migration
 modified: 2019-02-07
 ---
 
-## Goal
-
-* jQuery 3 Upgrade
-
 WET 4.x will include an upgrade to jQuery 3.3.1. This page is being used to coordinate testing, develop code, and document the work that needs to be done to perform the upgrade. Apart from the research listed below, we’ve also attached some useful links to official jQuery upgrade guides, if you needed more information.
 
 ## On this page 
 
-* (Good to know)[#good-to-know]
-* (Test plan)[#test-plan]
-* (To do)[#to-do]
-* (Future discussion topics)[#Future-discussion-topics]
-* (GitHub issue discussion )[#GitHub-issue-discussion]
+* [Good to know](#good-to-know)
+* [Test plan](#test-plan)
+* [To do](#to-do)
+* [Future discussion topics](#Future-discussion-topics)
+* [GitHub issue discussion](#GitHub-issue-discussion)
 
 
 ## Good to know 
