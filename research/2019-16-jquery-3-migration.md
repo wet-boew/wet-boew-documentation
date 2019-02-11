@@ -31,10 +31,10 @@ jQuery 2.2.4 is no longer being patched or upgrade by the jQuery team. As a resu
 
 We'd recommend that you have a look at the official jQuery change log and upgrade guide to get an idea of all the important changes and have some accurate information on hand if something is not clear.
 
-* (Blog Post)[https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/]
-* (Summary of Important Changes)[https://jquery.com/upgrade-guide/3.0/#summary-of-important-changes]
-* (jQuery Core 3.0 Upgrade Guide)[https://jquery.com/upgrade-guide/3.0/#summary-of-important-changes]: most of the changes that were included in jQuery 3.0 can be read about in this upgrade guide.
-
+* [Blog Post](https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/)
+* [Summary of Important Changes](https://jquery.com/upgrade-guide/3.0/#summary-of-important-changes)
+* [jQuery Core 3.0 Upgrade Guide](https://jquery.com/upgrade-guide/3.0/#summary-of-important-changes): most of the changes that were included in jQuery 3.0 can be read about in this upgrade guide.
+    
 
 ## Test plan 
 
