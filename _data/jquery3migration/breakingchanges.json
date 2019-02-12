@@ -2,9 +2,9 @@
     {
         "name" : "Special-case Deferred methods removed from jQuery.ajax",
         "category" : "Ajax",
-        "description" : "Lorem ipsum",
-        "search_text" : "",
-        "fix_text" : "",
+        "description" : "The <code>jqXHR</code> object returned from <code>jQuery.ajax()</code> is a jQuery <code>Deferred</code> and has historically had three extra methods with names matching the arguments object of <code>success</code>, <code>error</code>, and <code>complete</code>. This often confused people who did not realize that the returned object should be treated like a <code>Deferred</code>. As of jQuery 3.0 these methods have been removed. As replacements, use the <code>Deferred</code> standard methods of <code>done</code>, <code>fail</code>, and <code>always</code>, or use the new <code>then</code> and <code>catch</code> methods for Promises/A+ compliance.",
+        "search_text" : "<code>jqXHR.success | error | complete</code>",
+        "fix_text" : "Use the <code>Deferred</code> standard methods of <code>done</code>, <code>fail</code>, and <code>always</code>, or use the new <code>then</code> and <code>catch</code> methods for Promises/A+ compliance.",
         "href" : "https://jquery.com/upgrade-guide/3.0/#breaking-change-special-case-deferred-methods-removed-from-jquery-ajax"
     },
     {
