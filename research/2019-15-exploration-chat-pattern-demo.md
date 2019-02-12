@@ -350,7 +350,7 @@ modified: 2019-02-12
 		<p>1-2 sentences that describe the topics and top tasks that can be accessed on this page.</p>
 	</div>
 	<div class="col-md-6 mrgn-tp-sm hidden-sm hidden-xs">
-		<img src="./img/520x200.png" alt="" class="pull-right img-responsive thumbnail"/>
+		<img src="2019-assets/520x200.png" alt="" class="pull-right img-responsive thumbnail"/>
 	</div>
 </div>
 <div class="row">
