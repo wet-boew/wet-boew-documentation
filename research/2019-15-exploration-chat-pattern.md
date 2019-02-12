@@ -342,7 +342,7 @@ Markup Basic Structure
 
 ### Prototype Demo
 
-[See the Demo](../research/2019-15-exploration-chat-pattern-prototype.html)
+[See the Demo](../research/2019-15-exploration-chat-pattern-demo.html)
 
 ### Most up-to-date Prototype
 
