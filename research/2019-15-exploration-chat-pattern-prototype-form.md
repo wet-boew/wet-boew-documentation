@@ -105,7 +105,7 @@ modified: 2019-02-12
 	top: 5px;
 	right: 190px;
 	width: 220px;
-	font-size: 0.9em;
+	font-size: 14.4px;
 	background: #335075;
 	color: #fff;
 	padding: 5px 45px 5px 30px;
@@ -120,7 +120,7 @@ modified: 2019-02-12
 	left: -5px;
 	width: 20px;
 	height: 20px;
-	font-size: 1.25em;
+	font-size: 18px;
 	line-height: 20px;
 	background: #333;
 	color: #fff;
@@ -379,7 +379,7 @@ modified: 2019-02-12
 							</ul>
 						</fieldset>
 						<fieldset>
-							<legend data-wb-chtwzrd-q='{"labelwizard":"Great! And are you:", "queryName":"describe", "input":"radio"}'>In what situation are you?</legend>
+							<legend data-wb-chtwzrd-q='{"labelwizard":"Great! And are you:", "queryName":"situation", "input":"radio"}'>In what situation are you?</legend>
 							<ul class="list-unstyled mrgn-tp-md">
 								<li>
 									<label data-wb-chtwzrd-a='{"next":"q3","url":"page1.html"}'>
@@ -420,7 +420,7 @@ modified: 2019-02-12
 							</ul>
 						</fieldset>
 						<fieldset>
-							<legend data-wb-chtwzrd-q='{"labelwizard":"Awesome! And would you like to:", "queryName":"describe", "input":"radio"}'>What is your goal?</legend>
+							<legend data-wb-chtwzrd-q='{"labelwizard":"Awesome! And would you like to:", "queryName":"goal", "input":"radio"}'>What is your goal?</legend>
 							<ul class="list-unstyled mrgn-tp-md">
 								<li>
 									<label data-wb-chtwzrd-a='{"next":"none", "url":"page3.html"}'>
@@ -515,7 +515,7 @@ modified: 2019-02-12
 			<a href="#">
 				<figure>
 					<figcaption>[Feature hyperlink text]</figcaption>
-					<img src="./img/360x203.png" alt="" class="img-responsive thumbnail mrgn-bttm-sm"/>
+					<img src="2019-assets/360x203.png" alt="" class="img-responsive thumbnail mrgn-bttm-sm"/>
 					<p>Brief description of the feature being promoted.</p>
 				</figure>
 			</a>
@@ -524,7 +524,7 @@ modified: 2019-02-12
 			<a href="#">
 				<figure>
 					<figcaption>[Feature hyperlink text]</figcaption>
-					<img src="./img/360x203.png" alt="" class="img-responsive thumbnail mrgn-bttm-sm"/>
+					<img src="2019-assets/360x203.png" alt="" class="img-responsive thumbnail mrgn-bttm-sm"/>
 					<p>Brief description of the feature being promoted.</p>
 				</figure>
 			</a>
@@ -533,7 +533,7 @@ modified: 2019-02-12
 			<a href="#">
 				<figure>
 					<figcaption>[Feature hyperlink text]</figcaption>
-					<img src="./img/360x203.png" alt="" class="img-responsive thumbnail mrgn-bttm-sm"/>
+					<img src="2019-assets/360x203.png" alt="" class="img-responsive thumbnail mrgn-bttm-sm"/>
 					<p>Brief description of the feature being promoted.</p>
 				</figure>
 			</a>
@@ -605,7 +605,7 @@ var initiatechtwzrd = function($selector, input) {
 	first = datainput.header.first,
 	intro = (datainput.header.introtext ? datainput.header.introtext : ""),
 	current = datainput.questions[datainput.header.first];
-	console.log(datainput);
+	
 	// Build chat wizard
 	buildchtwzrd($selector);
 
