@@ -93,7 +93,7 @@ The following section lists all of the breaking changes that were introduced by 
 {% for breakingchange in site.data.jquery3migration.breakingchanges %}
 <section class="panel panel-default">
     <header class="panel-heading">
-        <h3 class="panel-title"><span class="wb-inv">Change Description: </span>{{ breakingchange.name }} <span class="label label-default"><span class="wb-inv">Change Category: </span>{{ breakingchange.category }}</span></h3>
+        <h3 class="panel-title"><span class="wb-inv">Change Description: </span>{{ breakingchange.name }} <span class="badge"><span class="wb-inv">Change Category: </span>{{ breakingchange.category }}</span></h3>
     </header>
     <div class="panel-body">
         {{ breakingchange.description }}
