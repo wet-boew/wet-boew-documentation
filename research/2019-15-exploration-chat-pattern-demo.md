@@ -508,6 +508,71 @@ modified: 2019-02-12
 		</section>
 	</div>
 </section>
+<section class="gc-prtts">
+	<h2>Features</h2>
+	<div class="row">
+		<div class="col-lg-4 col-md-6 mrgn-bttm-md">
+			<a href="#">
+				<figure>
+					<figcaption>[Feature hyperlink text]</figcaption>
+					<img src="./img/360x203.png" alt="" class="img-responsive thumbnail mrgn-bttm-sm"/>
+					<p>Brief description of the feature being promoted.</p>
+				</figure>
+			</a>
+		</div>
+		<div class="col-lg-4 col-md-6 mrgn-bttm-md">
+			<a href="#">
+				<figure>
+					<figcaption>[Feature hyperlink text]</figcaption>
+					<img src="./img/360x203.png" alt="" class="img-responsive thumbnail mrgn-bttm-sm"/>
+					<p>Brief description of the feature being promoted.</p>
+				</figure>
+			</a>
+		</div>
+		<div class="col-lg-4 col-md-6 mrgn-bttm-md">
+			<a href="#">
+				<figure>
+					<figcaption>[Feature hyperlink text]</figcaption>
+					<img src="./img/360x203.png" alt="" class="img-responsive thumbnail mrgn-bttm-sm"/>
+					<p>Brief description of the feature being promoted.</p>
+				</figure>
+			</a>
+		</div>
+	</div>
+</section>
+<div class="pagedetails">
+	<dl id="wb-dtmd">
+		<dt>Date modified:&#32;</dt>
+		<dd><time property="dateModified">2017-12-05</time></dd>
+	</dl>
+	<div class="row">
+		<div class="col-sm-6 col-md-5 col-lg-4">
+			<details class="brdr-0">
+				<summary class="btn btn-default text-center">Report a problem on this page</summary>
+				<div class="well row">
+					<div class="gc-rprt-prblm">
+						<div class="gc-rprt-prblm-frm gc-rprt-prblm-tggl">
+							<form action="#">
+								<fieldset>
+									<legend><span class="field-name">Please select all that apply: </span></legend>
+										<div class="checkbox">
+											<label for="problem1"><input type="checkbox" data-reveal="#broken" name="problem" value="Something is broken" id="problem1" />Something is broken</label>
+										</div>
+								</fieldset>
+								<button type="submit" class="btn btn-primary wb-toggle" data-toggle='{"stateOff": "hide", "stateOn": "show", "selector": ".gc-rprt-prblm-tggl"}'>Submit</button>
+							</form>
+						</div>
+						<div class="gc-rprt-prblm-thnk gc-rprt-prblm-tggl hide">
+							<h3>Thank you for your help!</h3>
+							<p>You will not receive a reply. For enquiries, please <a href="https://www.canada.ca/en/contact.html">contact us</a>.</p>
+						</div>
+					</div>
+				</div>
+			</details>
+		</div>
+		<div class="wb-share col-sm-4 col-md-3 col-sm-offset-2 col-md-offset-4 col-lg-offset-5" data-wb-share='{"lnkClass": "btn btn-default btn-block"}'></div>
+	</div>
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 <!-- Chat wizard -->
@@ -561,20 +626,22 @@ var initiatechtwzrd = function($selector, input) {
 	$basic.find("input[type=submit], button[type=submit]").before('<button type="submit" class="btn btn-sm btn-default chtwzrd-link mrgn-rght-sm">Switch to help wizard</button>');
 	$("footer#wb-info").addClass("chtbt-mrgn");
 
-	// Correct bubble positionning on load if necessary
-	$(document).ready(function(event) {
-		stickyUntilFooter($bubble);
-	});
+	if($('footer#wb-info').length) {
+		// Correct bubble positionning on load if necessary
+		$(document).ready(function(event) {
+			stickyUntilFooter($bubble);
+		});
 
-	// Correct bubble positionning on resize
-	$(window).on("resize", function(e) {
-		stickyUntilFooter($bubble);
-	});
+		// Correct bubble positionning on resize
+		$(window).on("resize", function(e) {
+			stickyUntilFooter($bubble);
+		});
 
-	// Monitor Y position for the bubble
-	$(window).on("scroll", function(e) {
-		stickyUntilFooter($bubble);
-	});
+		// Monitor Y position for the bubble
+		$(window).on("scroll", function(e) {
+			stickyUntilFooter($bubble);
+		});
+	}
 
 	// Keep the bubble sticky while scrolling Y until user reaches the footer
 	var stickyUntilFooter = function($selector) {
@@ -739,7 +806,7 @@ var appendInteraction = function($selector) {
 			paramStr = paramStr.slice(0, -1);
 			$dropspot.find(".chtwzrd-question").last().html(questionnaire.endtext);
 			//$btnnext.attr("type", "submit").prop('disabled', false).html(questionnaire.send + ' <span class="glyphicon glyphicon-chevron-right small"></span>');
-			redirurl = 2019-15-exploration-chat-pattern-prototype-results.html;		// For demo purposes
+			redirurl = "2019-15-exploration-chat-pattern-prototype-results.html";		// For demo purposes
 			$btnnext.replaceWith('<a class="' + btnclasses + '" href="' + redirurl + '?' + paramStr + '">' + questionnaire.send + ' <span class="glyphicon glyphicon-chevron-right small"></span></a>');		// For demo purposes
 			$selector.attr('action', redirurl + '?' + paramStr);
 		} 
