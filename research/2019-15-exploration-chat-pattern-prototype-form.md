@@ -105,11 +105,11 @@ modified: 2019-02-12
 	top: 5px;
 	right: 190px;
 	width: 220px;
-	font-size: 14.4px;
+	font-size: 13px;
 	background: #335075;
 	color: #fff;
 	padding: 5px 45px 5px 30px;
-	line-height: 20px;
+	line-height: 18px;
 	height: 50px;
 	border-top-left-radius: 25px;
 	border-bottom-left-radius: 25px;
@@ -120,8 +120,8 @@ modified: 2019-02-12
 	left: -5px;
 	width: 20px;
 	height: 20px;
-	font-size: 18px;
-	line-height: 20px;
+	font-size: 16px;
+	line-height: 18px;
 	background: #333;
 	color: #fff;
 	border-radius: 50%;
@@ -543,7 +543,7 @@ modified: 2019-02-12
 <div class="pagedetails">
 	<dl id="wb-dtmd">
 		<dt>Date modified:&#32;</dt>
-		<dd><time property="dateModified">2017-12-05</time></dd>
+		<dd><time property="dateModified">2019-02-12</time></dd>
 	</dl>
 	<div class="row">
 		<div class="col-sm-6 col-md-5 col-lg-4">
