@@ -90,12 +90,31 @@ To do
 
 The following section lists all of the breaking changes that were introduced by jQuery 3.x. 
 
-<ul>
 {% for breakingchange in site.data.jquery3migration.breakingchanges %}
-    <li>{{ breakingchange.name }} | {{ breakingchange.category }}</li>
+<section class="panel panel-default">
+    <header class="panel-heading">
+        <h3 class="panel-title h4">{{ breakingchange.name }}</h3>
+    </header>
+    <div class="panel-body">
+        {{ breakingchange.description }}
+        <ul class="list-unstyled">
+            <li>
+                <details>
+                    <summary>What do I search for?</summary>
+                    To do
+                </details>
+            </li>
+            <li>
+                <details open="open">
+                    <summary>How do fix this?</summary>
+                    To do
+                </details>
+            </li>
+        </ul>
+    </div>
+    <footer class="panel-footer">Category: {{ breakingchange.category }}</footer>
+</section>
 {% endfor %}
-</ul>
-
 
 
 
