@@ -93,7 +93,7 @@ The following section lists all of the breaking changes that were introduced by 
 {% for breakingchange in site.data.jquery3migration.breakingchanges %}
 <section class="panel panel-default">
     <header class="panel-heading">
-        <h3 class="panel-title">{{ breakingchange.name }}</h3>
+        <h3 class="panel-title"><span class="wb-inv">Change Description: </span>{{ breakingchange.name }} <span class="label label-default"><span class="wb-inv">Change Category: </span>{{ breakingchange.category }}</span></h3>
     </header>
     <div class="panel-body">
         {{ breakingchange.description }}
@@ -101,14 +101,13 @@ The following section lists all of the breaking changes that were introduced by 
     <ul class="list-group">
         <li class="list-group-item">
             <h4 class="list-group-item-heading">What do I search for?</h4>
-            <p class="list-group-item-text">Blah blah</p>
+            <p class="list-group-item-text">{{ breakingchange.search_text }}</p>
         </li>
         <li class="list-group-item">
             <h4 class="list-group-item-heading">How do fix this?</h4>
-            <p class="list-group-item-text">Blah blah</p>
+            <p class="list-group-item-text">{{ breakingchange.fix_text }}</p>
         </li>
     </ul>
-    <footer class="panel-footer">Category: {{ breakingchange.category }}</footer>
 </section>
 {% endfor %}
 

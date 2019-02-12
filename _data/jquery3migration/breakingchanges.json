@@ -3,156 +3,208 @@
         "name" : "Special-case Deferred methods removed from jQuery.ajax",
         "category" : "Ajax",
         "description" : "Lorem ipsum",
+        "search_text" : "",
+        "fix_text" : "",
         "href" : "https://jquery.com/upgrade-guide/3.0/#breaking-change-special-case-deferred-methods-removed-from-jquery-ajax"
     },
     {
         "name" : "Cross-domain script requests must be declared",
         "category" : "Ajax",
         "description" : "Lorem ipsum",
+        "search_text" : "",
+        "fix_text" : "",
         "href" : "https://jquery.com/upgrade-guide/3.0/#breaking-change-cross-domain-script-requests-must-be-declared"
     },
     {
         "name" : "Hash in a URL is preserved in a jQuery.ajax() call",
         "category" : "Ajax",
         "description" : "Lorem ipsum",
+        "search_text" : "",
+        "fix_text" : "",
         "href" : "https://jquery.com/upgrade-guide/3.0/#breaking-change-hash-in-a-url-is-preserved-in-a-jquery-ajax-call"
     },
     {
         "name" : ".removeAttr() no longer sets properties to false",
         "category" : "Attributes",
         "description" : "Lorem ipsum",
+        "search_text" : "",
+        "fix_text" : "",
         "href" : "https://jquery.com/upgrade-guide/3.0/#breaking-change-removeattr-no-longer-sets-properties-to-false"
     },
     {
         "name" : "select-multiple with nothing selected returns an empty array",
         "category" : "Attributes",
         "description" : "Lorem ipsum",
+        "search_text" : "",
+        "fix_text" : "",
         "href" : "https://jquery.com/upgrade-guide/3.0/#breaking-change-select-multiple-with-nothing-selected-returns-an-empty-array"
     },
     {
         "name" : "jQuery 3.0 runs in Strict Mode",
         "category" : "Core",
         "description" : "Lorem ipsum",
+        "search_text" : "",
+        "fix_text" : "",
         "href" : "https://jquery.com/upgrade-guide/3.0/#breaking-change-jquery-3-0-runs-in-strict-mode"
     },
     {
         "name" : "document-ready handlers are now asynchronous",
         "category" : "Core",
         "description" : "Lorem ipsum",
+        "search_text" : "",
+        "fix_text" : "",
         "href" : "https://jquery.com/upgrade-guide/3.0/#breaking-change-document-ready-handlers-are-now-asynchronous"
     },
     {
         "name" : "jQuery.isNumeric() and custom .toString()",
         "category" : "Core",
         "description" : "Lorem ipsum",
+        "search_text" : "",
+        "fix_text" : "",
         "href" : "https://jquery.com/upgrade-guide/3.0/#breaking-change-jquery-isnumeric-and-custom-tostring"
     },
     {
         "name" : "Deprecated .context and .selector properties removed",
         "category" : "Core",
         "description" : "Lorem ipsum",
+        "search_text" : "",
+        "fix_text" : "",
         "href" : "https://jquery.com/upgrade-guide/3.0/#breaking-change-deprecated-context-and-selector-properties-removed"
     },
     {
         "name" : "Deprecated .size() removed",
         "category" : "Core",
         "description" : "Lorem ipsum",
+        "search_text" : "",
+        "fix_text" : "",
         "href" : "https://jquery.com/upgrade-guide/3.0/#breaking-change-deprecated-size-removed"
     },
     {
         "name" : "Undocumented internal methods no longer exposed",
         "category" : "Core",
         "description" : "Lorem ipsum",
+        "search_text" : "",
+        "fix_text" : "",
         "href" : "https://jquery.com/upgrade-guide/3.0/#breaking-change-undocumented-internal-methods-no-longer-exposed"
     },
     {
         "name" : "Return values on empty sets are undefined",
         "category" : "Core",
         "description" : "Lorem ipsum",
+        "search_text" : "",
+        "fix_text" : "",
         "href" : "https://jquery.com/upgrade-guide/3.0/#breaking-change-return-values-on-empty-sets-are-undefined"
     },
     {
         "name" : ".data() names containing dashes",
         "category" : "Data",
         "description" : "Lorem ipsum",
+        "search_text" : "",
+        "fix_text" : "",
         "href" : "https://jquery.com/upgrade-guide/3.0/#breaking-change-data-names-containing-dashes"
     },
     {
         "name" : "jQuery.Deferred is now Promises/A+ compatible",
         "category" : "Deferred",
         "description" : "Lorem ipsum",
+        "search_text" : "",
+        "fix_text" : "",
         "href" : "https://jquery.com/upgrade-guide/3.0/#breaking-change-and-feature-jquery-deferred-is-now-promises-a-compatible"
     },
     {
         "name" : "jQuery.when() arguments",
         "category" : "Deferred",
         "description" : "Lorem ipsum",
+        "search_text" : "",
+        "fix_text" : "",
         "href" : "https://jquery.com/upgrade-guide/3.0/#breaking-change-and-feature-jquery-when-arguments"
     },
     {
         "name" : "jQuery.when() progress notifications",
         "category" : "Deferred",
         "description" : "Lorem ipsum",
+        "search_text" : "",
+        "fix_text" : "",
         "href" : "https://jquery.com/upgrade-guide/3.0/#breaking-change-jquery-when-progress-notifications"
     },
     {
         "name" : ".width(), .height(), .css(\"width\"), and .css(\"height\") can return non-integer values",
         "category" : "Dimensions",
         "description" : "Lorem ipsum",
+        "search_text" : "",
+        "fix_text" : "",
         "href" : "https://jquery.com/upgrade-guide/3.0/#breaking-change-width-height-css-quot-width-quot-and-css-quot-height-quot-can-return-non-integer-values"
     },
     {
         "name" : ".outerWidth() or .outerHeight() on window includes scrollbar width/height",
         "category" : "Dimensions",
         "description" : "Lorem ipsum",
+        "search_text" : "",
+        "fix_text" : "",
         "href" : "https://jquery.com/upgrade-guide/3.0/#breaking-change-outerwidth-or-outerheight-on-window-includes-scrollbar-width-height"
     },
     {
         "name" : ".show(), .hide(), and .toggle() methods now respect more stylesheet changes",
         "category" : "Effects",
         "description" : "Lorem ipsum",
+        "search_text" : "",
+        "fix_text" : "",
         "href" : "https://jquery.com/upgrade-guide/3.0/#breaking-change-show-hide-and-toggle-methods-now-respect-more-stylesheet-changes"
     },
     {
         "name" : ".load(), .unload(), and .error() removed",
         "category" : "Event",
         "description" : "Lorem ipsum",
+        "search_text" : "",
+        "fix_text" : "",
         "href" : "https://jquery.com/upgrade-guide/3.0/#breaking-change-load-unload-and-error-removed"
     },
     {
         "name" : ".on(\"ready\", fn) removed",
         "category" : "Event",
         "description" : "Lorem ipsum",
+        "search_text" : "",
+        "fix_text" : "",
         "href" : "https://jquery.com/upgrade-guide/3.0/#breaking-change-on-quot-ready-quot-fn-removed"
     },
     {
         "name" : "event.pageX and event.pageY normalization removed",
         "category" : "Event",
         "description" : "Lorem ipsum",
+        "search_text" : "",
+        "fix_text" : "",
         "href" : "https://jquery.com/upgrade-guide/3.0/#breaking-change-event-pagex-and-event-pagey-normalization-removed"
     },
     {
         "name" : "jQuery.event.props and jQuery.event.fixHooks removed",
         "category" : "Event",
         "description" : "Lorem ipsum",
+        "search_text" : "",
+        "fix_text" : "",
         "href" : "https://jquery.com/upgrade-guide/3.0/#breaking-change-jquery-event-props-and-jquery-event-fixhooks-removed"
     },
     {
         "name" : "Delegated events with bad selectors throw immediately",
         "category" : "Event",
         "description" : "Lorem ipsum",
+        "search_text" : "",
+        "fix_text" : "",
         "href" : "https://jquery.com/upgrade-guide/3.0/#breaking-change-delegated-events-with-bad-selectors-throw-immediately"
     },
     {
         "name" : ".wrapAll(function) only calls the function once",
         "category" : "Manipulation",
         "description" : "Lorem ipsum",
+        "search_text" : "",
+        "fix_text" : "",
         "href" : "https://jquery.com/upgrade-guide/3.0/#breaking-change-wrapall-function-only-calls-the-function-once"
     },
     {
         "name" : "Invalid input to the .offset() method",
         "category" : "Offset",
         "description" : "Lorem ipsum",
+        "search_text" : "",
+        "fix_text" : "",
         "href" : "https://jquery.com/upgrade-guide/3.0/#breaking-change-invalid-input-to-the-offset-method"
     },
     {
@@ -165,18 +217,24 @@
         "name" : "jQuery(\"#\") and .find(\"#\") are invalid syntax",
         "category" : "Selector",
         "description" : "Lorem ipsum",
+        "search_text" : "",
+        "fix_text" : "",
         "href" : "https://jquery.com/upgrade-guide/3.0/#breaking-change-jquery-quot-quot-and-find-quot-quot-are-invalid-syntax"
     },
     {
         "name" : "jQuery.param() no longer converts %20 to a plus sign",
         "category" : "Serialize",
         "description" : "Lorem ipsum",
+        "search_text" : "",
+        "fix_text" : "",
         "href" : "https://jquery.com/upgrade-guide/3.0/#breaking-change-jquery-param-no-longer-converts-20-to-a-plus-sign"
     },
     {
         "name" : ".andSelf() removed, use .addBack()",
         "category" : "Serialize",
         "description" : "Lorem ipsum",
+        "search_text" : "",
+        "fix_text" : "",
         "href" : "https://jquery.com/upgrade-guide/3.0/#breaking-change-andself-removed-use-addback"
     }
 ]
