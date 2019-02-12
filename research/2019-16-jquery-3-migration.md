@@ -93,30 +93,24 @@ The following section lists all of the breaking changes that were introduced by 
 {% for breakingchange in site.data.jquery3migration.breakingchanges %}
 <section class="panel panel-default">
     <header class="panel-heading">
-        <h3 class="panel-title h4">{{ breakingchange.name }}</h3>
+        <h3 class="panel-title">{{ breakingchange.name }}</h3>
     </header>
     <div class="panel-body">
         {{ breakingchange.description }}
-        <ul class="list-unstyled">
-            <li>
-                <details>
-                    <summary>What do I search for?</summary>
-                    To do
-                </details>
-            </li>
-            <li>
-                <details open="open">
-                    <summary>How do fix this?</summary>
-                    To do
-                </details>
-            </li>
-        </ul>
     </div>
+    <ul class="list-group">
+        <li class="list-group-item">
+            <h4 class="list-group-item-heading">What do I search for?</h4>
+            <p class="list-group-item-text">Blah blah</p>
+        </li>
+        <li class="list-group-item">
+            <h4 class="list-group-item-heading">How do fix this?</h4>
+            <p class="list-group-item-text">Blah blah</p>
+        </li>
+    </ul>
     <footer class="panel-footer">Category: {{ breakingchange.category }}</footer>
 </section>
 {% endfor %}
-
-
 
 
 ## To do
