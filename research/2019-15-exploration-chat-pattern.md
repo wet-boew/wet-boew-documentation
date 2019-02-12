@@ -350,4 +350,4 @@ Markup Basic Structure
 
 ## How-to
 
-Add a form to a page, including the "wb-chtbt" class, and using the right data-attributes in that form (to be continued...)
+Add a form to a page, including the "wb-chtwzrd" class, and using the right data-attributes in that form (to be continued...)
