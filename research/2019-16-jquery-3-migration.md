@@ -86,6 +86,20 @@ To do
 
 To do
 
+## Breaking Changes
+
+The following section lists all of the breaking changes that were introduced by jQuery 3.x. 
+
+<ul>
+{% for breakingchange in site.data.jquery3migration.breakingchanges %}
+    <li>{{ breakingchange.name }} | {{ breakingchange.category }}</li>
+{% endfor %}
+</ul>
+
+
+
+
+
 ## To do
 
 * Investigate and determine what version of jQuery should go into the next version of WET (3.3.1 / slim vs other?) 
@@ -114,6 +128,6 @@ To do
 
 ### Usefulness of jQuery 
 
-There is a debate to be had about how useful jQuery is in today's modern browser environments. Most modern browsers support newer JavaScript APIs which allow for complex query selection (`[document.querySelectorAll](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll)`) without a third party library like jQuery. These native JavaScript API calls will likely also be more performant than third party libraries as well. 
+There is a debate to be had about how useful jQuery is in today's modern browser environments. Most modern browsers support newer JavaScript APIs which allow for complex query selection `document.querySelectorAll` https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll without a third party library like jQuery. These native JavaScript API calls will likely also be more performant than third party libraries as well. 
 
 Thankfully, the purpose of this research page is to determine the path forward for the upgrade to jQuery 3. Conversations about the future use of jQuery are out of scope for this project.

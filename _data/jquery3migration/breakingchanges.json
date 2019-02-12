@@ -1,0 +1,122 @@
+[
+    {
+        "name" : "Special-case Deferred methods removed from jQuery.ajax",
+        "category" : "Ajax"
+    },
+    {
+        "name" : "Cross-domain script requests must be declared",
+        "category" : "Ajax"
+    },
+    {
+        "name" : "Hash in a URL is preserved in a jQuery.ajax() call",
+        "category" : "Ajax"
+    },
+    {
+        "name" : ".removeAttr() no longer sets properties to false",
+        "category" : "Attributes"
+    },
+    {
+        "name" : "select-multiple with nothing selected returns an empty array",
+        "category" : "Attributes"
+    },
+    {
+        "name" : "jQuery 3.0 runs in Strict Mode",
+        "category" : "Core"
+    },
+    {
+        "name" : "document-ready handlers are now asynchronous",
+        "category" : "Core"
+    },
+    {
+        "name" : "jQuery.isNumeric() and custom .toString()",
+        "category" : "Core"
+    },
+    {
+        "name" : "Deprecated .context and .selector properties removed",
+        "category" : "Core"
+    },
+    {
+        "name" : "Deprecated .size() removed",
+        "category" : "Core"
+    },
+    {
+        "name" : "Undocumented internal methods no longer exposed",
+        "category" : "Core"
+    },
+    {
+        "name" : "Return values on empty sets are undefined",
+        "category" : "Core"
+    },
+    {
+        "name" : ".data() names containing dashes",
+        "category" : "Data"
+    },
+    {
+        "name" : "jQuery.Deferred is now Promises/A+ compatible",
+        "category" : "Deferred"
+    },
+    {
+        "name" : "jQuery.when() arguments",
+        "category" : "Deferred"
+    },
+    {
+        "name" : "jQuery.when() progress notifications",
+        "category" : "Deferred"
+    },
+    {
+        "name" : ".width(), .height(), .css(\"width\"), and .css(\"height\") can return non-integer values",
+        "category" : "Dimensions"
+    },
+    {
+        "name" : ".outerWidth() or .outerHeight() on window includes scrollbar width/height",
+        "category" : "Dimensions"
+    },
+    {
+        "name" : ".show(), .hide(), and .toggle() methods now respect more stylesheet changes",
+        "category" : "Effects"
+    },
+    {
+        "name" : ".load(), .unload(), and .error() removed",
+        "category" : "Event"
+    },
+    {
+        "name" : ".on(\"ready\", fn) removed",
+        "category" : "Event"
+    },
+    {
+        "name" : "event.pageX and event.pageY normalization removed",
+        "category" : "Event"
+    },
+    {
+        "name" : "jQuery.event.props and jQuery.event.fixHooks removed",
+        "category" : "Event"
+    },
+    {
+        "name" : "Delegated events with bad selectors throw immediately",
+        "category" : "Event"
+    },
+    {
+        "name" : ".wrapAll(function) only calls the function once",
+        "category" : "Manipulation"
+    },
+    {
+        "name" : "Invalid input to the .offset() method",
+        "category" : "Offset"
+    },
+    {
+        "name" : "Behavior of :hidden and :visible",
+        "category" : "Selector"
+    },
+    {
+        "name" : "jQuery(\"#\") and .find(\"#\") are invalid syntax",
+        "category" : "Selector"
+    },
+    {
+        "name" : "jQuery.param() no longer converts %20 to a plus sign",
+        "category" : "Serialize"
+    },
+    {
+        "name" : ".andSelf() removed, use .addBack()",
+        "category" : "Serialize"
+    }
+]
