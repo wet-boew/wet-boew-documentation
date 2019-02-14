@@ -343,6 +343,11 @@ Markup Basic Structure
 
 [See the Demo](../research/2019-15-exploration-chat-pattern-prototype-form.html)
 
+## Ongoing
+
+* Tying the form to the chat "parrallel" progress through the questions
+* Being able to take static forms in input
+
 ## How-to
 
 Add a form to a page, including the "wb-chtwzrd" class, and using the right data-attributes in that form (to be continued...)
