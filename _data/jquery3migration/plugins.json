@@ -1,9 +1,18 @@
 [
     {
         "name" : "Zebra striping",
+        "error" : { 
+            "breaking_code_change" : false,
+            "console" : false,
+            "visual" : false
+        },
+        "fix" : { 
+            "required" : false,
+            "description" : ""
+        },
         "href" : { 
-            "jquery3" : "https://wet-boew-jquery-3-migration.netlify.com/demos/zebra/zebra-en.html",
-            "wet" : "https://wet-boew.github.io/wet-boew/demos/zebra/zebra-en.html"
+            "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/zebra/zebra-en.html",
+            "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/zebra/zebra-en.html"
         },
         "status":"Nope"
     }
