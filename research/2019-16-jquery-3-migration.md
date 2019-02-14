@@ -55,60 +55,62 @@ To do
 
 ### WET Plugins
 
-<table class="table table-hover table-responsive">
-    <thead>
-        <th scope="col">Name</th>
-        <th scope="col">Breaking Change Code Present</th>
-        <th scope="col">jQuery Migrate Console Error</th>
-        <th scope="col">Visual Display Error</th>
-        <th scope="col">Fix Required</th>
-        <th scope="col">Description of Fix</th>
-        <th scope="col">Current Status</th>
-    </thead>
-    <tbody>
-        {% for plugin in site.data.jquery3migration.plugins %}
-        <tr>
-            <td><a href="{{ plugin.href.jquery3 }}">{{ plugin.name }}</a></td>
-            <td>
-                {% if plugin.error.breaking_code_change == true %}
-                    Present
-                {% else %}
-                    Nope
-                {% endif %}
-            </td>
-            <td>
-                {% if plugin.error.console == true %}
-                    Present
-                {% else %}
-                    Nope
-                {% endif %}
-            </td>
-            <td>
-                {% if plugin.error.visual == true %}
-                    Present
-                {% else %}
-                    Nope
-                {% endif %}
-            </td>
-            <td>
-                {% if plugin.fix.required == true %}
-                    Yes
-                {% else %}
-                    Nope
-                {% endif %}
-            </td>
-            <td>
-                {% if plugin.fix.description == ""  %}
-                    -
-                {% else %}
-                    {{ plugin.fix.description }}
-                {% endif %}
-            </td>
-            <td>{{ plugin.status }}</td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <th scope="col">Name</th>
+            <th scope="col">Breaking Change Code Present</th>
+            <th scope="col">jQuery Migrate Console Error</th>
+            <th scope="col">Visual Display Error</th>
+            <th scope="col">Fix Required</th>
+            <th scope="col">Description of Fix</th>
+            <th scope="col">Current Status</th>
+        </thead>
+        <tbody>
+            {% for plugin in site.data.jquery3migration.plugins %}
+            <tr>
+                <td><a href="{{ plugin.href.jquery3 }}">{{ plugin.name }}</a></td>
+                <td>
+                    {% if plugin.error.breaking_code_change == true %}
+                        Present
+                    {% else %}
+                        Nope
+                    {% endif %}
+                </td>
+                <td>
+                    {% if plugin.error.console == true %}
+                        Present
+                    {% else %}
+                        Nope
+                    {% endif %}
+                </td>
+                <td>
+                    {% if plugin.error.visual == true %}
+                        Present
+                    {% else %}
+                        Nope
+                    {% endif %}
+                </td>
+                <td>
+                    {% if plugin.fix.required == true %}
+                        Yes
+                    {% else %}
+                        Nope
+                    {% endif %}
+                </td>
+                <td>
+                    {% if plugin.fix.description == ""  %}
+                        -
+                    {% else %}
+                        {{ plugin.fix.description }}
+                    {% endif %}
+                </td>
+                <td>{{ plugin.status }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
 
 ### Canada.ca Theme Plugins
 
