@@ -1,5 +1,498 @@
 [
     {
+        "name" : "Calendar of Events",
+        "error" : { 
+            "breaking_code_change" : false,
+            "console" : false,
+            "visual" : false
+        },
+        "fix" : { 
+            "required" : false,
+            "description" : ""
+        },
+        "href" : { 
+            "jquery3x" : "",
+            "jquery2x" : ""
+        },
+        "status":"Nope"
+    },
+    {
+        "name" : "Charts and graphs",
+        "error" : { 
+            "breaking_code_change" : false,
+            "console" : false,
+            "visual" : false
+        },
+        "fix" : { 
+            "required" : false,
+            "description" : ""
+        },
+        "href" : { 
+            "jquery3x" : "",
+            "jquery2x" : ""
+        },
+        "status":"Nope"
+    },
+    {
+        "name" : "Collapsible alerts",
+        "error" : { 
+            "breaking_code_change" : false,
+            "console" : false,
+            "visual" : false
+        },
+        "fix" : { 
+            "required" : false,
+            "description" : ""
+        },
+        "href" : { 
+            "jquery3x" : "",
+            "jquery2x" : ""
+        },
+        "status":"Nope"
+    },
+    {
+        "name" : "Country Content",
+        "error" : { 
+            "breaking_code_change" : false,
+            "console" : false,
+            "visual" : false
+        },
+        "fix" : { 
+            "required" : false,
+            "description" : ""
+        },
+        "href" : { 
+            "jquery3x" : "",
+            "jquery2x" : ""
+        },
+        "status":"Nope"
+    },
+    {
+        "name" : "Data Ajax",
+        "error" : { 
+            "breaking_code_change" : false,
+            "console" : false,
+            "visual" : false
+        },
+        "fix" : { 
+            "required" : false,
+            "description" : ""
+        },
+        "href" : { 
+            "jquery3x" : "",
+            "jquery2x" : ""
+        },
+        "status":"Nope"
+    },
+    {
+        "name" : "Data Inview",
+        "error" : { 
+            "breaking_code_change" : false,
+            "console" : false,
+            "visual" : false
+        },
+        "fix" : { 
+            "required" : false,
+            "description" : ""
+        },
+        "href" : { 
+            "jquery3x" : "",
+            "jquery2x" : ""
+        },
+        "status":"Nope"
+    },
+    {
+        "name" : "Data Picture",
+        "error" : { 
+            "breaking_code_change" : false,
+            "console" : false,
+            "visual" : false
+        },
+        "fix" : { 
+            "required" : false,
+            "description" : ""
+        },
+        "href" : { 
+            "jquery3x" : "",
+            "jquery2x" : ""
+        },
+        "status":"Nope"
+    },
+    {
+        "name" : "Dismissable content",
+        "error" : { 
+            "breaking_code_change" : false,
+            "console" : false,
+            "visual" : false
+        },
+        "fix" : { 
+            "required" : false,
+            "description" : ""
+        },
+        "href" : { 
+            "jquery3x" : "",
+            "jquery2x" : ""
+        },
+        "status":"Nope"
+    },
+    {
+        "name" : "Equal height",
+        "error" : { 
+            "breaking_code_change" : false,
+            "console" : false,
+            "visual" : false
+        },
+        "fix" : { 
+            "required" : false,
+            "description" : ""
+        },
+        "href" : { 
+            "jquery3x" : "",
+            "jquery2x" : ""
+        },
+        "status":"Nope"
+    },
+    {
+        "name" : "Facebook embedded pages",
+        "error" : { 
+            "breaking_code_change" : false,
+            "console" : false,
+            "visual" : false
+        },
+        "fix" : { 
+            "required" : false,
+            "description" : ""
+        },
+        "href" : { 
+            "jquery3x" : "",
+            "jquery2x" : ""
+        },
+        "status":"Nope"
+    },
+    {
+        "name" : "Favicon",
+        "error" : { 
+            "breaking_code_change" : false,
+            "console" : false,
+            "visual" : false
+        },
+        "fix" : { 
+            "required" : false,
+            "description" : ""
+        },
+        "href" : { 
+            "jquery3x" : "",
+            "jquery2x" : ""
+        },
+        "status":"Nope"
+    },
+    {
+        "name" : "Feeds",
+        "error" : { 
+            "breaking_code_change" : false,
+            "console" : false,
+            "visual" : false
+        },
+        "fix" : { 
+            "required" : false,
+            "description" : ""
+        },
+        "href" : { 
+            "jquery3x" : "",
+            "jquery2x" : ""
+        },
+        "status":"Nope"
+    },
+    {
+        "name" : "Filter",
+        "error" : { 
+            "breaking_code_change" : false,
+            "console" : false,
+            "visual" : false
+        },
+        "fix" : { 
+            "required" : false,
+            "description" : ""
+        },
+        "href" : { 
+            "jquery3x" : "",
+            "jquery2x" : ""
+        },
+        "status":"Nope"
+    },
+    {
+        "name" : "Footnotes",
+        "error" : { 
+            "breaking_code_change" : false,
+            "console" : false,
+            "visual" : false
+        },
+        "fix" : { 
+            "required" : false,
+            "description" : ""
+        },
+        "href" : { 
+            "jquery3x" : "",
+            "jquery2x" : ""
+        },
+        "status":"Nope"
+    },
+    {
+        "name" : "Form validation",
+        "error" : { 
+            "breaking_code_change" : false,
+            "console" : false,
+            "visual" : false
+        },
+        "fix" : { 
+            "required" : false,
+            "description" : ""
+        },
+        "href" : { 
+            "jquery3x" : "",
+            "jquery2x" : ""
+        },
+        "status":"Nope"
+    },
+    {
+        "name" : "Geomap",
+        "error" : { 
+            "breaking_code_change" : false,
+            "console" : false,
+            "visual" : false
+        },
+        "fix" : { 
+            "required" : false,
+            "description" : ""
+        },
+        "href" : { 
+            "jquery3x" : "",
+            "jquery2x" : ""
+        },
+        "status":"Nope"
+    },
+    {
+        "name" : "Lightbox",
+        "error" : { 
+            "breaking_code_change" : false,
+            "console" : false,
+            "visual" : false
+        },
+        "fix" : { 
+            "required" : false,
+            "description" : ""
+        },
+        "href" : { 
+            "jquery3x" : "",
+            "jquery2x" : ""
+        },
+        "status":"Nope"
+    },
+    {
+        "name" : "Menu",
+        "error" : { 
+            "breaking_code_change" : false,
+            "console" : false,
+            "visual" : false
+        },
+        "fix" : { 
+            "required" : false,
+            "description" : ""
+        },
+        "href" : { 
+            "jquery3x" : "",
+            "jquery2x" : ""
+        },
+        "status":"Nope"
+    },
+    {
+        "name" : "Multimedia Player",
+        "error" : { 
+            "breaking_code_change" : false,
+            "console" : false,
+            "visual" : false
+        },
+        "fix" : { 
+            "required" : false,
+            "description" : ""
+        },
+        "href" : { 
+            "jquery3x" : "",
+            "jquery2x" : ""
+        },
+        "status":"Nope"
+    },
+    {
+        "name" : "Overlay",
+        "error" : { 
+            "breaking_code_change" : false,
+            "console" : false,
+            "visual" : false
+        },
+        "fix" : { 
+            "required" : false,
+            "description" : ""
+        },
+        "href" : { 
+            "jquery3x" : "",
+            "jquery2x" : ""
+        },
+        "status":"Nope"
+    },
+    {
+        "name" : "Prettify",
+        "error" : { 
+            "breaking_code_change" : false,
+            "console" : false,
+            "visual" : false
+        },
+        "fix" : { 
+            "required" : false,
+            "description" : ""
+        },
+        "href" : { 
+            "jquery3x" : "",
+            "jquery2x" : ""
+        },
+        "status":"Nope"
+    },
+    {
+        "name" : "Session Timeout",
+        "error" : { 
+            "breaking_code_change" : false,
+            "console" : false,
+            "visual" : false
+        },
+        "fix" : { 
+            "required" : false,
+            "description" : ""
+        },
+        "href" : { 
+            "jquery3x" : "",
+            "jquery2x" : ""
+        },
+        "status":"Nope"
+    },
+    {
+        "name" : "Share widget",
+        "error" : { 
+            "breaking_code_change" : false,
+            "console" : false,
+            "visual" : false
+        },
+        "fix" : { 
+            "required" : false,
+            "description" : ""
+        },
+        "href" : { 
+            "jquery3x" : "",
+            "jquery2x" : ""
+        },
+        "status":"Nope"
+    },
+    {
+        "name" : "Tabbed Interface",
+        "error" : { 
+            "breaking_code_change" : false,
+            "console" : false,
+            "visual" : false
+        },
+        "fix" : { 
+            "required" : false,
+            "description" : ""
+        },
+        "href" : { 
+            "jquery3x" : "",
+            "jquery2x" : ""
+        },
+        "status":"Nope"
+    },
+    {
+        "name" : "Tables",
+        "error" : { 
+            "breaking_code_change" : false,
+            "console" : false,
+            "visual" : false
+        },
+        "fix" : { 
+            "required" : false,
+            "description" : ""
+        },
+        "href" : { 
+            "jquery3x" : "",
+            "jquery2x" : ""
+        },
+        "status":"Nope"
+    },
+    {
+        "name" : "Text highlighting",
+        "error" : { 
+            "breaking_code_change" : false,
+            "console" : false,
+            "visual" : false
+        },
+        "fix" : { 
+            "required" : false,
+            "description" : ""
+        },
+        "href" : { 
+            "jquery3x" : "",
+            "jquery2x" : ""
+        },
+        "status":"Nope"
+    },
+    {
+        "name" : "Toggle",
+        "error" : { 
+            "breaking_code_change" : false,
+            "console" : false,
+            "visual" : false
+        },
+        "fix" : { 
+            "required" : false,
+            "description" : ""
+        },
+        "href" : { 
+            "jquery3x" : "",
+            "jquery2x" : ""
+        },
+        "status":"Nope"
+    },
+    {
+        "name" : "Twitter embedded timeline",
+        "error" : { 
+            "breaking_code_change" : false,
+            "console" : false,
+            "visual" : false
+        },
+        "fix" : { 
+            "required" : false,
+            "description" : ""
+        },
+        "href" : { 
+            "jquery3x" : "",
+            "jquery2x" : ""
+        },
+        "status":"Nope"
+    },
+    {
+        "name" : "Twitter embedded timeline",
+        "error" : { 
+            "breaking_code_change" : false,
+            "console" : false,
+            "visual" : false
+        },
+        "fix" : { 
+            "required" : false,
+            "description" : ""
+        },
+        "href" : { 
+            "jquery3x" : "",
+            "jquery2x" : ""
+        },
+        "status":"Nope"
+    },
+    {
         "name" : "Zebra striping",
         "error" : { 
             "breaking_code_change" : false,
