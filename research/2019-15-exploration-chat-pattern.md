@@ -141,18 +141,13 @@ The thresholds are:
 On the accessibility side, the followings are potentially at risk: 
 
 * The submit button becomes disabled when the question change;
-* The “more than 5 seconds” animation on the bubble from the page load, and the non-ability to close the welcome message.
 * The wait time between questions, when the bot speaks, etc.
-
-### Minor issues
-
-* Three-dot waiting animation reacts weirdly on IE11.
 
 ### To think about
 
 * What to do with the print version (if applicable).
-* Change the plugin's name?
-* Add a "skip to conversion" in the skip navigation links.
+* Change the plugin's name? Currently: Chat Wizard
+* Add a "skip to chat wizard" in the skip navigation links.
 * FRENCH VERSION
 
 ### First Release

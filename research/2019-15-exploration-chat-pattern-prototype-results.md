@@ -21,13 +21,19 @@ Prototype 4: With Data.
 <script>
 // GET parameters	
 if(findGetParameter('describe')) {
-   $('.cntnt-here').append('<p style="font-size: 28px">You are: <strong>' + findGetParameter('describe') + '</strong></p>');
+	var describe = findGetParameter('describe').replace("-", " ");
+	describe = capitalizeFirstLetter(describe);
+   $('.cntnt-here').append('<p style="font-size: 28px">You are: <strong>' + describe + '</strong></p>');
 }
 if(findGetParameter('situation')) {
-   $('.cntnt-here').append('<p style="font-size: 28px">Your situation is: <strong>' + findGetParameter('situation') + '</strong></p>');
+	var situation = findGetParameter('situation').replace("-", " ");
+	situation = capitalizeFirstLetter(situation);
+   $('.cntnt-here').append('<p style="font-size: 28px">Your situation is: <strong>' + situation + '</strong></p>');
 }
 if(findGetParameter('goal')) {
-   $('.cntnt-here').append('<p style="font-size: 28px">Your goal is: <strong>' + findGetParameter('goal') + '</strong></p>');
+	var goal = findGetParameter('goal').replace("-", " ");
+	goal = capitalizeFirstLetter(goal);
+   $('.cntnt-here').append('<p style="font-size: 28px">Your goal is: <strong>' + goal + '</strong></p>');
 }
 function findGetParameter(parameterName) {
 	var result = null,
@@ -40,6 +46,9 @@ function findGetParameter(parameterName) {
 		  if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
 		});
 	return result;
+}
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }
 </script>
 
