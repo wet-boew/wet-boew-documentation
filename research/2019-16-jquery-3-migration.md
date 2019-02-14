@@ -98,7 +98,12 @@ To do
                 {% endif %}
             </td>
             <td>
-                            </td>
+                {% if plugin.fix.description is defined and plugin.fix.description is not empty %}
+                    {{ plugin.fix.description }}
+                {% else %}
+                    -
+                {% endif %}
+            </td>
             <td>{{ plugin.status }}</td>
         </tr>
         {% endfor %}
