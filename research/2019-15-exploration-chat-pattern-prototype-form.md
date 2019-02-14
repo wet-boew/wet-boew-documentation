@@ -122,7 +122,7 @@ modified: 2019-02-14
 	top: 5px;
 	right: 190px;
 	width: 220px;
-	font-size: 0.9em;
+	font-size: 0.85em;
 	background: #335075;
 	color: #fff;
 	padding: 5px 45px 5px 30px;
@@ -151,7 +151,7 @@ modified: 2019-02-14
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	background: #fff url('../assets/bot-default-avatar.png') center no-repeat;
+	background: #fff url('2019-assets/bot-default-avatar.png') center no-repeat;
 	border-radius: 50%;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.45);
 	text-indent: -9999px;
@@ -303,7 +303,7 @@ modified: 2019-02-14
 	width: 30px;
 	height: 30px;
 	background-color: #fff;
-	background-image: url('../assets/bot-default-avatar.png');
+	background-image: url('2019-assets/bot-default-avatar.png');
 	background-size: 25px;
 	background-repeat: no-repeat;
 	background-position: center;
