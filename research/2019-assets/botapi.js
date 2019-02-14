@@ -2,19 +2,22 @@
 var botapi = function() {
 	var datainput = {
 	header: {
+		formType: "dynamic",
 		action: "search", 
+		defaultDestination: "page1.html",
 		send: "Show results",
-		starttext: "Hi! I can help direct you to programs and services you might be interested in. Let\'s begin...",
-		endtext: "Thank you. I have built a page with results you may find resourceful.",
-		introtext: "First, if you are an employer or organization looking for funding, you can find relevant information on the <a href='pagex.html'>funding page</a>.",
+		startText: "Hi! I can help direct you to programs and services you might be interested in. Let\'s begin...",
+		endText: "Thank you. I have built a page with results you may find resourceful.",
+		introTextWizard: "First, if you are an employer or organization looking for funding, you can find relevant information on the <a href='pagex.html'>funding page</a>.",
+		introTextForm: "If you are an employer or organization looking for funding, you can find relevant information on the <a href='pagex.html'>funding page</a>.",
 		first: "q1"
 	}, 
 	questions: {
 		q1: 
 		{
 			queryName: "describe",
-			labelform: "What would you describe yourself as?",
-			labelwizard: "Are you:",
+			labelForm: "What would you describe yourself as?",
+			labelWizard: "Are you:",
 			input: "radio",
 			choices: [
 				{ 
@@ -33,8 +36,8 @@ var botapi = function() {
 		q2:
 		{
 			queryName: "situation",
-			labelform: "In what situation are you?",
-			labelwizard: "Great! And are you:",
+			labelForm: "In what situation are you?",
+			labelWizard: "Great! And are you:",
 			input: "radio",
 			choices: [
 				{ 
@@ -72,8 +75,8 @@ var botapi = function() {
 		q3:
 		{
 			queryName: "goal",
-			labelform: "What is your goal?",
-			labelwizard: "Awesome! Finally, would you like to:",
+			labelForm: "What is your goal?",
+			labelWizard: "Awesome! Finally, would you like to:",
 			input: "radio",
 			choices: [
 				{ 
