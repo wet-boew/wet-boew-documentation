@@ -1,0 +1,87 @@
+[
+    {
+        "name" : "Datalist",
+        "error" : { 
+            "breaking_code_change" : false,
+            "console" : false,
+            "visual" : false
+        },
+        "fix" : { 
+            "required" : false,
+            "description" : ""
+        },
+        "href" : { 
+            "jquery3x" : "",
+            "jquery2x" : ""
+        },
+        "status":"Nope"
+    },
+    {
+        "name" : "Details/summary",
+        "error" : { 
+            "breaking_code_change" : false,
+            "console" : false,
+            "visual" : false
+        },
+        "fix" : { 
+            "required" : false,
+            "description" : ""
+        },
+        "href" : { 
+            "jquery3x" : "",
+            "jquery2x" : ""
+        },
+        "status":"Nope"
+    },
+    {
+        "name" : "Input (date picker || slider control)",
+        "error" : { 
+            "breaking_code_change" : false,
+            "console" : false,
+            "visual" : false
+        },
+        "fix" : { 
+            "required" : false,
+            "description" : ""
+        },
+        "href" : { 
+            "jquery3x" : "",
+            "jquery2x" : ""
+        },
+        "status":"Nope"
+    },
+    {
+        "name" : "MathML",
+        "error" : { 
+            "breaking_code_change" : false,
+            "console" : false,
+            "visual" : false
+        },
+        "fix" : { 
+            "required" : false,
+            "description" : ""
+        },
+        "href" : { 
+            "jquery3x" : "",
+            "jquery2x" : ""
+        },
+        "status":"Nope"
+    },
+    {
+        "name" : "Meter",
+        "error" : { 
+            "breaking_code_change" : false,
+            "console" : false,
+            "visual" : false
+        },
+        "fix" : { 
+            "required" : false,
+            "description" : ""
+        },
+        "href" : { 
+            "jquery3x" : "",
+            "jquery2x" : ""
+        },
+        "status":"Nope"
+    }
+]

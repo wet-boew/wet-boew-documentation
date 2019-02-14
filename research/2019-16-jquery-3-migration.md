@@ -118,7 +118,63 @@ To do
 
 ### Polyfills 
 
-To do
+
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <th scope="col">Name</th>
+            <th scope="col">Breaking Change Code Present</th>
+            <th scope="col">jQuery Migrate Console Error</th>
+            <th scope="col">Visual Display Error</th>
+            <th scope="col">Fix Required</th>
+            <th scope="col">Description of Fix</th>
+            <th scope="col">Current Status</th>
+        </thead>
+        <tbody>
+            {% for polyfill in site.data.jquery3migration.polyfills %}
+            <tr>
+                <td><a href="{{ plugin.href.jquery3 }}">{{ polyfill.name }}</a></td>
+                <td>
+                    {% if polyfill.error.breaking_code_change == true %}
+                        Present
+                    {% else %}
+                        Nope
+                    {% endif %}
+                </td>
+                <td>
+                    {% if polyfill.error.console == true %}
+                        Present
+                    {% else %}
+                        Nope
+                    {% endif %}
+                </td>
+                <td>
+                    {% if polyfill.error.visual == true %}
+                        Present
+                    {% else %}
+                        Nope
+                    {% endif %}
+                </td>
+                <td>
+                    {% if polyfill.fix.required == true %}
+                        Yes
+                    {% else %}
+                        Nope
+                    {% endif %}
+                </td>
+                <td>
+                    {% if polyfill.fix.description == ""  %}
+                        -
+                    {% else %}
+                        {{ polyfill.fix.description }}
+                    {% endif %}
+                </td>
+                <td>{{ polyfill.status }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
 
 ### WET-BOEW JS Dependencies
 
