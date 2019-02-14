@@ -99,7 +99,7 @@ To do
             </td>
             <td>
                             </td>
-            <td>{{ plugin.fix.status }}</td>
+            <td>{{ plugin.status }}</td>
         </tr>
         {% endfor %}
     </tbody>
