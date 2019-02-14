@@ -3,9 +3,11 @@ var botapi = function() {
 	var datainput = {
 	header: {
 		formType: "dynamic",
-		action: "search", 
 		defaultDestination: "page1.html",
-		send: "Show results",
+		sendWizard: "Show results",
+		sendForm: "Search",
+		titleWizard: "I can help you find the information you need",
+		titleForm: "Help us help you",
 		startText: "Hi! I can help direct you to programs and services you might be interested in. Let\'s begin...",
 		endText: "Thank you. I have built a page with results you may find resourceful.",
 		introTextWizard: "First, if you are an employer or organization looking for funding, you can find relevant information on the <a href='pagex.html'>funding page</a>.",
