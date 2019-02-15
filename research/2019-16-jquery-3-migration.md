@@ -75,11 +75,7 @@ To do
             {% for plugin in site.data.jquery3migration.plugins %}
             <tr>
                 <td>
-                    {{ plugin.name }}
-                    <ul>
-                        <li><a href="{{ plugin.href.jquery3x }}"><span class="wb-inv">{{ plugin.name }} - </span>jQuery 3<span class="wb-inv"> version</span></a></li>
-                        <li><a href="{{ plugin.href.jquery2x }}"><span class="wb-inv">{{ plugin.name }} - </span>jQuery 2<span class="wb-inv"> version</span></a></li>
-                    </ul>
+                    <a href="{{ plugin.href.jquery3x }}">{{ plugin.name }}<span class="wb-inv"> - jQuery 3 version</span></a> (<a href="{{ plugin.href.jquery2x }}"><span class="wb-inv">{{ plugin.name }} - </span>jQuery 2<span class="wb-inv"> version</span></a>)
                 </td>
                 <td class="{% if plugin.error.breaking_code_change == true %}danger{% else %}success{% endif %}">
                     {% if plugin.error.breaking_code_change == true %}
