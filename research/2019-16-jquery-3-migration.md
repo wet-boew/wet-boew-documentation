@@ -75,7 +75,8 @@ To do
             {% for plugin in site.data.jquery3migration.plugins %}
             <tr>
                 <td>
-                    <a href="{{ plugin.href.jquery3x }}">{{ plugin.name }}<span class="wb-inv"> - jQuery 3 version</span></a> (<a href="{{ plugin.href.jquery2x }}"><span class="wb-inv">{{ plugin.name }} - </span>jQuery 2<span class="wb-inv"> version</span></a>)
+                    <a href="{{ plugin.href.jquery3x }}">{{ plugin.name }}<span class="wb-inv"> - jQuery 3 version</span></a> (<a href="{{ plugin.href.jquery2x }}"><span class="wb-inv">{{ plugin.name }} - jQuery </span>v2<span class="wb-inv"> version</span></a>)
+                    
                 </td>
                 <td class="{% if plugin.error.breaking_code_change == true %}danger{% else %}success{% endif %}">
                     {% if plugin.error.breaking_code_change == true %}
@@ -140,7 +141,9 @@ To do
         <tbody>
             {% for polyfill in site.data.jquery3migration.polyfills %}
             <tr>
-                <td><a href="{{ plugin.href.jquery3 }}">{{ polyfill.name }}</a></td>
+                <td>
+                    <a href="{{ polyfill.href.jquery3x }}">{{ polyfill.name }}<span class="wb-inv"> - jQuery 3 version</span></a> (<a href="{{ polyfill.href.jquery2x }}"><span class="wb-inv">{{ polyfill.name }} - jQuery </span>v2<span class="wb-inv"> version</span></a>)
+                </td>
                 <td class="{% if polyfill.error.breaking_code_change == true %}danger{% else %}success{% endif %}">
                     {% if polyfill.error.breaking_code_change == true %}
                         Present
