@@ -77,8 +77,8 @@ To do
                 <td>
                     {{ plugin.name }}
                     <ul>
-                        <li><a href="{{ plugin.href.jquery3x }}"><span class="wb-inv">{{ plugin.name }} - </span>jQuery 3<span class="wb-inv"> version</span></li>
-                        <li><a href="{{ plugin.href.jquery2x }}"><span class="wb-inv">{{ plugin.name }} - </span>jQuery 2<span class="wb-inv"> version</span></li>
+                        <li><a href="{{ plugin.href.jquery3x }}"><span class="wb-inv">{{ plugin.name }} - </span>jQuery 3<span class="wb-inv"> version</span></a></li>
+                        <li><a href="{{ plugin.href.jquery2x }}"><span class="wb-inv">{{ plugin.name }} - </span>jQuery 2<span class="wb-inv"> version</span></a></li>
                     </ul>
                 </td>
                 <td class="{% if plugin.error.breaking_code_change == true %}danger{% else %}success{% endif %}">
