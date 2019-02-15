@@ -13,8 +13,8 @@ WET 4.x will include an upgrade to jQuery 3.3.1. This page is being used to coor
 ## On this page 
 
 * [Good to know](#good-to-know)
+* [Source code changes](#source-code-changes)
 * [Test plan](#test-plan)
-* [To do](#to-do)
 * [Future discussion topics](#Future-discussion-topics)
 * [GitHub issue discussion](#GitHub-issue-discussion)
 * [Out of scope](#out-of-scope)
@@ -54,13 +54,39 @@ The following links are to the development site (latest build to my jquery3-migr
 * [GitHub jQuery 3 Fork](https://github.com/neilmispelaar/wet-boew/tree/jquery3-migration)
 
 
-### Test status
+### Status Descriptions
 
-Not Tested
-Currently Being Tested
-Errors Found
-Fixed
-No errors found
+<dl class="row">
+    <dt class="col-sm-3">
+        <span class="label label-danger">Not yet started</span>
+    </dt>
+    <dd class="col-sm-9">
+        <p>No build work has commenced for this template.</p>
+    </dd>
+    <dt class="col-sm-3">
+        <span class="label label-warning">On hold</span>
+    </dt>
+    <dd class="col-sm-9">
+        <p>Build work previously started, but for some reason has stopped.</p>
+    </dd>
+    <dt class="col-sm-3">
+        <span class="label label-primary">Build (in progress)</span>
+    </dt>
+    <dd class="col-sm-9">
+        <p>Building the template has started.</p>
+    </dd>
+    <dt class="col-sm-3">
+        <span class="label label-success">Build (complete)</span>
+    </dt>
+    <dd class="col-sm-9">
+        <p>Building the template has been completed.</p>
+    </dd>
+</dl>
+
+
+Open - Currently being worked on
+Closed - Fixed 
+Closed - No changes req'd
 
 ### WET Plugins
 
