@@ -193,7 +193,7 @@ modified: 2019-02-14
 		right: 0;
 	}
 	.chtwzrd-conversation {
-		max-height: 350px;
+		max-height: 300px;
 	}
 	.chtwzrd-noscroll {
 		overflow: hidden !important;
@@ -380,20 +380,20 @@ modified: 2019-02-14
 			<div class="row">
 				<section class="col-md-12">
 					<h2>Help us help you</h2>
-					<form class="mrgn-bttm-xl" data-wb-chtwzrd='{"sendWizard":"Show results", "first":"q1", "titleWizard":"I can help you find the information you need", "startText":"Hi! I can help direct you to programs and services you might be interested in. Let&apos;s begin...", "endText":"Thank you. I have built a page with results you may find resourceful."}' action="2019-15-exploration-chat-pattern-prototype-results.html">
-						<p data-chtwzrd-intro='First, if you are an employer or organization looking for funding, you can find relevant information on the <a href="2019-15-exploration-chat-pattern-prototype-results.html">funding page</a>'>If you are an employer or organization looking for funding, you can find relevant information on the <a href="2019-15-exploration-chat-pattern-prototype-results.html">funding page</a>.</p>
+					<form class="mrgn-bttm-xl" data-wb-chtwzrd='{"sendWizard":"Show results", "first":"q1", "titleWizard":"I can help you find the information you need", "startText":"Hi! I can help direct you to programs and services you might be interested in. Let&apos;s begin...", "endText":"Thank you. I have built a page with results you may find resourceful."}' action="page1.html">
+						<p data-chtwzrd-intro='First, if you are an employer or organization looking for funding, you can find relevant information on the <a href="pagex.html">funding page</a>.'>If you are an employer or organization looking for funding, you can find relevant information on the <a href="pagex.html">funding page</a>.</p>
 						<fieldset>
 							<legend data-chtwzrd-q='{"labelWizard":"Are you:", "qId":"q1", "input":"radio"}'>What would you describe yourself as?</legend>
 							<ul class="list-unstyled mrgn-tp-md">
 								<li>
-									<label data-chtwzrd-a='{"next":"q2", "url":"2019-15-exploration-chat-pattern-prototype-results.html"}'>
-										<input type="radio" value="young-canadian" name="describe" />
+									<label>
+										<input type="radio" value="young-canadian" name="describe" data-chtwzrd-a='{"next":"q2", "url":"page1.html"}' />
 										<span>a young Canadian</span>
 									</label>
 								</li>
 								<li>
-									<label data-chtwzrd-a='{"next":"none", "url":"2019-15-exploration-chat-pattern-prototype-results.html"}'>
-										<input type="radio" value="employer-organization-funding-support-youth" name="describe" />
+									<label>
+										<input type="radio" value="employer-organization-funding-support-youth" name="describe" data-chtwzrd-a='{"next":"none", "url":"page2.html"}' />
 										<span>an employer or organization looking for funding to support youth</span>
 									</label>
 								</li>
@@ -403,38 +403,38 @@ modified: 2019-02-14
 							<legend data-chtwzrd-q='{"labelWizard":"Great! And are you:", "qId":"q2", "input":"radio"}'>In what situation are you?</legend>
 							<ul class="list-unstyled mrgn-tp-md">
 								<li>
-									<label data-chtwzrd-a='{"next":"q3","url":"2019-15-exploration-chat-pattern-prototype-results.html"}'>
-										<input type="radio" value="high-school" name="situation" />
+									<label>
+										<input type="radio" value="high-school" name="situation" data-chtwzrd-a='{"next":"q3","url":"page1.html"}' />
 										<span>a high school student</span>
 									</label>
 								</li>
 								<li>
-									<label data-chtwzrd-a='{"next":"q3","url":"2019-15-exploration-chat-pattern-prototype-results.html"}'>
-										<input type="radio" value="cegep-student" name="situation" />
+									<label>
+										<input type="radio" value="cegep-student" name="situation" data-chtwzrd-a='{"next":"q3","url":"page1.html"}' />
 										<span>a CÉGEP student</span>
 									</label>
 								</li>
 								<li>
-									<label data-chtwzrd-a='{"next":"q3","url":"2019-15-exploration-chat-pattern-prototype-results.html"}'>
-										<input type="radio" value="post-secondary" name="situation" />
+									<label>
+										<input type="radio" value="post-secondary" name="situation" data-chtwzrd-a='{"next":"q3","url":"page1.html"}' />
 										<span>a post-secondary school student</span>
 									</label>
 								</li>
 								<li>
-									<label data-chtwzrd-a='{"next":"q3","url":"2019-15-exploration-chat-pattern-prototype-results.html"}'>
-										<input type="radio" value="ready-start-career" name="situation" />
+									<label>
+										<input type="radio" value="ready-start-career" name="situation" data-chtwzrd-a='{"next":"q3","url":"page1.html"}' />
 										<span>ready to start a career</span>
 									</label>
 								</li>
 								<li>
-									<label data-chtwzrd-a='{"next":"q3","url":"2019-15-exploration-chat-pattern-prototype-results.html"}'>
-										<input type="radio" value="not-school-not-working" name="situation" />
+									<label>
+										<input type="radio" value="not-school-not-working" name="situation" data-chtwzrd-a='{"next":"q3","url":"page1.html"}' />
 										<span>not in school and not working</span>
 									</label>
 								</li>
 								<li>
-									<label data-chtwzrd-a='{"next":"q3","url":"2019-15-exploration-chat-pattern-prototype-results.html"}'>
-										<input type="radio" value="none" name="situation" />
+									<label>
+										<input type="radio" value="none" name="situation" data-chtwzrd-a='{"next":"q3","url":"page1.html"}' />
 										<span>none of these</span>
 									</label>
 								</li>
@@ -444,44 +444,44 @@ modified: 2019-02-14
 							<legend data-chtwzrd-q='{"labelWizard":"Awesome! And would you like to:", "qId":"q3", "input":"radio"}'>What is your goal?</legend>
 							<ul class="list-unstyled mrgn-tp-md">
 								<li>
-									<label data-chtwzrd-a='{"next":"none", "url":"2019-15-exploration-chat-pattern-prototype-results.html"}'>
-										<input type="radio" value="get-job" name="goal" />
+									<label>
+										<input type="radio" value="get-job" name="goal" data-chtwzrd-a='{"next":"none", "url":"page3.html"}' />
 										<span>get a job</span>
 									</label>
 								</li>
 								<li>
-									<label data-chtwzrd-a='{"next":"none", "url":"2019-15-exploration-chat-pattern-prototype-results.html"}'>
-										<input type="radio" value="develop-skills" name="goal" />
+									<label>
+										<input type="radio" value="develop-skills" name="goal" data-chtwzrd-a='{"next":"none", "url":"page4.html"}' />
 										<span>develop skills</span>
 									</label>
 								</li>
 								<li>
-									<label data-chtwzrd-a='{"next":"none", "url":"2019-15-exploration-chat-pattern-prototype-results.html"}'>
-										<input type="radio" value="explore-careers" name="goal" />
+									<label>
+										<input type="radio" value="explore-careers" name="goal" data-chtwzrd-a='{"next":"none", "url":"page5.html"}' />
 										<span>explore careers</span>
 									</label>
 								</li>
 								<li>
-									<label data-chtwzrd-a='{"next":"none", "url":"2019-15-exploration-chat-pattern-prototype-results.html"}'>
-										<input type="radio" value="post-secondary-education" name="goal" />
+									<label>
+										<input type="radio" value="post-secondary-education" name="goal" data-chtwzrd-a='{"next":"none", "url":"page6.html"}' />
 										<span>attend post-secondary education</span>
 									</label>
 								</li>
 								<li>
-									<label data-chtwzrd-a='{"next":"none", "url":"2019-15-exploration-chat-pattern-prototype-results.html"}'>
-										<input type="radio" value="serve-community" name="goal" />
+									<label>
+										<input type="radio" value="serve-community" name="goal" data-chtwzrd-a='{"next":"none", "url":"page7.html"}' />
 										<span>serve your community</span>
 									</label>
 								</li>
 								<li>
-									<label data-chtwzrd-a='{"next":"none", "url":"2019-15-exploration-chat-pattern-prototype-results.html"}'>
-										<input type="radio" value="get-experience" name="goal" />
+									<label>
+										<input type="radio" value="get-experience" name="goal" data-chtwzrd-a='{"next":"none", "url":"page8.html"}' />
 										<span>get an experience</span>
 									</label>
 								</li>
 								<li>
-									<label data-chtwzrd-a='{"next":"none", "url":"2019-15-exploration-chat-pattern-prototype-results.html"}'>
-										<input type="radio" value="everything" name="goal" />
+									<label>
+										<input type="radio" value="everything" name="goal" data-chtwzrd-a='{"next":"none", "url":"page1.html"}' />
 										<span>see everything</span>
 									</label>
 								</li>
@@ -599,410 +599,418 @@ modified: 2019-02-14
 <!-- Chat wizard -->
 <script src="2019-assets/botapi.js"></script>
 <script type="text/javascript">
-// Create the data that is sent as an output + check if user has answered
-var datainput = {},
-	dataoutput = [],
-	hasAnswered = true, 
-	redirurl = "", 
-	first = "", 
-	intro = "", 
-	firstCopy = first,
-	introCopy = intro,
-	formType = "dynamic",
-	current = "";
-
-// If chat wizard initiator is found, then initiate
-// input possibilities are: JSON and Form
-var initiatechtwzrd = function($selector, input) {		
-	// initiate depending on the input type
-	if(input == 'form') {
-		datainput = translateToObject($selector);
-	} else {
-		// Stringify the JavaScipt Object Array
-		datainput = botapi();
-		var datajson = JSON.stringify(datainput);
-		datainput = JSON.parse(datajson);
-	}
-
-	// Set answer to true for the messages before the first question
-	firstCopy = first = datainput.header.first;
-	introCopy = intro = (datainput.header.introTextWizard ? datainput.header.introTextWizard : "");
-	current = datainput.questions[datainput.header.first];
-
-	// Build chat wizard
-	buildchtwzrd($selector, datainput.header.titleWizard);
-
-	// All the commonly used elements
-	var $basic = $(".chtwzrd-basic"), 
-		$bubble = $(".chtwzrd-bubble-wrap"), 
-		$container = $(".chtwzrd-container"), 
-		$form = $(".chtwzrd-body"),
-		$conversation = $(".chtwzrd-history"),
-		$minimize = $(".chtwzrd-min"),
-		$basiclink = $(".chtwzrd-basic-link"),
-		$focusedBeforechtwzrd = "",
-		$firstTabStop = $minimize,
-		$lastTabStop = $basiclink;
-
-	// Initiate basic form
-	initiateBasicForm($basic);
-
-	// Hide basic form on load, show chat bubble instead
-	$basic.hide();
-	$bubble.fadeIn('slow');
-
-	// Add link to chat from the basic form and add some white space over the footer for the bubble to sit
-	$("input[type=submit], button[type=submit]", $basic).before('<button class="btn btn-sm btn-default chtwzrd-link mrgn-rght-sm">Switch to help wizard</button>');
-	$("footer#wb-info").addClass("chtbt-mrgn");
-
-	if($('footer#wb-info').length) {
-		// Correct bubble positionning on load if necessary
-		$(document).ready(function(event) {
-			stickyUntilFooter($bubble);
-		});
-
-		// Correct bubble positionning on resize
-		$(window).on("resize", function(e) {
-			stickyUntilFooter($bubble);
-		});
-
-		// Monitor Y position for the bubble
-		$(window).on("scroll", function(e) {
-			stickyUntilFooter($bubble);
-		});
-
-		// Keep the bubble sticky while scrolling Y until user reaches the footer
-		var stickyUntilFooter = function($selector) {
-			// Equals to bubble default bottom value in CSS
-			var bottomY = 30;
-
-			if ($(window).scrollTop() >= $(document).outerHeight() - $(window).outerHeight() - $('footer#wb-info').outerHeight()) {
-				$selector.css({	
-					bottom: ($('footer#wb-info').outerHeight() - ($(document).outerHeight() - $(window).outerHeight() - $(window).scrollTop()) + bottomY)
-				});
+		// Create the data that is sent as an output + check if user has answered
+		var datainput = {},
+			dataoutput = [],
+			hasAnswered = true, 
+			redirurl = "", 
+			first = "", 
+			intro = "", 
+			firstCopy = first,
+			introCopy = intro,
+			formType = "dynamic",
+			sendButton = '<button class="btn btn-primary btn-block chtwzrd-send" type="button">Send<span class="wb-inv"> reply and next</span></button>',
+			current = "";
+			
+		// If chat wizard initiator is found, then initiate
+		// input possibilities are: JSON and Form
+		var initiatechtwzrd = function($selector, input) {		
+			// initiate depending on the input type
+			if(input == 'form') {
+				datainput = translateToObject($selector);
 			} else {
-				$selector.css({	
-					bottom: bottomY
+				// Stringify the JavaScipt Object Array
+				datainput = botapi();
+				var datajson = JSON.stringify(datainput);
+				datainput = JSON.parse(datajson);
+			}
+			
+			// Set answer to true for the messages before the first question
+			firstCopy = first = datainput.header.first;
+			introCopy = intro = (datainput.header.introTextWizard ? datainput.header.introTextWizard : "");
+			current = datainput.questions[datainput.header.first];
+				
+			// Build chat wizard
+			buildchtwzrd($selector, datainput.header.titleWizard);
+			
+			// All the commonly used elements
+			var $basic = $(".chtwzrd-basic"), 
+				$bubble = $(".chtwzrd-bubble-wrap"), 
+				$container = $(".chtwzrd-container"), 
+				$form = $(".chtwzrd-body"),
+				$conversation = $(".chtwzrd-history"),
+				$minimize = $(".chtwzrd-min"),
+				$basiclink = $(".chtwzrd-basic-link"),
+				$focusedBeforechtwzrd = "",
+				$firstTabStop = $minimize,
+				$lastTabStop = $basiclink;
+			
+			// Initiate basic form
+			initiateBasicForm($basic);
+			
+			// Hide basic form on load, show chat bubble instead
+			$basic.hide();
+			$bubble.fadeIn('slow');
+			
+			// Add link to chat from the basic form and add some white space over the footer for the bubble to sit
+			$("input[type=submit], button[type=submit]", $basic).before('<button class="btn btn-sm btn-default chtwzrd-link mrgn-rght-sm">Switch to help wizard</button>');
+			$("footer#wb-info").addClass("chtbt-mrgn");
+			
+			if($('footer#wb-info').length) {
+				// Correct bubble positionning on load, on resize an on Y scroll if necessary
+				$(window).on("load resize scroll", function(e) {
+					stickyUntilFooter($bubble);
 				});
-			}
-		}
-	}
 
-	// Close notification aside bubble
-	$(".chtwzrd-notif-close").on("click", function (event) {
-		event.preventDefault();
-		$(this).parent().hide();
-		$bubble.focus();
-	});
+				// Keep the bubble sticky while scrolling Y until user reaches the footer
+				var stickyUntilFooter = function($selector) {
+					// Equals to bubble default bottom value in CSS
+					var bottomY = 30;
 
-	// Show basic form and hide chat wizard
-	$basiclink.on("click", function(event) {
-		event.preventDefault();
-
-		$conversation.attr("aria-live", "");
-		resumeOnSwitch($basic, dataoutput, "form");
-
-		$container.stop().hide();
-		$basic.stop().show();
-		$("body").removeClass("chtwzrd-noscroll");
-	});
-
-	// Show chat wizard and hide basic form
-	$(".chtwzrd-link").on("click", function(event) {
-		event.preventDefault();
-
-		$basic.stop().hide();
-		$focusedBeforechtwzrd = $(':focus');
-
-		if($(this).hasClass(".chtwzrd-bubble")) {
-			resumeOnSwitch($container, dataoutput, "chat");
-		}
-
-		$(".chtwzrd-bubble", $bubble).removeClass("chtwzrd-trans-pulse");
-		$("p", $bubble).hide().removeClass("chtwzrd-trans-left");
-
-		$container.stop().show();
-		$bubble.stop().hide();
-		$(".chtwzrd-conversation").scrollTop($('.chtwzrd-history')[0].scrollHeight);
-		$("body").addClass("chtwzrd-noscroll");
-
-		if(hasAnswered) {
-			appendInteraction($form);
-		}
-	});
-
-	// Listen for and trap the keyboard
-	$container.on('keydown', function(event) {
-		// Check for TAB key press, cycle through
-		if(event.keyCode === 9) {
-			if(event.shiftKey) {
-				if($firstTabStop.is(':focus')) {
-					event.preventDefault();
-					$lastTabStop.focus();
-				}
-			} else {
-				if($lastTabStop.is(':focus')) {
-					event.preventDefault();
-					$firstTabStop.focus();
-				}
-			}
-		}
-		// ESCAPE, close
-		if (event.keyCode === 27) {
-			$(".chtwzrd-min").click();
-		}
-	});
-
-	// On button pressed: append answer, and on submit: redirect
-	$(".chtwzrd-send").on("click", function(event) {
-		if($(this).attr('type') != "submit") {
-			event.preventDefault();
-			var $choiceselected = $("input:checked", $form);
-			if(!$choiceselected.length) {
-				$choiceselected = $('input:first', $form);
-				$choiceselected.attr('checked', true);
-			}
-			appendReply($form, $choiceselected, false);
-		}
-	});
-
-	// Minimize chat wizard
-	$minimize.on("click", function(event) {
-		event.preventDefault();
-		$container.stop().hide();
-		$bubble.stop().show();
-		$("body").removeClass("chtwzrd-noscroll");
-
-		// Set focus back to element that had it before the modal was opened
-		$focusedBeforechtwzrd.focus();
-	});
-}
-
-// Iniate basic form
-var initiateBasicForm = function($selector) {
-	if(formType == "dynamic") {
-		var $allQuestions = $("fieldset", $selector),
-			$firstQuestion = $allQuestions.first();
-
-		$firstQuestion.addClass("chtwzrd-first-q");
-		$allQuestions.not(".chtwzrd-first-q").hide();
-
-		$allQuestions.each(function(){
-			var qParams = $(this).find("legend").data("chtwzrd-q");
-			$(this).attr("id", "chtwzrd-q-" + qParams.qId);
-		});
-	}
-
-	// On input change in the basic form
-	$("input", $selector).on("change", function(event) {
-		var aParams = $(this).parent().data("chtwzrd-a"),
-			value = $(this).val(),
-			name = $(this).attr("name"),
-			$fieldset = $(this).closest("fieldset"),
-			qParams = $("legend", $fieldset).data("chtwzrd-q");
-
-		// Should become: if(dataoutput.length && dataoutput[1].qNext != params.next) {}
-		dataoutput.push({qNext: aParams.next, queryName: name, queryParam: value});
-		$fieldset.nextAll("fieldset").hide();
-		if(aParams.next != "none") {
-			$("#chtwzrd-q-" + aParams.next).show();
-		}
-		if(typeof aParams.url !== null) {
-			$selector.attr("action", aParams.url);
-		}
-		console.log(dataoutput);
-	});
-}
-
-// Builds the chat wizard skeleton
-var buildchtwzrd = function($selector, title) {
-	$selector.after('<div class="chtwzrd-bubble-wrap"><p class="chtwzrd-trans-left">' + title + ' <a href="#" class="chtwzrd-notif-close" title="Close chat notification" role="button">×</a></p><a href="#chtwzrd-container" aria-controls="chtwzrd-container" class="chtwzrd-link chtwzrd-bubble chtwzrd-trans-pulse" role="button">Open chat wizard</a></div>');
-	$selector.next('.chtwzrd-bubble-wrap').after('<aside class="modal-content overlay-def chtwzrd-container"></aside>');
-
-	$container = $(".chtwzrd-container");
-	$container.append('<header class="modal-header chtwzrd-header"><h2 class="modal-title chtwzrd-title">' + title + '</h2><button type="button" class="chtwzrd-min" title="Minimize chat wizard"><span class="glyphicon glyphicon-chevron-down"></span></button></header>');
-	$container.append('<form class="modal-body chtwzrd-body" method="GET"></form>');
-
-	$form = $(".chtwzrd-body");
-	$form.append('<div class="chtwzrd-conversation mrgn-bttm-md"><section class="chtwzrd-history" aria-live="assertive"><h3 class="wb-inv">Conversation history</h3></section><section class="chtwzrd-reply"><h3 class="wb-inv">Reply</h3><div class="chtwzrd-inputs"></div><div class="chtwzrd-validate"><p>Please select an option to continue.</p></div></section></div>');
-	$form.append('<section class="chtwzrd-controls"><h3 class="wb-inv">Controls</h3><div class="row"><div class="col-xs-12"><button class="btn btn-primary btn-block chtwzrd-send" type="button">Send<span class="wb-inv"> reply and next</span></button></div></div><div class="row"><div class="col-xs-12 text-center mrgn-tp-sm"><a href="#chtwzrd-basic" class="btn btn-sm btn-link chtwzrd-basic-link" role="button">Switch to basic form</a></div></div></section>');
-
-	$(".chtwzrd-conversation").scrollTop($('.chtwzrd-history')[0].scrollHeight);
-}
-
-// Translate Data attributes from the form and returns a Javascript Object
-var translateToObject = function($selector) {
-	var $form = $("form", $selector),
-		$intro = $("p", $form).first();
-	var datacook = {};
-
-	datacook.header = $form.data('wb-chtwzrd');
-	datacook.header.defaultDestination = $form.attr("action");
-	datacook.header.titleForm = $form.prev("h2");
-	datacook.header.sendForm = ($("input[type=submit]", $form).length ? $("input[type=submit]", $form).val() : $("button[type=submit]", $form).html());
-
-	if($intro.length) {
-		datacook.header.introTextWizard = $intro.data('chtwzrd-intro');
-		datacook.header.introTextForm = $intro.html();
-	}
-	datacook.questions = {};
-
-	$("fieldset", $selector).each(function() {
-		var $question = $(this).find("legend"),
-			$choices = $(this).find("li"),
-			choices = [],
-			qdata = $question.data('chtwzrd-q'),
-			qName = "",
-			questionID = qdata.qId;
-
-		$choices.each(function(index) {
-			var $choice = $(this).find("label"),
-				$input = $("input", $choice),
-				name = $input.attr("name"),
-				textval = $input.next().html();
-
-			if(!index) {
-				qName = name;
-			}
-			var choice = $choice.data('chtwzrd-a');
-			choice.content = textval;
-			choice.queryParam = $input.val();
-			choices.push(choice);
-		});
-		datacook.questions[questionID] = qdata;
-		datacook.questions[questionID].queryName = qName;
-		datacook.questions[questionID].labelForm = $question.html();
-		datacook.questions[questionID].choices = choices;
-	});
-	return datacook;
-}
-
-// Resume to question X, by switching between the form and the chat wizard
-var resumeOnSwitch = function($selector, data, target) {
-	if($.isEmptyObject(data)){
-		return;
-	}/*
-	// Redraw Chat and resume to X
-	if(target == "chat") {
-		redraw = true;
-		first = firstCopy;
-		intro = introCopy;
-
-		//Foreach data
-
-
-	} 
-	// Redraw Form and resume to X
-	else {
-
-	}*/
-}
-
-// Adds new question from bot and add inputs accordingly
-var appendInteraction = function($selector, redraw) {
-	var $dropspot = $(".chtwzrd-history", $selector),
-		$inputsSpot = $(".chtwzrd-inputs", $selector),
-		$chtwzrdConvo = $(".chtwzrd-conversation"),
-		questionnaire = datainput.header,
-		$btnnext = $(".chtwzrd-send", $selector),
-		markup = (first != "" || intro != "" ? "p" : "h4"),
-		dotsTime = (redraw ? 0 : 1750);
-
-	hasAnswered = false;
-	$btnnext.prop('disabled', true);
-	$inputsSpot.html('');
-
-	// Faking delay and type time
-	if(!redraw) {
-		waitingBot($dropspot, markup);
-	}
-
-	setTimeout(function () {
-		// Show greetings on first occurence
-		if(first != "") {
-			$(".chtwzrd-question", $dropspot).last().html(questionnaire.startText);
-			first = "";
-			appendInteraction($selector, redraw);
-		} 
-		// If intro is provided, show it before the first question
-		else if(intro != "") { 
-			$(".chtwzrd-question", $dropspot).last().html(intro);
-			intro = "";
-			appendInteraction($selector, redraw);
-		}
-		// If it is the last question, then change the button to submit the form
-		else if(current == "last") {
-			var paramStr = "";
-
-			for(var i=0; i<dataoutput.length; i++) {
-				paramStr += dataoutput[i].queryName + "=" + dataoutput[i].queryParam + '&';
-			}
-			paramStr = paramStr.slice(0, -1);
-			$(".chtwzrd-question", $dropspot).last().html(questionnaire.endText);
-			$btnnext.attr("type", "submit").prop('disabled', false).html(questionnaire.sendWizard + '&nbsp;<span class="glyphicon glyphicon-chevron-right small"></span>');
-			$selector.attr('action', redirurl + '?' + paramStr);
-		} 
-		// On every other occurences, append the question and its possible answers
-		else {
-			$(".chtwzrd-question", $dropspot).last().html(current.labelWizard);
-			if(!redraw) {
-				setTimeout(function () {
-					$inputsSpot.append('<fieldset><legend class="wb-inv">' + current.labelWizard + '</legend><div class="row"><div class="col-xs-12"><ul class="list-inline mrgn-tp-sm chtwzrd-choices"></ul></div></div></fieldset>');
-					for(var i=0; i<current.choices.length; i++) {
-						iQuestion = current.choices[i];	
-						$(".chtwzrd-choices", $inputsSpot).append('<li><label><input type="' + current.input + '" value="' + iQuestion.queryParam + '" name="' + current.queryName + '" data-chtwzrd-next="' + iQuestion.next + '"' + (typeof iQuestion.url === "undefined" ? '' : 'data-chtwzrd-url="' + iQuestion.url + '"') + ' /> <span>' + iQuestion.content + '</span></label></li>');
-					}
-					if($(".chtwzrd-reply").outerHeight() > ($chtwzrdConvo.innerHeight() - $(".chtwzrd-question:last")[0].scrollHeight)) {
-						$chtwzrdConvo.stop().animate({scrollTop:$conversation.outerHeight() - $(".chtwzrd-question:last")[0].scrollHeight - 30}, 500, 'swing');
+					if ($(window).scrollTop() >= $(document).outerHeight() - $(window).outerHeight() - $('footer#wb-info').outerHeight()) {
+						$selector.css({	
+							bottom: ($('footer#wb-info').outerHeight() - ($(document).outerHeight() - $(window).outerHeight() - $(window).scrollTop()) + bottomY)
+						});
 					} else {
-						$chtwzrdConvo.scrollTop($('.chtwzrd-history')[0].scrollHeight);
+						$selector.css({	
+							bottom: bottomY
+						});
 					}
-					$btnnext.prop('disabled', false);
-				}, 750);
+				}
+			}
+			
+			// Close notification aside bubble
+			$(".chtwzrd-notif-close").on("click", function (event) {
+				event.preventDefault();
+				$(this).parent().hide();
+				$bubble.focus();
+			});
+
+			// Show basic form and hide chat wizard
+			$basiclink.on("click", function(event) {
+				event.preventDefault();
+				
+				$conversation.attr("aria-live", "");
+				//resumeOnSwitch($basic, dataoutput, "form");
+				
+				$container.stop().hide();
+				$basic.stop().show();
+				$("body").removeClass("chtwzrd-noscroll");
+			});
+
+			// Show chat wizard and hide basic form
+			$(".chtwzrd-link").on("click", function(event) {
+				event.preventDefault();
+				
+				$basic.stop().hide();
+				$focusedBeforechtwzrd = $(':focus');
+				
+				if(!$(this).hasClass("chtwzrd-bubble")) {
+					resumeOnSwitch($container, dataoutput, "chat");
+				}
+				
+				$(".chtwzrd-bubble", $bubble).removeClass("chtwzrd-trans-pulse");
+				$("p", $bubble).hide().removeClass("chtwzrd-trans-left");
+
+				$container.stop().show();
+				$bubble.stop().hide();
+
+				$(".chtwzrd-conversation").scrollTop($('.chtwzrd-history')[0].scrollHeight);
+				$("body").addClass("chtwzrd-noscroll");
+				
+				if(hasAnswered) {
+					appendInteraction($form);
+				}
+			});
+			
+			// Listen for and trap the keyboard
+			$container.on('keydown', function(event) {
+				// Check for TAB key press, cycle through
+				if(event.keyCode === 9) {
+					if(event.shiftKey) {
+						if($firstTabStop.is(':focus')) {
+							event.preventDefault();
+							$lastTabStop.focus();
+						}
+					} else {
+						if($lastTabStop.is(':focus')) {
+							event.preventDefault();
+							$firstTabStop.focus();
+						}
+					}
+				}
+				// ESCAPE, close
+				if (event.keyCode === 27) {
+					$(".chtwzrd-min").click();
+				}
+			});
+			
+			// On chat button pressed: append answer, and on submit: redirect
+			$(".chtwzrd-send").on("click", function(event) {
+				if($(this).attr('type') != "submit") {
+					event.preventDefault();
+					var $choiceselected = $("input:checked", $form);
+					if(!$choiceselected.length) {
+						$choiceselected = $('input:first', $form);
+						$choiceselected.attr('checked', true);
+					}
+					appendReply($form, buildAnswerObj($choiceselected), false);
+				}
+			});
+
+			// Minimize chat wizard
+			$minimize.on("click", function(event) {
+				event.preventDefault();
+				$container.stop().hide();
+				$bubble.stop().show();
+				$("body").removeClass("chtwzrd-noscroll");
+				
+				// Set focus back to element that had it before the modal was opened
+  				$focusedBeforechtwzrd.focus();
+			});
+		}
+		
+		// Iniate basic form
+		var initiateBasicForm = function($selector) {
+			if(formType == "dynamic") {
+				var $allQuestions = $("fieldset", $selector),
+					$firstQuestion = $allQuestions.first();
+
+				$firstQuestion.addClass("chtwzrd-first-q");
+				$allQuestions.not(".chtwzrd-first-q").hide();
+
+				$allQuestions.each(function(){
+					var qParams = $(this).find("legend").data("chtwzrd-q");
+					$(this).attr("id", "chtwzrd-q-" + qParams.qId);
+				});
+			}
+			
+			// On input change in the basic form
+			$("input", $selector).on("change", function(event) {
+				var answerData = buildAnswerObj($(this)),
+					$fieldset = $(this).closest("fieldset");
+				
+				// Should become: if(dataoutput.length && dataoutput[1].qNext != params.next) {}
+				dataoutput.push(answerData);
+				$fieldset.nextAll("fieldset").hide();
+				if(answerData.qNext != "none") {
+					$("#chtwzrd-q-" + answerData.qNext).show();
+				}
+				if(typeof answerData.url !== null) {
+					$selector.attr("action", answerData.url);
+				}
+				console.log(dataoutput);
+			});
+		}
+			
+		// Builds the chat wizard skeleton
+		var buildchtwzrd = function($selector, title) {
+			$selector.after('<div class="chtwzrd-bubble-wrap"><p class="chtwzrd-trans-left">' + title + ' <a href="#" class="chtwzrd-notif-close" title="Close chat notification" role="button">×</a></p><a href="#chtwzrd-container" aria-controls="chtwzrd-container" class="chtwzrd-link chtwzrd-bubble chtwzrd-trans-pulse" role="button">Open chat wizard</a></div>');
+			$selector.next('.chtwzrd-bubble-wrap').after('<aside class="modal-content overlay-def chtwzrd-container"></aside>');
+
+			$container = $(".chtwzrd-container");
+			$container.append('<header class="modal-header chtwzrd-header"><h2 class="modal-title chtwzrd-title">' + title + '</h2><button type="button" class="chtwzrd-min" title="Minimize chat wizard"><span class="glyphicon glyphicon-chevron-down"></span></button></header>');
+			$container.append('<form class="modal-body chtwzrd-body" method="GET"></form>');
+
+			$form = $(".chtwzrd-body");
+			$form.append('<div class="chtwzrd-conversation mrgn-bttm-md"><section class="chtwzrd-history" aria-live="assertive"><h3 class="wb-inv">Conversation history</h3></section><section class="chtwzrd-reply"><h3 class="wb-inv">Reply</h3><div class="chtwzrd-inputs"></div><div class="chtwzrd-validate"><p>Please select an option to continue.</p></div></section></div>');
+			$form.append('<section class="chtwzrd-controls"><h3 class="wb-inv">Controls</h3><div class="row"><div class="col-xs-12">' + sendButton + '</div></div><div class="row"><div class="col-xs-12 text-center mrgn-tp-sm"><a href="#chtwzrd-basic" class="btn btn-sm btn-link chtwzrd-basic-link" role="button">Switch to basic form</a></div></div></section>');
+
+			$(".chtwzrd-conversation").scrollTop($('.chtwzrd-history')[0].scrollHeight);
+		}
+			
+		// Translate Data attributes from the form and returns a Javascript Object
+		var translateToObject = function($selector) {
+			var $form = $("form", $selector),
+				$intro = $("p", $form).first();
+			var datacook = {};
+			
+			datacook.header = $form.data('wb-chtwzrd');
+			datacook.header.defaultDestination = $form.attr("action");
+			datacook.header.titleForm = $form.prev("h2");
+			datacook.header.sendForm = ($("input[type=submit]", $form).length ? $("input[type=submit]", $form).val() : $("button[type=submit]", $form).html());
+			
+			if($intro.length) {
+				datacook.header.introTextWizard = $intro.data('chtwzrd-intro');
+				datacook.header.introTextForm = $intro.html();
+			}
+			datacook.questions = {};
+				
+			$("fieldset", $selector).each(function() {
+				var $question = $(this).find("legend"),
+					$choices = $(this).find("li"),
+					choices = [],
+					qdata = $question.data('chtwzrd-q'),
+					qName = "",
+					questionID = qdata.qId;
+				
+				$choices.each(function(index) {
+					var $choice = $(this).find("input"),
+						name = $choice.attr("name"),
+						textval = $choice.next().html();
+					
+					if(!index) {
+						qName = name;
+					}
+					var choice = $choice.data('chtwzrd-a');
+					choice.content = textval;
+					choice.queryParam = $choice.val();
+					choices.push(choice);
+				});
+				datacook.questions[questionID] = qdata;
+				datacook.questions[questionID].queryName = qName;
+				datacook.questions[questionID].labelForm = $question.html();
+				datacook.questions[questionID].choices = choices;
+			});
+			return datacook;
+		}
+		
+		// Resume to question X, by switching between the form and the chat wizard
+		var resumeOnSwitch = function($selector, data, toggle) {
+			if(!data.length){
+				return;
+			}
+			// Redraw Chat and resume to X
+			if(toggle == "chat") {
+				var $conversation = $(".chtwzrd-conversation", $selector);
+				
+				redraw = true;
+				current = first = firstCopy;
+				intro = introCopy;
+				redirurl = "";
+				
+				$conversation.html("");
+				$(".chtwzrd-send", $selector).replaceWith(sendButton);
+				$.each(data, function(index){
+					appendInteraction($form, true);
+					appendReply($form, this, true);
+				});
+				$conversation.attr("aria-live", "assertive");
+			} 
+			// Redraw Form and resume to X
+			/*else {
+				
+			}*/
+		}
+
+		// Adds new question from bot and add inputs accordingly
+		var appendInteraction = function($selector, redraw) {
+			var $dropspot = $(".chtwzrd-history", $selector),
+				$inputsSpot = $(".chtwzrd-inputs", $selector),
+				$chtwzrdConvo = $(".chtwzrd-conversation"),
+				questionnaire = datainput.header,
+				$btnnext = $(".chtwzrd-send", $selector),
+				markup = (first != "" || intro != "" ? "p" : "h4"),
+				dotsTime = (redraw ? 0 : 1750);
+			
+			hasAnswered = false;
+			$btnnext.prop('disabled', true);
+			$inputsSpot.html('');
+			
+			// Faking delay and type time
+			if(!redraw) {
+				waitingBot($dropspot, markup);
+			}
+
+			setTimeout(function () {
+				// Show greetings on first occurence
+				if(first != "") {
+					$(".chtwzrd-question", $dropspot).last().html(questionnaire.startText);
+					first = "";
+					appendInteraction($selector, redraw);
+				} 
+				// If intro is provided, show it before the first question
+				else if(intro != "") { 
+					$(".chtwzrd-question", $dropspot).last().html(intro);
+					intro = "";
+					appendInteraction($selector, redraw);
+				}
+				// If it is the last question, then change the button to submit the form
+				else if(current == "last") {
+					var paramStr = "";
+					
+					for(var i=0; i<dataoutput.length; i++) {
+						paramStr += dataoutput[i].queryName + "=" + dataoutput[i].queryParam + '&';
+					}
+					paramStr = paramStr.slice(0, -1);
+					$(".chtwzrd-question", $dropspot).last().html(questionnaire.endText);
+					$btnnext.attr("type", "submit").prop('disabled', false).html(questionnaire.sendWizard + '&nbsp;<span class="glyphicon glyphicon-chevron-right small"></span>');
+					$selector.attr('action', redirurl + '?' + paramStr);
+				} 
+				// On every other occurences, append the question and its possible answers
+				else {
+					$(".chtwzrd-question", $dropspot).last().html(current.labelWizard);
+					if(!redraw) {
+						setTimeout(function () {
+							$inputsSpot.append('<fieldset><legend class="wb-inv">' + current.labelWizard + '</legend><div class="row"><div class="col-xs-12"><ul class="list-inline mrgn-tp-sm chtwzrd-choices"></ul></div></div></fieldset>');
+							for(var i=0; i<current.choices.length; i++) {
+								iQuestion = current.choices[i];	
+								$(".chtwzrd-choices", $inputsSpot).append('<li><label><input type="' + current.input + '" value="' + iQuestion.queryParam + '" name="' + current.queryName + '" data-chtwzrd-a=\'{"next":"' + iQuestion.next + '"' + (typeof iQuestion.url === "undefined" ? '' : ', "url":"' + iQuestion.url + '"') + '}\' /> <span>' + iQuestion.content + '</span></label></li>');
+							}
+							if($(".chtwzrd-reply").outerHeight() > ($chtwzrdConvo.innerHeight() - $(".chtwzrd-question:last")[0].scrollHeight)) {
+								$chtwzrdConvo.stop().animate({scrollTop:$conversation.outerHeight() - $(".chtwzrd-question:last")[0].scrollHeight - 30}, 500, 'swing');
+							} else {
+								$chtwzrdConvo.scrollTop($('.chtwzrd-history')[0].scrollHeight);
+							}
+							$btnnext.prop('disabled', false);
+						}, 750);
+					}
+				}
+				$chtwzrdConvo.scrollTop($('.chtwzrd-history')[0].scrollHeight);
+			}, dotsTime);
+		}
+			
+		// Waiting for the bot to type animation
+		var waitingBot = function($selector, markup) {
+			$selector.append('<div class="row mrgn-bttm-sm"><div class="col-xs-9"><' + markup + ' class="mrgn-tp-0 mrgn-bttm-sm"><span class="chtwzrd-avatar"></span><span class="chtwzrd-question"><span class="chtwzrd-loader" aria-label="Waiting for message"><span class="chtwzrd-loader-dot dot1"></span><span class="chtwzrd-loader-dot dot2"></span><span class="chtwzrd-loader-dot dot3"></span></span></span></' + markup + '></div></div>');
+		}
+		
+		// Add reply from human and calls next question
+		var appendReply = function($selector, answerObj, redraw) {
+			var randID = Math.floor((Math.random() * 1000000) + 1000);
+			$dropspot = $(".chtwzrd-history", $selector);
+			$dropspot.append('<div class="row mrgn-bttm-md" id="chtwzrd-reply-' + randID + '"><div class="col-xs-9 col-xs-offset-3"><div class="chtwzrd-message text-right pull-right"><p class="mrgn-bttm-0"><span class="wb-inv">You have answered: </span>' + answerObj.value + '</p></div></div></div>');
+			hasAnswered = true;
+			redirurl = answerObj.url; 
+			
+			if(!redraw) {
+				$(".chtwzrd-send", $selector).prop('disabled', true);
+				dataoutput.push(answerObj);
+				$form.append('<input type="hidden" name="' + answerObj.queryName + '" value="' + answerObj.queryParam + '" />');
+				
+				setTimeout(function () {
+					var next = answerObj.qNext;
+					if(next == "none") {
+						current = "last";
+					} else {
+						current = datainput.questions[next];
+					}
+					$(".chtwzrd-inputs", $selector).remove("fieldset");
+					$("#chtwzrd-reply-" + randID, $dropspot).focus();
+					appendInteraction($selector, redraw);
+				}, 500);
 			}
 		}
-		$chtwzrdConvo.scrollTop($('.chtwzrd-history')[0].scrollHeight);
-	}, dotsTime);
-}
-
-// Waiting for the bot to type animation
-var waitingBot = function($selector, markup) {
-	$selector.append('<div class="row mrgn-bttm-sm"><div class="col-xs-9"><' + markup + ' class="mrgn-tp-0 mrgn-bttm-sm"><span class="chtwzrd-avatar"></span><span class="chtwzrd-question"><span class="chtwzrd-loader" aria-label="Waiting for message"><span class="chtwzrd-loader-dot dot1"></span><span class="chtwzrd-loader-dot dot2"></span><span class="chtwzrd-loader-dot dot3"></span></span></span></' + markup + '></div></div>');
-}
-
-// Add reply from human and calls next question
-var appendReply = function($selector, $answer, redraw) {
-	var randID = Math.floor((Math.random() * 1000000) + 1000);
-	$dropspot = $(".chtwzrd-history", $selector);
-	$dropspot.append('<div class="row mrgn-bttm-md" id="chtwzrd-reply-' + randID + '"><div class="col-xs-9 col-xs-offset-3"><div class="chtwzrd-message text-right pull-right"><p class="mrgn-bttm-0"><span class="wb-inv">You have answered: </span>' + $answer.next("span").html() + '</p></div></div></div>');
-	hasAnswered = true;
-
-	if(!redraw) {
-		$(".chtwzrd-send", $selector).prop('disabled', true);
-		dataoutput.push({qNext: $answer.data("chtwzrd-next"), queryName: $answer.attr("name"), queryParam: $answer.val()});
-		$form.append('<input type="hidden" name="' + $answer.attr("name") + '" value="' + $answer.val() + '" />');
-
-		setTimeout(function () {
-			var next = $answer.data('chtwzrd-next');
-			if(next == "none") {
-				current = "last";
-				redirurl = $answer.data('chtwzrd-url');
-			} else {
-				current = datainput.questions[next];
-			}
-			$(".chtwzrd-inputs", $selector).remove("fieldset");
-			$("#chtwzrd-reply-" + randID, $dropspot).focus();
-			appendInteraction($selector, redraw);
-		}, 500);
-	}
-}
-
-// Initiator here, let's go!
-if($(".wb-chtwzrd").length) {
-	$chtwzrd = $(".wb-chtwzrd");
-	initiatechtwzrd($chtwzrd, 'form');
-}
-</script>
+		
+		// Builds an object that is suitable for dataoutput, and returns it
+		var buildAnswerObj = function($selector) {
+			// The way of taking text value for input is weak at this moment, needs improvement
+			var answerData = $selector.data("chtwzrd-a");
+			return {
+				qNext: answerData.next, 
+				queryName: $selector.attr("name"), 
+				queryParam: $selector.val(), 
+				url: answerData.url, 
+				value: $selector.next().html()
+			};
+		}
+			
+		// Initiator here, let's go!
+		if($(".wb-chtwzrd").length) {
+			$chtwzrd = $(".wb-chtwzrd");
+			initiatechtwzrd($chtwzrd, 'form');
+		}
+		</script>
 
 {% endraw %}
 
