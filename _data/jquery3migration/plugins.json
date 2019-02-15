@@ -1,14 +1,9 @@
 [
     {
         "name" : "Calendar of Events",
-        "error" : { 
-            "breaking_code_change" : false,
-            "console" : false,
-            "visual" : false
-        },
-        "fix" : { 
-            "required" : false,
-            "description" : ""
+        "migrate": {
+            "errors" : true,
+            "descriptions" : []
         },
         "href" : { 
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/cal-events/cal-events-en.html",
@@ -18,14 +13,9 @@
     },
     {
         "name" : "Charts and graphs",
-        "error" : { 
-            "breaking_code_change" : false,
-            "console" : false,
-            "visual" : false
-        },
-        "fix" : { 
-            "required" : false,
-            "description" : ""
+        "migrate": {
+            "errors" : true,
+            "descriptions" : []
         },
         "href" : { 
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/charts/custom-en.html",
@@ -35,14 +25,9 @@
     },
     {
         "name" : "Collapsible alerts",
-        "error" : { 
-            "breaking_code_change" : false,
-            "console" : false,
-            "visual" : false
-        },
-        "fix" : { 
-            "required" : false,
-            "description" : ""
+        "migrate": {
+            "errors" : true,
+            "descriptions" : []
         },
         "href" : { 
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/collapsible-alerts/collapsible-alerts-en.html",
@@ -52,14 +37,13 @@
     },
     {
         "name" : "Country Content",
-        "error" : { 
-            "breaking_code_change" : false,
-            "console" : false,
-            "visual" : false
-        },
-        "fix" : { 
-            "required" : false,
-            "description" : ""
+        "migrate": {
+            "errors" : true,
+            "descriptions" : [
+                "whoops",
+                "no idea",
+                "seriously"
+            ]
         },
         "href" : { 
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/country-content/country-content-en.html",
@@ -69,14 +53,9 @@
     },
     {
         "name" : "Data Ajax",
-        "error" : { 
-            "breaking_code_change" : false,
-            "console" : false,
-            "visual" : false
-        },
-        "fix" : { 
-            "required" : false,
-            "description" : ""
+        "migrate": {
+            "errors" : true,
+            "descriptions" : []
         },
         "href" : { 
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/data-ajax/data-ajax-en.html",

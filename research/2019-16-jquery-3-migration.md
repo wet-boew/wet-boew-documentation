@@ -64,53 +64,32 @@ To do
     <table class="table table-hover">
         <thead>
             <th scope="col">Name</th>
-            <th scope="col">Breaking Change Code Present</th>
             <th scope="col">jQuery Migrate Console Error</th>
-            <th scope="col">Visual Display Error</th>
-            <th scope="col">Fix Required</th>
-            <th scope="col">Description of Fix</th>
+            <th scope="col">Description of Issues</th>
             <th scope="col">Current Status</th>
         </thead>
         <tbody>
             {% for plugin in site.data.jquery3migration.plugins %}
             <tr>
                 <td>
-                    <a href="{{ plugin.href.jquery3x }}">{{ plugin.name }}<span class="wb-inv"> - jQuery 3 version</span></a> (<a href="{{ plugin.href.jquery2x }}"><span class="wb-inv">{{ plugin.name }} - jQuery </span>v2<span class="wb-inv"> version</span></a>)
-                    
+                    <a href="{{ plugin.href.jquery3x }}">{{ plugin.name }}<span class="wb-inv"> - jQuery 3 version</span></a><br />(<a href="{{ plugin.href.jquery2x }}"><span class="wb-inv">{{ plugin.name }} - jQuery </span>v2<span class="wb-inv"> version</span></a>)
                 </td>
-                <td class="{% if plugin.error.breaking_code_change == true %}danger{% else %}success{% endif %}">
-                    {% if plugin.error.breaking_code_change == true %}
-                        Present
-                    {% else %}
-                        Nope
-                    {% endif %}
-                </td>
-                <td class="{% if plugin.error.console == true %}danger{% else %}success{% endif %}">
-                    {% if plugin.error.console == true %}
-                        Present
-                    {% else %}
-                        Nope
-                    {% endif %}
-                </td>
-                <td class="{% if plugin.error.visual == true %}danger{% else %}success{% endif %}">
-                    {% if plugin.error.visual == true %}
-                        Present
-                    {% else %}
-                        Nope
-                    {% endif %}
-                </td>
-                <td class="{% if plugin.fix.required == true %}danger{% else %}success{% endif %}">
-                    {% if plugin.fix.required == true %}
-                        Yes
+                <td class="{% if plugin.migrate.error == true %}danger{% else %}success{% endif %}">
+                    {% if plugin.migrate.error == true %}
+                        Error
                     {% else %}
                         Nope
                     {% endif %}
                 </td>
                 <td>
-                    {% if plugin.fix.description == ""  %}
-                        -
+                    {% if plugin.migrate.error.descriptions.size > 0 %}
+                        <ul class="list-unstyled">
+                        {% for description in plugin.migrate.error.descriptions %}
+                            <li>{{ description }}</li>
+                        {% endfor %}
+                        </ul>
                     {% else %}
-                        {{ plugin.fix.description }}
+                        No error descriptions
                     {% endif %}
                 </td>
                 <td>{{ plugin.status }}</td>
