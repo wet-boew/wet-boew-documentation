@@ -410,13 +410,13 @@
     {
         "name" : "Tables",
         "error" : { 
-            "breaking_code_change" : false,
-            "console" : false,
+            "breaking_code_change" : true,
+            "console" : true,
             "visual" : false
         },
         "fix" : { 
-            "required" : false,
-            "description" : ""
+            "required" : true,
+            "description" : "JQMIGRATE: jQuery.fn.blur() event shorthand is deprecated"
         },
         "href" : { 
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/tables/tables-en.html",
