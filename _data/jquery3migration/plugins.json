@@ -3,7 +3,9 @@
         "name" : "Calendar of Events",
         "migrate": {
             "errors" : true,
-            "descriptions" : []
+            "descriptions" : [
+                "JQMIGRATE: jQuery.fn.removeAttr no longer sets boolean properties: disabled"
+            ]
         },
         "href" : { 
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/cal-events/cal-events-en.html",

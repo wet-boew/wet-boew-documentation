@@ -82,9 +82,9 @@ To do
                     {% endif %}
                 </td>
                 <td>
-                    {% if plugin.migrate.error.descriptions.size > 0 %}
+                    {% if plugin.migrate.descriptions.size > 0 %}
                         <ul class="list-unstyled">
-                        {% for description in plugin.migrate.error.descriptions %}
+                        {% for description in plugin.migrate.descriptions %}
                             <li>{{ description }}</li>
                         {% endfor %}
                         </ul>
