@@ -134,7 +134,7 @@ To do
             {% for polyfill in site.data.jquery3migration.polyfills %}
             <tr>
                 <td><a href="{{ plugin.href.jquery3 }}">{{ polyfill.name }}</a></td>
-                <td>
+                <td class="{% if polyfill.error.breaking_code_change == true %}danger{% else %}success{% endif %}">
                     {% if polyfill.error.breaking_code_change == true %}
                         Present
                     {% else %}
