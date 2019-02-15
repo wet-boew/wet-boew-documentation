@@ -29,7 +29,7 @@ We're upgrading jQuery from version 2.2.4 to 3.3.1. During testing, we will incl
 
 The major issue here is that jQuery 2.2.4 is no longer being patched or supported.
 
-### Change log and upgrade guide
+### jQuery upgrade guide
 
 We'd recommend that you have a look at the official jQuery change log and upgrade guide to get an idea of all the important changes and have some accurate information on hand if something is not clear.
 
@@ -38,6 +38,11 @@ We'd recommend that you have a look at the official jQuery change log and upgrad
 * [jQuery 3 Migrate Plugin](https://github.com/jquery/jquery-migrate#migrate-older-jquery-code-to-jquery-30)
 * [jQuery 3 launch blog post](https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/)
 
+## Source Code Changes 
+
+The following list of commits are the cummulative proposed changes to migrate the repo to jQuery 3
+
+* [Commits](https://github.com/neilmispelaar/wet-boew/commits/jquery3-migration)
 
 ## Test plan 
 
