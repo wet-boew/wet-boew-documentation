@@ -149,6 +149,7 @@ On the accessibility side, the followings are potentially at risk:
 * Change the plugin's name? Currently: Chat Wizard
 * Add a "skip to chat wizard" in the skip navigation links.
 * FRENCH VERSION
+* What happens on back button?
 
 ### First Release
 
@@ -347,6 +348,7 @@ Markup Basic Structure
 
 * Tying the form to the chat "parrallel" progress through the questions
 * Being able to take static forms in input
+* Clear timeout
 
 ## How-to
 
