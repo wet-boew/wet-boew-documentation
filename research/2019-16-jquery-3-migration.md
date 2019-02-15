@@ -70,28 +70,28 @@ To do
             {% for plugin in site.data.jquery3migration.plugins %}
             <tr>
                 <td><a href="{{ plugin.href.jquery3 }}">{{ plugin.name }}</a></td>
-                <td>
+                <td class="{% if plugin.error.breaking_code_change == true %}danger{% else %}success{% endif %}">
                     {% if plugin.error.breaking_code_change == true %}
                         Present
                     {% else %}
                         Nope
                     {% endif %}
                 </td>
-                <td>
+                <td class="{% if plugin.error.console == true %}danger{% else %}success{% endif %}">
                     {% if plugin.error.console == true %}
                         Present
                     {% else %}
                         Nope
                     {% endif %}
                 </td>
-                <td>
+                <td class="{% if plugin.error.visual == true %}danger{% else %}success{% endif %}">
                     {% if plugin.error.visual == true %}
                         Present
                     {% else %}
                         Nope
                     {% endif %}
                 </td>
-                <td>
+                <td class="{% if plugin.fix.required == true %}danger{% else %}success{% endif %}">
                     {% if plugin.fix.required == true %}
                         Yes
                     {% else %}
@@ -141,21 +141,21 @@ To do
                         Nope
                     {% endif %}
                 </td>
-                <td>
+                <td class="{% if polyfill.error.console == true %}danger{% else %}success{% endif %}">
                     {% if polyfill.error.console == true %}
                         Present
                     {% else %}
                         Nope
                     {% endif %}
                 </td>
-                <td>
+                <td class="{% if polyfill.error.visual == true %}danger{% else %}success{% endif %}">
                     {% if polyfill.error.visual == true %}
                         Present
                     {% else %}
                         Nope
                     {% endif %}
                 </td>
-                <td>
+                <td class="{% if polyfill.fix.required == true %}danger{% else %}success{% endif %}">
                     {% if polyfill.fix.required == true %}
                         Yes
                     {% else %}
