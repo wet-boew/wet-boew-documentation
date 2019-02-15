@@ -65,14 +65,15 @@ To do
         <thead>
             <th scope="col">Name</th>
             <th scope="col">jQuery Migrate Console Error</th>
-            <th scope="col">Console Error Message</th>
-            <th scope="col">Current Status</th>
+            <th scope="col">Console Error Messages</th>
+            <th scope="col">Notes</th>
+            <th scope="col">Status</th>
         </thead>
         <tbody>
             {% for plugin in site.data.jquery3migration.plugins %}
             <tr>
                 <td>
-                    <a href="{{ plugin.href.jquery3x }}">{{ plugin.name }}<span class="wb-inv"> - jQuery 3 version</span></a>(<a href="{{ plugin.href.jquery2x }}"><span class="wb-inv">{{ plugin.name }} - jQuery </span>v2<span class="wb-inv"> version</span></a>)
+                    <a href="{{ plugin.href.jquery3x }}">{{ plugin.name }}<span class="wb-inv"> - jQuery 3 version</span></a> (<a href="{{ plugin.href.jquery2x }}"><span class="wb-inv">{{ plugin.name }} - jQuery </span>v2<span class="wb-inv"> version</span></a>)
                 </td>
                 <td class="{% if plugin.migrate.error == true %}danger{% else %}success{% endif %}">
                     {% if plugin.migrate.error == true %}
@@ -90,6 +91,17 @@ To do
                         </ul>
                     {% else %}
                         No error descriptions
+                    {% endif %}
+                </td>
+                <td>
+                    {% if plugin.migrate.notes.size > 0 %}
+                        <ul class="list-unstyled">
+                        {% for note in plugin.migrate.notes %}
+                            <li>{{ note }}</li>
+                        {% endfor %}
+                        </ul>
+                    {% else %}
+                        No notes
                     {% endif %}
                 </td>
                 <td>{{ plugin.status }}</td>
