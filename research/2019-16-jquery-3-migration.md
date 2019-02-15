@@ -56,7 +56,11 @@ The following links are to the development site (latest build to my jquery3-migr
 
 ### Test status
 
-To do
+Not Tested
+Currently Being Tested
+Errors Found
+Fixed
+No errors found
 
 ### WET Plugins
 
@@ -67,6 +71,7 @@ To do
             <th scope="col">jQuery Migrate Console Error</th>
             <th scope="col">Console Error Messages</th>
             <th scope="col">Notes</th>
+            <th scope="col">Code Change Req'd</th>
             <th scope="col">Status</th>
         </thead>
         <tbody>
@@ -75,11 +80,11 @@ To do
                 <td>
                     <a href="{{ plugin.href.jquery3x }}">{{ plugin.name }}<span class="wb-inv"> - jQuery 3 version</span></a> (<a href="{{ plugin.href.jquery2x }}"><span class="wb-inv">{{ plugin.name }} - jQuery </span>v2<span class="wb-inv"> version</span></a>)
                 </td>
-                <td class="{% if plugin.migrate.error == true %}danger{% else %}success{% endif %}">
-                    {% if plugin.migrate.error == true %}
-                        Error
+                <td class="{% if plugin.migrate.errors == true %}danger{% else %}success{% endif %}">
+                    {% if plugin.migrate.errors == true %}
+                        Yes
                     {% else %}
-                        Nope
+                        No
                     {% endif %}
                 </td>
                 <td>
@@ -102,6 +107,13 @@ To do
                         </ul>
                     {% else %}
                         No notes
+                    {% endif %}
+                </td>
+                <td>
+                    {% if plugin.code_change_req == true %}
+                        Yes
+                    {% else %}
+                        No
                     {% endif %}
                 </td>
                 <td>{{ plugin.status }}</td>

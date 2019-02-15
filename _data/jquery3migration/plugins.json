@@ -14,8 +14,8 @@
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/cal-events/cal-events-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/cal-events/cal-events-en.html"
         },
-        "status" : "Nope",
-        "notes" : "Nope"
+        "code_change_req" : false,
+        "status" : "Nope"
     },
     {
         "name" : "Charts and graphs",
