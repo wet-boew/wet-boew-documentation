@@ -390,20 +390,21 @@
     },
     {
         "name" : "Tables",
-        "error" : { 
-            "breaking_code_change" : true,
-            "console" : true,
-            "visual" : false
-        },
-        "fix" : { 
-            "required" : true,
-            "description" : "JQMIGRATE: jQuery.fn.blur() event shorthand is deprecated"
+        "migrate": {
+            "errors" : true,
+            "descriptions" : [
+                "jQuery.fn.focus() event shorthand is deprecated",
+                "jQuery.fn.blur() event shorthand is deprecated"
+            ],
+            "notes" : [
+                "Errors can be triggered by using the table pagination functionality"
+            ]
         },
         "href" : { 
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/tables/tables-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/tables/tables-en.html"
         },
-        "status":"Not yet started"
+        "status":"On hold"
     },
     {
         "name" : "Text highlighting",
