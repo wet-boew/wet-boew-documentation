@@ -54,7 +54,7 @@ The following links are to the development site (latest build to my jquery3-migr
 * [GitHub jQuery 3 Fork](https://github.com/neilmispelaar/wet-boew/tree/jquery3-migration)
 
 
-<section class="panel panel-primary">
+<section class="panel panel-primary mrgn-tp-xl">
     <header class="panel-heading">
         <h3 class="panel-title">Status Descriptions</h3>
     </header>
@@ -79,16 +79,10 @@ The following links are to the development site (latest build to my jquery3-migr
                 <p>Currently testing or addressing coding issues.</p>
             </dd>
             <dt class="col-sm-3">
-                <span class="label label-success">Closed (fixed)</span>
+                <span class="label label-success">Closed</span>
             </dt>
             <dd class="col-sm-9">
-                <p>Building the template has been completed.</p>
-            </dd>
-             <dt class="col-sm-3">
-                <span class="label label-success">Closed (no change)</span>
-            </dt>
-            <dd class="col-sm-9">
-                <p>Building the template has been completed.</p>
+                <p>Code has been tested and if any code modifications were required they have been implemented and tested.</p>
             </dd>
         </dl>
     </div>
@@ -155,9 +149,7 @@ The following links are to the development site (latest build to my jquery3-migr
                     {% assign statusclass = "warning"  %}
                 {% elsif plugin.status == "In Progress" %}
                     {% assign statusclass = "active"  %}
-                {% elsif plugin.status == "Closed (fixed)" %}
-                    {% assign statusclass = "success"  %}
-                {% elsif plugin.status == "Closed (no change)" %}
+                {% elsif plugin.status == "Closed" %}
                     {% assign statusclass = "success"  %}
                 {% endif %}
                 <td{% if statusclass %} class="{{ statusclass }}"{% endif %}>
