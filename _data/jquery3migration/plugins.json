@@ -96,122 +96,110 @@
     },
     {
         "name" : "Data Picture",
-        "error" : { 
-            "breaking_code_change" : false,
-            "console" : false,
-            "visual" : false
-        },
-        "fix" : { 
-            "required" : false,
-            "description" : ""
+        "migrate": {
+            "errors" : false,
+            "descriptions" : [],
+            "notes" : []
         },
         "href" : { 
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/data-picture/data-picture-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/data-picture/data-picture-en.html"
         },
+        "code_change_req" : false,
         "status":"Not yet started"
     },
     {
         "name" : "Dismissable content",
-        "error" : { 
-            "breaking_code_change" : false,
-            "console" : false,
-            "visual" : false
-        },
-        "fix" : { 
-            "required" : false,
-            "description" : ""
+        "migrate": {
+            "errors" : false,
+            "descriptions" : [
+                "jQuery.fn.removeAttr no longer sets boolean properties"
+            ],
+            "notes" : [
+                "removeAttr isn't necessarily an issue - has to be manually checked",
+                "I tested it a second time and this warning did not show up"
+            ]
         },
         "href" : { 
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/dismissable-content/dismissable-content-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/dismissable-content/dismissable-content-en.html"
         },
-        "status":"Not yet started"
+        "code_change_req" : false,
+        "status":"On hold"
     },
     {
         "name" : "Equal height",
-        "error" : { 
-            "breaking_code_change" : false,
-            "console" : false,
-            "visual" : false
-        },
-        "fix" : { 
-            "required" : false,
-            "description" : ""
+        "migrate": {
+            "errors" : false,
+            "descriptions" : [],
+            "notes" : []
         },
         "href" : { 
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/equalheight/equalheight-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/equalheight/equalheight-en.html"
         },
+        "code_change_req" : false,
         "status":"Not yet started"
     },
     {
         "name" : "Facebook embedded pages",
-        "error" : { 
-            "breaking_code_change" : false,
-            "console" : false,
-            "visual" : false
-        },
-        "fix" : { 
-            "required" : false,
-            "description" : ""
+        "migrate": {
+            "errors" : false,
+            "descriptions" : [],
+            "notes" : []
         },
         "href" : { 
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/facebook/facebook-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/facebook/facebook-en.html"
         },
+        "code_change_req" : false,
         "status":"Not yet started"
     },
     {
         "name" : "Favicon",
-        "error" : { 
-            "breaking_code_change" : false,
-            "console" : false,
-            "visual" : false
-        },
-        "fix" : { 
-            "required" : false,
-            "description" : ""
+        "migrate": {
+            "errors" : false,
+            "descriptions" : [],
+            "notes" : []
         },
         "href" : { 
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/favicon/favicon-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/favicon/favicon-en.html"
         },
+        "code_change_req" : false,
         "status":"Not yet started"
     },
     {
         "name" : "Feeds",
-        "error" : { 
-            "breaking_code_change" : false,
-            "console" : false,
-            "visual" : false
-        },
-        "fix" : { 
-            "required" : false,
-            "description" : ""
+        "migrate": {
+            "errors" : false,
+            "descriptions" : [
+                "jQuery.fn.removeAttr no longer sets boolean properties: open"
+            ],
+            "notes" : [
+                "removeAttr isn't necessarily an issue - has to be manually checked"
+            ]
         },
         "href" : { 
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/feeds/feeds-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/feeds/feeds-en.html"
         },
-        "status":"Not yet started"
+        "code_change_req" : false,
+        "status":"On hold"
     },
     {
         "name" : "Filter",
-        "error" : { 
-            "breaking_code_change" : false,
-            "console" : false,
-            "visual" : false
-        },
-        "fix" : { 
-            "required" : false,
-            "description" : ""
+        "migrate": {
+            "errors" : false,
+            "descriptions" : [],
+            "notes" : []
         },
         "href" : { 
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/filter/filter-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/filter/filter-en.html"
         },
-        "status":"Not yet started"
+        "code_change_req" : false,
+        "status":"Closed"
     },
     {
         "name" : "Footnotes",
