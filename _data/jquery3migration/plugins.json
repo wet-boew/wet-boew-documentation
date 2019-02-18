@@ -51,15 +51,20 @@
         "name" : "Country Content",
         "migrate": {
             "errors" : true,
-            "descriptions" : [],
-            "notes" : []
+            "descriptions" : [
+                "Blocked loading mixed active content \"http://freegeoip.net/shutdown\""
+            ],
+            "notes" : [
+                "Will attempt ot fix by adding a secure connection",
+                "I don't think this is a jQuery 3 thing"
+            ]
         },
         "href" : { 
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/country-content/country-content-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/country-content/country-content-en.html"
         },
         "code_change_req" : false,
-        "status":"Not yet started"
+        "status":"On hold"
     },
     {
         "name" : "Data Ajax",
