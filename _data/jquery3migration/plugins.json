@@ -400,7 +400,7 @@
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/toggle/toggle-en.html"
         },
         "code_change_req" : false,
-        "status":"Not yet started"
+        "status":"Closed"
     },
     {
         "name" : "Twitter embedded timeline",
@@ -428,6 +428,6 @@
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/zebra/zebra-en.html"
         },
         "code_change_req" : false,
-        "status":"Not yet started"
+        "status":"Closed"
     }
 ]
