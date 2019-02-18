@@ -15,7 +15,7 @@
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/cal-events/cal-events-en.html"
         },
         "code_change_req" : false,
-        "status" : "Nope"
+        "status" : "Not yet started"
     },
     {
         "name" : "Charts and graphs",
@@ -27,7 +27,7 @@
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/charts/custom-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/charts/custom-en.html"
         },
-        "status":"Nope"
+        "status":"Not yet started"
     },
     {
         "name" : "Collapsible alerts",
@@ -39,7 +39,7 @@
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/collapsible-alerts/collapsible-alerts-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/collapsible-alerts/collapsible-alerts-en.html"
         },
-        "status":"Nope"
+        "status":"Not yet started"
     },
     {
         "name" : "Country Content",
@@ -55,7 +55,7 @@
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/country-content/country-content-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/country-content/country-content-en.html"
         },
-        "status":"Nope"
+        "status":"Not yet started"
     },
     {
         "name" : "Data Ajax",
@@ -67,7 +67,7 @@
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/data-ajax/data-ajax-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/data-ajax/data-ajax-en.html"
         },
-        "status":"Nope"
+        "status":"Not yet started"
     },
     {
         "name" : "Data Inview",
@@ -84,7 +84,7 @@
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/data-inview/data-inview-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/data-inview/data-inview-en.html"
         },
-        "status":"Nope"
+        "status":"Not yet started"
     },
     {
         "name" : "Data Picture",
@@ -101,7 +101,7 @@
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/data-picture/data-picture-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/data-picture/data-picture-en.html"
         },
-        "status":"Nope"
+        "status":"Not yet started"
     },
     {
         "name" : "Dismissable content",
@@ -118,7 +118,7 @@
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/dismissable-content/dismissable-content-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/dismissable-content/dismissable-content-en.html"
         },
-        "status":"Nope"
+        "status":"Not yet started"
     },
     {
         "name" : "Equal height",
@@ -135,7 +135,7 @@
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/equalheight/equalheight-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/equalheight/equalheight-en.html"
         },
-        "status":"Nope"
+        "status":"Not yet started"
     },
     {
         "name" : "Facebook embedded pages",
@@ -152,7 +152,7 @@
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/facebook/facebook-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/facebook/facebook-en.html"
         },
-        "status":"Nope"
+        "status":"Not yet started"
     },
     {
         "name" : "Favicon",
@@ -169,7 +169,7 @@
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/favicon/favicon-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/favicon/favicon-en.html"
         },
-        "status":"Nope"
+        "status":"Not yet started"
     },
     {
         "name" : "Feeds",
@@ -186,7 +186,7 @@
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/feeds/feeds-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/feeds/feeds-en.html"
         },
-        "status":"Nope"
+        "status":"Not yet started"
     },
     {
         "name" : "Filter",
@@ -203,7 +203,7 @@
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/filter/filter-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/filter/filter-en.html"
         },
-        "status":"Nope"
+        "status":"Not yet started"
     },
     {
         "name" : "Footnotes",
@@ -220,7 +220,7 @@
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/footnotes/footnotes-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/footnotes/footnotes-en.html"
         },
-        "status":"Nope"
+        "status":"Not yet started"
     },
     {
         "name" : "Form validation",
@@ -237,7 +237,7 @@
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/formvalid/formvalid-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/formvalid/formvalid-en.html"
         },
-        "status":"Nope"
+        "status":"Not yet started"
     },
     {
         "name" : "Geomap",
@@ -254,7 +254,7 @@
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/geomap/geomap-en.html",
             "jquery2x" : ""
         },
-        "status":"Nope"
+        "status":"Not yet started"
     },
     {
         "name" : "Lightbox",
@@ -271,7 +271,7 @@
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/lightbox/lightbox-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/lightbox/lightbox-en.html"
         },
-        "status":"Nope"
+        "status":"Not yet started"
     },
     {
         "name" : "Menu",
@@ -288,7 +288,7 @@
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/menu/menu-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/menu/menu-en.html"
         },
-        "status":"Nope"
+        "status":"Not yet started"
     },
     {
         "name" : "Multimedia Player",
@@ -305,7 +305,7 @@
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/multimedia/multimedia-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/multimedia/multimedia-en.html"
         },
-        "status":"Nope"
+        "status":"Not yet started"
     },
     {
         "name" : "Overlay",
@@ -322,7 +322,7 @@
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/overlay/overlay-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/overlay/overlay-en.html"
         },
-        "status":"Nope"
+        "status":"Not yet started"
     },
     {
         "name" : "Prettify",
@@ -339,7 +339,7 @@
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/prettify/prettify-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/prettify/prettify-en.html"
         },
-        "status":"Nope"
+        "status":"Not yet started"
     },
     {
         "name" : "Session Timeout",
@@ -356,7 +356,7 @@
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/session-timeout/session-timeout-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/session-timeout/session-timeout-en.html"
         },
-        "status":"Nope"
+        "status":"Not yet started"
     },
     {
         "name" : "Share widget",
@@ -373,7 +373,7 @@
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/share/share-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/share/share-en.html"
         },
-        "status":"Nope"
+        "status":"Not yet started"
     },
     {
         "name" : "Tabbed Interface",
@@ -390,7 +390,7 @@
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/tabs/tabs-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/tabs/tabs-en.html"
         },
-        "status":"Nope"
+        "status":"Not yet started"
     },
     {
         "name" : "Tables",
@@ -407,7 +407,7 @@
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/tables/tables-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/tables/tables-en.html"
         },
-        "status":"Nope"
+        "status":"Not yet started"
     },
     {
         "name" : "Text highlighting",
@@ -424,7 +424,7 @@
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/texthighlight/texthighlight-en.html?txthl=avian%20influenza+world+cook+flu-like%20symptoms+Don%27t%20Forget...+causes%20sickness%20in%20birds,%20it%20can%20also%20infect%20people.",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/texthighlight/texthighlight-en.html?txthl=avian%20influenza+world+cook+flu-like%20symptoms+Don%27t%20Forget...+causes%20sickness%20in%20birds,%20it%20can%20also%20infect%20people."
         },
-        "status":"Nope"
+        "status":"Not yet started"
     },
     {
         "name" : "Toggle",
@@ -441,7 +441,7 @@
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/toggle/toggle-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/toggle/toggle-en.html"
         },
-        "status":"Nope"
+        "status":"Not yet started"
     },
     {
         "name" : "Twitter embedded timeline",
@@ -458,7 +458,7 @@
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/twitter/twitter-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/twitter/twitter-en.html"
         },
-        "status":"Nope"
+        "status":"Not yet started"
     },
     {
         "name" : "Zebra striping",
@@ -475,6 +475,6 @@
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/zebra/zebra-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/zebra/zebra-en.html"
         },
-        "status":"Nope"
+        "status":"Not yet started"
     }
 ]
