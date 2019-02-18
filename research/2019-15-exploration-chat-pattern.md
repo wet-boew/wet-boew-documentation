@@ -346,9 +346,8 @@ Markup Basic Structure
 
 ## Ongoing
 
-* Tying the form to the chat "parrallel" progress through the questions
-* Being able to take static forms in input
-* Clear timeout
+* Mobile Tests
+* Improve Documentation
 
 ## How-to
 
