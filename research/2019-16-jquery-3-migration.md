@@ -107,7 +107,7 @@ The following links are to the development site (latest build to my jquery3-migr
                     <a href="{{ plugin.href.jquery3x }}">{{ plugin.name }}<span class="wb-inv"> - jQuery 3 version</span></a> (<a href="{{ plugin.href.jquery2x }}"><span class="wb-inv">{{ plugin.name }} - jQuery </span>v2<span class="wb-inv"> version</span></a>)
                 </td>
                 {% if plugin.status == "Not yet started" %}
-                    <td class="danger" colspan="5">
+                    <td class="danger text-center" colspan="5">
                         {{ plugin.status }}
                     </td>
                 {% else %}
