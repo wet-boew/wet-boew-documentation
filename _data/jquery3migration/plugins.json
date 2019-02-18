@@ -288,16 +288,21 @@
     {
         "name" : "Overlay",
         "migrate": {
-            "errors" : false,
-            "descriptions" : [],
-            "notes" : []
+            "errors" : true,
+            "descriptions" : [
+                "jQuery.fn.focus() event shorthand is deprecated"
+            ],
+            "notes" : [
+                "Error can be triggered by clicking the \"Centered Popup\" button",
+                "Further research is required for this"
+            ]
         },
         "href" : { 
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/overlay/overlay-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/overlay/overlay-en.html"
         },
         "code_change_req" : false,
-        "status":"Not yet started"
+        "status":"On hold"
     },
     {
         "name" : "Prettify",
