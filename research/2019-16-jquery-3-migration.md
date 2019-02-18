@@ -163,7 +163,7 @@ The following links are to the development site (latest build to my jquery3-migr
                     {% status_class = "success"  %}
                 {% endif %}
                 {% endcomment %}
-                <td{% if status_class %} class="{{ status_class }}"{% endif %}>
+                <td{% if statusclass %} class="{{ statusclass }}"{% endif %}>
                     {{ plugin.status }}
                 </td>
             </tr>
