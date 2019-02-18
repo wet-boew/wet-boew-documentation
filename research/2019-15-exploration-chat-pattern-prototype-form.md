@@ -383,11 +383,11 @@ modified: 2019-02-14
 					<form class="mrgn-bttm-xl" data-wb-chtwzrd='{"sendWizard":"Show results", "first":"q1", "titleWizard":"I can help you find the information you need", "startText":"Hi! I can help direct you to programs and services you might be interested in. Let&apos;s begin...", "endText":"Thank you. I have built a page with results you may find resourceful."}' action="page1.html">
 						<p data-chtwzrd-intro='First, if you are an employer or organization looking for funding, you can find relevant information on the <a href="pagex.html">funding page</a>.'>If you are an employer or organization looking for funding, you can find relevant information on the <a href="pagex.html">funding page</a>.</p>
 						<fieldset>
-							<legend data-chtwzrd-q='{"labelWizard":"Are you:", "qId":"q1", "input":"radio"}'>What would you describe yourself as?</legend>
+							<legend data-chtwzrd-q='{"labelWizard":"Are you:", "qId":"q1"}'>What would you describe yourself as?</legend>
 							<ul class="list-unstyled mrgn-tp-md">
 								<li>
 									<label>
-										<input type="radio" value="young-canadian" name="describe" data-chtwzrd-a='{"next":"q2", "url":"page1.html"}' />
+										<input type="radio" value="young-canadian" name="describe" data-chtwzrd-a='{"next":"q2"}' />
 										<span>a young Canadian</span>
 									</label>
 								</li>
@@ -397,51 +397,57 @@ modified: 2019-02-14
 										<span>an employer or organization looking for funding to support youth</span>
 									</label>
 								</li>
+								<li>
+									<label>
+										<input type="radio" value="none-above" name="describe" data-chtwzrd-a='{"next":"q3"}' />
+										<span>None of the above</span>
+									</label>
+								</li>
 							</ul>
 						</fieldset>
 						<fieldset>
-							<legend data-chtwzrd-q='{"labelWizard":"Great! And are you:", "qId":"q2", "input":"radio"}'>In what situation are you?</legend>
+							<legend data-chtwzrd-q='{"labelWizard":"Great! And are you:", "qId":"q2"}'>In what situation are you?</legend>
 							<ul class="list-unstyled mrgn-tp-md">
 								<li>
 									<label>
-										<input type="radio" value="high-school" name="situation" data-chtwzrd-a='{"next":"q3","url":"page1.html"}' />
+										<input type="radio" value="high-school" name="situation" data-chtwzrd-a='{"next":"q3"}' />
 										<span>a high school student</span>
 									</label>
 								</li>
 								<li>
 									<label>
-										<input type="radio" value="cegep-student" name="situation" data-chtwzrd-a='{"next":"q3","url":"page1.html"}' />
+										<input type="radio" value="cegep-student" name="situation" data-chtwzrd-a='{"next":"q3"}' />
 										<span>a CÉGEP student</span>
 									</label>
 								</li>
 								<li>
 									<label>
-										<input type="radio" value="post-secondary" name="situation" data-chtwzrd-a='{"next":"q3","url":"page1.html"}' />
+										<input type="radio" value="post-secondary" name="situation" data-chtwzrd-a='{"next":"q3"}' />
 										<span>a post-secondary school student</span>
 									</label>
 								</li>
 								<li>
 									<label>
-										<input type="radio" value="ready-start-career" name="situation" data-chtwzrd-a='{"next":"q3","url":"page1.html"}' />
+										<input type="radio" value="ready-start-career" name="situation" data-chtwzrd-a='{"next":"q3"}' />
 										<span>ready to start a career</span>
 									</label>
 								</li>
 								<li>
 									<label>
-										<input type="radio" value="not-school-not-working" name="situation" data-chtwzrd-a='{"next":"q3","url":"page1.html"}' />
+										<input type="radio" value="not-school-not-working" name="situation" data-chtwzrd-a='{"next":"q3"}' />
 										<span>not in school and not working</span>
 									</label>
 								</li>
 								<li>
 									<label>
-										<input type="radio" value="none" name="situation" data-chtwzrd-a='{"next":"q3","url":"page1.html"}' />
+										<input type="radio" value="none" name="situation" data-chtwzrd-a='{"next":"q3"}' />
 										<span>none of these</span>
 									</label>
 								</li>
 							</ul>
 						</fieldset>
 						<fieldset>
-							<legend data-chtwzrd-q='{"labelWizard":"Awesome! And would you like to:", "qId":"q3", "input":"radio"}'>What is your goal?</legend>
+							<legend data-chtwzrd-q='{"labelWizard":"Awesome! And would you like to:", "qId":"q3"}'>What is your goal?</legend>
 							<ul class="list-unstyled mrgn-tp-md">
 								<li>
 									<label>
@@ -481,12 +487,13 @@ modified: 2019-02-14
 								</li>
 								<li>
 									<label>
-										<input type="radio" value="everything" name="goal" data-chtwzrd-a='{"next":"none", "url":"page1.html"}' />
+										<input type="radio" value="everything" name="goal" data-chtwzrd-a='{"next":"none"}' />
 										<span>see everything</span>
 									</label>
 								</li>
 							</ul>
 						</fieldset>
+						<br/>
 						<button type="submit" class="btn btn-sm btn-primary">Search</button>
 					</form>
 				</section>
@@ -601,16 +608,19 @@ modified: 2019-02-14
 <script type="text/javascript">
 		// Create the data that is sent as an output + check if user has answered
 		var datainput = {},
-			dataoutput = [],
 			hasAnswered = true, 
 			redirurl = "", 
 			first = "", 
 			intro = "", 
+			redirurlCopy = redirurl,
 			firstCopy = first,
 			introCopy = intro,
 			formType = "dynamic",
 			sendButton = '<button class="btn btn-primary btn-block chtwzrd-send" type="button">Send<span class="wb-inv"> reply and next</span></button>',
-			current = "";
+			current = "",
+			botTime = "", 
+			inputsTime = "", 
+			replyTime = "";
 			
 		// If chat wizard initiator is found, then initiate
 		// input possibilities are: JSON and Form
@@ -628,7 +638,8 @@ modified: 2019-02-14
 			// Set answer to true for the messages before the first question
 			firstCopy = first = datainput.header.first;
 			introCopy = intro = (datainput.header.introTextWizard ? datainput.header.introTextWizard : "");
-			current = datainput.questions[datainput.header.first];
+			redirurlCopy = redirurl = datainput.header.defaultDestination;
+			current = datainput.questions[first];
 				
 			// Build chat wizard
 			buildchtwzrd($selector, datainput.header.titleWizard);
@@ -647,7 +658,8 @@ modified: 2019-02-14
 			
 			// Initiate basic form
 			initiateBasicForm($basic);
-			
+			// Restart fresh on reload
+			$("input", $basic).prop("checked", false);
 			// Hide basic form on load, show chat bubble instead
 			$basic.hide();
 			$bubble.fadeIn('slow');
@@ -691,7 +703,7 @@ modified: 2019-02-14
 				event.preventDefault();
 				
 				$conversation.attr("aria-live", "");
-				//resumeOnSwitch($basic, dataoutput, "form");
+				resumeOnSwitch($basic, "form");
 				
 				$container.stop().hide();
 				$basic.stop().show();
@@ -706,18 +718,17 @@ modified: 2019-02-14
 				$focusedBeforechtwzrd = $(':focus');
 				
 				if(!$(this).hasClass("chtwzrd-bubble")) {
-					resumeOnSwitch($container, dataoutput, "chat");
+					resumeOnSwitch($container, "chat");
 				}
-				
 				$(".chtwzrd-bubble", $bubble).removeClass("chtwzrd-trans-pulse");
 				$("p", $bubble).hide().removeClass("chtwzrd-trans-left");
 
 				$container.stop().show();
 				$bubble.stop().hide();
-
-				$(".chtwzrd-conversation").scrollTop($('.chtwzrd-history')[0].scrollHeight);
 				$("body").addClass("chtwzrd-noscroll");
-				
+				if($conversation.length){
+					$(".chtwzrd-conversation").scrollTop($conversation[0].scrollHeight);
+				}
 				if(hasAnswered) {
 					appendInteraction($form);
 				}
@@ -746,7 +757,7 @@ modified: 2019-02-14
 			});
 			
 			// On chat button pressed: append answer, and on submit: redirect
-			$(".chtwzrd-send").on("click", function(event) {
+			$(document).on("click", ".chtwzrd-send", function(event) {
 				if($(this).attr('type') != "submit") {
 					event.preventDefault();
 					var $choiceselected = $("input:checked", $form);
@@ -772,6 +783,7 @@ modified: 2019-02-14
 		
 		// Iniate basic form
 		var initiateBasicForm = function($selector) {
+			$basicForm = $("form", $selector);
 			if(formType == "dynamic") {
 				var $allQuestions = $("fieldset", $selector),
 					$firstQuestion = $allQuestions.first();
@@ -786,20 +798,22 @@ modified: 2019-02-14
 			}
 			
 			// On input change in the basic form
-			$("input", $selector).on("change", function(event) {
+			$("input", $basicForm).on("change", function(event) {
 				var answerData = buildAnswerObj($(this)),
-					$fieldset = $(this).closest("fieldset");
+					$qNext = $("#chtwzrd-q-" + answerData.qNext);
 				
-				// Should become: if(dataoutput.length && dataoutput[1].qNext != params.next) {}
-				dataoutput.push(answerData);
-				$fieldset.nextAll("fieldset").hide();
-				if(answerData.qNext != "none") {
-					$("#chtwzrd-q-" + answerData.qNext).show();
+				if(formType == "dynamic") {
+					var $fieldset = $(this).closest("fieldset");
+					if($qNext.is(":hidden") && $fieldset.next().find("input:checked").attr("id") != $qNext.attr("id") || answerData.qNext == "none") {
+						$fieldset.nextAll("fieldset").hide().find("input").prop("checked", false);
+					}
+					if(answerData.qNext != "none") {
+						$("#chtwzrd-q-" + answerData.qNext).show();
+					}
+					if(answerData.url != "") {
+						$basicForm.attr("action", answerData.url);
+					}
 				}
-				if(typeof answerData.url !== null) {
-					$selector.attr("action", answerData.url);
-				}
-				console.log(dataoutput);
 			});
 		}
 			
@@ -813,7 +827,7 @@ modified: 2019-02-14
 			$container.append('<form class="modal-body chtwzrd-body" method="GET"></form>');
 
 			$form = $(".chtwzrd-body");
-			$form.append('<div class="chtwzrd-conversation mrgn-bttm-md"><section class="chtwzrd-history" aria-live="assertive"><h3 class="wb-inv">Conversation history</h3></section><section class="chtwzrd-reply"><h3 class="wb-inv">Reply</h3><div class="chtwzrd-inputs"></div><div class="chtwzrd-validate"><p>Please select an option to continue.</p></div></section></div>');
+			$form.append('<div class="chtwzrd-conversation mrgn-bttm-md"><section class="chtwzrd-history" aria-live="assertive"><h3 class="wb-inv">Conversation history</h3></section><section class="chtwzrd-reply"><h3 class="wb-inv">Reply</h3><div class="chtwzrd-inputs"></div><div class="chtwzrd-validate"><p>Please select an option to continue.</p></div></section><div class="chtwzrd-form-params"></div></div>');
 			$form.append('<section class="chtwzrd-controls"><h3 class="wb-inv">Controls</h3><div class="row"><div class="col-xs-12">' + sendButton + '</div></div><div class="row"><div class="col-xs-12 text-center mrgn-tp-sm"><a href="#chtwzrd-basic" class="btn btn-sm btn-link chtwzrd-basic-link" role="button">Switch to basic form</a></div></div></section>');
 
 			$(".chtwzrd-conversation").scrollTop($('.chtwzrd-history')[0].scrollHeight);
@@ -831,8 +845,8 @@ modified: 2019-02-14
 			datacook.header.sendForm = ($("input[type=submit]", $form).length ? $("input[type=submit]", $form).val() : $("button[type=submit]", $form).html());
 			
 			if($intro.length) {
-				datacook.header.introTextWizard = $intro.data('chtwzrd-intro');
 				datacook.header.introTextForm = $intro.html();
+				datacook.header.introTextWizard = (typeof $intro.data('chtwzrd-intro') === "undefined" ? datacook.header.introTextForm : $intro.data('chtwzrd-intro'));
 			}
 			datacook.questions = {};
 				
@@ -866,133 +880,125 @@ modified: 2019-02-14
 		}
 		
 		// Resume to question X, by switching between the form and the chat wizard
-		var resumeOnSwitch = function($selector, data, toggle) {
-			if(!data.length){
-				return;
-			}
-			// Redraw Chat and resume to X
+		var resumeOnSwitch = function($selector, toggle) {
+			// Redraw Chat and start over
 			if(toggle == "chat") {
 				var $conversation = $(".chtwzrd-conversation", $selector);
 				
-				redraw = true;
-				current = first = firstCopy;
+				window.clearTimeout(botTime);
+				window.clearTimeout(inputsTime);
+				window.clearTimeout(replyTime);
+				redirurl = redirurlCopy;
+				first = firstCopy;
 				intro = introCopy;
-				redirurl = "";
-				
-				$conversation.html("");
+				hasAnswered = true;
+				current = datainput.questions[first];
+				$(".chtwzrd-history, .chtwzrd-form-params", $conversation).html("");
 				$(".chtwzrd-send", $selector).replaceWith(sendButton);
-				$.each(data, function(index){
-					appendInteraction($form, true);
-					appendReply($form, this, true);
-				});
-				$conversation.attr("aria-live", "assertive");
+				$(".chtwzrd-history", $conversation).attr("aria-live", "assertive");
+				if(hasAnswered) {
+					appendInteraction($form);
+				}
 			} 
-			// Redraw Form and resume to X
-			/*else {
-				
-			}*/
+			// Redraw Form and start over
+			else {
+				var $allQuestions = $("fieldset", $selector);
+				$allQuestions.not(":first").hide();
+				$("input", $allQuestions).prop("checked", false);
+			}
 		}
 
 		// Adds new question from bot and add inputs accordingly
-		var appendInteraction = function($selector, redraw) {
-			var $dropspot = $(".chtwzrd-history", $selector),
+		var appendInteraction = function($selector) {
+			var $dropSpot = $(".chtwzrd-history", $selector),
 				$inputsSpot = $(".chtwzrd-inputs", $selector),
 				$chtwzrdConvo = $(".chtwzrd-conversation"),
 				questionnaire = datainput.header,
 				$btnnext = $(".chtwzrd-send", $selector),
-				markup = (first != "" || intro != "" ? "p" : "h4"),
-				dotsTime = (redraw ? 0 : 1750);
+				markup = (first != "" || intro != "" ? "p" : "h4");
 			
 			hasAnswered = false;
 			$btnnext.prop('disabled', true);
 			$inputsSpot.html('');
+			$dropSpot.append('<div class="row mrgn-bttm-sm"><div class="col-xs-9"><' + markup + ' class="mrgn-tp-0 mrgn-bttm-sm"><span class="chtwzrd-avatar"></span><span class="chtwzrd-question"></span></' + markup + '></div></div>');
+			
+			var $lastQuestion = $(".chtwzrd-question", $dropSpot).last();
 			
 			// Faking delay and type time
-			if(!redraw) {
-				waitingBot($dropspot, markup);
-			}
-
-			setTimeout(function () {
+			waitingBot($lastQuestion);
+			
+			botTime = setTimeout(function () {
 				// Show greetings on first occurence
 				if(first != "") {
-					$(".chtwzrd-question", $dropspot).last().html(questionnaire.startText);
+					$lastQuestion.html(questionnaire.startText);
 					first = "";
-					appendInteraction($selector, redraw);
+					appendInteraction($selector);
 				} 
 				// If intro is provided, show it before the first question
 				else if(intro != "") { 
-					$(".chtwzrd-question", $dropspot).last().html(intro);
+					$lastQuestion.html(intro);
 					intro = "";
-					appendInteraction($selector, redraw);
+					appendInteraction($selector);
 				}
 				// If it is the last question, then change the button to submit the form
 				else if(current == "last") {
-					var paramStr = "";
-					
-					for(var i=0; i<dataoutput.length; i++) {
-						paramStr += dataoutput[i].queryName + "=" + dataoutput[i].queryParam + '&';
-					}
-					paramStr = paramStr.slice(0, -1);
-					$(".chtwzrd-question", $dropspot).last().html(questionnaire.endText);
+					$lastQuestion.html(questionnaire.endText);
 					$btnnext.attr("type", "submit").prop('disabled', false).html(questionnaire.sendWizard + '&nbsp;<span class="glyphicon glyphicon-chevron-right small"></span>');
-					$selector.attr('action', redirurl + '?' + paramStr);
+					$selector.attr('action', redirurl);
 				} 
 				// On every other occurences, append the question and its possible answers
 				else {
-					$(".chtwzrd-question", $dropspot).last().html(current.labelWizard);
-					if(!redraw) {
-						setTimeout(function () {
-							$inputsSpot.append('<fieldset><legend class="wb-inv">' + current.labelWizard + '</legend><div class="row"><div class="col-xs-12"><ul class="list-inline mrgn-tp-sm chtwzrd-choices"></ul></div></div></fieldset>');
-							for(var i=0; i<current.choices.length; i++) {
-								iQuestion = current.choices[i];	
-								$(".chtwzrd-choices", $inputsSpot).append('<li><label><input type="' + current.input + '" value="' + iQuestion.queryParam + '" name="' + current.queryName + '" data-chtwzrd-a=\'{"next":"' + iQuestion.next + '"' + (typeof iQuestion.url === "undefined" ? '' : ', "url":"' + iQuestion.url + '"') + '}\' /> <span>' + iQuestion.content + '</span></label></li>');
-							}
-							if($(".chtwzrd-reply").outerHeight() > ($chtwzrdConvo.innerHeight() - $(".chtwzrd-question:last")[0].scrollHeight)) {
-								$chtwzrdConvo.stop().animate({scrollTop:$conversation.outerHeight() - $(".chtwzrd-question:last")[0].scrollHeight - 30}, 500, 'swing');
-							} else {
-								$chtwzrdConvo.scrollTop($('.chtwzrd-history')[0].scrollHeight);
-							}
-							$btnnext.prop('disabled', false);
-						}, 750);
-					}
+					$lastQuestion.html(current.labelWizard);
+					current.input = "radio";
+					inputsTime = setTimeout(function () {
+						$inputsSpot.append('<fieldset><legend class="wb-inv">' + current.labelWizard + '</legend><div class="row"><div class="col-xs-12"><ul class="list-inline mrgn-tp-sm chtwzrd-choices"></ul></div></div></fieldset>');
+						for(var i=0; i<current.choices.length; i++) {
+							iQuestion = current.choices[i];	
+							$(".chtwzrd-choices", $inputsSpot).append('<li><label><input type="' + current.input + '" value="' + iQuestion.queryParam + '" name="' + current.queryName + '" data-chtwzrd-a=\'{"next":"' + iQuestion.next + '"' + (typeof iQuestion.url === "undefined" ? '' : ', "url":"' + iQuestion.url + '"') + '}\' /> <span>' + iQuestion.content + '</span></label></li>');
+						}
+						if($(".chtwzrd-reply").length && ($(".chtwzrd-reply").outerHeight() > ($chtwzrdConvo.innerHeight() - $(".chtwzrd-question:last")[0].scrollHeight))) {
+							$chtwzrdConvo.stop().animate({scrollTop:$conversation.outerHeight() - $(".chtwzrd-question:last")[0].scrollHeight - 30}, 500, 'swing');
+						} else {
+							$chtwzrdConvo.scrollTop($chtwzrdConvo[0].scrollHeight);
+						}
+						$btnnext.prop('disabled', false);
+					}, 750);
 				}
-				$chtwzrdConvo.scrollTop($('.chtwzrd-history')[0].scrollHeight);
-			}, dotsTime);
+				$chtwzrdConvo.scrollTop($chtwzrdConvo[0].scrollHeight);
+			}, 1750);
 		}
 			
 		// Waiting for the bot to type animation
-		var waitingBot = function($selector, markup) {
-			$selector.append('<div class="row mrgn-bttm-sm"><div class="col-xs-9"><' + markup + ' class="mrgn-tp-0 mrgn-bttm-sm"><span class="chtwzrd-avatar"></span><span class="chtwzrd-question"><span class="chtwzrd-loader" aria-label="Waiting for message"><span class="chtwzrd-loader-dot dot1"></span><span class="chtwzrd-loader-dot dot2"></span><span class="chtwzrd-loader-dot dot3"></span></span></span></' + markup + '></div></div>');
+		var waitingBot = function($selector) {
+			$selector.html('<span class="chtwzrd-loader" aria-label="Waiting for message"><span class="chtwzrd-loader-dot dot1"></span><span class="chtwzrd-loader-dot dot2"></span><span class="chtwzrd-loader-dot dot3"></span></span>');
 		}
 		
 		// Add reply from human and calls next question
-		var appendReply = function($selector, answerObj, redraw) {
+		var appendReply = function($selector, answerObj) {
 			var randID = Math.floor((Math.random() * 1000000) + 1000);
-			$dropspot = $(".chtwzrd-history", $selector);
-			$dropspot.append('<div class="row mrgn-bttm-md" id="chtwzrd-reply-' + randID + '"><div class="col-xs-9 col-xs-offset-3"><div class="chtwzrd-message text-right pull-right"><p class="mrgn-bttm-0"><span class="wb-inv">You have answered: </span>' + answerObj.value + '</p></div></div></div>');
+			$dropSpot = $(".chtwzrd-history", $selector);
+			$dropSpot.append('<div class="row mrgn-bttm-md" id="chtwzrd-reply-' + randID + '"><div class="col-xs-9 col-xs-offset-3"><div class="chtwzrd-message text-right pull-right"><p class="mrgn-bttm-0"><span class="wb-inv">You have answered: </span>' + answerObj.value + '</p></div></div></div>');
+			$(".chtwzrd-form-params", $form).append('<input type="hidden" name="' + answerObj.queryName + '" value="' + answerObj.queryParam + '" />');
 			hasAnswered = true;
-			redirurl = answerObj.url; 
-			
-			if(!redraw) {
-				$(".chtwzrd-send", $selector).prop('disabled', true);
-				dataoutput.push(answerObj);
-				$form.append('<input type="hidden" name="' + answerObj.queryName + '" value="' + answerObj.queryParam + '" />');
-				
-				setTimeout(function () {
-					var next = answerObj.qNext;
-					if(next == "none") {
-						current = "last";
-					} else {
-						current = datainput.questions[next];
-					}
-					$(".chtwzrd-inputs", $selector).remove("fieldset");
-					$("#chtwzrd-reply-" + randID, $dropspot).focus();
-					appendInteraction($selector, redraw);
-				}, 500);
+			if(answerObj.url != "") {
+				redirurl = answerObj.url; 
 			}
+			
+			var next = answerObj.qNext;
+			if(next == "none") {
+				current = "last";
+			} else {
+				current = datainput.questions[next];
+			}
+			$(".chtwzrd-send", $selector).prop('disabled', true);
+			replyTime = setTimeout(function () {
+				$(".chtwzrd-inputs", $selector).remove("fieldset");
+				$("#chtwzrd-reply-" + randID, $dropSpot).focus();
+				appendInteraction($selector);
+			}, 500);
 		}
 		
-		// Builds an object that is suitable for dataoutput, and returns it
+		// Builds an object that is suitable for answer, and returns it
 		var buildAnswerObj = function($selector) {
 			// The way of taking text value for input is weak at this moment, needs improvement
 			var answerData = $selector.data("chtwzrd-a");
@@ -1000,7 +1006,7 @@ modified: 2019-02-14
 				qNext: answerData.next, 
 				queryName: $selector.attr("name"), 
 				queryParam: $selector.val(), 
-				url: answerData.url, 
+				url: (answerData.url ? answerData.url : ""), 
 				value: $selector.next().html()
 			};
 		}
