@@ -54,39 +54,45 @@ The following links are to the development site (latest build to my jquery3-migr
 * [GitHub jQuery 3 Fork](https://github.com/neilmispelaar/wet-boew/tree/jquery3-migration)
 
 
-### Status Descriptions
-
-<dl class="row">
-    <dt class="col-sm-3">
-        <span class="label label-danger">Not yet started</span>
-    </dt>
-    <dd class="col-sm-9">
-        <p>No build work has commenced for this template.</p>
-    </dd>
-    <dt class="col-sm-3">
-        <span class="label label-warning">On hold</span>
-    </dt>
-    <dd class="col-sm-9">
-        <p>Build work previously started, but for some reason has stopped.</p>
-    </dd>
-    <dt class="col-sm-3">
-        <span class="label label-primary">Build (in progress)</span>
-    </dt>
-    <dd class="col-sm-9">
-        <p>Building the template has started.</p>
-    </dd>
-    <dt class="col-sm-3">
-        <span class="label label-success">Build (complete)</span>
-    </dt>
-    <dd class="col-sm-9">
-        <p>Building the template has been completed.</p>
-    </dd>
-</dl>
-
-
-Open - Currently being worked on
-Closed - Fixed 
-Closed - No changes req'd
+<section class="panel panel-primary">
+    <header class="panel-heading">
+        <h3 class="panel-title">Status Descriptions</h3>
+    </header>
+    <div class="panel-body">
+        <dl class="row">
+            <dt class="col-sm-3">
+                <span class="label label-danger">Not yet started</span>
+            </dt>
+            <dd class="col-sm-9">
+                <p>No testing or coding work has commenced.</p>
+            </dd>
+            <dt class="col-sm-3">
+                <span class="label label-warning">On hold</span>
+            </dt>
+            <dd class="col-sm-9">
+                <p>Testing or coding work previously started, but for some reason has stopped.</p>
+            </dd>
+            <dt class="col-sm-3">
+                <span class="label label-primary">In Progress</span>
+            </dt>
+            <dd class="col-sm-9">
+                <p>Currently testing or addressing coding issues.</p>
+            </dd>
+            <dt class="col-sm-3">
+                <span class="label label-success">Closed (fixed)</span>
+            </dt>
+            <dd class="col-sm-9">
+                <p>Building the template has been completed.</p>
+            </dd>
+             <dt class="col-sm-3">
+                <span class="label label-success">Closed (no change)</span>
+            </dt>
+            <dd class="col-sm-9">
+                <p>Building the template has been completed.</p>
+            </dd>
+        </dl>
+    </div>
+</section>
 
 ### WET Plugins
 
@@ -142,7 +148,20 @@ Closed - No changes req'd
                         No
                     {% endif %}
                 </td>
-                <td>{{ plugin.status }}</td>
+                {% if plugin.status == "Not yet started" %}
+                    {% assign status_class = "danger"  %}
+                {% elsif plugin.status == "On hold" %}
+                    {% assign status_class = "warning"  %}
+                {% elsif plugin.status == "In Progress" %}
+                    {% assign status_class = "active"  %}
+                {% elsif plugin.status == "Closed (fixed)" %}
+                    {% assign status_class = "success"  %}
+                {% elsif plugin.status == "Closed (no change)" %}
+                    {% assign status_class = "success"  %}
+                {% endif %}
+                <td{% if status_class %} class="{% status_class %}"{% endif %}>
+                    {{ plugin.status }}
+                </td>
             </tr>
             {% endfor %}
         </tbody>
