@@ -82,21 +82,17 @@
     },
     {
         "name" : "Data Inview",
-        "error" : { 
-            "breaking_code_change" : false,
-            "console" : false,
-            "visual" : false
-        },
-        "fix" : { 
-            "required" : false,
-            "description" : ""
+        "migrate": {
+            "errors" : false,
+            "descriptions" : [],
+            "notes" : []
         },
         "href" : { 
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/data-inview/data-inview-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/data-inview/data-inview-en.html"
         },
         "code_change_req" : false,
-        "status":"Not yet started"
+        "status":"Closed"
     },
     {
         "name" : "Data Picture",
