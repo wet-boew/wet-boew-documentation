@@ -203,189 +203,156 @@
     },
     {
         "name" : "Footnotes",
-        "error" : { 
-            "breaking_code_change" : false,
-            "console" : false,
-            "visual" : false
-        },
-        "fix" : { 
-            "required" : false,
-            "description" : ""
+        "migrate": {
+            "errors" : false,
+            "descriptions" : [],
+            "notes" : []
         },
         "href" : { 
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/footnotes/footnotes-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/footnotes/footnotes-en.html"
         },
+        "code_change_req" : false,
         "status":"Not yet started"
     },
     {
         "name" : "Form validation",
-        "error" : { 
-            "breaking_code_change" : false,
-            "console" : false,
-            "visual" : false
-        },
-        "fix" : { 
-            "required" : false,
-            "description" : ""
+        "migrate": {
+            "errors" : false,
+            "descriptions" : [],
+            "notes" : []
         },
         "href" : { 
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/formvalid/formvalid-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/formvalid/formvalid-en.html"
         },
+        "code_change_req" : false,
         "status":"Not yet started"
     },
     {
         "name" : "Geomap",
-        "error" : { 
-            "breaking_code_change" : false,
-            "console" : false,
-            "visual" : false
-        },
-        "fix" : { 
-            "required" : false,
-            "description" : ""
+        "migrate": {
+            "errors" : false,
+            "descriptions" : [],
+            "notes" : []
         },
         "href" : { 
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/geomap/geomap-en.html",
             "jquery2x" : ""
         },
+        "code_change_req" : false,
         "status":"Not yet started"
     },
     {
         "name" : "Lightbox",
-        "error" : { 
-            "breaking_code_change" : false,
-            "console" : false,
-            "visual" : false
-        },
-        "fix" : { 
-            "required" : false,
-            "description" : ""
+        "migrate": {
+            "errors" : false,
+            "descriptions" : [],
+            "notes" : []
         },
         "href" : { 
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/lightbox/lightbox-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/lightbox/lightbox-en.html"
         },
+        "code_change_req" : false,
         "status":"Not yet started"
     },
     {
         "name" : "Menu",
-        "error" : { 
-            "breaking_code_change" : false,
-            "console" : false,
-            "visual" : false
-        },
-        "fix" : { 
-            "required" : false,
-            "description" : ""
+        "migrate": {
+            "errors" : false,
+            "descriptions" : [],
+            "notes" : []
         },
         "href" : { 
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/menu/menu-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/menu/menu-en.html"
         },
+        "code_change_req" : false,
         "status":"Not yet started"
     },
     {
         "name" : "Multimedia Player",
-        "error" : { 
-            "breaking_code_change" : false,
-            "console" : false,
-            "visual" : false
-        },
-        "fix" : { 
-            "required" : false,
-            "description" : ""
+        "migrate": {
+            "errors" : false,
+            "descriptions" : [],
+            "notes" : []
         },
         "href" : { 
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/multimedia/multimedia-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/multimedia/multimedia-en.html"
         },
+        "code_change_req" : false,
         "status":"Not yet started"
     },
     {
         "name" : "Overlay",
-        "error" : { 
-            "breaking_code_change" : false,
-            "console" : false,
-            "visual" : false
-        },
-        "fix" : { 
-            "required" : false,
-            "description" : ""
+        "migrate": {
+            "errors" : false,
+            "descriptions" : [],
+            "notes" : []
         },
         "href" : { 
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/overlay/overlay-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/overlay/overlay-en.html"
         },
+        "code_change_req" : false,
         "status":"Not yet started"
     },
     {
         "name" : "Prettify",
-        "error" : { 
-            "breaking_code_change" : false,
-            "console" : false,
-            "visual" : false
-        },
-        "fix" : { 
-            "required" : false,
-            "description" : ""
+        "migrate": {
+            "errors" : false,
+            "descriptions" : [],
+            "notes" : []
         },
         "href" : { 
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/prettify/prettify-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/prettify/prettify-en.html"
         },
+        "code_change_req" : false,
         "status":"Not yet started"
     },
     {
         "name" : "Session Timeout",
-        "error" : { 
-            "breaking_code_change" : false,
-            "console" : false,
-            "visual" : false
-        },
-        "fix" : { 
-            "required" : false,
-            "description" : ""
+        "migrate": {
+            "errors" : false,
+            "descriptions" : [],
+            "notes" : []
         },
         "href" : { 
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/session-timeout/session-timeout-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/session-timeout/session-timeout-en.html"
         },
+        "code_change_req" : false,
         "status":"Not yet started"
     },
     {
         "name" : "Share widget",
-        "error" : { 
-            "breaking_code_change" : false,
-            "console" : false,
-            "visual" : false
-        },
-        "fix" : { 
-            "required" : false,
-            "description" : ""
+        "migrate": {
+            "errors" : false,
+            "descriptions" : [],
+            "notes" : []
         },
         "href" : { 
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/share/share-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/share/share-en.html"
         },
+        "code_change_req" : false,
         "status":"Not yet started"
     },
     {
         "name" : "Tabbed Interface",
-        "error" : { 
-            "breaking_code_change" : false,
-            "console" : false,
-            "visual" : false
-        },
-        "fix" : { 
-            "required" : false,
-            "description" : ""
+        "migrate": {
+            "errors" : false,
+            "descriptions" : [],
+            "notes" : []
         },
         "href" : { 
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/tabs/tabs-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/tabs/tabs-en.html"
         },
+        "code_change_req" : false,
         "status":"Not yet started"
     },
     {
@@ -404,74 +371,63 @@
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/tables/tables-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/tables/tables-en.html"
         },
+        "code_change_req" : false,
         "status":"On hold"
     },
     {
         "name" : "Text highlighting",
-        "error" : { 
-            "breaking_code_change" : false,
-            "console" : false,
-            "visual" : false
-        },
-        "fix" : { 
-            "required" : false,
-            "description" : ""
+        "migrate": {
+            "errors" : false,
+            "descriptions" : [],
+            "notes" : []
         },
         "href" : { 
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/texthighlight/texthighlight-en.html?txthl=avian%20influenza+world+cook+flu-like%20symptoms+Don%27t%20Forget...+causes%20sickness%20in%20birds,%20it%20can%20also%20infect%20people.",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/texthighlight/texthighlight-en.html?txthl=avian%20influenza+world+cook+flu-like%20symptoms+Don%27t%20Forget...+causes%20sickness%20in%20birds,%20it%20can%20also%20infect%20people."
         },
+        "code_change_req" : false,
         "status":"Not yet started"
     },
     {
         "name" : "Toggle",
-        "error" : { 
-            "breaking_code_change" : false,
-            "console" : false,
-            "visual" : false
-        },
-        "fix" : { 
-            "required" : false,
-            "description" : ""
+        "migrate": {
+            "errors" : false,
+            "descriptions" : [],
+            "notes" : []
         },
         "href" : { 
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/toggle/toggle-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/toggle/toggle-en.html"
         },
+        "code_change_req" : false,
         "status":"Not yet started"
     },
     {
         "name" : "Twitter embedded timeline",
-        "error" : { 
-            "breaking_code_change" : false,
-            "console" : false,
-            "visual" : false
-        },
-        "fix" : { 
-            "required" : false,
-            "description" : ""
+        "migrate": {
+            "errors" : false,
+            "descriptions" : [],
+            "notes" : []
         },
         "href" : { 
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/twitter/twitter-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/twitter/twitter-en.html"
         },
+        "code_change_req" : false,
         "status":"Not yet started"
     },
     {
         "name" : "Zebra striping",
-        "error" : { 
-            "breaking_code_change" : false,
-            "console" : false,
-            "visual" : false
-        },
-        "fix" : { 
-            "required" : false,
-            "description" : ""
+        "migrate": {
+            "errors" : false,
+            "descriptions" : [],
+            "notes" : []
         },
         "href" : { 
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/zebra/zebra-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/zebra/zebra-en.html"
         },
+        "code_change_req" : false,
         "status":"Not yet started"
     }
 ]
