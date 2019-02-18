@@ -106,55 +106,61 @@ The following links are to the development site (latest build to my jquery3-migr
                 <td>
                     <a href="{{ plugin.href.jquery3x }}">{{ plugin.name }}<span class="wb-inv"> - jQuery 3 version</span></a> (<a href="{{ plugin.href.jquery2x }}"><span class="wb-inv">{{ plugin.name }} - jQuery </span>v2<span class="wb-inv"> version</span></a>)
                 </td>
-                <td class="{% if plugin.migrate.errors == true %}danger{% else %}success{% endif %}">
-                    {% if plugin.migrate.errors == true %}
-                        Yes
-                    {% else %}
-                        No
-                    {% endif %}
-                </td>
-                <td>
-                    {% if plugin.migrate.descriptions.size > 0 %}
-                        <ul class="list-unstyled">
-                        {% for description in plugin.migrate.descriptions %}
-                            <li>{{ description }}</li>
-                        {% endfor %}
-                        </ul>
-                    {% else %}
-                        No error descriptions
-                    {% endif %}
-                </td>
-                <td>
-                    {% if plugin.migrate.notes.size > 0 %}
-                        <ul class="list-unstyled">
-                        {% for note in plugin.migrate.notes %}
-                            <li>{{ note }}</li>
-                        {% endfor %}
-                        </ul>
-                    {% else %}
-                        No notes
-                    {% endif %}
-                </td>
-                <td>
-                    {% if plugin.code_change_req == true %}
-                        Yes
-                    {% else %}
-                        No
-                    {% endif %}
-                </td>
-                {% assign statusclass = "active"  %}
                 {% if plugin.status == "Not yet started" %}
-                    {% assign statusclass = "danger"  %}
-                {% elsif plugin.status == "On hold" %}
-                    {% assign statusclass = "warning"  %}
-                {% elsif plugin.status == "In Progress" %}
-                    {% assign statusclass = "info"  %}
-                {% elsif plugin.status == "Closed" %}
-                    {% assign statusclass = "success"  %}
-                {% endif %}
-                <td{% if statusclass %} class="{{ statusclass }}"{% endif %}>
-                    {{ plugin.status }}
-                </td>
+                    <td class="danger" colspan="5">
+                        {{ plugin.status }}
+                    </td>
+                {% else %}
+                    <td class="{% if plugin.migrate.errors == true %}danger{% else %}success{% endif %}">
+                        {% if plugin.migrate.errors == true %}
+                            Yes
+                        {% else %}
+                            No
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if plugin.migrate.descriptions.size > 0 %}
+                            <ul class="list-unstyled">
+                            {% for description in plugin.migrate.descriptions %}
+                                <li>{{ description }}</li>
+                            {% endfor %}
+                            </ul>
+                        {% else %}
+                            No error descriptions
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if plugin.migrate.notes.size > 0 %}
+                            <ul class="list-unstyled">
+                            {% for note in plugin.migrate.notes %}
+                                <li>{{ note }}</li>
+                            {% endfor %}
+                            </ul>
+                        {% else %}
+                            No notes
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if plugin.code_change_req == true %}
+                            Yes
+                        {% else %}
+                            No
+                        {% endif %}
+                    </td>
+                    {% assign statusclass = "active"  %}
+                    {% if plugin.status == "Not yet started" %}
+                        {% assign statusclass = "danger"  %}
+                    {% elsif plugin.status == "On hold" %}
+                        {% assign statusclass = "warning"  %}
+                    {% elsif plugin.status == "In Progress" %}
+                        {% assign statusclass = "info"  %}
+                    {% elsif plugin.status == "Closed" %}
+                        {% assign statusclass = "success"  %}
+                    {% endif %}
+                    <td{% if statusclass %} class="{{ statusclass }}"{% endif %}>
+                        {{ plugin.status }}
+                    </td>
+                {% endif %} 
             </tr>
             {% endfor %}
         </tbody>
