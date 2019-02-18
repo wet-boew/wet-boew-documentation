@@ -149,8 +149,6 @@ The following links are to the development site (latest build to my jquery3-migr
                     {% endif %}
                 </td>
                 {% assign statusclass = "active"  %}
-                
-               
                 <td{% if status_class %} class="{{ statusclass }}"{% endif %}>
                     {{ plugin.status }}
                 </td>
