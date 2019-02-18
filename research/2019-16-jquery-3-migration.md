@@ -148,16 +148,17 @@ The following links are to the development site (latest build to my jquery3-migr
                         No
                     {% endif %}
                 </td>
+                {% assign status_class = "active"  %}
                 {% if plugin.status == "Not yet started" %}
-                    {% assign status_class = "danger"  %}
+                    {% status_class = "danger"  %}
                 {% elsif plugin.status == "On hold" %}
-                    {% assign status_class = "warning"  %}
+                    {% status_class = "warning"  %}
                 {% elsif plugin.status == "In Progress" %}
-                    {% assign status_class = "active"  %}
+                    {% status_class = "active"  %}
                 {% elsif plugin.status == "Closed (fixed)" %}
-                    {% assign status_class = "success"  %}
+                    {% status_class = "success"  %}
                 {% elsif plugin.status == "Closed (no change)" %}
-                    {% assign status_class = "success"  %}
+                    {% status_class = "success"  %}
                 {% endif %}
                 <td{% if status_class %} class="{% status_class %}"{% endif %}>
                     {{ plugin.status }}
