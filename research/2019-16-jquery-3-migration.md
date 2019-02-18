@@ -148,7 +148,7 @@ The following links are to the development site (latest build to my jquery3-migr
                 {% elsif plugin.status == "On hold" %}
                     {% assign statusclass = "warning"  %}
                 {% elsif plugin.status == "In Progress" %}
-                    {% assign statusclass = "active"  %}
+                    {% assign statusclass = "info"  %}
                 {% elsif plugin.status == "Closed" %}
                     {% assign statusclass = "success"  %}
                 {% endif %}

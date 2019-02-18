@@ -15,59 +15,65 @@
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/cal-events/cal-events-en.html"
         },
         "code_change_req" : false,
-        "status" : "Not yet started"
+        "status" : "Closed"
     },
     {
         "name" : "Charts and graphs",
         "migrate": {
             "errors" : true,
-            "descriptions" : []
+            "descriptions" : [],
+            "notes" : [
+                "Potential issues with flot"
+            ]
         },
         "href" : { 
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/charts/custom-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/charts/custom-en.html"
         },
-        "status":"Not yet started"
+        "code_change_req" : false,
+        "status":"On hold"
     },
     {
         "name" : "Collapsible alerts",
         "migrate": {
-            "errors" : true,
-            "descriptions" : []
+            "errors" : false,
+            "descriptions" : [],
+            "notes" : []
         },
         "href" : { 
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/collapsible-alerts/collapsible-alerts-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/collapsible-alerts/collapsible-alerts-en.html"
         },
-        "status":"Not yet started"
+        "code_change_req" : false,
+        "status":"Closed"
     },
     {
         "name" : "Country Content",
         "migrate": {
             "errors" : true,
-            "descriptions" : [
-                "whoops",
-                "no idea",
-                "seriously"
-            ]
+            "descriptions" : [],
+            "notes" : []
         },
         "href" : { 
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/country-content/country-content-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/country-content/country-content-en.html"
         },
+        "code_change_req" : false,
         "status":"Not yet started"
     },
     {
         "name" : "Data Ajax",
         "migrate": {
-            "errors" : true,
-            "descriptions" : []
+            "errors" : false,
+            "descriptions" : [],
+            "notes" : []
         },
         "href" : { 
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/data-ajax/data-ajax-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/data-ajax/data-ajax-en.html"
         },
-        "status":"Not yet started"
+        "code_change_req" : false,
+        "status":"Closed"
     },
     {
         "name" : "Data Inview",
@@ -84,6 +90,7 @@
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/data-inview/data-inview-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/data-inview/data-inview-en.html"
         },
+        "code_change_req" : false,
         "status":"Not yet started"
     },
     {
