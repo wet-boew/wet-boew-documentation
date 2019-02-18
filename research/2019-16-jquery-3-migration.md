@@ -148,8 +148,8 @@ The following links are to the development site (latest build to my jquery3-migr
                         No
                     {% endif %}
                 </td>
-                {% assign status_class = "active"  %}
-
+                {% assign statusclass = "active"  %}
+                
                 {% comment %}
                 {% if plugin.status == "Not yet started" %}
                     {% status_class = "danger"  %}
