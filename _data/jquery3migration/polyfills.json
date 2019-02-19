@@ -1,87 +1,82 @@
 [
     {
         "name" : "Datalist",
-        "error" : { 
-            "breaking_code_change" : false,
-            "console" : false,
-            "visual" : false
+        "migrate": {
+            "errors" : true,
+            "descriptions" : [],
+            "notes" : [
+                "Potential issues with flot"
+            ]
         },
-        "fix" : { 
-            "required" : false,
-            "description" : ""
-        },
-        "href" : { 
+        "href" : {
             "jquery3x" : "",
             "jquery2x" : ""
-        },
-        "status":"Nope"
+		},
+		"code_change_req" : false,
+        "status":"Not yet started"
     },
     {
         "name" : "Details/summary",
-        "error" : { 
-            "breaking_code_change" : false,
-            "console" : false,
-            "visual" : false
+        "migrate": {
+            "errors" : true,
+            "descriptions" : [],
+            "notes" : [
+                "Potential issues with flot"
+            ]
         },
-        "fix" : { 
-            "required" : false,
-            "description" : ""
-        },
-        "href" : { 
+        "href" : {
             "jquery3x" : "",
             "jquery2x" : ""
-        },
-        "status":"Nope"
+		},
+		"code_change_req" : false,
+        "status":"Not yet started"
     },
     {
         "name" : "Input (date picker || slider control)",
-        "error" : { 
-            "breaking_code_change" : false,
-            "console" : false,
-            "visual" : false
+        "migrate": {
+            "errors" : true,
+            "descriptions" : [],
+            "notes" : [
+                "Potential issues with flot"
+            ]
         },
-        "fix" : { 
-            "required" : false,
-            "description" : ""
-        },
-        "href" : { 
+        "href" : {
             "jquery3x" : "",
             "jquery2x" : ""
-        },
-        "status":"Nope"
+		},
+		"code_change_req" : false,
+        "status":"Not yet started"
     },
     {
         "name" : "MathML",
-        "error" : { 
-            "breaking_code_change" : false,
-            "console" : false,
-            "visual" : false
+        "migrate": {
+            "errors" : true,
+            "descriptions" : [],
+            "notes" : [
+                "Potential issues with flot"
+            ]
         },
-        "fix" : { 
-            "required" : false,
-            "description" : ""
-        },
-        "href" : { 
+        "href" : {
             "jquery3x" : "",
             "jquery2x" : ""
-        },
-        "status":"Nope"
+		},
+		"code_change_req" : false,
+        "status":"Not yet started"
     },
     {
         "name" : "Meter",
-        "error" : { 
-            "breaking_code_change" : false,
-            "console" : false,
-            "visual" : false
+        "migrate": {
+            "errors" : true,
+            "descriptions" : [],
+            "notes" : [
+                "Potential issues with flot"
+            ]
         },
-        "fix" : { 
-            "required" : false,
-            "description" : ""
-        },
-        "href" : { 
+        "href" : {
             "jquery3x" : "",
             "jquery2x" : ""
-        },
-        "status":"Nope"
+		},
+		"code_change_req" : false,
+        "status":"Not yet started"
     }
 ]
