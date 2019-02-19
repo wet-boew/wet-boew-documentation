@@ -73,7 +73,7 @@
 	{
         "name" : "Input (slider control)",
         "migrate": {
-            "errors" : true,
+            "errors" : false,
             "descriptions" : [],
             "notes" : [
 
@@ -84,15 +84,15 @@
             "jquery2x" : ""
 		},
 		"code_change_req" : false,
-        "status":"Not yet started"
+        "status":"Closed"
     },
     {
         "name" : "MathML",
         "migrate": {
-            "errors" : true,
+            "errors" : false,
             "descriptions" : [],
             "notes" : [
-
+				"Console warnings are present however they are from the MathML library"
             ]
         },
         "href" : {
@@ -100,12 +100,12 @@
             "jquery2x" : ""
 		},
 		"code_change_req" : false,
-        "status":"Not yet started"
+        "status":"Closed"
     },
     {
         "name" : "Meter",
         "migrate": {
-            "errors" : true,
+            "errors" : false,
             "descriptions" : [],
             "notes" : [
 
@@ -116,12 +116,12 @@
             "jquery2x" : ""
 		},
 		"code_change_req" : false,
-        "status":"Not yet started"
+        "status": "Closed"
 	},
 	{
         "name" : "Progress",
         "migrate": {
-            "errors" : true,
+            "errors" : false,
             "descriptions" : [],
             "notes" : [
             ]
@@ -131,6 +131,6 @@
             "jquery2x" : ""
 		},
 		"code_change_req" : false,
-        "status":"Not yet started"
+        "status":"Closed"
     }
 ]
