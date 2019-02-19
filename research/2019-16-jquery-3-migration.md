@@ -232,13 +232,13 @@ To do
                         {% endif %}
                     </td>
                     {% assign statusclass = "active"  %}
-                    {% if plugin.status == "Not yet started" %}
+                    {% if polyfill.status == "Not yet started" %}
                         {% assign statusclass = "danger"  %}
-                    {% elsif plugin.status == "On hold" %}
+                    {% elsif polyfill.status == "On hold" %}
                         {% assign statusclass = "warning"  %}
-                    {% elsif plugin.status == "In Progress" %}
+                    {% elsif polyfill.status == "In Progress" %}
                         {% assign statusclass = "info"  %}
-                    {% elsif plugin.status == "Closed" %}
+                    {% elsif polyfill.status == "Closed" %}
                         {% assign statusclass = "success"  %}
                     {% endif %}
                     <td{% if statusclass %} class="{{ statusclass }}"{% endif %}>
