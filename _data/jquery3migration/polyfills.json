@@ -129,5 +129,50 @@
 		},
 		"code_change_req" : false,
         "status":"Closed"
+	},
+	{
+        "name" : "events.js",
+        "migrate": {
+            "errors" : false,
+            "descriptions" : [],
+            "notes" : [
+            ]
+        },
+        "href" : {
+            "jquery3x" : "https://github.com/neilmispelaar/wet-boew/blob/master/src/polyfills/events/mobile.js",
+            "jquery2x" : ""
+		},
+		"code_change_req" : false,
+        "status":"On hold"
+    },
+	{
+        "name" : "jawsariafixes.js",
+        "migrate": {
+            "errors" : false,
+            "descriptions" : [],
+            "notes" : [
+            ]
+        },
+        "href" : {
+            "jquery3x" : "https://github.com/neilmispelaar/wet-boew/blob/master/src/polyfills/jawsariafixes/jawsariafixes.js",
+            "jquery2x" : ""
+		},
+		"code_change_req" : false,
+        "status":"On hold"
+    },
+	{
+        "name" : "svg.js",
+        "migrate": {
+            "errors" : false,
+            "descriptions" : [],
+            "notes" : [
+            ]
+        },
+        "href" : {
+            "jquery3x" : "https://github.com/neilmispelaar/wet-boew/blob/master/src/polyfills/svg/svg.js",
+            "jquery2x" : ""
+		},
+		"code_change_req" : false,
+        "status":"On hold"
     }
 ]
