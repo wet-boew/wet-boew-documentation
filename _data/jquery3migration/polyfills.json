@@ -1,0 +1,178 @@
+[
+    {
+        "name" : "Datalist (autocomplete)",
+        "migrate": {
+            "errors" : true,
+            "descriptions" : [
+				"Unable to get property 'isPersonal' of undefined or null reference"
+			],
+            "notes" : [
+				"This is not a jQuery 3 error"
+            ]
+        },
+        "href" : {
+            "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/datalist/datalist-en.html",
+            "jquery2x" : ""
+		},
+		"code_change_req" : false,
+        "status":"On hold"
+	},
+	{
+        "name" : "Datalist (autocomplete) Dynamic",
+        "migrate": {
+            "errors" : true,
+            "descriptions" : [
+				"Unable to get property 'isPersonal' of undefined or null reference"
+			],
+            "notes" : [
+				"This is not a jQuery 3 error"
+            ]
+        },
+        "href" : {
+            "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/datalist/datalist-dynamic-en.html",
+            "jquery2x" : ""
+		},
+		"code_change_req" : false,
+        "status":"On hold"
+    },
+    {
+        "name" : "Details/summary",
+        "migrate": {
+            "errors" : false,
+            "descriptions" : [],
+            "notes" : [
+
+            ]
+        },
+        "href" : {
+            "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/details/details-en.html",
+            "jquery2x" : ""
+		},
+		"code_change_req" : false,
+        "status":"Closed"
+    },
+    {
+        "name" : "Input (date picker)",
+        "migrate": {
+            "errors" : false,
+            "descriptions" : [],
+            "notes" : [
+
+            ]
+        },
+        "href" : {
+            "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/datepicker/datepicker-en.html",
+            "jquery2x" : ""
+		},
+		"code_change_req" : false,
+        "status":"Closed"
+	},
+	{
+        "name" : "Input (slider control)",
+        "migrate": {
+            "errors" : false,
+            "descriptions" : [],
+            "notes" : [
+
+            ]
+        },
+        "href" : {
+            "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/slider/slider-en.html",
+            "jquery2x" : ""
+		},
+		"code_change_req" : false,
+        "status":"Closed"
+    },
+    {
+        "name" : "MathML",
+        "migrate": {
+            "errors" : false,
+            "descriptions" : [],
+            "notes" : [
+				"Console warnings are present however they are from the MathML library"
+            ]
+        },
+        "href" : {
+            "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/mathml/mathml-en.html",
+            "jquery2x" : ""
+		},
+		"code_change_req" : false,
+        "status":"Closed"
+    },
+    {
+        "name" : "Meter",
+        "migrate": {
+            "errors" : false,
+            "descriptions" : [],
+            "notes" : [
+
+            ]
+        },
+        "href" : {
+            "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/meter/meter-en.html",
+            "jquery2x" : ""
+		},
+		"code_change_req" : false,
+        "status": "Closed"
+	},
+	{
+        "name" : "Progress",
+        "migrate": {
+            "errors" : false,
+            "descriptions" : [],
+            "notes" : [
+            ]
+        },
+        "href" : {
+            "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/progress/progress-en.html",
+            "jquery2x" : ""
+		},
+		"code_change_req" : false,
+        "status":"Closed"
+	},
+	{
+        "name" : "events.js",
+        "migrate": {
+            "errors" : false,
+            "descriptions" : [],
+            "notes" : [
+            ]
+        },
+        "href" : {
+            "jquery3x" : "https://github.com/neilmispelaar/wet-boew/blob/master/src/polyfills/events/mobile.js",
+            "jquery2x" : ""
+		},
+		"code_change_req" : false,
+        "status":"On hold"
+    },
+	{
+        "name" : "jawsariafixes.js",
+        "migrate": {
+            "errors" : false,
+            "descriptions" : [],
+            "notes" : [
+            ]
+        },
+        "href" : {
+            "jquery3x" : "https://github.com/neilmispelaar/wet-boew/blob/master/src/polyfills/jawsariafixes/jawsariafixes.js",
+            "jquery2x" : ""
+		},
+		"code_change_req" : false,
+        "status":"On hold"
+    },
+	{
+        "name" : "svg.js",
+        "migrate": {
+            "errors" : false,
+            "descriptions" : [],
+            "notes" : [
+            ]
+        },
+        "href" : {
+            "jquery3x" : "https://github.com/neilmispelaar/wet-boew/blob/master/src/polyfills/svg/svg.js",
+            "jquery2x" : ""
+		},
+		"code_change_req" : false,
+        "status":"On hold"
+    }
+]

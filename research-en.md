@@ -25,6 +25,8 @@ List of finding and ongoing research related to WET and it's features
 	* Status: In progress
 * [2019-15 - Exploration of a chat like design pattern](research/2019-15-exploration-chat-pattern.html)
 	* Status: In progress
+* [2019-16 - jQuery 3 migration in WET 4](research/2019-16-jquery-3-migration.html)
+	* Status: In progress
 
 ## Stale/on hold
 
