@@ -10,9 +10,9 @@
     {
         "name" : "Cross-domain script requests must be declared",
         "category" : "Ajax",
-        "description" : "Lorem ipsum",
-        "search_text" : "",
-        "fix_text" : "",
+        "description" : "When making a request via <code>jQuery.ajax()</code> or <code>jQuery.get()</code> for a script on a domain other than the one that hosts the document, you must now explicitly specify <code>dataType: \"script\"</code> in the options. This prevents the possibility of an attack where the remote site delivers non-script content but later decides to serve a script that has malicious intent. Since <code>jQuery.getScript()</code> explicitly sets <code>dataType: \"script\"</code> it is unaffected by this change.",
+        "search_text" : "<code>.ajax( | .get(</code>",
+        "fix_text" : "If jQuery.ajax() or jQuery.get() tries to grab a script on a domain other than the one that hosts the document, you must now explicitly specify <code>dataType: \"script\"</code> in the options.",
         "href" : "https://jquery.com/upgrade-guide/3.0/#breaking-change-cross-domain-script-requests-must-be-declared"
     },
     {
