@@ -4,12 +4,10 @@
         "migrate": {
             "errors" : true,
             "descriptions" : [
-				"Unable to get property 'isPersonal' of undefined or null reference",
-				"jQuery.fn.removeAttr no longer sets boolean properties: open"
-
+				"Unable to get property 'isPersonal' of undefined or null reference"
 			],
             "notes" : [
-				"removeAttr has to be manually checked"
+				"This is not a jQuery 3 error"
             ]
         },
         "href" : {
@@ -24,11 +22,10 @@
         "migrate": {
             "errors" : true,
             "descriptions" : [
-				"Unable to get property 'isPersonal' of undefined or null reference",
-				"jQuery.fn.removeAttr no longer sets boolean properties: open"
+				"Unable to get property 'isPersonal' of undefined or null reference"
 			],
             "notes" : [
-				"removeAttr has to be manually checked"
+				"This is not a jQuery 3 error"
             ]
         },
         "href" : {
