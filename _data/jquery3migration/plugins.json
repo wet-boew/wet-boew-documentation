@@ -55,8 +55,8 @@
                 "Blocked loading mixed active content \"http://freegeoip.net/shutdown\""
             ],
             "notes" : [
-                "Will attempt ot fix by adding a secure connection",
-                "I don't think this is a jQuery 3 thing"
+                "This is not a jQuery 3 thing",
+				"The freegeoip service has been deprecated and so this plugin can't be used anymore"
             ]
         },
         "href" : {
@@ -64,7 +64,7 @@
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/country-content/country-content-en.html"
         },
         "code_change_req" : false,
-        "status":"On hold"
+        "status":"Closed"
     },
     {
         "name" : "Data Ajax",
