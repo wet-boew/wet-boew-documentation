@@ -10,7 +10,7 @@
                 "removeAttr isn't necessarily an issue - has to be manually checked"
             ]
         },
-        "href" : { 
+        "href" : {
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/cal-events/cal-events-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/cal-events/cal-events-en.html"
         },
@@ -26,7 +26,7 @@
                 "Potential issues with flot"
             ]
         },
-        "href" : { 
+        "href" : {
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/charts/custom-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/charts/custom-en.html"
         },
@@ -40,7 +40,7 @@
             "descriptions" : [],
             "notes" : []
         },
-        "href" : { 
+        "href" : {
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/collapsible-alerts/collapsible-alerts-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/collapsible-alerts/collapsible-alerts-en.html"
         },
@@ -59,7 +59,7 @@
                 "I don't think this is a jQuery 3 thing"
             ]
         },
-        "href" : { 
+        "href" : {
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/country-content/country-content-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/country-content/country-content-en.html"
         },
@@ -73,7 +73,7 @@
             "descriptions" : [],
             "notes" : []
         },
-        "href" : { 
+        "href" : {
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/data-ajax/data-ajax-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/data-ajax/data-ajax-en.html"
         },
@@ -87,7 +87,7 @@
             "descriptions" : [],
             "notes" : []
         },
-        "href" : { 
+        "href" : {
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/data-inview/data-inview-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/data-inview/data-inview-en.html"
         },
@@ -101,7 +101,7 @@
             "descriptions" : [],
             "notes" : []
         },
-        "href" : { 
+        "href" : {
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/data-picture/data-picture-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/data-picture/data-picture-en.html"
         },
@@ -120,7 +120,7 @@
                 "I tested it a second time and this warning did not show up"
             ]
         },
-        "href" : { 
+        "href" : {
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/dismissable-content/dismissable-content-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/dismissable-content/dismissable-content-en.html"
         },
@@ -134,7 +134,7 @@
             "descriptions" : [],
             "notes" : []
         },
-        "href" : { 
+        "href" : {
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/equalheight/equalheight-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/equalheight/equalheight-en.html"
         },
@@ -148,7 +148,7 @@
             "descriptions" : [],
             "notes" : []
         },
-        "href" : { 
+        "href" : {
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/facebook/facebook-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/facebook/facebook-en.html"
         },
@@ -162,7 +162,7 @@
             "descriptions" : [],
             "notes" : []
         },
-        "href" : { 
+        "href" : {
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/favicon/favicon-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/favicon/favicon-en.html"
         },
@@ -180,7 +180,7 @@
                 "removeAttr isn't necessarily an issue - has to be manually checked"
             ]
         },
-        "href" : { 
+        "href" : {
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/feeds/feeds-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/feeds/feeds-en.html"
         },
@@ -194,7 +194,7 @@
             "descriptions" : [],
             "notes" : []
         },
-        "href" : { 
+        "href" : {
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/filter/filter-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/filter/filter-en.html"
         },
@@ -208,7 +208,7 @@
             "descriptions" : [],
             "notes" : []
         },
-        "href" : { 
+        "href" : {
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/footnotes/footnotes-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/footnotes/footnotes-en.html"
         },
@@ -222,7 +222,7 @@
             "descriptions" : [],
             "notes" : []
         },
-        "href" : { 
+        "href" : {
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/formvalid/formvalid-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/formvalid/formvalid-en.html"
         },
@@ -236,7 +236,7 @@
             "descriptions" : [],
             "notes" : []
         },
-        "href" : { 
+        "href" : {
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/geomap/geomap-en.html",
             "jquery2x" : ""
         },
@@ -250,7 +250,7 @@
             "descriptions" : [],
             "notes" : []
         },
-        "href" : { 
+        "href" : {
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/lightbox/lightbox-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/lightbox/lightbox-en.html"
         },
@@ -260,16 +260,20 @@
     {
         "name" : "Menu",
         "migrate": {
-            "errors" : false,
-            "descriptions" : [],
-            "notes" : []
+            "errors" : true,
+            "descriptions" : [
+				"jQuery.fn.removeAttr no longer sets boolean properties"
+			],
+            "notes" : [
+				"removeAttr isn't necessarily an issue - has to be manually checked"
+			]
         },
-        "href" : { 
+        "href" : {
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/menu/menu-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/menu/menu-en.html"
         },
         "code_change_req" : false,
-        "status":"Not yet started"
+        "status":"On hold"
     },
     {
         "name" : "Multimedia Player",
@@ -278,7 +282,7 @@
             "descriptions" : [],
             "notes" : []
         },
-        "href" : { 
+        "href" : {
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/multimedia/multimedia-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/multimedia/multimedia-en.html"
         },
@@ -297,7 +301,7 @@
                 "Further research is required for this"
             ]
         },
-        "href" : { 
+        "href" : {
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/overlay/overlay-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/overlay/overlay-en.html"
         },
@@ -311,7 +315,7 @@
             "descriptions" : [],
             "notes" : []
         },
-        "href" : { 
+        "href" : {
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/prettify/prettify-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/prettify/prettify-en.html"
         },
@@ -325,7 +329,7 @@
             "descriptions" : [],
             "notes" : []
         },
-        "href" : { 
+        "href" : {
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/session-timeout/session-timeout-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/session-timeout/session-timeout-en.html"
         },
@@ -344,7 +348,7 @@
                 "Further testing and understanding of this error is required"
             ]
         },
-        "href" : { 
+        "href" : {
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/share/share-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/share/share-en.html"
         },
@@ -362,7 +366,7 @@
                 "removeAttr isn't necessarily an issue - has to be manually checked"
             ]
         },
-        "href" : { 
+        "href" : {
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/tabs/tabs-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/tabs/tabs-en.html"
         },
@@ -381,7 +385,7 @@
                 "Errors can be triggered by using the table pagination functionality"
             ]
         },
-        "href" : { 
+        "href" : {
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/tables/tables-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/tables/tables-en.html"
         },
@@ -395,7 +399,7 @@
             "descriptions" : [],
             "notes" : []
         },
-        "href" : { 
+        "href" : {
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/texthighlight/texthighlight-en.html?txthl=avian%20influenza+world+cook+flu-like%20symptoms+Don%27t%20Forget...+causes%20sickness%20in%20birds,%20it%20can%20also%20infect%20people.",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/texthighlight/texthighlight-en.html?txthl=avian%20influenza+world+cook+flu-like%20symptoms+Don%27t%20Forget...+causes%20sickness%20in%20birds,%20it%20can%20also%20infect%20people."
         },
@@ -409,7 +413,7 @@
             "descriptions" : [],
             "notes" : []
         },
-        "href" : { 
+        "href" : {
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/toggle/toggle-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/toggle/toggle-en.html"
         },
@@ -423,7 +427,7 @@
             "descriptions" : [],
             "notes" : []
         },
-        "href" : { 
+        "href" : {
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/twitter/twitter-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/twitter/twitter-en.html"
         },
@@ -437,7 +441,7 @@
             "descriptions" : [],
             "notes" : []
         },
-        "href" : { 
+        "href" : {
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/zebra/zebra-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/zebra/zebra-en.html"
         },
