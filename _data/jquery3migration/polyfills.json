@@ -1,47 +1,86 @@
 [
     {
-        "name" : "Datalist",
+        "name" : "Datalist (autocomplete)",
         "migrate": {
             "errors" : true,
-            "descriptions" : [],
+            "descriptions" : [
+				"Unable to get property 'isPersonal' of undefined or null reference",
+				"jQuery.fn.removeAttr no longer sets boolean properties: open"
+
+			],
             "notes" : [
-                "Potential issues with flot"
+				"removeAttr has to be manually checked"
             ]
         },
         "href" : {
-            "jquery3x" : "",
+            "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/datalist/datalist-en.html",
             "jquery2x" : ""
 		},
 		"code_change_req" : false,
-        "status":"Not yet started"
+        "status":"On hold"
+	},
+	{
+        "name" : "Datalist (autocomplete) Dynamic",
+        "migrate": {
+            "errors" : true,
+            "descriptions" : [
+				"Unable to get property 'isPersonal' of undefined or null reference",
+				"jQuery.fn.removeAttr no longer sets boolean properties: open"
+			],
+            "notes" : [
+				"removeAttr has to be manually checked"
+            ]
+        },
+        "href" : {
+            "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/datalist/datalist-dynamic-en.html",
+            "jquery2x" : ""
+		},
+		"code_change_req" : false,
+        "status":"On hold"
     },
     {
         "name" : "Details/summary",
         "migrate": {
-            "errors" : true,
+            "errors" : false,
             "descriptions" : [],
             "notes" : [
-                "Potential issues with flot"
+
             ]
         },
         "href" : {
-            "jquery3x" : "",
+            "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/details/details-en.html",
             "jquery2x" : ""
 		},
 		"code_change_req" : false,
-        "status":"Not yet started"
+        "status":"Closed"
     },
     {
-        "name" : "Input (date picker || slider control)",
+        "name" : "Input (date picker)",
+        "migrate": {
+            "errors" : false,
+            "descriptions" : [],
+            "notes" : [
+
+            ]
+        },
+        "href" : {
+            "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/datepicker/datepicker-en.html",
+            "jquery2x" : ""
+		},
+		"code_change_req" : false,
+        "status":"Closed"
+	},
+	{
+        "name" : "Input (slider control)",
         "migrate": {
             "errors" : true,
             "descriptions" : [],
             "notes" : [
-                "Potential issues with flot"
+
             ]
         },
         "href" : {
-            "jquery3x" : "",
+            "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/slider/slider-en.html",
             "jquery2x" : ""
 		},
 		"code_change_req" : false,
@@ -53,11 +92,11 @@
             "errors" : true,
             "descriptions" : [],
             "notes" : [
-                "Potential issues with flot"
+
             ]
         },
         "href" : {
-            "jquery3x" : "",
+            "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/mathml/mathml-en.html",
             "jquery2x" : ""
 		},
 		"code_change_req" : false,
@@ -69,11 +108,26 @@
             "errors" : true,
             "descriptions" : [],
             "notes" : [
-                "Potential issues with flot"
+
             ]
         },
         "href" : {
-            "jquery3x" : "",
+            "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/meter/meter-en.html",
+            "jquery2x" : ""
+		},
+		"code_change_req" : false,
+        "status":"Not yet started"
+	},
+	{
+        "name" : "Progress",
+        "migrate": {
+            "errors" : true,
+            "descriptions" : [],
+            "notes" : [
+            ]
+        },
+        "href" : {
+            "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/progress/progress-en.html",
             "jquery2x" : ""
 		},
 		"code_change_req" : false,
