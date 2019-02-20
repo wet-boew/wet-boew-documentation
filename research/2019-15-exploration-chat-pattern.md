@@ -346,7 +346,8 @@ Markup Basic Structure
 
 ## Ongoing
 
-* Mobile Tests
+* Next step... Match code structure with WET and optimize
+* Fix change of focus issue
 * Improve Documentation
 
 ## How-to
