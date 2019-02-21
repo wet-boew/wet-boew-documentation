@@ -10,70 +10,24 @@ modified: 2018-05-03
 
 ## Release of WET
 
+There is now a new definition how the versionning number are assigned. The wet-boew are now following a variant of semantic versioning 2.0 where the version number is prefixed with a architecture number.
+
 [Nightly build](https://github.com/wet-boew/wet-boew-dist/archive/v4.0-dist.zip)
 
-### Pre-release notes of WET v4.0.30
+### Pre-release notes of WET v4.0.31
 
 <ul>
-	<li>20178-10-18
+	<li>2019-02-21
 		<ul>
-			<li>GCWeb
-				<ul>
-					<li>Patch - Documentation of ESDC campaign template changes. #1410</li>
-					<li>Major - Markup change in each template - Removal of Google analytic tracking code. #1411</li>
-					<li>Minor - New feature - Float first data column in a data table with row header. #1412</li>
-				</ul>
-			</li>
-			<li>WET-BOEW
-				<ul>
-					<li>Minor - Data tables - Filtering UI - Support for ```input[type=date]``` reset</li>
-				</ul>
-			</li>
-		</ul>
-	</li>
-	<li>2018-10-10
+			<li>Minor - Update markup of the skip nav link. now it wrap with a nav element (PR# 8570) This don't cause any backward breaking change</li>
+
+### Pre-release notes of GCWeb v5.1
+
+
+<ul>
+	<li>2019-02-21
 		<ul>
-			<li>GCWeb
-				<ul>
-					<li>Minor - Markup change in Campaign 2 (ESDC) (To support equalheight plugin)</li>
-				</ul>
-			</li>
-			<li>WET developer - Major - Build script update
-				<ul>
-					<li>Need to update to the latest NodeJS LTS (npm 5.10/6.x) which support relative version in package.lock.</li>
-					<li>GCWeb - Need to update to the latest NodeJS LTS (npm 5.10/6.x) which support relative version in package.lock.</li>
-				</ul>
-			</li>
-		</ul>
-	</li>
-	<li>2018-09-20
-		<ul>
-			<li>Need to be tested
-				<ul>
-					<li>PR #8394 - Need re-build for testing</li>
-					<li>PR #8456 - Need testing</li>
-				</ul>
-			</li>
-			<li>Patch
-				<ul>
-					<li>Lightbox - Close the overlay when clicking on a same page link</li>
-					<li>GCWeb - Global - Fix lint spacing</li>
-				</ul>
-			</li>
-			<li>WET developer - Major - Build script update
-				<ul>
-					<li>Bump grunt HTML</li>
-					<li>GCWeb - Lint space in .editorconfig</li>
-					<li>GCWeb - Add lintspace grunt task</li>
-				</ul>
-			</li>
-			<li>Notes
-				<ul>
-					<li>GCWeb - Italic are going to be allowed for some use case</li>
-					<li>WET-BOEW - Country data AJAX is broken</li>
-					<li>WET-BOEW - Twitter embedded timeline is broken</li>
-				</ul>
-			</li>
+			<li>Minor - Update markup of the skip nav link. now it wrap with a nav element (PR# 8570) This don't cause any backward breaking change</li>
 		</ul>
 	</li>
 </ul>
@@ -82,46 +36,14 @@ modified: 2018-05-03
 
 [Looking to download stable release of WET?](http://wet-boew.github.io/wet-boew/docs/versions/dwnld-en.html)
 
-Latest version: 4.0.28.1 released on 2018-04-27
-
-{::nomarkdown}
-
-
-<table class="table table-bordered">
-	<tr>
-		<th>Version</th>
-		<th>Planned for</th>
-		<th>Summary</th>
-		<th>Notes</th>
-	</tr>
-	<tr>
-		<th>4.0.29 (dev)</th>
-		<td>2018-08-20</td>
-		<td></td>
-		<td></td>
-	</tr>
-	<tr>
-		<th>4.1</th>
-		<td>TBD</td>
-		<td>Not defined</td>
-		<td></td>
-	</tr>
-	<tr>
-		<th>5.0 (alpha)</th>
-		<td>alpha mid/end of 2018</td>
-		<td></td>
-		<td>On its way</td>
-	</tr>
-</table>
-
-{:/}
+Latest version: 4.0.30 released on 2019-02-11
 
 
 ## Release of GCWeb
 
-Release of GCWeb include fixes / improvement made to wet-boew.
+Release of GCWeb include fixes / improvement made with the wet-boew release v4.0.30.
 
-Latest released version: 4.0.27 on
+Latest released version: 5.0.0 on 2019-02-11
 
 {::nomarkdown}
 
