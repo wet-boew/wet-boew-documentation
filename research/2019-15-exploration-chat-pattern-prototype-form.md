@@ -262,8 +262,8 @@ modified: 2019-02-14
 	min-width: 60px;
 	position: relative;
 }
-.chtwzrd-message:focus-visible {
-	outline: 1px dotted #333;
+.chtwzrd-message:focus {
+    box-shadow: 0 0 4px #666;
 }
 .chtwzrd-message, .chtwzrd-container label {
 	background-color: #ddd;
@@ -385,7 +385,6 @@ modified: 2019-02-14
 		flex-shrink: 0;
 		height: 75px;
 	}
-
 	.chtwzrd-noscroll {
 		overflow: hidden !important;
 	}
@@ -684,6 +683,7 @@ var initiatechtwzrd = function($selector, input) {
 		$conversation = $(".chtwzrd-history"),
 		$minimize = $(".chtwzrd-min"),
 		$basiclink = $(".chtwzrd-basic-link"),
+		$chtwzrdlink = $(".chtwzrd-link"),
 		$focusedBeforechtwzrd = "",
 		$firstTabStop = $minimize,
 		$lastTabStop = $basiclink;
@@ -723,6 +723,13 @@ var initiatechtwzrd = function($selector, input) {
 		}
 	}
 
+	// Open Chat from the notification message
+	$(".chtwzrd-bubble-wrap p").on("click", function(event) {
+		if(!$(this).hasClass("chtwzrd-notif-close")) {
+			$chtwzrdlink.click();
+		}
+	});
+
 	// Close notification aside bubble
 	$(".chtwzrd-notif-close").on("click", function (event) {
 		event.preventDefault();
@@ -743,7 +750,7 @@ var initiatechtwzrd = function($selector, input) {
 	});
 
 	// Show chat wizard and hide basic form
-	$(".chtwzrd-link").on("click", function(event) {
+	$chtwzrdlink.on("click", function(event) {
 		event.preventDefault();
 
 		$basic.stop().hide();
@@ -1009,14 +1016,17 @@ var waitingBot = function($selector) {
 var appendReply = function($selector, answerObj) {
 	var randID = Math.floor((Math.random() * 1000000) + 1000);
 	$dropSpot = $(".chtwzrd-history", $selector);
-	$dropSpot.append('<div class="row mrgn-bttm-md" id="chtwzrd-reply-' + randID + '"><div class="col-xs-9 col-xs-offset-3"><div class="chtwzrd-message text-right pull-right"><p class="mrgn-bttm-0"><span class="wb-inv">You have answered: </span>' + answerObj.value + '</p></div></div></div>');
+	$dropSpot.append('<div class="row mrgn-bttm-md" id="chtwzrd-reply-' + answerObj.queryName + '-' + randID + '"><div class="col-xs-9 col-xs-offset-3"><div class="chtwzrd-message text-right pull-right"><p class="mrgn-bttm-0"><span class="wb-inv">You have answered: </span>' + answerObj.value + '</p></div></div></div>');
 	$(".chtwzrd-form-params", $form).append('<input type="hidden" name="' + answerObj.queryName + '" value="' + answerObj.queryParam + '" />');
 	hasAnswered = true;
 	if(answerObj.url != "") {
 		redirurl = answerObj.url; 
 	}
 
-	var next = answerObj.qNext;
+	var next = answerObj.qNext,
+		$reply = $("#chtwzrd-reply-" + answerObj.queryName + "-" + randID, $dropSpot);
+
+	$reply.attr("tabindex", "0");
 	if(next == "none") {
 		current = "last";
 	} else {
@@ -1025,7 +1035,8 @@ var appendReply = function($selector, answerObj) {
 	$(".chtwzrd-send", $selector).prop('disabled', true);
 	replyTime = setTimeout(function () {
 		$(".chtwzrd-inputs", $selector).remove("fieldset");
-		$("#chtwzrd-reply-" + randID, $dropSpot).focus();
+		$reply.focus();
+		$reply.attr("tabindex", "-1");
 		appendInteraction($selector);
 	}, 500);
 }
