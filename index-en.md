@@ -60,6 +60,6 @@ To join: Contact Pierre Dubois, you can find his contact information on gccollab
 ### Roadmap
 Location: 200 promenade du portage, Gatineau, Room 2D302
 
-* February 21, 2019
+* In mid-April, the invite would be sent in March. 
 
 [Read the summary of the previous meeting](governance/meeting.html)
