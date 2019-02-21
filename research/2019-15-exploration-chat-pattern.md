@@ -352,4 +352,163 @@ Markup Basic Structure
 
 ## How-to
 
-Add a form to a page, including the "wb-chtwzrd" class, and using the right data-attributes in that form (to be continued...)
+In order to be configured properly, you need the following:
+
+* Add a form to a page and include the "wb-chtwzrd" class to either the form or its container (if it is contained in a row on its own).
+* In the form tag, you must include the a data-attribute named "data-wb-chtwzrd", with the following properties inside of it, in brackets {}:
+	* formType: "dynamic" or "static". 
+	* defaultDestination: "xyz.html".
+	* sendWizard: "string". 
+	* sendForm: "string". 
+	* titleWizard: "string". 
+	* titleForm: "string". 
+	* startText: "string". 
+	* endText: "string". 
+	* introTextWizard: "string". 
+	* introTextForm: "string". 
+	* first: "1".
+* The only inputs that can be handled by the plugin are radio buttons at the moment. A proper HTML markup must be used for the plugin to catch them. The following structure is to be followed:
+	* fieldset > legend > input.
+* Along with the proper markup, a data-attribute called "data-chtwzrd-q" must be added to every legend tag containing the inputs, with the following properties:
+	* qId: "1".
+	* labelWizard: "Are you:".
+* Every single input tag must have a data-attribute called "data-chtwzrd-a", containing the following properties: 
+	* next: "2".
+	* url: "wxyz.html".
+
+## Example
+
+{::nomarkdown}
+{% raw %}
+<details>
+<summary>See HTML Code</summary>
+<pre>
+<code>
+&lt;div class="container wb-chtwzrd chtwzrd-basic"&gt;
+	&lt;div class="row"&gt;
+		&lt;section class="col-md-12"&gt;
+			&lt;h2&gt;Help us help you&lt;/h2&gt;
+			&lt;form class="mrgn-bttm-xl" data-wb-chtwzrd='{"sendWizard":"Show results", "first":"q1", "titleWizard":"I can help you find the information you need", "startText":"Hi! I can help direct you to programs and services you might be interested in. Let&apos;s begin...", "endText":"Thank you. I have built a page with results you may find resourceful."}' action="page1.html"&gt;
+				&lt;p data-chtwzrd-intro='First, if you are an employer or organization looking for funding, you can find relevant information on the &lt;a href="pagex.html"&gt;funding page&lt;/a&gt;.'&gt;If you are an employer or organization looking for funding, you can find relevant information on the &lt;a href="pagex.html"&gt;funding page&lt;/a&gt;.&lt;/p&gt;
+				&lt;fieldset&gt;
+					&lt;legend data-chtwzrd-q='{"labelWizard":"Are you:", "qId":"q1"}'&gt;What would you describe yourself as?&lt;/legend&gt;
+					&lt;ul class="list-unstyled mrgn-tp-md"&gt;
+						&lt;li&gt;
+							&lt;label&gt;
+								&lt;input type="radio" value="young-canadian" name="describe" data-chtwzrd-a='{"next":"q2"}' /&gt;
+								&lt;span&gt;a young Canadian&lt;/span&gt;
+							&lt;/label&gt;
+						&lt;/li&gt;
+						&lt;li&gt;
+							&lt;label&gt;
+								&lt;input type="radio" value="employer-organization-funding-support-youth" name="describe" data-chtwzrd-a='{"next":"none", "url":"page2.html"}' /&gt;
+								&lt;span&gt;an employer or organization looking for funding to support youth&lt;/span&gt;
+							&lt;/label&gt;
+						&lt;/li&gt;
+						&lt;li&gt;
+							&lt;label&gt;
+								&lt;input type="radio" value="none-above" name="describe" data-chtwzrd-a='{"next":"q3"}' /&gt;
+								&lt;span&gt;None of the above&lt;/span&gt;
+							&lt;/label&gt;
+						&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/fieldset&gt;
+				&lt;fieldset&gt;
+					&lt;legend data-chtwzrd-q='{"labelWizard":"Great! And are you:", "qId":"q2"}'&gt;In what situation are you?&lt;/legend&gt;
+					&lt;ul class="list-unstyled mrgn-tp-md"&gt;
+						&lt;li&gt;
+							&lt;label&gt;
+								&lt;input type="radio" value="high-school" name="situation" data-chtwzrd-a='{"next":"q3"}' /&gt;
+								&lt;span&gt;a high school student&lt;/span&gt;
+							&lt;/label&gt;
+						&lt;/li&gt;
+						&lt;li&gt;
+							&lt;label&gt;
+								&lt;input type="radio" value="cegep-student" name="situation" data-chtwzrd-a='{"next":"q3"}' /&gt;
+								&lt;span&gt;a CÉGEP student&lt;/span&gt;
+							&lt;/label&gt;
+						&lt;/li&gt;
+						&lt;li&gt;
+							&lt;label&gt;
+								&lt;input type="radio" value="post-secondary" name="situation" data-chtwzrd-a='{"next":"q3"}' /&gt;
+								&lt;span&gt;a post-secondary school student&lt;/span&gt;
+							&lt;/label&gt;
+						&lt;/li&gt;
+						&lt;li&gt;
+							&lt;label&gt;
+								&lt;input type="radio" value="ready-start-career" name="situation" data-chtwzrd-a='{"next":"q3"}' /&gt;
+								&lt;span&gt;ready to start a career&lt;/span&gt;
+							&lt;/label&gt;
+						&lt;/li&gt;
+						&lt;li&gt;
+							&lt;label&gt;
+								&lt;input type="radio" value="not-school-not-working" name="situation" data-chtwzrd-a='{"next":"q3"}' /&gt;
+								&lt;span&gt;not in school and not working&lt;/span&gt;
+							&lt;/label&gt;
+						&lt;/li&gt;
+						&lt;li&gt;
+							&lt;label&gt;
+								&lt;input type="radio" value="none" name="situation" data-chtwzrd-a='{"next":"q3"}' /&gt;
+								&lt;span&gt;none of these&lt;/span&gt;
+							&lt;/label&gt;
+						&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/fieldset&gt;
+				&lt;fieldset&gt;
+					&lt;legend data-chtwzrd-q='{"labelWizard":"Awesome! And would you like to:", "qId":"q3"}'&gt;What is your goal?&lt;/legend&gt;
+					&lt;ul class="list-unstyled mrgn-tp-md"&gt;
+						&lt;li&gt;
+							&lt;label&gt;
+								&lt;input type="radio" value="get-job" name="goal" data-chtwzrd-a='{"next":"none", "url":"page3.html"}' /&gt;
+								&lt;span&gt;get a job&lt;/span&gt;
+							&lt;/label&gt;
+						&lt;/li&gt;
+						&lt;li&gt;
+							&lt;label&gt;
+								&lt;input type="radio" value="develop-skills" name="goal" data-chtwzrd-a='{"next":"none", "url":"page4.html"}' /&gt;
+								&lt;span&gt;develop skills&lt;/span&gt;
+							&lt;/label&gt;
+						&lt;/li&gt;
+						&lt;li&gt;
+							&lt;label&gt;
+								&lt;input type="radio" value="explore-careers" name="goal" data-chtwzrd-a='{"next":"none", "url":"page5.html"}' /&gt;
+								&lt;span&gt;explore careers&lt;/span&gt;
+							&lt;/label&gt;
+						&lt;/li&gt;
+						&lt;li&gt;
+							&lt;label&gt;
+								&lt;input type="radio" value="post-secondary-education" name="goal" data-chtwzrd-a='{"next":"none", "url":"page6.html"}' /&gt;
+								&lt;span&gt;attend post-secondary education&lt;/span&gt;
+							&lt;/label&gt;
+						&lt;/li&gt;
+						&lt;li&gt;
+							&lt;label&gt;
+								&lt;input type="radio" value="serve-community" name="goal" data-chtwzrd-a='{"next":"none", "url":"page7.html"}' /&gt;
+								&lt;span&gt;serve your community&lt;/span&gt;
+							&lt;/label&gt;
+						&lt;/li&gt;
+						&lt;li&gt;
+							&lt;label&gt;
+								&lt;input type="radio" value="get-experience" name="goal" data-chtwzrd-a='{"next":"none", "url":"page8.html"}' /&gt;
+								&lt;span&gt;get an experience&lt;/span&gt;
+							&lt;/label&gt;
+						&lt;/li&gt;
+						&lt;li&gt;
+							&lt;label&gt;
+								&lt;input type="radio" value="everything" name="goal" data-chtwzrd-a='{"next":"none"}' /&gt;
+								&lt;span&gt;see everything&lt;/span&gt;
+							&lt;/label&gt;
+						&lt;/li&gt;
+					&lt;/ul&gt;
+				&lt;/fieldset&gt;
+				&lt;br/&gt;
+				&lt;button type="submit" class="btn btn-sm btn-primary"&gt;Search&lt;/button&gt;
+			&lt;/form&gt;
+		&lt;/section&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+</details>
+{% endraw %}
+{:/}
