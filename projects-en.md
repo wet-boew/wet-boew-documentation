@@ -4,7 +4,7 @@ layout: default-theme-wet-boew-en
 filename_fr: index-fr
 title: Projects - Web Experience Toolkit (WET) documentation
 description: List of projects related to WET.
-modified: 2019-01-13
+modified: 2019-02-21
 ---
 
 {::nomarkdown}
@@ -135,6 +135,8 @@ Updated: 2019-02-07
 * WCAG 2.1 Level AA conformance check for existing features
 * Evaluate web accessibility compliance for wb5 features
 * **Last updated:** October 18, 2018
+--
+--
 * **Progress check history**: 2018-10-18; 2018-08-24; 2018-07-26; 2018-06-20; 2018-05-17; 2018-04-10; 2018-04-03; 2018-03-14; 2018-02-27; 2018-02-20
 * **History:**
 	* (2018-08-24) Menu - Fixed the keyboard behviour of submenu (details/summary)
@@ -157,28 +159,6 @@ Create a new feature that would allow the user to obtain a PDF printable version
 	* (2018-09-28) [Writting use case and requirement](http://wet-boew.github.io/wet-boew-documentation/research/2018-12-long-documents.html)
 	* (2018-02-22) Refining the projects description and research.
 
-### Server side error message integration with form validation feature
-Harmonize the error message displayed when in browser error is combined with server side errors
-* **Last udpated:** January 23, 2019
-* **Project lead:** Stéphane Ducharme
-* **History:**
-	* (2019-01-07) Fixing some issues and code optimisation.
-	* (2018-08-24) Need to apply some code optimation base on peer review comments.
-	* (2018-07-26) Project almost completed, going in peer review process.
-	* (2018-06-20) WIP with the working example creation and testing the solution.
-	* (2018-05-17) Work for single input or select, but not when it is combined together.
-	* (2018-04-11) Early exploratory prototype
-
-### Support CORS with feed plugin
-Bypassing the yahoo API call when fetching an ATOM feed that inside the scope defined by CORS (Cross-origin resource sharing).
-* **Project lead:** Ilya Pak
-* **Current status:** PR #8534 submited
-* **Last updated:** January 23, 2019
-* **History:**
-	* (2019-01-18) Making the CORS as default and removing Yahoo API
-	* (2018-12-13) Added CORS option to JSON feed plugin
-	* (2018-06-27) Project initialized and Local prototype was created which take the ATOM feed and turn it into JSON format similar to the yahoo API call
-
 ### Horizontal definition list  
 Be able to specify a relative with for the definition title because the default one is sometime restrictive in some content design.
 * **Project lead:** Samar ElAmir
@@ -195,21 +175,23 @@ Provide a visual indication that show the current forms steps.
 * **History:**
 	* (2019-01-22) Prototype created, starting the integration into GCWeb
 
-### Interactive forms
-Investigate on various solution to provide more interactiveness to standards forms
-* **Project lead:** Pierre Dubois
-* **Current status:** Looking at form converted into chat
-* **Last update:** January 23, 2019
+### Chat wizard
+Convert a form into a chat like interaction
+* **Project lead:** Francis Gorman
+* **Current status:** Testing the prototype then do the integration in GCWeb.
+* **Last update:** February 21, 2019
 * **History:**
+	* (2019-02-20) Project status update (stable prototype)
 	* (2019-01-21) Initiated research 2019-15 - Exploration of a chat like design pattern
 
-### Reading Progress Bar/indicator
-
-**Last updated:** February 4, 2019
-
-Have a progress bar at the top of certain reports, which gives the reader an overview of how far in the page they are at. So becomes basically a reading progress bar.
-
-(As seen at the top of the window on this current page.)
+### Migration to jQuery 3
+Migrate WET-BOEW and GCWeb from jQuery 2 to jQuery 3.
+* **Project lead:** Neil
+* **Current status:** Did an initial scan of all the wet-boew code. Testing each working example and quickly reviewing the JS of each plugin. 
+* **Last update:** February 21, 2019
+* **History:**
+	* (2019-02-21) Did an initial scan of all the wet-boew code. Testing each working example and quickly reviewing the JS of each plugin. 
+	* (2019-02-01) Initiate research 2019-16 - jQuery 3 migration
 
 ## Related but untracked
 
@@ -404,6 +386,13 @@ This component provides the ability to break a form into steps. To be use when W
 	* Translate the French working example
 	* Review the plugin javascript
 
+### Reading Progress Bar/indicator
+
+**Last updated:** February 4, 2019
+
+Have a progress bar at the top of certain reports, which gives the reader an overview of how far in the page they are at. So becomes basically a reading progress bar.
+
+(As seen at the top of the window on this current page.)
 
 ## Projects with no official team lead
 
@@ -467,6 +456,31 @@ Next step:
 <details>
 	<summary>Show the list of completed projects</summary>
 {:/}
+
+
+### Server side error message integration with form validation feature
+Harmonize the error message displayed when in browser error is combined with server side errors
+* **Last udpated:** January 23, 2019
+* **Project lead:** Stéphane Ducharme
+* **History:**
+ 	* (2019-02-20) Merged into WET-BOEW and published in v4.0.30
+	* (2019-01-07) Fixing some issues and code optimisation.
+	* (2018-08-24) Need to apply some code optimation base on peer review comments.
+	* (2018-07-26) Project almost completed, going in peer review process.
+	* (2018-06-20) WIP with the working example creation and testing the solution.
+	* (2018-05-17) Work for single input or select, but not when it is combined together.
+	* (2018-04-11) Early exploratory prototype
+
+### Support CORS with feed plugin
+Bypassing the yahoo API call when fetching an ATOM feed that inside the scope defined by CORS (Cross-origin resource sharing).
+* **Project lead:** Ilya Pak
+* **Current status:** PR #8534 submited
+* **Last updated:** January 23, 2019
+* **History:**
+ 	* (2019-02-20) Merged into WET-BOEW and published in v4.0.30
+	* (2019-01-18) Making the CORS as default and removing Yahoo API
+	* (2018-12-13) Added CORS option to JSON feed plugin
+	* (2018-06-27) Project initialized and Local prototype was created which take the ATOM feed and turn it into JSON format similar to the yahoo API call
 
 ### Boolean filtering for WET filter feature
 Provide the option regarding how the space is interpretated during filtering content with the filter plugin.

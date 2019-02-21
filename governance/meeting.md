@@ -10,6 +10,16 @@ Summary of what has been discussed at the meeting.
 
 ## Roadmap
 
+2019-02-21 (6 participants)
+* Update the status of all project
+* New project
+	* Chat wizard
+	* Migration to jQuery 3
+* Mentionned wet-boew v4.0.30 and gcweb v5.0 has been released
+* Quick walktrough of the gcweb v5.0 release note and accompagning technical documentation
+* Announced the Roadmap meeting would be held every 2 month now on.
+* Next meeting invite are going to be sent out within the next two weeks
+
 2019-01-17
 Meeting canceled
 
