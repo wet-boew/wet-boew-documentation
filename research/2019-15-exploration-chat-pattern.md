@@ -344,47 +344,50 @@ Markup Basic Structure
 
 [See the Demo](../research/2019-15-exploration-chat-pattern-prototype-form.html)
 
-## Ongoing
+## Notes on assessments (WCAG2.0, Screen Readers and other tests)
 
-* Next step... Match code structure with WET and optimize
-* Fix change of focus issue
-* Improve Documentation
+* With the text zoomed at 200%, Wizard's title gets cut vertically.
+* The answer gets the :focus after replying (on purpose). This behaviour is to be investigated.
+* NVDA screen reader repeats the answer given twice.
+* Wizard window's title is omitted using the NVDA screen reader.
+* No form validation is being done at all.
+	* In basic mode, submitting at a random point will technically work, and will send the form to point where it was at.
+	* In chat mode, the first input will automatically be selected if no input is given.
+* Dynamic positionning of the bubble could potentially fail on page load, and place the bubble mid-screen vertically.
 
 ## How-to
 
 In order to be configured properly, you need the following:
 
 * Add a form to a page and include the "wb-chtwzrd" class to either the form or its container (if it is contained in a row on its own).
-* In the form tag, you must include the a data-attribute named "data-wb-chtwzrd", with the following properties inside of it, in brackets {}:
-	* formType: "dynamic" or "static". 
-	* defaultDestination: "xyz.html".
-	* sendWizard: "string". 
-	* sendForm: "string". 
-	* titleWizard: "string". 
-	* titleForm: "string". 
-	* startText: "string". 
-	* endText: "string". 
-	* introTextWizard: "string". 
-	* introTextForm: "string". 
-	* first: "1".
-* The only inputs that can be handled by the plugin are radio buttons at the moment. A proper HTML markup must be used for the plugin to catch them. The following structure is to be followed:
+* In the form tag, you must have a filled action attribute and you must include a data-attribute named "data-wb-chtwzrd", with the following properties inside of it, in brackets {}:
+	* formType: "dynamic" or "static". A dynamic form will be needed if you can assume that the next question is dependent on the answer provided.
+	* sendWizard: "string". This text is the value of the button at the end of the conversation in the chat.
+	* titleWizard: "string". Title of the chat, showing in the chat window banner, as well as in the notification popup.
+	* startText: "string". Greeting message from the chat. THis is the very first message that the bot will send in the conversation, before the questions.
+	* endText: "string". This is the last goodbye from the bot after all of the questions have been answered.
+	* first: "1". Identifies the first question after the bot's greetings, by qID.
+* A second "greeting" message from the bot can be added in a paragraph before the questions, in order to provide extra information or instructions. This is optional. In the case where this message should be different from the paragraph in the basic form, the data-attribute "data-chtwzrd-intro" can be used to provide a different text.
+* Regarding the questions, the only inputs that can be handled by the plugin are radio buttons at the moment. A proper HTML markup must be used for the plugin to catch them. The following structure is to be followed:
 	* fieldset > legend > input.
 * Along with the proper markup, a data-attribute called "data-chtwzrd-q" must be added to every legend tag containing the inputs, with the following properties:
-	* qId: "1".
-	* labelWizard: "Are you:".
+	* qId: "1". Question Identifier.
+	* labelWizard: "Are you:". Question shown in the chat. This data-attribute is required, even if the text is the same as in the actual legend tag.
 * Every single input tag must have a data-attribute called "data-chtwzrd-a", containing the following properties: 
-	* next: "2".
-	* url: "wxyz.html".
+	* next: "2". Identifies which question is next if this option is selected, by qID.
+	* url: "wxyz.html". If this option modifies the form's action at the end, this attribute will change it. Note that If you change the action to "abc.html" at question #2, then the action will remain "abc.html" for the rest of the form until you change it again in a further answer.
+* Also, the name and the value attributes of the inputs are used as parameters in the form submit, like any regular form with a GET method.
+* Note: You can have any containers you want for your form, as long as you wrap it all inside the "wb-chtwzrd" class. The toggle would affect the spacing in your page if you don't wrap it all.
 
 ## Example
 
 {::nomarkdown}
 {% raw %}
 <details>
-<summary>See HTML Code</summary>
+<summary>This is your HTML code</summary>
 <pre>
 <code>
-&lt;div class="container wb-chtwzrd chtwzrd-basic"&gt;
+&lt;div class="container wb-chtwzrd"&gt;
 	&lt;div class="row"&gt;
 		&lt;section class="col-md-12"&gt;
 			&lt;h2&gt;Help us help you&lt;/h2&gt;
