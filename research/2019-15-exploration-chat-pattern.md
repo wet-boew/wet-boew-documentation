@@ -146,10 +146,10 @@ On the accessibility side, the followings are potentially at risk:
 ### To think about
 
 * What to do with the print version (if applicable).
-* Change the plugin's name? Currently: Chat Wizard
-* Add a "skip to chat wizard" in the skip navigation links.
-* FRENCH VERSION
-* What happens on back button?
+* Change the plugin's name? Currently: Chat Wizard.
+* Add a "skip to chat wizard" in the skip navigation links?
+* Remove the conversation when the back button is hit on the results page?
+* Add handler for Select tags.
 
 ### First Release
 
@@ -248,11 +248,17 @@ This button makes a switch between the conversational form and the basic form. I
 {% endraw %}
 {:/}
 
-### Conceptual Prototype
+### Prototypes
 
-Available here: [Chat wizard concept prototype](https://gormanproductions.ca/lab/chat-wizard-prototype/chat-bot-en.html)
+* [Concept Prototype](https://gormanproductions.ca/lab/chat-wizard-prototype/chat-bot-en.html)
+* Prototype 1 (Presented underneath this list.)
+* [Prototype 2](../research/2019-15-exploration-chat-pattern-prototype-2.html)
+* [Prototype 3](../research/2019-15-exploration-chat-pattern-prototype-3.html)
+* [Prototype 4](../research/2019-15-exploration-chat-pattern-prototype-4.html)
+* [Prototype 5](../research/2019-15-exploration-chat-pattern-prototype-form.html)
+* [First Demo](../research/2019-15-exploration-chat-pattern-demo.html)
 
-### Prototype 1
+#### Prototype 1
 
 Markup Basic Structure
 
@@ -324,25 +330,15 @@ Markup Basic Structure
 {% endraw %}
 {:/}
 
-### Prototype 2
+### Data API
 
-[See the HTML Code](../research/2019-15-exploration-chat-pattern-prototype-2.html)
+Here is the JavaScript Object that is being generated and that must be followed in order to make the magic work.
 
-### Prototype 3
+[Data API](../research/2019-assets/chtwzrd/js/botapi.js)
 
-[See the HTML Code](../research/2019-15-exploration-chat-pattern-prototype-3.html)
+### Alpha Version
 
-### Prototype 4
-
-[See the HTML Code](../research/2019-15-exploration-chat-pattern-prototype-4.html)
-
-### Prototype Demo
-
-[See the Demo](../research/2019-15-exploration-chat-pattern-demo.html)
-
-### Most up-to-date Prototype
-
-[See the Demo](../research/2019-15-exploration-chat-pattern-prototype-form.html)
+[See the Alpha Version](../research/2019-15-exploration-chat-pattern-alpha.html)
 
 ## Notes on assessments (WCAG2.0, Screen Readers and other tests)
 
@@ -361,7 +357,7 @@ In order to be configured properly, you need the following:
 
 * Add a form to a page and include the "wb-chtwzrd" class to either the form or its container (if it is contained in a row on its own).
 * In the form tag, you must have a filled action attribute and you must include a data-attribute named "data-wb-chtwzrd", with the following properties inside of it, in brackets {}:
-	* formType: "dynamic" or "static". A dynamic form will be needed if you can assume that the next question is dependent on the answer provided.
+	* formType: "dynamic" or "static". (Optional, "dynamic" by default) A dynamic form will be needed if you can assume that the next question is dependent on the answer provided. Use "static" if you are using a static form, or other kinds of plugins affecting your form. 
 	* sendWizard: "string". This text is the value of the button at the end of the conversation in the chat.
 	* titleWizard: "string". Title of the chat, showing in the chat window banner, as well as in the notification popup.
 	* startText: "string". Greeting message from the chat. THis is the very first message that the bot will send in the conversation, before the questions.
@@ -377,6 +373,7 @@ In order to be configured properly, you need the following:
 	* next: "2". Identifies which question is next if this option is selected, by qID.
 	* url: "wxyz.html". If this option modifies the form's action at the end, this attribute will change it. Note that If you change the action to "abc.html" at question #2, then the action will remain "abc.html" for the rest of the form until you change it again in a further answer.
 * Also, the name and the value attributes of the inputs are used as parameters in the form submit, like any regular form with a GET method.
+* The text value placed after your input must be wrapped around an HTML tag, like a span, and you can use the "no-chtwzrd" class on an element if you want to ignore it from the text value, e.g. an image.
 * Note: You can have any containers you want for your form, as long as you wrap it all inside the "wb-chtwzrd" class. The toggle would affect the spacing in your page if you don't wrap it all.
 
 ## Example
@@ -437,24 +434,6 @@ In order to be configured properly, you need the following:
 								&lt;span&gt;a post-secondary school student&lt;/span&gt;
 							&lt;/label&gt;
 						&lt;/li&gt;
-						&lt;li&gt;
-							&lt;label&gt;
-								&lt;input type="radio" value="ready-start-career" name="situation" data-chtwzrd-a='{"next":"q3"}' /&gt;
-								&lt;span&gt;ready to start a career&lt;/span&gt;
-							&lt;/label&gt;
-						&lt;/li&gt;
-						&lt;li&gt;
-							&lt;label&gt;
-								&lt;input type="radio" value="not-school-not-working" name="situation" data-chtwzrd-a='{"next":"q3"}' /&gt;
-								&lt;span&gt;not in school and not working&lt;/span&gt;
-							&lt;/label&gt;
-						&lt;/li&gt;
-						&lt;li&gt;
-							&lt;label&gt;
-								&lt;input type="radio" value="none" name="situation" data-chtwzrd-a='{"next":"q3"}' /&gt;
-								&lt;span&gt;none of these&lt;/span&gt;
-							&lt;/label&gt;
-						&lt;/li&gt;
 					&lt;/ul&gt;
 				&lt;/fieldset&gt;
 				&lt;fieldset&gt;
@@ -478,30 +457,6 @@ In order to be configured properly, you need the following:
 								&lt;span&gt;explore careers&lt;/span&gt;
 							&lt;/label&gt;
 						&lt;/li&gt;
-						&lt;li&gt;
-							&lt;label&gt;
-								&lt;input type="radio" value="post-secondary-education" name="goal" data-chtwzrd-a='{"next":"none", "url":"page6.html"}' /&gt;
-								&lt;span&gt;attend post-secondary education&lt;/span&gt;
-							&lt;/label&gt;
-						&lt;/li&gt;
-						&lt;li&gt;
-							&lt;label&gt;
-								&lt;input type="radio" value="serve-community" name="goal" data-chtwzrd-a='{"next":"none", "url":"page7.html"}' /&gt;
-								&lt;span&gt;serve your community&lt;/span&gt;
-							&lt;/label&gt;
-						&lt;/li&gt;
-						&lt;li&gt;
-							&lt;label&gt;
-								&lt;input type="radio" value="get-experience" name="goal" data-chtwzrd-a='{"next":"none", "url":"page8.html"}' /&gt;
-								&lt;span&gt;get an experience&lt;/span&gt;
-							&lt;/label&gt;
-						&lt;/li&gt;
-						&lt;li&gt;
-							&lt;label&gt;
-								&lt;input type="radio" value="everything" name="goal" data-chtwzrd-a='{"next":"none"}' /&gt;
-								&lt;span&gt;see everything&lt;/span&gt;
-							&lt;/label&gt;
-						&lt;/li&gt;
 					&lt;/ul&gt;
 				&lt;/fieldset&gt;
 				&lt;br/&gt;
@@ -513,5 +468,16 @@ In order to be configured properly, you need the following:
 </code>
 </pre>
 </details>
+
 {% endraw %}
 {:/}
+
+## To Do
+
+* FRENCH VERSION.
+* Fix potential accessibility issues.
+
+## Improvements planned
+
+* Accepting JSON File as an input for batch deployments.
+* Working with checkboxes (with the contraint of having either all the checkboxes going to the same form action or not changing the form action at all for checkboxes).
