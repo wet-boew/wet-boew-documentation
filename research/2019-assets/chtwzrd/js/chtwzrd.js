@@ -12,7 +12,7 @@ var datainput = {},
 	current = "",
 	botTime = "", 
 	inputsTime = "", 
-	replyTime = "",
+	replyTime = "";
 
 // If chat wizard initiator is found, then initiate
 // input possibilities are: JSON and Form
