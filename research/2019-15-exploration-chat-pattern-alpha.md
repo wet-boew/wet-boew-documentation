@@ -11,8 +11,7 @@ modified: 2019-02-14
 {% raw %}
 
 <!-- Chat wizard -->
-<link rel="stylesheet" type="text/css" href="2019-assets/chtwzrd/css/chtwzrd.css"/>
-
+<link rel="stylesheet" type="text/css" href="2019-assets/chtwzrd/css/chtwzrd.css">
 <div class="row profile">
 	<div class="col-md-6">
 		<h1 property="name" id="wb-cont">[Topic title]</h1>
