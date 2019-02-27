@@ -472,7 +472,7 @@ In order to be configured properly, you need the following:
 {% endraw %}
 {:/}
 
-## To Do
+## To do
 
 * FRENCH VERSION.
 * Fix potential accessibility issues.
@@ -480,4 +480,4 @@ In order to be configured properly, you need the following:
 ## Improvements planned
 
 * Accepting JSON File as an input for batch deployments.
-* Working with checkboxes (with the contraint of having either all the checkboxes going to the same form action or not changing the form action at all for checkboxes).
+* Working with checkboxes (with the constraint of having either all the checkboxes going to the same form action or not changing the form action at all for checkboxes).
