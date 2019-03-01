@@ -189,7 +189,7 @@ We’re upgrading jQuery from version 2.2.4 to 3.3.1. Version 2.x is no longer s
 
 * **Project lead:** Neil Mispelaar
 * **Current status:** Did an initial scan of all the wet-boew code. Testing each working example and quickly reviewing the JS of each plugin. 
-* **Documentation:** https://wet-boew.github.io/wet-boew-documentation/research/2019-16-jquery-3-migration.html
+* **Documentation:** [https://wet-boew.github.io/wet-boew-documentation/research/2019-16-jquery-3-migration.html](https://wet-boew.github.io/wet-boew-documentation/research/2019-16-jquery-3-migration.html)
 * **Last update:** February 21, 2019
 * **History:**
 	* (2019-02-21) Did an initial scan of all the wet-boew code. Testing each working example and quickly reviewing the JS of each plugin.
