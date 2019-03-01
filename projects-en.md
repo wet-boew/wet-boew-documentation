@@ -125,9 +125,10 @@ $(window).on('resize', function(){
 </script>
 {:/}
 
-## Active project
+## Active projects
 
-Updated: 2019-02-07
+Updated: 2019-03-01
+
 
 ### Accessibility
 * Reviewing and validating open github issue
@@ -135,8 +136,6 @@ Updated: 2019-02-07
 * WCAG 2.1 Level AA conformance check for existing features
 * Evaluate web accessibility compliance for wb5 features
 * **Last updated:** October 18, 2018
---
---
 * **Progress check history**: 2018-10-18; 2018-08-24; 2018-07-26; 2018-06-20; 2018-05-17; 2018-04-10; 2018-04-03; 2018-03-14; 2018-02-27; 2018-02-20
 * **History:**
 	* (2018-08-24) Menu - Fixed the keyboard behviour of submenu (details/summary)
@@ -184,13 +183,16 @@ Convert a form into a chat like interaction
 	* (2019-02-20) Project status update (stable prototype)
 	* (2019-01-21) Initiated research 2019-15 - Exploration of a chat like design pattern
 
-### Migration to jQuery 3
-Migrate WET-BOEW and GCWeb from jQuery 2 to jQuery 3.
-* **Project lead:** Neil
+### jQuery 3 Migration
+
+We’re upgrading jQuery from version 2.2.4 to 3.3.1. Version 2.x is no longer supported, nor is it receiving any security patches or bug fixes. The idea is to release a beta version first for groups to test with, and then a full version shortly thereafter. 
+
+* **Project lead:** Neil Mispelaar
 * **Current status:** Did an initial scan of all the wet-boew code. Testing each working example and quickly reviewing the JS of each plugin. 
+* **Documentation:** https://wet-boew.github.io/wet-boew-documentation/research/2019-16-jquery-3-migration.html
 * **Last update:** February 21, 2019
 * **History:**
-	* (2019-02-21) Did an initial scan of all the wet-boew code. Testing each working example and quickly reviewing the JS of each plugin. 
+	* (2019-02-21) Did an initial scan of all the wet-boew code. Testing each working example and quickly reviewing the JS of each plugin.
 	* (2019-02-01) Initiate research 2019-16 - jQuery 3 migration
 
 ## Related but untracked
