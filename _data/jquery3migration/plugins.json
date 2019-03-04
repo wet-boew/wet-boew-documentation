@@ -113,19 +113,16 @@
         "migrate": {
             "errors" : false,
             "descriptions" : [
-                "jQuery.fn.removeAttr no longer sets boolean properties"
+                ""
             ],
-            "notes" : [
-                "removeAttr isn't necessarily an issue - has to be manually checked",
-                "I tested it a second time and this warning did not show up"
-            ]
+            "notes" : []
         },
         "href" : {
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/dismissable-content/dismissable-content-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/dismissable-content/dismissable-content-en.html"
         },
         "code_change_req" : false,
-        "status":"On hold"
+        "status":"Closed"
     },
     {
         "name" : "Equal height",
