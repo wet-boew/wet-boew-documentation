@@ -243,9 +243,13 @@
     {
         "name" : "Lightbox",
         "migrate": {
-            "errors" : false,
-            "descriptions" : [],
-            "notes" : []
+            "errors" : true,
+            "descriptions" : [
+                "jQuery.fn.focus() event shorthand is deprecated"
+            ],
+            "notes" : [
+                "focus() is not necessarily an issue - it is context dependend and needs further testing"
+            ]
         },
         "href" : {
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/lightbox/lightbox-en.html",
