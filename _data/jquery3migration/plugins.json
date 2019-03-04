@@ -330,16 +330,20 @@
     {
         "name" : "Session Timeout",
         "migrate": {
-            "errors" : false,
-            "descriptions" : [],
-            "notes" : []
+            "errors" : true,
+            "descriptions" : [
+                "jQuery.fn.focus() event shorthand is deprecated"
+            ],
+            "notes" : [
+                "Further research is required for this"
+            ]
         },
         "href" : {
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/session-timeout/session-timeout-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/session-timeout/session-timeout-en.html"
         },
         "code_change_req" : false,
-        "status":"Not yet started"
+        "status":"On hold"
     },
     {
         "name" : "Share widget",
@@ -437,7 +441,7 @@
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/twitter/twitter-en.html"
         },
         "code_change_req" : false,
-        "status":"Not yet started"
+        "status":"Closed"
     },
     {
         "name" : "Zebra striping",
