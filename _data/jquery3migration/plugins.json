@@ -279,16 +279,20 @@
     {
         "name" : "Multimedia Player",
         "migrate": {
-            "errors" : false,
-            "descriptions" : [],
-            "notes" : []
+            "errors" : true,
+            "descriptions" : [
+                "'ready' event is deprecated"
+            ],
+            "notes" : [
+                "Further research is required for this"
+            ]
         },
         "href" : {
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/multimedia/multimedia-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/multimedia/multimedia-en.html"
         },
         "code_change_req" : false,
-        "status":"Not yet started"
+        "status":"On hold"
     },
     {
         "name" : "Overlay",
