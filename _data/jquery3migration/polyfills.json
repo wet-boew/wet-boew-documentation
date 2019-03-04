@@ -143,7 +143,7 @@
             "jquery2x" : ""
 		},
 		"code_change_req" : false,
-        "status":"On hold"
+        "status":"Closed"
     },
 	{
         "name" : "jawsariafixes.js",
@@ -158,7 +158,7 @@
             "jquery2x" : ""
 		},
 		"code_change_req" : false,
-        "status":"On hold"
+        "status":"Closed"
     },
 	{
         "name" : "svg.js",
@@ -173,6 +173,6 @@
             "jquery2x" : ""
 		},
 		"code_change_req" : false,
-        "status":"On hold"
+        "status":"Closed"
     }
 ]
