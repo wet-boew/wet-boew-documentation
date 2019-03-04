@@ -164,7 +164,7 @@
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/favicon/favicon-en.html"
         },
         "code_change_req" : false,
-        "status":"Not yet started"
+        "status":"Closed"
     },
     {
         "name" : "Feeds",
@@ -210,7 +210,7 @@
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/footnotes/footnotes-en.html"
         },
         "code_change_req" : false,
-        "status":"Not yet started"
+        "status":"Closed"
     },
     {
         "name" : "Form validation",
