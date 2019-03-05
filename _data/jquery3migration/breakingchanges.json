@@ -42,9 +42,9 @@
     {
         "name" : "jQuery 3.0 runs in Strict Mode",
         "category" : "Core",
-        "description" : "Lorem ipsum",
-        "search_text" : "",
-        "fix_text" : "",
+        "description" : "Now that most of the browsers supported by jQuery 3.0 have <code>\"use strict\"</code>, jQuery is being built with this directive. Your code is not required to run in Strict Mode, so most existing code should not require any changes. The one case we encountered three years ago was that ASP.NET 4.0 used <code>arguments.caller.callee</code> to attempt tracing through call stacks in its <code>__doPostBack()</code> method. If you are still using a version of ASP.NET that still does this, keep using jQuery 2.x or earlier. Modern browsers support stack traces via <code>error.stack</code> so it should not ever be necessary to examine <code>arguments.caller.callee</code>.",
+        "search_text" : "n/a",
+        "fix_text" : "n/a",
         "href" : "https://jquery.com/upgrade-guide/3.0/#breaking-change-jquery-3-0-runs-in-strict-mode"
     },
     {
