@@ -18,9 +18,9 @@
     {
         "name" : "Hash in a URL is preserved in a jQuery.ajax() call",
         "category" : "Ajax",
-        "description" : "Lorem ipsum",
-        "search_text" : "",
-        "fix_text" : "",
+        "description" : "The <code>jQuery.ajax()</code> method no longer strips off the hash in the URL if it is provided, and sends the full URL to the transport (xhr, script, jsonp, or custom transport). If the server at the other end of the connection cannot deal with a hash on a URL, strip it off before sending the request.",
+        "search_text" : "<code>.ajax( </code>",
+        "fix_text" : "This is not a potential issue because WET-BOEW doesn't communicate with any servers that can't handle a <code>#</code> in the URL",
         "href" : "https://jquery.com/upgrade-guide/3.0/#breaking-change-hash-in-a-url-is-preserved-in-a-jquery-ajax-call"
     },
     {
