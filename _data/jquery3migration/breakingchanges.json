@@ -34,9 +34,9 @@
     {
         "name" : "select-multiple with nothing selected returns an empty array",
         "category" : "Attributes",
-        "description" : "Lorem ipsum",
-        "search_text" : "",
-        "fix_text" : "",
+        "description" : "Before jQuery 3.0, calling <code>.val()</code> on a <code>&lt;select multiple&gt;</code> element with no elements selected returned <code>null</code>. This was inconvenient since if at least one value was selected the return value would be an array. Also, if all options are disabled jQuery already returned an empty array. To improve consistency, the nothing-selected case now returns an empty array.",
+        "search_text" : "<code>.val(</code>",
+        "fix_text" : "<code>TODO</code>",
         "href" : "https://jquery.com/upgrade-guide/3.0/#breaking-change-select-multiple-with-nothing-selected-returns-an-empty-array"
     },
     {
