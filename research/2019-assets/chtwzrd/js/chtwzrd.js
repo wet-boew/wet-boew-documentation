@@ -453,7 +453,7 @@ var waitingBot = function($selector) {
 
 // Add reply from human and calls next question
 var appendReply = function($selector, answerObj) {
-	var randID = Math.floor((Math.random() * 10000) + 1);,
+	var randID = Math.floor((Math.random() * 10000) + 1),
 		$dropSpot = $(".chtwzrd-history", $selector);
 	$dropSpot.append('<div class="row mrgn-bttm-md"><div class="col-xs-9 col-xs-offset-3"><div class="chtwzrd-message text-right pull-right" id="chtwzrd-a-' + randID + '"><p class="mrgn-bttm-0"><span class="wb-inv">' + i18nDict["chtwzrd-answer"] + ' </span>' + answerObj.value + '</p></div></div></div>');
 	$(".chtwzrd-form-params", $selector).append('<input type="hidden" name="' + answerObj.queryName + '" value="' + answerObj.queryParam + '" />');
