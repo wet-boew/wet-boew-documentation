@@ -232,9 +232,9 @@
     {
         "name" : ".andSelf() removed, use .addBack()",
         "category" : "Serialize",
-        "description" : "Lorem ipsum",
-        "search_text" : "",
-        "fix_text" : "",
+        "description" : "The <code>.andSelf()</code> method was deprecated in jQuery 1.8 and now removed in 3.0 in favor of the <code>.addBack()</code> method, which does a better job of explaining what it does and also accepts an optional selector to filter what is added back.",
+        "search_text" : "<code>.andSelf(</code>",
+        "fix_text" : "Use <code>.addBack()</code> instead",
         "href" : "https://jquery.com/upgrade-guide/3.0/#breaking-change-andself-removed-use-addback"
     }
 ]
