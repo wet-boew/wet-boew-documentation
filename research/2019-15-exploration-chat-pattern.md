@@ -105,6 +105,13 @@ The conversation flow seems to be set into one unique path.
 	* Have the form hard coded after the button
 	* Can consider to add the form inside an expand collapse.
 
+#### Potentially at risk
+
+* The submit button becomes disabled when the question change;
+* The wait time between questions, when the bot speaks, etc.
+* NVDA screen reader repeats the answer given twice.
+* Wizard window's title is omitted using the NVDA screen reader.
+
 ### Enhanced interface
 
 * The configuration should be integrated in the basic html interface.
@@ -136,19 +143,11 @@ The thresholds are:
 	* Select
 * Form submition must be handled client-side only
 
-### Accessibility
-
-On the accessibility side, the followings are potentially at risk: 
-
-* The submit button becomes disabled when the question change;
-* The wait time between questions, when the bot speaks, etc.
-
 ### To think about
 
 * What to do with the print version (if applicable).
 * Change the plugin's name? Currently: Chat Wizard.
 * Add a "skip to chat wizard" in the skip navigation links?
-* Remove the conversation when the back button is hit on the results page?
 * Add handler for Select tags.
 
 ### First Release
@@ -157,9 +156,9 @@ On the accessibility side, the followings are potentially at risk:
 * No basic html interface support.
 * No "Skip this step" or "Back one step" links.
 * No "Edit answer" button to roll-back in the conversation.
-* Fields in the form can be optional, but they are all required in the chat (you have to finish your conversation).
+* Form and JSON support
 
-## Wireframe and Prototyping
+## Wireframes
 
 Semantically, the entire code related to the chat wizard should be located right after the closing main tag, assuming the chat is general and not directly related to the content. If the chat is related to the context of the page, then it should be placed underneath the H1 tag, rught before the first H2.
 
@@ -248,7 +247,20 @@ This button makes a switch between the conversational form and the basic form. I
 {% endraw %}
 {:/}
 
-### Prototypes
+## Data API
+
+Here is the JavaScript Object that is being generated and that must be followed in order to make the magic work.
+If a JSON file follows that logic, it can be implemented as a chat wizard instance.
+
+[Data API](../research/2019-assets/chtwzrd/js/botapi.js)
+
+## Dependencies
+
+* Plugin is supported on WET 4
+* Some styles depend on WET's Modal plugin
+* jQuery (works with 2.1.4, previous versions were not tested)
+
+## Prototypes
 
 * [Concept Prototype](https://gormanproductions.ca/lab/chat-wizard-prototype/chat-bot-en.html)
 * Prototype 1 (Presented underneath this list.)
@@ -258,7 +270,7 @@ This button makes a switch between the conversational form and the basic form. I
 * [Prototype 5](../research/2019-15-exploration-chat-pattern-prototype-form.html)
 * [First Demo](../research/2019-15-exploration-chat-pattern-demo.html)
 
-#### Prototype 1
+### Prototype 1
 
 Markup Basic Structure
 
@@ -330,29 +342,13 @@ Markup Basic Structure
 {% endraw %}
 {:/}
 
-### Data API
-
-Here is the JavaScript Object that is being generated and that must be followed in order to make the magic work.
-
-[Data API](../research/2019-assets/chtwzrd/js/botapi.js)
-
 ### Alpha Version
 
 [See the Alpha Version](../research/2019-15-exploration-chat-pattern-alpha.html)
 
-## Notes on assessments (WCAG2.0, Screen Readers and other tests)
-
-* With the text zoomed at 200%, Wizard's title gets cut vertically.
-* The answer gets the :focus after replying (on purpose). This behaviour is to be investigated.
-* NVDA screen reader repeats the answer given twice.
-* Wizard window's title is omitted using the NVDA screen reader.
-* No form validation is being done at all.
-	* In basic mode, submitting at a random point will technically work, and will send the form to point where it was at.
-	* In chat mode, the first input will automatically be selected if no input is given.
-* Dynamic positionning of the bubble could potentially fail on page load, and place the bubble mid-screen vertically.
-
 ## How-to
 
+### Code a Form
 In order to be configured properly, you need the following:
 
 * Add a form to a page and include the "wb-chtwzrd" class to either the form or its container (if it is contained in a row on its own).
@@ -374,9 +370,9 @@ In order to be configured properly, you need the following:
 	* url: "wxyz.html". If this option modifies the form's action at the end, this attribute will change it. Note that If you change the action to "abc.html" at question #2, then the action will remain "abc.html" for the rest of the form until you change it again in a further answer.
 * Also, the name and the value attributes of the inputs are used as parameters in the form submit, like any regular form with a GET method.
 * The text value placed after your input must be wrapped around an HTML tag, like a span, and you can use the "no-chtwzrd" class on an element if you want to ignore it from the text value, e.g. an image.
-* Note: You can have any containers you want for your form, as long as you wrap it all inside the "wb-chtwzrd" class. The toggle would affect the spacing in your page if you don't wrap it all.
+* Note: You can have any containers you want for your form, as long as you wrap it all inside the "wb-chtwzrd" class. The toggle would affect the spacing in your page if you don't wrap it all. Finally, a "wb-inv" class should be added to the element that has the "wb-chtwzrd", in order to prevent flickering on page load. 
 
-## Example
+#### Example
 
 {::nomarkdown}
 {% raw %}
@@ -384,87 +380,58 @@ In order to be configured properly, you need the following:
 <summary>This is your HTML code</summary>
 <pre>
 <code>
-&lt;div class="container wb-chtwzrd"&gt;
-	&lt;div class="row"&gt;
-		&lt;section class="col-md-12"&gt;
-			&lt;h2&gt;Help us help you&lt;/h2&gt;
-			&lt;form class="mrgn-bttm-xl" data-wb-chtwzrd='{"sendWizard":"Show results", "first":"q1", "titleWizard":"I can help you find the information you need", "startText":"Hi! I can help direct you to programs and services you might be interested in. Let&apos;s begin...", "endText":"Thank you. I have built a page with results you may find resourceful."}' action="page1.html"&gt;
-				&lt;p data-chtwzrd-intro='First, if you are an employer or organization looking for funding, you can find relevant information on the &lt;a href="pagex.html"&gt;funding page&lt;/a&gt;.'&gt;If you are an employer or organization looking for funding, you can find relevant information on the &lt;a href="pagex.html"&gt;funding page&lt;/a&gt;.&lt;/p&gt;
-				&lt;fieldset&gt;
-					&lt;legend data-chtwzrd-q='{"labelWizard":"Are you:", "qId":"q1"}'&gt;What would you describe yourself as?&lt;/legend&gt;
-					&lt;ul class="list-unstyled mrgn-tp-md"&gt;
-						&lt;li&gt;
-							&lt;label&gt;
-								&lt;input type="radio" value="young-canadian" name="describe" data-chtwzrd-a='{"next":"q2"}' /&gt;
-								&lt;span&gt;a young Canadian&lt;/span&gt;
-							&lt;/label&gt;
-						&lt;/li&gt;
-						&lt;li&gt;
-							&lt;label&gt;
-								&lt;input type="radio" value="employer-organization-funding-support-youth" name="describe" data-chtwzrd-a='{"next":"none", "url":"page2.html"}' /&gt;
-								&lt;span&gt;an employer or organization looking for funding to support youth&lt;/span&gt;
-							&lt;/label&gt;
-						&lt;/li&gt;
-						&lt;li&gt;
-							&lt;label&gt;
-								&lt;input type="radio" value="none-above" name="describe" data-chtwzrd-a='{"next":"q3"}' /&gt;
-								&lt;span&gt;None of the above&lt;/span&gt;
-							&lt;/label&gt;
-						&lt;/li&gt;
-					&lt;/ul&gt;
-				&lt;/fieldset&gt;
-				&lt;fieldset&gt;
-					&lt;legend data-chtwzrd-q='{"labelWizard":"Great! And are you:", "qId":"q2"}'&gt;In what situation are you?&lt;/legend&gt;
-					&lt;ul class="list-unstyled mrgn-tp-md"&gt;
-						&lt;li&gt;
-							&lt;label&gt;
-								&lt;input type="radio" value="high-school" name="situation" data-chtwzrd-a='{"next":"q3"}' /&gt;
-								&lt;span&gt;a high school student&lt;/span&gt;
-							&lt;/label&gt;
-						&lt;/li&gt;
-						&lt;li&gt;
-							&lt;label&gt;
-								&lt;input type="radio" value="cegep-student" name="situation" data-chtwzrd-a='{"next":"q3"}' /&gt;
-								&lt;span&gt;a CÉGEP student&lt;/span&gt;
-							&lt;/label&gt;
-						&lt;/li&gt;
-						&lt;li&gt;
-							&lt;label&gt;
-								&lt;input type="radio" value="post-secondary" name="situation" data-chtwzrd-a='{"next":"q3"}' /&gt;
-								&lt;span&gt;a post-secondary school student&lt;/span&gt;
-							&lt;/label&gt;
-						&lt;/li&gt;
-					&lt;/ul&gt;
-				&lt;/fieldset&gt;
-				&lt;fieldset&gt;
-					&lt;legend data-chtwzrd-q='{"labelWizard":"Awesome! And would you like to:", "qId":"q3"}'&gt;What is your goal?&lt;/legend&gt;
-					&lt;ul class="list-unstyled mrgn-tp-md"&gt;
-						&lt;li&gt;
-							&lt;label&gt;
-								&lt;input type="radio" value="get-job" name="goal" data-chtwzrd-a='{"next":"none", "url":"page3.html"}' /&gt;
-								&lt;span&gt;get a job&lt;/span&gt;
-							&lt;/label&gt;
-						&lt;/li&gt;
-						&lt;li&gt;
-							&lt;label&gt;
-								&lt;input type="radio" value="develop-skills" name="goal" data-chtwzrd-a='{"next":"none", "url":"page4.html"}' /&gt;
-								&lt;span&gt;develop skills&lt;/span&gt;
-							&lt;/label&gt;
-						&lt;/li&gt;
-						&lt;li&gt;
-							&lt;label&gt;
-								&lt;input type="radio" value="explore-careers" name="goal" data-chtwzrd-a='{"next":"none", "url":"page5.html"}' /&gt;
-								&lt;span&gt;explore careers&lt;/span&gt;
-							&lt;/label&gt;
-						&lt;/li&gt;
-					&lt;/ul&gt;
-				&lt;/fieldset&gt;
-				&lt;br/&gt;
-				&lt;button type="submit" class="btn btn-sm btn-primary"&gt;Search&lt;/button&gt;
-			&lt;/form&gt;
-		&lt;/section&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
+&lt;section class="wb-chtwzrd wb-inv"&gt;
+	&lt;h2&gt;Help us help you&lt;/h2&gt;
+	&lt;form data-wb-chtwzrd='{"sendWizard":"Show results", "first":"q1", "titleWizard":"I can help you find the information you need", "startText":"Hi! I can help direct you to programs and services you might be interested in. Let&apos;s begin...", "endText":"Thank you. I have built a page with results you may find resourceful."}' action="page1.html"&gt;
+		&lt;p&gt;If you are an employer or organization looking for funding, you can find relevant information on the &lt;a href="pagex.html"&gt;funding page&lt;/a&gt;.&lt;/p&gt;
+		&lt;fieldset&gt;
+			&lt;legend data-chtwzrd-q='{"labelWizard":"Are you:", "qId":"q1"}'&gt;What would you describe yourself as?&lt;/legend&gt;
+			&lt;ul class="list-unstyled mrgn-tp-md"&gt;
+				&lt;li&gt;
+					&lt;label&gt;
+						&lt;input type="radio" value="young-canadian" name="describe" data-chtwzrd-a='{"next":"q2"}' /&gt;
+						&lt;span&gt;a young Canadian&lt;/span&gt;
+					&lt;/label&gt;
+				&lt;/li&gt;
+				&lt;li&gt;
+					&lt;label&gt;
+						&lt;input type="radio" value="employer-organization-funding-support-youth" name="describe" data-chtwzrd-a='{"next":"none", "url":"page2.html"}' /&gt;
+						&lt;span&gt;an employer or organization looking for funding to support youth&lt;/span&gt;
+					&lt;/label&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/fieldset&gt;
+		&lt;fieldset&gt;
+			&lt;legend data-chtwzrd-q='{"labelWizard":"Great! And are you:", "qId":"q2"}'&gt;In what situation are you?&lt;/legend&gt;
+			&lt;ul class="list-unstyled mrgn-tp-md"&gt;
+				&lt;li&gt;
+					&lt;label&gt;
+						&lt;input type="radio" value="high-school" name="situation" data-chtwzrd-a='{"next":"q3"}' /&gt;
+						&lt;span&gt;a high school student&lt;/span&gt;
+					&lt;/label&gt;
+				&lt;/li&gt;
+				&lt;li&gt;
+					&lt;label&gt;
+						&lt;input type="radio" value="cegep-student" name="situation" data-chtwzrd-a='{"next":"q3"}' /&gt;
+						&lt;span&gt;a CÉGEP student&lt;/span&gt;
+					&lt;/label&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/fieldset&gt;
+		&lt;fieldset&gt;
+			&lt;legend data-chtwzrd-q='{"labelWizard":"Awesome! And would you like to:", "qId":"q3"}'&gt;What is your goal?&lt;/legend&gt;
+			&lt;ul class="list-unstyled mrgn-tp-md"&gt;
+				&lt;li&gt;
+					&lt;label&gt;
+						&lt;input type="radio" value="get-job" name="goal" data-chtwzrd-a='{"next":"none", "url":"page3.html"}' /&gt;
+						&lt;span&gt;get a job&lt;/span&gt;
+					&lt;/label&gt;
+				&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/fieldset&gt;
+		&lt;button type="submit" class="btn btn-sm btn-primary"&gt;Search&lt;/button&gt;
+	&lt;/form&gt;
+&lt;/section&gt;
 </code>
 </pre>
 </details>
@@ -472,12 +439,29 @@ In order to be configured properly, you need the following:
 {% endraw %}
 {:/}
 
+### Import a JSON File
+
+Accepting JSON File as an input for batch deployments. If you have a JSON file that follows the Data API logic shown above, it can be implemented as a chat wizard instance.
+
+* All you need on your page is the following section or div tag, with the right data attribute which is "data-chtwzrd-src":
+
+{::nomarkdown}
+{% raw %}
+
+<pre>
+<code>
+&lt;section class="container wb-chtwzrd wb-inv" data-chtwzrd-src="path-to-json/form1.json"&gt;&lt;/section&gt;
+</code>
+</pre>
+
+{% endraw %}
+{:/}
+
 ## To do
 
-* FRENCH VERSION.
-* Fix potential accessibility issues.
+* Include i18n.
 
 ## Improvements planned
 
-* Accepting JSON File as an input for batch deployments.
 * Working with checkboxes (with the constraint of having either all the checkboxes going to the same form action or not changing the form action at all for checkboxes).
+* Fix potential screen reader unwanted behaviours (which are not breaking functionnality).

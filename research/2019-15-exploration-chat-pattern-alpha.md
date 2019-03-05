@@ -23,129 +23,125 @@ modified: 2019-02-14
 </div>
 <div class="row">
 	<div class="col-md-8 pull-left">
-		<div class="container wb-chtwzrd">
-			<div class="row">
-				<section class="col-md-12">
-					<h2>Help us help you</h2>
-					<form class="mrgn-bttm-xl" data-chtwzrd='{"sendWizard":"Show results", "first":"q1", "titleWizard":"I can help you find the information you need", "startText":"Hi! I can help direct you to programs and services you might be interested in. Let&apos;s begin...", "endText":"Thank you. I have built a page with results you may find resourceful."}' action="page1.html">
-						<p data-chtwzrd-intro='First, if you are an employer or organization looking for funding, you can find relevant information on the <a href="pagex.html">funding page</a>.'>If you are an employer or organization looking for funding, you can find relevant information on the <a href="pagex.html">funding page</a>.</p>
-						<fieldset>
-							<legend data-chtwzrd-q='{"labelWizard":"Are you:", "qId":"q1"}'>What would you describe yourself as?</legend>
-							<ul class="list-unstyled mrgn-tp-md">
-								<li>
-									<label>
-										<input type="radio" value="young-canadian" name="describe" data-chtwzrd-a='{"next":"q2"}' />
-										<span>a young Canadian</span>
-									</label>
-								</li>
-								<li>
-									<label>
-										<input type="radio" value="employer-organization-funding-support-youth" name="describe" data-chtwzrd-a='{"next":"none", "url":"page2.html"}' />
-										<span>an employer or organization looking for funding to support youth</span>
-									</label>
-								</li>
-								<li>
-									<label>
-										<input type="radio" value="none-above" name="describe" data-chtwzrd-a='{"next":"q3"}' />
-										<span>None of the above</span>
-									</label>
-								</li>
-							</ul>
-						</fieldset>
-						<fieldset>
-							<legend data-chtwzrd-q='{"labelWizard":"Great! And are you:", "qId":"q2"}'>In what situation are you?</legend>
-							<ul class="list-unstyled mrgn-tp-md">
-								<li>
-									<label>
-										<input type="radio" value="high-school" name="situation" data-chtwzrd-a='{"next":"q3"}' />
-										<span>a high school student</span>
-									</label>
-								</li>
-								<li>
-									<label>
-										<input type="radio" value="cegep-student" name="situation" data-chtwzrd-a='{"next":"q3"}' />
-										<span>a CÉGEP student</span>
-									</label>
-								</li>
-								<li>
-									<label>
-										<input type="radio" value="post-secondary" name="situation" data-chtwzrd-a='{"next":"q3"}' />
-										<span>a post-secondary school student</span>
-									</label>
-								</li>
-								<li>
-									<label>
-										<input type="radio" value="ready-start-career" name="situation" data-chtwzrd-a='{"next":"q3"}' />
-										<span>ready to start a career</span>
-									</label>
-								</li>
-								<li>
-									<label>
-										<input type="radio" value="not-school-not-working" name="situation" data-chtwzrd-a='{"next":"q3"}' />
-										<span>not in school and not working</span>
-									</label>
-								</li>
-								<li>
-									<label>
-										<input type="radio" value="none" name="situation" data-chtwzrd-a='{"next":"q3"}' />
-										<span>none of these</span>
-									</label>
-								</li>
-							</ul>
-						</fieldset>
-						<fieldset>
-							<legend data-chtwzrd-q='{"labelWizard":"Awesome! And would you like to:", "qId":"q3"}'>What is your goal?</legend>
-							<ul class="list-unstyled mrgn-tp-md">
-								<li>
-									<label>
-										<input type="radio" value="get-job" name="goal" data-chtwzrd-a='{"next":"none", "url":"page3.html"}' />
-										<span>get a job</span>
-									</label>
-								</li>
-								<li>
-									<label>
-										<input type="radio" value="develop-skills" name="goal" data-chtwzrd-a='{"next":"none", "url":"page4.html"}' />
-										<span>develop skills</span>
-									</label>
-								</li>
-								<li>
-									<label>
-										<input type="radio" value="explore-careers" name="goal" data-chtwzrd-a='{"next":"none", "url":"page5.html"}' />
-										<span>explore careers</span>
-									</label>
-								</li>
-								<li>
-									<label>
-										<input type="radio" value="post-secondary-education" name="goal" data-chtwzrd-a='{"next":"none", "url":"page6.html"}' />
-										<span>attend post-secondary education</span>
-									</label>
-								</li>
-								<li>
-									<label>
-										<input type="radio" value="serve-community" name="goal" data-chtwzrd-a='{"next":"none", "url":"page7.html"}' />
-										<span>serve your community</span>
-									</label>
-								</li>
-								<li>
-									<label>
-										<input type="radio" value="get-experience" name="goal" data-chtwzrd-a='{"next":"none", "url":"page8.html"}' />
-										<span>get an experience</span>
-									</label>
-								</li>
-								<li>
-									<label>
-										<input type="radio" value="everything" name="goal" data-chtwzrd-a='{"next":"none"}' />
-										<span>see everything</span>
-									</label>
-								</li>
-							</ul>
-						</fieldset>
-						<br/>
-						<button type="submit" class="btn btn-sm btn-primary">Search</button>
-					</form>
-				</section>
-			</div>
-		</div>
+		<section class="wb-chtwzrd">
+			<h2>Help us help you</h2>
+			<form class="mrgn-bttm-xl" data-chtwzrd='{"sendWizard":"Show results", "first":"q1", "titleWizard":"I can help you find the information you need", "startText":"Hi! I can help direct you to programs and services you might be interested in. Let&apos;s begin...", "endText":"Thank you. I have built a page with results you may find resourceful."}' action="page1.html">
+				<p data-chtwzrd-intro='First, if you are an employer or organization looking for funding, you can find relevant information on the <a href="pagex.html">funding page</a>.'>If you are an employer or organization looking for funding, you can find relevant information on the <a href="pagex.html">funding page</a>.</p>
+				<fieldset>
+					<legend data-chtwzrd-q='{"labelWizard":"Are you:", "qId":"q1"}'>What would you describe yourself as?</legend>
+					<ul class="list-unstyled mrgn-tp-md">
+						<li>
+							<label>
+								<input type="radio" value="young-canadian" name="describe" data-chtwzrd-a='{"next":"q2"}' />
+								<span>a young Canadian</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="radio" value="employer-organization-funding-support-youth" name="describe" data-chtwzrd-a='{"next":"none", "url":"page2.html"}' />
+								<span>an employer or organization looking for funding to support youth</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="radio" value="none-above" name="describe" data-chtwzrd-a='{"next":"q3"}' />
+								<span>None of the above</span>
+							</label>
+						</li>
+					</ul>
+				</fieldset>
+				<fieldset>
+					<legend data-chtwzrd-q='{"labelWizard":"Great! And are you:", "qId":"q2"}'>In what situation are you?</legend>
+					<ul class="list-unstyled mrgn-tp-md">
+						<li>
+							<label>
+								<input type="radio" value="high-school" name="situation" data-chtwzrd-a='{"next":"q3"}' />
+								<span>a high school student</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="radio" value="cegep-student" name="situation" data-chtwzrd-a='{"next":"q3"}' />
+								<span>a CÉGEP student</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="radio" value="post-secondary" name="situation" data-chtwzrd-a='{"next":"q3"}' />
+								<span>a post-secondary school student</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="radio" value="ready-start-career" name="situation" data-chtwzrd-a='{"next":"q3"}' />
+								<span>ready to start a career</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="radio" value="not-school-not-working" name="situation" data-chtwzrd-a='{"next":"q3"}' />
+								<span>not in school and not working</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="radio" value="none" name="situation" data-chtwzrd-a='{"next":"q3"}' />
+								<span>none of these</span>
+							</label>
+						</li>
+					</ul>
+				</fieldset>
+				<fieldset>
+					<legend data-chtwzrd-q='{"labelWizard":"Awesome! And would you like to:", "qId":"q3"}'>What is your goal?</legend>
+					<ul class="list-unstyled mrgn-tp-md">
+						<li>
+							<label>
+								<input type="radio" value="get-job" name="goal" data-chtwzrd-a='{"next":"none", "url":"page3.html"}' />
+								<span>get a job</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="radio" value="develop-skills" name="goal" data-chtwzrd-a='{"next":"none", "url":"page4.html"}' />
+								<span>develop skills</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="radio" value="explore-careers" name="goal" data-chtwzrd-a='{"next":"none", "url":"page5.html"}' />
+								<span>explore careers</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="radio" value="post-secondary-education" name="goal" data-chtwzrd-a='{"next":"none", "url":"page6.html"}' />
+								<span>attend post-secondary education</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="radio" value="serve-community" name="goal" data-chtwzrd-a='{"next":"none", "url":"page7.html"}' />
+								<span>serve your community</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="radio" value="get-experience" name="goal" data-chtwzrd-a='{"next":"none", "url":"page8.html"}' />
+								<span>get an experience</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="radio" value="everything" name="goal" data-chtwzrd-a='{"next":"none"}' />
+								<span>see everything</span>
+							</label>
+						</li>
+					</ul>
+				</fieldset>
+				<br/>
+				<button type="submit" class="btn btn-sm btn-primary">Search</button>
+			</form>
+		</section>
 	</div>
 </div>
 <section class="whtwedo">
