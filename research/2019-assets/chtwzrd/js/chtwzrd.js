@@ -494,6 +494,9 @@ var buildAnswerObj = function($selector) {
 };
 
 // Initiator here, let's go!
-if($(".wb-chtwzrd").length) {
-	fireChtwzrd($(".wb-chtwzrd"));
-}
+$(document).ready(function(){
+	if($(".wb-chtwzrd").length) {
+		var $chtwzrd = $(".wb-chtwzrd");
+		fireChtwzrd($chtwzrd);
+	}
+});
