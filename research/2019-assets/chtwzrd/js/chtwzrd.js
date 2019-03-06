@@ -44,7 +44,7 @@ var datainput = {},
 // initiate depending on the input type
 var fireChtwzrd = function($selector) {	
 	// Grab JSON File, parse and create
-	if(typeof $selector.data('chtwzrd-src') !== undefined) {
+	if(typeof $selector.data('chtwzrd-src') !== undefined && $selector.data('chtwzrd-src')) {
 		var data = $selector.data('chtwzrd-src');
 		$.getJSON(data, function(json) {
 			datainput = json;
