@@ -17,44 +17,44 @@ var componentName = "wb-chtwzrd",
 	selector = "." + componentName,
 	initEvent = "wb-init" + selector,
 	$document = wb.doc,
+	$sendBtn,
 	datainput = {},
-	hasAnswered = true, 
-	redirurl = "", 
-	first = "", 
-	intro = "", 
-	redirurlCopy = redirurl,
-	firstCopy = first,
-	introCopy = intro,
-	formType = "dynamic",
-	current = "",
-	botTime = "", 
-	inputsTime = "", 
-	replyTime = "",
-	sendButton = "",
+	timeValues = {},
+	waitingForAnswer, 
+	formType,
+	redirurl, 
+	first, 
+	intro, 
+	current,
+	waitTimeout, 
+	inputsTimeout, 
+	redirurlCopy,
+	firstCopy,
+	introCopy,
 	i18nDict = {
 		en: {
 			"chtwzrd-send": "Send<span class='wb-inv'> reply and continue</span>",
-			"chtwzrd-switch": "Switch to wizard",
+			"chtwzrd-toggle": "Switch to wizard",
 			"chtwzrd-notification": "Close chat notification",
 			"chtwzrd-open": "Open chat wizard",
 			"chtwzrd-minimize": "Minimize chat wizard",
 			"chtwzrd-history": "Conversation history",
 			"chtwzrd-reply": "Reply",
 			"chtwzrd-controls": "Controls",
-			"chtwzrd-switch-basic": "Switch to basic form",
+			"chtwzrd-toggle-basic": "Switch to basic form",
 			"chtwzrd-waiting": "Waiting for message",
 			"chtwzrd-answer": "You have answered:"
 		},
 		fr: {
 			"chtwzrd-send": "Envoyer<span class='wb-inv'> la réponse et continuer</span>",
-			"chtwzrd-switch": "Basculer vers l&apos;assistant",
+			"chtwzrd-toggle": "Basculer vers l&apos;assistant",
 			"chtwzrd-notification": "Fermer la notification de discussion",
 			"chtwzrd-open": "Ouvrir l&apos;assistant de discussion",
 			"chtwzrd-minimize": "Réduire l&apos;assistant de discussion",
 			"chtwzrd-history": "Historique de discussion",
 			"chtwzrd-reply": "Répondre",
 			"chtwzrd-controls": "Contrôles",
-			"chtwzrd-switch-basic": "Basculer vers le formulaire",
+			"chtwzrd-toggle-basic": "Basculer vers le formulaire",
 			"chtwzrd-waiting": "En attente d&apos;un message",
 			"chtwzrd-answer": "Vous avez répondu&nbsp;:"
 		}
@@ -72,460 +72,551 @@ var componentName = "wb-chtwzrd",
 			$elm;
 		if ( elm ) {
 			$elm = $( elm );
-			
+
 			fireChtwzrd( $elm );
-			
+
 			// Identify that initialization has completed
 			wb.ready( $elm, componentName );
 		}
-	};
-	
-	// initiate depending on the input type
-	var fireChtwzrd = function($selector) {	
+	},
+
+	/**
+	 * Prepare initiation depending on the input type, wether it's JSON or a form
+	 * @method fireChtwzrd
+	 * @param {jQuery DOM element} $selector Element to which the wizard will be appended
+	 */
+	fireChtwzrd = function( $selector ) {
 		// Grab JSON File, parse and create
-		if(typeof $selector.data('chtwzrd-src') !== undefined && $selector.data('chtwzrd-src')) {
-			var data = $selector.data('chtwzrd-src');
-			$.getJSON(data, function(json) {
+		if(typeof $selector.data( componentName + "-src" ) !== undefined && $selector.data( componentName + '-src' )) {
+			var data = $selector.data( componentName + "-src" );
+			$.getJSON( data, function( json ) {
 				datainput = json;
-				appendBasicForm($selector, datainput);
-				initiateChtwzrd($selector);
-			});
+				buildBasicForm( $selector, datainput );
+				initiateChtwzrd( $selector );
+			} );
 		// Start from a form on the page
 		} else {
-			datainput = translateToObject($selector);
-			initiateChtwzrd($selector);
+			datainput = translateToObject( $selector );
+			initiateChtwzrd( $selector );
 		}
-	};
-	
-	// If chat wizard initiator is found, then initiate
-	var initiateChtwzrd = function($selector) {		
+	},
+
+	/**
+	 * Initiate chat wizard experience
+	 * @method initiateChtwzrd
+	 * @param {jQuery DOM element} $selector Element to which the wizard will be appended
+	 */
+	initiateChtwzrd = function( $selector ) {
 		// Prevent on load flick and identify basic form
-		$selector.removeClass("wb-inv").addClass("chtwzrd-basic");
+		$selector.removeClass( "hidden wb-inv" ).addClass( componentName + "-basic" );
 
 		// Initiate default values
+		timeValues = {
+			shortDelay: 500,
+			mediumDelay: 750, 
+			longDelay: 1500
+		};
+		waitingForAnswer = false;
 		firstCopy = first = datainput.header.first;
-		introCopy = intro = (datainput.header.introTextWizard ? datainput.header.introTextWizard : "");
+		introCopy = intro = ( datainput.header.introTextWizard ? datainput.header.introTextWizard : "" );
 		redirurlCopy = redirurl = datainput.header.defaultDestination;
-		current = datainput.questions[first];
-		if(datainput.header.formType) {
-			formType = datainput.header.formType;
-		}
-		i18nDict = i18nDict[ $("html").attr("lang") || "en" ];	// Setting up language
-		sendButton = '<button class="btn btn-primary btn-block chtwzrd-send" type="button">' + i18nDict["chtwzrd-send"] + '</button>';
-		
+		current = datainput.questions[ first ];
+		formType = datainput.header.formType ? datainput.header.formType : "dynamic";
+
+		// Initiate dictionary
+		i18nDict = i18nDict[ $( "html" ).attr( "lang" ) || "en" ];
+		i18nDict = {
+			send: i18nDict[ "chtwzrd-send" ],
+			toggle: i18nDict[ "chtwzrd-toggle" ],
+			notification: i18nDict[ "chtwzrd-notification" ],
+			trigger: i18nDict[ "chtwzrd-open" ],
+			minimize: i18nDict[ "chtwzrd-minimize" ],
+			conversation: i18nDict[ "chtwzrd-history" ],
+			reply: i18nDict[ "chtwzrd-reply" ],
+			controls: i18nDict[ "chtwzrd-controls" ],
+			toggleBasic: i18nDict[ "chtwzrd-toggle-basic" ],
+			waiting: i18nDict[ "chtwzrd-waiting" ],
+			answer: i18nDict[ "chtwzrd-answer" ]
+		};
+
 		// Build chat wizard
-		buildChtwzrd($selector, datainput.header.titleWizard);
+		buildChtwzrd( $selector, datainput.header.titleWizard );
 
 		// All the commonly used elements
-		var $basic = $(".chtwzrd-basic"), 
-			$bubble = $(".chtwzrd-bubble-wrap"), 
-			$container = $(".chtwzrd-container"), 
-			$form = $(".chtwzrd-body"),
-			$conversation = $(".chtwzrd-history"),
-			$minimize = $(".chtwzrd-min"),
-			$basiclink = $(".chtwzrd-basic-link"),
-			$focusedBeforechtwzrd = "",
+		var $basic = $( selector + "-basic" ), 
+			$bubble = $( selector + "-bubble-wrap" ), 
+			$container = $( selector + "-container" ), 
+			$form = $( ".body", $container ),
+			$conversation = $( ".history", $container ),
+			$minimize = $( ".minimize", $container ),
+			$basiclink = $( ".basic-link", $container ),
+			$focusedBeforechtwzrd,
 			$firstTabStop = $minimize,
 			$lastTabStop = $basiclink;
 
 		// Initiate basic form
-		initiateBasicForm($basic);
-		// Restart fresh on reload
-		$("input", $basic).prop("checked", false);
-		// Hide basic form on load, show chat bubble instead
-		$basic.hide();
-		$bubble.fadeIn('slow');
+		initiateBasicForm( $basic );
 
-		// Add link to chat from the basic form and add some white space over the footer for the bubble to sit
-		$("input[type=submit], button[type=submit]", $basic).addClass("mrgn-bttm-sm").before('<button class="btn btn-sm btn-default chtwzrd-link mrgn-bttm-sm mrgn-rght-sm">' + i18nDict["chtwzrd-switch"] + '</button>');
-		$("footer#wb-info").addClass("chtwzrd-mrgn");
-
-		// Ensure that the bubble does not go passed the footer
-		if($('footer#wb-info').length) {
-			// Correct bubble positionning on load, on resize an on Y scroll if necessary
-			$(window).on("load resize scroll", function() {
-				stickyUntilFooter($bubble);
-			});
-
-			// Keep the bubble sticky while scrolling Y until user reaches the footer
-			var stickyUntilFooter = function($element) {
-				// Equals to bubble default bottom value in CSS
-				var bottomY = 30;
-
-				if ($(window).scrollTop() >= $(document).outerHeight() - $(window).outerHeight() - $('footer#wb-info').outerHeight()) {
-					$element.css({	
-						bottom: ($('footer#wb-info').outerHeight() - ($(document).outerHeight() - $(window).outerHeight() - $(window).scrollTop()) + bottomY)
-					});
-				} else {
-					$element.css({	
-						bottom: bottomY
-					});
-				}
-			}
-		}
-
-		// Open Chat from the notification message
-		$(".chtwzrd-notif", $bubble).on("click", function() {
-			$(".chtwzrd-link", $bubble).click();
-		});
-
-		// Close notification aside bubble
-		$(".chtwzrd-notif-close").on("click", function (event) {
-			event.preventDefault();
-			$(this).parent().hide();
-			$bubble.focus();
-		});
+		// Initiate chat wizard bubble
+		initiateBubble( $bubble );
 
 		// Show basic form and hide chat wizard
-		$basiclink.on("click", function(event) {
+		$basiclink.on( "click", function( event ) {
 			event.preventDefault();
 
-			var $legendFocus = $("legend:first", $basic);
-			$legendFocus.attr("id", "chtwzrd-1-basic");
-			$legendFocus.attr("tabindex", "0");
+			var $legendFocus = $( "legend:first", $basic );
+			$legendFocus.attr( "tabindex", "0" );
 
-			$conversation.attr("aria-live", "");
-			resumeOnSwitch($basic, "form");
+			$conversation.attr( "aria-live", "" );
+			toggleExperience( $basic, "form" );
 
 			$container.stop().hide();
 			$basic.stop().show(function(){
 				$legendFocus.focus();
-				$legendFocus.attr("tabindex", "-1");
+				$legendFocus.attr( "tabindex", "-1" );
 			});
 
-			$("body").removeClass("chtwzrd-noscroll");
-		});
+			$( "body" ).removeClass( componentName + "-noscroll" );
+		} );
 
 		// Show chat wizard and hide basic form
-		$(".chtwzrd-link").on("click", function(event) {
+		$( selector + "-link" ).on( "click", function( event ) {
 			event.preventDefault();
-			
+
 			$basic.stop().hide();
-			$focusedBeforechtwzrd = $(':focus');
-			
-			if(!$(this).hasClass("chtwzrd-bubble")) {
-				resumeOnSwitch($container, "chat");
+			$focusedBeforechtwzrd = $( ":focus" );
+
+			if( !$( this ).hasClass( componentName + "-bubble" ) ) {
+				toggleExperience( $container, "wizard" );
 			}
-			$(".chtwzrd-bubble", $bubble).removeClass("chtwzrd-trans-pulse");
-			$("p", $bubble).hide().removeClass("chtwzrd-trans-left");
+			$( ".bubble", $bubble ).removeClass( "trans-pulse" );
+			$( "p", $bubble ).hide().removeClass( "trans-left" );
 
 			$container.stop().show();
 			$bubble.stop().hide();
-			$("body").addClass("chtwzrd-noscroll");
-			if($conversation.length){
-				$(".chtwzrd-conversation").scrollTop($conversation[0].scrollHeight);
+			$( "body" ).addClass( componentName + "-noscroll" );
+			if( $conversation.length ) {
+				$( ".conversation", $container ).scrollTop( $conversation[ 0 ].scrollHeight );
 			}
-			if(hasAnswered) {
-				appendInteraction($form);
+			if( !waitingForAnswer ) {
+				appendInteraction( $form );
 			}
 		});
 
 		// Listen for and trap the keyboard
-		$container.on('keydown', function(event) {
+		$container.on( 'keydown', function( event ) {
 			// Check for TAB key press, cycle through
-			if(event.keyCode === 9) {
-				if(event.shiftKey) {
-					if($firstTabStop.is(':focus')) {
+			if( event.keyCode === 9 ) {
+				if( event.shiftKey ) {
+					if( $firstTabStop.is( ':focus' ) ) {
 						event.preventDefault();
 						$lastTabStop.focus();
 					}
 				} else {
-					if($lastTabStop.is(':focus')) {
+					if( $lastTabStop.is( ':focus' ) ) {
 						event.preventDefault();
 						$firstTabStop.focus();
 					}
 				}
 			}
 			// ESCAPE, close
-			if (event.keyCode === 27) {
-				$(".chtwzrd-min").click();
+			if ( event.keyCode === 27 ) {
+				$minimize.click();
 			}
-		});
+		} );
 
 		// On chat button pressed: append answer, and on submit: redirect
-		$(document).on("click", ".chtwzrd-send", function(event) {
-			if($(this).attr('type') != "submit") {
+		$document.on( "click", selector + "-container .btn-send", function( event ) {
+			if( $( this ).attr( "type" ) != "submit" ) {
 				event.preventDefault();
-				var $choiceselected = $("input:checked", $form);
-				if(!$choiceselected.length) {
-					$choiceselected = $('input:first', $form);
-					$choiceselected.attr('checked', true);
+				var $choiceselected = $( "input:checked", $form );
+				if( !$choiceselected.length ) {
+					$choiceselected = $( "input:first", $form );
+					$choiceselected.attr( "checked", true );
 				}
-				appendReply($form, buildAnswerObj($choiceselected), false);
+				appendReply( $form, cookAnswerObj( $choiceselected ), false );
 			}
-		});
+		} );
 
 		// Minimize chat wizard
-		$minimize.on("click", function(event) {
+		$minimize.on( "click", function( event ) {
 			event.preventDefault();
 			$container.stop().hide();
 			$bubble.stop().show();
-			$("body").removeClass("chtwzrd-noscroll");
+			$( "body" ).removeClass( componentName + "-noscroll" );
 
 			// Set focus back to element that had it before the modal was opened
 			$focusedBeforechtwzrd.focus();
-		});
-	};
+		} );
+	},
 
 	// Iniate basic form
-	var initiateBasicForm = function($selector) {
-		var $basicForm = $("form", $selector),
-			$allQuestions = $("fieldset", $selector),
+	/**
+	 * Initiate basic form
+	 * @method initiateBasicForm
+	 * @param {jQuery DOM element} $selector Element to which the basic form will be appended
+	 */
+	initiateBasicForm = function( $selector ) {
+		var $basicForm = $( "form", $selector ),
+			$allQuestions = $( "fieldset", $selector ),
 			$firstQuestion = $allQuestions.first();
 
-		if(formType == "dynamic") {
-			$firstQuestion.addClass("chtwzrd-first-q");
-			$allQuestions.not(".chtwzrd-first-q").hide();
+		if( formType == "dynamic" ) {
+			$firstQuestion.addClass( componentName + "-first-q" );
+			$allQuestions.not( selector + "-first-q" ).hide();
 		}
-		$allQuestions.each(function(){
-			var qParams = $(this).find("legend").data("chtwzrd-q");
-			$(this).attr("id", "chtwzrd-q-" + qParams.qId);
+		$allQuestions.each( function(){
+			var qParams = $( this ).find( "legend" ).data( componentName + "-q" );
+			$( this ).attr( "id", componentName + "-q-" + qParams.qId );
 		});
+		// Hide and restart fresh on reload
+		$selector.hide();
+		$( "input", $basicForm ).prop( "checked", false );
+
+		// Add link to chat from the basic form
+		$( "input[type=submit], button[type=submit]", $basicForm ).addClass( "mrgn-bttm-sm" ).before( '<button class="btn btn-sm btn-default ' + componentName + '-link mrgn-bttm-sm mrgn-rght-sm">' + i18nDict.toggle + '</button>' );
 
 		// On input change in the basic form
-		$("input", $basicForm).on("change", function() {
-			var answerData = buildAnswerObj($(this)),
-				$qNext = $("#chtwzrd-q-" + answerData.qNext);
+		$( "input", $basicForm ).on( "change", function() {
+			var answerData = cookAnswerObj( $( this ) ),
+				$qNext = $( "#" + componentName + "-q-" + answerData.qNext );
 
-			if(formType == "dynamic") {
-				var $fieldset = $(this).closest("fieldset");
-				if($qNext.is(":hidden") || $fieldset.next().attr("id") != $qNext.attr("id") || answerData.qNext == "none") {
-					$fieldset.nextAll("fieldset").hide().find("input").prop("checked", false);
+			// Dynamically append next question on checked
+			if( formType == "dynamic" ) {
+				var $fieldset = $( this ).closest( "fieldset" );
+				if( $qNext.is( ":hidden" ) || $fieldset.next().attr( "id" ) != $qNext.attr( "id" ) || answerData.qNext == "none" ) {
+					$fieldset.nextAll( "fieldset" ).hide().find( "input" ).prop( "checked", false );
 				}
-				if(answerData.qNext != "none") {
-					$("#chtwzrd-q-" + answerData.qNext).show();
+				if( answerData.qNext != "none" ) {
+					$( "#" + componentName + "-q-" + answerData.qNext ).show();
 				}
-				if(answerData.url != "") {
-					$basicForm.attr("action", answerData.url);
+				if( answerData.url != "" ) {
+					$basicForm.attr( "action", answerData.url );
 				}
 			}
-		});
-	};
+		} );
+	},
 
-	// Builds the chat wizard skeleton
-	var buildChtwzrd = function($selector, title) {
-		$selector.after('<div class="chtwzrd-bubble-wrap"><p class="chtwzrd-trans-left"><span class="chtwzrd-notif">' + title + '</span> <a href="#" class="chtwzrd-notif-close" title="' + i18nDict["chtwzrd-notification"] + '" aria-label="' + i18nDict["chtwzrd-notification"] + '" role="button">×</a></p><a href="#chtwzrd-container" aria-controls="chtwzrd-container" class="chtwzrd-link chtwzrd-bubble chtwzrd-trans-pulse" role="button">' + i18nDict["chtwzrd-open"] + '</a></div>');
-		$selector.next('.chtwzrd-bubble-wrap').after('<aside class="modal-content overlay-def chtwzrd-container"></aside>');
+	/**
+	 * Initiate chat wizard bubble
+	 * @method initiateBubble
+	 * @param {jQuery DOM element} $selector Element which is the actual bubble
+	 */
+	initiateBubble = function( $selector ) {
+		// Hide basic form on load, show chat bubble instead
+		$selector.fadeIn( "slow" );
 
-		var $container = $(".chtwzrd-container");
-		$container.append('<header class="modal-header chtwzrd-header"><h2 class="modal-title chtwzrd-title">' + title + '</h2><button type="button" class="chtwzrd-min" title="' + i18nDict["chtwzrd-minimize"] + '"><span class="glyphicon glyphicon-chevron-down"></span></button></header>');
-		$container.append('<form class="modal-body chtwzrd-body" method="GET"></form>');
+		// Add some white space over the footer for the bubble to sit
+		$( "footer#wb-info" ).addClass( componentName + "-mrgn" );
 
-		var $form = $(".chtwzrd-body");
-		$form.append('<div class="chtwzrd-conversation"><section class="chtwzrd-history" aria-live="assertive"><h3 class="wb-inv">' + i18nDict["chtwzrd-history"] + '</h3></section><section class="chtwzrd-reply"><h3 class="wb-inv">' + i18nDict["chtwzrd-reply"] + '</h3><div class="chtwzrd-inputs"></div></section><div class="chtwzrd-form-params"></div></div>');
-		$form.append('<section class="chtwzrd-controls"><h3 class="wb-inv">' + i18nDict["chtwzrd-controls"] + '</h3><div class="row"><div class="col-xs-12">' + sendButton + '</div></div><div class="row"><div class="col-xs-12 text-center mrgn-tp-sm"><a href="#chtwzrd-basic" class="btn btn-sm btn-link chtwzrd-basic-link" role="button">' + i18nDict["chtwzrd-switch-basic"] + '</a></div></div></section>');
+		// Ensure that the bubble does not go passed the footer
+		if( $( 'footer#wb-info' ).length ) {
 
-		$(".chtwzrd-conversation").scrollTop($('.chtwzrd-history')[0].scrollHeight);
-	};
+			// Correct bubble positionning on load, on resize an on Y scroll if necessary
+			$( window ).on( "load resize scroll", function() {
+				stickyUntilFooter( $selector );
+			} );
 
-	// Translate Data attributes from the form and returns a Javascript Object
-	var translateToObject = function($selector) {
-		var $form = $("form", $selector),
-			$intro = $("p", $form).first();
+			// Keep the bubble sticky while scrolling Y until user reaches the footer
+			var stickyUntilFooter = function( $element ) {
+
+				// Equals to bubble default bottom value in CSS
+				var bottomY = 30;
+
+				if ( $( window ).scrollTop() >= $( document ).outerHeight() - $( window ).outerHeight() - $( "footer#wb-info" ).outerHeight() ) {
+					$element.css( {	
+						bottom: ( $( "footer#wb-info" ).outerHeight() - ( $( document ).outerHeight() - $( window ).outerHeight() - $( window ).scrollTop() ) + bottomY )
+					} );
+				} else {
+					$element.css( {	
+						bottom: bottomY
+					} );
+				}
+			}
+		}
+
+		// Open Chat from the notification message
+		$( ".notif", $selector ).on( "click", function() {
+			$( selector + "-link", $selector ).click();
+		} );
+
+		// Close notification aside bubble
+		$( ".notif-close", $selector ).on( "click", function (event) {
+			event.preventDefault();
+			$( this ).parent().hide();
+			$selector.focus();
+		} );
+	},
+
+	/**
+	 * Translate Data attributes from the form and returns a Javascript Object
+	 * @method translateToObject
+	 * @param {jQuery DOM element} $selector Basic from which the wizard will be created
+	 * @returns {Object} Data used by the wizard for the experience
+	 */
+	translateToObject = function( $selector ) {
+		var $form = $( "form", $selector ),
+			$intro = $( "p", $form ).first();
 		var datacook = {};
 
-		datacook.header = $form.data('chtwzrd');
-		datacook.header.defaultDestination = $form.attr("action");
-		datacook.header.titleForm = $form.prev("h2");
-		datacook.header.sendForm = ($("input[type=submit]", $form).length ? $("input[type=submit]", $form).val() : $("button[type=submit]", $form).html());
+		datacook.header = $form.data( componentName );
+		datacook.header.defaultDestination = $form.attr( "action" );
+		datacook.header.titleForm = $form.prev( "h2" );
+		datacook.header.sendForm = ( $( "input[type=submit]", $form ).length ? $( "input[type=submit]", $form ).val() : $( "button[type=submit]", $form ).html() );
 
-		if($intro.length) {
+		if( $intro.length ) {
 			datacook.header.introTextForm = $intro.html();
-			datacook.header.introTextWizard = (typeof $intro.data('chtwzrd-intro') === "undefined" ? datacook.header.introTextForm : $intro.data('chtwzrd-intro'));
+			datacook.header.introTextWizard = ( typeof $intro.data( componentName + '-intro' ) === "undefined" ?datacook.header.introTextForm : $intro.data( componentName + '-intro' ) );
 		}
 		datacook.questions = {};
 
-		$("fieldset", $selector).each(function() {
-			var $question = $(this).find("legend"),
-				$choices = $(this).find("label"),
+		$( "fieldset", $selector ).each( function() {
+			var $question = $( this ).find( "legend" ),
+				$choices = $( this ).find( "label" ),
 				choices = [],
-				qdata = $question.data('chtwzrd-q'),
+				qdata = $question.data( componentName + "-q" ),
 				qName = "",
 				questionID = qdata.qId;
 
-			$choices.each(function(index) {
-				var $choice = $(this).find("input"),
-					name = $choice.attr("name"),
-					textval = $choice.siblings("span:not(.no-chtwzrd)").html();
+			$choices.each( function( index ) {
+				var $choice = $( this ).find( "input" ),
+					name = $choice.attr( "name" ),
+					textval = $choice.siblings( "span:not(.no-wb-chtwzrd)" ).html();
 
-				if(!index) {
+				if( !index ) {
 					qName = name;
 				}
-				var choice = $choice.data('chtwzrd-a');
+				var choice = $choice.data( componentName + "-a" );
 				choice.content = textval;
 				choice.queryParam = $choice.val();
-				choices.push(choice);
-			});
-			datacook.questions[questionID] = qdata;
-			datacook.questions[questionID].queryName = qName;
-			datacook.questions[questionID].labelForm = $question.html();
-			datacook.questions[questionID].choices = choices;
-		});
+				choices.push( choice );
+			} );
+			datacook.questions[ questionID ] = qdata;
+			datacook.questions[ questionID ].queryName = qName;
+			datacook.questions[ questionID ].labelForm = $question.html();
+			datacook.questions[ questionID ].choices = choices;
+		} );
 		return datacook;
-	};
-	
-	// Construct Basic Form from JSON
-	var appendBasicForm = function($selector, data) {
-		$selector.html("");
-		$selector.append('<h2>' + data.header.titleForm + '</h2><form class="mrgn-bttm-xl" action="' + data.header.defaultDestination + '"></form>');
-		var $basicForm = $("form", $selector);
-		
-		$basicForm.attr("data-chtwzrd", '{"sendWizard":"' + data.header.sendWizard + '", "first":"' + data.header.first + '", "titleWizard":"' + data.header.titleWizard + '", "startText":"' + data.header.startText + '", "endText":"' + data.header.endText + '"}');
-		
-		if(typeof data.header.introTextForm !== undefined) {
-			$basicForm.append('<p>' + data.header.introTextForm + '</p>');
-			if(typeof data.header.introTextForm !== undefined) {
-				$("p", $basicForm).attr("data-chtwzrd-intro", data.header.introTextWizard);
+	},
+
+	/**
+	 * Build the chat wizard skeleton
+	 * @method buildChtwzrd
+	 * @param {jQuery DOM element} $selector Element to which the wizard will be appended
+	 * @param {String} title The title of the wizard window, as well as the notification
+	 */
+	buildChtwzrd = function( $selector, title ) {
+		$selector.after( '<div class="' + componentName + '-bubble-wrap"><p class="trans-left"><span class="notif">' + title + '</span> <a href="#" class="notif-close" title="' + i18nDict.notification + '" aria-label="' + i18nDict.notification + '" role="button">×</a></p><a href="#' + componentName + '-container" aria-controls="' + componentName + '-container" class="' + componentName + '-link bubble trans-pulse" role="button">' + i18nDict.trigger + '</a></div>' );
+		$selector.next( selector + '-bubble-wrap' ).after( '<aside id="' + componentName + '-container" class="modal-content overlay-def ' + componentName + '-container"></aside>' );
+
+		var $container = $( selector + "-container" );
+		$container.append( '<header class="modal-header header"><h2 class="modal-title title">' + title + '</h2><button type="button" class="minimize" title="' + i18nDict.minimize + '"><span class="glyphicon glyphicon-chevron-down"></span></button></header>' );
+		$container.append( '<form class="modal-body body" method="GET"></form>' );
+
+		var $form = $( ".body", $container );
+		$form.append( '<div class="conversation"><section class="history" aria-live="assertive"><h3 class="wb-inv">' + i18nDict.conversation + '</h3></section><section class="reply"><h3 class="wb-inv">' + i18nDict.reply + '</h3><div class="inputs-zone"></div></section><div class="form-params"></div></div>' );
+		$form.append( '<section class="controls"><h3 class="wb-inv">' + i18nDict.controls + '</h3><div class="row"><div class="col-xs-12"><button class="btn btn-primary btn-block btn-send" type="button">' + i18nDict.send + '</button></div></div><div class="row"><div class="col-xs-12 text-center mrgn-tp-sm"><a href="#' + componentName + '-basic" class="btn btn-sm btn-link basic-link" role="button">' + i18nDict.toggleBasic + '</a></div></div></section>' );
+		$sendBtn = $( ".btn-send ", $form ).clone();
+	},
+
+	/**
+	 * Build Basic Form from JSON
+	 * @method buildBasicForm
+	 * @param {jQuery DOM element} $selector Element to which the form will be appended
+	 * @param {Object} data Data used by the form to build itself
+	 */
+	buildBasicForm = function( $selector, data ) {
+		$selector.html( "" );
+		$selector.append( '<h2>' + data.header.titleForm + '</h2><form class="mrgn-bttm-xl" action="' + data.header.defaultDestination + '"></form>' );
+		var $basicForm = $( "form", $selector );
+
+		$basicForm.attr( "data-" + componentName, '{"sendWizard":"' + data.header.sendWizard + '", "first":"' + data.header.first + '", "titleWizard":"' + data.header.titleWizard + '", "startText":"' + data.header.startText + '", "endText":"' + data.header.endText + '"}' );
+
+		if( typeof data.header.introTextForm !== undefined ) {
+			$basicForm.append( '<p>' + data.header.introTextForm + '</p>' );
+			if( typeof data.header.introTextForm !== undefined ) {
+				$( "p", $basicForm ).attr( "data-" + componentName + "-intro", data.header.introTextWizard );
 			}
 		}
-		$.each(data.questions, function(key, value) {
+		$.each( data.questions, function( key, value ) {
 			var randID = wb.getId();
-			$basicForm.append('<fieldset class="chtwzrd-fs-' + randID + '"><legend>' + value.labelForm + '</legend><ul class="list-unstyled mrgn-tp-md"></ul></fieldset>');
-			var $thisQ = $(".chtwzrd-fs-" + randID, $basicForm);
-			$("legend", $thisQ).attr("data-chtwzrd-q", '{"labelWizard":"' + value.labelWizard + '", "qId":"' + key + '"}');
-			
-			$.each(value.choices, function(index, ivalue) {
-				randID = wb.getId();
-				$("ul", $thisQ).append('<li><label><input type="' + value.input + '" value="' + ivalue.queryParam + '" id ="chtwzrd-in-' + randID + '" name="' + value.queryName + '" /> <span>' + ivalue.content + '</span>');
-				$("#chtwzrd-in-" + randID, $thisQ).attr("data-chtwzrd-a", '{"next":"' + ivalue.next + '"' + (typeof ivalue.url !== undefined && ivalue.url ? ', "url":"' + ivalue.url + '"' : '') + '}');
-			});
-		});
-		$basicForm.append('<br/><button type="submit" class="btn btn-sm btn-primary">' + data.header.sendForm + '</button>');
-	};
-	
-	// Resume to question X, by switching between the form and the chat wizard
-	var resumeOnSwitch = function($selector, toggle) {
-		// Redraw Chat and start over
-		if(toggle == "chat") {
-			var $conversation = $(".chtwzrd-conversation", $selector);
+			$basicForm.append( '<fieldset class="' + randID + '"><legend>' + value.labelForm + '</legend><ul class="list-unstyled mrgn-tp-md"></ul></fieldset>' );
+			var $thisQ = $( "." + randID, $basicForm );
+			$( "legend", $thisQ ).attr( "data-" + componentName + "-q", '{"labelWizard":"' + value.labelWizard + '", "qId":"' + key + '"}' );
 
-			window.clearTimeout(botTime);
-			window.clearTimeout(inputsTime);
-			window.clearTimeout(replyTime);
+			$.each( value.choices, function( index, ivalue ) {
+				randID = wb.getId();
+				$( "ul", $thisQ ).append( '<li><label><input type="' + value.input + '" value="' + ivalue.queryParam + '" id ="' + randID + '" name="' + value.queryName + '" /> <span>' + ivalue.content + '</span>' );
+				$( "#" + randID, $thisQ ).attr( "data-" + componentName + "-a", '{"next":"' + ivalue.next + '"' + ( typeof ivalue.url !== undefined && ivalue.url ? ', "url":"' + ivalue.url + '"' : '' ) + '}' );
+			} );
+		} );
+		$basicForm.append( '<br/><button type="submit" class="btn btn-sm btn-primary">' + data.header.sendForm + '</button>' );
+	},
+
+	/**
+	 * Toggle between form and wizard
+	 * @method toggleExperience
+	 * @param {jQuery DOM element} $selector Element to which the experience will be active
+	 * @param {String} toggle Give context to the toggle, wether it is form or wizard
+	 */
+	toggleExperience = function( $selector, toggle ) {
+		// Redraw chat wizard and start over
+		if( toggle == "wizard" ) {
+			var $conversation = $( ".conversation", $selector );
+
+			// Clear time outs in case they're still active
+			window.clearTimeout( waitTimeout );
+			window.clearTimeout( inputsTimeout );
+
+			// Reset to default values
+			waitingForAnswer = false;
 			redirurl = redirurlCopy;
 			first = firstCopy;
 			intro = introCopy;
-			hasAnswered = true;
-			current = datainput.questions[first];
-			$(".chtwzrd-history, .chtwzrd-form-params", $conversation).html("");
-			$(".chtwzrd-send", $selector).replaceWith(sendButton);
-			$(".chtwzrd-history", $conversation).attr("aria-live", "assertive");
-			if(hasAnswered) {
-				appendInteraction($(".chtwzrd-body"));
-			}
+			current = datainput.questions[ first ];
+
+			$( ".history, .form-params", $conversation ).html( "" );
+			$( ".btn-send", $selector ).replaceWith( $sendBtn );
+			$( ".history", $conversation ).attr( "aria-live", "assertive" );
+
+			appendInteraction( $( ".body", $selector ) );
 		} 
+		// Redraw form if it's set to dynamic
 		else {
-			var $allQuestions = $("fieldset", $selector);
-			if(formType == "dynamic") {
-				$allQuestions.not(":first").hide();
-				$("input", $allQuestions).prop("checked", false);
+			var $allQuestions = $( "fieldset", $selector );
+			if( formType == "dynamic" ) {
+				$allQuestions.not( ":first" ).hide();
+				$( "input", $allQuestions ).prop( "checked", false );
 			}
 		}
-	};
+	},
 
-	// Adds new question from bot and add inputs accordingly
-	var appendInteraction = function($selector) {
-		var $dropSpot = $(".chtwzrd-history", $selector),
-			$inputsSpot = $(".chtwzrd-inputs", $selector),
-			$chtwzrdConvo = $(".chtwzrd-conversation"),
+	/**
+	 * Add new question from bot and add inputs accordingly
+	 * @method appendInteraction
+	 * @param {jQuery DOM element} $selector Element to which the question and choices will be appended
+	 */
+	appendInteraction = function( $selector ) {
+		var $dropSpot = $( ".history", $selector ),
+			$inputsSpot = $( ".inputs-zone", $selector ),
+			$chtwzrdConvo = $( ".conversation", $selector ),
 			questionnaire = datainput.header,
-			$btnnext = $(".chtwzrd-send", $selector),
-			markup = (first != "" || intro != "" ? "p" : "h4");
+			$btnnext = $( ".btn-send", $selector ),
+			markup = ( first != "" || intro != "" ? "p" : "h4" );
 
-		hasAnswered = false;
-		$btnnext.prop('disabled', true);
-		$inputsSpot.html('');
-		$dropSpot.append('<div class="row mrgn-bttm-sm"><div class="col-xs-9"><' + markup + ' class="mrgn-tp-0 mrgn-bttm-sm"><span class="chtwzrd-avatar"></span><span class="chtwzrd-question"></span></' + markup + '></div></div>');
+		waitingForAnswer = true;
+		$btnnext.prop( "disabled", true );
+		$inputsSpot.html( "" );
+		$dropSpot.append( '<div class="row mrgn-bttm-sm"><div class="col-xs-9"><' + markup + ' class="mrgn-tp-0 mrgn-bttm-sm"><span class="avatar"></span><span class="question"></span></' + markup + '></div></div>' );
 
-		var $lastQuestion = $(".chtwzrd-question:last", $dropSpot);
+		var $lastQuestion = $( ".question:last", $dropSpot );
 
 		// Faking delay and type time
-		waitingBot($lastQuestion);
+		waitingBot( $lastQuestion );
 
-		botTime = setTimeout(function () {
+		waitTimeout = setTimeout( function () {
 			// Show greetings on first occurence
-			if(first != "") {
-				$lastQuestion.html(questionnaire.startText);
+			if( first != "" ) {
+				$lastQuestion.html( questionnaire.startText );
 				first = "";
-				appendInteraction($selector);
+				appendInteraction( $selector );
 			} 
 			// If intro is provided, show it before the first question
-			else if(intro != "") { 
-				$lastQuestion.html(intro);
+			else if( intro != "" ) { 
+				$lastQuestion.html( intro );
 				intro = "";
-				appendInteraction($selector);
+				appendInteraction( $selector );
 			}
 			// If it is the last question, then change the button to submit the form
-			else if(current == "last") {
-				$lastQuestion.html(questionnaire.endText);
-				$btnnext.attr("type", "submit").prop('disabled', false).html(questionnaire.sendWizard + '&nbsp;<span class="glyphicon glyphicon-chevron-right small"></span>');
-				$selector.attr('action', redirurl);
+			else if( current == "last" ) {
+				$lastQuestion.html( questionnaire.endText );
+				$btnnext.attr( "type", "submit" ).prop( "disabled", false ).html( questionnaire.sendWizard + '&nbsp;<span class="glyphicon glyphicon-chevron-right small"></span>' );
+				$selector.attr( "action", redirurl );
 			} 
 			// On every other occurences, append the question and its possible answers
 			else {
-				$lastQuestion.html(current.labelWizard);
+				$lastQuestion.html( current.labelWizard );
 				current.input = "radio";
-				inputsTime = setTimeout(function () {
-					$inputsSpot.append('<fieldset><legend class="wb-inv">' + current.labelWizard + '</legend><div class="row"><div class="col-xs-12"><ul class="list-inline mrgn-tp-sm chtwzrd-choices"></ul></div></div></fieldset>');
-					for(var i=0; i<current.choices.length; i++) {
-						var iQuestion = current.choices[i];	
-						$(".chtwzrd-choices", $inputsSpot).append('<li><label><input type="' + current.input + '" value="' + iQuestion.queryParam + '" name="' + current.queryName + '" data-chtwzrd-a=\'{"next":"' + iQuestion.next + '"' + (typeof iQuestion.url === "undefined" ? '' : ', "url":"' + iQuestion.url + '"') + '}\' ' + (!i ? 'checked ' : '') + '/> <span>' + iQuestion.content + '</span></label></li>');
+				inputsTimeout = setTimeout( function () {
+					$inputsSpot.append( '<fieldset><legend class="wb-inv">' + current.labelWizard + '</legend><div class="row"><div class="col-xs-12"><ul class="list-inline mrgn-tp-sm choices"></ul></div></div></fieldset>' );
+					for( var i = 0; i < current.choices.length; i++ ) {
+						var iQuestion = current.choices[ i ];	
+						$( ".choices", $inputsSpot ).append( '<li><label><input type="' + current.input + '" value="' + iQuestion.queryParam + '" name="' + current.queryName + '" data-' + componentName + '-a=\'{"next":"' + iQuestion.next + '"' + ( typeof iQuestion.url === "undefined" ? '' : ', "url":"' + iQuestion.url + '"' ) + '}\' ' + ( !i ? 'checked ' : '' ) + '/> <span>' + iQuestion.content + '</span></label></li>' );
 					}
-					var tresholdHeight = $chtwzrdConvo[0].scrollHeight;
-					if($(".chtwzrd-reply").length && ($(".chtwzrd-reply").outerHeight() + $lastQuestion.outerHeight() > $chtwzrdConvo.innerHeight())) {
-						tresholdHeight = $lastQuestion[0].scrollHeight + $chtwzrdConvo.innerHeight();
+					$btnnext.prop( "disabled", false );
+
+					// Reposition viewport to where the action is
+					var tresholdHeight = $chtwzrdConvo[ 0 ].scrollHeight,
+						$reply = $( ".reply", $selector );
+					
+					if( $reply.length && ( $reply.outerHeight() + $lastQuestion.outerHeight() > $chtwzrdConvo.innerHeight() ) ) {
+						tresholdHeight = $dropSpot[ 0 ].scrollHeight - $lastQuestion.outerHeight() - 42;	// Minus "answer to life" for safety
 					}
-					$chtwzrdConvo.scrollTop(tresholdHeight);
-					$btnnext.prop('disabled', false);
-				}, 750);
+					$chtwzrdConvo.scrollTop( tresholdHeight );
+				}, timeValues.mediumDelay );
 			}
-			$chtwzrdConvo.scrollTop($chtwzrdConvo[0].scrollHeight);
-		}, 1500);
-	};
+			$chtwzrdConvo.scrollTop( $chtwzrdConvo[ 0 ].scrollHeight );
+		}, timeValues.longDelay );
+	},
 
-	// Waiting for the bot to type animation
-	var waitingBot = function($selector) {
-		$selector.html('<span class="chtwzrd-loader" aria-label="' + i18nDict["chtwzrd-waiting"] + '"><span class="chtwzrd-loader-dot dot1"></span><span class="chtwzrd-loader-dot dot2"></span><span class="chtwzrd-loader-dot dot3"></span></span>');
-	}
-
-	// Add reply from human and calls next question
-	var appendReply = function($selector, answerObj) {
+	/**
+	 * Add reply from human and calls next question
+	 * @method appendReply
+	 * @param {jQuery DOM element} $selector Element to which the answer will be appended
+	 * @param {Object} answerObj The answer selected and cooked
+	 */
+	appendReply = function( $selector, answerObj ) {
 		var randID = wb.getId(),
-			$dropSpot = $(".chtwzrd-history", $selector);
-		$dropSpot.append('<div class="row mrgn-bttm-md"><div class="col-xs-9 col-xs-offset-3"><div class="chtwzrd-message text-right pull-right" id="' + randID + '"><p class="mrgn-bttm-0"><span class="wb-inv">' + i18nDict["chtwzrd-answer"] + ' </span>' + answerObj.value + '</p></div></div></div>');
-		$(".chtwzrd-form-params", $selector).append('<input type="hidden" name="' + answerObj.queryName + '" value="' + answerObj.queryParam + '" />');
-		hasAnswered = true;
-		if(answerObj.url != "") {
+			$dropSpot = $( ".history", $selector );
+		$dropSpot.append( '<div class="row mrgn-bttm-md"><div class="col-xs-9 col-xs-offset-3"><div class="message text-right pull-right" id="' + randID + '"><p class="mrgn-bttm-0"><span class="wb-inv">' + i18nDict.answer + ' </span>' + answerObj.value + '</p></div></div></div>' );
+		$( ".form-params", $selector ).append( '<input type="hidden" name="' + answerObj.queryName + '" value="' + answerObj.queryParam + '" />' );
+		waitingForAnswer = false;
+		if( answerObj.url != "" ) {
 			redirurl = answerObj.url; 
 		}
-
+		// Find next question
 		var next = answerObj.qNext,
-			$reply = $("#" + randID, $dropSpot);
+			$reply = $( "#" + randID, $dropSpot );
 
-		$reply.attr("tabindex", "0");
-		if(next == "none") {
+		if( next == "none" ) {
 			current = "last";
 		} else {
-			current = datainput.questions[next];
+			current = datainput.questions[ next ];
 		}
-		$(".chtwzrd-send", $selector).prop('disabled', true);
-		replyTime = setTimeout(function () {
-			$(".chtwzrd-inputs", $selector).remove("fieldset");
-			$reply.focus();
-			$reply.attr("tabindex", "-1");
-			appendInteraction($selector);
-		}, 500);
-	};
+		$( ".btn-send", $selector ).prop( "disabled", true );
+		$reply.attr( "tabindex", "0" );
 
-	// Builds an object that is suitable for answer, and returns it
-	var buildAnswerObj = function($selector) {
-		// The way of taking text value for input is weak at this moment, needs improvement
-		var answerData = $selector.data("chtwzrd-a");
+		// Clear the inputs zone after an intuitive delay
+		waitTimeout = setTimeout( function () {
+			$( ".inputs-zone", $selector ).remove( "fieldset" );
+			$reply.focus();
+			$reply.attr( "tabindex", "-1" );
+			appendInteraction( $selector );
+		}, timeValues.shortDelay );
+	},
+
+	/**
+	 * Waiting for the bot to type animation
+	 * @method waitingBot
+	 * @param {jQuery DOM element} $selector Element to which the typing loader will be appended
+	 */
+	waitingBot = function( $selector ) {
+		$selector.html( '<span class="loader-typing" aria-label="' + i18nDict.waiting + '"><span class="loader-dot dot1"></span><span class="loader-dot dot2"></span><span class="loader-dot dot3"></span></span>' );
+	},
+	
+	/**
+	 * Cooks an answer object that is suitable for all parties
+	 * @method cookAnswerObj
+	 * @param {jQuery DOM element} $selector Element to which the typing loader will be appended
+	 * @returns {Object} A cooked answer
+	 */
+	cookAnswerObj = function( $selector ) {
+		var answerData = $selector.data( componentName + "-a" );
 		return {
 			qNext: answerData.next, 
-			queryName: $selector.attr("name"), 
+			queryName: $selector.attr( "name" ), 
 			queryParam: $selector.val(), 
-			url: (answerData.url ? answerData.url : ""), 
+			url: ( answerData.url ? answerData.url : "" ), 
 			value: $selector.next().html()
 		};
 	};
