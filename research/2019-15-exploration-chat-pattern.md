@@ -346,6 +346,10 @@ Markup Basic Structure
 
 [See the Alpha Version](../research/2019-15-exploration-chat-pattern-alpha.html)
 
+### Latest version (package)
+
+[Download zip file](../research/2019-assets/chtwzrd-2/chtwzrd-20190313.zip)
+
 ## How-to
 
 ### Code a Form
@@ -459,7 +463,11 @@ Accepting JSON File as an input for batch deployments. If you have a JSON file t
 
 ## To do
 
-* Include i18n.
+* Replace some data attributes by HTML tags.
+* Improve "next question" logic.
+* Move main data-attribute to the element containing the "wb-chtwzrd" class.
+* Update JavaScript array for readability.
+* Write proper documentation for WET implementation.
 
 ## Improvements planned
 
