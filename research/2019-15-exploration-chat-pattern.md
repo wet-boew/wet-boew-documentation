@@ -348,7 +348,7 @@ Markup Basic Structure
 
 ### Latest version (package)
 
-[Download zip file](../research/2019-assets/chtwzrd-2/chtwzrd-20190313.zip)
+[Download zip file](../research/2019-assets/chtwzrd-2/chtwzrd-20190315.zip)
 
 ## How-to
 
