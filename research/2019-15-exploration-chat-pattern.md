@@ -3,7 +3,7 @@ published: true
 layout: default-theme-wet-boew-en
 title: 2019-15 - Exploration of a chat like design pattern
 description: Exploration of a chat like design pattern
-modified: 2019-01-25
+modified: 2019-03-18
 ---
 
 ## Goal
@@ -346,13 +346,13 @@ Markup Basic Structure
 
 [See the Alpha Version](../research/2019-15-exploration-chat-pattern-alpha.html)
 
-### Latest version (package)
+### Beta version
 
 [Download zip file](../research/2019-assets/chtwzrd-2/chtwzrd-20190315.zip)
 
 ## How-to
 
-### Code a Form
+### Code a Form (To be revised)
 In order to be configured properly, you need the following:
 
 * Add a form to a page and include the "wb-chtwzrd" class to either the form or its container (if it is contained in a row on its own).
@@ -376,7 +376,7 @@ In order to be configured properly, you need the following:
 * The text value placed after your input must be wrapped around an HTML tag, like a span, and you can use the "no-chtwzrd" class on an element if you want to ignore it from the text value, e.g. an image.
 * Note: You can have any containers you want for your form, as long as you wrap it all inside the "wb-chtwzrd" class. The toggle would affect the spacing in your page if you don't wrap it all. Finally, a "wb-inv" class should be added to the element that has the "wb-chtwzrd", in order to prevent flickering on page load. 
 
-#### Example
+#### Example (Subject to change)
 
 {::nomarkdown}
 {% raw %}
@@ -463,11 +463,7 @@ Accepting JSON File as an input for batch deployments. If you have a JSON file t
 
 ## To do
 
-* Replace some data attributes by HTML tags.
-* Improve "next question" logic.
-* Move main data-attribute to the element containing the "wb-chtwzrd" class.
-* Update JavaScript array for readability.
-* Write proper documentation for WET implementation.
+* Rework documentation for WET implementation to match latest code updates.
 
 ## Improvements planned
 
