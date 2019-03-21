@@ -106,26 +106,23 @@
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/data-picture/data-picture-en.html"
         },
         "code_change_req" : false,
-        "status":"Not yet started"
+        "status":"Closed"
     },
     {
         "name" : "Dismissable content",
         "migrate": {
             "errors" : false,
             "descriptions" : [
-                "jQuery.fn.removeAttr no longer sets boolean properties"
+                ""
             ],
-            "notes" : [
-                "removeAttr isn't necessarily an issue - has to be manually checked",
-                "I tested it a second time and this warning did not show up"
-            ]
+            "notes" : []
         },
         "href" : {
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/dismissable-content/dismissable-content-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/dismissable-content/dismissable-content-en.html"
         },
         "code_change_req" : false,
-        "status":"On hold"
+        "status":"Closed"
     },
     {
         "name" : "Equal height",
@@ -167,7 +164,7 @@
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/favicon/favicon-en.html"
         },
         "code_change_req" : false,
-        "status":"Not yet started"
+        "status":"Closed"
     },
     {
         "name" : "Feeds",
@@ -213,7 +210,7 @@
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/footnotes/footnotes-en.html"
         },
         "code_change_req" : false,
-        "status":"Not yet started"
+        "status":"Closed"
     },
     {
         "name" : "Form validation",
@@ -227,7 +224,7 @@
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/formvalid/formvalid-en.html"
         },
         "code_change_req" : false,
-        "status":"Not yet started"
+        "status":"Closed"
     },
     {
         "name" : "Geomap",
@@ -246,16 +243,20 @@
     {
         "name" : "Lightbox",
         "migrate": {
-            "errors" : false,
-            "descriptions" : [],
-            "notes" : []
+            "errors" : true,
+            "descriptions" : [
+                "jQuery.fn.focus() event shorthand is deprecated"
+            ],
+            "notes" : [
+                "focus() is not necessarily an issue - it is context dependend and needs further testing"
+            ]
         },
         "href" : {
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/lightbox/lightbox-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/lightbox/lightbox-en.html"
         },
         "code_change_req" : false,
-        "status":"Not yet started"
+        "status":"On hold"
     },
     {
         "name" : "Menu",
@@ -278,16 +279,20 @@
     {
         "name" : "Multimedia Player",
         "migrate": {
-            "errors" : false,
-            "descriptions" : [],
-            "notes" : []
+            "errors" : true,
+            "descriptions" : [
+                "'ready' event is deprecated"
+            ],
+            "notes" : [
+                "Further research is required for this"
+            ]
         },
         "href" : {
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/multimedia/multimedia-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/multimedia/multimedia-en.html"
         },
         "code_change_req" : false,
-        "status":"Not yet started"
+        "status":"On hold"
     },
     {
         "name" : "Overlay",
@@ -325,16 +330,20 @@
     {
         "name" : "Session Timeout",
         "migrate": {
-            "errors" : false,
-            "descriptions" : [],
-            "notes" : []
+            "errors" : true,
+            "descriptions" : [
+                "jQuery.fn.focus() event shorthand is deprecated"
+            ],
+            "notes" : [
+                "Further research is required for this"
+            ]
         },
         "href" : {
             "jquery3x" : "https://wet-boew-jquery-3-migration.netlify.com/demos/session-timeout/session-timeout-en.html",
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/session-timeout/session-timeout-en.html"
         },
         "code_change_req" : false,
-        "status":"Not yet started"
+        "status":"On hold"
     },
     {
         "name" : "Share widget",
@@ -432,7 +441,7 @@
             "jquery2x" : "https://wet-boew.github.io/wet-boew/demos/twitter/twitter-en.html"
         },
         "code_change_req" : false,
-        "status":"Not yet started"
+        "status":"Closed"
     },
     {
         "name" : "Zebra striping",

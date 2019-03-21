@@ -18,9 +18,9 @@
     {
         "name" : "Hash in a URL is preserved in a jQuery.ajax() call",
         "category" : "Ajax",
-        "description" : "Lorem ipsum",
-        "search_text" : "",
-        "fix_text" : "",
+        "description" : "The <code>jQuery.ajax()</code> method no longer strips off the hash in the URL if it is provided, and sends the full URL to the transport (xhr, script, jsonp, or custom transport). If the server at the other end of the connection cannot deal with a hash on a URL, strip it off before sending the request.",
+        "search_text" : "<code>.ajax( </code>",
+        "fix_text" : "This is not a potential issue because WET-BOEW doesn't communicate with any servers that can't handle a <code>#</code> in the URL",
         "href" : "https://jquery.com/upgrade-guide/3.0/#breaking-change-hash-in-a-url-is-preserved-in-a-jquery-ajax-call"
     },
     {
@@ -34,17 +34,17 @@
     {
         "name" : "select-multiple with nothing selected returns an empty array",
         "category" : "Attributes",
-        "description" : "Lorem ipsum",
-        "search_text" : "",
-        "fix_text" : "",
+        "description" : "Before jQuery 3.0, calling <code>.val()</code> on a <code>&lt;select multiple&gt;</code> element with no elements selected returned <code>null</code>. This was inconvenient since if at least one value was selected the return value would be an array. Also, if all options are disabled jQuery already returned an empty array. To improve consistency, the nothing-selected case now returns an empty array.",
+        "search_text" : "<code>.val(</code>",
+        "fix_text" : "<code>TODO</code>",
         "href" : "https://jquery.com/upgrade-guide/3.0/#breaking-change-select-multiple-with-nothing-selected-returns-an-empty-array"
     },
     {
         "name" : "jQuery 3.0 runs in Strict Mode",
         "category" : "Core",
-        "description" : "Lorem ipsum",
-        "search_text" : "",
-        "fix_text" : "",
+        "description" : "Now that most of the browsers supported by jQuery 3.0 have <code>\"use strict\"</code>, jQuery is being built with this directive. Your code is not required to run in Strict Mode, so most existing code should not require any changes. The one case we encountered three years ago was that ASP.NET 4.0 used <code>arguments.caller.callee</code> to attempt tracing through call stacks in its <code>__doPostBack()</code> method. If you are still using a version of ASP.NET that still does this, keep using jQuery 2.x or earlier. Modern browsers support stack traces via <code>error.stack</code> so it should not ever be necessary to examine <code>arguments.caller.callee</code>.",
+        "search_text" : "n/a",
+        "fix_text" : "n/a",
         "href" : "https://jquery.com/upgrade-guide/3.0/#breaking-change-jquery-3-0-runs-in-strict-mode"
     },
     {
@@ -232,9 +232,9 @@
     {
         "name" : ".andSelf() removed, use .addBack()",
         "category" : "Serialize",
-        "description" : "Lorem ipsum",
-        "search_text" : "",
-        "fix_text" : "",
+        "description" : "The <code>.andSelf()</code> method was deprecated in jQuery 1.8 and now removed in 3.0 in favor of the <code>.addBack()</code> method, which does a better job of explaining what it does and also accepts an optional selector to filter what is added back.",
+        "search_text" : "<code>.andSelf(</code>",
+        "fix_text" : "Use <code>.addBack()</code> instead",
         "href" : "https://jquery.com/upgrade-guide/3.0/#breaking-change-andself-removed-use-addback"
     }
 ]
