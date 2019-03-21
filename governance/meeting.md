@@ -10,6 +10,15 @@ Summary of what has been discussed at the meeting.
 
 ## Roadmap
 
+2019-03-21 (3 participants)
+* Update projects status
+* Re-activated project
+	* Step forms
+* Completed project
+	* Geomap - Upgrade to open layer v3.x
+* WET 4.0.31 and GCWeb 5.1.0 might be released in April instead of June. If those are released, in June WET 4.0.32 and GCWeb 5.2.0 will be the new planned release.
+* Next meeting invite will be sent in the comming weeks.
+
 2019-02-21 (6 participants)
 * Update the status of all project
 * New project

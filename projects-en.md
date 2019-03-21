@@ -146,6 +146,12 @@ Updated: 2019-03-01
 	* (2018-03-14) On going - review github issues and fixing current open issue.
 	* (2018-02-13) Validation of issue labelled "Work: Accessibility" which are open and the closed ones with the label "State: Going Stale".
 
+#### WET4 conformance to WCAG 2.1 
+* Review all WET4 feature and evaluate and make them compliant to WCAG 2.1
+* **Project lead:** Shawn Thompson
+* **Status:** Defining and planning the project
+* **Last updated:** March 21, 2019
+
 ### Long documents (was PDF generator)
 Create a new feature that would allow the user to obtain a PDF printable version of the page. The PDF printable version are different from the web printable version in the sense that it would be possible to control and well define how the content of the webpage would transposed into a paper base format.
 * **Last updated:** November 15, 2018
@@ -177,11 +183,37 @@ Provide a visual indication that show the current forms steps.
 ### Chat wizard
 Convert a form into a chat like interaction
 * **Project lead:** Francis Gorman
-* **Current status:** Testing the prototype then do the integration in GCWeb.
-* **Last update:** February 21, 2019
+* **Current status:** Functional high fidelity prototype and it's now ready to start the integration into wet-boew (docs + working example). Exploring to separate the "bubble" into it's own plugin.
+* **Others:** In the execution of this project, it's going to revive the step-form plugin previously submited into WET.
+* **Last update:** March 21, 2019
 * **History:**
+	* (2019-03-21) Functional high fidelity prototype and it's now ready to start the integration into wet-boew. 
 	* (2019-02-20) Project status update (stable prototype)
 	* (2019-01-21) Initiated research 2019-15 - Exploration of a chat like design pattern
+
+### Step form
+This component provides the ability to break a form into steps. To be use when Web forms are long/contain lot of information.
+* **Last updated:** March 21, 2019
+* **Github:** [PR #7913](https://github.com/wet-boew/wet-boew/pull/7913)
+* **Working example:** [TheKodester - Steps Form](https://www.thekodester.ca/wet/formvalid/steps)
+* **What left:**
+	* Run test
+	* Evaluation of WCAG compliance
+	* Complete the plugin documentation API such:
+		* Basic HTML interface
+		* Enhanced HTML interface
+		* Data structure
+		* Function
+		* Visual (Wireframe and CSS) for each UI variation
+	* Review how the plugin work on mobile, tablet and desktop mode. Note if it should act differently depending of the view.
+	* Prepare i18n text to be inserted in the master i18n spreadsheet
+	* Translate the French working example
+	* Review the plugin javascript
+* **Project integration lead:** Francis Gorman
+* **Current status:** Code base is under review and a few code adjustment are under development.
+* **History:**
+	* (2019-03-21) Re-activated this project and code base under review
+	* (2018-03-01) Move the project into inactive project list
 
 ### jQuery 3 Migration
 
@@ -333,11 +365,6 @@ Ensuring that WET do not contain any security culnerability exposed by using the
 
 Any taker? The following projects are currently incomplete and perhaps not ready to get merged into wet-boew. However a considerable amount of work was completed and they might only to be tuned. If you are interested, please contact wet-boew project lead or let's know your interests by opening a new github issue on the [wet-boew main project](https://github.com/wet-boew/wet-boew). Idem if you are aware of incomplete project that should be added at this list.
 
-### Geomap - Upgrate to open layer v3.x
-Upgrade the geomap plugin to use the latest version of open layer v3.x.
-* **PR:** [#7889](https://github.com/wet-boew/wet-boew/pull/7889)
-* **What left:**
-	* Ensure there is no breaking change for old geomap markup that use open layer v2.x. The expectation is WET geomap coded as showed in the WET working example would continue to work as is without requiring any markup change. Like having a fallback for OSM basemap example.
 
 ### Responsive table (Table saw)
 Transform data table into responsive table that are mobile friendly. There is four mode: Stack, Swipe, Toggle and display the table as is in large view.
@@ -368,25 +395,6 @@ A calculator helper plugin to provide a basic math calculation (addition, subtra
 	* Complete the plugin documentation API
 	* Create a French working example
 
-
-### Step form
-This component provides the ability to break a form into steps. To be use when Web forms are long/contain lot of information.
-* **Last updated:** March 1, 2018
-* **Github:** [PR #7913](https://github.com/wet-boew/wet-boew/pull/7913)
-* **Working example:** [TheKodester - Steps Form](https://www.thekodester.ca/wet/formvalid/steps)
-* **What left:**
-	* Run test
-	* Evaluation of WCAG compliance
-	* Complete the plugin documentation API such:
-		* Basic HTML interface
-		* Enhanced HTML interface
-		* Data structure
-		* Function
-		* Visual (Wireframe and CSS) for each UI variation
-	* Review how the plugin work on mobile, tablet and desktop mode. Note if it should act differently depending of the view.
-	* Prepare i18n text to be inserted in the master i18n spreadsheet
-	* Translate the French working example
-	* Review the plugin javascript
 
 ### Reading Progress Bar/indicator
 
@@ -459,6 +467,15 @@ Next step:
 	<summary>Show the list of completed projects</summary>
 {:/}
 
+
+### Geomap - Upgrade to open layer v3.x
+Upgrade the geomap plugin to use the latest version of open layer v3.x.
+* **PR:** [#7889](https://github.com/wet-boew/wet-boew/pull/7889)
+* **What left:**
+	* Ensure there is no breaking change for old geomap markup that use open layer v2.x. The expectation is WET geomap coded as showed in the WET working example would continue to work as is without requiring any markup change. Like having a fallback for OSM basemap example.
+* **Project integration lead:** Pierre Dubois
+* **Project lead:** Joost
+* **State:** The missing piece was added and there is a separate working example for previous configuration.
 
 ### Server side error message integration with form validation feature
 Harmonize the error message displayed when in browser error is combined with server side errors
