@@ -4,7 +4,7 @@ layout: default-theme-wet-boew-en
 filename_fr: index-fr
 title: Projects - Web Experience Toolkit (WET) documentation
 description: List of projects related to WET.
-modified: 2019-02-21
+modified: 2019-04-25
 ---
 
 {::nomarkdown}
@@ -185,15 +185,16 @@ Convert a form into a chat like interaction
 * **Project lead:** Francis Gorman
 * **Current status:** Functional high fidelity prototype and it's now ready to start the integration into wet-boew (docs + working example). Exploring to separate the "bubble" into it's own plugin.
 * **Others:** In the execution of this project, it's going to revive the step-form plugin previously submited into WET.
-* **Last update:** March 21, 2019
+* **Last update:** April 25, 2019
 * **History:**
+	* (2019-04-25) Plugin stable, upcoming integration into wet-boew
 	* (2019-03-21) Functional high fidelity prototype and it's now ready to start the integration into wet-boew. 
 	* (2019-02-20) Project status update (stable prototype)
 	* (2019-01-21) Initiated research 2019-15 - Exploration of a chat like design pattern
 
 ### Step form
 This component provides the ability to break a form into steps. To be use when Web forms are long/contain lot of information.
-* **Last updated:** March 21, 2019
+* **Last updated:** April 25, 2019
 * **Github:** [PR #7913](https://github.com/wet-boew/wet-boew/pull/7913)
 * **Working example:** [TheKodester - Steps Form](https://www.thekodester.ca/wet/formvalid/steps)
 * **What left:**
@@ -212,6 +213,7 @@ This component provides the ability to break a form into steps. To be use when W
 * **Project integration lead:** Francis Gorman
 * **Current status:** Code base is under review and a few code adjustment are under development.
 * **History:**
+	* (2019-04-25) Now stabilized, PR almost ready to submit, need just a commits history re-write to preserve intellectual property merits.
 	* (2019-03-21) Re-activated this project and code base under review
 	* (2018-03-01) Move the project into inactive project list
 
@@ -222,10 +224,21 @@ We’re upgrading jQuery from version 2.2.4 to 3.3.1. Version 2.x is no longer s
 * **Project lead:** Neil Mispelaar
 * **Current status:** Did an initial scan of all the wet-boew code. Testing each working example and quickly reviewing the JS of each plugin. 
 * **Documentation:** [https://wet-boew.github.io/wet-boew-documentation/research/2019-16-jquery-3-migration.html](https://wet-boew.github.io/wet-boew-documentation/research/2019-16-jquery-3-migration.html)
-* **Last update:** February 21, 2019
+* **Last update:** April 25, 2019
 * **History:**
+	* (2019-04-25) Project on hold
 	* (2019-02-21) Did an initial scan of all the wet-boew code. Testing each working example and quickly reviewing the JS of each plugin.
 	* (2019-02-01) Initiate research 2019-16 - jQuery 3 migration
+
+### Add to calendar
+
+Widget that can create an outlook like invitation on the fly to allow the user to add into its device calendar.
+
+* **Project lead:** Francis Gorman
+* **Current status:** New project, solution research ongoing
+* **Last update:** April 25, 2019
+* **History:**
+	* (2019-04-25) New project, solution research ongoing
 
 ## Related but untracked
 
