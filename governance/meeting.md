@@ -3,12 +3,18 @@ published: true
 layout: default-theme-wet-boew-en
 title: Meeting summary - WET-BOEW documentation
 description: Summary of what has been discussed at the meeting.
-modified: 2019-01-21
+modified: 2019-04-25
 ---
 
 Summary of what has been discussed at the meeting.
 
 ## Roadmap
+
+2019-04-24 (2 participants)
+* Update project status
+* New project initiated: "Add to calendar"
+* Step forms project almost ready to submit PR
+* New wet-boew project for .NET component - [wet-boew-dotnet-controls](https://github.com/wet-boew/wet-boew-dotnet-controls)
 
 2019-03-21 (3 participants)
 * Update projects status
