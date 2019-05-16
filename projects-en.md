@@ -4,7 +4,7 @@ layout: default-theme-wet-boew-en
 filename_fr: index-fr
 title: Projects - Web Experience Toolkit (WET) documentation
 description: List of projects related to WET.
-modified: 2019-04-25
+modified: 2019-05-16
 ---
 
 {::nomarkdown}
@@ -181,11 +181,11 @@ Provide a visual indication that show the current forms steps.
 	* (2019-01-22) Prototype created, starting the integration into GCWeb
 
 ### Chat wizard
-Convert a form into a chat like interaction
+Convert a form into a chat like interaction. The supporting use case is for GCWeb only for now.
 * **Project lead:** Francis Gorman
 * **Current status:** Functional high fidelity prototype and it's now ready to start the integration into wet-boew (docs + working example). Exploring to separate the "bubble" into it's own plugin.
 * **Others:** In the execution of this project, it's going to revive the step-form plugin previously submited into WET.
-* **Last update:** April 25, 2019
+* **Last update:** May 16, 2019
 * **History:**
 	* (2019-04-25) Plugin stable, upcoming integration into wet-boew
 	* (2019-03-21) Functional high fidelity prototype and it's now ready to start the integration into wet-boew. 
@@ -194,25 +194,14 @@ Convert a form into a chat like interaction
 
 ### Step form
 This component provides the ability to break a form into steps. To be use when Web forms are long/contain lot of information.
-* **Last updated:** April 25, 2019
+* **Last updated:** May 16, 2019
 * **Github:** [PR #7913](https://github.com/wet-boew/wet-boew/pull/7913)
 * **Working example:** [TheKodester - Steps Form](https://www.thekodester.ca/wet/formvalid/steps)
-* **What left:**
-	* Run test
-	* Evaluation of WCAG compliance
-	* Complete the plugin documentation API such:
-		* Basic HTML interface
-		* Enhanced HTML interface
-		* Data structure
-		* Function
-		* Visual (Wireframe and CSS) for each UI variation
-	* Review how the plugin work on mobile, tablet and desktop mode. Note if it should act differently depending of the view.
-	* Prepare i18n text to be inserted in the master i18n spreadsheet
-	* Translate the French working example
-	* Review the plugin javascript
+* **What left:** Apply the request of change of [PR #8645](https://github.com/wet-boew/wet-boew/pull/8645)
 * **Project integration lead:** Francis Gorman
 * **Current status:** Code base is under review and a few code adjustment are under development.
 * **History:**
+	* (2019-05-16) PR submited and there is some request of change to apply
 	* (2019-04-25) Now stabilized, PR almost ready to submit, need just a commits history re-write to preserve intellectual property merits.
 	* (2019-03-21) Re-activated this project and code base under review
 	* (2018-03-01) Move the project into inactive project list
@@ -224,8 +213,12 @@ We’re upgrading jQuery from version 2.2.4 to 3.3.1. Version 2.x is no longer s
 * **Project lead:** Neil Mispelaar
 * **Current status:** Did an initial scan of all the wet-boew code. Testing each working example and quickly reviewing the JS of each plugin. 
 * **Documentation:** [https://wet-boew.github.io/wet-boew-documentation/research/2019-16-jquery-3-migration.html](https://wet-boew.github.io/wet-boew-documentation/research/2019-16-jquery-3-migration.html)
-* **Last update:** April 25, 2019
+* **Last update:** May 16, 2019
 * **History:**
+	* (2019-05-16)
+		* We will create a separate package of WET-BOEW and GCWEb with jQuery 3 for testing
+		* There is some jQuery 3 error for flot third party, we will maintain our own copy of it
+		* The download will be available in the download page as an experimental kind of package. 
 	* (2019-04-25) Project on hold
 	* (2019-02-21) Did an initial scan of all the wet-boew code. Testing each working example and quickly reviewing the JS of each plugin.
 	* (2019-02-01) Initiate research 2019-16 - jQuery 3 migration
@@ -236,8 +229,9 @@ Widget that can create an outlook like invitation on the fly to allow the user t
 
 * **Project lead:** Francis Gorman
 * **Current status:** New project, solution research ongoing
-* **Last update:** April 25, 2019
+* **Last update:** May 16, 2019
 * **History:**
+	* (2019-05-16) Still in work in progress, a download function was added into the wet core in preparation of this plugin.
 	* (2019-04-25) New project, solution research ongoing
 
 ## Related but untracked
@@ -332,6 +326,11 @@ Save a HTML table into a CVS file on the fly by using javascript. That feature a
 * **What left:** Finish working example, testing and documentation for an integration in GCWeb.
 
 ## Backlog project
+
+### Update outdated Node package
+Update outdated NPM package of wet-boew and gcweb build package.
+* **Last updated:** May 16, 2018
+* **Current status:** Waiting for a project/dev lead
 
 ### Postal code lookup for maps or to refine/classify a result set
 Having a postal code lookup where it would display relative result on a map, or show a list of results classify by the closest to the farest. Having the posibility to set a threshold, like within 50 km of the entered postal code,... We might need to consider to merge the geo localisation data with real time data, like showing the waiting for location display after the postal code lookup.
