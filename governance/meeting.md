@@ -13,8 +13,8 @@ Summary of what has been discussed at the meeting.
 2019-05-16 (5 participants)
 * Update project status
 * Discussed on a deployement strategy for JQuery 3 migration which we will provide some experimental stable build.
-* Presented and approved Design decision 6 on versionning
-* Presented and approved Design decision 7 on experimental feature
+* Presented Design decision 6 on versionning
+* Presented Design decision 7 on experimental feature
 * WET Codefest 2019 event was put on hold/canceled but it will be reevaluated next August. 
 
 2019-04-24 (2 participants)

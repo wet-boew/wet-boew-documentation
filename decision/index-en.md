@@ -15,13 +15,14 @@ The following design decision can be obseleted if you find they are not valid an
 <div class="wb-filter">
 <section>
 	<h2>Current</h2>
-
 	<ul>
 		<li><a href="1.html">Design decision 1: Use SVG with img element instead of object</a> (Pattern)</li>
 		<li><a href="2.html">Design decision 2: Browser supported</a> (Support scope)</li>
 		<li><a href="3.html">Design decision 3: WET API/Blueprint</a></li>
 		<li><a href="4.html">Design decision 4: Basic HTML mode and progressive enhancement</a></li>
 		<li><a href="5.html">Design Decision 5: Decision on repository migration</a></li>
+		<li><a href="6.html">Design Decision 6: Versioning</a></li>
+		<li><a href="7.html">Design Decision 7: Experimental feature and versioning</a></li>
 	</ul>
 </section>
 
