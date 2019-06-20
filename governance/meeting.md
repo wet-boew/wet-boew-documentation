@@ -3,12 +3,18 @@ published: true
 layout: default-theme-wet-boew-en
 title: Meeting summary - WET-BOEW documentation
 description: Summary of what has been discussed at the meeting.
-modified: 2019-05-16
+modified: 2019-06-20
 ---
 
 Summary of what has been discussed at the meeting.
 
 ## Roadmap
+
+2019-06-20 (4 participants)
+* Update project status
+* Added Web Controls Library .NET project
+* Long documents project move as going stale
+* Annouced the wet-boew v4.0.31 and gcweb 5.2 release are going to be this week.
 
 2019-05-16 (5 participants)
 * Update project status
