@@ -4,7 +4,7 @@ layout: default-theme-wet-boew-en
 filename_fr: index-fr
 title: Projects - Web Experience Toolkit (WET) documentation
 description: List of projects related to WET.
-modified: 2019-05-16
+modified: 2019-06-20
 ---
 
 {::nomarkdown}
@@ -148,21 +148,17 @@ Updated: 2019-03-01
 
 #### WET4 conformance to WCAG 2.1 
 * Review all WET4 feature and evaluate and make them compliant to WCAG 2.1
-* **Project lead:** Shawn Thompson
+* **Project lead:** 
 * **Status:** Defining and planning the project
 * **Last updated:** March 21, 2019
 
-### Long documents (was PDF generator)
-Create a new feature that would allow the user to obtain a PDF printable version of the page. The PDF printable version are different from the web printable version in the sense that it would be possible to control and well define how the content of the webpage would transposed into a paper base format.
-* **Last updated:** November 15, 2018
-* **Current status:** Refining the projects description and research.
-* **Deliverable:** A feature that generate a PDF from a webpage.
-* **Goal:** Change the current practice which consist in uploading a standalone PDF version of the content and include a reference to that uploaded PDF in the content. At the same time, it would reduce the risk of have both version no in sync when a content update is applied.
-* **Project lead:** David Elisma
+### Web Controls Library .NET
+List of wet-boew component ready to be used in a .NET environment
+* **Project lead:** Jason Pesant
+* **Current status:** Library stable, still improving and fixing bug as more testing is completed. Currently planning the component development roadmap.
+* **Last updated:** June 20, 2019
 * **History:**
-	* (2018-10-18; 2019-01-15) Improving use case and requirement
-	* (2018-09-28) [Writting use case and requirement](http://wet-boew.github.io/wet-boew-documentation/research/2018-12-long-documents.html)
-	* (2018-02-22) Refining the projects description and research.
+	* (2019-04-23) Added the project in wet-boew organisation
 
 ### Horizontal definition list  
 Be able to specify a relative with for the definition title because the default one is sometime restrictive in some content design.
@@ -185,8 +181,10 @@ Convert a form into a chat like interaction. The supporting use case is for GCWe
 * **Project lead:** Francis Gorman
 * **Current status:** Functional high fidelity prototype and it's now ready to start the integration into wet-boew (docs + working example). Exploring to separate the "bubble" into it's own plugin.
 * **Others:** In the execution of this project, it's going to revive the step-form plugin previously submited into WET.
-* **Last update:** May 16, 2019
+* **Last update:** June 20, 2019
 * **History:**
+	* (2019-06-20) Functionality planned to be released with GCWeb 5.2
+	* (2019-05-16) Status update
 	* (2019-04-25) Plugin stable, upcoming integration into wet-boew
 	* (2019-03-21) Functional high fidelity prototype and it's now ready to start the integration into wet-boew. 
 	* (2019-02-20) Project status update (stable prototype)
@@ -194,13 +192,14 @@ Convert a form into a chat like interaction. The supporting use case is for GCWe
 
 ### Step form
 This component provides the ability to break a form into steps. To be use when Web forms are long/contain lot of information.
-* **Last updated:** May 16, 2019
+* **Last updated:** June 20, 2019
 * **Github:** [PR #7913](https://github.com/wet-boew/wet-boew/pull/7913)
 * **Working example:** [TheKodester - Steps Form](https://www.thekodester.ca/wet/formvalid/steps)
 * **What left:** Apply the request of change of [PR #8645](https://github.com/wet-boew/wet-boew/pull/8645)
 * **Project integration lead:** Francis Gorman
 * **Current status:** Code base is under review and a few code adjustment are under development.
 * **History:**
+	* (2019-06-20) Functionality planned to be released with wet-boew 4.0.32
 	* (2019-05-16) PR submited and there is some request of change to apply
 	* (2019-04-25) Now stabilized, PR almost ready to submit, need just a commits history re-write to preserve intellectual property merits.
 	* (2019-03-21) Re-activated this project and code base under review
@@ -254,6 +253,20 @@ Design system to standardize the visual language and user experience of our digi
 	* (2018-02-13) Working on the visual look for the design system.
 
 ## Going stale project
+
+### Long documents (was PDF generator)
+Create a new feature that would allow the user to obtain a PDF printable version of the page. The PDF printable version are different from the web printable version in the sense that it would be possible to control and well define how the content of the webpage would transposed into a paper base format.
+* **Last updated:** June 20, 2019
+* **Current status:** Refining the projects description and research.
+* **Deliverable:** A feature that generate a PDF from a webpage.
+* **Goal:** Change the current practice which consist in uploading a standalone PDF version of the content and include a reference to that uploaded PDF in the content. At the same time, it would reduce the risk of have both version no in sync when a content update is applied.
+* **Project lead:** David Elisma
+* **History:**
+	* (2019-06-20) Move this project in Going Stale as requested by the project lead David Elisma
+	* (2018-11-15) Status update
+	* (2018-10-18; 2019-01-15) Improving use case and requirement
+	* (2018-09-28) [Writting use case and requirement](http://wet-boew.github.io/wet-boew-documentation/research/2018-12-long-documents.html)
+	* (2018-02-22) Refining the projects description and research.
 
 ### Combobox (autocomplete/suggestion)
 [ was: Improved datalist (autocomplete/suggestion) ]
