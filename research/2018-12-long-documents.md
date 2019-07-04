@@ -1,10 +1,10 @@
 ---
 published: true
 layout: default-theme-wet-boew-en
-filename_fr:
+filename_fr: null
 title: Research and finding - Web Experience Toolkit (WET) documentation
-description: Details on the research on best approaches on long documents 
-modified: 2018-09-18
+description: Details on the research on best approaches on long documents
+modified: {}
 ---
 
 # Share and view ideas: Managing decentralized long documents
@@ -57,17 +57,17 @@ Community meetings will take the form of code sprint every Tuesday from 9h30 to 
     <tbody>
         <tr>
             <td>Gatineau</td>
-            <td>October 30, 2018 9:30 a.m. to 3:30 p.m.</td>
+            <td>July 9, 2019 9:30 a.m. to 3:30 p.m.</td>
             <td>200 promenade le Portage, Room 2D302 (Service Canada)</td>
         </tr>
         <tr>
             <td>Gatineau</td>
-            <td>November 6, 2018 9:30 a.m. to 3:30 p.m.</td>
+            <td>July 16, 2019 9:30 a.m. to 3:30 p.m.</td>
             <td>200 promenade le Portage, Room 2D302 (Service Canada)</td>
         </tr>
         <tr>
             <td>Gatineau</td>
-            <td>November 13, 2018 9:30 a.m. to 3:30 p.m.</td>
+            <td>July 23, 2019 9:30 a.m. to 3:30 p.m.</td>
             <td>200 promenade le Portage, Room 2D302 (Service Canada)</td>
         </tr>
     </tbody>
@@ -80,7 +80,7 @@ As a third party intermediary I am asked to keep a paper copy of many documents 
 
 As a content creator I need to manage and communicate updates of the long documents that I'm responsible to the different stakeholders in an easy manner. One of the main concerns I have in producing and managing long documents is the complexity and the extent of the content.
 
-As a web publisher I am asked to publish content coming in a word processing software format as a dynamic web format. I need to make sure that I comply with the mobile-first approach, all the accessibility guidelines, plain language best practices, and usability desgn aspect.
+As a web publisher I am asked to publish content coming in a word processing software format as a dynamic web format. I need to make sure that I comply with the mobile-first approach, all the accessibility guidelines, plain language best practices, and usability design aspect.
 
 ### Requirements
 
@@ -115,7 +115,7 @@ Like:
 ### Environmental scan
 
 * Research other GC approach
-  * CIC have went through a three year project to produce guidelines for internal long documents
+  * [CIC have went through a three year project to produce guidelines for internal long documents](https://test.canada.ca/citizenship-test-lite/scenarioA/immigration-refugees-citizenship/services/canadian-citizenship/become-canadian-citizen/citizenship-test/study-guide/rights-responsibilities-citizenship.html)
 * Research non-GC approach
 
 ### Solution component
