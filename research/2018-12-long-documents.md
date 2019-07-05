@@ -115,7 +115,7 @@ Like:
 ### Environmental scan
 
 * Research other GC approach
-  * CIC have went through a three year project to produce guidelines for internal long documents
+  * [CIC have went through a three year project to produce guidelines for internal long documents](https://test.canada.ca/citizenship-test-lite/scenarioA/immigration-refugees-citizenship/services/canadian-citizenship/become-canadian-citizen/citizenship-test/study-guide/rights-responsibilities-citizenship.html)
 * Research non-GC approach
 
 ### Solution component
