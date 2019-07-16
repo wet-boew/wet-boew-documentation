@@ -48,17 +48,22 @@ modified: 2019-06-20
 
 ### Technical review meeting
 Location: teleconference with web conference
+
 When: Every week alternating between Wednesday (from 11h00 to 12h00) and Thursday (from 10h00 to 11h00)
 
 ### WET-BOEW code sprint
-Location: 200 promenade du portage, Gatineau
+Location: Place du Centre, 200 promenade du portage, Gatineau, suite 990, room 2D302
+
 When: Every week on Tuesday from 9h30 to 15h30
+
 Goal: You can work on WET related projects and have on-site support.
+
 Type: Unstructured, which means there is no official agenda. From time to time, and if needed, there can be a structured code sprint.
+
 To join: Contact Pierre Dubois, you can find his contact information on gccollab or on gcconnect or on twitter via @duboi5p
 
 ### Roadmap
-Location: 200 promenade du portage, Gatineau, Room 2D302
+Location: Place du Centre, 200 promenade du portage, Gatineau, suite 990, room 2D302
 
 * July 2019 - To be determined 
 * August 2019  - To be determined
