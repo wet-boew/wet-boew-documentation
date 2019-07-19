@@ -27,6 +27,7 @@ List of finding and ongoing research related to WET and it's features
 	* Status: In progress
 * [2019-16 - jQuery 3 migration in WET 4](research/2019-16-jquery-3-migration.html)
 	* Status: In progress
+* [2019-17 - Réctification du comportement du ```input[type=date]```](research/2019-17-datepicker.html)
 
 ## Stale/on hold
 
