@@ -4,7 +4,7 @@ layout: default-theme-wet-boew-en
 filename_fr: index-fr
 title: Projects - Web Experience Toolkit (WET) documentation
 description: List of projects related to WET.
-modified: 2019-06-20
+modified: 2019-07-24
 ---
 
 {::nomarkdown}
@@ -127,7 +127,7 @@ $(window).on('resize', function(){
 
 ## Active projects
 
-Updated: 2019-03-01
+Updated: 2019-07-24
 
 
 ### Accessibility
@@ -148,9 +148,17 @@ Updated: 2019-03-01
 
 #### WET4 conformance to WCAG 2.1 
 * Review all WET4 feature and evaluate and make them compliant to WCAG 2.1
-* **Project lead:** 
+* **Project lead:** TBD
 * **Status:** Defining and planning the project
-* **Last updated:** March 21, 2019
+* **Last updated:** July 24, 2019
+* **History:**
+	* (2019-07-24) A new Web Accessibility Working Group was formed.
+	
+##### Assessment tool for WCAG 2.1 AA/AAA
+* Copy and tailor WCAG 2.0 assessment tools to fit WCAG 2.1 AA/AAA criteria.
+* **Project lead:** Eric Dunsworth
+* **Status:** Mentioned during roadmap meeting.
+* **Last updated:** July 24, 2019
 
 ### Web Controls Library .NET
 List of wet-boew component ready to be used in a .NET environment
@@ -214,6 +222,7 @@ We’re upgrading jQuery from version 2.2.4 to 3.3.1. Version 2.x is no longer s
 * **Documentation:** [https://wet-boew.github.io/wet-boew-documentation/research/2019-16-jquery-3-migration.html](https://wet-boew.github.io/wet-boew-documentation/research/2019-16-jquery-3-migration.html)
 * **Last update:** May 16, 2019
 * **History:**
+	* (2019-07-24) Project still on hold
 	* (2019-05-16)
 		* We will create a separate package of WET-BOEW and GCWEb with jQuery 3 for testing
 		* There is some jQuery 3 error for flot third party, we will maintain our own copy of it
@@ -342,8 +351,10 @@ Save a HTML table into a CVS file on the fly by using javascript. That feature a
 
 ### Update outdated Node package
 Update outdated NPM package of wet-boew and gcweb build package.
-* **Last updated:** May 16, 2018
+* **Last updated:** July 24, 2019
 * **Current status:** Waiting for a project/dev lead
+* **History:**
+	* (2019-07-24) Grunt version is being updated, making the build 3x faster on Windows, and Node SASS version was updated, allowing some contributors to successfully build GCWeb.
 
 ### Postal code lookup for maps or to refine/classify a result set
 Having a postal code lookup where it would display relative result on a map, or show a list of results classify by the closest to the farest. Having the posibility to set a threshold, like within 50 km of the entered postal code,... We might need to consider to merge the geo localisation data with real time data, like showing the waiting for location display after the postal code lookup.
@@ -458,6 +469,12 @@ Next step:
 {:/}
 
 The following project idea (feature request) was brought up, but there is no known official development team that are working on it. If you are interested to take over and lead one of the following project, please contact us by submitting an [issue on github](https://github.com/wet-boew/wet-boew/issues/new) or by joining us at the Roadmap meeting. The roadmap meeting information are available on the wet-boew group on [GCcollab.ca](https://gccollab.ca/login)
+
+### DatePicker
+
+**Last updated:** July 24, 2019
+
+Move DatePicker from the polyfill folder to the plugins, giving developers flexibility to provide either the native date picker from the browser or the plugin itself. Plugin's default behaviour MUST remain the polyfill (for browser without support), but further enhancements could be added optionally. One of the major concern was that Edge's native date picker prevents the user from inputting text in the field.
 
 ### Angular
 
