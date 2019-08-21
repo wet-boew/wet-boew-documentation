@@ -3,7 +3,7 @@ published: true
 layout: default-theme-wet-boew-en
 title: Design decision
 description: Design decision followed by WET.
-modified: 2019-06-27
+modified: 2019-08-21
 ---
 
 The following are design decision for WET. Those decision are used for providing guidance on how to design content, features and theme. These design decision would be reviewed by the WET-BOEW Roadmap group.
@@ -39,7 +39,6 @@ The following design decision can be obseleted if you find they are not valid an
 	</ul>
 </section>
 
-
 <!--
 <section>
 	<h2>Limited AT support</h2>
@@ -71,12 +70,9 @@ The following design decision can be obseleted if you find they are not valid an
 
 		<p>Design decision that required some additional testing or information before to be officially submited</p>
 
-<detail>
-	<summary>
-
 
 	<ul>
-		<li><a href="draft-2018-2.html">Avoid to use heading in summary element.</a>
+		<li><a href="draft-2018-2.html">Avoid to use heading in summary element.</a>, todos:
 			<ul>
 				<li>Write test case with and without an heading in summary</li>
 				<li>Need AT testing</li>
@@ -85,6 +81,14 @@ The following design decision can be obseleted if you find they are not valid an
 		</li>
 	</ul>
 
+</section>
+
+<section>
+	<h2>Future design decision idea</h2>
+
+	<ul>
+		<li>Web page meaningful sequence, focus order, consistent navigation conforming for a specific view port but not between view port.</li>
+	</ul>
 </section>
 
 <section>
