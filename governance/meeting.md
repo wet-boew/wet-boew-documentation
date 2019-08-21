@@ -3,12 +3,21 @@ published: true
 layout: default-theme-wet-boew-en
 title: Meeting summary - WET-BOEW documentation
 description: Summary of what has been discussed at the meeting.
-modified: 2019-06-20
+modified: 2019-07-24
 ---
 
 Summary of what has been discussed at the meeting.
 
 ## Roadmap
+
+2019-07-24 (3 participants)
+
+Update project status
+Added Web Controls Library .NET project
+Long documents project move as going stale
+Annouced the idea of having "long term" releases.
+Discussed about updating outdated Node packages.
+Announced the creation of a Web Accessibility Working Group that will be assessing WCAG2.1 on the WET-BOEW.
 
 2019-06-20 (4 participants)
 * Update project status
