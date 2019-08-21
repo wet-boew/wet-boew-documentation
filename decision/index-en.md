@@ -88,6 +88,7 @@ The following design decision can be obseleted if you find they are not valid an
 
 	<ul>
 		<li>Web page meaningful sequence, focus order, consistent navigation conforming for a specific view port but not between view port.</li>
+		<li>Long term release and doing more frequent releases (~weekly)</li>
 	</ul>
 </section>
 
