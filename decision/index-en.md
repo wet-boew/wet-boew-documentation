@@ -6,10 +6,9 @@ description: Design decision followed by WET.
 modified: 2019-08-21
 ---
 
-The following are design decision for WET. Those decision are used for providing guidance on how to design content, features and theme. These design decision would be reviewed by the WET-BOEW Roadmap group.
+The following are design decision for WET. Those decision are used for providing guidance on how to design content, features and theme. Design decision are subject for review by every wet-boew contributor and its official approval is made by participant of the WET-BOEW Roadmap monthly meeting, WET expert and WET administrator. Any propose changes to an approved design design, except to trivial editorial fixes, are subject to go through the whole approval process.
 
-The following design decision can be obseleted if you find they are not valid anymore. In order to obselete a decision, the evidence would need to be presented explaining why it is not valid anymore, a recommendation explaining how to do it and a method to migrate content that was following the obseleted design decision. You can initiate the conversation by submiting a new issue on Github.
-
+If you have any questions in regards of one of the above design decision, please [open an issue](https://github.com/wet-boew/wet-boew/issues) in the wet-boew repository.
 
 {::nomarkdown}
 <div class="wb-filter">
@@ -93,10 +92,24 @@ The following design decision can be obseleted if you find they are not valid an
 </section>
 
 <section>
-	<h2>Obselete</h2>
+	<h2>Obsolete</h2>
 
-	<p>There is no obseleted direction currently.</p>
+	<p>There is no obsoleted design decision currently.</p>
+
+	<p>Process overview to obsolete a design decision. It can be obsoleted if they are not valid when considering the latest common and best practice. In order to obsolete a decision, an evidence would need to be documented and presented explaining why it is not valid accompanied with recommendation of a process to migrate content that was following the obsoleted design decision. You can initiate the conversation by submitting a new issue on Github in the wet-boew main repository.
 
 </section>
 </div>
 {:/}
+
+
+## Approval process
+
+The approval process consist in the following steps:
+* A wet-boew contributor publish a draft of a design decision document.
+* The design decision draft is presented at one of the monthly WET-BOEW Roadmap meeting.
+* Sponsorship by a WET expert could required.
+* The author must address all comments, do the research and clarify the design decision documents as needed.
+* The document is presented again at a subsequent WET-BOEW Roadmap meeting.
+* Upon satisfaction of the WET-BOEW Roadmap meeting participant, WET expert and WET administration, the document get it's approval
+* The Design Decision is then published and considered as a new best practice by the wet-boew community.
