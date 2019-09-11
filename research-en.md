@@ -10,6 +10,7 @@ modified: 2018-06-28
 List of finding and ongoing research related to WET and it's features
 
 ## WET 5
+* [2018-18 - WB5 moving forward](research/2019-18-wb5-moving-forward.html) (Updated on Sept. 10, 2019)
 * [2018-14 - WET 5 summary](research/2018-14-wet5-summary.html) (Updated on Sept. 28, 2018)
 * [Alpha early prototype - Carousel](research/2018-assets/2018-11-prototype/stacks/docs/index.html)
 * [Alpha early prototype - Key navigation](research/2018-assets/2018-11-prototype/stacks/docs/nav-demo.html)
