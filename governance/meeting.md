@@ -10,6 +10,22 @@ Summary of what has been discussed at the meeting.
 
 ## Roadmap
 
+2019-09-20 (6 participants)
+* Added Flat checkbox/radio button project for Canada.ca theme
+* Approval of decision #6 on Versionning
+* Postpone approval of decision #7 on Experimental feature
+	* David E. from TBS want to discuss it with his peers before.
+	* Want to avoid waste or ressource where TBS are looking to release testing environment called Alpha and Beta web site for Canada.ca theme.
+* Presetation of Design Decision #8
+	* Propose change id "#json-ld" for "#wb-script"
+* Added the flat checkbox project
+* Project completed
+	* HTML table CSV
+	* Accessibility - Assessment tool for WCAG 2.1 AA/AAA
+
+2019-08- (1 participant)
+Meeting was canceled
+
 2019-07-24 (3 participants)
 
 Update project status

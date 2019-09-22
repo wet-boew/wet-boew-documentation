@@ -20,23 +20,25 @@ If you have any questions in regards of one of the above design decision, please
 		<li><a href="3.html">Design decision 3: WET API/Blueprint</a></li>
 		<li><a href="4.html">Design decision 4: Basic HTML mode and progressive enhancement</a></li>
 		<li><a href="5.html">Design Decision 5: Decision on repository migration</a></li>
+		<li><a href="6.html">Design Decision 6: Versioning</a></li>
 	</ul>
 </section>
 
 <section>
 	<h2>Presented</h2>
 	<ul>
-		<li><a href="6.html">Design Decision 6: Versioning</a></li>
 		<li><a href="7.html">Design Decision 7: Experimental feature and versioning</a></li>
-	</ul>
-</section>
-
-<section>
-	<h2>Proposed</h2>
-	<ul>
 		<li><a href="8.html">Design decision 8 - Dual implementation of structured data with JSON-LD and RDFa Lite in a single web page</a></li>
 	</ul>
 </section>
+
+<!--
+<section>
+	<h2>Proposed</h2>
+	<ul>
+	</ul>
+</section>
+-->
 
 <!--
 <section>
