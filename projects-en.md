@@ -135,9 +135,11 @@ Updated: 2019-07-24
 * Documenting basic HTML design pattern
 * WCAG 2.1 Level AA conformance check for existing features
 * Evaluate web accessibility compliance for wb5 features
-* **Last updated:** October 18, 2018
-* **Progress check history**: 2018-10-18; 2018-08-24; 2018-07-26; 2018-06-20; 2018-05-17; 2018-04-10; 2018-04-03; 2018-03-14; 2018-02-27; 2018-02-20
+* **Last updated:** September 20, 2019
+* **Project lead:** Brad Souster
+* **Progress check history**: 2019-09-20; 2018-10-18; 2018-08-24; 2018-07-26; 2018-06-20; 2018-05-17; 2018-04-10; 2018-04-03; 2018-03-14; 2018-02-27; 2018-02-20
 * **History:**
+	* (2019-09-20) Test of WCAG 2.1 has started and documented in the [wet-boew root project #1](https://github.com/orgs/wet-boew/projects/1)
 	* (2018-08-24) Menu - Fixed the keyboard behviour of submenu (details/summary)
 	* (2018-07-26) Created a github project to triage accessibility related issue - [https://github.com/wet-boew/wet-boew/projects/2](https://github.com/wet-boew/wet-boew/projects/2)
 	* (2018-06-20) Tested a few issue reproducibility, fixed #8400 (Tabs on Google Chrome) 
@@ -153,12 +155,14 @@ Updated: 2019-07-24
 * **Last updated:** July 24, 2019
 * **History:**
 	* (2019-07-24) A new Web Accessibility Working Group was formed.
-	
-##### Assessment tool for WCAG 2.1 AA/AAA
-* Copy and tailor WCAG 2.0 assessment tools to fit WCAG 2.1 AA/AAA criteria.
-* **Project lead:** Eric Dunsworth
-* **Status:** Mentioned during roadmap meeting.
-* **Last updated:** July 24, 2019
+
+### Flat checkboxes and radio button for Canada.ca theme
+* Provide a better UX experience for people navigating content with fieldflow. 
+* **Project lead:** Patrick Lajeunesse (DTO)
+* **Status:** On development WIP track on GCWeb PR, feature fragmented for a better integration in wet-boew and gcweb and make it more reusable.
+* **Last updated:** September 20, 2019
+* **History:**
+	* (2019-09-20) Initiating this project tracking
 
 ### Web Controls Library .NET
 List of wet-boew component ready to be used in a .NET environment
@@ -231,17 +235,6 @@ We’re upgrading jQuery from version 2.2.4 to 3.3.1. Version 2.x is no longer s
 	* (2019-02-21) Did an initial scan of all the wet-boew code. Testing each working example and quickly reviewing the JS of each plugin.
 	* (2019-02-01) Initiate research 2019-16 - jQuery 3 migration
 
-### Add to calendar
-
-Widget that can create an outlook like invitation on the fly to allow the user to add into its device calendar.
-
-* **Project lead:** Francis Gorman
-* **Current status:** New project, solution research ongoing
-* **Last update:** May 16, 2019
-* **History:**
-	* (2019-05-16) Still in work in progress, a download function was added into the wet core in preparation of this plugin.
-	* (2019-04-25) New project, solution research ongoing
-
 ## Related but untracked
 
 ### Design system
@@ -262,6 +255,17 @@ Design system to standardize the visual language and user experience of our digi
 	* (2018-02-13) Working on the visual look for the design system.
 
 ## Going stale project
+
+### Add to calendar
+
+Widget that can create an outlook like invitation on the fly to allow the user to add into its device calendar.
+
+* **Project lead:** Francis Gorman
+* **Current status:** New project, solution research ongoing
+* **Last update:** May 16, 2019
+* **History:**
+	* (2019-05-16) Still in work in progress, a download function was added into the wet core in preparation of this plugin.
+	* (2019-04-25) New project, solution research ongoing
 
 ### Long documents (was PDF generator)
 Create a new feature that would allow the user to obtain a PDF printable version of the page. The PDF printable version are different from the web printable version in the sense that it would be possible to control and well define how the content of the webpage would transposed into a paper base format.
@@ -337,15 +341,6 @@ Through a questionnaire, having each question that provide a score. And when a s
 * **Last updated:** August 24, 2018
 * **Project lead:** Pierre Dubois
 * **What left:** Create one or a few use cases
-
-### Save HTML table into CSV
-Save a HTML table into a CVS file on the fly by using javascript. That feature are going to be implemented in the action manager.
-* **Research and findings page:** [http://wet-boew.github.io/wet-boew-documentation/research/2018-8-table-to-csv.html](http://wet-boew.github.io/wet-boew-documentation/research/2018-8-table-to-csv.html)
-* **Prototype**
-	* [Source code](https://github.com/duboisp/GCWeb/commit/6ff019dec0e31549674c5a018d0aba445658f0a9)
-* **Last updated:** September 28, 2018
-* **Project lead:** Pierre Dubois
-* **What left:** Finish working example, testing and documentation for an integration in GCWeb.
 
 ## Backlog project
 
@@ -509,6 +504,21 @@ Next step:
 	<summary>Show the list of completed projects</summary>
 {:/}
 
+### Save HTML table into CSV
+Save a HTML table into a CVS file on the fly by using javascript. That feature are going to be implemented in the action manager.
+* **Research and findings page:** [http://wet-boew.github.io/wet-boew-documentation/research/2018-8-table-to-csv.html](http://wet-boew.github.io/wet-boew-documentation/research/2018-8-table-to-csv.html)
+* **Prototype**
+	* [Source code](https://github.com/duboisp/GCWeb/commit/6ff019dec0e31549674c5a018d0aba445658f0a9)
+* **Last updated:** September 20, 2019 - Merged in GCWeb
+* **History:**  September 28, 2018 - Finish working example, testing and documentation for an integration in GCWeb.
+* **Project lead:** Pierre Dubois
+
+### Accessibility - Assessment tool for WCAG 2.1 AA/AAA
+* Copy and tailor WCAG 2.0 assessment tools to fit WCAG 2.1 AA/AAA criteria.
+* **Project lead:** Eric Dunsworth
+* **Status:** Project completed and released.
+* **Last updated:** September 20, 2019
+* **Created:** July 24, 2019 - Mentioned during roadmap meeting.
 
 ### Geomap - Upgrade to open layer v3.x
 Upgrade the geomap plugin to use the latest version of open layer v3.x.
