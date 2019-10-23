@@ -22,16 +22,19 @@ List of finding and ongoing research related to WET and it's features
 	* Status: In slow progress
 * [2018-6 - WB5 exploration 1](research/2018-6-wb5-exploration-1.html)
 	* Status: In slow progress
-* [2018-12 - Long documents](research/2018-12-long-documents.html)
-	* Status: In progress
+* [2019-19 - Add to calendar](research/2019-19-add-calendar.html)
+	* Status: In slow progress	
 * [2019-15 - Exploration of a chat like design pattern](research/2019-15-exploration-chat-pattern.html)
-	* Status: In progress
-* [2019-16 - jQuery 3 migration in WET 4](research/2019-16-jquery-3-migration.html)
-	* Status: In progress
+	* Status: In slow progress
 * [2019-17 - Réctification du comportement du ```input[type=date]```](research/2019-17-datepicker.html)
+	* Status: Going stale
 
 ## Stale/on hold
 
+* [2019-16 - jQuery 3 migration in WET 4](research/2019-16-jquery-3-migration.html)
+	* Status: On hold
+* [2018-12 - Long documents](research/2018-12-long-documents.html)
+	* Status: On hold
 * [2018-1 - Datalist JSON suggestion](research/1-datalist-JSON-suggestion.html)
 	* Status: Experimental-stable plugin ready, developing documenation and working example was in progress, on hold
 	* Todo: The plugin code may need to be re-ajusted to support all use cases.

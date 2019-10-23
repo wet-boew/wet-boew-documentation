@@ -10,6 +10,14 @@ Summary of what has been discussed at the meeting.
 
 ## Roadmap
 
+2019-10-23 (6 participants)
+* Review list of projects
+	* Added instruction on how to contribute at the accessiblity project
+	* Add to calendar project has a new lead: Eric Guitar
+* Approval of decision #7
+* Approval of decision #8
+* Presented decision #9 - Release early, release often (STR) 
+
 2019-09-20 (6 participants)
 * Added Flat checkbox/radio button project for Canada.ca theme
 * Approval of decision #6 on Versionning
