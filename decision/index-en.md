@@ -3,7 +3,7 @@ published: true
 layout: default-theme-wet-boew-en
 title: Design decision
 description: Design decision followed by WET.
-modified: 2019-08-21
+modified: 2019-10-23
 ---
 
 The following are design decision for WET. Those decision are used for providing guidance on how to design content, features and theme. Design decision are subject for review by every wet-boew contributor and its official approval is made by participant of the WET-BOEW Roadmap monthly meeting, WET expert and WET administrator. Any propose changes to an approved design design, except to trivial editorial fixes, are subject to go through the whole approval process.
@@ -28,7 +28,7 @@ If you have any questions in regards of one of the above design decision, please
 	<h2>Presented</h2>
 	<ul>
 		<li><a href="7.html">Design Decision 7: Experimental feature and versioning</a></li>
-		<li><a href="8.html">Design decision 8 - Dual implementation of structured data with JSON-LD and RDFa Lite in a single web page</a></li>
+		<li><a href="8.html">Design decision 8: Dual implementation of structured data with JSON-LD and RDFa Lite in a single web page</a></li>
 	</ul>
 </section>
 
@@ -56,15 +56,16 @@ If you have any questions in regards of one of the above design decision, please
 </section>
 -->
 
-
-<!--
 <section>
 	<h2>Ready</h2>
 
-	<p>Design decision ready to be presented at the roadmap WET-BOEW meeting.</p>
+	<ul>
+		<li><a href="9.html">Design decision 9: Release early, release often (<abbr title="Short-term release">STR</abbr>)</a></li>
+	</ul>
+
+	<!-- <p>Design decision ready to be presented at the roadmap WET-BOEW meeting.</p> -->
 
 </section>
--->
 
 <section>
 	<h2>Draft</h2>
