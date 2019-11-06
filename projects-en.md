@@ -127,18 +127,22 @@ $(window).on('resize', function(){
 
 ## Active projects
 
-Updated: 2019-07-24
+Updated: 2019-10-23
 
 
 ### Accessibility
 * Reviewing and validating open github issue
 * Documenting basic HTML design pattern
-* WCAG 2.1 Level AA conformance check for existing features
+* WCAG 2.1 Level AA conformance check for existing features in wet-boew
 * Evaluate web accessibility compliance for wb5 features
-* **Last updated:** September 20, 2019
+* **Last updated:** October 23, 2019
 * **Project lead:** Brad Souster
-* **Progress check history**: 2019-09-20; 2018-10-18; 2018-08-24; 2018-07-26; 2018-06-20; 2018-05-17; 2018-04-10; 2018-04-03; 2018-03-14; 2018-02-27; 2018-02-20
+* **Project board:** [wet-boew root project #1](https://github.com/orgs/wet-boew/projects/1)
+	* To participate: Pick an "Notes" and add your name
+	* Once completed: Move the notes inside the "Tested" and then submit your result to Pierre or Brad
+* **Progress check history**: 2019-10-23; 2019-09-20; 2018-10-18; 2018-08-24; 2018-07-26; 2018-06-20; 2018-05-17; 2018-04-10; 2018-04-03; 2018-03-14; 2018-02-27; 2018-02-20
 * **History:**
+	* (2019-10-23) Items in testing column are tested, need to be published. Template testing is completed.
 	* (2019-09-20) Test of WCAG 2.1 has started and documented in the [wet-boew root project #1](https://github.com/orgs/wet-boew/projects/1)
 	* (2018-08-24) Menu - Fixed the keyboard behviour of submenu (details/summary)
 	* (2018-07-26) Created a github project to triage accessibility related issue - [https://github.com/wet-boew/wet-boew/projects/2](https://github.com/wet-boew/wet-boew/projects/2)
@@ -148,6 +152,7 @@ Updated: 2019-07-24
 	* (2018-03-14) On going - review github issues and fixing current open issue.
 	* (2018-02-13) Validation of issue labelled "Work: Accessibility" which are open and the closed ones with the label "State: Going Stale".
 
+<!--
 #### WET4 conformance to WCAG 2.1 
 * Review all WET4 feature and evaluate and make them compliant to WCAG 2.1
 * **Project lead:** TBD
@@ -155,14 +160,16 @@ Updated: 2019-07-24
 * **Last updated:** July 24, 2019
 * **History:**
 	* (2019-07-24) A new Web Accessibility Working Group was formed.
+-->
 
 ### Flat checkboxes and radio button for Canada.ca theme
 * Provide a better UX experience for people navigating content with fieldflow. 
-* **Project lead:** Patrick Lajeunesse (DTO)
-* **Status:** On development WIP track on GCWeb PR, feature fragmented for a better integration in wet-boew and gcweb and make it more reusable.
-* **Last updated:** September 20, 2019
+* **Project lead:** David Elisma (DTO) -Patrick Lajeunesse (DTO)-
+* **Status:** Project has split in smaller pieces, Apply explicit label-input pattern in wet-boew, Apply flat checkbox style, Apply change to fieldflow plugin to use the new explicit label-input pattern
+* **Last updated:** October 23, 2019
 * **History:**
-	* (2019-09-20) Initiating this project tracking
+	* (2019-10-23) wet-boew change has been submited - Has some discussion to test the propose design pattern against WCAG 2.0 level AA conformance.
+	* (2019-09-20) Initiating this project tracking - On development WIP track on GCWeb PR, feature fragmented for a better integration in wet-boew and gcweb and make it more reusable.
 
 ### Web Controls Library .NET
 List of wet-boew component ready to be used in a .NET environment
@@ -188,13 +195,14 @@ Provide a visual indication that show the current forms steps.
 * **History:**
 	* (2019-01-22) Prototype created, starting the integration into GCWeb
 
-### Chat wizard
+### Chat bot
 Convert a form into a chat like interaction. The supporting use case is for GCWeb only for now.
 * **Project lead:** Francis Gorman
 * **Current status:** Functional high fidelity prototype and it's now ready to start the integration into wet-boew (docs + working example). Exploring to separate the "bubble" into it's own plugin.
 * **Others:** In the execution of this project, it's going to revive the step-form plugin previously submited into WET.
-* **Last update:** June 20, 2019
+* **Last update:** October 23, 2019
 * **History:**
+	* (2019-10-23) Renamed the project from "Chat wizard" to "Chat bot"
 	* (2019-06-20) Functionality planned to be released with GCWeb 5.2
 	* (2019-05-16) Status update
 	* (2019-04-25) Plugin stable, upcoming integration into wet-boew
@@ -235,9 +243,30 @@ We’re upgrading jQuery from version 2.2.4 to 3.3.1. Version 2.x is no longer s
 	* (2019-02-21) Did an initial scan of all the wet-boew code. Testing each working example and quickly reviewing the JS of each plugin.
 	* (2019-02-01) Initiate research 2019-16 - jQuery 3 migration
 
-## Related but untracked
+### Add to calendar
+
+Widget that can create an outlook like invitation on the fly to allow the user to add into its device calendar.
+
+* **Project lead:** Eric Guitar
+* **Current status:** New project, solution research ongoing
+* **Last update:** October 23, 2019
+* **History:**
+	* (2019-10-23) Change the project lead from Francis Gorman to Eric Guitar
+	* (2019-05-16) Still in work in progress, a download function was added into the wet core in preparation of this plugin.
+	* (2019-04-25) New project, solution research ongoing
+
+
+## Related projects
 
 ### Design system
+Provide a central design system library.
+* **Last update:** October 23, 2019
+* **Tasks force:** Work are done in 3 area, UX experimentation/prototyping, Documentation, WET5 as an implementation reference.
+* **Current status:** Still in early stage, they are currently defining and refining the vocabulary used
+* **History:**
+	* (2019-10-23) Still in early stage, they are currently defining and refining the vocabulary used
+
+### Previously - Design system in 2018
 Design system to standardize the visual language and user experience of our digital collaboration tools. The system will encompass visual elements, components and communications.
 * **Last updated:** October 18, 2018
 * **Current status:** It was observed this project was renamed to "Aurora" and a new website with code sample was lauched.
@@ -254,18 +283,8 @@ Design system to standardize the visual language and user experience of our digi
 	* (2018-02-26) Basic visual for forms
 	* (2018-02-13) Working on the visual look for the design system.
 
+
 ## Going stale project
-
-### Add to calendar
-
-Widget that can create an outlook like invitation on the fly to allow the user to add into its device calendar.
-
-* **Project lead:** Francis Gorman
-* **Current status:** New project, solution research ongoing
-* **Last update:** May 16, 2019
-* **History:**
-	* (2019-05-16) Still in work in progress, a download function was added into the wet core in preparation of this plugin.
-	* (2019-04-25) New project, solution research ongoing
 
 ### Long documents (was PDF generator)
 Create a new feature that would allow the user to obtain a PDF printable version of the page. The PDF printable version are different from the web printable version in the sense that it would be possible to control and well define how the content of the webpage would transposed into a paper base format.

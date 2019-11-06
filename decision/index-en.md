@@ -21,14 +21,15 @@ If you have any questions in regards of one of the above design decision, please
 		<li><a href="4.html">Design decision 4: Basic HTML mode and progressive enhancement</a></li>
 		<li><a href="5.html">Design Decision 5: Decision on repository migration</a></li>
 		<li><a href="6.html">Design Decision 6: Versioning</a></li>
+		<li><a href="7.html">Design Decision 7: Experimental feature and versioning</a></li>
+		<li><a href="8.html">Design decision 8: Dual implementation of structured data with JSON-LD and RDFa Lite in a single web page</a></li>
 	</ul>
 </section>
 
 <section>
 	<h2>Presented</h2>
 	<ul>
-		<li><a href="7.html">Design Decision 7: Experimental feature and versioning</a></li>
-		<li><a href="8.html">Design decision 8: Dual implementation of structured data with JSON-LD and RDFa Lite in a single web page</a></li>
+		<li><a href="9.html">Design decision 9: Release early, release often (<abbr title="Short-term release">STR</abbr>)</a></li>
 	</ul>
 </section>
 
@@ -59,11 +60,13 @@ If you have any questions in regards of one of the above design decision, please
 <section>
 	<h2>Ready</h2>
 
+<!-- 
 	<ul>
 		<li><a href="9.html">Design decision 9: Release early, release often (<abbr title="Short-term release">STR</abbr>)</a></li>
 	</ul>
+ -->
 
-	<!-- <p>Design decision ready to be presented at the roadmap WET-BOEW meeting.</p> -->
+	<p>Design decision ready to be presented at the roadmap WET-BOEW meeting.</p>
 
 </section>
 
