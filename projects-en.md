@@ -127,7 +127,7 @@ $(window).on('resize', function(){
 
 ## Active projects
 
-Updated: 2019-07-24
+Updated: 2019-10-23
 
 
 ### Accessibility
