@@ -17,6 +17,7 @@ Summary of what has been discussed at the meeting.
 * Approval of decision #7
 * Approval of decision #8
 * Presented decision #9 - Release early, release often (STR) 
+* Reviewed and approved to move all current bootstrap 4 gcweb experimental CSS into wet-beow stable
 
 2019-09-20 (6 participants)
 * Added Flat checkbox/radio button project for Canada.ca theme
