@@ -3,12 +3,21 @@ published: true
 layout: default-theme-wet-boew-en
 title: Meeting summary - WET-BOEW documentation
 description: Summary of what has been discussed at the meeting.
-modified: 2019-07-24
+modified: 2019-12-18
 ---
 
 Summary of what has been discussed at the meeting.
 
 ## Roadmap
+
+2019-12-18 (6 participants)
+* Review list of projects
+	* Will add new project for the integration of new design pattern in Canada.ca theme
+		* New Service Initiation Template developped by CRA
+		* New Institutional profile template developped by CRA
+	* Going to open a new github issue on GCWeb to talk about multiple h1 on the same page.
+* Presented the update to design decision #9
+* Presented the design decision #10, which will obselete design decision #7
 
 2019-10-23 (6 participants)
 * Review list of projects
