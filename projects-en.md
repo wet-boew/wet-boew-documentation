@@ -125,9 +125,45 @@ $(window).on('resize', function(){
 </script>
 {:/}
 
+## Provisory GCWeb feature
+
+Updated: 2019-12-18
+
+This is track the development of provisonal feature to support new beta design pattern.
+
+### Service information template
+* Renewed template that visually better support a group a pages that relate to the same task.
+* **Last updated:** December 18, 2019
+* **Project Lead:** Chad Farquharson, CRA; Christopher Oakes, CRA
+* **Current status:** Reviewing and addressing each accessibility concern and each design ambuiguity 
+* **History:**
+	* (2019-12-18) Project lead is getting organized to address all the concern
+	* (2019-12) The review was forward to the project lead to address each concern.
+	* (2019-11) Principal publish and the web accessibility working group has done a quick accessibility review 
+	* (2019-10) Contacted Prinicpal Publisher to know the process of getting the CSS requirement for that new design available in Canada.ca
+	* (2019-08) Create a prototype with the refresh design pattern
+
+### Institutional profile
+* Renewed institutional profile page inspired by the new Canada.ca home lauched in February 2019
+* **Last updated:** December 18, 2019
+* **Project Lead:** Digital Transformation Office (DTO)
+* **Current status:** Prototype presented, wait for the request to start an accessibility review
+* **History:**
+	* (2019-11-29) Presentation of the prototype as "beta" without testing for accessibility during the Canada.ca Fall update
+	* (2019-08) Prototype created
+
+### Template/design pattern documentation template
+* Interactive template to integrated section documentation with the visual component of each component the template use
+* **Last updated:** December 18, 2019
+* **Project Lead:** Miguel Borges-Porteous, Digital Transformation Office (DTO)
+* **Current status:** Early prototype presented, wait for the request to start an accessibility review
+* **History:**
+	* (2019-11-29) Presentation of the prototype as "alpha" to show how the template would be documented in the future during the Canada.ca Fall update
+	* (2019-11) Prototype created
+
 ## Active projects
 
-Updated: 2019-10-23
+Updated: 2019-12-18
 
 
 ### Accessibility
@@ -166,8 +202,9 @@ Updated: 2019-10-23
 * Provide a better UX experience for people navigating content with fieldflow. 
 * **Project lead:** David Elisma (DTO) -Patrick Lajeunesse (DTO)-
 * **Status:** Project has split in smaller pieces, Apply explicit label-input pattern in wet-boew, Apply flat checkbox style, Apply change to fieldflow plugin to use the new explicit label-input pattern
-* **Last updated:** October 23, 2019
+* **Last updated:** December 18, 2019
 * **History:**
+	* (2019-12-18) wet-boew change has been merged waiting for the wet-boew dependency update in GCweb
 	* (2019-10-23) wet-boew change has been submited - Has some discussion to test the propose design pattern against WCAG 2.0 level AA conformance.
 	* (2019-09-20) Initiating this project tracking - On development WIP track on GCWeb PR, feature fragmented for a better integration in wet-boew and gcweb and make it more reusable.
 
@@ -200,8 +237,9 @@ Convert a form into a chat like interaction. The supporting use case is for GCWe
 * **Project lead:** Francis Gorman
 * **Current status:** Functional high fidelity prototype and it's now ready to start the integration into wet-boew (docs + working example). Exploring to separate the "bubble" into it's own plugin.
 * **Others:** In the execution of this project, it's going to revive the step-form plugin previously submited into WET.
-* **Last update:** October 23, 2019
+* **Last update:** December 18, 2019
 * **History:**
+	* (2019-12-18) A working group was established to discuss about a GC wide solution for chat bots
 	* (2019-10-23) Renamed the project from "Chat wizard" to "Chat bot"
 	* (2019-06-20) Functionality planned to be released with GCWeb 5.2
 	* (2019-05-16) Status update
@@ -249,8 +287,9 @@ Widget that can create an outlook like invitation on the fly to allow the user t
 
 * **Project lead:** Eric Guitar
 * **Current status:** New project, solution research ongoing
-* **Last update:** October 23, 2019
+* **Last update:** December 18, 2019
 * **History:**
+	* (2019-12-18) Progressing in researching and documenting the approach
 	* (2019-10-23) Change the project lead from Francis Gorman to Eric Guitar
 	* (2019-05-16) Still in work in progress, a download function was added into the wet core in preparation of this plugin.
 	* (2019-04-25) New project, solution research ongoing
@@ -260,10 +299,11 @@ Widget that can create an outlook like invitation on the fly to allow the user t
 
 ### Design system
 Provide a central design system library.
-* **Last update:** October 23, 2019
+* **Last update:** December 18, 2019
 * **Tasks force:** Work are done in 3 area, UX experimentation/prototyping, Documentation, WET5 as an implementation reference.
 * **Current status:** Still in early stage, they are currently defining and refining the vocabulary used
 * **History:**
+	* (2019-12-28) Review and get comments for the new WET5 architect. Re-engeneering the documentation template and looking forward to avoid confusion between wet-boew-styleguide, gcweb and design system.
 	* (2019-10-23) Still in early stage, they are currently defining and refining the vocabulary used
 
 ### Previously - Design system in 2018
