@@ -198,6 +198,14 @@ Updated: 2019-12-18
 	* (2019-07-24) A new Web Accessibility Working Group was formed.
 -->
 
+### Multi page survey
+* Provide a configurable multi page form to accomodate a parametrable end of website visit survey.
+* **Project lead:** Eric Dunsworth (SC)
+* **Status:** Development of a functional prototype
+* **Last updated:** December 19, 2019
+* **History:**
+	* (2019-12-19) Working on developing a functional prototype
+
 ### Flat checkboxes and radio button for Canada.ca theme
 * Provide a better UX experience for people navigating content with fieldflow. 
 * **Project lead:** David Elisma (DTO) -Patrick Lajeunesse (DTO)-
