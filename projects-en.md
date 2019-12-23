@@ -4,7 +4,7 @@ layout: default-theme-wet-boew-en
 filename_fr: index-fr
 title: Projects - Web Experience Toolkit (WET) documentation
 description: List of projects related to WET.
-modified: 2019-07-24
+modified: 2019-12-20
 ---
 
 {::nomarkdown}
@@ -127,15 +127,17 @@ $(window).on('resize', function(){
 
 ## Provisory GCWeb feature
 
-Updated: 2019-12-18
+Updated: 2019-12-20
 
 This is track the development of provisonal feature to support new beta design pattern.
 
 ### Service information template
 * Renewed template that visually better support a group a pages that relate to the same task.
-* **Last updated:** December 18, 2019
+* **Last updated:** December 20, 2019
 * **Project Lead:** Chad Farquharson, CRA; Christopher Oakes, CRA
 * **Current status:** Reviewing and addressing each accessibility concern and each design ambuiguity 
+* **Github discussion/issue:**
+	* [GCWeb issue #1627](https://github.com/wet-boew/GCWeb/issues/1627)
 * **History:**
 	* (2019-12-18) Project lead is getting organized to address all the concern
 	* (2019-12) The review was forward to the project lead to address each concern.
