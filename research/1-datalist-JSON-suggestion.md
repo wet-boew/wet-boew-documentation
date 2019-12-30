@@ -3,7 +3,9 @@ published: true
 layout: default-theme-wet-boew-en
 title: 1 - Datalist JSON suggestion - Research and finding - Web Experience Toolkit (WET) documentation
 description: Design decision followed by WET.
-modified: 2018-05-09
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-01-13
 ---
 
 ## Purpose
@@ -79,7 +81,7 @@ Here a list of similar tools that was found on a February 2018 research
 * [Datalist JSON suggestion](https://github.com/wet-boew/GCWeb/tree/master/src/plugins/suggest)
 * (Added on May 28, [suggested on May 23](https://github.com/wet-boew/wet-boew-documentation/pull/69#issuecomment-391518380])) [github/auto-complete-element](https://github.com/github/auto-complete-element)
 
-### Similar tools added on August 6th 2018 
+### Similar tools added on August 6th 2018
 
 * [typeahead.js - Autocomplete library](http://twitter.github.com/typeahead.js/) ([Source Code](https://github.com/twitter/typeahead.js))
 * [DHX Combo - ComboBox with Autocomplete](https://dhtmlx.com/docs/products/dhtmlxCombo/)
@@ -157,7 +159,7 @@ Source: aria-autocomplete (property) - WAI ARIA 1.1
 
 From: Ivan Hughes as April 16, 2018
 
-* Step 1:  User answers question 'What was the purpose of your visit to our website today'", The user then proceeds to the autofill box.”  
+* Step 1:  User answers question 'What was the purpose of your visit to our website today'", The user then proceeds to the autofill box.” 
 * Step 2: No tasks will be shown as default for the user
 * Step 3: User begins to type and autofill begins to auto-suggest tasks based on the Master Task List.  On the back end the javascript would check what theme, then institution and then program. If the user types “CPP” then the user should only see tasks that are related to CPP such as “Apply for the Canada Pension Plan, “Apply for Canada Pension Plan Disability (CPP-D) Benefit”, etc.
 * Step 4: User can either click enter or use mouse to pick the task that relates most to what they typed.
@@ -764,7 +766,7 @@ This may require the form validation plugin in order to display the error messag
 ### 2018-04-18
 
 General notes
-* The simplier version of the combobox work well. 
+* The simplier version of the combobox work well.
 * When the ```select``` is transformed into a combobox, the original select id value are moved into the new component and the original select are detached from the DOM. One of the concern with that approach is there is not event binding for a detached DOM elements.
 * A polyfill was needed IE11 in order to support the function ```getElementById``` for DOM fragment.
 * Added the same filter type as the GCWeb suggest plugin
@@ -829,7 +831,7 @@ Commented by the developer: April 18, 2018
 * The interface don't show a clear clue that the user need to choose one of the options.
 	- A CSS down arrows was added to the right of the input field for the subsequent testing. But it was not possible to display the list when the down arrow was clicked (as it was required some programming).
 
-Other than that, the overall was fine. 
+Other than that, the overall was fine.
 
 #### Testing with group two
 
@@ -849,7 +851,7 @@ The CSS that was added and not inlcuded into prototype 1 to 5
 * It was noted the default style of the listbox didn't match the style of an open ```<select>``` element
 	- CSS would need to be developed in order to match the style
 * It wasn't clear where was the limit of the listbox, like the bottom of the listbox just faded into the other content of the page, so it was hard, quite imposible to make that distinction.
-	- Defining a CSS that would provide more emphasis on the listbox overlay. 
+	- Defining a CSS that would provide more emphasis on the listbox overlay.
 
 ### 2018-04-20 - Status update
 {::nomarkdown}
@@ -906,10 +908,10 @@ Combobox default template - Enhanced
 		<div data-wb5-bind="id@popupId" role="listbox" class="hidden">
 			<template data-slot-elm="" data-wb5-template="sub-template-listbox">
 				<ul class="list-unstyled">
-					<li 
-						class="brdr-bttm" 
-						role="option" 
-						data-wb5-for="option in options" 
+					<li
+						class="brdr-bttm"
+						role="option"
+						data-wb5-for="option in options"
 						data-wb5-if="!parent.filter.length || option.value.indexOf(parent.filter) !== -1"
 						data-wb5-on="select@select(option.value); live@parent.nbdispItem(wb-nbNode)" >{{ option.textContent }}</li>
 				</ul>

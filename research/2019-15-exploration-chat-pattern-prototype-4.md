@@ -3,7 +3,9 @@ published: true
 layout: default-theme-wet-boew-en
 title: 2019-15 - Exploration of a chat like design pattern
 description: Exploration of a chat like design pattern
-modified: 2019-02-01
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-01-13
 ---
 
 Prototype 4: With Data.
@@ -30,27 +32,27 @@ Prototype 4: With Data.
 		&lt;link href="./../GCWeb/assets/favicon.ico" rel="icon" type="image/x-icon" /&gt;
 		&lt;link rel="stylesheet" href="./../GCWeb/css/theme.css" /&gt;
 		&lt;!--&lt;![endif]--&gt;
-		
+
 		&lt;!--[if lt IE 9]&gt;
 		&lt;link href="./../GCWeb/assets/favicon.ico" rel="shortcut icon" /&gt;
-		
+
 		&lt;link rel="stylesheet" href="./../GCWeb/css/ie8-theme.css" /&gt;
 		&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"&gt;&lt;/script&gt;
 		&lt;script src="./../wet-boew/js/ie8-wet-boew.js"&gt;&lt;/script&gt;
 		&lt;![endif]--&gt;
 		&lt;!--[if lte IE 9]&gt;
-		
-		
+
+
 		&lt;![endif]--&gt;
-		
+
 		&lt;noscript&gt;&lt;link rel="stylesheet" href="./../wet-boew/css/noscript.css" /&gt;&lt;/noscript&gt;
-		
+
 		&lt;!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER --&gt;
 		&lt;script&gt;dataLayer1 = [];&lt;/script&gt;
 		&lt;!-- End Google Tag Manager --&gt;
-		
-		
-		
+
+
+
 		&lt;!-- Chatbot --&gt;
 		&lt;style&gt;
 			@-webkit-keyframes grow {
@@ -393,10 +395,10 @@ Prototype 4: With Data.
 				animation-delay: 0.2s;
 			}
 		&lt;/style&gt;
-		
+
 	&lt;/head&gt;
 	&lt;body class="secondary" vocab="http://schema.org/" typeof="WebPage"&gt;
-		
+
 &lt;!-- Google Tag Manager DO NOT REMOVE OR MODIFY - NE PAS SUPPRIMER OU MODIFIER --&gt;
 &lt;noscript&gt;&lt;iframe title="Google Tag Manager" src="//www.googletagmanager.com/ns.html?id=GTM-TLGQ9K" height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;&lt;/noscript&gt;
 &lt;script&gt;(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer1'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer1','GTM-TLGQ9K');&lt;/script&gt;
@@ -472,14 +474,14 @@ Prototype 4: With Data.
 			&lt;div class="row"&gt;
 				&lt;ol class="breadcrumb"&gt;
 									&lt;li&gt;&lt;a href="https://www.canada.ca/en.html"&gt;Home&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="theme-en.html"&gt;[Theme Name]&lt;/a&gt;&lt;/li&gt;
-					
+
 				&lt;/ol&gt;
 			&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/nav&gt;
 &lt;/header&gt;
-&lt;main role="main" property="mainContentOfPage" class="container"&gt;	
-			
+&lt;main role="main" property="mainContentOfPage" class="container"&gt;
+
 &lt;div class="row profile"&gt;
 	&lt;div class="col-md-6"&gt;
 		&lt;h1 property="name" id="wb-cont"&gt;[Topic title]&lt;/h1&gt;
@@ -926,7 +928,7 @@ Prototype 4: With Data.
 												&lt;label for="problem6-detail"&gt;Provide more details (optional):&lt;/label&gt;
 												&lt;input type="text" class="form-control full-width" id="problem6-detail"&gt;
 											&lt;/div&gt;
-						
+
 									&lt;/fieldset&gt;
 									&lt;button type="submit" class="btn btn-primary wb-toggle" data-toggle='{"stateOff": "hide", "stateOn": "show", "selector": ".gc-rprt-prblm-tggl"}'&gt;Submit&lt;/button&gt;
 								&lt;/form&gt;
@@ -943,7 +945,7 @@ Prototype 4: With Data.
 		&lt;/div&gt;
 	&lt;/div&gt;
 &lt;/main&gt;
-		
+
 	&lt;footer role="contentinfo" id="wb-info"&gt;
 		&lt;nav role="navigation" class="container wb-navcurr"&gt;
 			&lt;h2 class="wb-inv"&gt;About government&lt;/h2&gt;
@@ -985,23 +987,23 @@ Prototype 4: With Data.
 		&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"&gt;&lt;/script&gt;
 		&lt;script src="./../wet-boew/js/wet-boew.js"&gt;&lt;/script&gt;
 		&lt;!--&lt;![endif]--&gt;
-		
+
 		&lt;!--[if lt IE 9]&gt;
 		&lt;script src="./../wet-boew/js/ie8-wet-boew2.js"&gt;&lt;/script&gt;
-		
+
 		&lt;![endif]--&gt;
 		&lt;script src="./../GCWeb/js/theme.js"&gt;&lt;/script&gt;
-		
+
 		&lt;!-- Chat bot --&gt;
 		&lt;script&gt;
 		// Data structure for a working chatbot
 		var datainput = [
 			{
 				header: {
-					action: "search", 
+					action: "search",
 					send: "Show results",
 					endtext: "Thank you. I have built a built a page with results you may find resourceful."
-				}, 
+				},
 				questions: [
 					{
 						question: "q1",
@@ -1009,107 +1011,107 @@ Prototype 4: With Data.
 						labelwizard: "Are you:",
 						input: "radio",
 						choices: [
-							{ 
+							{
 								content: "a young Canadian",
 								value: "young-canadian",
 								next: "#q2",
 								url: "page1.html"
 							},
-							{ 
+							{
 								content: "an employer or organization looking for funding to support youth",
 								value: "employer-organization-funding-support-youth",
 								next: false,
 								url: "page2.html"
 							}
 						]
-					}, 
+					},
 					{
 						question: "q2",
 						labelform: "In what situation are you?",
 						labelwizard: "Great! And are you:",
 						input: "radio",
 						choices: [
-							{ 
+							{
 								content: "a high school student",
 								value: "high-school",
 								next: "#q3",
 								url: "page1.html"
 							},
-							{ 
+							{
 								content: "a CÉGEP student",
 								value: "cegep-student",
 								next: "#q3",
 								url: "page2.html"
 							},
-							{ 
+							{
 								content: "a post-secondary school student",
 								value: "post-secondary",
 								next: "#q3",
 								url: "page1.html"
 							},
-							{ 
+							{
 								content: "ready to start a career",
 								value: "ready-start-career",
 								next: "#q3",
 								url: "page2.html"
 							},
-							{ 
+							{
 								content: "not in school and not working",
 								value: "not-school-not-working",
 								next: "#q3",
 								url: "page1.html"
 							},
-							{ 
+							{
 								content: "none of these",
 								value: "none",
 								next: "#q3",
 								url: "page2.html"
 							}
 						]
-					}, 
+					},
 					{
 						question: "q3",
 						labelform: "What is your goal?",
 						labelwizard: "Awesome! And would you like to:",
 						input: "radio",
 						choices: [
-							{ 
+							{
 								content: "get a job",
 								value: "get-job",
 								next: false,
 								url: "page1.html"
 							},
-							{ 
+							{
 								content: "develop skills",
 								value: "develop-skills",
 								next: false,
 								url: "page2.html"
 							},
-							{ 
+							{
 								content: "explore careers",
 								value: "explore-careers",
 								next: false,
 								url: "page3.html"
 							},
-							{ 
+							{
 								content: "attend post-secondary education",
 								value: "post-secondary-education",
 								next: false,
 								url: "page4.html"
 							},
-							{ 
+							{
 								content: "serve your community",
 								value: "serve-community",
 								next: false,
 								url: "page5.html"
 							},
-							{ 
+							{
 								content: "get an experience",
 								value: "get-experience",
 								next: false,
 								url: "page6.html"
 							},
-							{ 
+							{
 								content: "see everything",
 								value: "everything",
 								next: false,
@@ -1120,25 +1122,25 @@ Prototype 4: With Data.
 				]
 			}
 		];
-			
+
 		// Now the JSON version of it
 		var datajson = "[{\"header\":{\"action\":\"search\",\"send\":\"Show results\",\"endtext\":\"Thank you. I have built a built a page with results you may find resourceful.\"},\"questions\":[{\"question\":\"q1\",\"labelform\":\"What would you describe yourself as?\",\"labelwizard\":\"Are you:\",\"input\":\"radio\",\"choices\":[{\"content\":\"a young Canadian\",\"value\":\"young-canadian\",\"next\":\"#q2\",\"url\":\"page1.html\"},{\"content\":\"an employer or organization looking for funding to support youth\",\"value\":\"employer-organization-funding-support-youth\",\"next\":false,\"url\":\"page2.html\"}]},{\"question\":\"q2\",\"labelform\":\"In what situation are you?\",\"labelwizard\":\"Great! And are you:\",\"input\":\"radio\",\"choices\":[{\"content\":\"a high school student\",\"value\":\"high-school\",\"next\":\"#q3\",\"url\":\"page1.html\"},{\"content\":\"a CÉGEP student\",\"value\":\"cegep-student\",\"next\":\"#q3\",\"url\":\"page2.html\"},{\"content\":\"a post-secondary school student\",\"value\":\"post-secondary\",\"next\":\"#q3\",\"url\":\"page1.html\"},{\"content\":\"ready to start a career\",\"value\":\"ready-start-career\",\"next\":\"#q3\",\"url\":\"page2.html\"},{\"content\":\"not in school and not working\",\"value\":\"not-school-not-working\",\"next\":\"#q3\",\"url\":\"page1.html\"},{\"content\":\"none of these\",\"value\":\"none\",\"next\":\"#q3\",\"url\":\"page2.html\"}]},{\"question\":\"q3\",\"labelform\":\"What is your goal?\",\"labelwizard\":\"Awesome! And would you like to:\",\"input\":\"radio\",\"choices\":[{\"content\":\"get a job\",\"value\":\"get-job\",\"next\":false,\"url\":\"page1.html\"},{\"content\":\"develop skills\",\"value\":\"develop-skills\",\"next\":false,\"url\":\"page2.html\"},{\"content\":\"explore careers\",\"value\":\"explore-careers\",\"next\":false,\"url\":\"page3.html\"},{\"content\":\"attend post-secondary education\",\"value\":\"post-secondary-education\",\"next\":false,\"url\":\"page4.html\"},{\"content\":\"serve your community\",\"value\":\"serve-community\",\"next\":false,\"url\":\"page5.html\"},{\"content\":\"get an experience\",\"value\":\"get-experience\",\"next\":false,\"url\":\"page6.html\"},{\"content\":\"see everything\",\"value\":\"everything\",\"next\":false,\"url\":\"page7.html\"}]}]}]";
-		
+
 		// For testing purposes, overwrite the datainput by the parsed JSON
 		datainput = JSON.parse(datajson);
-			
+
 		// Create the data that is sent as an output, if needed
-		dataoutput = 
-			
+		dataoutput =
+
 		// If chatbot is found, initiate
 		function initiateChtbt($selector, $input="JSON") {
 			buildChtbt($selector);
 
-			var $basic = $(".chtbt-basic"), 
-				$bubble = $(".chtbt-bubble-wrap"), 
-				$container = $(".chtbt-container"), 
-				$form = $(".chtbt-body"), 
-				hasAnswered = true, 
+			var $basic = $(".chtbt-basic"),
+				$bubble = $(".chtbt-bubble-wrap"),
+				$container = $(".chtbt-container"),
+				$form = $(".chtbt-body"),
+				hasAnswered = true,
 				qIndex = 0;
 
 			$basic.hide();
@@ -1170,13 +1172,13 @@ Prototype 4: With Data.
 				$bubble.stop().hide();
 				$(".chtbt-conversation").scrollTop($('.chtbt-history')[0].scrollHeight);
 				$("body").addClass("chtbt-noscroll");
-				
+
 				if(hasAnswered) {
 					appendInteraction($form, datainput[0].questions[qIndex].labelwizard);
 					qIndex++;
 				}
 			});
-			
+
 			// On Submit answer
 			$form.on("submit", function(event) {
 				event.preventDefault();
@@ -1225,14 +1227,14 @@ Prototype 4: With Data.
 				$(".chtbt-conversation").scrollTop($(".chtbt-history")[0].scrollHeight);
 			}, 3000);
 		}
-			
+
 		// Adds raply from human
 		function appendReply($selector, content) {
 			$dropspot = $selector.find(".chtbt-history");
 			$dropspot.append('&lt;div class="row mrgn-bttm-md"&gt;&lt;div class="col-xs-9 col-xs-offset-3"&gt;&lt;div class="chtbt-message text-right pull-right"&gt;&lt;p class="mrgn-bttm-0"&gt;' + content + '&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;');
 		}
-			
-			
+
+
 		if($(".wb-chtbt").length) {
 			$chtbt = $(".wb-chtbt");
 			initiateChtbt($chtbt);

@@ -3,7 +3,9 @@ published: true
 layout: default-theme-wet-boew-en
 title: 2019-15 - Chat Wizard Alpha Version
 description: Chat Wizard Alpha Version
-modified: 2019-02-14
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-01-13
 ---
 
 {::nomarkdown}

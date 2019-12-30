@@ -3,10 +3,11 @@ published: true
 layout: default-theme-wet-boew-en
 title: Exploratory prototype 2 - 2018-7 Checkbox filtering - Research and finding
 description: Exploratory prototype 2 that check a few possibility
-modified: 2018-08-10
-
-script_pgbttm_src: //wet-boew.github.io/themes-dist/GCWeb/GCWeb/js/theme.min.js
-script_pgbttm2_src: 2018-assets/2018-7-proto-2.js
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-01-13
+script_src: //wet-boew.github.io/themes-dist/GCWeb/GCWeb/js/theme.min.js
+script_src2: 2018-assets/2018-7-proto-2.js
 ---
 
 {::nomarkdown}
@@ -77,8 +78,8 @@ script_pgbttm2_src: 2018-assets/2018-7-proto-2.js
 <fieldset>
   <legend>Section type</legend>
   <ul class="list-unstyled">
-  	<!-- 
-		
+  	<!--
+
 		The attribute "aria-controls" can not be used on those checkbox, because their action are not immediate. That is why the attribute "data-wb5-link" is used, which contains IDs refs.
   	-->
     <li><input checked="checked" type="checkbox" id="dpgn-section-intro-standard" data-wb5-link="testID" data-wb5-group="" /> <label for="dpgn-section-intro-standard">Introduction (for a standard)</label></li>

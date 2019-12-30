@@ -3,7 +3,9 @@ published: true
 layout: default-theme-wet-boew-en
 title: 2019-15 - Exploration of a chat like design pattern
 description: Exploration of a chat like design pattern
-modified: 2019-02-01
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-01-13
 ---
 
 Prototype 3: Actually needs to understand data at this point.
@@ -478,8 +480,8 @@ Prototype 3: Actually needs to understand data at this point.
 function initiateChtbt($selector) {
 	buildChtbt($selector);
 
-	var $basic = $(".chtbt-basic"), 
-		$bubble = $(".chtbt-bubble-wrap"), 
+	var $basic = $(".chtbt-basic"),
+		$bubble = $(".chtbt-bubble-wrap"),
 		$container = $(".chtbt-container");
 
 	$basic.hide();
@@ -566,13 +568,13 @@ var qdata = [
 		question: "q1",
 		label: "Are you:",
 		choices: [
-			{ 
+			{
 				content: "a young Canadian",
 				value: "young-canadian",
 				next: "#q2",
 				url: "page1.html"
 			},
-			{ 
+			{
 				content: "an employer or organization looking for funding to support youth",
 				value: "employer-organization-funding-support-youth",
 				next: false,
@@ -586,13 +588,13 @@ var qdata2 = {
 	question: "q1",
 	label: "Are you:",
 	choices: [
-		{ 
+		{
 			content: "a young Canadian",
 			value: "young-canadian",
 			next: "#q2",
 			url: "page1.html"
 		},
-		{ 
+		{
 			content: "an employer or organization looking for funding to support youth",
 			value: "employer-organization-funding-support-youth",
 			next: false,
@@ -1075,8 +1077,8 @@ if($(".wb-chtbt").length) {
 function initiateChtbt($selector) {
 	buildChtbt($selector);
 
-	var $basic = $(".chtbt-basic"), 
-		$bubble = $(".chtbt-bubble-wrap"), 
+	var $basic = $(".chtbt-basic"),
+		$bubble = $(".chtbt-bubble-wrap"),
 		$container = $(".chtbt-container");
 
 	$basic.hide();
@@ -1163,13 +1165,13 @@ var qdata = [
 		question: "q1",
 		label: "Are you:",
 		choices: [
-			{ 
+			{
 				content: "a young Canadian",
 				value: "young-canadian",
 				next: "#q2",
 				url: "page1.html"
 			},
-			{ 
+			{
 				content: "an employer or organization looking for funding to support youth",
 				value: "employer-organization-funding-support-youth",
 				next: false,
@@ -1183,13 +1185,13 @@ var qdata2 = {
 	question: "q1",
 	label: "Are you:",
 	choices: [
-		{ 
+		{
 			content: "a young Canadian",
 			value: "young-canadian",
 			next: "#q2",
 			url: "page1.html"
 		},
-		{ 
+		{
 			content: "an employer or organization looking for funding to support youth",
 			value: "employer-organization-funding-support-youth",
 			next: false,

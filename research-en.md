@@ -1,10 +1,9 @@
 ---
 published: true
 layout: default-theme-wet-boew-en
-filename_fr: index-fr
-title: Research and finding - Web Experience Toolkit (WET) documentation
-description: List of ongoing research and findings related to WET and it's features
-modified: 2018-06-28
+title: Research and Finding
+hide_breadcrumb: false
+date_modified: 2020-01-13
 ---
 
 List of finding and ongoing research related to WET and it's features
@@ -23,7 +22,7 @@ List of finding and ongoing research related to WET and it's features
 * [2018-6 - WB5 exploration 1](research/2018-6-wb5-exploration-1.html)
 	* Status: In slow progress
 * [2019-19 - Add to calendar](research/2019-19-add-calendar.html)
-	* Status: In slow progress	
+	* Status: In slow progress
 * [2019-15 - Exploration of a chat like design pattern](research/2019-15-exploration-chat-pattern.html)
 	* Status: In slow progress
 * [2019-17 - Réctification du comportement du ```input[type=date]```](research/2019-17-datepicker.html)

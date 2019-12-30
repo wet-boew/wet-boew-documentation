@@ -3,14 +3,16 @@ published: true
 layout: default-theme-wet-boew-en
 title: Save HTML table into CSV
 description: Download an HTML table as a CSV file
-modified: 2018-08-22
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-01-13
 ---
 
 Download an HTML table as a CSV file.
 
-[Source code and partial documenation](https://github.com/duboisp/GCWeb/tree/tocsv) 
+[Source code and partial documenation](https://github.com/duboisp/GCWeb/tree/tocsv)
 
-Status: The plugin is in an experimental stable state. 
+Status: The plugin is in an experimental stable state.
 
 Todo:
 * Testing still need to be completed. Like in IE11 and FF
@@ -67,13 +69,13 @@ The download will be moved outside the action as it is at higher risk to be reus
 
 Gathering the information from the HTML table is pretty streat forward, but not from the data table plugin. The chalenge with the data table plugin is it only show, in it's HTML form, a sub-set of the tabular data. Although the tabular data can be retreived from API call. Integrating the support for data table obfuscate more the readibility of code as a completly different technique is needed to access to equivalent data. In the array of rows taken from data table do not include the heading row compared to the rows properties from the ```<table>``` element which include heading row too.
 
-When iterating through rows by using the data table API, it is not all the row that have an associated HTML element. So the cells information is retreived through the ```cell( rowIndex, colIndex ).data()``` API. Then a test is required to know if the content of that cell is HTML, for the CSV we are only to provide textual content, not HTML markup unless if that explicitly display at the screen. 
+When iterating through rows by using the data table API, it is not all the row that have an associated HTML element. So the cells information is retreived through the ```cell( rowIndex, colIndex ).data()``` API. Then a test is required to know if the content of that cell is HTML, for the CSV we are only to provide textual content, not HTML markup unless if that explicitly display at the screen.
 
 ### Complex table support
 
-The collecting of tabular are limited to simple table. 
+The collecting of tabular are limited to simple table.
 Complex table, like the one supported by the WET table parser are considered out of scope for now. Supporting those will require to define several strategy to support each variation. Like grouping and reversing the axes. That might end up to create a complicated configuration file for the "tocsv" action. Also, at the time of writing this, it is noted that the WET table parser need to be fully reviewed and rewritten. It was proposed to follow a structure similar to Data Cube.
- 
+
 ## Download
 
 The download function was inspired by the FileSave.js code. But I removed all the support for unsuported browser by WET which reduced a lot the code. Also, we didn't implemented the fix which force to add the BOM to text file as no file in WET include the BOM flag.

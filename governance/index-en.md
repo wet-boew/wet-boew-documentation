@@ -3,7 +3,9 @@ published: true
 layout: default-theme-wet-boew-en
 title: Internal project gouvernance - WET-BOEW documentatin
 description: Brief description of governance behind WET
-modified: 2018-02-13
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-01-13
 ---
 
 If you have any question please submit an github issue. If you want to participate, reach out [Pierre Dubois](https://github.com/duboisp) where you can find he's contact information on GCcollab, on GCconnect or send me a direct message on twitter.
@@ -308,4 +310,3 @@ Label color: #8d201c
 * **User interface:** Define the HTML semantic at each WET running stage like on and before the progressive enhancement, on applying a supported group of configuration...
 * **External data source:** Content information provided from outside the webpage context, like async loading through an Ajax call, reading a stream...
 * **View and style:** Presentation layer of the content information structured by user interface and configuration
-

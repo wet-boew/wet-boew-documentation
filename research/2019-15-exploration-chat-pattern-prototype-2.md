@@ -3,7 +3,9 @@ published: true
 layout: default-theme-wet-boew-en
 title: 2019-15 - Exploration of a chat like design pattern
 description: Exploration of a chat like design pattern
-modified: 2019-01-29
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-01-13
 ---
 
 Prototype 2: Includes most of the styles, and an advanced look & feel.
@@ -205,8 +207,8 @@ Prototype 2: Includes most of the styles, and an advanced look & feel.
 				</div>
 				<div class="row">
 					<div class="col-xs-12 text-center mrgn-tp-sm">
-						<button type="submit" class="btn btn-sm btn-link">Start over</button> &middot; 
-						<button type="submit" class="btn btn-sm btn-link">Switch to basic form</button> &middot; 
+						<button type="submit" class="btn btn-sm btn-link">Start over</button> &middot;
+						<button type="submit" class="btn btn-sm btn-link">Switch to basic form</button> &middot;
 						<button type="submit" class="btn btn-sm btn-link">Skip this step</button>
 					</div>
 				</div>
@@ -422,8 +424,8 @@ $(".chtbt-min").on("click", function(event) {
 				&lt;/div&gt;
 				&lt;div class="row"&gt;
 					&lt;div class="col-xs-12 text-center mrgn-tp-sm"&gt;
-						&lt;button type="submit" class="btn btn-sm btn-link"&gt;Start over&lt;/button&gt; &middot; 
-						&lt;button type="submit" class="btn btn-sm btn-link"&gt;Switch to basic form&lt;/button&gt; &middot; 
+						&lt;button type="submit" class="btn btn-sm btn-link"&gt;Start over&lt;/button&gt; &middot;
+						&lt;button type="submit" class="btn btn-sm btn-link"&gt;Switch to basic form&lt;/button&gt; &middot;
 						&lt;button type="submit" class="btn btn-sm btn-link"&gt;Skip this step&lt;/button&gt;
 					&lt;/div&gt;
 				&lt;/div&gt;

@@ -1,10 +1,11 @@
 ---
 published: true
 layout: default-theme-wet-boew-en
-filename_fr: null
 title: Research and finding - Web Experience Toolkit (WET) documentation
 description: Details on the research on best approaches on long documents
-modified: {}
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-01-13
 ---
 
 # Share and view ideas: Managing decentralized long documents
@@ -107,7 +108,7 @@ General ideas on how the issue can be solved.
 Like:
 * [Definitions and classifications of long documents](2018-assets/2018-12-long-documents/2018-12-long-document-classes.html)
 * [Specifying best practices and guidelines for creating, publishing and maintaining long document on the Web](2018-assets/2018-12-long-documents/2018-12-long-document-profile-page.html)
-* Using data visualization to make large amounts of complex information easier and faster to read 
+* Using data visualization to make large amounts of complex information easier and faster to read
 * Merging multiple pages into one single document that would be ready for printing.
 * Generating and printing a master PDF client-side
 * Improving CSS printing

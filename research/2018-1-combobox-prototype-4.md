@@ -3,11 +3,12 @@ published: true
 layout: default-theme-wet-boew-en
 title: Combobox test 4 - Datalist JSON suggestion - Research and finding
 description: Prototype showing validation and form integration
-modified: 2018-04-09
-
-script_pgbttm_src: //wet-boew.github.io/themes-dist/GCWeb/GCWeb/js/theme.min.js
-script_pgbttm2_src: 2018-assets/1-datalist-combobox.js
-script_pgbttm3_src: //wet-boew.github.io/themes-dist/GCWeb/wet-boew/js/deps/jsonpointer.js
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-01-13
+script_src: //wet-boew.github.io/themes-dist/GCWeb/GCWeb/js/theme.min.js
+script_src2: 2018-assets/1-datalist-combobox.js
+script_src3: //wet-boew.github.io/themes-dist/GCWeb/wet-boew/js/deps/jsonpointer.js
 ---
 
 Prototype of an ```input``` with a ```datalist``` transformed into a customized ```combobox``` with the listbox pattern.

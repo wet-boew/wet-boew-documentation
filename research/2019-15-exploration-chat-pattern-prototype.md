@@ -3,7 +3,9 @@ published: true
 layout: default-theme-wet-boew-en
 title: 2019-15 - Chat Wizard
 description: Exploration of a chat like design pattern
-modified: 2019-02-06
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-01-13
 ---
 
 {::nomarkdown}
@@ -633,33 +635,33 @@ modified: 2019-02-06
 // Data structure example for a working chatbot
 var datainput = {
 	header: {
-		action: "search", 
+		action: "search",
 		send: "Show results",
 		endtext: "Thank you. I have built a page with results you may find resourceful.",
 		starttext: "Hi! I can help direct you to programs and services you might be interested in. Let's begin...",
 		first: "q1"
-	}, 
+	},
 	questions: {
-		q1: 
+		q1:
 		{
 			queryName: "describe",
 			labelform: "What would you describe yourself as?",
 			labelwizard: "Are you:",
 			input: "radio",
 			choices: [
-				{ 
+				{
 					content: "a young Canadian",
 					queryParam: "young-canadian",
 					next: "q2"
 				},
-				{ 
+				{
 					content: "an employer or organization looking for funding to support youth",
 					queryParam: "employer-organization-funding-support-youth",
 					next: "none",
 					url: "2019-15-exploration-chat-pattern-prototype-results.html"
 				}
 			]
-		}, 
+		},
 		q2:
 		{
 			queryName: "situation",
@@ -667,32 +669,32 @@ var datainput = {
 			labelwizard: "Great! And are you:",
 			input: "radio",
 			choices: [
-				{ 
+				{
 					content: "a high school student",
 					queryParam: "high-school",
 					next: "q3"
 				},
-				{ 
+				{
 					content: "a CÉGEP student",
 					queryParam: "cegep-student",
 					next: "q3"
 				},
-				{ 
+				{
 					content: "a post-secondary school student",
 					queryParam: "post-secondary",
 					next: "q3"
 				},
-				{ 
+				{
 					content: "ready to start a career",
 					queryParam: "ready-start-career",
 					next: "q3"
 				},
-				{ 
+				{
 					content: "not in school and not working",
 					queryParam: "not-school-not-working",
 					next: "q3"
 				},
-				{ 
+				{
 					content: "none of these",
 					queryParam: "none",
 					next: "q3"
@@ -706,43 +708,43 @@ var datainput = {
 			labelwizard: "Awesome! And would you like to:",
 			input: "radio",
 			choices: [
-				{ 
+				{
 					content: "get a job",
 					queryParam: "get-job",
 					next: "none",
 					url: "2019-15-exploration-chat-pattern-prototype-results.html"
 				},
-				{ 
+				{
 					content: "develop skills",
 					queryParam: "develop-skills",
 					next: "none",
 					url: "2019-15-exploration-chat-pattern-prototype-results.html"
 				},
-				{ 
+				{
 					content: "explore careers",
 					queryParam: "explore-careers",
 					next: "none",
 					url: "2019-15-exploration-chat-pattern-prototype-results.html"
 				},
-				{ 
+				{
 					content: "attend post-secondary education",
 					queryParam: "post-secondary-education",
 					next: "none",
 					url: "2019-15-exploration-chat-pattern-prototype-results.html"
 				},
-				{ 
+				{
 					content: "serve your community",
 					queryParam: "serve-community",
 					next: "none",
 					url: "2019-15-exploration-chat-pattern-prototype-results.html"
 				},
-				{ 
+				{
 					content: "get an experience",
 					queryParam: "get-experience",
 					next: "none",
 					url: "2019-15-exploration-chat-pattern-prototype-results.html"
 				},
-				{ 
+				{
 					content: "see everything",
 					queryParam: "everything",
 					next: "none",
@@ -752,7 +754,7 @@ var datainput = {
 		}
 	}
 };
-			
+
 // For testing purposes, stringify the JavaScipt Object Array
 var datajson = JSON.stringify(datainput);
 
@@ -761,7 +763,7 @@ datainput = JSON.parse(datajson);
 
 // Create the data that is sent as an output, if needed + check if user has answered + determine index of question
 var dataoutput = [],
-	hasAnswered = true, 
+	hasAnswered = true,
 	first = datainput.header.first,
 	redirurl = "",
 	current = datainput.questions[datainput.header.first];
@@ -770,9 +772,9 @@ var dataoutput = [],
 function initiateChtbt($selector, input) {
 	buildChtbt($selector);
 
-	var $basic = $(".chtbt-basic"), 
-		$bubble = $(".chtbt-bubble-wrap"), 
-		$container = $(".chtbt-container"), 
+	var $basic = $(".chtbt-basic"),
+		$bubble = $(".chtbt-bubble-wrap"),
+		$container = $(".chtbt-container"),
 		$form = $(".chtbt-body");
 
 	$basic.hide();
@@ -872,7 +874,7 @@ function appendInteraction($selector, last) {
 			setTimeout(function () {
 				$inputsSpot.append('<fieldset><legend class="wb-inv">' + current.labelwizard + '</legend><div class="row"><div class="col-xs-12"><ul class="list-inline mrgn-tp-sm chtbt-choices"></ul></div></div></fieldset>');
 				for(var i=0; i<current.choices.length; i++) {
-					iQuestion = current.choices[i];	
+					iQuestion = current.choices[i];
 					$inputsSpot.find(".chtbt-choices").append('<li><label><input type="' + current.input + '" value="' + iQuestion.queryParam + '" name="' + current.queryName + '" data-chtbt-next="' + iQuestion.next + '"' + (typeof iQuestion.url === "undefined" ? '' : 'data-chtbt-url="' + iQuestion.url + '"') + ' /> <span>' + iQuestion.content + '</span></label></li>');
 				}
 				if($(".chtbt-reply").outerHeight() > ($(".chtbt-conversation").innerHeight() - $(".chtbt-question:last")[0].scrollHeight)) {

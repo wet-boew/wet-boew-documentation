@@ -3,7 +3,9 @@ published: true
 layout: default-theme-wet-boew-en
 title: Meeting summary - WET-BOEW documentation
 description: Summary of what has been discussed at the meeting.
-modified: 2019-12-18
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-01-13
 ---
 
 Summary of what has been discussed at the meeting.
@@ -25,7 +27,7 @@ Summary of what has been discussed at the meeting.
 	* Add to calendar project has a new lead: Eric Guitar
 * Approval of decision #7
 * Approval of decision #8
-* Presented decision #9 - Release early, release often (STR) 
+* Presented decision #9 - Release early, release often (STR)
 * Reviewed and approved to move all current bootstrap 4 gcweb experimental CSS into wet-beow stable
 
 2019-09-20 (6 participants)
@@ -64,7 +66,7 @@ Announced the creation of a Web Accessibility Working Group that will be assessi
 * Discussed on a deployement strategy for JQuery 3 migration which we will provide some experimental stable build.
 * Presented Design decision 6 on versionning
 * Presented Design decision 7 on experimental feature
-* WET Codefest 2019 event was put on hold/canceled but it will be reevaluated next August. 
+* WET Codefest 2019 event was put on hold/canceled but it will be reevaluated next August.
 
 2019-04-24 (2 participants)
 * Update project status
@@ -291,10 +293,9 @@ List of todo:
 * Develop a plan and a strategy to address concern between moving from WET 4 to WET 5.
 * Develop a plan and a strategy to address some WET user fears, like removing the jQuery library from WET core.
 
-Suggestion/Idea 
+Suggestion/Idea
 * Use a top bar overlay to advertise the user that he are in the Basic HTML mode
 * Having two build system, one for quick local developpement and the full build that may require nodeJS. Some opposition was expressed about having two different type of build.
 * Support and promote mobile first design
 * Create a business plan about the markup for WET 5, use focus group and explore if it makes senses
 * Consider a way to have organisation to lead some WET plugin.
-

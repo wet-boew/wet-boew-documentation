@@ -3,7 +3,9 @@ published: true
 layout: default-theme-wet-boew-en
 title: WET 5 - WET-BOEW documentation
 description: Project description page for WET 5
-modified: 2018-07-05
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-01-13
 ---
 
 We have start our planning to develop WET 5
@@ -50,7 +52,7 @@ Collect early community feedback about moving from WET 4 to WET 5.
 We are looking for senior and junior javascript developper to help with coding and testing the WET 5 core. Migrating WET 4 plugin to WET 5 plugin.
 
 ### Just want to contribute
-Let us know and we can match you with a group. 
+Let us know and we can match you with a group.
 
 ## List of todo:
 * Reach out and try to being active on social media.
@@ -61,7 +63,7 @@ Let us know and we can match you with a group.
 * Develop a plan and a strategy to address concern between moving from WET 4 to WET 5.
 * Develop a plan and a strategy to address some WET user fears, like removing the jQuery library from WET core.
 
-## Suggestion/Idea 
+## Suggestion/Idea
 * Use a top bar overlay to advertise the user that he are in the Basic HTML mode
 * Having two build system, one for quick local developpement and the full build that may require nodeJS. Some opposition was expressed about having two different type of build.
 * Support and promote mobile first design

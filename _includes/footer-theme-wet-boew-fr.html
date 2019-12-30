@@ -1,70 +1,46 @@
-<div id="wb-foot"><div id="wb-foot-in"><footer><h2{% if page.secondary_menu == false %}{% elsif site.secondary_menu == false and page.secondary_menu != true %}{% else %} id="wb-nav"{% endif %}>Pied de page</h2>
-<!-- FooterStart -->
-<nav role="navigation"><div id="wet-sft"><h3>Pied de page du site</h3><div id="wet-sft-in">
-<section><div class="span-2"><h4 class="wet-col-head"><a href="#">À propos de nous</a></h4>
-<ul>
-<li><a href="#">Notre mandat</a></li>
-<li><a href="#">Notre histoire</a></li>
+<footer id="wb-info" class="visible-sm visible-md visible-lg wb-navcurr">
+<div class="container">
+<nav role="navigation" class="row">
+<h2>À propos de ce site</h2>
+<section class="col-sm-3">
+<h3>Contactez-nous</h3>
+<ul class="list-unstyled">
+<li><a href="https://github.com/wet-boew/wet-boew/issues/new">Questions ou commentaires?</a></li>
 </ul>
-</div></section>
-<section><div class="span-2"><h4 class="wet-col-head"><a href="#">Contactez-nous</a></h4>
-<address>
-<ul>
-<li><a href="#">Numéros de téléphone</a></li>
-<li><a href="#">Nos bureaux</a></li>
+</section>
+<section class="col-sm-3">
+<h3>À propos</h3>
+<ul class="list-unstyled">
+<li><a href="../../wet-boew/index-fr.html#apropos">À propos de la Boîte à outils de l’expérience Web</a></li>
+<li><a rel="external" href="https://www.canada.ca/fr/secretariat-conseil-tresor/sujets/communications-gouvernementales.html">À propos des normes Web</a></li>
 </ul>
-</address>
-</div></section>
-<section><div class="span-2"><h4 class="wet-col-head"><a href="#">Nouvelles</a></h4>
-<ul>
-<li><a href="#">Communiqués</a></li>
-<li><a href="#">Avix aux médias</a></li>
-<li><a href="#">Multimédia</a></li>
+</section>
+<section class="col-sm-3">
+<h3>Nouvelles</h3>
+<ul class="list-unstyled">
+<li><a href="https://github.com/wet-boew/wet-boew-documentation/pulse">Activité du projet récente</a></li>
+<li><a href="https://github.com/wet-boew/wet-boew-documentation/graphs">Statistiques du projet</a></li>
 </ul>
-</div></section>
-<section><div class="span-2"><h4 class="wet-col-head"><a href="#">Restez branchés</a></h4>
-<ul>
-<li><a rel="external" href="#">YouTube</a></li>
-<li><a rel="external" href="#">Twitter</a></li>
-<li><a href="#">Fils de nouvelles</a></li>
+</section>
+<section class="col-sm-3">
+<h3>Restez branchés</h3>
+<ul class="list-unstyled">
+<li><a rel="external" href="https://twitter.com/BoiteExpWeb">Twitter</a></li>
 </ul>
-</div></section>
-</div></div></nav>
-<!-- FooterEnd -->
+</section>
+</nav>
+</div>
 </footer>
-</div></div></div>
-
-<!-- ScriptsStart -->
-<script src="https://wet-boew.github.io/wet-boew/dist/js/settings.js"></script>
-<!--[if lte IE 8]>
-<script src="https://wet-boew.github.io/wet-boew/dist/theme-wet-boew/js/theme-ie-min.js"></script>
-<script src="https://wet-boew.github.io/wet-boew/dist/js/pe-ap-ie-min.js"></script>
-<script src="https://wet-boew.github.io/wet-boew/dist/js/jquerymobile/jquery.mobile-ie.min.js"></script>
-<![endif]-->
-<!--[if gt IE 8]><!-->
-<script src="https://wet-boew.github.io/wet-boew/dist/theme-wet-boew/js/theme-min.js"></script>
-<script src="https://wet-boew.github.io/wet-boew/dist/js/pe-ap-min.js"></script>
-<script src="https://wet-boew.github.io/wet-boew/dist/js/jquerymobile/jquery.mobile.min.js"></script>
-<!--<![endif]-->
-<!-- ScriptsEnd -->
-
-<!-- CustomScriptsStart -->
-<script src="https://wet-boew.github.io/wet-boew-jekyll/assets/javascripts/global.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://wet-boew.github.io/wet-boew/wet-boew/js/wet-boew.min.js"></script>
 {% if page.script_src and page.script_src contains '.js' %}
-<link rel='stylesheet' href='{{ page.script_src }}' />
+<script src='{{ page.script_src }}'></script>
 {% endif %}
-{% if page.script_pgbttm2_src and page.script_pgbttm2_src contains '.js' %}
-<script src='{{ page.script_pgbttm2_src }}'></script>
+{% if page.script_src2 and page.script_src2 contains '.js' %}
+<script src='{{ page.script_src2 }}'></script>
 {% endif %}
-{% if page.script_pgbttm3_src and page.script_pgbttm3_src contains '.js' %}
-<script src='{{ page.script_pgbttm3_src }}'></script>
+{% if page.script_src3 and page.script_src3 contains '.js' %}
+<script src='{{ page.script_src3 }}'></script>
 {% endif %}
-{% if page.script_pgbttm4_src and page.script_pgbttm4_src contains '.js' %}
-<script src='{{ page.script_pgbttm4_src }}'></script>
-{% endif %}
-{% if page.script_pgbttm5_src and page.script_pgbttm5_src contains '.js' %}
-<script src='{{ page.script_pgbttm5_src }}'></script>
-{% endif %}
-<!-- CustomScriptsEnd -->
 </body>
 </html>

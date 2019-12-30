@@ -3,7 +3,9 @@ published: true
 layout: default-theme-wet-boew-en
 title: 2019-15 - Exploration of a chat like design pattern
 description: Exploration of a chat like design pattern
-modified: 2019-03-18
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-01-13
 ---
 
 ## Goal
@@ -22,7 +24,7 @@ modified: 2019-03-18
 * Github: [https://github.com/botui](https://github.com/botui)
 * Example: [A JavaScript framework to build UI for your bot](https://botui.org/)
 
-Good starter kit / example to build a simple, reliable, robust, and nonetheless accessible bot. 
+Good starter kit / example to build a simple, reliable, robust, and nonetheless accessible bot.
 
 ### Quriobot
 
@@ -84,7 +86,7 @@ The conversation flow seems to be set into one unique path.
 
 ## Requirement and idea of suggestion
 
-### Web accessibility 
+### Web accessibility
 * Ensure that all control can be controled via keyboard
 * Feature integration ( page wide )
 	* Have the button to open up the conversation after and outside the main content of the page, unless it's going to be specific at the page content (to discuss).
@@ -98,7 +100,7 @@ The conversation flow seems to be set into one unique path.
 	* The conversion should be in a list or section.
 	* A skip link, after the input should be provided to jump in the past conservation.
 	* Ensure the interface contain all the necessary instruction, like how to modify what has been entered, etc...
-	* Make the update/delete label clear. Use a combination of text and icon. 
+	* Make the update/delete label clear. Use a combination of text and icon.
 	* Let optional field to be optional (like able to skip) and idem for the required field.
 * Basic interface
 	* No floating button in the UI
@@ -190,7 +192,7 @@ Simple plain form as an alternative to the conversational form, spitting out the
 
 ### Focus order
 
-Default focus order matches the document structure, which is top to bottom and left to right. The focus is cyclic and keeps the user trapped in the form, but it can be escaped by selecting the close button at the end of the cycle. When the user sends a message, the next focus 
+Default focus order matches the document structure, which is top to bottom and left to right. The focus is cyclic and keeps the user trapped in the form, but it can be escaped by selecting the close button at the end of the cycle. When the user sends a message, the next focus
 
 ### Actions
 
@@ -206,7 +208,7 @@ This button minimizes the chat wizard to its initial close state, but keeps the 
 
 This button makes a switch between the conversational form and the basic form. It can be found in the header of the chat window.
 
-### Visual 
+### Visual
 
 {::nomarkdown}
 
@@ -357,7 +359,7 @@ In order to be configured properly, you need the following:
 
 * Add a form to a page and include the "wb-chtwzrd" class to either the form or its container (if it is contained in a row on its own).
 * In the form tag, you must have a filled action attribute and you must include a data-attribute named "data-wb-chtwzrd", with the following properties inside of it, in brackets {}:
-	* formType: "dynamic" or "static". (Optional, "dynamic" by default) A dynamic form will be needed if you can assume that the next question is dependent on the answer provided. Use "static" if you are using a static form, or other kinds of plugins affecting your form. 
+	* formType: "dynamic" or "static". (Optional, "dynamic" by default) A dynamic form will be needed if you can assume that the next question is dependent on the answer provided. Use "static" if you are using a static form, or other kinds of plugins affecting your form.
 	* sendWizard: "string". This text is the value of the button at the end of the conversation in the chat.
 	* titleWizard: "string". Title of the chat, showing in the chat window banner, as well as in the notification popup.
 	* startText: "string". Greeting message from the chat. THis is the very first message that the bot will send in the conversation, before the questions.
@@ -369,12 +371,12 @@ In order to be configured properly, you need the following:
 * Along with the proper markup, a data-attribute called "data-chtwzrd-q" must be added to every legend tag containing the inputs, with the following properties:
 	* qId: "1". Question Identifier.
 	* labelWizard: "Are you:". Question shown in the chat. This data-attribute is required, even if the text is the same as in the actual legend tag.
-* Every single input tag must have a data-attribute called "data-chtwzrd-a", containing the following properties: 
+* Every single input tag must have a data-attribute called "data-chtwzrd-a", containing the following properties:
 	* next: "2". Identifies which question is next if this option is selected, by qID.
 	* url: "wxyz.html". If this option modifies the form's action at the end, this attribute will change it. Note that If you change the action to "abc.html" at question #2, then the action will remain "abc.html" for the rest of the form until you change it again in a further answer.
 * Also, the name and the value attributes of the inputs are used as parameters in the form submit, like any regular form with a GET method.
 * The text value placed after your input must be wrapped around an HTML tag, like a span, and you can use the "no-chtwzrd" class on an element if you want to ignore it from the text value, e.g. an image.
-* Note: You can have any containers you want for your form, as long as you wrap it all inside the "wb-chtwzrd" class. The toggle would affect the spacing in your page if you don't wrap it all. Finally, a "wb-inv" class should be added to the element that has the "wb-chtwzrd", in order to prevent flickering on page load. 
+* Note: You can have any containers you want for your form, as long as you wrap it all inside the "wb-chtwzrd" class. The toggle would affect the spacing in your page if you don't wrap it all. Finally, a "wb-inv" class should be added to the element that has the "wb-chtwzrd", in order to prevent flickering on page load.
 
 #### Example (Subject to change)
 

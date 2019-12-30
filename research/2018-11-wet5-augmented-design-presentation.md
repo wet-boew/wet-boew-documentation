@@ -3,7 +3,9 @@ published: true
 layout: default-theme-wet-boew-en
 title: WET 5 - Augmented Design - Early prototype presentation
 description: Exploration 1 - Headless framework, component interaction driven from markup, data first design
-modified: 2018-09-06
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-01-13
 ---
 Web Experience Toolkit (WET) Next  - v5.0
 
@@ -21,7 +23,7 @@ To setup it you need:
 
 ## the journey…
 
- 
+
 
 * WCAG 1.0 recommended 1999
 	* Common Look and Feel v1.0 in 2000
@@ -70,7 +72,7 @@ To setup it you need:
 	* … to name a few
 * React reigns today; ReasonML could be next; and so on and so on
 	* Angular’s popularity continues to decline, while Vue's small following continues to grow (especially in China).
-	* Facebook released ReasonML in 2017, and they are anticipating more open-source releases from Facebook this year. 
+	* Facebook released ReasonML in 2017, and they are anticipating more open-source releases from Facebook this year.
 
 ## predications for 2030…
 
