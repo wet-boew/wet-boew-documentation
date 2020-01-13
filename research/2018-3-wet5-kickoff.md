@@ -3,11 +3,13 @@ published: true
 layout: default-theme-wet-boew-en
 title: 2018-3 - WET 5 kick off
 description: Documentations material presented at the WET 5 kick off on May 10, 2018
-modified: 2018-05-10
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-01-13
 ---
 
 
-Documentations material presented at the WET 5 framework development kick off meeting on May 10, 2018. 
+Documentations material presented at the WET 5 framework development kick off meeting on May 10, 2018.
 
 {::nomarkdown}
 
@@ -34,7 +36,7 @@ The new WET 5 would need to :
 * Better documentation (more working examples, WET feature blueprint)
 * Separate the UI from the logic. Like allowing to a way quickly switch from an initial UI enhanced state into a Basic HTML UI state. And to not prescribe a specific CSS framework to implementer.
 * Connect with web services provided by Restfull API, GraphQL API and SPARQL.
- 
+
 The meeting goal is:
 * Create sub working group to initiate the work on WET 5.
 * Present a few core concept targeted for WET 5
@@ -78,10 +80,10 @@ Let us knowby contacting Pierre Dubois. You can find his contact info on [GCColl
 		<div data-wb5-bind="id@popupId" role="listbox" class="hidden">
 			<template data-slot-elm="" data-wb5-template="sub-template-listbox">
 				<ul class="list-unstyled">
-					<li 
-						class="brdr-bttm" 
-						role="option" 
-						data-wb5-for="option in options" 
+					<li
+						class="brdr-bttm"
+						role="option"
+						data-wb5-for="option in options"
 						data-wb5-if="!parent.filter.length || option.value.indexOf(parent.filter) !== -1"
 						data-wb5-on="select@select(option.value); live@parent.nbdispItem(wb-nbNode)" >{{ option.textContent }}</li>
 				</ul>

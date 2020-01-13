@@ -3,7 +3,9 @@ published: true
 layout: default-theme-wet-boew-en
 title: 2019-15 - Chat Wizard
 description: Chat Wizard Demo
-modified: 2019-02-12
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-01-13
 ---
 
 {::nomarkdown}
@@ -579,12 +581,12 @@ modified: 2019-02-12
 <script src="2019-assets/botapi.js"></script>
 <script type="text/javascript">
 // Create the data that is sent as an output + check if user has answered
-var dataoutput = [], 
+var dataoutput = [],
 	datainput = {},
-	hasAnswered = true, 
-	redirurl = "", 
-	first = "", 
-	intro = "", 
+	hasAnswered = true,
+	redirurl = "",
+	first = "",
+	intro = "",
 	current = "";
 
 // If chat wizard initiator is found, then initiate
@@ -601,18 +603,18 @@ var initiatechtwzrd = function($selector, input) {
 	}
 
 	// Set answer to true for the messages before the first question
-	hasAnswered = true, 
+	hasAnswered = true,
 	first = datainput.header.first,
 	intro = (datainput.header.introtext ? datainput.header.introtext : ""),
 	current = datainput.questions[datainput.header.first];
-	
+
 	// Build chat wizard
 	buildchtwzrd($selector);
 
 	// All the commonly used elements
-	var $basic = $(".chtwzrd-basic"), 
-		$bubble = $(".chtwzrd-bubble-wrap"), 
-		$container = $(".chtwzrd-container"), 
+	var $basic = $(".chtwzrd-basic"),
+		$bubble = $(".chtwzrd-bubble-wrap"),
+		$container = $(".chtwzrd-container"),
 		$form = $(".chtwzrd-body"),
 		$minimize = $(".chtwzrd-min"),
 		$basiclink = $(".chtwzrd-basic-link"),
@@ -649,11 +651,11 @@ var initiatechtwzrd = function($selector, input) {
 		var bottomY = 30;
 
 		if ($(window).scrollTop() >= $(document).outerHeight() - $(window).outerHeight() - $('footer#wb-info').outerHeight()) {
-			$selector.css({	
+			$selector.css({
 				bottom: ($('footer#wb-info').outerHeight() - ($(document).outerHeight() - $(window).outerHeight() - $(window).scrollTop()) + bottomY)
 			});
 		} else {
-			$selector.css({	
+			$selector.css({
 				bottom: bottomY
 			});
 		}
@@ -788,7 +790,7 @@ var appendInteraction = function($selector) {
 			$dropspot.find(".chtwzrd-question").last().html(questionnaire.starttext);
 			first = "";
 			appendInteraction($selector, false);
-		} 
+		}
 		// If intro is provided, show it before the first question
 		else if(intro != "") {
 			$dropspot.find(".chtwzrd-question").last().html(questionnaire.introtextwizard);
@@ -797,7 +799,7 @@ var appendInteraction = function($selector) {
 		}
 		// If it is the last question, then change the button to submit the form
 		else if(current == "last") {
-			var paramStr = "", 
+			var paramStr = "",
 				btnclasses = $btnnext.attr('class'); // For demo purposes
 
 			for(var i=0; i<dataoutput.length; i++) {
@@ -809,14 +811,14 @@ var appendInteraction = function($selector) {
 			redirurl = "2019-15-exploration-chat-pattern-prototype-results.html";		// For demo purposes
 			$btnnext.replaceWith('<a class="' + btnclasses + '" href="' + redirurl + '?' + paramStr + '">' + questionnaire.send + ' <span class="glyphicon glyphicon-chevron-right small"></span></a>');		// For demo purposes
 			$selector.attr('action', redirurl + '?' + paramStr);
-		} 
+		}
 		// On every other occurences, append the question and its possible answers
 		else {
 			$dropspot.find(".chtwzrd-question").last().html(current.labelwizard);
 			setTimeout(function () {
 				$inputsSpot.append('<fieldset><legend class="wb-inv">' + current.labelwizard + '</legend><div class="row"><div class="col-xs-12"><ul class="list-inline mrgn-tp-sm chtwzrd-choices"></ul></div></div></fieldset>');
 				for(var i=0; i<current.choices.length; i++) {
-					iQuestion = current.choices[i];	
+					iQuestion = current.choices[i];
 					$inputsSpot.find(".chtwzrd-choices").append('<li><label><input type="' + current.input + '" value="' + iQuestion.queryParam + '" name="' + current.queryName + '" data-chtwzrd-next="' + iQuestion.next + '"' + (typeof iQuestion.url === "undefined" ? '' : 'data-chtwzrd-url="' + iQuestion.url + '"') + ' /> <span>' + iQuestion.content + '</span></label></li>');
 				}
 				if($(".chtwzrd-reply").outerHeight() > ($chtwzrdConvo.innerHeight() - $(".chtwzrd-question:last")[0].scrollHeight)) {

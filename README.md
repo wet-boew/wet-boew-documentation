@@ -1,4 +1,4 @@
 wet-boew-documentation
 ======================
 
-Documentation for the Web Experience Toolkit (WET) 
+Documentation for Web Experience Toolkit (WET)

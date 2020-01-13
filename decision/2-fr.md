@@ -1,10 +1,11 @@
 ---
 published: true
 layout: default-theme-wet-boew-fr
-filename_en: 2
 title: Décision sur la conception 2 – Navigateurs compatibles
 description: State list of browser that are supported by WET as v4.0.28
-modified: 2018-04-18
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-01-13
 ---
 
 ## Sommaire
@@ -25,10 +26,10 @@ L’information sur les navigateurs compatibles n’a pas été clairement diffu
 
 ## Recommandation
 
-* Soutenir les versions actuelles et antérieures des navigateurs suivants : 
+* Soutenir les versions actuelles et antérieures des navigateurs suivants :
 	* Chrome
 	* Firefox
-* Soutenir la version la plus récente des navigateurs suivants : 
+* Soutenir la version la plus récente des navigateurs suivants :
 	* Firefox ESR (Version de soutien élargi)
 	* Edge
 * Soutenir les navigateurs ayant plus de 5 % de visites, conformément aux statistiques Web pour Canada.ca.

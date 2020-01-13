@@ -3,7 +3,9 @@ published: true
 layout: default-theme-wet-boew-en
 title: 2019-19 - wb5 Moving forward
 description: wb5 Moving forward
-modified: 2019-09-10
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-01-13
 ---
 
 This page is log summary of technical discussion during WET meeting (Codesprint, Tech review, Roadmap meeting) and to track other idea and other work in progress notes relatively to the WB5 project.
@@ -24,7 +26,7 @@ Mario spin out a barebone project structure/mechanics during the code sprint.
 
 A **plugin** is :
 * Template HTML markup
-* Visual - Wireframe, visual snapshot 
+* Visual - Wireframe, visual snapshot
 * Style - CSS or SASS or Less instruction to support the visual and template
 * Data - Instance of the plugin information and schema definition
 * Logic - Function that would transform the data and execute user interaction.
@@ -37,4 +39,3 @@ A **plugin** is :
 
 * Rename "handle" by "init"
 * Change the init.js by the plugin name, it will easier in the debug console to see from what file the log is coming.
-

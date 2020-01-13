@@ -1,10 +1,11 @@
 ---
 published: true
 layout: default-theme-wet-boew-fr
-filename_en: 4
 title: Décision sur la conception 4 – Mode HTML de base et l’amélioration progressive
 description: Talk about basic HTML
-modified: 2019-08-21
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-01-13
 ---
 
 ## Sommaire

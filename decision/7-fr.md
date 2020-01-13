@@ -1,10 +1,11 @@
 ---
 published: true
 layout: default-theme-wet-boew-fr
-filename_en: 7
 title: Décision sur la conception 7 – Décision sur les fonctionnalités expérimentales
 description: Defining a strategy to integrate experimental features on the WET
-modified: 2019-09-20
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-01-13
 ---
 
 ## Sommaire

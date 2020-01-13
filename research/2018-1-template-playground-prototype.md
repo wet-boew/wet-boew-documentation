@@ -3,11 +3,12 @@ published: true
 layout: default-theme-wet-boew-en
 title: Template playground prototype - Datalist JSON suggestion - Research and finding
 description: Playground to test the template system in the combobox plugin
-modified: 2018-06-20
-
-script_pgbttm_src: //wet-boew.github.io/themes-dist/GCWeb/GCWeb/js/theme.min.js
-script_pgbttm2_src: 2018-assets/2018-1-combobox4-with-playground.js
-script_pgbttm3_src: 2018-assets/2018-1-combobox-fieldflow.js
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-01-13
+script_src: //wet-boew.github.io/themes-dist/GCWeb/GCWeb/js/theme.min.js
+script_src2: 2018-assets/2018-1-combobox4-with-playground.js
+script_src3: 2018-assets/2018-1-combobox-fieldflow.js
 ---
 
 {::nomarkdown}

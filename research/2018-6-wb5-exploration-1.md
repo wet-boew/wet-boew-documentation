@@ -3,14 +3,16 @@ published: true
 layout: default-theme-wet-boew-en
 title: WET 5 - Exploration 1
 description: Exploration 1 - Headless framework, component interaction driven from markup, data first design
-modified: 2018-07-27
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-01-13
 ---
 
 The current exploratory direction for WET 5 is that of a **data-first design**. This design philosophy focuses on the key data of a page first, and the presentation of that data second. With data defined first, different HTML/CSS structures and themes may be applied for different platforms.
 
 There are currently two parts to the WET 5 research : a headless framework, and component interation driven from markup (coined LDD).
 
-[Link to latest prototype (as 2018-07-27)](#combined-prototype-1) 
+[Link to latest prototype (as 2018-07-27)](#combined-prototype-1)
 
 ## Resources
 
@@ -98,20 +100,20 @@ This code implements a timer module that periodically adds to the text.
 * Wet  Next
 */
 (function( dom , win ){
- 
+
                 var Inventory = {
                         timer : function( node, selectors, options ) { node.innerHTML = node.innerHTML + " ( OK TIMER )"; }
                 }
-       
+
                 var wb5 = dom.querySelectorAll('[data-wb5]');
- 
+
                 for (var i = wb5.length - 1; i >= 0; i--) {
                         var elm = wb5[i],
                                 params = elm.getAttribute('data-wb5').split('@');
- 
+
                         Inventory[ params.shift() ]( elm, params );
                 }
- 
+
 })( document, window)
 ```
 
@@ -202,7 +204,7 @@ The following prototypes seek to combine the work on the Headless Framework and 
 
 Published on: 2018-07-27
 
-This version combines Headless V2.1 and Component V4. The carousel is loaded in with AJAX, then made functional by the RequireJS modules. 
+This version combines Headless V2.1 and Component V4. The carousel is loaded in with AJAX, then made functional by the RequireJS modules.
 A **readme** file is included, containing basic explanations of each file.
 
 * [Working Example](2018-assets/6-combined-v1/clerk-wet.html)

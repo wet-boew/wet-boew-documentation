@@ -3,7 +3,9 @@ published: true
 layout: default-theme-wet-boew-en
 title: 2018-14 - WET 5 Summary
 description: Summary of the WET5 project
-modified: 2018-11-30
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-01-13
 ---
 
 Summary of the WET5 project. Questions or comments can be share by [opening new issue](https://github.com/wet-boew/wet-boew/issues/new).
@@ -44,7 +46,7 @@ Summary of the WET5 project. Questions or comments can be share by [opening new 
 ### That means
 
 * Easier and quicker for the web publisher to update an UI based on UX research or on business needs.
-* Less noticeable technical debt compared to Component Development Design approach 
+* Less noticeable technical debt compared to Component Development Design approach
 * More templates and documentation will be provided to create UI which conform with web accessibility standards.
 * Not following an approved template or deliberately modifying an existing one means:
 	* Increase web publisher responsibility for publishing web content that meet web accessibility standards
@@ -66,7 +68,7 @@ Prototype update
 
 [Keyboard navigation module](2018-assets/2018-11-prototype/stacks/docs/nav-demo-v2.html)
 
-### October 4 
+### October 4
 
 Informal discussion of what is the advantages and disadvantages about current design approach of WET5
 
@@ -100,7 +102,7 @@ Here a list of the item, determining if it is advantage or a disadvantage are op
 * WET 5 will contains a few automated tools to assis the web author during the WCAG confomance check.
 * Will be no markup mutation, like dual mode like basic HTML and standard we have in WET4 won't exits in WET 5.
 * Doign custom javascript coding wont be required, the gear will replace it.
-* WET 5 is binded on the final web interface, a markup which include any code enhancement, like ARIA. 
+* WET 5 is binded on the final web interface, a markup which include any code enhancement, like ARIA.
 
 ### as September 28
 

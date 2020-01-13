@@ -1,10 +1,11 @@
 ---
 published: true
 layout: default-theme-wet-boew-fr
-filename_en: 1
 title: Décision sur la conception 1 – Utiliser des éléments img pour charger des images SVG plutôt que des éléments object
 description: How to use SVG in a web page
-modified: 2018-04-19
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-01-13
 ---
 
 Comment utiliser l’image SVG dans une page Web.
@@ -85,11 +86,11 @@ Le valideur/valideur#422 a été résolu. L’une des validations qui l’ont co
 
 D’après mes observations, validatorBehaviour s’harmonise avec la spécification HTML des W3C (en anglais) :
 
-* Extrait de la section Tabindex des spécifications : 
+* Extrait de la section Tabindex des spécifications :
   * "Un élément ayant l’attribut tabindex spécifié est le contenu interactif."
-* Extrait de la section Contenu interactif des spécifications : 
+* Extrait de la section Contenu interactif des spécifications :
   * "L’attribut tabindex peut également faire que tout élément soit du contenu interactif."
-* Extrait de la section Modèle du contenu pour l’élément a des spécifications : 
+* Extrait de la section Modèle du contenu pour l’élément a des spécifications :
   * "Modèle de contenu : Transparent, mais il ne doit y avoir aucun contenu interactif ou descendant d’éléments [](https://w3c.github.io/html/textlevel-semantics.html#elementdef-a)."
 
 Donc, qu’est-ce que le rapport avec la BOEW? Il s’avère que la plupart des thèmes de BOEW 4.0 utilisent des logos de site SVG qui sont structurés en tant que liens contenant un élément <object> ayant un attribut tabindex="-1". En d’autres mots, la BOEW niche du contenu interactif (<object tabindex="-1">) au sein d’autre contenu interactif (<a>), ce qui va à l’encontre de la spécification HTML.

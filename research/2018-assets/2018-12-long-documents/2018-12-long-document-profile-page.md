@@ -1,10 +1,11 @@
 ---
 published: true
 layout: default-theme-wet-boew-en
-filename_fr:
 title: Research and finding - Web Experience Toolkit (WET) documentation
 description: Guide intended to familiarize Microsoft Word users to functions that help in creating long docuem
-modified: 2018-10-16
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-01-13
 ---
 
 # Profile page of Long document guide

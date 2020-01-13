@@ -1,10 +1,11 @@
 ---
 published: true
 layout: default-theme-wet-boew-fr
-filename_en: 3
 title: Décision sur la conception 3 – API/Plan de la BOEW
 description: Defining the WET API and blueprint in order apply semantic versionning
-modified: 2018-05-17
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-01-13
 ---
 
 ## Sommaire

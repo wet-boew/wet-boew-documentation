@@ -3,7 +3,9 @@ published: true
 layout: default-theme-wet-boew-en
 title: 2018-7 - Checkbox filtering
 description: Developper notes on adding a checkbox filtering capability in WET
-modified: 2018-08-17
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-01-13
 ---
 
 Developper notes on adding a checkbox filtering capability in WET
@@ -76,7 +78,7 @@ Content design to support exclusive filter
 * It is up to the author to design the content being compatible with exclusive filter
 * A page can have more than one exclusive filter.
 * Multiple exclusive filter might collide.
-* Content displayed after each exclusive state and each collision are applied need to be conform to WCAG 2.0 Level AA. 
+* Content displayed after each exclusive state and each collision are applied need to be conform to WCAG 2.0 Level AA.
 * Exclusive filter impact the page structure, a quick review is to evaluate if the page structure don't skip the displayed heading sequence.
 * It's show the item where the exclusive filter is applied, it show all children, it show parent heading and hide the sibling.
 * Exclusive filter in the same group are treated like "OR" operator.
@@ -96,8 +98,8 @@ Filter behaviour
 * Regular filter "off"
 	* Hide the target element
 * Show heading on hidden section/pieces.
-	* heading in hidden section could contain a CSS class name like ```show-on-filter-out``` to force displaying the heading. 
-	* Behaviour: 
+	* heading in hidden section could contain a CSS class name like ```show-on-filter-out``` to force displaying the heading.
+	* Behaviour:
 		* Opacity is set to ```50%``` which fade out the font color (set on the container)
 		* Font size are forced to be the same as the paragraph size, so ```1em``` (for all children ```*```)
 		* Font weight is forced to normal (for all children ```*```)
@@ -123,10 +125,10 @@ How to make the difference between "Exclusive filter" and "Regular filter"
 
 How to define the initial state of the content and checkbox
 * Regular filter:
-	* **Check** 
+	* **Check**
 		* Default means the content is visible
 		* If it means the content is hidden, then the label must be explicit.
-	* **Uncheck** 
+	* **Uncheck**
 		* Default means the content is hidden
 		* If it means the content is visible, then the label must be explicit.
 * Exclusive filter
@@ -155,7 +157,7 @@ How to do negative filter
 
 ## Relevant reference
 
-Working example: 
+Working example:
 * [Filter WET](http://wet-boew.github.io/wet-boew/demos/filter/filter-en.html)
 * [6. Use open standards and solutions (draft)](https://canada-ca.github.io/digital-playbook-guide-numerique/views-vues/standards-normes/en/6-use-open-standards-solutions.html)
 * [WCAG 2.1 Quick reference](https://www.w3.org/WAI/WCAG21/quickref/)
@@ -174,7 +176,7 @@ Source code:
 
 A initial WET plugin was prototyped for the Digital Playbook on Canada.ca on May 2018.
 
-Example: 
+Example:
 * [6. Use open standards and solutions (draft)](https://canada-ca.github.io/digital-playbook-guide-numerique/views-vues/standards-normes/en/6-use-open-standards-solutions.html)
 * [Same, but replicated locally](2018-7-prototype-1.html)
 
@@ -187,21 +189,21 @@ Functionality overview:
 ### Behaviour
 
 * The filter interface are available through an overlay
-* The content on the page is marked with section/div that use a convention for naming the CSS class name. 
+* The content on the page is marked with section/div that use a convention for naming the CSS class name.
 * The filter UI have 5 section
 * Filter are applied only when the user hit the button "Apply filters"
 * Multiple filter can be set at once.
 * Checkboxes are not checked by default but the initialized content is displayed the same as if all checkboxes was check
 
 Naming convention
-* Allow interoperability between the checked item and show/hide a section. 
-* Theire is an direct association between the id of the checkbox and the CSS class name. 
+* Allow interoperability between the checked item and show/hide a section.
+* Theire is an direct association between the id of the checkbox and the CSS class name.
 * The id of the checkbox would be use as a class name to find each section where to apply the filtering.
-* The naming convention contain dashed to include "grouping" identifier. 
+* The naming convention contain dashed to include "grouping" identifier.
 * The first part is a product identifier without meaning in this context
 * The second parts is the group name
 * The rest represent the local/unique name
-* The last part are use to control "acestor" and "descendent" filtering with exclusive filter. 
+* The last part are use to control "acestor" and "descendent" filtering with exclusive filter.
 
 Filter overlay UI
 * There is 5 visual section
@@ -209,7 +211,7 @@ Filter overlay UI
 * The first section is to show/hide all details/summary on the page. It use the toggle plugin.
 * The second section is to show/hide content regarding to the developement stage. Filtering from this section are not impact in the sample page.
 * The third section represent the hierachical section in this page.
-* The third section contains a groupping (parent/children) checkbox. 
+* The third section contains a groupping (parent/children) checkbox.
 * The forth section contains a exclusive filter, that mean only content that are tagged with that filter is displayed, anything else are hidden.
 * The fifth section contains a checkbox to remember what the user has chosen and a button to apply the filter.
 
@@ -309,13 +311,13 @@ Type of filter
 * Tagging (Checkboxes for main tags, button for all the tags)
 	* When selected, it only show the information that correspond to that filter.
 	* Multiple tags act like an "OR" operator
-	* Heading of hidden section are displayed but styled differently. 
+	* Heading of hidden section are displayed but styled differently.
 		* font-color has changed for a light gray (like CSS class: text-muted)
 		* font-size has been reduced to the same as text (like the same size as a paragraph)
 * Section and Sub-section (Checkboxes)
 	* Show/hide block of content.
 	* When section are going to be hidden, the heading of the hidden section are gray out but they are still displayed.
-		* The heading that are displayed, is the first heading identified by that section. 
+		* The heading that are displayed, is the first heading identified by that section.
 		* The padding of that section are modified
 			* Increased when available
 			* Reduced when unavailable
@@ -331,12 +333,12 @@ Style
 	* When selected, it background is change for an active blue color and a top right check appear on the button
 * Clear tags
 	* When no tags, it state are disabled and strike out
-	* When tag is selected, the strike out is removed. 
+	* When tag is selected, the strike out is removed.
 	* The button start with a "X" icon followed by the text
 * Select all
 	* When all checkbox in the group is selected, it state are disable and strike out
-	* When one of the checkbox in the group is unselected, the strike out is removed. 
-	* Te button start with a "check" mark icon followed by the text 
+	* When one of the checkbox in the group is unselected, the strike out is removed.
+	* Te button start with a "check" mark icon followed by the text
 * "Only" button
 	* It exclusive check his slibling checkboxes, it will uncheck all checkbox from the same group.
 
@@ -380,7 +382,7 @@ Tag filter
 * There are several attribute ```data-count{name}``` like ```data-countvis data-countdev data-contint data-countcon``` which contain a number, it seems to be a counter.
 	* The ```data-count{name}``` seems to be used to filter the tags available for a selected audience.
 * All the tag button are hard coded, but JS is used to hide some of them by showing a button called "Show more".
-* The checkboxes in that section, pre-filter the list of tag. Each checkboxes represent an audience. 
+* The checkboxes in that section, pre-filter the list of tag. Each checkboxes represent an audience.
 * After a tag is selected, the button "Clear tag" is enabled.
 
 
@@ -400,7 +402,7 @@ Tag filter
 			* ``` <article class="filter-levels-a filter-hideversion-" data-tags-* data-versions="2.0 2.1 "```
 		* The class name is a computation of the Field name followed by a dash and then the value. For example: ```<input type="checkbox" name="filter-levels" value="a" checked>```
 			* Field name: filter-levels
-			* Field value: a 
+			* Field value: a
 			* Filter CSS class name: filter-levels-a
 		* This convention are not true for filtering by technology: For example: ```<input type="checkbox" name="filter-technologies" value="html" checked>```
 			* Field name: filter-technologies
@@ -592,7 +594,7 @@ $document.on( "click", "button" + selectorCtrl + ", input:button" + selectorCtrl
 
 	// Get the store
 	var s = store[ controlId ];
-	
+
 
 	// Build the list of filters
 	var filters = [];
@@ -768,7 +770,7 @@ Findings
 	* **Develop a local filter store:** This is to enable applying async filter, query filter and saving filter
 	* **Filter exclusive:** Allow to use a "Only" button where exclusively select one filter in the group
 	* **Filter reverse:** Use the exclamation mark to reverse the default check state of the input.
-* The author can let some pieces force display when the parent container is hidden. 
+* The author can let some pieces force display when the parent container is hidden.
 	* Styled : Opacity set to 50% and font-size forced to be 1em.
 * Exclusive filter only hide the sibling.
 * Exclusive not filter are not supported.
@@ -793,7 +795,7 @@ Content (prep-work)
 Filtering UI
 * The filtering UI are unaware of the current page state. So the default UI state must be put in sync by the web author when creating the page.
 * The filtering UI apply or remove filtering tag.
-* The "value" of the input is used to toggle the state of the "filtered by" tag list. 
+* The "value" of the input is used to toggle the state of the "filtered by" tag list.
 * A checked checkbox have the "on" state, which means the content is visible. The tag are not present in the filtered by tag list.
 * An unchecked checkbox have the "off" state, which means the content is hidden. The tag is added to the filtered by tag list.
 
@@ -963,7 +965,7 @@ $document.on( "click", "input:checkbox" + selectorCtrl, function( event )  {
 	i_len = relatedPotential.length;
 	for( i = 0; i < i_len; i = i + 1 ) {
 		currentElm = relatedPotential[ i ];
-		
+
 		tagList = currentElm.dataset.wb5Tags.split( " " );
 
 		j_len = tagList.length;
@@ -983,7 +985,7 @@ $document.on( "click", "input:checkbox" + selectorCtrl, function( event )  {
 				break;
 			} else if ( ( !state && filterTag === tag ) || ( state && "!" + filterTag === tag ) ) {
 				relatedNot.push( currentElm );
-				break;	
+				break;
 			} else if ( state && "*" + filterTag === tag ) {
 				relatedExclusive.push( currentElm );
 				break;
@@ -1225,7 +1227,7 @@ tag3			{ fTag: "tag3", state: true }    // tag1 AND tag2 AND tag3
 			],
 			[
 tag4			{ fTag: "tag4", state: true }
-			]	
+			]
 		]
 
 
@@ -1409,7 +1411,7 @@ $document.on( "click", "button" + selectorCtrl + ", input:button" + selectorCtrl
 
 	// Get the store
 	var s = store[ controlId ];
-	
+
 	// Get the inputs
 	var inputs = elm.form.elements;
 
@@ -1521,4 +1523,3 @@ wb.add( selector );
 </details>
 {% endraw %}
 {:/}
-

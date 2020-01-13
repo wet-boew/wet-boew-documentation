@@ -1,10 +1,11 @@
 ---
 published: true
 layout: default-theme-wet-boew-fr
-filename_en: 5
 title: Décision sur la conception 5 – Décision sur la migration du répertoire
 description: Defining a strategy for how to migrate the content about WET 4 to another repository
-modified: 2018-11-15
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-01-13
 ---
 
 ## Sommaire

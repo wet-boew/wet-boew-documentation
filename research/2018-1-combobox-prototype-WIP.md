@@ -3,11 +3,12 @@ published: true
 layout: default-theme-wet-boew-en
 title: Combobox prototype WIP (Work in progress) - Datalist JSON suggestion - Research and finding
 description: See the source code for all the notes
-modified: 2018-05-16
-
-script_pgbttm_src: //wet-boew.github.io/themes-dist/GCWeb/GCWeb/js/theme.min.js
-script_pgbttm2_src: 2018-assets/1-datalist-combobox.js
-script_pgbttm3_src: //wet-boew.github.io/themes-dist/GCWeb/wet-boew/js/deps/jsonpointer.js
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-01-13
+script_src: //wet-boew.github.io/themes-dist/GCWeb/GCWeb/js/theme.min.js
+script_src2: 2018-assets/1-datalist-combobox.js
+script_src3: //wet-boew.github.io/themes-dist/GCWeb/wet-boew/js/deps/jsonpointer.js
 ---
 
 Working in progress prototype. See the source code for all the inline informal notes.
@@ -56,7 +57,7 @@ Working in progress prototype. See the source code for all the inline informal n
 
 <div class="wb-frmvld">
               <form action="submited-contact-us-page.html">
-                <div id="test1" class="wb-fieldflow" data-wb-fieldflow='{ "noreqlabel": true, "isoptional": true, "noForm": true, "defaultselectedlabel":"Popular cannabis questions", "renderas":"combobox", 
+                <div id="test1" class="wb-fieldflow" data-wb-fieldflow='{ "noreqlabel": true, "isoptional": true, "noForm": true, "defaultselectedlabel":"Popular cannabis questions", "renderas":"combobox",
 
 
                 "defaultIfNone": { "action": "query", "name": "question" }
@@ -114,7 +115,7 @@ Working in progress prototype. See the source code for all the inline informal n
 	<p role="option" data-wb5-selectvalue="my default value">Default persistent option</p>
 </template>
 -->
-<!-- 
+<!--
 
 {
 	popupId: "Auto generated ID during the plugin initialization to be used by the Popup",
@@ -136,11 +137,11 @@ ex: data-wb5-template="[Slot name].[Modifier (HTML basic, mobile....)]@[ID | URL
 data-wb5-template => Name of the template to use
 
 
-					<li 
-						class="brdr-bttm" 
-						role="option" 
+					<li
+						class="brdr-bttm"
+						role="option"
 						data-wb5-if="data"
-						data-wb5-for="item in data" 
+						data-wb5-for="item in data"
 						data-wb5-on="select@selectValue = item" >{{ item }}</li>
 
 
@@ -162,8 +163,8 @@ data-wb5-template => Name of the template to use
 	8. 	data-wb5-html (innerHTML binding)
 	9. 	data-wb5-model (two way binding for the input and the data)
 
-	Then - Events binding 
-	
+	Then - Events binding
+
 	9.	data-wb5-on
 	10.	data-wb5-once
 
@@ -188,10 +189,10 @@ data-wb5-template => Name of the template to use
 		<div data-wb5-bind="id@popupId" role="listbox" class="hidden">
 			<template data-slot-elm="" data-wb5-template="sub-template-listbox">
 				<ul class="list-unstyled">
-					<li 
-						class="brdr-bttm" 
-						role="option" 
-						data-wb5-for="option in options" 
+					<li
+						class="brdr-bttm"
+						role="option"
+						data-wb5-for="option in options"
 						data-wb5-if="!parent.filter.length || option.value.indexOf(parent.filter) !== -1"
 						data-wb5-on="select@select(option.value); live@parent.nbdispItem(wb-nbNode)" >{{ option.textContent }}</li>
 				</ul>
@@ -201,7 +202,7 @@ data-wb5-template => Name of the template to use
 	</div>
 </template>
 
-<!-- 
+<!--
 	The hook for the input@focus is already setup by the plugin
 
 -->
@@ -212,15 +213,15 @@ data-wb5-template => Name of the template to use
 VueJS template equivalent
 
 <div class="combobox-wrapper">
-	<div 
-		role="combobox" 
-		aria-expanded="false" 
+	<div
+		role="combobox"
+		aria-expanded="false"
 		aria-haspopup="listbox"
 		v-bind:aria-owns="popupId"
 		v-bind:data-source-elm="sourceElmId">		
-		<input 
-			autocomplete="off" 
-			data-rule-fromListbox="true" 
+		<input
+			autocomplete="off"
+			data-rule-fromListbox="true"
 			v-bind:id="src.id"
 			v-bind:aria-controls="popupId"
 			v-bind:name="src.name"
@@ -229,12 +230,12 @@ VueJS template equivalent
 	</div>
 	<div
 		v-bind:id="popupId"
-		role="listbox" 
+		role="listbox"
 		class="hidden">
 		<div data-slot-elm="sub-template-listbox">
 			<ul class="list-unstyled">
-				<li 
-					class="brdr-bttm" 
+				<li
+					class="brdr-bttm"
 					role="option"
 					v-if="src.tagName === 'SELECT'"
 					v-for="option in src.options"
@@ -273,7 +274,7 @@ VueJS template equivalent
 			</div>
 			<!--
 				We are not using a template because the semantic of the <slot> element fit the purpose here.
-				
+
 				<slot> element is a placeholder element that are going to be replaced but can contains a default if it didn't.
 
 				<template id="sub-template-listbox"></template>
@@ -283,7 +284,7 @@ VueJS template equivalent
 </template>
 <!--
 Need to be set on the "combobox"
-  data-wb-fieldflow-origin="{{option.dataset.wbFieldFlowOrigin}}" data-wb-fieldflow-source="{{option.dataset.wbFieldFlowSource}}" 
+  data-wb-fieldflow-origin="{{option.dataset.wbFieldFlowOrigin}}" data-wb-fieldflow-source="{{option.dataset.wbFieldFlowSource}}"
 -->
 <template id="tmpl-fieldflow">
 	<ul class="list-unstyled">
@@ -365,7 +366,7 @@ var parserFieldflowUI = function( elm, dataObj ) {
 		for( i = 0; i < i_len; i ++ ) {
 			i_cache = options[ i ];
 
-			dataObj.data.options.push( 
+			dataObj.data.options.push(
 				{
 					value: i_cache.value,
 					textContent: i_cache.textContent
@@ -384,7 +385,7 @@ $doc.on( "combobox.createctrl.wb-fieldflow", ".wb-fieldflow", function( event, d
 
 	console.log( data );
 	console.log( event );
-	
+
 	localData = data;
 	if ( !window[ "wb-combobox" ]) {
 		window[ "wb-combobox" ] = {};
@@ -405,8 +406,8 @@ $doc.on( "combobox.createctrl.wb-fieldflow", ".wb-fieldflow", function( event, d
 /*
 	// If it is not "datalist", then enhance select after
 	$( event.target ).trigger( "select.createctrl.wb-fieldflow", data );
-	
-	
+
+
 	var select = document.getElementById( data.outputctnrid ).getElementsByTagName( "select" )[ 0 ];
 	// Remove the empty option
 	var emptyOption = select.querySelector( "[value='']" );
@@ -416,9 +417,9 @@ $doc.on( "combobox.createctrl.wb-fieldflow", ".wb-fieldflow", function( event, d
 	$( select ).trigger( "wb-init.wb-combobox" );
 	// Get the generated combobox and add the CSS class wb-fieldflow-init
 	// Monitor on "Change" and trigger "fieldflow on change event"
-	
+
 */
-	
+
 });
 $doc.on( "wb.change", "[role=combobox]:not(.wb-fieldflow-init)", function( event, data ) {
 	console.log( "-- Change event on combobox" );
@@ -467,7 +468,7 @@ $doc.on( "wb.change", "[role=combobox]:not(.wb-fieldflow-init)", function( event
 	for( var i = 0; i < actions.length ; i ++ ) {
 		var i_cache = actions[ i ];
 
-		
+
 
 		var eventNameToBeTrigger = i_cache.action + ".action.wb-fieldflow"
 		// "redir.action.wb-fieldflow"
@@ -479,7 +480,7 @@ $doc.on( "wb.change", "[role=combobox]:not(.wb-fieldflow-init)", function( event
 	}
 
 /*
-	$elm.addClass( "wb-fieldflow-init" ); // add crtlSelectClass 
+	$elm.addClass( "wb-fieldflow-init" ); // add crtlSelectClass
 
 	$elm.attr( "data-wb-fieldflow-source", sourceID ) // If defined by "data.source"
 	$elm.attr( "data-wb-fieldflow-origin", originID )
@@ -493,7 +494,7 @@ $doc.on( "wb.change", "[role=combobox]:not(.wb-fieldflow-init)", function( event
 	// $elm.trigger( "change" );
 
 	$elm.removeClass( "wb-fieldflow-init" );
-	
+
 */
 
 	// Try to call the action

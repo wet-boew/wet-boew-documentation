@@ -1,10 +1,9 @@
 ---
 published: true
 layout: default-theme-wet-boew-en
-filename_fr: index-fr
-title: Projects - Web Experience Toolkit (WET) documentation
-description: List of projects related to WET.
-modified: 2019-12-20
+title: Projects
+hide_breadcrumb: false
+date_modified: 2020-01-13
 ---
 
 {::nomarkdown}
@@ -94,12 +93,12 @@ $(document).on('scroll', function(){
 $(window).resize(function(){
   // On resize, both Max/Value attr needs to be calculated
   progressBar.attr({ max: getMax(), value: getValue() });
-}); 
+});
 
 } else {
 
-var progressBar = $('.progress-bar'), 
-	max = getMax(), 
+var progressBar = $('.progress-bar'),
+	max = getMax(),
 	value, width;
 
 var getWidth = function() {
@@ -135,13 +134,13 @@ This is track the development of provisonal feature to support new beta design p
 * Renewed template that visually better support a group a pages that relate to the same task.
 * **Last updated:** December 20, 2019
 * **Project Lead:** Chad Farquharson, CRA; Christopher Oakes, CRA
-* **Current status:** Reviewing and addressing each accessibility concern and each design ambuiguity 
+* **Current status:** Reviewing and addressing each accessibility concern and each design ambuiguity
 * **Github discussion/issue:**
 	* [GCWeb issue #1627](https://github.com/wet-boew/GCWeb/issues/1627)
 * **History:**
 	* (2019-12-18) Project lead is getting organized to address all the concern
 	* (2019-12) The review was forward to the project lead to address each concern.
-	* (2019-11) Principal publish and the web accessibility working group has done a quick accessibility review 
+	* (2019-11) Principal publish and the web accessibility working group has done a quick accessibility review
 	* (2019-10) Contacted Prinicpal Publisher to know the process of getting the CSS requirement for that new design available in Canada.ca
 	* (2019-08) Create a prototype with the refresh design pattern
 
@@ -184,14 +183,14 @@ Updated: 2019-12-18
 	* (2019-09-20) Test of WCAG 2.1 has started and documented in the [wet-boew root project #1](https://github.com/orgs/wet-boew/projects/1)
 	* (2018-08-24) Menu - Fixed the keyboard behviour of submenu (details/summary)
 	* (2018-07-26) Created a github project to triage accessibility related issue - [https://github.com/wet-boew/wet-boew/projects/2](https://github.com/wet-boew/wet-boew/projects/2)
-	* (2018-06-20) Tested a few issue reproducibility, fixed #8400 (Tabs on Google Chrome) 
+	* (2018-06-20) Tested a few issue reproducibility, fixed #8400 (Tabs on Google Chrome)
 	* (2018-05-17) WIP: #552 (Mobile checklist) and #8238 (Validation error in Mobile menu)
 	* (2018-04-10) PR submited for pie chart labeling
 	* (2018-03-14) On going - review github issues and fixing current open issue.
 	* (2018-02-13) Validation of issue labelled "Work: Accessibility" which are open and the closed ones with the label "State: Going Stale".
 
 <!--
-#### WET4 conformance to WCAG 2.1 
+#### WET4 conformance to WCAG 2.1
 * Review all WET4 feature and evaluate and make them compliant to WCAG 2.1
 * **Project lead:** TBD
 * **Status:** Defining and planning the project
@@ -209,7 +208,7 @@ Updated: 2019-12-18
 	* (2019-12-19) Working on developing a functional prototype
 
 ### Flat checkboxes and radio button for Canada.ca theme
-* Provide a better UX experience for people navigating content with fieldflow. 
+* Provide a better UX experience for people navigating content with fieldflow.
 * **Project lead:** David Elisma (DTO) -Patrick Lajeunesse (DTO)-
 * **Status:** Project has split in smaller pieces, Apply explicit label-input pattern in wet-boew, Apply flat checkbox style, Apply change to fieldflow plugin to use the new explicit label-input pattern
 * **Last updated:** December 18, 2019
@@ -254,7 +253,7 @@ Convert a form into a chat like interaction. The supporting use case is for GCWe
 	* (2019-06-20) Functionality planned to be released with GCWeb 5.2
 	* (2019-05-16) Status update
 	* (2019-04-25) Plugin stable, upcoming integration into wet-boew
-	* (2019-03-21) Functional high fidelity prototype and it's now ready to start the integration into wet-boew. 
+	* (2019-03-21) Functional high fidelity prototype and it's now ready to start the integration into wet-boew.
 	* (2019-02-20) Project status update (stable prototype)
 	* (2019-01-21) Initiated research 2019-15 - Exploration of a chat like design pattern
 
@@ -275,10 +274,10 @@ This component provides the ability to break a form into steps. To be use when W
 
 ### jQuery 3 Migration
 
-We’re upgrading jQuery from version 2.2.4 to 3.3.1. Version 2.x is no longer supported, nor is it receiving any security patches or bug fixes. The idea is to release a beta version first for groups to test with, and then a full version shortly thereafter. 
+We’re upgrading jQuery from version 2.2.4 to 3.3.1. Version 2.x is no longer supported, nor is it receiving any security patches or bug fixes. The idea is to release a beta version first for groups to test with, and then a full version shortly thereafter.
 
 * **Project lead:** Neil Mispelaar
-* **Current status:** Did an initial scan of all the wet-boew code. Testing each working example and quickly reviewing the JS of each plugin. 
+* **Current status:** Did an initial scan of all the wet-boew code. Testing each working example and quickly reviewing the JS of each plugin.
 * **Documentation:** [https://wet-boew.github.io/wet-boew-documentation/research/2019-16-jquery-3-migration.html](https://wet-boew.github.io/wet-boew-documentation/research/2019-16-jquery-3-migration.html)
 * **Last update:** May 16, 2019
 * **History:**
@@ -286,7 +285,7 @@ We’re upgrading jQuery from version 2.2.4 to 3.3.1. Version 2.x is no longer s
 	* (2019-05-16)
 		* We will create a separate package of WET-BOEW and GCWEb with jQuery 3 for testing
 		* There is some jQuery 3 error for flot third party, we will maintain our own copy of it
-		* The download will be available in the download page as an experimental kind of package. 
+		* The download will be available in the download page as an experimental kind of package.
 	* (2019-04-25) Project on hold
 	* (2019-02-21) Did an initial scan of all the wet-boew code. Testing each working example and quickly reviewing the JS of each plugin.
 	* (2019-02-01) Initiate research 2019-16 - jQuery 3 migration
@@ -323,7 +322,7 @@ Design system to standardize the visual language and user experience of our digi
 * **Current project phase:** Unknow
 * **Deliverable:** Prototype downloadable in photoshop, Illustrator and Adobe XD files. And eventually the corresponding HTML code conforming to WCAG 2.0/2.1 Level AA.
 * **Notes:** That design system might replace the wet-boew style guide.
-* **Project homepage:** 
+* **Project homepage:**
 	* [Aurora](https://design.gccollab.ca/#!)
 	* [#GCDigital Design System](https://gctools-outilsgc.gitbooks.io/-gcdigital-design-system/content/)
 * **History:**
@@ -382,7 +381,7 @@ Simulate a datalist that work uniformly through browser implementation and conta
 	* [2018-06-21 - Template playground prototype - Render UI by using the combobox templating system](research/2018-1-template-playground-prototype.html)
 * **History:**
 	* (2018-08-24) Currently stale
-	* (2018-07-26) Still experimental, started to create independant set of working example pages. 
+	* (2018-07-26) Still experimental, started to create independant set of working example pages.
 	* (2018-06-20) Experimental stable plugin was released on Canada.ca. It support the conversion from a select to a combo box and added combo box render for fieldflow. Next is to create the docs and various working example. There is also a template playground which render a template from a JS object.
 	* (2018-05-17) Prototype fully working as expected, now it's code cleanup and optimisation
 	* (2018-04-18) Prototype working but a few improvement need to be done, see developer note and UX early testing note
@@ -563,7 +562,7 @@ Chalenges:
 * Do we put option A inside a details summary, then when JS kick in we remove that details summary and show what-ever option for the user.
 
 Next step:
-* Define what is that basic interface 
+* Define what is that basic interface
 * What UX we want to provide before it gets progressive enhanced to whatever option.
 
 ## Completed

@@ -3,7 +3,9 @@ published: false
 layout: default-theme-wet-boew-en
 title: Template for expert report
 description: Template to report and made recommendation
-modified: 2018-02-12
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-01-13
 ---
 
 
@@ -11,7 +13,7 @@ h1. Name of the report
 
 h2. Summary
 
-Report number: {{ Number }} 
+Report number: {{ Number }}
 Author: {{Full Name}}
 Approved: Pending | Yes on xx-xxx-xxxx | obselete by:
 
@@ -24,7 +26,7 @@ ex: Design system, general web content, WET feature XXX, a combinaison of things
 
 h2. Issue
 
-Description of why it is an issue. 
+Description of why it is an issue.
 
 
 h2. Recommendation
@@ -42,7 +44,7 @@ If applicable, how use can fix their bad code
 
 h2. Test
 
-Status of the test: 
+Status of the test:
 
 h3. [Test name - Type ex: Screen reader]
 
@@ -124,7 +126,7 @@ Template when I worked on it
 			<p>{ title }</p>
 
 			{Optional: Date and feature type}
-				
+
 				{Case: A date and a feature type}
 					<p class="small"><time>{ datetime }</time> - { type }</p>
 				{/Case}
@@ -137,11 +139,11 @@ Template when I worked on it
 					<p class="small">{ type }</p>
 				{/Case}
 
-			{/Optional}	
+			{/Optional}
 
 			{Optional: Date and feature type}
 				<p>{ description }</p>
-			{/Optional}	
+			{/Optional}
 
 		</figcaption>
 	</figure>

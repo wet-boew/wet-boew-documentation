@@ -3,7 +3,9 @@ published: true
 layout: default-theme-wet-boew-en
 title: 2018-2 - Browser usage and platform - Web Experience Toolkit (WET) documentation
 description: Top used browser and platform statistic.
-modified: 2018-03-23
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-01-13
 ---
 
 ## Purpose

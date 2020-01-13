@@ -3,11 +3,12 @@ published: true
 layout: default-theme-wet-boew-en
 title: Combobox prototype 10 with fieldflow and convert select - Datalist JSON suggestion - Research and finding
 description: Fieldflow rendering a combobox and transfroming select into combobox
-modified: 2018-05-28
-
-script_pgbttm_src: //wet-boew.github.io/themes-dist/GCWeb/GCWeb/js/theme.min.js
-script_pgbttm2_src: 2018-assets/2018-1-combobox4.js
-script_pgbttm3_src: 2018-assets/2018-1-combobox-fieldflow.js
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-01-13
+script_src: //wet-boew.github.io/themes-dist/GCWeb/GCWeb/js/theme.min.js
+script_src2: 2018-assets/2018-1-combobox4.js
+script_src3: 2018-assets/2018-1-combobox-fieldflow.js
 ---
 
 Fieldflow rendering a combobox and transfroming select into combobox.
@@ -64,7 +65,7 @@ This prototype include :
 	border: 1px solid transparent;
 }
 [role=option]:last-child {
-	
+
 }
 /* Have the input and the overlay together */
 .combobox-wrapper {
@@ -110,10 +111,10 @@ This prototype include :
 			<template data-slot-elm="" data-wb5-template="sub-template-listbox">
 				<p>Showing :-) <span data-wb5-text="options.wbActive">0</span> of <span data-wb5-text="options.wbLen">0</span> </p>
 				<ul class="list-unstyled">
-					<li 
-						class="brdr-bttm" 
-						role="option" 
-						data-wb5-for="option in options" 
+					<li
+						class="brdr-bttm"
+						role="option"
+						data-wb5-for="option in options"
 						data-wb5-if="!parent.filter.length || parent.config.compareLowerCase(option.value,parent.filter) || parent.config.similarText(option.value,parent.filter,'75')"
 						data-wb5-on="select@select(option.value); live@parent.nbdispItem(wb-nbNode)" >{{ option.textContent }}</li>
 				</ul>
@@ -162,10 +163,10 @@ This prototype include :
 		<div data-wb5-bind="id@popupId" role="listbox" class="hidden">
 			<template data-slot-elm="" data-wb5-template="sub-template-listbox">
 				<ul class="list-unstyled mrgn-bttm-0">
-					<li 
-						class="brdr-bttm" 
-						role="option" 
-						data-wb5-for="option in wbLoad" 
+					<li
+						class="brdr-bttm"
+						role="option"
+						data-wb5-for="option in wbLoad"
 						data-wb5-if="!parent.filter.length || parent.config.compareLowerCase(option,parent.filter)"
 						data-wb5-on="select@select(option); live@parent.nbdispItem(wb-nbNode)" >{{ option }}</li>
 				</ul>
@@ -215,7 +216,7 @@ This prototype include :
 	border: 1px solid transparent;
 }
 [role=option]:last-child {
-	
+
 }
 /* Have the input and the overlay together */
 .combobox-wrapper {
@@ -261,10 +262,10 @@ This prototype include :
 			&lt;template data-slot-elm="" data-wb5-template="sub-template-listbox"&gt;
 				&lt;p&gt;Showing :-) &lt;span data-wb5-text="options.wbActive"&gt;0&lt;/span&gt; of &lt;span data-wb5-text="options.wbLen"&gt;0&lt;/span&gt; &lt;/p&gt;
 				&lt;ul class="list-unstyled"&gt;
-					&lt;li 
-						class="brdr-bttm" 
-						role="option" 
-						data-wb5-for="option in options" 
+					&lt;li
+						class="brdr-bttm"
+						role="option"
+						data-wb5-for="option in options"
 						data-wb5-if="!parent.filter.length || parent.config.compareLowerCase(option.value,parent.filter) || parent.config.similarText(option.value,parent.filter,'75')"
 						data-wb5-on="select@select(option.value); live@parent.nbdispItem(wb-nbNode)" &gt;{{ option.textContent }}&lt;/li&gt;
 				&lt;/ul&gt;
@@ -313,10 +314,10 @@ This prototype include :
 		&lt;div data-wb5-bind="id@popupId" role="listbox" class="hidden"&gt;
 			&lt;template data-slot-elm="" data-wb5-template="sub-template-listbox"&gt;
 				&lt;ul class="list-unstyled mrgn-bttm-0"&gt;
-					&lt;li 
-						class="brdr-bttm" 
-						role="option" 
-						data-wb5-for="option in wbLoad" 
+					&lt;li
+						class="brdr-bttm"
+						role="option"
+						data-wb5-for="option in wbLoad"
 						data-wb5-if="!parent.filter.length || parent.config.compareLowerCase(option,parent.filter)"
 						data-wb5-on="select@select(option); live@parent.nbdispItem(wb-nbNode)" &gt;{{ option }}&lt;/li&gt;
 				&lt;/ul&gt;
@@ -331,7 +332,7 @@ This prototype include :
 // Function to compare the distance between two word.
 function matchDistance( s1, s2 ) {
 	var arr = [];
-	
+
 	for ( var i = 0; i <= s1.length; i++ ) {
 		var lastValue = i;
 
@@ -354,22 +355,22 @@ function matchDistance( s1, s2 ) {
 			arr[ s2.length ] = lastValue;
 		}
 	}
-	return arr[ s2.length ];	
+	return arr[ s2.length ];
 }
 
 function similartextCheck( s1, s2 ) {
 
 	s1 = s1.replace( /[\-\/]|_/g, " " ).replace( /[^\w\s]|_/g, "" ).trim().toLowerCase();
 	s2 = s2.replace( /[\-\/]|_/g, " " ).replace( /[^\w\s]|_/g, "" ).trim().toLowerCase();
-	
+
 	var arrShorter = s1.split( " " ),
 		arrLonger  = s2.split( " " );
 
 	if ( s1.length > s2.length ) {
 		arrShorter = s2.split( " " );		
 		arrLonger  = s1.split( " " );
-	}	
-	
+	}
+
 
 	if ( !arrLonger.length || !arrShorter.length ) {
 		return 100;
@@ -379,21 +380,21 @@ function similartextCheck( s1, s2 ) {
 		maxChars = 0,
 		longer = "",
 		shorter = "";
-	
+
 	for ( var i = 0; i < arrShorter.length; i++ ) {				
 		var bestMatch = 0,
 			fullLength = 0,
 			fullMatch = false;
 
 		for ( var j=0; j < arrLonger.length; j++ ) {			
-			
+
 			shorter = arrShorter[ i ];
 			longer = arrLonger[ j ];
-		
+
 			if( longer.indexOf( shorter ) >= 0 ) {
 
-				var currentMatch = longer.length;	
-				
+				var currentMatch = longer.length;
+
 				if ( ( !fullMatch ) || ( currentMatch < bestMatch ) ) {
 					bestMatch = longer.length;
 					fullLength = longer.length;
@@ -402,7 +403,7 @@ function similartextCheck( s1, s2 ) {
 			}
 			else if( !fullMatch ) {
 				currentMatch = longer.length - matchDistance( shorter, longer );
-						
+
 				if( currentMatch > bestMatch ) {
 					bestMatch  = currentMatch;
 					fullLength = longer.length;

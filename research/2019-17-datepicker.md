@@ -3,7 +3,9 @@ published: true
 layout: default-theme-wet-boew-en
 title: 2019-16 - Réctification du comportement du input[type=date]
 description: Exploration of a jQuery 3 migration
-modified: 2019-07-19
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-01-13
 ---
 
 ## Project Description
@@ -14,16 +16,16 @@ Permettre au plugin polyfill Datepicker d'être appliqué sur des ```input[type=
 ## Problème
 
 Comme nous le savons déjà, le but d'un polifyll est d'être appliqué lorsqu'un navigateur n'offre pas de solution par défaut.
-Par exemple, dans IE, il n’y a pas de DatePicker offert. Donc pour compenser, le DatePicker WET comble le manque.  Pour ce qui est de Firefox, il y en a déjà un donc nous n’avons pas besoin du Polyfill. 
+Par exemple, dans IE, il n’y a pas de DatePicker offert. Donc pour compenser, le DatePicker WET comble le manque.  Pour ce qui est de Firefox, il y en a déjà un donc nous n’avons pas besoin du Polyfill.
 Mise à part le navigateur Edge. Celui-ci nous force à utiliser l’interface que plusieurs trouvent non-intuitive avec la souris ou les flèche du clavier. Il n’y aucune façon de taper la date manuellement avec le pavé numérique.
 
 
 ### Étape pour répéter le problème
-Dans une page web standard, veuillez mettre une champ ```input[type=date]``` et visualiser la page avec le navigateur Microsoft Edge. Vous allez voir apparaitre le DatePicker par défaut du navigateur. 
+Dans une page web standard, veuillez mettre une champ ```input[type=date]``` et visualiser la page avec le navigateur Microsoft Edge. Vous allez voir apparaitre le DatePicker par défaut du navigateur.
 
 ## Comportement
 
-Bien que ce Datepicker respecte tous les standards d'accessibilités, celui-ci n'est pas aussi intuitif que nous en sommes habitué. 
+Bien que ce Datepicker respecte tous les standards d'accessibilités, celui-ci n'est pas aussi intuitif que nous en sommes habitué.
 * Nous sommes obligé de l'utiliser avec la souris ou bien les flèches du clavier.
 * Il n'y a aucune facon de tapper une date manuellement avec les touches numériques.
 
@@ -48,7 +50,7 @@ Donc dépendant, du besoin, nous aimerions pouvoir offrir une meilleur expérien
 Ou bien permettre à l'utilisateur de pouvoir copier coller des dates dans les formulaires.
 
 ## Questionnements
-Bien que ce raisonnement va un peu à l’encontre du concept de « polyfill », il y a des questions à se poser. 
+Bien que ce raisonnement va un peu à l’encontre du concept de « polyfill », il y a des questions à se poser.
 C’est pour cette raison que j’ai vu des gens utiliser des DatePicker 3rd Party. Tel que Bootstrap DatePicker. Le problème avec ceux-ci est qu’il ne respecte pas toujours tous les standards d’accessibilité WCAG 2.0.
 J’avais trouvé une alternative qui semblait respecté la plupart des standards et qui permettait beaucoup de fonctionnalités. Le voici : http://keith-wood.name/datepick.HTML.
 Par contre, pourquoi utiliser des ressources et du temps à essayer d’incorporer un autre plugin quand nous en avons un qui fonctionne très bien et qui respecte déjà les standards du département. C’est-à-dire le DatePicker Wet.
@@ -65,8 +67,8 @@ Exemple : le site de AirBnb pour leur filtre de recherche. On peut voir qu'un si
 ## Solution proposé
 Bien qu'il existes beaucoup de plugin JS datepicker puissant sur le web. Je crois que celui offert par WET est amplement efficace.
 
-En analysant le fichier « datepicker.js », j’ai remarqué que celui-ci était instancié via un sélecteur de base défini dans le haut de la page. 
-Ce que nous avons fait : 
+En analysant le fichier « datepicker.js », j’ai remarqué que celui-ci était instancié via un sélecteur de base défini dans le haut de la page.
+Ce que nous avons fait :
 * Nous avons fait une copie locale du fichier dans notre projet directement.
 * Nous avons changé le « selector » pour inclure seulement les fichiers de type « text » avec une classe spécifique propre à nous. (force-wet-datepick)
 
@@ -104,7 +106,7 @@ $(document).ready(function (event) {
             }
         ]);
     }
-   
+
 
 });
 
@@ -133,7 +135,7 @@ C'est vraiment une solution temporaire mais ça fonctionne. Notez que nous avons
 Nous pourrions modifier le « selector » courant comme ci-dessous. Ce serait un changement minimal qui serait très simple à effectuer et qui ajouterais une grosse flexibilité pour les développeurs.
 Selon-moi ce serait un win/win.
 
-Valeur initiale	
+Valeur initiale
 > ```input[type=date]```
 
 Nouvelle valeur
@@ -158,7 +160,7 @@ Dans une autre situation,  disons que nous aimerions offrir la possibilité de f
 
 Et si les conditions sont respecté, il pourrait automatiquement se transformer en type text.
 
-Car peut-etre que sur les PC, il serait intéressant de forcer le WET. Par contre, sur les mobiles, nous voudrions garder la datepciker natifs de Safari. 
+Car peut-etre que sur les PC, il serait intéressant de forcer le WET. Par contre, sur les mobiles, nous voudrions garder la datepciker natifs de Safari.
 
 Voici un petit PoC mais vous pouvez voir ou je veux en venir.
 ```

@@ -3,7 +3,9 @@ published: true
 layout: default-theme-wet-boew-en
 title: 2018-13 - WET 5 workshop – UXDS @ STATCAN
 description: Summary of a WET5 workshop ran by and from StatCan UXDS initiative
-modified: 2018-09-25
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-01-13
 ---
 
 Sage Cram ran a workshop with his team and here is their feedback. Basically they did a what we like about WET4, What we don’t like about WET4 and what we’d love to have in 5.
@@ -35,7 +37,7 @@ Sage Cram ran a workshop with his team and here is their feedback. Basically the
 * Panel styles
 * There are no small spacing classes
 * Theming / Colour scheme (hard to change without lots of work)
-* Fonts 
+* Fonts
 * Pink error messages
 * Labels wrap around form controls
 * Limited visuals for chart options and icons

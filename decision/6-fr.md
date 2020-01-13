@@ -1,10 +1,11 @@
 ---
 published: true
 layout: default-theme-wet-boew-fr
-filename_en: 6
 title: Décision sur la conception 6 – Mode HTML de base et amélioration progressive
 description: Explain the versionning strategy for wet-boew project
-modified: 2019-09-22
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-01-13
 ---
 
 ## Sommaire
@@ -92,14 +93,14 @@ L’API publique WET-BOEW et GCWeb est définie comme il suit :
 * Les libellés de page structurels (gabarit);
 * Les styles limités aux noms de la catégorie CSS ou les styles de structure HTML avec leur effet respectif, peu importe leur mise en œuvre;
 * L’emboîtement de plugiciels défini par la liste de fonctions et de variables essentielles utilisées par un ou plusieurs plugiciels;
-* Le total de plugiciels avec leurs versions respectives à partir desquelles chaque plugiciel est défini par : 
+* Le total de plugiciels avec leurs versions respectives à partir desquelles chaque plugiciel est défini par :
 	* Fonctions JavaScript;
 	* Structure de la configuration, ainsi que le type de données de chaque propriété;
 	* Libellés HTML représentant des gabarits pour la conception de l’interface utilisateur;
 	* Information clé relative aux plugiciels;
 	* Aspect et formatage (CSS) des plugiciels;
 	* Termes internationalisés utilisés (chaînes de caractères) par le plugiciel.
-* Leurs gabarits, composantes et variantes sont définis par : 
+* Leurs gabarits, composantes et variantes sont définis par :
 	* Étiquetage HTML;
 	* Information sur la structure;
 	* Composantes qui pourraient comprendre les mêmes éléments d’un gabarit;
@@ -110,4 +111,3 @@ L’API publique WET-BOEW et GCWeb est définie comme il suit :
 ## Ressource
 
 * [Semantic versioning 2.0](https://semver.org/)
-
