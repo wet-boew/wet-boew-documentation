@@ -10,9 +10,10 @@ modified: 2019-09-20
 ## Sommaire
 
 * **Expert:** @duboisp, @GormFrank
-* **État:** En attente et actuellement appliquée
-* **Last updated:** 2019-10-23
+* **État:** Désuet
+* **Last updated:** 2020-01-15
 * **Historique:**
+	* (2020-01-15) Mis désuet par [Design decision 10: Provisional feature](10.html)
 	* (2019-10-23) Published
 	* (2019-10-23) Approved at the WET roadmap meeting
 	* (2019-09-20) Presented at the roadmap meeting

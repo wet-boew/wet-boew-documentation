@@ -10,6 +10,13 @@ Summary of what has been discussed at the meeting.
 
 ## Roadmap
 
+2020-01-15 (6 participants)
+* Review list of projects
+* Approval of design decision #9 and #10
+* Question was asked regarding floating images and floating content block vs meeting the accessibility.
+* Mention that we are going to publish the accessibility report completed last summer.
+* Briefly discuss of the improved service initiation pages (Child benefit) and the work that are going to be completed.
+
 2019-12-18 (6 participants)
 * Review list of projects
 	* Will add new project for the integration of new design pattern in Canada.ca theme

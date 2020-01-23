@@ -4,7 +4,7 @@ layout: default-theme-wet-boew-en
 filename_fr: index-fr
 title: Projects - Web Experience Toolkit (WET) documentation
 description: List of projects related to WET.
-modified: 2019-12-20
+modified: 2020-01-15
 ---
 
 {::nomarkdown}
@@ -127,18 +127,27 @@ $(window).on('resize', function(){
 
 ## Provisory GCWeb feature
 
-Updated: 2019-12-20
+Updated: 2020-01-15
 
 This is track the development of provisonal feature to support new beta design pattern.
 
 ### Service information template
 * Renewed template that visually better support a group a pages that relate to the same task.
-* **Last updated:** December 20, 2019
+* **Last updated:** January 15, 2020
 * **Project Lead:** Chad Farquharson, CRA; Christopher Oakes, CRA
-* **Current status:** Reviewing and addressing each accessibility concern and each design ambuiguity 
+* **Current status:** Reviewing and addressing each accessibility concern and each design ambuiguity
+* **Document/Research:** Under development
+	* Assistive Technology usability research - Produce a report that would evaluate if the new template with double h1 are usable for user that use assistive technology software. - Lead: Accessibilty working group (Brad)
+	* Research of expected results in google search results - Produce a report that would snapshoot a few page structure and make a corrolation on how the search result is organized. It is to expect the impact on search result when a web page have multiple h1 - Lead: Principal Publisher (Pierre)
+	* Review the markup for the desktop - Ensure the focus order and the reading order match the visual layout. Currently the reading/focus order is correct for small device (mobile) but not for desktop. After the markup is determined for dektop device, a new plugin would need to be created to do a minor DOM mutation for desktop view. - Lead: CRA (Christopher)
+	* Prepare the integration work in GCWeb - Add the new CSS for that new pattern in the provisional feature - Lead: (unassigned)
+	* Publish the UX research - Create a public report that will expose the UX research configuration, the context and the finding - Lead: (unassigned)
+	* Create a documentation page and a series of working example - Create a central documentation page that would contain the information about the template and the usability research - Lead: CRA (Christopher)
 * **Github discussion/issue:**
 	* [GCWeb issue #1627](https://github.com/wet-boew/GCWeb/issues/1627)
 * **History:**
+	* (2020-01-15) Some documents/research are going to be create to ensure the template are usable by acessitive technology and to ensure it will provide the expected result.
+	* (2020-01-09) Collaborative meeting with Principal Publisher, CRA, the accessibility working group, Treasury Board Secretariat (DTO) to identify what was required to have that innovative template be supported by GCWeb and on Canada.ca.
 	* (2019-12-18) Project lead is getting organized to address all the concern
 	* (2019-12) The review was forward to the project lead to address each concern.
 	* (2019-11) Principal publish and the web accessibility working group has done a quick accessibility review 
@@ -173,13 +182,14 @@ Updated: 2019-12-18
 * Documenting basic HTML design pattern
 * WCAG 2.1 Level AA conformance check for existing features in wet-boew
 * Evaluate web accessibility compliance for wb5 features
-* **Last updated:** October 23, 2019
+* **Last updated:** January 15, 2020
 * **Project lead:** Brad Souster
 * **Project board:** [wet-boew root project #1](https://github.com/orgs/wet-boew/projects/1)
 	* To participate: Pick an "Notes" and add your name
 	* Once completed: Move the notes inside the "Tested" and then submit your result to Pierre or Brad
 * **Progress check history**: 2019-10-23; 2019-09-20; 2018-10-18; 2018-08-24; 2018-07-26; 2018-06-20; 2018-05-17; 2018-04-10; 2018-04-03; 2018-03-14; 2018-02-27; 2018-02-20
 * **History:**
+	* (2020-01-15) Preparation work to publish the report created last summer.
 	* (2019-10-23) Items in testing column are tested, need to be published. Template testing is completed.
 	* (2019-09-20) Test of WCAG 2.1 has started and documented in the [wet-boew root project #1](https://github.com/orgs/wet-boew/projects/1)
 	* (2018-08-24) Menu - Fixed the keyboard behviour of submenu (details/summary)
@@ -199,6 +209,22 @@ Updated: 2019-12-18
 * **History:**
 	* (2019-07-24) A new Web Accessibility Working Group was formed.
 -->
+
+### GCWeb Jekyll variant
+* Create a Jekyll variant of GCWeb to facilate the use of the Canada.ca theme to publish content on github pages
+* **Project lead:** David Elisma (DTO)
+* **Status:** In progress to create a working example in jekyll and refining the implementation based on the handlebar template in gcweb. 
+* **Last updated:** January 15, 2020
+* **History:**
+	* (2020-01-15) In progress to create a working example in jekyll and refining the implementation based on the handlebar template in gcweb.
+
+### WET 5 - New framework
+* Create a new front-end framework in vanila javascript, CSS and HTML5.
+* **Project lead:** Pierre Dubois (SC)
+* **Status:** Developping the data layer core.
+* **Last updated:** January 15, 2020
+* **History:**
+	* (2020-01-15) Developping the data layer core.
 
 ### Multi page survey
 * Provide a configurable multi page form to accomodate a parametrable end of website visit survey.
