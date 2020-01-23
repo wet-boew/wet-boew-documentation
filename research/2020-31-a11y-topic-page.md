@@ -1,4 +1,9 @@
-# Short review of Web Experience Toolkit on its accessibility and usability for people with disabilities
+---
+published: true
+layout: default-theme-wet-boew-en
+title: Short review of Web Experience Toolkit on its accessibility and usability for people with disabilities
+modified: 2020-01-23
+---
 
 **Disclaimer:** This document is a short, follow up review. Its main purpose is to raise awareness for education and training purposes. This document is also meant to help to bring the product to be fully accessible for all users including people with disabilities.
 
