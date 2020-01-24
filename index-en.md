@@ -18,8 +18,8 @@ modified: 2019-06-20
 	* UX findings
 	* Design pattern
 	* UX report
-		* [Filtering interface with performance meter](ux-reports/2018-1.html)
-		* [Contextual site search design research](ux-reports/2018-2.html)
+		* [Filtering interface with performance meter](research/2018-20-ux.html)
+		* [Contextual site search design research](research/2018-21-ux.html)
 	* Suggestion for UX research
 * Assessement
 	* WCAG 2.0/2.1 Level AA
@@ -27,6 +27,17 @@ modified: 2019-06-20
 	* Assistive technologies
 	* Suggestion of assessement
 	* [AT support for detail / summary with suggestion](assessment/2018-1.html)
+	* [Short review of GCWEB THEME on its accessibility and usability for people with disabilities](research/2020-22-a11y-content-inst-service-performance.html)
+	* [Short review of https://wet-boew.github.io/themes-dist/GCWeb/demos/tables/tables-en.html on its accessibility and usability for people with disabilities](research/2020-23-a11y-tables.html)
+	* [Short review of https://wet-boew.github.io/themes-dist/GCWeb/demos/tabs/tabs-carousel-en.html on its accessibility and usability for people with disabilities](research/2020-24-a11y-tabs-carousel.html)
+	* [Short review of https://wet-boew.github.io/themes-dist/GCWeb/event-en.html on its accessibility and usability for people with disabilities](research/2020-25-a11y-event.html)
+	* [Short review of https://wet-boew.github.io/themes-dist/GCWeb/feedback-en.html on its accessibility and usability for people with disabilities](research/2020-26-a11y-feddback.html)
+	* [Short review of https://wet-boew.github.io/themes-dist/GCWeb/gc-audience-en.html on its accessibility and usability for people with disabilities](research/2020-27-a11y-audience.html)
+	* [Short review of https://wet-boew.github.io/themes-dist/GCWeb/institution-contact-en.html on its accessibility and usability for people with disabilities](research/2020-28-a11y-institution-contact.html)
+	* [Short review of https://wet-boew.github.io/themes-dist/GCWeb/ministerial-en.html on its accessibility and usability for people with disabilities](research/2020-29-a11y-ministerial.html)
+	* [Short review of https://wet-boew.github.io/themes-dist/GCWeb/theme-en.html on its accessibility and usability for people with disabilities](research/2020-30-a11y-theme.html)
+	* [Short review of Web Experience Toolkit on its accessibility and usability for people with disabilities](research/2020-31-a11y-topic-page.html)
+
 * Test case
 	* AT support for heading in summary element
 		* [Test 2018-1 - Vanilla HTML with heading inside summary](testcase/2018-1.html)
