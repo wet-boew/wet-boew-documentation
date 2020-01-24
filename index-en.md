@@ -37,6 +37,7 @@ modified: 2019-06-20
 	* [Short review of https://wet-boew.github.io/themes-dist/GCWeb/ministerial-en.html on its accessibility and usability for people with disabilities](research/2020-29-a11y-ministerial.html)
 	* [Short review of https://wet-boew.github.io/themes-dist/GCWeb/theme-en.html on its accessibility and usability for people with disabilities](research/2020-30-a11y-theme.html)
 	* [Short review of Web Experience Toolkit on its accessibility and usability for people with disabilities](research/2020-31-a11y-topic-page.html)
+	* [Evaluate the accessibility conformity of the homepage of Wet-Boew](research/research-2020-32-a11y.html)
 
 * Test case
 	* AT support for heading in summary element
