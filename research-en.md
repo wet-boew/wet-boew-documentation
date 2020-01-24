@@ -49,8 +49,22 @@ List of finding and ongoing research related to WET and it's features
 * [2018-10 - Trigger a Fieldflow action based on score](research/2018-10-fieldflow-scoring-trigger.html)
 	* Status: on hold
 
+## Accessiblity assessment
+
+* [2020-22 - Short review of GCWEB THEME on its accessibility and usability for people with disabilities](research/2020-22-a11y-content-inst-service-performance.html)
+* [2020-23 - Short review of https://wet-boew.github.io/themes-dist/GCWeb/demos/tables/tables-en.html on its accessibility and usability for people with disabilities](research/2020-23-a11y-tables.html)
+* [2020-24 - Short review of https://wet-boew.github.io/themes-dist/GCWeb/demos/tabs/tabs-carousel-en.html on its accessibility and usability for people with disabilities](research/2020-24-a11y-tabs-carousel.html)
+* [2020-25 - Short review of https://wet-boew.github.io/themes-dist/GCWeb/event-en.html on its accessibility and usability for people with disabilities](research/2020-25-a11y-event.html)
+* [2020-26 - Short review of https://wet-boew.github.io/themes-dist/GCWeb/feedback-en.html on its accessibility and usability for people with disabilities](research/2020-26-a11y-feddback.html)
+* [2020-27 - Short review of https://wet-boew.github.io/themes-dist/GCWeb/gc-audience-en.html on its accessibility and usability for people with disabilities](research/2020-27-a11y-audience.html)
+* [2020-28 - Short review of https://wet-boew.github.io/themes-dist/GCWeb/institution-contact-en.html on its accessibility and usability for people with disabilities](research/2020-28-a11y-institution-contact.html)
+* [2020-29 - Short review of https://wet-boew.github.io/themes-dist/GCWeb/ministerial-en.html on its accessibility and usability for people with disabilities](research/2020-29-a11y-ministerial.html)
+* [2020-30 - Short review of https://wet-boew.github.io/themes-dist/GCWeb/theme-en.html on its accessibility and usability for people with disabilities](research/2020-30-a11y-theme.html)
+* [2020-31 - Short review of Web Experience Toolkit on its accessibility and usability for people with disabilities](research/2020-31-a11y-topic-page.html)
+
 ## Published report and documents
 
+* [2020-32 - WET-BOEW 5 year high level plan](research/2020-32-wet-boew-5-year-plan.html)
 * [2018-13 - WET 5 workshop – UXDS @ STATCAN](research/2018-13-wet5-workshop-statcan.html)
 * [2018-11 - WET 5 - Augmented Design - Early prototype presentation](research/2018-11-wet5-augmented-design-presentation.html)
 * [2018-3 - WET 5 kickoff documentation material](research/2018-3-wet5-kickoff.html)
