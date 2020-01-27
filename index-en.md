@@ -38,6 +38,8 @@ modified: 2019-06-20
 	* [Short review of https://wet-boew.github.io/themes-dist/GCWeb/theme-en.html on its accessibility and usability for people with disabilities](research/2020-30-a11y-theme.html)
 	* [Short review of Web Experience Toolkit on its accessibility and usability for people with disabilities](research/2020-31-a11y-topic-page.html)
 	* [Evaluate the accessibility conformity of the homepage of Wet-Boew](research/2020-35-a11y-wet-boew.html)
+	* [Evaluate the accessibility conformity of the Canada child benefit introduction page of Canada.ca](research/research-2020-33-a11y.html)
+	* [Evaluate the accessibility conformity of the Canada child benefit apply page of Canada.ca](research/research-2020-34-a11y.html)
 
 * Test case
 	* AT support for heading in summary element
