@@ -3,7 +3,7 @@ published: true
 layout: default-theme-wet-boew-en
 title: 2020-32 - WET-BOEW 5 year high level plan
 description: High level five year plan for the Web Experience Toolkit project.
-modified: 2020-01-23
+modified: {}
 ---
 
 This is published for reference only. Any date bellow are at medium risk to change.
@@ -13,7 +13,7 @@ This represent the view of the administrator, Pierre Dubois as the date of the p
 
 ## Proposal for a WxT (WET-BOEW) defintion
 
-Open source web framework for the publication of accessible, usable, interoperable and interactive web content by author and developer while following strict web accessibility standard (WCAG 2.0 Level AA), World Wide Web (W3C) standard, international standard (IETF, ECMA, ISO), industries best practice, expertise and usability research.
+Open source web framework for the publication of accessible, usable, interoperable and interactive web content by author and developer while following strict web accessibility standard (EN 301 549 (2018) including WCAG 2.1 Level AA), World Wide Web (W3C) standard, international standard (IETF, ECMA, ISO), industries best practice, expertise and usability research.
 
 
 ## 5 year plan
