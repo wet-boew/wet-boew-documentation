@@ -1,16 +1,16 @@
 ---
 published: true
 layout: default-theme-wet-boew-en
-title: Combobox prototype 2 - Datalist JSON suggestion - Research and finding
-description: Prototype async loading
-modified: 2018-04-09
+title: Add to Calendar prototype 1 - Details summary - schema.org/event
+description: Prototype
+modified: 2020-02-03
 
 script_pgbttm_src: //wet-boew.github.io/themes-dist/GCWeb/GCWeb/js/theme.min.js
 script_pgbttm2_src: 2019-assets/add-to-calendar/add-to-calendar.js
 script_pgbttm3_src: //wet-boew.github.io/themes-dist/GCWeb/wet-boew/js/deps/jsonpointer.js
 ---
 
-Prototype of an ```select``` box transformed into a customized ```combobox``` with the listbox pattern.
+Prototype of an ```Add to Calendar``` with the details summary pattern and Schema.org/Event RDFa markup.
 
 
 {::nomarkdown}
@@ -18,7 +18,7 @@ Prototype of an ```select``` box transformed into a customized ```combobox``` wi
 {% raw %}
 
 <div class="wb-prettify all-pre linenums"></div>
-
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 <style>
 
 /* Overlay default style */
