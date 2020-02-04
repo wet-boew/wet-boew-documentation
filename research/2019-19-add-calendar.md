@@ -26,14 +26,11 @@ Support Schema.org vocabulary for Event thing marked by using RDFa Lite
 * working example: 
 	* [Add-to-calendar buttons/example] (http://carlsednaoui.github.io/add-to-calendar-buttons/example.html)
 
-### Visual
+#### Visual
 
 <img src="2019-assets/add-to-calendar/ouical-design-pattern.jpg" alt="Github OuiCal visual design example" />
 
 * Clickable expand collapsable item to preview the calendar link options
-
-comments:
-* 	
 
 * [iCal Event Maker - create iCalendar (.ics)] (https://ical.marudot.com/)
 
