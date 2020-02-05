@@ -3,7 +3,7 @@ published: true
 layout: default-theme-wet-boew-en
 title: Design decision
 description: Design decision followed by WET.
-modified: 2019-10-23
+modified: 2020-02-04
 ---
 
 The following are design decision for WET. Those decision are used for providing guidance on how to design content, features and theme. Design decision are subject for review by every wet-boew contributor and its official approval is made by participant of the WET-BOEW Roadmap monthly meeting, WET expert and WET administrator. Any propose changes to an approved design design, except to trivial editorial fixes, are subject to go through the whole approval process.
@@ -33,13 +33,14 @@ If you have any questions in regards of one of the above design decision, please
 	<ul>
 	</ul>
 </section>
+-->
 
 <section>
-	<h2>Proposed</h2>
+	<h2>Proposed (Going to be presented)</h2>
 	<ul>
+		<li><a href="11.html">Design decision 11 - Resize text testing methodology</a></li>
 	</ul>
 </section>
--->
 
 <!--
 <section>
@@ -60,7 +61,7 @@ If you have any questions in regards of one of the above design decision, please
 <section>
 	<h2>Ready</h2>
 
-<!-- 
+<!--
 	<ul>
 		<li><a href="9.html">Design decision 9: Release early, release often (<abbr title="Short-term release">STR</abbr>)</a></li>
 	</ul>
