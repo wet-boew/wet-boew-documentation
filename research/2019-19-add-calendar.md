@@ -30,11 +30,9 @@ Support Schema.org vocabulary for Event thing marked by using RDFa Lite
 
 <img src="2019-assets/add-to-calendar/ouical-design-pattern.jpg" alt="Github OuiCal visual design example" />
 
-* Clickable expand collapsable item to preview the calendar link options
+* Clickable expandable collapsable item to preview the calendar link options
 
-* [iCal Event Maker - create iCalendar (.ics)] (https://ical.marudot.com/)
-
-
+### [iCal Event Maker - create iCalendar (.ics)] (https://ical.marudot.com/)
 
 ## Related standard and references
 
@@ -55,4 +53,6 @@ Support Schema.org vocabulary for Event thing marked by using RDFa Lite
 
 ## Wireframe and template
 
+* Prototype 1 - Include 2 initial design patterns: (https://ricokola.github.io/wet-boew-documentation/research/2019-19-add-calendar-prototype-1.html)
+* Prototype 2 - Latest version created using details summary: (https://ricokola.github.io/wet-boew-documentation/research/2019-19-add-calendar-prototype-2.html)
 
