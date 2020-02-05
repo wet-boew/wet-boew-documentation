@@ -1,8 +1,8 @@
 ---
 published: true
 layout: default-theme-wet-boew-en
-title: Add to Calendar prototype 1 - Details summary - schema.org/event
-description: Prototype
+title: Add to Calendar prototype 2 - Details summary and schema.org/event
+description: Prototype 2
 modified: 2020-02-03
 
 script_pgbttm_src: //wet-boew.github.io/themes-dist/GCWeb/GCWeb/js/theme.min.js
@@ -46,11 +46,12 @@ Prototype of an ```Add to Calendar``` with the details summary pattern and Schem
 	cursor: default;
 }
 
-/* Have the input and the overlay together */
-.combobox-wrapper {
+.max-content {
     display: inline-block;
     position: relative;
 }
+
+
 
 </style>
 
