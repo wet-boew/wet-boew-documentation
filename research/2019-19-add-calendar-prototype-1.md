@@ -19,6 +19,38 @@ Prototype of an ```Add to Calendar``` with two options: Details summary pattern 
 <div class="wb-prettify all-pre linenums"></div>
 <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 <style>
+input[type="checkbox"] + .wb-addcal {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+input[type="checkbox"] + .wb-addcal + ul {
+    border: 1px solid #dee2e6 !important;
+    padding: 15px;
+    border-radius: 3px;
+    border-top-left-radius: 3px;
+    border-top-left-radius: 0;
+    display: none;
+}
+input[type="checkbox"]:checked + .wb-addcal + ul {
+    display: block;
+}
+input[type="checkbox"] + .wb-addcal::after {
+    font-size: 30px;
+    line-height: 0;
+    margin-left: 10px;
+    top: 2.5px;
+    position: relative;
+    font-weight: bold;
+    content: "+";
+}
+input[type="checkbox"]:checked + .wb-addcal::after {
+    content: "–";
+}
+
+.max-content {
+    display: inline-block;
+    position: relative;
+}
 
 /* Overlay default style */
 [role=listbox] {
@@ -45,10 +77,7 @@ Prototype of an ```Add to Calendar``` with two options: Details summary pattern 
 	cursor: default;
 }
 
-.max-content {
-    display: inline-block;
-    position: relative;
-}
+
 
 
 
