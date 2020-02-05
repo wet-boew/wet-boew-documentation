@@ -37,7 +37,7 @@ modified: 2019-06-20
 	* [Short review of https://wet-boew.github.io/themes-dist/GCWeb/ministerial-en.html on its accessibility and usability for people with disabilities](research/2020-29-a11y-ministerial.html)
 	* [Short review of https://wet-boew.github.io/themes-dist/GCWeb/theme-en.html on its accessibility and usability for people with disabilities](research/2020-30-a11y-theme.html)
 	* [Short review of Web Experience Toolkit on its accessibility and usability for people with disabilities](research/2020-31-a11y-topic-page.html)
-	* [Evaluate the accessibility conformity of the homepage of Wet-Boew](research/research-2020-32-a11y.html)
+	* [Evaluate the accessibility conformity of the homepage of Wet-Boew](research/2020-35-a11y-wet-boew.html)
 
 * Test case
 	* AT support for heading in summary element
@@ -77,7 +77,7 @@ To join: Contact Pierre Dubois, you can find his contact information on gccollab
 ### Roadmap
 Location: Place du Centre, 200 promenade du portage, Gatineau, suite 990, room 2D302
 
-* July 2019 - To be determined 
+* July 2019 - To be determined
 * August 2019  - To be determined
 * September 2019  - To be determined
 * October 2019  - To be determined
