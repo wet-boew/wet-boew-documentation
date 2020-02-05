@@ -45,7 +45,7 @@ Support Schema.org vocabulary for Event thing marked by using RDFa Lite
 
 ## Discussions and findings
 
-* Initial thougth was for authors to create the ics and Google link manually and add event details using RDFa markup of schema.org/Event pattern.
+* Initial thougth was for authors to create the ics file and Google link manually and add event details using RDFa markup of schema.org/Event pattern.
 * For grouping and having the expand/collapse functionality for the 3 calendar links (Google, Apple and Other), 2 solutions were considered:
 	* Using a checkbox input type with the aspect of a button.
 	* Using list items inside a details summary tag.
@@ -53,6 +53,6 @@ Support Schema.org vocabulary for Event thing marked by using RDFa Lite
 
 ## Wireframe and template
 
-* Prototype 1 - Include 2 initial design patterns: (https://ricokola.github.io/wet-boew-documentation/research/2019-19-add-calendar-prototype-1.html)
-* Prototype 2 - Latest version created using details summary: (https://ricokola.github.io/wet-boew-documentation/research/2019-19-add-calendar-prototype-2.html)
+* [Prototype 1 - Include 2 initial design patterns:](../wet-boew-documentation/research/2019-19-add-calendar-prototype-1.html)
+* [Prototype 2 - Latest version created using details summary:](../wet-boew-documentation/research/2019-19-add-calendar-prototype-2.html)
 
