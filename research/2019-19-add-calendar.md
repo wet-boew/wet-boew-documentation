@@ -54,5 +54,6 @@ Support Schema.org vocabulary for Event thing marked by using RDFa Lite
 ## Wireframe and template
 
 * [Prototype 1 - Include 2 initial design patterns:](../wet-boew-documentation/research/2019-19-add-calendar-prototype-1.html)
-* [Prototype 2 - Latest version created using details summary:](../wet-boew-documentation/research/2019-19-add-calendar-prototype-2.html)
+* [Prototype 2 - created using details summary:](../wet-boew-documentation/research/2019-19-add-calendar-prototype-2.html)
+* [Prototype 2 - Latest version - cleaner script using JQuery:](../wet-boew-documentation/research/2019-19-add-calendar-prototype-3.html)
 

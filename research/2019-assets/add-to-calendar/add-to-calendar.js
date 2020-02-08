@@ -3,124 +3,114 @@ var elm = document.querySelector(".wb-addcal"),
 	i,
 	i_len = properties.length,
 	url = {},
-	googleLink2 = "https://www.google.com/calendar/render?action=TEMPLATE";	
+	googleLink = "https://www.google.com/calendar/render?action=TEMPLATE",
+	icsLink = "BEGIN:VCALENDAR\nVERSION:2.0\nBEGIN:VEVENT";
 
-window.addEventListener("load", function(){
+$(document).ready(function(){
 	for(i=0; i < i_len; i++){
 		switch(properties[i].getAttribute("property")){
 			case "name":
 				if(properties[i].parentNode.getAttribute("typeof") == "Place"){
 					url.place = properties[i].innerHTML;
+					googleLink += "&location=" + url.place;
+					icsLink += "\nLOCATION:" + url.place;
 				}else{
 					url.title = properties[i].innerHTML;
-					googleLink2 += "&text=" + url.title;
+					googleLink += "&text=" + url.title;
+					icsLink += "\nSUMMARY:" + url.title;
 				}
 				break;
 			case "description":
 				url.description = properties[i].innerHTML;
-				googleLink2 += "&details=" + url.description;
+				googleLink += "&details=" + url.description;
+				icsLink += "\nDESCRIPTION:" + url.description;
 				break;
 			case "startDate":
 				url.startDate = properties[i].getAttribute("content");
-				googleLink2 += "&dates=" + url.startDate;
+				googleLink += "&dates=" + url.startDate;
+				icsLink += "\nDTSTART:" + url.startDate;
 				break;
 			case "endDate":
 				url.endDate = properties[i].getAttribute("content");
-				googleLink2 += "/" + url.endDate;
+				googleLink += "/" + url.endDate;
+				icsLink += "\nDTEND:" + url.endDate;
 				break;
 			case "streetAddress":
 				url.streetAddress = properties[i].innerHTML;
-				googleLink2 += "&location=" + url.place;
+				googleLink += " " + url.streetAddress;
+				icsLink += " " + url.streetAddress;
 				break;
 			case "addressLocality":
 				url.addressLocality = properties[i].innerHTML;
-				googleLink2 += "%20" + url.streetLocality;
+				googleLink += " " + url.addressLocality;
+				icsLink += " " + url.addressLocality;
 				break;
 			case "addressRegion":
 				url.addressRegion = properties[i].innerHTML;
-				googleLink2 += "%20" + url.streetRegion;
+				googleLink += " " + url.addressRegion;
+				icsLink += " " + url.addressRegion;
 				break;
 			case "postalCode":
 				url.postalCode = properties[i].innerHTML;
-				googleLink2 += "%20" + url.postalCode;
+				googleLink += " " + url.postalCode;
+				icsLink += " " + url.postalCode;
 				break;
 		}
 	}
 	
-	console.log(encodeURI(googleLink2));
-	
-	//Set Google Calendar and ics links
-	var googleLink = encodeURI("https://www.google.com/calendar/render?action=TEMPLATE&text=" + url.title + "&dates=" + url.startDate + "/" + url.endDate + "&details=" + url.description + "&location=" + url.place + "%20" + url.streetAddress + "%20" + url.addressLocality + "%20" + url.addressRegion + "%20" + url.postalCode),
-	
-	icsLink = "BEGIN:VCALENDAR\nVERSION:2.0\nBEGIN:VEVENT\nDTSTART:" + url.startDate + "\nDTEND:" + url.endDate + "\nSUMMARY:" + url.title + "\nDESCRIPTION:" + url.description + "\nLOCATION:" + url.place + " " + url.streetAddress + " " + url.addressLocality + " " + url.addressRegion + " " + url.postalCode + "\nEND:VEVENT\nEND:VCALENDAR";
-	
-	//Create details node and set attributes
-	var det = document.createElement("details"),
-		sum = document.createElement("summary"),
-		node = document.createTextNode("Add to calendar"),
-		ul = document.createElement("ul");
-		
-		
-		det.setAttribute("class", "max-content wb-addcal-buttons");
-		ul.setAttribute("class", "list-unstyled mrgn-bttm-0 mrgn-tp-sm");
-		
-		elm.appendChild(det);
-		sum.appendChild(node);
-	
-		det = elm.getElementsByTagName("details");
-		det[0].appendChild(sum);
-		det[0].appendChild(ul);
-	
-	var li, ahref, linkItem, node;
-	
+	googleLink = encodeURI(googleLink);
+	icsLink += "\nEND:VEVENT\nEND:VCALENDAR";
+
+	//Create add details summary to the wb-addcal event and initiate the unordered list
+	$('.wb-addcal').append(
+		$('<details>').attr('class', 'max-content wb-addcal-buttons').append(
+			$('<summary>').text('Add to calendar'),
+			$('<ul>').attr('class', 'list-unstyled mrgn-bttm-0 mrgn-tp-sm')
+		)
+	);
+	//Create and add calendar links to details summary list items
 	for(i=0; i < 3; i++){
 		if(i == 0){
-			linkItem = document.createElement("a");
-			spn = document.createElement("span");
-			node = document.createTextNode("Google");
-			linkItem.setAttribute("class", "btn btn-link btn-lg mrgn-top-lg");
-			linkItem.setAttribute("href", googleLink);
-			spn.setAttribute("class", "fab fa-google mrgn-rght-md");
+			$('.wb-addcal-buttons ul').append(
+				$('<li>').append(
+					$('<a>').attr({class: 'btn btn-link btn-lg mrgn-top-lg', href: googleLink}).append(
+						$('<span>').attr('class', 'fab fa-google mrgn-rght-md'),
+						('Google'),
+						$('<span>').attr('class', 'sr-only').text('Calendar')
+					)
+				)
+			);
 		}else if(i == 1){
-			linkItem = document.createElement("button");
-			spn = document.createElement("span");
-			node = document.createTextNode("Apple");
-			spn.setAttribute("class", "fab fa-apple mrgn-rght-md");
-			linkItem.setAttribute("class", "btn btn-link btn-lg");
-			linkItem.setAttribute("data-wb-addcal-ics", icsLink);
-			
+			$('.wb-addcal-buttons ul').append(
+				$('<li>').append(
+					$('<button>').attr({class: 'btn btn-link btn-lg', 'data-wb-addcal-ics': icsLink}).append(
+						$('<span>').attr('class', 'fab fa-apple mrgn-rght-md'),
+						('Apple'),
+						$('<span>').attr('class', 'sr-only').text('Calendar')
+					)
+				)
+			)
 		}else{
-			linkItem = document.createElement("button");
-			spn = document.createElement("span");
-			node = document.createTextNode("Outlook");
-			spn.setAttribute("class", "fa fa-calendar mrgn-rght-md");
-			linkItem.setAttribute("class", "btn btn-link btn-lg");
-			linkItem.setAttribute("data-wb-addcal-ics", icsLink);			
+			$('.wb-addcal-buttons ul').append(
+				$('<li>').append(
+					$('<button>').attr({class: 'btn btn-link btn-lg', 'data-wb-addcal-ics': icsLink}).append(
+						$('<span>').attr('class', 'fa fa-calendar mrgn-rght-md'),
+						('Other'),
+						$('<span>').attr('class', 'sr-only').text('Calendar')
+					)
+				)
+			)
 		}
 		
-		li = document.createElement("li");
-		spn2 = document.createElement("span");
-		node2 = document.createTextNode(" calendar");
-		
-		
-		spn2.setAttribute("class", "sr-only");
-		
-		li.appendChild(linkItem);
-		linkItem.appendChild(spn);
-		linkItem.appendChild(node);
-		linkItem.appendChild(spn2);
-		spn2.appendChild(node2);
-		det[0].getElementsByTagName("ul")[0].appendChild(li);
 	}
-	
+
 	//Set click action on Apple and Other button links
-	linkItem = elm.querySelectorAll(".wb-addcal-buttons button");
+	var linkItem = elm.querySelectorAll(".wb-addcal-buttons button");
 	i_len = linkItem.length;
 	
 	for(i=0; i < i_len; i++){
 		linkItem[i].onclick = function(){
-			wb.download( new Blob( [linkItem[0].getAttribute("data-wb-addcal-ics")] , { type: "text/calendar;charset=utf-8" } ), "evenement-gc-event.ics" );		
+			wb.download( new Blob( [linkItem[0].getAttribute("data-wb-addcal-ics")] , { type: "text/calendar;charset=utf-8" } ), "evenement-gc-event.ics" );
 		}
 	}
-	
 });

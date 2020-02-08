@@ -3,10 +3,10 @@ published: true
 layout: default-theme-wet-boew-en
 title: Add to Calendar prototype 2 - Details summary and schema.org/event
 description: Prototype 2
-modified: 2020-02-03
+modified: 2020-02-08
 
 script_pgbttm_src: //wet-boew.github.io/themes-dist/GCWeb/GCWeb/js/theme.min.js
-script_pgbttm2_src: 2019-assets/add-to-calendar/add-to-calendar-20200206.js
+script_pgbttm2_src: 2019-assets/add-to-calendar/add-to-calendar.js
 script_pgbttm3_src: //wet-boew.github.io/themes-dist/GCWeb/wet-boew/js/deps/jsonpointer.js
 ---
 
