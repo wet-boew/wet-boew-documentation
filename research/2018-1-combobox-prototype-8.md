@@ -3,11 +3,12 @@ published: true
 layout: default-theme-wet-boew-en
 title: Combobox prototype 8 with fieldflow - Datalist JSON suggestion - Research and finding
 description: Fieldflow rendering a combobox
-modified: 2018-05-16
-
-script_pgbttm_src: //wet-boew.github.io/themes-dist/GCWeb/GCWeb/js/theme.min.js
-script_pgbttm2_src: 2018-assets/2018-1-combobox2.js
-script_pgbttm3_src: 2018-assets/2018-1-combobox-fieldflow.js
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-02-10
+script_src: //wet-boew.github.io/themes-dist/GCWeb/GCWeb/js/theme.min.js
+script_src2: 2018-assets/2018-1-combobox2.js
+script_src3: 2018-assets/2018-1-combobox-fieldflow.js
 ---
 
 Working prototype with a modified version of fieldflow and combobox plugin.
@@ -55,7 +56,7 @@ If the typed content are not from the list, then it redirect the user into a gen
 
 <div class="wb-frmvld">
   <form action="submited-contact-us-page.html">
-    <div id="test1" class="wb2-fieldflow" data-wb2-fieldflow='{ "noreqlabel": true, "isoptional": true, "noForm": true, "defaultselectedlabel":"Popular questions", "renderas":"combobox", 
+    <div id="test1" class="wb2-fieldflow" data-wb2-fieldflow='{ "noreqlabel": true, "isoptional": true, "noForm": true, "defaultselectedlabel":"Popular questions", "renderas":"combobox",
 
     "defaultIfNone": { "action": "query", "name": "question" }
 
@@ -89,10 +90,10 @@ If the typed content are not from the list, then it redirect the user into a gen
 		<div data-wb5-bind="id@popupId" role="listbox" class="hidden">
 			<template data-slot-elm="" data-wb5-template="sub-template-listbox">
 				<ul class="list-unstyled">
-					<li 
-						class="brdr-bttm" 
-						role="option" 
-						data-wb5-for="option in options" 
+					<li
+						class="brdr-bttm"
+						role="option"
+						data-wb5-for="option in options"
 						data-wb5-if="!parent.filter.length || option.value.indexOf(parent.filter) !== -1"
 						data-wb5-on="select@select(option.value); live@parent.nbdispItem(wb-nbNode)" >{{ option.textContent }}</li>
 				</ul>

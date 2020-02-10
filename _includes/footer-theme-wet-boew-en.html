@@ -1,59 +1,46 @@
-<footer role="contentinfo" id="wb-info" class="visible-sm visible-md visible-lg wb-navcurr">
-	<div class="container">
-		<nav role="navigation" class="row">
-			<h2>About this site</h2>
-			<section class="col-sm-3">
-				<h3>Contact us</h3>
-				<ul class="list-unstyled">
-					<li><a href="https://github.com/wet-boew/wet-boew/issues/new">Questions or comments?</a></li>
-				</ul>
-			</section>
-			<section class="col-sm-3">
-				<h3>About</h3>
-				<ul class="list-unstyled">
-					<li><a href="../../index-en.html#about">About the Web Experience Toolkit</a></li>
-					<li><a rel="external" href="http://www.tbs-sct.gc.ca/ws-nw/index-eng.asp">About the Web Standards</a></li>
-				</ul>
-			</section>
-			<section class="col-sm-3">
-				<h3>News</h3>
-				<ul class="list-unstyled">
-					<li><a href="https://github.com/wet-boew/wet-boew/pulse">Recent project activity</a></li>
-					<li><a href="https://github.com/wet-boew/wet-boew/graphs">Project statistics</a></li>
-				</ul>
-			</section>
-			<section class="col-sm-3">
-				<h3>Stay connected</h3>
-				<ul class="list-unstyled">
-					<li><a rel="external" href="https://twitter.com/WebExpToolkit">Twitter</a></li>
-				</ul>
-			</section>		</nav>
-	</div>
+<footer id="wb-info" class="visible-sm visible-md visible-lg wb-navcurr">
+<div class="container">
+<nav role="navigation" class="row">
+<h2>About this site</h2>
+<section class="col-sm-3">
+<h3>Contact us</h3>
+<ul class="list-unstyled">
+<li><a href="https://github.com/wet-boew/wet-boew/issues/new">Questions or comments?</a></li>
+</ul>
+</section>
+<section class="col-sm-3">
+<h3>About</h3>
+<ul class="list-unstyled">
+<li><a href="../../wet-boew/index-en.html#about">About the Web Experience Toolkit</a></li>
+<li><a rel="external" href="https://www.canada.ca/en/treasury-board-secretariat/topics/government-communications.html">About the Web Standards</a></li>
+</ul>
+</section>
+<section class="col-sm-3">
+<h3>News</h3>
+<ul class="list-unstyled">
+<li><a href="https://github.com/wet-boew/wet-boew/pulse">Recent project activity</a></li>
+<li><a href="https://github.com/wet-boew/wet-boew/graphs">Project statistics</a></li>
+</ul>
+</section>
+<section class="col-sm-3">
+<h3>Stay connected</h3>
+<ul class="list-unstyled">
+<li><a rel="external" href="https://twitter.com/WebExpToolkit">Twitter</a></li>
+</ul>
+</section>
+</nav>
+</div>
 </footer>
-
-<!--[if gte IE 9 | !IE ]><!-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
-<script src="https://wet-boew.github.io/wet-boew/js/wet-boew.js"></script>
-<!--<![endif]-->
-
-<!--[if lt IE 9]>
-<script src="https://wet-boew.github.io/wet-boew/js/ie8-wet-boew2.js"></script>
-
-<![endif]-->
-{% if page.script_pgbttm_src and page.script_pgbttm_src contains '.js' %}
-<script src='{{ page.script_pgbttm_src }}'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://wet-boew.github.io/wet-boew/wet-boew/js/wet-boew.min.js"></script>
+{% if page.script_src and page.script_src contains '.js' %}
+<script src='{{ page.script_src }}'></script>
 {% endif %}
-{% if page.script_pgbttm2_src and page.script_pgbttm2_src contains '.js' %}
-<script src='{{ page.script_pgbttm2_src }}'></script>
+{% if page.script_src2 and page.script_src2 contains '.js' %}
+<script src='{{ page.script_src2 }}'></script>
 {% endif %}
-{% if page.script_pgbttm3_src and page.script_pgbttm3_src contains '.js' %}
-<script src='{{ page.script_pgbttm3_src }}'></script>
-{% endif %}
-{% if page.script_pgbttm4_src and page.script_pgbttm4_src contains '.js' %}
-<script src='{{ page.script_pgbttm4_src }}'></script>
-{% endif %}
-{% if page.script_pgbttm5_src and page.script_pgbttm5_src contains '.js' %}
-<script src='{{ page.script_pgbttm5_src }}'></script>
+{% if page.script_src3 and page.script_src3 contains '.js' %}
+<script src='{{ page.script_src3 }}'></script>
 {% endif %}
 </body>
 </html>

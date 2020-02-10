@@ -3,7 +3,9 @@ published: true
 layout: default-theme-wet-boew-en
 title: 1 - Datalist JSON suggestion - Research and finding - Web Experience Toolkit (WET) documentation
 description: Design decision followed by WET.
-modified: 2018-05-09
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-02-10
 ---
 
 ## Purpose

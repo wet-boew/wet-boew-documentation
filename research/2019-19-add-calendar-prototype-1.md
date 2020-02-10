@@ -3,10 +3,11 @@ published: true
 layout: default-theme-wet-boew-en
 title: Add to Calendar prototype 1 - schema.org/event - Details summary or Input type checkbox
 description: Prototype 1
-modified: 2019-11-21
-
-script_pgbttm_src: //wet-boew.github.io/themes-dist/GCWeb/GCWeb/js/theme.min.js
-script_pgbttm3_src: //wet-boew.github.io/themes-dist/GCWeb/wet-boew/js/deps/jsonpointer.js
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-02-10
+script_src: //wet-boew.github.io/themes-dist/GCWeb/GCWeb/js/theme.min.js
+script_src3: //wet-boew.github.io/themes-dist/GCWeb/wet-boew/js/deps/jsonpointer.js
 ---
 
 Prototype of an ```Add to Calendar``` with two options: Details summary pattern  or Input type checkox / Schema.org/Event RDFa markup.
@@ -88,11 +89,11 @@ input[type="checkbox"]:checked + .wb-addcal::after {
 	<div class="row">
 		<section class="col-md-6">
 			<div vocab="http://schema.org/" class="event-wrapper" typeof="Event">
-				<div class="event-title" property="name"><h2>Cannux20</h2></div>	
+				<div class="event-title" property="name"><h2>Cannux20</h2></div>
 				<h3>Date and Time</h3>
 				<div class="event-date" property="startDate" content="2020-01-27T12:00:00Z">Mon, 27 Jan 2020, 7:00 AM - </div>
 				<div class="event-date" property="endDate" content="2020-01-29T17:00:00Z">Wed, 29 Jan 2020, 12:00 PM EST</div>
-				<h3>Location</h3>	
+				<h3>Location</h3>
 				<div class="event-venue" property="location" typeof="Place">
 					<span property="name">Shaw Centre</span>
 					<div class="address" property="address" typeof="PostalAddress">
@@ -123,11 +124,11 @@ input[type="checkbox"]:checked + .wb-addcal::after {
 		<div vocab="http://schema.org/" class="event-wrapper" typeof="Event">
 			<div class="event-title" property="name">
 				<h2>Cannux20</h2>
-			</div>	
+			</div>
 			<h3>Date and Time</h3>
 			<div class="event-date" property="startDate" content="2020-01-27T12:00:00Z">Mon, 27 Jan 2020, 7:00 AM - </div>
 			<div class="event-date" property="endDate" content="2020-01-29T17:00:00Z">Wed, 29 Jan 2020, 12:00 PM EST</div>
-			<h3>Location</h3>	
+			<h3>Location</h3>
 				<div class="event-venue" property="location" typeof="Place">
 					<span property="name">Shaw Centre</span>
 					<div class="address" property="address" typeof="PostalAddress">

@@ -3,7 +3,9 @@ published: true
 layout: default-theme-wet-boew-en
 title: 2019-16 - jQuery 3 Migration
 description: Exploration of a jQuery 3 migration
-modified: 2019-02-07
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-02-10
 ---
 
 ## Project Description

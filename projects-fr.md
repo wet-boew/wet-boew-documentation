@@ -3,6 +3,7 @@ published: true
 layout: default-theme-wet-boew-en
 title: Projects - Web Experience Toolkit (WET) documentation
 description: List of projects related to WET.
+written_lang: en
 date_modified: 2020-02-10
 ---
 

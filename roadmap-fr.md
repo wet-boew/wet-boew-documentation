@@ -3,6 +3,7 @@ published: true
 layout: default-theme-wet-boew-en
 title: Roadmap - Web Experience Toolkit (WET) documentation
 description: Web Experience Toolkit (WET) documentation
+written_lang: en
 date_modified: 2020-02-10
 ---
 

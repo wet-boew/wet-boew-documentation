@@ -3,7 +3,9 @@ published: true
 layout: default-theme-wet-boew-en
 title: WET 5 - WET-BOEW documentation
 description: Project description page for WET 5
-modified: 2018-07-05
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-02-10
 ---
 
 We have start our planning to develop WET 5

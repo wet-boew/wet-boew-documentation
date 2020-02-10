@@ -3,7 +3,9 @@ published: true
 layout: default-theme-wet-boew-en
 title: 2019-19 - wb5 Moving forward
 description: wb5 Moving forward
-modified: 2019-09-10
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-02-10
 ---
 
 This page is log summary of technical discussion during WET meeting (Codesprint, Tech review, Roadmap meeting) and to track other idea and other work in progress notes relatively to the WB5 project.

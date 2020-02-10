@@ -3,7 +3,9 @@ published: true
 layout: default-theme-wet-boew-en
 title: 2020-32 - WET-BOEW 5 year high level plan
 description: High level five year plan for the Web Experience Toolkit project.
-modified: {}
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-02-10
 ---
 
 This is a **draft** and it is published for reference only. Any date bellow are at medium risk to change.

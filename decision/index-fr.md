@@ -3,6 +3,7 @@ published: true
 layout: default-theme-wet-boew-en
 title: Design decision
 description: Design decision followed by WET.
+written_lang: en
 hide_breadcrumb: false
 date_modified: 2020-02-10
 ---
@@ -16,12 +17,12 @@ If you have any questions in regards of one of the above design decision, please
 <section>
 	<h2>Current</h2>
 	<ul>
-		<li><a href="1.html">Design decision 1: Use SVG with img element instead of object</a> (Pattern)</li>
-		<li><a href="2.html">Design decision 2: Browser supported</a> (Support scope)</li>
-		<li><a href="3.html">Design decision 3: WET API/Blueprint</a></li>
-		<li><a href="4.html">Design decision 4: Basic HTML mode and progressive enhancement</a></li>
-		<li><a href="5.html">Design Decision 5: Decision on repository migration</a></li>
-		<li><a href="6.html">Design Decision 6: Versioning</a></li>
+		<li><a href="1-fr.html">Design decision 1: Use SVG with img element instead of object</a> (Pattern)</li>
+		<li><a href="2-fr.html">Design decision 2: Browser supported</a> (Support scope)</li>
+		<li><a href="3-fr.html">Design decision 3: WET API/Blueprint</a></li>
+		<li><a href="4-fr.html">Design decision 4: Basic HTML mode and progressive enhancement</a></li>
+		<li><a href="5-fr.html">Design Decision 5: Decision on repository migration</a></li>
+		<li><a href="6-fr.html">Design Decision 6: Versioning</a></li>
 		<li><a href="8.html">Design decision 8: Dual implementation of structured data with JSON-LD and RDFa Lite in a single web page</a></li>
 		<li><a href="9.html">Design decision 9: Release early, release often (<abbr title="Short-term release">STR</abbr>)</a></li>
 		<li><a href="10.html">Design decision 10: Provisional feature</a></li>
@@ -102,7 +103,7 @@ If you have any questions in regards of one of the above design decision, please
 <section>
 	<h2>Obsolete</h2>
 	<ul>
-		<li><a href="7.html">Design Decision 7: Experimental feature</a> (Replaced by <a href="10.html">Design decision 10: Provisional feature</a>)</li>
+		<li><a href="7-fr.html">Design Decision 7: Experimental feature</a> (Replaced by <a href="10.html">Design decision 10: Provisional feature</a>)</li>
 	</ul>
 	<p>Process overview to obsolete a design decision. It can be obsoleted if they are not valid when considering the latest common and best practice. In order to obsolete a decision, an evidence would need to be documented and presented explaining why it is not valid accompanied with recommendation of a process to migrate content that was following the obsoleted design decision. You can initiate the conversation by submitting a new issue on Github in the wet-boew main repository.</p>
 

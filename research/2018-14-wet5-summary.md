@@ -3,7 +3,9 @@ published: true
 layout: default-theme-wet-boew-en
 title: 2018-14 - WET 5 Summary
 description: Summary of the WET5 project
-modified: 2018-11-30
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-02-10
 ---
 
 Summary of the WET5 project. Questions or comments can be share by [opening new issue](https://github.com/wet-boew/wet-boew/issues/new).

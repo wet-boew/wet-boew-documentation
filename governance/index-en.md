@@ -3,7 +3,9 @@ published: true
 layout: default-theme-wet-boew-en
 title: Internal project gouvernance - WET-BOEW documentatin
 description: Brief description of governance behind WET
-modified: 2018-02-13
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-02-10
 ---
 
 If you have any question please submit an github issue. If you want to participate, reach out [Pierre Dubois](https://github.com/duboisp) where you can find he's contact information on GCcollab, on GCconnect or send me a direct message on twitter.

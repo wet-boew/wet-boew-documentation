@@ -3,11 +3,12 @@ published: true
 layout: default-theme-wet-boew-en
 title: Combobox test 6 - Datalist JSON suggestion - Research and finding
 description: Combobox and fieldflow integration, early prototype
-modified: 2018-04-09
-
-script_pgbttm_src: //wet-boew.github.io/themes-dist/GCWeb/GCWeb/js/theme.min.js
-script_pgbttm2_src: 2018-assets/1-datalist-combobox.js
-script_pgbttm3_src: //wet-boew.github.io/themes-dist/GCWeb/wet-boew/js/deps/jsonpointer.js
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-02-10
+script_src: //wet-boew.github.io/themes-dist/GCWeb/GCWeb/js/theme.min.js
+script_src2: 2018-assets/1-datalist-combobox.js
+script_src3: //wet-boew.github.io/themes-dist/GCWeb/wet-boew/js/deps/jsonpointer.js
 ---
 
 Combobox and fieldflow integration, early prototype. It include the fake arrow beside the input.
@@ -87,7 +88,7 @@ Combobox and fieldflow integration, early prototype. It include the fake arrow b
 
 Need to be set on the "combobox"
 
-  data-wb-fieldflow-origin="{{option.dataset.wbFieldFlowOrigin}}" data-wb-fieldflow-source="{{option.dataset.wbFieldFlowSource}}" 
+  data-wb-fieldflow-origin="{{option.dataset.wbFieldFlowOrigin}}" data-wb-fieldflow-source="{{option.dataset.wbFieldFlowSource}}"
 
 -->
 
@@ -230,7 +231,7 @@ $doc.on( "change", "[role=combobox]", function( event, data ) {
 
 Need to be set on the "combobox"
 
-  data-wb-fieldflow-origin="{{option.dataset.wbFieldFlowOrigin}}" data-wb-fieldflow-source="{{option.dataset.wbFieldFlowSource}}" 
+  data-wb-fieldflow-origin="{{option.dataset.wbFieldFlowOrigin}}" data-wb-fieldflow-source="{{option.dataset.wbFieldFlowSource}}"
 
 --&gt;
 

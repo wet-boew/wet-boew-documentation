@@ -2,7 +2,9 @@
 published: true
 layout: default-theme-wet-boew-en
 title: 2020-35 - Accessibility assesment of Wet-Boew Homepage
-modified: 2020-01-24
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-02-10
 ---
 ### Evaluate the accessibility conformity of the homepage of Wet-Boew
 <table>

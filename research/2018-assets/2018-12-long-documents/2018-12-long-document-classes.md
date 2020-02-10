@@ -1,10 +1,11 @@
 ---
 published: true
 layout: default-theme-wet-boew-en
-filename_fr:
 title: Research and finding - Web Experience Toolkit (WET) documentation
-description: Details on the research on best approaches on long documents 
-modified: 2018-09-22
+description: Details on the research on best approaches on long documents
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-02-10
 ---
 
 # Different types of long document

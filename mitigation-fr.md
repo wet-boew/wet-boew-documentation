@@ -1,8 +1,9 @@
 ---
 published: true
-layout: default-theme-wet-boew-en
+layout: default-theme-wet-boew-fr
 title: Mitigation plan - Web Experience Toolkit (WET) documentation
 description: Mitigation plan - Web Experience Toolkit (WET) documentation
+written_lang: en
 date_modified: 2020-02-10
 ---
 

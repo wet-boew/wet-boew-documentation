@@ -3,7 +3,9 @@ published: true
 layout: default-theme-wet-boew-en
 title: 2018-3 - WET 5 kick off
 description: Documentations material presented at the WET 5 kick off on May 10, 2018
-modified: 2018-05-10
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-02-10
 ---
 
 

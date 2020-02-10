@@ -3,7 +3,9 @@ published: true
 layout: default-theme-wet-boew-en
 title: Save HTML table into CSV
 description: Download an HTML table as a CSV file
-modified: 2018-08-22
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-02-10
 ---
 
 Download an HTML table as a CSV file.

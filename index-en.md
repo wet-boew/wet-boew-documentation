@@ -1,10 +1,9 @@
 ---
 published: true
 layout: default-theme-wet-boew-en
-filename_fr: index-fr
 title: Web Experience Toolkit (WET) documentation
 description: Web Experience Toolkit (WET) documentation
-modified: 2019-06-20
+date_modified: 2020-02-10
 ---
 
 * Roadmap

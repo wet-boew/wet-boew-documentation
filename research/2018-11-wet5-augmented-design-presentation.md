@@ -3,7 +3,9 @@ published: true
 layout: default-theme-wet-boew-en
 title: WET 5 - Augmented Design - Early prototype presentation
 description: Exploration 1 - Headless framework, component interaction driven from markup, data first design
-modified: 2018-09-06
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-02-10
 ---
 Web Experience Toolkit (WET) Next  - v5.0
 

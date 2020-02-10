@@ -3,7 +3,9 @@ published: true
 layout: default-theme-wet-boew-en
 title: Meeting summary - WET-BOEW documentation
 description: Summary of what has been discussed at the meeting.
-modified: 2019-12-18
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-02-10
 ---
 
 Summary of what has been discussed at the meeting.

@@ -3,7 +3,9 @@ published: true
 layout: default-theme-wet-boew-en
 title: Your Results
 description: Exploration of a chat like design pattern
-modified: 2019-02-01
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-02-10
 ---
 
 Prototype 4: With Data.

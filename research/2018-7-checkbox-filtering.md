@@ -3,7 +3,9 @@ published: true
 layout: default-theme-wet-boew-en
 title: 2018-7 - Checkbox filtering
 description: Developper notes on adding a checkbox filtering capability in WET
-modified: 2018-08-17
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-02-10
 ---
 
 Developper notes on adding a checkbox filtering capability in WET

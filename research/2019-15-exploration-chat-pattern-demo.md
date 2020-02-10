@@ -3,7 +3,9 @@ published: true
 layout: default-theme-wet-boew-en
 title: 2019-15 - Chat Wizard
 description: Chat Wizard Demo
-modified: 2019-02-12
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-02-10
 ---
 
 {::nomarkdown}

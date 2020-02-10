@@ -3,6 +3,7 @@ published: true
 layout: default-theme-wet-boew-en
 title: Research and finding - Web Experience Toolkit (WET) documentation
 description: List of ongoing research and findings related to WET and it's features
+written_lang: en
 date_modified: 2020-02-10
 ---
 

@@ -2,7 +2,9 @@
 published: true
 layout: default-theme-wet-boew-en
 title: Short review of https://wet-boew.github.io/themes-dist/GCWeb/institution-contact-en.html on its accessibility and usability for people with disabilities
-modified: 2020-01-23
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-02-10
 ---
 
 **Disclaimer:** This document is a short, follow up review. Its main purpose is to raise awareness for education and training purposes. This document is also meant to help to bring the product to be fully Web Accessible for all users including people with disabilities.

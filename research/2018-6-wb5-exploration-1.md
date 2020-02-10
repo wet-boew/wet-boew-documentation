@@ -3,7 +3,9 @@ published: true
 layout: default-theme-wet-boew-en
 title: WET 5 - Exploration 1
 description: Exploration 1 - Headless framework, component interaction driven from markup, data first design
-modified: 2018-07-27
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-02-10
 ---
 
 The current exploratory direction for WET 5 is that of a **data-first design**. This design philosophy focuses on the key data of a page first, and the presentation of that data second. With data defined first, different HTML/CSS structures and themes may be applied for different platforms.

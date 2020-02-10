@@ -2,12 +2,13 @@
 published: true
 layout: default-theme-wet-boew-en
 title: Combobox prototype 7 - Datalist JSON suggestion - Research and finding
-description: Prototype using a reactive system 
-modified: 2018-04-09
-
-script_pgbttm_src: //wet-boew.github.io/themes-dist/GCWeb/GCWeb/js/theme.min.js
-script_pgbttm2_src: 2018-assets/1-datalist-combobox-2.js
-script_pgbttm3_src: //wet-boew.github.io/themes-dist/GCWeb/wet-boew/js/deps/jsonpointer.js
+description: Prototype using a reactive system
+languages: false
+hide_breadcrumb: false
+date_modified: 2020-02-10
+script_src: //wet-boew.github.io/themes-dist/GCWeb/GCWeb/js/theme.min.js
+script_src2: 2018-assets/1-datalist-combobox-2.js
+script_src3: //wet-boew.github.io/themes-dist/GCWeb/wet-boew/js/deps/jsonpointer.js
 ---
 
 Prototype of an ```select``` box transformed into a customized ```combobox``` with the listbox pattern by using a reactive experimental system.
@@ -70,10 +71,10 @@ Prototype of an ```select``` box transformed into a customized ```combobox``` wi
 		<div data-wb5-bind="id@popupId" role="listbox" class="hidden">
 			<template data-slot-elm="" data-wb5-template="sub-template-listbox">
 				<ul class="list-unstyled">
-					<li 
-						class="brdr-bttm" 
-						role="option" 
-						data-wb5-for="option in options" 
+					<li
+						class="brdr-bttm"
+						role="option"
+						data-wb5-for="option in options"
 						data-wb5-if="!parent.filter.length || option.value.indexOf(parent.filter) !== -1"
 						data-wb5-on="select@select(option.value); live@parent.nbdispItem(wb-nbNode)" >{{ option.textContent }}</li>
 				</ul>
@@ -135,10 +136,10 @@ Prototype of an ```select``` box transformed into a customized ```combobox``` wi
 		&lt;div data-wb5-bind="id@popupId" role="listbox" class="hidden"&gt;
 			&lt;template data-slot-elm="" data-wb5-template="sub-template-listbox"&gt;
 				&lt;ul class="list-unstyled"&gt;
-					&lt;li 
-						class="brdr-bttm" 
-						role="option" 
-						data-wb5-for="option in options" 
+					&lt;li
+						class="brdr-bttm"
+						role="option"
+						data-wb5-for="option in options"
 						data-wb5-if="!parent.filter.length || option.value.indexOf(parent.filter) !== -1"
 						data-wb5-on="select@select(option.value); live@parent.nbdispItem(wb-nbNode)" &gt;{{ option.textContent }}&lt;/li&gt;
 				&lt;/ul&gt;
