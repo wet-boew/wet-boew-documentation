@@ -3,7 +3,7 @@ published: true
 layout: default-theme-wet-boew-en
 title: 2019-19 - Add to calendar
 description: Add to calendar
-modified: 2019-10-23
+modified: 2020-02-11
 ---
 
 **Project lead:** Eric Guitard
@@ -32,7 +32,7 @@ Support Schema.org vocabulary for Event thing marked by using RDFa Lite
 
 * Clickable expandable collapsable item to preview the calendar link options
 
-### [iCal Event Maker - create iCalendar (.ics)] (https://ical.marudot.com/)
+### [iCal Event Maker - create iCalendar (.ics)](https://ical.marudot.com/)
 
 ## Related standard and references
 
@@ -50,10 +50,12 @@ Support Schema.org vocabulary for Event thing marked by using RDFa Lite
 	* Using a checkbox input type with the aspect of a button.
 	* Using list items inside a details summary tag.
 * After few discussions and testing, a recommandation for creating a blob for the .ics file via the wb.download functionality from the existing action manager WET pluggin as been considered. 
+* In the CSS we have used display: inline-block instead of max-width: max-content since it's working in both IE and FireFox 
 
 ## Wireframe and template
 
 * [Prototype 1 - Include 2 initial design patterns:](../wet-boew-documentation/research/2019-19-add-calendar-prototype-1.html)
 * [Prototype 2 - created using details summary:](../wet-boew-documentation/research/2019-19-add-calendar-prototype-2.html)
-* [Prototype 2 - Latest version - cleaner script using JQuery:](../wet-boew-documentation/research/2019-19-add-calendar-prototype-3.html)
+* [Prototype 3 - Latest version - cleaner script using JQuery:](../wet-boew-documentation/research/2019-19-add-calendar-prototype-3.html)
+* [Prototype 4 - new class "wb-addcal-location" / no "property location" element:](../wet-boew-documentation/research/2019-19-add-calendar-prototype-3.html)
 

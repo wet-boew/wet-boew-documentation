@@ -47,9 +47,8 @@ input[type="checkbox"]:checked + .wb-addcal::after {
     content: "–";
 }
 
-.max-content {
-    display: inline-block;
-    position: relative;
+.max-content,.max-content[open]{
+	display: inline-block !important;
 }
 
 /* Overlay default style */

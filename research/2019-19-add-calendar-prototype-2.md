@@ -46,12 +46,9 @@ Prototype of an ```Add to Calendar``` with the details summary pattern and Schem
 	cursor: default;
 }
 
-.max-content {
-    display: inline-block;
-    position: relative;
+.max-content,.max-content[open]{
+	display: inline-block !important;
 }
-
-
 
 </style>
 
