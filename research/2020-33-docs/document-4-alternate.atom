@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://www.gov.uk/foreign-travel-advice</id>
+  <link rel="alternate" type="text/html" href="https://www.gov.uk/foreign-travel-advice"/>
+  <link rel="self" type="application/atom+xml" href="https://www.gov.uk/foreign-travel-advice.atom"/>
+  <title>Travel Advice Summary</title>
+  <updated>2020-02-17T17:28:53+00:00</updated>
+  <author>
+    <name>GOV.UK</name>
+  </author>
+  <entry>
+    <id>https://www.gov.uk/foreign-travel-advice/egypt#2020-02-17T17:28:53+00:00</id>
+    <updated>2020-02-17T17:28:53+00:00</updated>
+    <link rel="alternate" type="text/html" href="https://www.gov.uk/foreign-travel-advice/egypt"/>
+    <title>Egypt</title>
+    <link rel="self" type="application/atom+xml" href="https://www.gov.uk/foreign-travel-advice/egypt.atom"/>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+<p>Health - addition of information and advice on coronavirus</p>      </div>
+    </summary>
+  </entry>
+  <entry>
+    <id>https://www.gov.uk/foreign-travel-advice/mongolia#2020-02-17T17:14:53+00:00</id>
+    <updated>2020-02-17T17:14:53+00:00</updated>
+    <link rel="alternate" type="text/html" href="https://www.gov.uk/foreign-travel-advice/mongolia"/>
+    <title>Mongolia</title>
+    <link rel="self" type="application/atom+xml" href="https://www.gov.uk/foreign-travel-advice/mongolia.atom"/>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+<p>Health (Coronavirus) - update to information on foreign nationals with tourism visas entering from a country other than China</p>      </div>
+    </summary>
+  </entry>
+  <entry>
+    <id>https://www.gov.uk/foreign-travel-advice/usa#2020-02-17T17:00:35+00:00</id>
+    <updated>2020-02-17T17:00:35+00:00</updated>
+    <link rel="alternate" type="text/html" href="https://www.gov.uk/foreign-travel-advice/usa"/>
+    <title>USA</title>
+    <link rel="self" type="application/atom+xml" href="https://www.gov.uk/foreign-travel-advice/usa.atom"/>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+<p>Summary - addition of information and advice following heavy rainfall in Mississippi</p>      </div>
+    </summary>
+  </entry>
+  <entry>
+    <id>https://www.gov.uk/foreign-travel-advice/china#2020-02-17T16:39:23+00:00</id>
+    <updated>2020-02-17T16:39:23+00:00</updated>
+    <link rel="alternate" type="text/html" href="https://www.gov.uk/foreign-travel-advice/china"/>
+    <title>China</title>
+    <link rel="self" type="application/atom+xml" href="https://www.gov.uk/foreign-travel-advice/china.atom"/>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+<p>Summary - addition of information on requirements in some cities, including Beijing, for people returning from travel to undergo 14 days of isolation</p>      </div>
+    </summary>
+  </entry>
+  <entry>
+    <id>https://www.gov.uk/foreign-travel-advice/philippines#2020-02-17T15:14:47+00:00</id>
+    <updated>2020-02-17T15:14:47+00:00</updated>
+    <link rel="alternate" type="text/html" href="https://www.gov.uk/foreign-travel-advice/philippines"/>
+    <title>Philippines</title>
+    <link rel="self" type="application/atom+xml" href="https://www.gov.uk/foreign-travel-advice/philippines.atom"/>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+<p>Natural disasters (Volcanoes) - updated information on the lake Taal volcano</p>      </div>
+    </summary>
+  </entry>
+  <entry>
+    <id>https://www.gov.uk/foreign-travel-advice/hong-kong#2020-02-17T14:25:26+00:00</id>
+    <updated>2020-02-17T14:25:26+00:00</updated>
+    <link rel="alternate" type="text/html" href="https://www.gov.uk/foreign-travel-advice/hong-kong"/>
+    <title>Hong Kong</title>
+    <link rel="self" type="application/atom+xml" href="https://www.gov.uk/foreign-travel-advice/hong-kong.atom"/>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+<p>Health (Coronavirus) - update to information on the conditions of the 14-day mandatory home quarantine period for new arrivals who have been to mainland China in the previous 14 days</p>      </div>
+    </summary>
+  </entry>
+  <entry>
+    <id>https://www.gov.uk/foreign-travel-advice/greece#2020-02-17T14:13:42+00:00</id>
+    <updated>2020-02-17T14:13:42+00:00</updated>
+    <link rel="alternate" type="text/html" href="https://www.gov.uk/foreign-travel-advice/greece"/>
+    <title>Greece</title>
+    <link rel="self" type="application/atom+xml" href="https://www.gov.uk/foreign-travel-advice/greece.atom"/>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+<p>Summary - addition of link to advice page for the Olympiacos v Arsenal Europa League match on Thursday 20 February 2020.</p>      </div>
+    </summary>
+  </entry>
+  <entry>
+    <id>https://www.gov.uk/foreign-travel-advice/gabon#2020-02-17T13:45:16+00:00</id>
+    <updated>2020-02-17T13:45:16+00:00</updated>
+    <link rel="alternate" type="text/html" href="https://www.gov.uk/foreign-travel-advice/gabon"/>
+    <title>Gabon</title>
+    <link rel="self" type="application/atom+xml" href="https://www.gov.uk/foreign-travel-advice/gabon.atom"/>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+<p>This advice has been reviewed in full with factual updates to Local laws and customs on same-sex sexual relations</p>      </div>
+    </summary>
+  </entry>
+  <entry>
+    <id>https://www.gov.uk/foreign-travel-advice/equatorial-guinea#2020-02-17T13:34:59+00:00</id>
+    <updated>2020-02-17T13:34:59+00:00</updated>
+    <link rel="alternate" type="text/html" href="https://www.gov.uk/foreign-travel-advice/equatorial-guinea"/>
+    <title>Equatorial Guinea</title>
+    <link rel="self" type="application/atom+xml" href="https://www.gov.uk/foreign-travel-advice/equatorial-guinea.atom"/>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+<p>This advice has been reviewed in full and reissued with minor editorial amendments</p>      </div>
+    </summary>
+  </entry>
+  <entry>
+    <id>https://www.gov.uk/foreign-travel-advice/turkmenistan#2020-02-17T13:05:40+00:00</id>
+    <updated>2020-02-17T13:05:40+00:00</updated>
+    <link rel="alternate" type="text/html" href="https://www.gov.uk/foreign-travel-advice/turkmenistan"/>
+    <title>Turkmenistan</title>
+    <link rel="self" type="application/atom+xml" href="https://www.gov.uk/foreign-travel-advice/turkmenistan.atom"/>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+<p>Health - addition of information and advice on measures in place in response to coronavirus</p>      </div>
+    </summary>
+  </entry>
+  <entry>
+    <id>https://www.gov.uk/foreign-travel-advice/iceland#2020-02-17T11:50:33+00:00</id>
+    <updated>2020-02-17T11:50:33+00:00</updated>
+    <link rel="alternate" type="text/html" href="https://www.gov.uk/foreign-travel-advice/iceland"/>
+    <title>Iceland</title>
+    <link rel="self" type="application/atom+xml" href="https://www.gov.uk/foreign-travel-advice/iceland.atom"/>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+<p>Summary - removal of information on severe weather on 14 February</p>      </div>
+    </summary>
+  </entry>
+  <entry>
+    <id>https://www.gov.uk/foreign-travel-advice/south-korea#2020-02-17T10:19:56+00:00</id>
+    <updated>2020-02-17T10:19:56+00:00</updated>
+    <link rel="alternate" type="text/html" href="https://www.gov.uk/foreign-travel-advice/south-korea"/>
+    <title>South Korea</title>
+    <link rel="self" type="application/atom+xml" href="https://www.gov.uk/foreign-travel-advice/south-korea.atom"/>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+<p>Health (Coronavirus) - update to information on flights between China and a number of other countries</p>      </div>
+    </summary>
+  </entry>
+  <entry>
+    <id>https://www.gov.uk/foreign-travel-advice/solomon-islands#2020-02-17T02:29:30+00:00</id>
+    <updated>2020-02-17T02:29:30+00:00</updated>
+    <link rel="alternate" type="text/html" href="https://www.gov.uk/foreign-travel-advice/solomon-islands"/>
+    <title>Solomon Islands</title>
+    <link rel="self" type="application/atom+xml" href="https://www.gov.uk/foreign-travel-advice/solomon-islands.atom"/>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+<p>Latest update: Entry requirements - clarification of travel restrictions in response to coronavirus</p>      </div>
+    </summary>
+  </entry>
+  <entry>
+    <id>https://www.gov.uk/foreign-travel-advice/costa-rica#2020-02-14T17:02:08+00:00</id>
+    <updated>2020-02-14T17:02:08+00:00</updated>
+    <link rel="alternate" type="text/html" href="https://www.gov.uk/foreign-travel-advice/costa-rica"/>
+    <title>Costa Rica</title>
+    <link rel="self" type="application/atom+xml" href="https://www.gov.uk/foreign-travel-advice/costa-rica.atom"/>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+<p>Summary - addition of information and advice on health screening in response to coronavirus;  editorial amendments to Health and Safety and security section</p>      </div>
+    </summary>
+  </entry>
+  <entry>
+    <id>https://www.gov.uk/foreign-travel-advice/samoa#2020-02-14T16:48:47+00:00</id>
+    <updated>2020-02-14T16:48:47+00:00</updated>
+    <link rel="alternate" type="text/html" href="https://www.gov.uk/foreign-travel-advice/samoa"/>
+    <title>Samoa</title>
+    <link rel="self" type="application/atom+xml" href="https://www.gov.uk/foreign-travel-advice/samoa.atom"/>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+<p>Health and Summary - removal of information on a recent measles outbreak</p>      </div>
+    </summary>
+  </entry>
+  <entry>
+    <id>https://www.gov.uk/foreign-travel-advice/barbados#2020-02-14T16:42:57+00:00</id>
+    <updated>2020-02-14T16:42:57+00:00</updated>
+    <link rel="alternate" type="text/html" href="https://www.gov.uk/foreign-travel-advice/barbados"/>
+    <title>Barbados</title>
+    <link rel="self" type="application/atom+xml" href="https://www.gov.uk/foreign-travel-advice/barbados.atom"/>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+<p>Health and Summary - addition of information on precautionary measures in place in response to coronavirus</p>      </div>
+    </summary>
+  </entry>
+  <entry>
+    <id>https://www.gov.uk/foreign-travel-advice/iran#2020-02-14T16:14:14+00:00</id>
+    <updated>2020-02-14T16:14:14+00:00</updated>
+    <link rel="alternate" type="text/html" href="https://www.gov.uk/foreign-travel-advice/iran"/>
+    <title>Iran</title>
+    <link rel="self" type="application/atom+xml" href="https://www.gov.uk/foreign-travel-advice/iran.atom"/>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+<p>The FCO now advise against all but essential travel to Iran for British mono nationals (except certain border areas where the FCO continue to advise against all travel); the FCO continue to advise against all travel to Iran for British-Iranian dual nationals</p>      </div>
+    </summary>
+  </entry>
+  <entry>
+    <id>https://www.gov.uk/foreign-travel-advice/france#2020-02-14T15:36:00+00:00</id>
+    <updated>2020-02-14T15:36:00+00:00</updated>
+    <link rel="alternate" type="text/html" href="https://www.gov.uk/foreign-travel-advice/france"/>
+    <title>France</title>
+    <link rel="self" type="application/atom+xml" href="https://www.gov.uk/foreign-travel-advice/france.atom"/>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+<p>Safety and security (Industrial action) - addition of information on calls for strike action on Monday 17 February</p>      </div>
+    </summary>
+  </entry>
+  <entry>
+    <id>https://www.gov.uk/foreign-travel-advice/south-sudan#2020-02-14T15:23:27+00:00</id>
+    <updated>2020-02-14T15:23:27+00:00</updated>
+    <link rel="alternate" type="text/html" href="https://www.gov.uk/foreign-travel-advice/south-sudan"/>
+    <title>South Sudan</title>
+    <link rel="self" type="application/atom+xml" href="https://www.gov.uk/foreign-travel-advice/south-sudan.atom"/>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+<p>This advice has been reviewed in full with amendments to Safety and security (Crime, Political situation) and the Summary</p>      </div>
+    </summary>
+  </entry>
+  <entry>
+    <id>https://www.gov.uk/foreign-travel-advice/papua-new-guinea#2020-02-14T14:15:25+00:00</id>
+    <updated>2020-02-14T14:15:25+00:00</updated>
+    <link rel="alternate" type="text/html" href="https://www.gov.uk/foreign-travel-advice/papua-new-guinea"/>
+    <title>Papua New Guinea</title>
+    <link rel="self" type="application/atom+xml" href="https://www.gov.uk/foreign-travel-advice/papua-new-guinea.atom"/>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+<p>Entry requirements (Visas) - addition of information to reflect that some airlines might require evidence you have a visa to enter Papua New Guinea prior to travel</p>      </div>
+    </summary>
+  </entry>
+</feed>

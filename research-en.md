@@ -23,11 +23,15 @@ List of finding and ongoing research related to WET and it's features
 * [2018-6 - WB5 exploration 1](research/2018-6-wb5-exploration-1.html)
 	* Status: In slow progress
 * [2019-19 - Add to calendar](research/2019-19-add-calendar.html)
-	* Status: In slow progress	
+	* Status: In slow progress
 * [2019-15 - Exploration of a chat like design pattern](research/2019-15-exploration-chat-pattern.html)
 	* Status: In slow progress
 * [2019-17 - Réctification du comportement du ```input[type=date]```](research/2019-17-datepicker.html)
 	* Status: Going stale
+
+## Analysis in progress - report incomplete
+
+* [2020-33 - Analysis of double h1 impact on search result](research/2020-33-double-h1-impact-analysis.html)
 
 ## Stale/on hold
 
