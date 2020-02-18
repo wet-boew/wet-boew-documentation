@@ -1,12 +1,12 @@
 ---
 published: true
 layout: default-theme-wet-boew-en
-title: Add to Calendar prototype 2 - Details summary and schema.org/event
+title: Add to Calendar prototype 2 - Details summary and schema.org/event - new class wb-addcal-location for when the property location is not used
 description: Prototype 2
-modified: 2020-02-03
+modified: 2020-02-10
 
 script_pgbttm_src: //wet-boew.github.io/themes-dist/GCWeb/GCWeb/js/theme.min.js
-script_pgbttm2_src: 2019-assets/add-to-calendar/add-to-calendar-20200206.js
+script_pgbttm2_src: 2019-assets/add-to-calendar/add-to-calendar.js
 script_pgbttm3_src: //wet-boew.github.io/themes-dist/GCWeb/wet-boew/js/deps/jsonpointer.js
 ---
 
@@ -63,15 +63,7 @@ Prototype of an ```Add to Calendar``` with the details summary pattern and Schem
 				<p>Start date: <time property="startDate" content="20200127T120000Z" datetime="2020-01-27 7:00">Mon, 27 Jan 2020, 7:00 AM EST</time><br>
 				End date: <time property="endDate" content="20200127T170000Z" datetime="2020-01-29 12:00">Wed, 29 Jan 2020, 12:00 PM EST</time></p>
 				<h3>Location</h3>
-				<div class="event-venue mrgn-bttm-md" property="location" typeof="Place">
-					<span property="name">Shaw Centre</span>
-					<div class="address" property="address" typeof="PostalAddress">
-						<span property="streetAddress">55 Colonel By Drive</span><br>
-						<span property="addressLocality">Ottawa</span>,
-						<span property="addressRegion">ON</span>
-						<span property="postalCode">K1N 9J2</span>
-					</div>
-				</div>
+				<P><a href="https://www.historymuseum.ca/" class="wb-addcal-location">Canadian <span lang="en">Museum</a< of History</a></p>
 			</div>
 		</section>	
 	</div>
