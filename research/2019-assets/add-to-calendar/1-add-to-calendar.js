@@ -1,12 +1,3 @@
-/**
- * @title WET-BOEW Add to calendar
- * @overview Create an add to calendar button for an event
- * @license wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html
- * @author @ricokola
- */
-( function( $, wb ) {
-"use strict";
-
 /*
  * Variable and function definitions.
  * These are global to the plugin - meaning that they will be initialized once per page,
@@ -38,9 +29,28 @@ var componentName = "wb-addcal",
 				eventData = {},
 				place = false,
 				googleLink = "",
-				icsLink = "";
+				icsLink = "",
+				i18nDict = {
+					en: {
+						"addcal-addto": "Add to",
+						"addcal-calendar": "calendar",
+						"addcal-ical": "iCal format (iPhone, Outlook...)"
+					},
+					fr: {
+						"addcal-addto": "Ajouter au",
+						"addcal-calendar": "calendrier",
+						"addcal-ical":"Format iCal (iPhone, Outlook....)"
+					}
+				};
 			
-				
+			// Initiate dictionary
+			i18nDict = i18nDict[ $( "html" ).attr( "lang" ) || "en" ];
+			i18nDict = {
+				addto: i18nDict[ "addcal-addto" ],
+				calendar: i18nDict[ "addcal-calendar" ],
+				ical: i18nDict[ "addcal-ical" ]
+			};
+		
 			for ( i=0; i < i_len; i++ ) {
 				switch ( properties[ i ].getAttribute( "property" ) ) {
 					case "location":
@@ -107,7 +117,7 @@ var componentName = "wb-addcal",
 			icsLink = "BEGIN:VCALENDAR\nVERSION:2.0\nBEGIN:VEVENT" + icsLink + "\nEND:VEVENT\nEND:VCALENDAR";
 
 			//Create add details summary to the wb-addcal event and initiate the unordered list
-			$elm.append("<details class='max-content " + componentName + "-buttons'><summary>Add to calendar</summary><ul class='list-unstyled mrgn-bttm-0 mrgn-tp-sm'><li><a class='btn btn-link btn-lg mrgn-top-lg' href='" + googleLink + "'><span class='fab fa-google mrgn-rght-md'></span>Google<span class='sr-only'>Calendar</span></a></li><li><button class='btn btn-link btn-lg' data-" + componentName + "-ics='" + icsLink + "'><span class='fa fa-calendar mrgn-rght-md'></span>iCalendar format (iPhone, Outlook...)<span class='sr-only'>Calendar</span></button></li>");
+			$elm.append("<details class='max-content " + componentName + "-buttons'><summary>" + i18nDict.addto + " " + i18nDict.calendar +  "</summary><ul class='list-unstyled mrgn-bttm-0 mrgn-tp-sm'><li><a class='btn btn-link btn-lg mrgn-top-lg' href='" + googleLink + "'><span class='fab fa-google mrgn-rght-md'></span>Google<span class='sr-only'>" + i18nDict.calendar +"</span></a></li><li><button class='btn btn-link btn-lg' data-" + componentName + "-ics='" + icsLink + "'><span class='fa fa-calendar mrgn-rght-md'></span>" + i18nDict.ical + "<span class='sr-only'>Calendar</span></button></li>");
 				
 			//Set click action on Apple and Other button links
 			var linkItem = elm.querySelectorAll( selector + "-buttons button" );
