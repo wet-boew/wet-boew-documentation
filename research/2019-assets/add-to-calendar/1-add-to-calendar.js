@@ -1,3 +1,12 @@
+/**
+ * @title WET-BOEW Add to calendar
+ * @overview Create an add to calendar button for an event
+ * @license wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html
+ * @author @ricokola
+ */
+( function( $, wb ) {
+"use strict";
+
 /*
  * Variable and function definitions.
  * These are global to the plugin - meaning that they will be initialized once per page,
@@ -5,7 +14,7 @@
  * variables that are common to all instances of the plugin on a page.
  */
 var componentName = "wb-addcal",
-	selector = "." + componentName,
+	selector = ".provisional." + componentName,
 	initEvent = "wb-init." + componentName,
 	$document = wb.doc,
 
@@ -108,7 +117,7 @@ var componentName = "wb-addcal",
 			}
 			
 			if ( !place ) {
-				place = elm.querySelector( selector + "-location" ).innerText;
+				place = elm.querySelector( "." + componentName + "-location" ).innerText;
 				googleLink += "&location=" + place;
 				icsLink += "\nLOCATION:" + place;
 			}
@@ -120,7 +129,7 @@ var componentName = "wb-addcal",
 			$elm.append("<details class='max-content " + componentName + "-buttons'><summary>" + i18nDict.addto + " " + i18nDict.calendar +  "</summary><ul class='list-unstyled mrgn-bttm-0 mrgn-tp-sm'><li><a class='btn btn-link btn-lg mrgn-top-lg' href='" + googleLink + "'><span class='fab fa-google mrgn-rght-md'></span>Google<span class='sr-only'>" + i18nDict.calendar +"</span></a></li><li><button class='btn btn-link btn-lg' data-" + componentName + "-ics='" + icsLink + "'><span class='fa fa-calendar mrgn-rght-md'></span>" + i18nDict.ical + "<span class='sr-only'>Calendar</span></button></li>");
 				
 			//Set click action on Apple and Other button links
-			var linkItem = elm.querySelectorAll( selector + "-buttons button" );
+			var linkItem = elm.querySelectorAll( "." + componentName + "-buttons button" );
 			i_len = linkItem.length;
 			
 			for ( i=0; i < i_len; i++ ) {
