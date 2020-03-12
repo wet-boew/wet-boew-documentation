@@ -32,13 +32,17 @@ var componentName = "wb-addcal",
 
 		if ( elm ) {
 			
+			wb.ready( $( elm ), componentName );
+			
 			var properties = elm.querySelectorAll( "[property]" ),
 				i,
 				i_len = properties.length,
 				eventData = {},
-				place = false,
-				googleLink = "",
-				icsLink = "",
+				place, // false
+				prop_cache,
+				prop_val_cache,
+				googleLink = "https://www.google.com/calendar/render?action=TEMPLATE",
+				icsLink = "BEGIN:VCALENDAR\nVERSION:2.0\nBEGIN:VEVENT",
 				i18nDict = {
 					en: {
 						"addcal-addto": "Add to",
@@ -61,57 +65,58 @@ var componentName = "wb-addcal",
 			};
 		
 			for ( i=0; i < i_len; i++ ) {
-				switch ( properties[ i ].getAttribute( "property" ) ) {
+				prop_cache = properties[ i ];
+				switch ( prop_cache.getAttribute( "property" ) ) {
 					case "location":
 						googleLink += "&location=";
 						icsLink += "\nLOCATION:";
 						place = true;
 						break;
 					case "name":
-						if ( $( properties[ i ] ).parentsUntil( ( ".wb-addcal" ), "[typeof=Place]" ).length ) {
-							eventData.place = properties[ i ].innerText;
-							googleLink += eventData.place;
-							icsLink += eventData.place;
+						if ( $( prop_cache ).parentsUntil( ( ".wb-addcal" ), "[typeof=Place]" ).length ) {
+							prop_val_cache = prop_cache.innerText;
+							googleLink += prop_val_cache;
+							icsLink += prop_val_cache;
 						} else {
-							eventData.title = properties[ i ].innerText;
-							googleLink += "&text=" + eventData.title;
-							icsLink += "\nSUMMARY:" + eventData.title;
+							prop_val_cache = prop_cache.innerText;
+							googleLink += "&text=" + prop_val_cache;
+							icsLink += "\nSUMMARY:" + prop_val_cache;
 						}
 						break;
 					case "description":
-						eventData.description = properties[ i ].innerText;
-						googleLink += "&details=" + eventData.description;
-						icsLink += "\nDESCRIPTION:" + eventData.description.replace( /(\r\n|\n|\r)/gm, " " );
+						prop_val_cache = prop_cache.innerText;
+						googleLink += "&details=" + prop_val_cache;
+						icsLink += "\nDESCRIPTION:" + prop_val_cache.replace( /(\r\n|\n|\r)/gm, " " );
 						break;
 					case "startDate":
-						eventData.startDate = properties[ i ].getAttribute( "content" );
-						googleLink += "&dates=" + eventData.startDate;
-						icsLink += "\nDTSTART:" + eventData.startDate;
+						prop_val_cache = prop_cache.getAttribute( "content" );
+						googleLink += "&dates=" + prop_val_cache;
+						icsLink += "\nDTSTART:" + prop_val_cache;
 						break;
 					case "endDate":
-						eventData.endDate = properties[ i ].getAttribute( "content" );
-						googleLink += "/" + eventData.endDate;
-						icsLink += "\nDTEND:" + eventData.endDate;
+						prop_val_cache = prop_cache.getAttribute( "content" );
+						googleLink += "/" + prop_val_cache;
+						icsLink += "\nDTEND:" + prop_val_cache;
 						break;
 					case "streetAddress":
-						eventData.streetAddress = properties[ i ].innerText;
-						googleLink += " " + eventData.streetAddress;
-						icsLink += " " + eventData.streetAddress;
+						prop_val_cache = prop_cache.innerText;
+						googleLink += " " + prop_val_cache;
+						icsLink += " " + prop_val_cache;
 						break;
 					case "addressLocality":
-						eventData.addressLocality = properties[ i ].innerText;
-						googleLink += " " + eventData.addressLocality;
-						icsLink += " " + eventData.addressLocality;
+						prop_val_cache = prop_cache.innerText;
+						googleLink += " " + prop_val_cache;
+						icsLink += " " + prop_val_cache;
 						break;
 					case "addressRegion":
-						eventData.addressRegion = properties[ i ].innerText;
-						googleLink += " " + eventData.addressRegion;
-						icsLink += " " + eventData.addressRegion;
+						prop_val_cache = prop_cache.innerText;
+						googleLink += " " + prop_val_cache;
+						icsLink += " " + prop_val_cache;
 						break;
 					case "postalCode":
-						eventData.postalCode = properties[ i ].innerText;
-						googleLink += " " + eventData.postalCode;
-						icsLink += " " + eventData.postalCode;
+						prop_val_cache = prop_cache.innerText;
+						googleLink += " " + prop_val_cache;
+						icsLink += " " + prop_val_cache;
 						break;
 				}
 			}
@@ -122,8 +127,8 @@ var componentName = "wb-addcal",
 				icsLink += "\nLOCATION:" + place;
 			}
 			
-			googleLink = encodeURI("https://www.google.com/calendar/render?action=TEMPLATE" + googleLink);
-			icsLink = "BEGIN:VCALENDAR\nVERSION:2.0\nBEGIN:VEVENT" + icsLink + "\nEND:VEVENT\nEND:VCALENDAR";
+			googleLink = encodeURI(googleLink);
+			icsLink = icsLink + "\nEND:VEVENT\nEND:VCALENDAR";
 
 			//Create add details summary to the wb-addcal event and initiate the unordered list
 			$elm.append("<details class='max-content " + componentName + "-buttons'><summary>" + i18nDict.addto + " " + i18nDict.calendar +  "</summary><ul class='list-unstyled mrgn-bttm-0 mrgn-tp-sm'><li><a class='btn btn-link btn-lg mrgn-top-lg' href='" + googleLink + "'><span class='fab fa-google mrgn-rght-md'></span>Google<span class='sr-only'>" + i18nDict.calendar +"</span></a></li><li><button class='btn btn-link btn-lg' data-" + componentName + "-ics='" + icsLink + "'><span class='fa fa-calendar mrgn-rght-md'></span>" + i18nDict.ical + "<span class='sr-only'>Calendar</span></button></li>");
