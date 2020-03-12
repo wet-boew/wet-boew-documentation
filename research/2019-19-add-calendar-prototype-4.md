@@ -32,10 +32,8 @@ Prototype of an ```Add to Calendar``` widget using details summary pattern and S
 	position: absolute;
 	top: 1.7em;
 	z-index: 9999;
-	/* Note about z-index
-
-	Ideally it should be set to 1, but the <footer id="wb-info"> has a z-index set to 5,
-	 */
+	
+	/* Note about z-index Ideally it should be set to 1, but the <footer id="wb-info"> has a z-index set to 5, */
 }
 
 /* Active state style */
@@ -53,7 +51,7 @@ Prototype of an ```Add to Calendar``` widget using details summary pattern and S
 </style>
 
 <h1 property="name" id="wb-cont">Add to calendar</h1>
-<div class="wb-addcal mrgn-bttm-md" typeof="Event">
+<div class="wb-addcal mrgn-bttm-md provisional" typeof="Event">
 	<h2 property="name">Canux20</h2>
 	<p property="description">CanUX (pronounced “canucks”, like the hockey team) is an independent, locally-grown, non-profit, volunteer-driven event created for people who want to learn and share their expertise about user experience, and how our profession contributes to making things work better for everyone.</p>
 	<h3>Date and time</h3>	
@@ -71,7 +69,7 @@ Prototype of an ```Add to Calendar``` widget using details summary pattern and S
 		</div>
 	</div>
 </div>
-<div class="wb-addcal mrgn-bttm-md" typeof="Event">
+<div class="wb-addcal mrgn-bttm-md provisional" typeof="Event">
 	<h2 property="name">Ice sculptures on the Kipnes Lantern</h2>
 	<p property="description">Ice sculptures from the international competition will be featured on the Kipnes Lantern at the National Arts Centre during the 2nd and 3rd weekend of Winterlude. During the 1st weekend a 3D computer generated ice sculpture will also be featured.</p>
 	<h3>Date and time</h3>	
@@ -86,7 +84,7 @@ Prototype of an ```Add to Calendar``` widget using details summary pattern and S
 		</div>
 	</div>
 </div>
-<div class="wb-addcal mrgn-bttm-md" typeof="Event">
+<div class="wb-addcal mrgn-bttm-md provisional" typeof="Event">
 	<h2 property="name">Igloo Baratanga</h2>
 	<p property="description">A percussion activity for the whole family! Take part in a drum circle and get warmed up. No musical experience required and smiles guaranteed! Come play with us!</p>
 	<h3>Date and time</h3>	
