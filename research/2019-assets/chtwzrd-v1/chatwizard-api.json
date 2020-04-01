@@ -1,0 +1,42 @@
+{
+	"header":{
+		"method": "GET (default) or POST [GET]",
+		"defaultDestination": "Default results page after submission [results-en.html]",
+		"avatar": "Custom avatar URL [https://www.canada.ca/etc/designs/canada/wet-boew/assets/default-avatar.png]",
+		"inline": "If provided with any value, it will put the chat wizard inside the content instead of a seperate window [true]",
+		"first": "ID attribute of first question (will pick the first question in the form if not set) [q1]",
+		"formType": "formType dynamic (default) or static for the basic form [dynamic]",
+		"form": {
+			"title": "Title for basic form [Help us help you]",
+			"instructions": "Introduction paragraph before basic form [If you are an employer or organization looking for funding, you can find relevant information on the <a href='pagex.html'>funding page</a>.]",
+			"sendButton": "Text for the submit button in the basic form [Search now]"
+		},
+		"title":"Title of wizard [I can help you find the information you need]",
+		"greetings":"Greetings message as first interaction with user [Hi! I can help direct you to programs and services you might be interested in. Let's begin...]",
+		"instructions": "More instructions or information before the questionnaire starts [First, if you are an employer or organization looking for funding, you can find relevant information on the <a href='pagex.html'>funding page</a>.]",
+		"farewell":"Farewell message as last interaction after last question is answered [Thank you. I have built a page with results you may find resourceful.]",
+		"sendButton":"Text for the submit button after last question is answered [Show results]"
+	},
+	"questions":{
+		"q1":{
+			"name":"Name of the question [describe]",
+			"input":"Input type [radio]",
+			"labelForm":"Question in the form [What would you describe yourself as?]",
+			"label":"Question in the wizard [Are you:]",
+			"choices":[
+				{
+					"content":"Choice of answer for an input [a young Canadian]",
+					"value":"Value for the submission [young-canadian]",
+					"next":"Next question ID [q2]",
+					"url":"result page if this answer is selected [results-en.html]"
+				},
+				{
+					"...":"More choices"
+				}
+			]
+		},
+		"q2":{
+			"...":"More questions"
+		}
+	}
+}
