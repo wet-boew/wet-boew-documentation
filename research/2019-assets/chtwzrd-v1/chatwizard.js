@@ -1,8 +1,8 @@
 /**
- * @title WET-BOEW Chat wizard
+ * @title WET-BOEW Chat Wizard plugin container
  * @overview Plugin used to translate a form into a conversational form, hence a Chat Wizard
  * @license wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html
- * @author @GormFrank
+ * @author @gormfrank
  */
 
 /*
@@ -13,19 +13,19 @@
  */
 var componentName = "wb-chtwzrd",
 	selector = "." + componentName,
-	replacement = componentName + "-replace",
+	replacement = componentName + "-replace", 
 	$document = $( "document" ),
 	datainput = {},
 	timeValues = {},
-	waitingForAnswer,
+	waitingForAnswer, 
 	formType,
 	isInline,
-	redirurl,
-	first,
-	intro,
+	redirurl, 
+	first, 
+	intro, 
 	current,
-	waitTimeout,
-	inputsTimeout,
+	waitTimeout, 
+	inputsTimeout, 
 	sendBtn,
 	i18nDict = {
 		en: {
@@ -64,14 +64,13 @@ var componentName = "wb-chtwzrd",
 	fireChtwzrd = function( $selector ) {
 
 		// Grab JSON File, parse and create
-		if ( $selector.data( componentName + "-src" ) ) {
+		if( $selector.data( componentName + "-src" ) ) {
 			var data = $selector.data( componentName + "-src" );
 			$.getJSON( data, function( json ) {
 				datainput = json;
 				buildBasicForm( $selector, datainput );
 				initiateChtwzrd( $selector );
 			} );
-
 		// Start from a form on the page
 		} else {
 			datainput = convertToObject( $selector );
@@ -85,14 +84,13 @@ var componentName = "wb-chtwzrd",
 	 * @param {jQuery DOM element} $selector Element to which the wizard will be appended
 	 */
 	initiateChtwzrd = function( $selector ) {
-
 		// Prevent on load flick and identify basic form
 		$selector.removeClass( "hidden wb-inv" ).addClass( componentName + "-basic" );
 
 		// Initiate default values
 		timeValues = {
 			shortDelay: 500,
-			mediumDelay: 750,
+			mediumDelay: 750, 
 			longDelay: 1250,
 			xLongDelay: 2000,
 			xxLongDelay: 2500
@@ -125,9 +123,9 @@ var componentName = "wb-chtwzrd",
 		buildChtwzrd( $selector, datainput.header.title );
 
 		// All the commonly used elements
-		var $basic = $( selector + "-basic" ),
-			$bubble = $( selector + "-bubble-wrap" ),
-			$container = $( selector + "-container" ),
+		var $basic = $( selector + "-basic" ), 
+			$bubble = $( selector + "-bubble-wrap" ), 
+			$container = $( selector + "-container" ), 
 			$form = $( ".body", $container ),
 			$conversation = $( ".history", $container ),
 			$minimize = $( ".minimize", $container ),
@@ -153,10 +151,10 @@ var componentName = "wb-chtwzrd",
 			toggleExperience( $basic, "form" );
 
 			$container.stop().hide();
-			$basic.stop().show( function() {
+			$basic.stop().show(function(){
 				$legendFocus.focus();
 				$legendFocus.removeAttr( "tabindex" );
-			} );
+			});
 
 			$( "body" ).removeClass( componentName + "-noscroll" );
 		} );
@@ -168,7 +166,7 @@ var componentName = "wb-chtwzrd",
 			$basic.stop().hide();
 			$focusedBeforechtwzrd = $( ":focus" );
 
-			if ( !$( this ).hasClass( componentName + "-bubble" ) ) {
+			if( !$( this ).hasClass( componentName + "-bubble" ) ) {
 				toggleExperience( $container, "wizard" );
 			}
 			$( ".bubble", $bubble ).removeClass( "trans-pulse" );
@@ -179,36 +177,34 @@ var componentName = "wb-chtwzrd",
 			if ( !isInline ) {
 				$( "body" ).addClass( componentName + "-noscroll" );
 			}
-			if ( $conversation.length ) {
+			if( $conversation.length ) {
 				$( ".conversation", $container ).scrollTop( $conversation[ 0 ].scrollHeight );
 			}
-			if ( !waitingForAnswer ) {
+			if( !waitingForAnswer ) {
 				appendInteraction( $form );
 			}
-		} );
+		});
 
-		if ( isInline ) {
+		if( isInline ) {
 			$( selector + "-link" ).click();
 		} else {
-
+		
 			// Listen for and trap the keyboard
-			$container.on( "keydown", function( event ) {
-
+			$container.on( 'keydown', function( event ) {
 				// Check for TAB key press, cycle through
-				if ( event.keyCode === 9 ) {
-					if ( event.shiftKey ) {
-						if ( $firstTabStop.is( ":focus" ) ) {
+				if( event.keyCode === 9 ) {
+					if( event.shiftKey ) {
+						if( $firstTabStop.is( ':focus' ) ) {
 							event.preventDefault();
 							$lastTabStop.focus();
 						}
 					} else {
-						if ( $lastTabStop.is( ":focus" ) ) {
+						if( $lastTabStop.is( ':focus' ) ) {
 							event.preventDefault();
 							$firstTabStop.focus();
 						}
 					}
 				}
-
 				// ESCAPE, close
 				if ( event.keyCode === 27 ) {
 					$minimize.click();
@@ -218,10 +214,10 @@ var componentName = "wb-chtwzrd",
 
 		// On chat button pressed: append answer, and on submit: redirect
 		$document.on( "click", selector + "-container .btn-send", function( event ) {
-			if ( $( this ).attr( "type" ) !== "submit" ) {
+			if( $( this ).attr( "type" ) != "submit" ) {
 				event.preventDefault();
 				var $choiceselected = $( "input:checked", $form );
-				if ( !$choiceselected.length ) {
+				if( !$choiceselected.length ) {
 					$choiceselected = $( "input:first", $form );
 					$choiceselected.attr( "checked", true );
 				}
@@ -251,17 +247,16 @@ var componentName = "wb-chtwzrd",
 			$allQuestions = $( "fieldset", $selector ),
 			$firstQuestion = $allQuestions.first();
 
-		if ( formType === "dynamic" ) {
+		if( formType == "dynamic" ) {
 			$firstQuestion.addClass( componentName + "-first-q" );
 			$allQuestions.not( selector + "-first-q" ).hide();
 		}
-
 		// Hide and restart fresh on reload
 		$selector.hide();
 		$( "input", $basicForm ).prop( "checked", false );
 
 		// Add link to chat from the basic form
-		$basicForm.append( "<button class='btn btn-sm btn-link " + componentName + "-link mrgn-rght-sm'>" + i18nDict.toggle + "</button>" );
+		$basicForm.append( '<button class="btn btn-sm btn-link ' + componentName + '-link mrgn-rght-sm">' + i18nDict.toggle + '</button>' );
 
 		// On input change in the basic form
 		$( "input", $basicForm ).on( "change", function() {
@@ -269,15 +264,15 @@ var componentName = "wb-chtwzrd",
 				$qNext = $( "#" + answerData.qNext, $basicForm );
 
 			// Dynamically append next question on checked
-			if ( formType === "dynamic" ) {
+			if( formType == "dynamic" ) {
 				var $fieldset = $( this ).closest( "fieldset" );
-				if ( $qNext.is( ":hidden" ) || $fieldset.next().attr( "id" ) !== $qNext.attr( "id" ) || answerData.qNext === "none" ) {
+				if( $qNext.is( ":hidden" ) || $fieldset.next().attr( "id" ) != $qNext.attr( "id" ) || answerData.qNext == "none" ) {
 					$fieldset.nextAll( "fieldset" ).hide().find( "input" ).prop( "checked", false );
 				}
-				if ( answerData.qNext !== "none" ) {
+				if( answerData.qNext != "none" ) {
 					$( "#" + answerData.qNext ).show();
 				}
-				if ( answerData.url !== "" ) {
+				if( answerData.url != "" ) {
 					$basicForm.attr( "action", answerData.url );
 				}
 			}
@@ -294,7 +289,7 @@ var componentName = "wb-chtwzrd",
 			$link = $( selector + "-link", $selector );
 
 		// Change to custom avatar if provided
-		if ( datainput.header.avatar ) {
+		if( datainput.header.avatar ) {
 			$link.css( "background-image", "url(" + datainput.header.avatar + ")" );
 		}
 
@@ -305,7 +300,7 @@ var componentName = "wb-chtwzrd",
 		$footer.addClass( componentName + "-mrgn" );
 
 		// Ensure that the bubble does not go passed the footer
-		if ( $footer.length ) {
+		if( $footer.length ) {
 
 			// Keep the bubble sticky while scrolling Y until user reaches the footer
 			var stickyUntilFooter = function( $element ) {
@@ -314,15 +309,15 @@ var componentName = "wb-chtwzrd",
 				var bottomY = 30;
 
 				if ( $( window ).scrollTop() >= $( document ).outerHeight() - $( window ).outerHeight() - $footer.outerHeight() ) {
-					$element.css( {
+					$element.css( {	
 						bottom: ( $footer.outerHeight() - ( $( document ).outerHeight() - $( window ).outerHeight() - $( window ).scrollTop() ) + bottomY )
 					} );
 				} else {
-					$element.css( {
+					$element.css( {	
 						bottom: bottomY
 					} );
 				}
-			};
+			}
 
 			// Correct bubble positionning on load, on resize an on Y scroll if necessary
 			stickyUntilFooter( $selector );
@@ -338,7 +333,7 @@ var componentName = "wb-chtwzrd",
 		} );
 
 		// Close notification aside bubble
-		$( ".notif-close", $selector ).on( "click", function( event ) {
+		$( ".notif-close", $selector ).on( "click", function (event) {
 			event.preventDefault();
 			$( this ).parent().hide();
 			$selector.focus();
@@ -360,8 +355,8 @@ var componentName = "wb-chtwzrd",
 
 		datacook.header = ( typeof $selector.data( componentName ) !== undefined && $selector.data( componentName ) ? $selector.data( componentName ) : {} );
 
-		datacook.header.inline = $selector.hasClass( "wb-chtwzrd-inline" );
-		datacook.header.avatar = $selector.data( componentName + "-avatar" );
+		datacook.header.inline = $selector.hasClass("wb-chtwzrd-inline");
+		datacook.header.avatar = $selector.data( componentName + "-src" );
 
 		datacook.header.defaultDestination = $form.attr( "action" );
 		datacook.header.name = $form.attr( "name" );
@@ -378,7 +373,7 @@ var componentName = "wb-chtwzrd",
 		datacook.header.form.sendBtn = ( $( "input[type=submit]", $form ).length ? $( "input[type=submit]", $form ).addClass( btnClassName ).val() : $( "button[type=submit]", $form ).addClass( btnClassName ).html() );
 		datacook.header.sendBtn = replaceForWizard( $( "." + btnClassName, $form ), datacook.header.form.sendBtn );
 
-		if ( $intro.length ) {
+		if( $intro.length ) {
 			datacook.header.form.instructions = $intro.html();
 			datacook.header.instructions = replaceForWizard( $intro, datacook.header.form.instructions );
 		}
@@ -386,8 +381,8 @@ var componentName = "wb-chtwzrd",
 		var $questions = $( "fieldset", $selector );
 		datacook.questions = {};
 
-		if ( typeof datacook.header.first === "undefined" || !datacook.header.first ) {
-			datacook.header.first = $questions.first().attr( "id" );
+		if( typeof datacook.header.first === "undefined" || !datacook.header.first ) {
+			datacook.header.first = $questions.first().attr("id");
 		}
 
 		$questions.each( function() {
@@ -405,13 +400,13 @@ var componentName = "wb-chtwzrd",
 					action = $choice.data( componentName + "-url" ),
 					textval = $choice.siblings( "span:not(.no-" + componentName + ")" ).html();
 
-				if ( !index ) {
+				if( !index ) {
 					qName = name;
 				}
 				choice.content = textval;
 				choice.value = $choice.val();
 				choice.next = $choice.data( componentName + "-next" );
-				if ( typeof action !== undefined && action ) {
+				if( typeof action !== undefined && action ) {
 					choice.url = action;
 				}
 				choices.push( choice );
@@ -433,17 +428,17 @@ var componentName = "wb-chtwzrd",
 	 * @param {String} title The title of the wizard window, as well as the notification
 	 */
 	buildChtwzrd = function( $selector, title ) {
-		$selector.after( "<div class='" + componentName + "-bubble-wrap'><a href='#" + componentName + "-container aria-controls='" + componentName + "-container class='" + componentName + "-link bubble trans-pulse' role='button'>" + i18nDict.trigger + "</a><p class='trans-left'><span class='notif'>" + title + "</span> <a href='#' class='notif-close' title='" + i18nDict.notification + "' aria-label='" + i18nDict.notification + "' role='button'>×</a></p></div>" );
-		$selector.next( selector + "-bubble-wrap" ).after( "<aside id='" + componentName + "-container' class='modal-content overlay-def " + componentName + "-container " + ( isInline ? " wb-chtwzrd-contained" : "" ) + "'></aside>" );
+		$selector.after( '<div class="' + componentName + '-bubble-wrap"><a href="#' + componentName + '-container" aria-controls="' + componentName + '-container" class="' + componentName + '-link bubble trans-pulse" role="button">' + i18nDict.trigger + '</a><p class="trans-left"><span class="notif">' + title + '</span> <a href="#" class="notif-close" title="' + i18nDict.notification + '" aria-label="' + i18nDict.notification + '" role="button">×</a></p></div>' );
+		$selector.next( selector + '-bubble-wrap' ).after( '<aside id="' + componentName + '-container" class="modal-content overlay-def ' + componentName + '-container ' + ( isInline ? ' wb-chtwzrd-contained' : '' ) + '"></aside>' );
 
 		var $container = $( selector + "-container" );
-		$container.append( "<header class='modal-header header'><h2 class='modal-title title'>" + title + "</h2><button type='button' class='minimize' title='" + i18nDict.minimize + "'><span class='glyphicon glyphicon-chevron-down'></span></button></header>" );
-		$container.append( "<form class='modal-body body' method='GET'></form>" );
+		$container.append( '<header class="modal-header header"><h2 class="modal-title title">' + title + '</h2><button type="button" class="minimize" title="' + i18nDict.minimize + '"><span class="glyphicon glyphicon-chevron-down"></span></button></header>' );
+		$container.append( '<form class="modal-body body" method="GET"></form>' );
 
 		var $form = $( ".body", $container );
-		$form.append( "<div class='conversation' tabindex='0'><section class='history' aria-live='assertive'><h3 class='wb-inv'>" + i18nDict.conversation + "</h3></section><section class='reply'><h3 class='wb-inv'>" + i18nDict.reply + "</h3><div class='inputs-zone'></div></section><div class='form-params'></div></div>" );
-		$form.append( "<section class='controls'><h3 class='wb-inv'>" + i18nDict.controls + "</h3><div class='row'><div class='col-xs-12'><button class='btn btn-primary btn-block btn-send' type='button'>" + i18nDict.send + "</button></div></div><div class='row'><div class='col-xs-12 text-center mrgn-tp-sm'><a href='#" + componentName + "-basic' class='btn btn-sm btn-link basic-link' role='button'>" + i18nDict.toggleBasic + "</a></div></div></section>" );
-
+		$form.append( '<div class="conversation" tabindex="0"><section class="history" aria-live="assertive"><h3 class="wb-inv">' + i18nDict.conversation + '</h3></section><section class="reply"><h3 class="wb-inv">' + i18nDict.reply + '</h3><div class="inputs-zone"></div></section><div class="form-params"></div></div>' );
+		$form.append( '<section class="controls"><h3 class="wb-inv">' + i18nDict.controls + '</h3><div class="row"><div class="col-xs-12"><button class="btn btn-primary btn-block btn-send" type="button">' + i18nDict.send + '</button></div></div><div class="row"><div class="col-xs-12 text-center mrgn-tp-sm"><a href="#' + componentName + '-basic" class="btn btn-sm btn-link basic-link" role="button">' + i18nDict.toggleBasic + '</a></div></div></section>' );
+		
 		$form.attr( "name", datainput.header.name + "-chat" );
 		$form.attr( "method", datainput.header.method );
 		sendBtn = $( ".btn-send ", $form ).html();
@@ -458,51 +453,51 @@ var componentName = "wb-chtwzrd",
 	buildBasicForm = function( $selector, data ) {
 		$selector.html( "" );
 
-		var h2 = "<h2>" + data.header.title + "</h2>",
-			intro = "<p>" + data.header.instructions + "</p>",
-			btn = ">" + data.header.sendBtn + "</button>";
+		var h2 = '<h2>' + data.header.title + '</h2>',
+			intro = '<p>' + data.header.instructions + '</p>',
+			btn = '>' + data.header.sendBtn + '</button>';
 
-		if ( typeof data.header.form.title !== undefined ) {
-			h2 = "<h2 data-" + replacement + "='" + data.header.title + "'>" + data.header.form.title + "</h2>";
+		if( typeof data.header.form.title !== undefined ) {
+			h2 = '<h2 data-' + replacement + '="' + data.header.title + '">' + data.header.form.title + '</h2>';
 		}
-		$selector.append( h2 + "<form class='mrgn-bttm-xl' action='" + data.header.defaultDestination + "' name='" + data.header.name + "' method='" + ( data.header.method ? data.header.method : "GET" ) + "'></form>" );
+		$selector.append( h2 + '<form class="mrgn-bttm-xl" action="' + data.header.defaultDestination + '" name="' + data.header.name + '" method="' + ( data.header.method ? data.header.method : 'GET' ) + '"></form>' );
 
 		var $basicForm = $( "form", $selector );
 
-		if ( typeof data.header.form.instructions !== undefined ) {
-			intro = "<p data-" + replacement + "='" + data.header.instructions + "'>" + data.header.form.instructions + "</p>";
+		if( typeof data.header.form.instructions !== undefined ) {
+			intro = '<p data-' + replacement + '="' + data.header.instructions + '">' + data.header.form.instructions + '</p>';
 		}
-		$basicForm.append( "<p class='wb-chtwzrd-greetings wb-inv'>" + data.header.greetings + "</p>" + intro );
+		$basicForm.append( '<p class="wb-chtwzrd-greetings wb-inv">' + data.header.greetings + '</p>' + intro );
 
 		$.each( data.questions, function( key, value ) {
 			var randID = "q" + new Date().valueOf() + Math.round(Math.random() * 100),
-				legend = "<legend>" + value.label + "</legend>";
+				legend = '<legend>' + value.label + '</legend>';
 
-			if ( typeof value.formLabel !== undefined && value.formLabel ) {
-				legend = "<legend data-" + replacement + "='" + value.label + "'>" + value.formLabel + "</legend>";
+			if( typeof value.formLabel !== undefined && value.formLabel ) {
+				legend = '<legend data-' + replacement + '="' + value.label + '">' + value.formLabel + '</legend>';
 			}
 
-			$basicForm.append( "<fieldset id='" + key + "' class='" + randID + "'>" + legend + "<ul class='list-unstyled mrgn-tp-md'></ul></fieldset>" );
+			$basicForm.append( '<fieldset id="' + key + '" class="' + randID + '">' + legend + '<ul class="list-unstyled mrgn-tp-md"></ul></fieldset>' );
 
 			var $thisQ = $( "." + randID, $basicForm );
 
 			$.each( value.choices, function( index, ivalue ) {
 				randID = "a" + new Date().valueOf() + Math.round(Math.random() * 100);
-				$( "ul", $thisQ ).append( "<li><label><input type='" + value.input + "' value='" + ivalue.value + "' id ='" + randID + "' name='" + value.name + "' data-value='" + ivalue.content + "' /> <span>" + ivalue.content + "</span>" );
+				$( "ul", $thisQ ).append( '<li><label><input type="' + value.input + '" value="' + ivalue.value + '" id ="' + randID + '" name="' + value.name + '" data-value="' + ivalue.content + '" /> <span>' + ivalue.content + '</span>' );
 				$( "#" + randID, $thisQ ).attr( "data-" + componentName + "-next", ivalue.next );
-				if ( typeof ivalue.url !== undefined && ivalue.url ) {
+				if( typeof ivalue.url !== undefined && ivalue.url ) { 
 					$( "#" + randID, $thisQ ).attr( "data-" + componentName + "-url", ivalue.url );
 				}
 			} );
 		} );
 
-		if ( typeof data.header.form.sendBtn !== undefined ) {
-			btn = " data-" + replacement + "='" + data.header.sendBtn + "'>" + data.header.form.sendBtn + "</button>";
+		if( typeof data.header.form.sendBtn !== undefined ) {
+			btn = ' data-' + replacement + '="' + data.header.sendBtn + '">' + data.header.form.sendBtn + '</button>';
 		}
-		$basicForm.append( "<p class='wb-chtwzrd-farewell wb-inv'>" + data.header.farewell + "</p><br/><button type='submit' class='btn btn-sm btn-primary'" + btn );
+		$basicForm.append( '<p class="wb-chtwzrd-farewell wb-inv">' + data.header.farewell + '</p><br/><button type="submit" class="btn btn-sm btn-primary"' + btn );
 
-		if ( typeof datainput.header.first === "undefined" || !datainput.header.first ) {
-			datainput.header.first = $( "fieldset", $basicForm ).first().attr( "id" );
+		if( typeof datainput.header.first === "undefined" || !datainput.header.first ) {
+			datainput.header.first = $( "fieldset", $basicForm ).first().attr("id");
 		}
 	},
 
@@ -513,9 +508,8 @@ var componentName = "wb-chtwzrd",
 	 * @param {String} toggle Give context to the toggle, wether it is form or wizard
 	 */
 	toggleExperience = function( $selector, toggle ) {
-
 		// Redraw chat wizard and start over
-		if ( toggle === "wizard" ) {
+		if( toggle == "wizard" ) {
 			var $conversation = $( ".conversation", $selector );
 
 			// Clear time outs in case they're still active
@@ -534,11 +528,11 @@ var componentName = "wb-chtwzrd",
 			$( ".history", $conversation ).attr( "aria-live", "assertive" );
 
 			appendInteraction( $( ".body", $selector ) );
-		} else {
-
-			// Redraw form if it's set to dynamic
+		} 
+		// Redraw form if it's set to dynamic
+		else {
 			var $allQuestions = $( "fieldset", $selector );
-			if ( formType === "dynamic" ) {
+			if( formType == "dynamic" ) {
 				$allQuestions.not( ":first" ).hide();
 				$( "input", $allQuestions ).prop( "checked", false );
 			}
@@ -555,66 +549,64 @@ var componentName = "wb-chtwzrd",
 			$inputsSpot = $( ".inputs-zone", $selector ),
 			$chtwzrdConvo = $( ".conversation", $selector ),
 			$btnnext = $( ".btn-send", $selector ),
-			markup = ( first !== "" || intro !== "" || current === "last" ? "p" : "h4" );
+			markup = ( first != "" || intro != "" || current == "last" ? "p" : "h4" );
 
 		waitingForAnswer = true;
 		$btnnext.prop( "disabled", true );
 		$inputsSpot.html( "" );
-		$dropSpot.append( "<div class='row mrgn-bttm-md'><div class='col-xs-9'><" + markup + " class='mrgn-tp-0 mrgn-bttm-0'><span class='avatar'></span><span class='question'></span></" + markup + "></div></div>" );
+		$dropSpot.append( '<div class="row mrgn-bttm-md"><div class="col-xs-9"><' + markup + ' class="mrgn-tp-0 mrgn-bttm-0"><span class="avatar"></span><span class="question"></span></' + markup + '></div></div>' );
 
 		var $lastQuestion = $( ".question:last", $dropSpot );
 
 		// Faking delay and type time
 		waitingBot( $lastQuestion );
-
+		
 		// Determine waiting time length
 		var waitDelay = timeValues.longDelay;
 
-		if ( isInline && first !== "" ) {
+		if( isInline && first != "" ) {
 			waitDelay = timeValues.xLongDelay;
-		} else if ( first === "" && intro !== "" ) {
+		} else if( first == "" && intro != "" ) {
 			waitDelay = timeValues.xxLongDelay;
 		}
 
-		waitTimeout = setTimeout( function() {
-
-			if ( first !== "" ) {
-
-				// Show greetings on first occurence
+		waitTimeout = setTimeout( function () {
+			// Show greetings on first occurence
+			if( first != "" ) {
 				$lastQuestion.html( datainput.header.greetings );
 				first = "";
 				appendInteraction( $selector );
-			} else if ( intro !== "" ) {
-
-				// If intro is provided, show it before the first question
+			} 
+			// If intro is provided, show it before the first question
+			else if( intro != "" ) { 
 				$lastQuestion.html( intro );
 				intro = "";
 				appendInteraction( $selector );
-			} else if ( current === "last" ) {
-
-				// If it is the last question, then change the button to submit the form
+			}
+			// If it is the last question, then change the button to submit the form
+			else if( current == "last" ) {
 				$lastQuestion.html( datainput.header.farewell );
-				$btnnext.attr( "type", "submit" ).prop( "disabled", false ).html( datainput.header.sendBtn + "&nbsp;<span class='glyphicon glyphicon-chevron-right small'></span>" );
+				$btnnext.attr( "type", "submit" ).prop( "disabled", false ).html( datainput.header.sendBtn + '&nbsp;<span class="glyphicon glyphicon-chevron-right small"></span>' );
 				$selector.attr( "action", redirurl );
-			} else {
-
-				// On every other occurences, append the question and its possible answers
+			} 
+			// On every other occurences, append the question and its possible answers
+			else {
 				$lastQuestion.html( current.label );
 				current.input = "radio";
-				inputsTimeout = setTimeout( function() {
-					$inputsSpot.append( "<fieldset><legend class='wb-inv'>" + current.label + "</legend><div class='row'><div class='col-xs-12'><ul class='list-unstyled mrgn-tp-sm choices'></ul></div></div></fieldset>" );
-					for ( var i = 0; i < current.choices.length; i++ ) {
-						var iQuestion = current.choices[ i ];
-						$( ".choices", $inputsSpot ).append( "<li><label><input type='" + current.input + "' value='" + iQuestion.value + "' name='" + current.name + "' data-" + componentName + "-next='" + iQuestion.next + "'" + ( typeof iQuestion.url === "undefined" ? "" : " data-" + componentName + "-url='" + iQuestion.url + "'" ) + ( !i ? "checked " : "" ) + "/> <span>" + iQuestion.content + "</span></label></li>" );
+				inputsTimeout = setTimeout( function () {
+					$inputsSpot.append( '<fieldset><legend class="wb-inv">' + current.label + '</legend><div class="row"><div class="col-xs-12"><ul class="list-unstyled mrgn-tp-sm choices"></ul></div></div></fieldset>' );
+					for( var i = 0; i < current.choices.length; i++ ) {
+						var iQuestion = current.choices[ i ];	
+						$( ".choices", $inputsSpot ).append( '<li><label><input type="' + current.input + '" value="' + iQuestion.value + '" name="' + current.name + '" data-' + componentName + '-next="' + iQuestion.next + '"' + ( typeof iQuestion.url === "undefined" ? '' : ' data-' + componentName + '-url="' + iQuestion.url + '"' ) + ( !i ? 'checked ' : '' ) + '/> <span>' + iQuestion.content + '</span></label></li>' );
 					}
 					$btnnext.prop( "disabled", false );
 
 					// Reposition viewport to where the action is
 					var tresholdHeight = $chtwzrdConvo[ 0 ].scrollHeight,
 						$reply = $( ".reply", $selector );
-
-					if ( $reply.length && ( $reply.outerHeight() + $lastQuestion.outerHeight() > $chtwzrdConvo.innerHeight() ) ) {
-						tresholdHeight = $dropSpot[ 0 ].scrollHeight - $lastQuestion.outerHeight() - 42;
+					
+					if( $reply.length && ( $reply.outerHeight() + $lastQuestion.outerHeight() > $chtwzrdConvo.innerHeight() ) ) {
+						tresholdHeight = $dropSpot[ 0 ].scrollHeight - $lastQuestion.outerHeight() - 42;	// Minus "answer to life" for safety
 					}
 					$chtwzrdConvo.scrollTop( tresholdHeight );
 				}, timeValues.mediumDelay );
@@ -633,21 +625,21 @@ var componentName = "wb-chtwzrd",
 		var randID = "r" + new Date().valueOf() + Math.round(Math.random() * 100),
 			$dropSpot = $( ".history", $selector );
 
-		$dropSpot.append( "<div class='row mrgn-bttm-md'><div class='col-xs-9 col-xs-offset-3'><div class='message text-right pull-right' id='" + randID + "'><p class='mrgn-bttm-0'><span class='wb-inv'>" + i18nDict.answer + " </span>" + answerObj.value + "</p></div></div></div>" );
-
+		$dropSpot.append( '<div class="row mrgn-bttm-md"><div class="col-xs-9 col-xs-offset-3"><div class="message text-right pull-right" id="' + randID + '"><p class="mrgn-bttm-0"><span class="wb-inv">' + i18nDict.answer + ' </span>' + answerObj.value + '</p></div></div></div>' );
+		
 		// Append hidden input for information to carry over on submit
-		$( ".form-params", $selector ).append( "<input type='hidden' name='" + answerObj.name + "' value='" + answerObj.val + "' data-value='" + answerObj.value + "' />" );
-
+		$( ".form-params", $selector ).append( '<input type="hidden" name="' + answerObj.name + '" value="' + answerObj.val + '" data-value="' + answerObj.value + '" />' );
+		
 		waitingForAnswer = false;
-		if ( answerObj.url !== "" ) {
-			redirurl = answerObj.url;
+		if( answerObj.url != "" ) {
+			redirurl = answerObj.url; 
 		}
-
+		
 		// Find next question
 		var next = answerObj.qNext,
 			$reply = $( "#" + randID, $dropSpot );
 
-		if ( next === "none" ) {
+		if( next == "none" ) {
 			current = "last";
 		} else {
 			current = datainput.questions[ next ];
@@ -656,7 +648,7 @@ var componentName = "wb-chtwzrd",
 		$reply.attr( "tabindex", "0" );
 
 		// Clear the inputs zone after an intuitive delay
-		waitTimeout = setTimeout( function() {
+		waitTimeout = setTimeout( function () {
 			$( ".inputs-zone", $selector ).remove( "fieldset" );
 			$reply.focus();
 			$reply.removeAttr( "tabindex" );
@@ -670,7 +662,7 @@ var componentName = "wb-chtwzrd",
 	 * @param {jQuery DOM element} $selector Element to which the typing loader will be appended
 	 */
 	waitingBot = function( $selector ) {
-		$selector.html( "<span class='loader-typing' aria-label='" + i18nDict.waiting + "'><span class='loader-dot dot1'></span><span class='loader-dot dot2'></span><span class='loader-dot dot3'></span></span>" );
+		$selector.html( '<span class="loader-typing" aria-label="' + i18nDict.waiting + '"><span class="loader-dot dot1"></span><span class="loader-dot dot2"></span><span class="loader-dot dot3"></span></span>' );
 	},
 
 	/**
@@ -681,7 +673,6 @@ var componentName = "wb-chtwzrd",
 	 * @returns {String} Value that will be used, either replaced or not
 	 */
 	replaceForWizard = function( $selector, formerValue ) {
-
 		// Data attribute for value replacement
 		var r = $selector.data( replacement );
 
@@ -698,10 +689,10 @@ var componentName = "wb-chtwzrd",
 		var next = $selector.data( componentName + "-next" );
 		var url = $selector.data( componentName + "-url" );
 		return {
-			qNext: next,
-			name: $selector.attr( "name" ),
-			val: $selector.val(),
-			url: ( typeof url !== undefined && url ? url : "" ),
+			qNext: next, 
+			name: $selector.attr( "name" ), 
+			val: $selector.val(), 
+			url: ( typeof url !== undefined && url ? url : "" ), 
 			value: $selector.next().html()
 		};
 	};
