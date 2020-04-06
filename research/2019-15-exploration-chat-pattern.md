@@ -1,9 +1,9 @@
 ---
 published: true
 layout: default-theme-wet-boew-en
-title: 2019-15 - Exploration of a chat like design pattern
+title: 2019-15 - Exploration of a chat like design pattern (chat wizard)
 description: Exploration of a chat like design pattern
-modified: 2020-03-30
+modified: 2020-04-06
 ---
 
 ## Purpose
@@ -30,7 +30,7 @@ There are two ways to implement the chat wizard. The more common way is to code 
 ### 1. Code a form
 
 1. Code a form that has a decision tree logic, with the idea that an answer could affect what the next question would be. At the moment, all choices of answer to a question must be radio buttons only.
-2. Wrap your form in a section, aside or div tag with the class ".wb-chtwzrd". Other options are:
+2. Wrap your form in a section, aside or div tag with a class named ".wb-chtwzrd", along with the class ".hidden" to avoid the basic form to flicker on load. Other options are:
 	* A data attribute named "data-wb-chtwzrd-avatar" can be added with a path to an image in order to change the default avatar in the bubble and the chat window. Recommended dimensions are 45x45 pixels. 
 	* A class named ".wb-chtwzrd-inline" can be added to have the chat experience inside the content and not in a separate window. This feature should only be used on a dedicated page, since it will start right away and steals the show to other content.
 3. Give it a title (outside of you form) as an H2. That heading will be the title of the form, as well as the title of the chat window and the text of the notification message.
@@ -38,7 +38,7 @@ There are two ways to implement the chat wizard. The more common way is to code 
 5. You will need to start your form with a greetings paragraph. That paragraph must have a ".wb-chtwzrd-greetings" class and will be the first message coming from the bot when the chat window is opened. 
 6. Same thing for the last message at the end of the conversation which is a farewell paragraph that you can put at the bottom of your form and that needs to have the ".wb-chtwzrd-farewell" class.
 7. If you add a regular paragraph right after your greetings one, this will be considered as an introduction message, which will be mentioned by the bot right after the greetings.
-8. The submit button is necessary as it indicates what the final submit button will show at the end of the conversation. Plus, you can add a data attribute there named "data-wb-chtwzrd-replace" that allows you to give a different value to your chat wizard than what's in the form. *This data attribute can be used on almost every textual tag inside the ".wb-chtwzrd" container to indicate what the chat wizard should display different than what the form displays.*
+8. The submit button is necessary as it indicates what the final submit button will show at the end of the conversation. Plus, you can add a data attribute there named "data-wb-chtwzrd-replace" that allows you to give a different value to your chat wizard than what's in the form. **This data attribute can be used on almost every textual tag inside the ".wb-chtwzrd" container to indicate what the chat wizard should display different than what the form displays.**
 9. In the form itself, each question must be wrapped around a fieldset tag, with a unique ID attribute. 10. The question has to be in a legend tag, to which for instance you can use the "data-wb-chtwzrd-replace" attribute to have a more conversation-based question for the wizard.
 11. Choices of answer must be in an unordered list, with a class named ".list-unstyled" to not show the bullet points and a class ".mrgn-tp-md" for spacing at your own taste.
 12. The label tag has to wrap your input of type radio, with the text value wrapped in a span tag.
