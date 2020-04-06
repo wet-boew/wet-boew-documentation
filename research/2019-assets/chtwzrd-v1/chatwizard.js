@@ -1,4 +1,3 @@
-<script type="text/javascript">
 /**
  * @title WET-BOEW Chat wizard
  * @overview Plugin used to translate a form into a conversational form, hence a Chat Wizard
@@ -712,4 +711,3 @@ if($(".wb-chtwzrd").length) {
 	$chtwzrd = $(".wb-chtwzrd");
 	fireChtwzrd($chtwzrd);
 }
-</script>

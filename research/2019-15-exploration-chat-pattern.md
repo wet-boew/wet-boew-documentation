@@ -23,6 +23,11 @@ A form could be replaced by the chat wizard for a more dynamic experience.
 * [English example with HTML form](2019-15-exploration-chat-pattern-v1.html)
 * [English example with JSON file](2019-15-exploration-chat-pattern-v1-json.html)
 
+### Working examples on [Canada.ca](https://www.canada.ca)
+
+* [English example with HTML form](https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19.html)
+* [English example with JSON file](https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19.html)
+
 ## How to implement
 
 There are two ways to implement the chat wizard. The more common way is to code a form, and add according classes and data attributes. The other way is to load it from a JSON file, which will generate both the form and the wizard, is useful in case one would want to implement the same chat wizard on multiple pages.
@@ -66,14 +71,23 @@ Get the three pieces that you need here:
 
 You will have to readjust the path to the avatar image in the CSS file depending on your own implementation set-up. The code was altered from the one on Canada.ca in order to make it work on its own and not as a plugin part of GCWeb.
 
+Alternatively, you can get the GCWeb friendly code on [Canada.ca](https://www.canada.ca):
+
+* JavaScript: https://www.canada.ca/etc/designs/canada/wet-boew/js/theme.js
+* CSS: https://www.canada.ca/etc/designs/canada/wet-boew/css/theme.css
+* Image: https://www.canada.ca/etc/designs/canada/wet-boew/assets/default-avatar.png
+
+You can hit “CTRL + F” and search for chat wizard in both the CSS and the JavaScript files, or just look near the end of the files, it’s all in there; nothing more, nothing less. However, it needs jQuery as a dependency; if you are using GCWeb, you are covered.
+
 {::nomarkdown}
 
 {% raw %}
+<br/>
 <hr/>
 {% endraw %}
 {:/}
 
-## Rational & History
+## Rationale & history (previous documentation)
 
 ### Goal
 
