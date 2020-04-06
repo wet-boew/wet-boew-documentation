@@ -1,9 +1,9 @@
 ---
 published: true
 layout: default-theme-wet-boew-en
-title: 2019-15 - Chat Wizard version 1.0
-description: Chat Wizard Working example with HTML form
-modified: 2020-04-03
+title: Chat wizard working example with HTML form
+description: 2019-15 - Chat wizard Version 1.0 working example
+modified: 2020-04-06
 ---
 
 {::nomarkdown}
@@ -11,7 +11,7 @@ modified: 2020-04-03
 {% raw %}
 
 <!-- Chat wizard -->
-<link rel="stylesheet" type="text/css" href="/2019-assets/chtwzrd-v1/chatwizard.css">
+<link rel="stylesheet" type="text/css" href="2019-assets/chtwzrd-v1/chatwizard.css">
 
 	<p>Below is the code to achieve the demo on this page with an HTML form.</p>
 	<pre>
@@ -161,7 +161,7 @@ modified: 2020-04-03
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 <!-- Chat wizard -->
-<script src="/2019-assets/chtwzrd-v1/chatwizard.js"></script>
+<script src="2019-assets/chtwzrd-v1/chatwizard.js"></script>
 
 {% endraw %}
 
