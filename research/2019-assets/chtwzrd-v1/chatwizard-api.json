@@ -6,6 +6,7 @@
 		"inline": "If provided with any value, it will put the chat wizard inside the content instead of a seperate window [true]",
 		"first": "ID attribute of first question (will pick the first question in the form if not set) [q1]",
 		"formType": "formType dynamic (default) or static for the basic form [dynamic]",
+		"name":"Name attribute on the form for tracking purposes. Chat's form has -chat appended automatically [example]",
 		"form": {
 			"title": "Title for basic form [Help us help you]",
 			"instructions": "Introduction paragraph before basic form [If you are an employer or organization looking for funding, you can find relevant information on the <a href='pagex.html'>funding page</a>.]",

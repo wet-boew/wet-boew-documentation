@@ -16,7 +16,7 @@ modified: 2020-04-06
 	<p>Below is the code to achieve the demo on this page with a JSON file.</p>
 	<pre>
 	<code>
-	&lt;aside class="container wb-chtwzrd wb-inv" data-chtwzrd-src="2019-assets/chtwzrd-v1/manual-form.json"&gt;&lt;/aside&gt;
+	&lt;aside class="wb-chtwzrd" data-wb-chtwzrd-src="2019-assets/chtwzrd-v1/manual-form.json"&gt;&lt;/aside&gt;
 	</code>
 	</pre>
 	<p><a href="2019-assets/chtwzrd-v1/manual-form.json">Check out he JSON file</a> to get a grasp of how it is done.</p>
@@ -26,7 +26,7 @@ modified: 2020-04-06
 	<p>Proin sed lectus ut urna pulvinar tincidunt. Ut commodo tristique leo, eu porttitor ligula mollis eget. Suspendisse commodo velit nec erat sagittis, ut pellentesque mi cursus. Donec aliquam orci metus, ac congue sapien tristique at. Nullam et fermentum urna. Curabitur dignissim, lectus quis mattis mattis, nibh leo mollis dolor, id efficitur nisi tortor quis magna. Morbi sit amet ante diam. Donec nunc purus, fermentum pellentesque nulla efficitur, sodales blandit ipsum. Vestibulum vitae enim urna.</p>
 	<p>Duis sit amet lobortis erat, ac pretium magna. Suspendisse et tortor sed orci dignissim consequat. Sed dignissim ligula eu dapibus cursus. Sed vel leo est. Praesent convallis dictum nisl, ut fringilla mauris dignissim et. Maecenas tempus pulvinar ex et volutpat. Quisque in lacus congue, vestibulum ex eu, venenatis est.</p>
 	<p>Nunc blandit libero non quam consequat suscipit. Sed lobortis ligula et felis molestie, ultricies placerat justo iaculis. Fusce venenatis, lorem sed rutrum pharetra, nibh libero consequat neque, sit amet gravida massa nunc vel eros. Nullam eu augue ornare, aliquam augue tincidunt, cursus metus. Sed euismod, libero vitae vulputate varius, elit enim efficitur ligula, id finibus nisi orci sit amet dolor. Fusce vehicula leo in hendrerit malesuada. Donec magna leo, tempus et libero vel, venenatis mattis orci. Curabitur et dui erat. Vivamus sollicitudin, velit nec porttitor sollicitudin, elit tortor volutpat mauris, nec porta tellus felis et ex. Fusce ut consequat turpis. Donec ullamcorper interdum sapien, id hendrerit tortor facilisis non. Vestibulum et tincidunt mauris. Aenean arcu orci, dapibus ut ullamcorper consectetur, tincidunt eu ipsum. Phasellus bibendum tellus eu ultricies posuere. Vestibulum non nibh mauris. Etiam arcu dolor, lacinia vitae ipsum at, dapibus faucibus elit.</p>
-	<aside class="container wb-chtwzrd wb-inv" data-chtwzrd-src="2019-assets/chtwzrd-v1/manual-form.json"></aside>
+	<aside class="wb-chtwzrd" data-wb-chtwzrd-src="2019-assets/chtwzrd-v1/manual-form.json"></aside>
 
 <div class="pagedetails">
 	<dl id="wb-dtmd">

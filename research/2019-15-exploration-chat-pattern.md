@@ -39,7 +39,7 @@ There are two ways to implement the chat wizard. The more common way is to code 
 	* A data attribute named "data-wb-chtwzrd-avatar" can be added with a path to an image in order to change the default avatar in the bubble and the chat window. Recommended dimensions are 45x45 pixels. 
 	* A class named ".wb-chtwzrd-inline" can be added to have the chat experience inside the content and not in a separate window. This feature should only be used on a dedicated page, since it will start right away and steals the show to other content.
 3. Give it a title (outside of you form) as an H2. That heading will be the title of the form, as well as the title of the chat window and the text of the notification message.
-4. The action of your form will be the default destination page at the end of the flow. The method will define if the form will be submitted through the URL bar or in the body at the end.
+4. The action of your form will be the default destination page at the end of the flow. The method will define if the form will be submitted through the URL bar or in the body at the end. You can give it a name attribute too, for tracking purposes.
 5. You will need to start your form with a greetings paragraph. That paragraph must have a ".wb-chtwzrd-greetings" class and will be the first message coming from the bot when the chat window is opened. 
 6. Same thing for the last message at the end of the conversation which is a farewell paragraph that you can put at the bottom of your form and that needs to have the ".wb-chtwzrd-farewell" class.
 7. If you add a regular paragraph right after your greetings one, this will be considered as an introduction message, which will be mentioned by the bot right after the greetings.
@@ -59,7 +59,7 @@ Accepting JSON File as an input for batch deployments. If you have a JSON file t
 
 [JSON File API](2019-assets/chtwzrd-v1/chatwizard-api.json)
 
-All you need on your page is to add a data attribute named "data-chtwzrd-src" to your section, aside or div tag that has the ".chtwzrd" class, and provide it with the path to your JSON file.
+All you need on your page is to add a data attribute named "data-wb-chtwzrd-src" to your section, aside or div tag that has the ".wb-chtwzrd" class, and provide it with the path to your JSON file.
 
 ## Source code
 
@@ -69,9 +69,9 @@ Get the three pieces that you need here:
 * [CSS](2019-assets/chtwzrd-v1/chatwizard.css)
 * [Image](2019-assets/chtwzrd-v1/default-avatar.png)
 
-You will have to readjust the path to the avatar image in the CSS file depending on your own implementation set-up. The code was altered from the one on Canada.ca in order to make it work on its own and not as a plugin part of GCWeb.
+You will have to readjust the path to the avatar image in the CSS file depending on your own implementation set-up. The code was altered from the one on Canada.ca in order to make it work on its own and not as a plugin part of GCWeb. It still needs a base style from WET or GCWeb however.
 
-Alternatively, you can get the GCWeb friendly code on [Canada.ca](https://www.canada.ca):
+Alternatively, you can get the always up-to-date code on [Canada.ca](https://www.canada.ca):
 
 * [JavaScript](https://www.canada.ca/etc/designs/canada/wet-boew/js/theme.js)
 * [CSS](https://www.canada.ca/etc/designs/canada/wet-boew/css/theme.css)
