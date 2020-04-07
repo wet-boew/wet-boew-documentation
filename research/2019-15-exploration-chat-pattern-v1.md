@@ -87,7 +87,7 @@ modified: 2020-04-06
 	</pre>
 	<section class="wb-chtwzrd hidden">
 		<h2 data-wb-chtwzrd-replace="I can help you find the information you need">Help us help you</h2>
-		<form class="mrgn-bttm-xl" action="https://google.ca" method="GET">
+		<form class="mrgn-bttm-xl" action="https://google.ca" method="GET" name="example-html">
 			<p class="wb-chtwzrd-greetings">Hi! I can help you find resources that are available to help you in your quest to find information.</p>
 			<p>If you just want to surf the internet, go to <a href="https://google.ca">Google search</a></p>
 			<fieldset id="q1">
