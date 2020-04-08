@@ -20,13 +20,14 @@ var componentName = "wb-chtwzrd",
 	waitingForAnswer,
 	formType,
 	isInline,
+	isNotif,
 	redirurl,
 	first,
 	intro,
 	current,
 	waitTimeout,
 	inputsTimeout,
-	sendBtn,
+	sendButton,
 	i18nDict = {
 		en: {
 			"chtwzrd-send": "Send<span class='wb-inv'> reply and continue</span>",
@@ -85,6 +86,9 @@ var componentName = "wb-chtwzrd",
 	 * @param {jQuery DOM element} $selector Element to which the wizard will be appended
 	 */
 	initiateChtwzrd = function( $selector ) {
+
+		// Check for local storage if we need to show notification
+		isNotif = localStorage.getItem( "wb-chtwzrd-notif" );
 
 		// Prevent on load flick and identify basic form
 		$selector.removeClass( "hidden wb-inv" ).addClass( componentName + "-basic" );
@@ -185,8 +189,12 @@ var componentName = "wb-chtwzrd",
 			if ( !waitingForAnswer ) {
 				appendInteraction( $form );
 			}
+			
+			// Do not show notification on next load
+			localStorage.setItem( "wb-chtwzrd-notif", 1 );
 		} );
 
+		// If inline, do not trap user with keyboard
 		if ( isInline ) {
 			$( selector + "-link" ).click();
 		} else {
@@ -343,6 +351,9 @@ var componentName = "wb-chtwzrd",
 			event.preventDefault();
 			$( this ).parent().hide();
 			$selector.focus();
+			
+			// Do not show notification on next load
+			localStorage.setItem( "wb-chtwzrd-notif", 1 );
 		} );
 	},
 
@@ -376,8 +387,8 @@ var componentName = "wb-chtwzrd",
 		datacook.header.greetings = $( "p" + selector + "-greetings", $form ).html();
 		datacook.header.farewell = $( "p" + selector + "-farewell", $form ).html();
 
-		datacook.header.form.sendBtn = ( $( "input[type=submit]", $form ).length ? $( "input[type=submit]", $form ).addClass( btnClassName ).val() : $( "button[type=submit]", $form ).addClass( btnClassName ).html() );
-		datacook.header.sendBtn = replaceForWizard( $( "." + btnClassName, $form ), datacook.header.form.sendBtn );
+		datacook.header.form.sendButton = ( $( "input[type=submit]", $form ).length ? $( "input[type=submit]", $form ).addClass( btnClassName ).val() : $( "button[type=submit]", $form ).addClass( btnClassName ).html() );
+		datacook.header.sendButton = replaceForWizard( $( "." + btnClassName, $form ), datacook.header.form.sendButton );
 
 		if ( $intro.length ) {
 			datacook.header.form.instructions = $intro.html();
@@ -434,7 +445,7 @@ var componentName = "wb-chtwzrd",
 	 * @param {String} title The title of the wizard window, as well as the notification
 	 */
 	buildChtwzrd = function( $selector, title ) {
-		$selector.after( "<div class='" + componentName + "-bubble-wrap'><a href='#" + componentName + "-container aria-controls='" + componentName + "-container class='" + componentName + "-link bubble trans-pulse' role='button'>" + i18nDict.trigger + "</a><p class='trans-left'><span class='notif'>" + title + "</span> <a href='#' class='notif-close' title='" + i18nDict.notification + "' aria-label='" + i18nDict.notification + "' role='button'>×</a></p></div>" );
+		$selector.after( "<div class='" + componentName + "-bubble-wrap'><a href='#" + componentName + "-container aria-controls='" + componentName + "-container class='" + componentName + "-link bubble trans-pulse' role='button'>" + i18nDict.trigger + "</a>" + ( !isNotif ? "<p class='trans-left'><span class='notif'>" + title + "</span> <a href='#' class='notif-close' title='" + i18nDict.notification + "' aria-label='" + i18nDict.notification + "' role='button'>×</a></p>" : "" ) + "</div>" );
 		$selector.next( selector + "-bubble-wrap" ).after( "<aside id='" + componentName + "-container' class='modal-content overlay-def " + componentName + "-container " + ( isInline ? " wb-chtwzrd-contained" : "" ) + "'></aside>" );
 
 		var $container = $( selector + "-container" );
@@ -447,7 +458,7 @@ var componentName = "wb-chtwzrd",
 
 		$form.attr( "name", datainput.header.name + "-chat" );
 		$form.attr( "method", datainput.header.method );
-		sendBtn = $( ".btn-send ", $form ).html();
+		sendButton = $( ".btn-send ", $form ).html();
 	},
 
 	/**
@@ -461,7 +472,7 @@ var componentName = "wb-chtwzrd",
 
 		var h2 = "<h2>" + data.header.title + "</h2>",
 			intro = "<p>" + data.header.instructions + "</p>",
-			btn = ">" + data.header.sendBtn + "</button>";
+			btn = ">" + data.header.sendButton + "</button>";
 
 		if ( typeof data.header.form.title !== undefined ) {
 			h2 = "<h2 data-" + replacement + "='" + data.header.title + "'>" + data.header.form.title + "</h2>";
@@ -497,8 +508,8 @@ var componentName = "wb-chtwzrd",
 			} );
 		} );
 
-		if ( typeof data.header.form.sendBtn !== undefined ) {
-			btn = " data-" + replacement + "='" + data.header.sendBtn + "'>" + data.header.form.sendBtn + "</button>";
+		if ( typeof data.header.form.sendButton !== undefined ) {
+			btn = " data-" + replacement + "='" + data.header.sendButton + "'>" + data.header.form.sendButton + "</button>";
 		}
 		$basicForm.append( "<p class='wb-chtwzrd-farewell wb-inv'>" + data.header.farewell + "</p><br/><button type='submit' class='btn btn-sm btn-primary'" + btn );
 
@@ -531,7 +542,7 @@ var componentName = "wb-chtwzrd",
 			current = datainput.questions[ first ];
 
 			$( ".history, .form-params", $conversation ).html( "" );
-			$( ".btn-send", $selector ).attr( "type", "button" ).html( sendBtn );
+			$( ".btn-send", $selector ).attr( "type", "button" ).html( sendButton );
 			$( ".history", $conversation ).attr( "aria-live", "assertive" );
 
 			appendInteraction( $( ".body", $selector ) );
@@ -595,7 +606,7 @@ var componentName = "wb-chtwzrd",
 
 				// If it is the last question, then change the button to submit the form
 				$lastQuestion.html( datainput.header.farewell );
-				$btnnext.attr( "type", "submit" ).prop( "disabled", false ).html( datainput.header.sendBtn + "&nbsp;<span class='glyphicon glyphicon-chevron-right small'></span>" );
+				$btnnext.attr( "type", "submit" ).prop( "disabled", false ).html( datainput.header.sendButton + "&nbsp;<span class='glyphicon glyphicon-chevron-right small'></span>" );
 				$selector.attr( "action", redirurl );
 			} else {
 
