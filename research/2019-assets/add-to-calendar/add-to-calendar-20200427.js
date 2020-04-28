@@ -35,16 +35,14 @@ var componentName = "wb-addcal",
 			wb.ready( $( elm ), componentName );
 			
 			var properties = elm.querySelectorAll( "[property]" ),
-				dtStamp = document.querySelectorAll( "time[property]" ),
-				uid = window.location.href.replace(/\.|-|\/|:/g, ""),
 				i,
-				i_len,
+				i_len = properties.length,
 				eventData = {},
 				place, // false
 				prop_cache,
 				prop_val_cache,
 				googleLink = "https://www.google.com/calendar/render?action=TEMPLATE",
-				icsLink = "BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//WET-BOEW//Add to Calendar v4.0//\nBEGIN:VEVENT",
+				icsLink = "BEGIN:VCALENDAR\nVERSION:2.0\nBEGIN:VEVENT",
 				i18nDict = {
 					en: {
 						"addcal-addto": "Add to",
@@ -65,20 +63,7 @@ var componentName = "wb-addcal",
 				calendar: i18nDict[ "addcal-calendar" ],
 				ical: i18nDict[ "addcal-ical" ]
 			};
-			
-			i_len = dtStamp.length;
-			for(i=0; i < i_len; i++){
-				dtStamp = dtStamp[i];
-				switch( dtStamp.getAttribute("property") ){
-					case "dateModified":
-					dtStamp = dtStamp.innerText.replace(/-/g, "") + "T000000";
-					uid += "-" + dtStamp;
-					icsLink += "\nDTSTAMP:" + dtStamp;
-					break;
-				}
-			}
-			
-			i_len = properties.length;
+		
 			for ( i=0; i < i_len; i++ ) {
 				prop_cache = properties[ i ];
 				switch ( prop_cache.getAttribute( "property" ) ) {
@@ -104,14 +89,14 @@ var componentName = "wb-addcal",
 						icsLink += "\nDESCRIPTION:" + prop_val_cache.replace( /(\r\n|\n|\r)/gm, " " );
 						break;
 					case "startDate":
-						prop_val_cache = prop_cache.getAttribute( "content" ).replace(/(-|:)/g, "");
+						prop_val_cache = prop_cache.getAttribute( "content" );
 						googleLink += "&dates=" + prop_val_cache;
-						icsLink += "\nUID:" + uid + "-" + prop_val_cache + "\nDTSTART:" + prop_val_cache;
+						icsLink += "\nDTSTART:" + prop_val_cache;
 						break;
 					case "endDate":
 						prop_val_cache = prop_cache.getAttribute( "content" );
-						googleLink += "/" + prop_val_cache.replace(/(-|:)/g, "");
-						icsLink += "\nDTEND:" + prop_val_cache.replace(/(-|:)/g, "");
+						googleLink += "/" + prop_val_cache;
+						icsLink += "\nDTEND:" + prop_val_cache;
 						break;
 					case "streetAddress":
 						prop_val_cache = prop_cache.innerText;

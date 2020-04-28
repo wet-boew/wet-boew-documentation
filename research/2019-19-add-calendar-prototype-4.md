@@ -51,12 +51,12 @@ Prototype of an ```Add to Calendar``` widget using details summary pattern and S
 </style>
 
 <h1 property="name" id="wb-cont">Add to calendar</h1>
-<div class="wb-addcal mrgn-bttm-md provisional" typeof="Event">
+<div class="wb-addcal provisional mrgn-bttm-md" typeof="Event">
 	<h2 property="name">Canux20</h2>
 	<p property="description">CanUX (pronounced “canucks”, like the hockey team) is an independent, locally-grown, non-profit, volunteer-driven event created for people who want to learn and share their expertise about user experience, and how our profession contributes to making things work better for everyone.</p>
 	<h3>Date and time</h3>	
-	<p>Start date: <time property="startDate" content="20200127T120000Z" datetime="2020-01-27 7:00">Monday, Jan 27, 2020, 7:00am EST</time><br>
-	End date: <time property="endDate" content="20200127T170000Z" datetime="2020-01-29 12:00">Wednesday, Jan 29, 2020, 12:00pm EST</time></p>
+	<p>Start date:  <meta property="startDate" content="2020-01-27T07:00:00"><time>Monday, Jan 27, 2020, 7:00am EST</time><br>
+	End date: <meta property="endDate" content="2020-01-29T12:00:00"><time>Wednesday, Jan 29, 2020, 12:00pm EST</time></p>
 	<h3>Location</h3>
 	<!--<P><a href="https://www.historymuseum.ca/" class="wb-addcal-location">Canadian <span lang="en">Museum</a< of History</a></p>-->
 	<div class="mrgn-bttm-md" property="location" typeof="Place">
@@ -69,11 +69,11 @@ Prototype of an ```Add to Calendar``` widget using details summary pattern and S
 		</div>
 	</div>
 </div>
-<div class="wb-addcal mrgn-bttm-md provisional" typeof="Event">
+<div class="wb-addcal provisional mrgn-bttm-md" typeof="Event">
 	<h2 property="name">Ice sculptures on the Kipnes Lantern</h2>
 	<p property="description">Ice sculptures from the international competition will be featured on the Kipnes Lantern at the National Arts Centre during the 2nd and 3rd weekend of Winterlude. During the 1st weekend a 3D computer generated ice sculpture will also be featured.</p>
 	<h3>Date and time</h3>	
-	<p><time property="startDate" content="20200217T210000Z" datetime="2020-02-17 16:00">Monday, February 17, 2020 | 4:00 pm</time> to <time property="endDate" content="20200218T040000Z" datetime="2020-02-17 23:00">11:00 pm</time></p>
+	<p><meta property="startDate" content="2020-02-17T16:00:00"><time>Monday, February 17, 2020 | 4:00 pm</time> to <meta property="endDate" content="2020-02-17T23:00:00"><time>11:00 pm</time></p>
 	<h3>Location</h3>
 	<div class="mrgn-bttm-md" property="location" typeof="Place">
 		<span property="name">National Arts Centre</span>
@@ -84,15 +84,18 @@ Prototype of an ```Add to Calendar``` widget using details summary pattern and S
 		</div>
 	</div>
 </div>
-<div class="wb-addcal mrgn-bttm-md provisional" typeof="Event">
+<div class="wb-addcal provisional mrgn-bttm-md" typeof="Event">
 	<h2 property="name">Igloo Baratanga</h2>
-	<p property="description">A percussion activity for the whole family! Take part in a drum circle and get warmed up. No musical experience required and smiles guaranteed! Come play with us!</p>
+	<p property="description">A percussion activity for the whole family!<br>Take part in a drum circle and get warmed up. No musical experience required and smiles guaranteed! Come play with us!</p>
 	<h3>Date and time</h3>	
-	<p><time property="startDate" content="20200208T180000Z" datetime="2020-02-08 13:00">Sunday, February 8, 2020 | 1:00 pm</time> to <time property="endDate" content="20200208T183000Z" datetime="2020-02-08 13:30">1:30 pm</time></p>
+	<p><meta property="startDate" content="2020-02-08T13:00:00"><time>Sunday, February 8, 2020 | 1:00 pm</time> to <meta property="endDate" content="2020-02-08T13:30:00"><time>1:30 pm</time></p>
 	<h3>Location</h3>
 	<P class="wb-addcal-location">Snowflake Kingdom, <span lang="fr">Jacques-Cartier</span> Park, Gatineau</p>
-	</div>
 </div>
+<dl id="wb-dtmd">
+<dt>Date modified:&#32;</dt>
+<dd><time property="dateModified">2017-09-29</time></dd>
+</dl>
 
 {% endraw %}
 {:/}

@@ -57,13 +57,22 @@ Add to calendar functionality
 ..2. PRODID (This property specifies the identifier for the product that created the iCalendar object.)
 ..3. DTSTAMP (This property specifies the date and time that the information associated with the calendar component was last revised in the calendar store)
 
-### Unique Identifier (UID)
+### 1. Unique Identifier (UID)
 
 Since it MUST be a globally unique in the "VEVENT" calendar component, we have decided to build it as follow: the page URL (path)-the event start date/time-last modified date of the page (mysitefolderpagehtml-20200428T140000-20200423T0830). From a security and privacy standpoint, using the host names, IP addresses, and domain names to construct the value is not recommended. Presently, the event information that will be provided are public information. However, we will think in the best approach to provide that UID in a more private manner. I'm presenlty looking at using hash functionality...more to come.
 
-### Product Identifier (PRODID)
+### 2. Product Identifier (PRODID)
 
-### Date-Time Stamp
+This property specifies the identifier for the product that created the iCalendar object. It represents the owner identifier which indicates the issuer (1st part) and the text identifier (2nd part) which indicates the particular document. The two parts are seperated by a double slash. Owner identifiers that are prefixed with "-//" indicate unregistered owners. Registered identifiers are prefixed with "+//" 
+
+The PRODID will be creates as follow: -//WET-BOEW//Add to Calendar v4.0//
+
+Ref: 
+[rfc5545 - 3.7.3](https://tools.ietf.org/html/rfc5545#section-3.7.3)
+[Formal Public Identifier (FPI) on Wikipedia](https://en.wikipedia.org/wiki/Formal_Public_Identifier)
+[iCalendar.org - 3.7.3. Product Identifier](https://icalendar.org/iCalendar-RFC-5545/3-7-3-product-identifier.html)
+
+### 3. Date-Time Stamp
 
 We have decided to use the last modified date from the page/document to construct this value.
 
