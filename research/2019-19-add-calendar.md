@@ -3,7 +3,7 @@ published: true
 layout: default-theme-wet-boew-en
 title: 2019-19 - Add to calendar
 description: Add to calendar
-modified: 2020-02-17
+modified: 2020-04-30
 ---
 
 **Project lead:** Eric Guitard
@@ -52,34 +52,39 @@ Add to calendar functionality
 	* Using list items inside a details summary tag.
 * After few discussions and testing, a recommandation for creating a blob for the .ics file via the wb.download functionality from the existing action manager WET pluggin as been considered. 
 * In the CSS we have used display: inline-block instead of max-width: max-content since it's working in both IE and FireFox
-* According to the rfd5545, the following 3 parameters are mandatory: 
-..1. UID (This property specifies the persistent, globally unique identifier for the iCalendar object.)
-..2. PRODID (This property specifies the identifier for the product that created the iCalendar object.)
-..3. DTSTAMP (This property specifies the date and time that the information associated with the calendar component was last revised in the calendar store)
+* According to the rfc5545, the following 3 parameters are mandatory: 
+    1. UID (This property specifies the persistent, globally unique identifier for the iCalendar object).
+    2. PRODID (This property specifies the identifier for the product that created the iCalendar object).
+    3. DTSTAMP (This property specifies the date and time that the information associated with the calendar component was last revised in the calendar store
+    
+    Ref: [rfc5545 - 3.6](https://tools.ietf.org/html/rfc5545#section-3.6), [rfc5545 - 3.6.1](https://tools.ietf.org/html/rfc5545#section-3.6.1))
 
-### 1. Unique Identifier (UID)
+**1. Unique Identifier (UID)**
 
 Since it MUST be a globally unique in the "VEVENT" calendar component, we have decided to build it as follow: the page URL (path)-the event start date/time-last modified date of the page (mysitefolderpagehtml-20200428T140000-20200423T0830). From a security and privacy standpoint, using the host names, IP addresses, and domain names to construct the value is not recommended. Presently, the event information that will be provided are public information. However, we will think in the best approach to provide that UID in a more private manner. I'm presenlty looking at using hash functionality...more to come.
 
-### 2. Product Identifier (PRODID)
+Ref:
+* [rfc5545 - 3.8.4.7](https://tools.ietf.org/html/rfc5545#section-3.8.4.7)
+* [rfc7986 - 5.3](https://tools.ietf.org/html/rfc7986#section-5.3)
+
+
+**2. Product Identifier (PRODID)**
 
 This property specifies the identifier for the product that created the iCalendar object. It represents the owner identifier which indicates the issuer (1st part) and the text identifier (2nd part) which indicates the particular document. The two parts are seperated by a double slash. Owner identifiers that are prefixed with "-//" indicate unregistered owners. Registered identifiers are prefixed with "+//" 
 
 The PRODID will be creates as follow: -//WET-BOEW//Add to Calendar v4.0//
 
 Ref: 
-[rfc5545 - 3.7.3](https://tools.ietf.org/html/rfc5545#section-3.7.3)
-[Formal Public Identifier (FPI) on Wikipedia](https://en.wikipedia.org/wiki/Formal_Public_Identifier)
-[iCalendar.org - 3.7.3. Product Identifier](https://icalendar.org/iCalendar-RFC-5545/3-7-3-product-identifier.html)
+* [rfc5545 - 3.7.3](https://tools.ietf.org/html/rfc5545#section-3.7.3)
+* [Formal Public Identifier (FPI) on Wikipedia](https://en.wikipedia.org/wiki/Formal_Public_Identifier)
+* [iCalendar.org - 3.7.3. Product Identifier](https://icalendar.org/iCalendar-RFC-5545/3-7-3-product-identifier.html)
 
-### 3. Date-Time Stamp
+**3. Date-Time Stamp**
 
-We have decided to use the last modified date from the page/document to construct this value.
+We have decided to use the date last modified from the page/document to construct this value.
 
-**References:**
-
-* rfc5545: [3.6](https://tools.ietf.org/html/rfc5545#section-3.6), [3.6.1](https://tools.ietf.org/html/rfc5545#section-3.6.1) [3.8.4.7](https://tools.ietf.org/html/rfc5545#section-3.8.4.7), [3.7.3](https://tools.ietf.org/html/rfc5545#section-3.7.3), [3.8.7.2](https://tools.ietf.org/html/rfc5545#section-3.8.7.2)
-* rfc7986: [5.3](https://tools.ietf.org/html/rfc7986#section-5.3)
+Ref:
+* [rfc5545 - 3.8.7.2](https://tools.ietf.org/html/rfc5545#section-3.8.7.2)
 
 ## Wireframe and template
 
