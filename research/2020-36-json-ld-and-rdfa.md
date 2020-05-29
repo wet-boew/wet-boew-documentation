@@ -204,7 +204,7 @@ Reference:
 Try to expand the context, as suggested by the JSON-LD working example.
 
 * The property "about" produces the same results
-* Google SD Tool complain about steps - it don't recongnize it
+* Google SD Tool complains about steps - it doesn't recognize it
 
 ```
 <script type="application/ld+json">
