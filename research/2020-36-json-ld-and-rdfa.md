@@ -7,7 +7,7 @@ modified: 2020-05-12
 
 Additional research regarding of the use of JSON-LD with RDFa.
 
-The goad is to refine our approach as it was defined by DD-8 and try to get an compromise with how structure data is being validated by popular online tool and try to reduce at minimum any duplication.
+The goal is to refine our approach as it was defined by DD-8 and try to get an compromise with how structure data is being validated by popular online tool and try to reduce at minimum any duplication.
 
 
 ## Conclusion
@@ -483,4 +483,3 @@ Reference: [https://search.google.com/structured-data/testing-tool/#url=https%3A
 * [JSON-LD syntax github issue: https://github.com/w3c/json-ld-syntax/issues/78](https://github.com/w3c/json-ld-syntax/issues/78)
 * [Stack Exchange : https://webmasters.stackexchange.com/questions/117566/using-both-jsonld-and-microdata-to-markup-the-exact-same-information-on-a-page](https://webmasters.stackexchange.com/questions/117566/using-both-jsonld-and-microdata-to-markup-the-exact-same-information-on-a-page)
 * [Design decision #8](https://wet-boew.github.io/wet-boew-documentation/decision/8.html)
-
