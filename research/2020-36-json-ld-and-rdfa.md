@@ -161,7 +161,7 @@ Reference:
 
 #### Fourth experimentation
 
-* Google SD tool complain about step
+* Google SD tool complains about step
 * Idem with step @type set to "Thing"
 
 ```
