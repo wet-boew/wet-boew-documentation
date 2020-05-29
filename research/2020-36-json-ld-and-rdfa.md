@@ -245,7 +245,7 @@ Try to expand the context, as suggested by the JSON-LD working example.
 
 #### Second experimentation
 
-* Google don't show an error for "Publisher", but remarked it identify it as a "rdf:typeOf Thing"
+* Google doesn't show an error for "Publisher", but remarked it identify it as a "rdf:typeOf Thing"
 
 ```
 <script type="application/ld+json">
