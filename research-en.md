@@ -68,6 +68,7 @@ List of finding and ongoing research related to WET and it's features
 
 ## Published report and documents
 
+* [2020-36 - JSON-LD and RDFa](research/2020-36-json-ld-and-rdfa.html)
 * [2020-32 - WET-BOEW 5 year high level plan](research/2020-32-wet-boew-5-year-plan.html)
 * [2018-13 - WET 5 workshop – UXDS @ STATCAN](research/2018-13-wet5-workshop-statcan.html)
 * [2018-11 - WET 5 - Augmented Design - Early prototype presentation](research/2018-11-wet5-augmented-design-presentation.html)
