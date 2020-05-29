@@ -12,7 +12,7 @@ The goal is to refine our approach as it was defined by DD-8 and try to get an c
 
 ## Conclusion
 
-As: 2020-05-12 by @duboip
+As of: 2020-05-12 by @duboip
 
 ### Recommended action
 
