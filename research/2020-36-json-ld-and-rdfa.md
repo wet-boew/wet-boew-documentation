@@ -80,7 +80,7 @@ The following markup and strategy are:
 * Seems not supported: RDFa + JSON-LD where their content crisscross. For example, when I did my test/research, the RDF anchor was not taken in consideration.
 * Worth to give a try: Support the RDFa + JSON-LD for content complementary of the main content in order to avoid content duplication. For example the publisher information is available in RDFa markup in the template and the main thing described in JSON-LD would refer to the main page publisher instead of duplicating the information.
 
-The "Seems not supported" option can probably by fixed by a javascript procedure that will complete the JSON-LD content and do automated duplication. That way, it will reduce the risk of human error like copy and paste or forgetting to update the information in several places. That became riskier when there is a large publishing team and the content need to go through a complex publishing and approval workflow.
+The "Seems not supported" option can probably by fixed by a javascript procedure that will complete the JSON-LD content and do automated duplication. That way, it will reduce the risk of human error like copy and paste or forgetting to update the information in several places. That becomes riskier when there is a large publishing team and the content need to go through a complex publishing and approval workflow.
 
 ### Other reference
 
