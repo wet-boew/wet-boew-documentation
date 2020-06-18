@@ -10,6 +10,15 @@ Summary of what has been discussed at the meeting.
 
 ## Roadmap
 
+2020-06-10
+* Quick review of the list of projects.
+* Presentation of Design Decision #11 about zooming for accessibility; a review was asked.
+* First review of provisional features one-by-one; process to be reviewed.
+	* ".bg-cover" (in conclusion to the exchange of arguments) and "data-wb-randomize" will gradutate to stable; ".bg-img-hdng" will be deprecated; the rest remains as-is.
+		* It was mentioned that all spacing classes from Bootstrap 4 should be added.
+		* CRA mentioned they are going to be using "data-bgimg"
+* Briefly discussed about institutions' custom code approach, called "meli-melo"
+
 2020-01-15 (6 participants)
 * Review list of projects
 * Approval of design decision #9 and #10
