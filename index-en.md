@@ -4,7 +4,7 @@ layout: default-theme-wet-boew-en
 filename_fr: index-fr
 title: Web Experience Toolkit (WET) documentation
 description: Web Experience Toolkit (WET) documentation
-modified: 2019-06-20
+modified: 2019-06-30
 ---
 
 * Roadmap
@@ -40,6 +40,7 @@ modified: 2019-06-20
 	* [Evaluate the accessibility conformity of the homepage of Wet-Boew](research/2020-35-a11y-wet-boew.html)
 	* [Evaluate the accessibility conformity of the Canada child benefit introduction page of Canada.ca](research/research-2020-33-a11y.html)
 	* [Evaluate the accessibility conformity of the Canada child benefit apply page of Canada.ca](research/research-2020-34-a11y.html)
+	* [Short review of the improved Service initiation template on its accessibility and usability for people with disabilities](research/2020-37-research-a11y-sit.html)
 
 * Test case
 	* AT support for heading in summary element
