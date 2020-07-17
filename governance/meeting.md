@@ -3,14 +3,29 @@ published: true
 layout: default-theme-wet-boew-en
 title: Meeting summary - WET-BOEW documentation
 description: Summary of what has been discussed at the meeting.
-modified: 2019-12-18
+modified: 2020-07-17
 ---
 
 Summary of what has been discussed at the meeting.
 
 ## Roadmap
 
-2020-06-10
+2020-07-13 (8 participants)
+* Quick review of the list of projects.
+* Presentation of Design Decision #12; an formal example must be added.
+	* Design Decision #11 was reviewed and content must be added.
+* Review of provisional features:
+	* ".bg-cover" will gradutate to stable; 
+	* "data-wb-randomize" will graduate to stable, but will need documentation;
+	* ".bg-img-hdng" will be deprecated.
+* Round table:
+	* True dark theme was mentioned and is a very low priority;
+	* It was asked to remove the carousel plugin, consequently:
+		* It was suggested to add a blurb at the top of plugins or components that mentions "Under review";
+		* It was recommended to add such blurb at the top of alerts.
+	* There is a need to normalize font sizes all accross (form, buttons, etc.).
+
+2020-06-10 (6 participants)
 * Quick review of the list of projects.
 * Presentation of Design Decision #11 about zooming for accessibility; a review was asked.
 * First review of provisional features one-by-one; process to be reviewed.
