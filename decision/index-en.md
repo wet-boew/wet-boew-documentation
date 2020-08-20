@@ -40,6 +40,7 @@ If you have any questions in regards of one of the above design decision, please
 	<ul>
 		<li><a href="11.html">Design decision 11: Resize text testing methodology</a></li>
 		<li><a href="12.html">Design decision 12: Double H1 on a single page</a></li>
+		<li><a href="13.html">Design decision 13: Reduce aggressiveness of form validation plugin</a></li>
 	</ul>
 </section>
 
