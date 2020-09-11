@@ -37,10 +37,11 @@ modified: 2019-06-30
 	* [Short review of https://wet-boew.github.io/themes-dist/GCWeb/ministerial-en.html on its accessibility and usability for people with disabilities](research/2020-29-a11y-ministerial.html)
 	* [Short review of https://wet-boew.github.io/themes-dist/GCWeb/theme-en.html on its accessibility and usability for people with disabilities](research/2020-30-a11y-theme.html)
 	* [Short review of Web Experience Toolkit on its accessibility and usability for people with disabilities](research/2020-31-a11y-topic-page.html)
-	* [Evaluate the accessibility conformity of the homepage of Wet-Boew](research/2020-35-a11y-wet-boew.html)
 	* [Evaluate the accessibility conformity of the Canada child benefit introduction page of Canada.ca](research/research-2020-33-a11y.html)
 	* [Evaluate the accessibility conformity of the Canada child benefit apply page of Canada.ca](research/research-2020-34-a11y.html)
+	* [Evaluate the accessibility conformity of the homepage of Wet-Boew](research/2020-35-a11y-wet-boew.html)
 	* [Short review of the improved Service initiation template on its accessibility and usability for people with disabilities](research/2020-37-research-a11y-sit.html)
+	* [Resize text testing methodology with formal example](research/2020-38-a11y-zoom.html)
 
 * Test case
 	* AT support for heading in summary element
@@ -67,15 +68,15 @@ Location: teleconference with web conference
 When: Every week alternating between Wednesday (from 11h00 to 12h00) and Thursday (from 10h00 to 11h00)
 
 ### WET-BOEW code sprint
+Visit the [WET-BOEW Code sprint wiki page](https://github.com/wet-boew/wet-boew/wiki/WET-BOEW-Code-sprint) for more information about the new Code sprint formula.
+
+<!--
 Location: Place du Centre, 200 promenade du portage, Gatineau, suite 990, room 2D302
-
 When: Every week on Tuesday from 9h30 to 15h30
-
 Goal: You can work on WET related projects and have on-site support.
-
 Type: Unstructured, which means there is no official agenda. From time to time, and if needed, there can be a structured code sprint.
-
 To join: Contact Pierre Dubois, you can find his contact information on gccollab or on gcconnect or on twitter via @duboi5p
+-->
 
 ### Roadmap
 Location: Place du Centre, 200 promenade du portage, Gatineau, suite 990, room 2D302
