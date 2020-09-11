@@ -3,12 +3,22 @@ published: true
 layout: default-theme-wet-boew-en
 title: Meeting summary - WET-BOEW documentation
 description: Summary of what has been discussed at the meeting.
-modified: 2020-07-17
+modified: 2020-09-11
 ---
 
 Summary of what has been discussed at the meeting.
 
 ## Roadmap
+
+2020-09-10 (10 participants)
+* Quick review of the list of projects.
+* Presentation of Design Decision #13; WCAG references must be added.
+	* Design Decision #12 was revisited and content must be added;
+	* Design Decision #11 was revisited and content must be added.
+* Review of provisional features.
+* Round table:
+	* Waiting on TBS for a formal request to force departments not to use the carousel;
+	* Normalizing font sizes all accross (form, buttons, etc.) is becoming a priority for TBS.
 
 2020-07-13 (8 participants)
 * Quick review of the list of projects.

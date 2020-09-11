@@ -31,7 +31,7 @@ List of finding and ongoing research related to WET and it's features
 
 ## Analysis in progress - report incomplete
 
-* [2020-33 - Analysis of double h1 impact on search result](research/2020-33-double-h1-impact-analysis.html)
+* [2020-33-1 - Analysis of double h1 impact on search result](research/2020-33-double-h1-impact-analysis.html)
 
 ## Stale/on hold
 
@@ -65,6 +65,11 @@ List of finding and ongoing research related to WET and it's features
 * [2020-29 - Short review of https://wet-boew.github.io/themes-dist/GCWeb/ministerial-en.html on its accessibility and usability for people with disabilities](research/2020-29-a11y-ministerial.html)
 * [2020-30 - Short review of https://wet-boew.github.io/themes-dist/GCWeb/theme-en.html on its accessibility and usability for people with disabilities](research/2020-30-a11y-theme.html)
 * [2020-31 - Short review of Web Experience Toolkit on its accessibility and usability for people with disabilities](research/2020-31-a11y-topic-page.html)
+* [2020-33-2 - Accessibility assesment of Canada child benefit page of Canada.ca](research/research-2020-33-a11y.html)
+* [2020-34 - Accessibility assesment of Canada child benefit apply page of Canada.ca](research/research-2020-34-a11y.html)
+* [2020-35 - Accessibility assesment of Wet-Boew Homepage](research/2020-35-a11y-wet-boew.html)
+* [2020-37 - Review of improved Service initiation template](research/2020-37-research-a11y-sit.html)
+* [2020-38 - Resize text testing methodology with formal example](research/2020-38-a11y-zoom.html)
 
 ## Published report and documents
 

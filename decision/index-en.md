@@ -3,7 +3,7 @@ published: true
 layout: default-theme-wet-boew-en
 title: Design decision
 description: Design decision followed by WET.
-modified: 2020-06-30
+modified: 2020-09-11
 ---
 
 The following are design decision for WET. Those decision are used for providing guidance on how to design content, features and theme. Design decision are subject for review by every wet-boew contributor and its official approval is made by participant of the WET-BOEW Roadmap monthly meeting, WET expert and WET administrator. Any propose changes to an approved design design, except to trivial editorial fixes, are subject to go through the whole approval process.
@@ -27,22 +27,23 @@ If you have any questions in regards of one of the above design decision, please
 	</ul>
 </section>
 
-<!--
 <section>
 	<h2>Presented</h2>
-	<ul>
-	</ul>
-</section>
--->
-
-<section>
-	<h2>Proposed (Going to be presented)</h2>
 	<ul>
 		<li><a href="11.html">Design decision 11: Resize text testing methodology</a></li>
 		<li><a href="12.html">Design decision 12: Double H1 on a single page</a></li>
 		<li><a href="13.html">Design decision 13: Reduce aggressiveness of form validation plugin</a></li>
 	</ul>
 </section>
+
+<!--
+<section>
+	<h2>Proposed (Going to be presented)</h2>
+	<ul>
+		
+	</ul>
+</section>
+-->
 
 <!--
 <section>
