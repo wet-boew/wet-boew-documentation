@@ -22,3 +22,5 @@ csslint.out.xml
 *.tmp
 *.log
 _site/*
+
+.settings/*
