@@ -1,7 +1,7 @@
 # standard jekyll configuration
 
-title_en: "Documentation - Web Experience Toolkit&#160;(WET)"
-title_fr: "Documentation - Boîte à outils de l'expérience Web&#160;(BOEW)"
+title_en: "Web Experience Toolkit&#160;(WET)"
+title_fr: "Boîte à outils de l'expérience Web&#160;(BOEW)"
 description_en: "Documentation for the Web Experience Toolkit (WET)."
 description_fr: "Documentation pour la Boîte à outils de l'expérience Web (BOEW)."
 languages: true
