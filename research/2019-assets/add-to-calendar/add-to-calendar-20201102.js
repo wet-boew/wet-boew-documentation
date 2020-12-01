@@ -36,7 +36,8 @@ var componentName = "wb-addcal",
 			
 			var properties = elm.querySelectorAll( "[property]" ),
 				dtStamp = document.querySelectorAll( "time[property]" ),
-				uid = window.location.href,
+				test2 = window.location,
+				uid = window.location.href.replace(/\.|-|\/|:/g, ""),
 				i,
 				i_len,
 				eventData = {},
@@ -72,7 +73,7 @@ var componentName = "wb-addcal",
 				switch( dtStamp.getAttribute("property") ){
 					case "dateModified":
 					dtStamp = dtStamp.innerText.replace(/-/g, "") + "T000000";
-					uid = uid.substring(uid.lastIndexOf("/"), uid.lastIndexOf(".")).replace(/\.|-|\/|:/g, "").toUpperCase() + "-" + dtStamp;
+					uid += "-" + dtStamp;
 					icsLink += "\nDTSTAMP:" + dtStamp;
 					break;
 				}
@@ -141,7 +142,9 @@ var componentName = "wb-addcal",
 				googleLink += "&location=" + place;
 				icsLink += "\nLOCATION:" + place;
 			}
-						
+			
+			alert(test2);
+			
 			googleLink = encodeURI(googleLink);
 			icsLink = icsLink + "\nEND:VEVENT\nEND:VCALENDAR";
 
