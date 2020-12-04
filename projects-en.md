@@ -214,33 +214,41 @@ Updated: 2019-12-18
 * Create a Jekyll variant of GCWeb to facilate the use of the Canada.ca theme to publish content on github pages
 * **Project lead:** David Elisma (DTO)
 * **Status:** In progress to create a working example in jekyll and refining the implementation based on the handlebar template in gcweb. 
-* **Last updated:** January 15, 2020
+* **Github project:** https://github.com/wet-boew/gcweb-jekyll
+* **Last updated:** December 2, 2020
 * **History:**
+ 	* (2020-12-02) Project work, but still need to write documentation on how to use for user that don't know Jekyll
 	* (2020-01-15) In progress to create a working example in jekyll and refining the implementation based on the handlebar template in gcweb.
 
 ### WET 5 - New framework
 * Create a new front-end framework in vanila javascript, CSS and HTML5.
 * **Project lead:** Pierre Dubois (SC)
-* **Status:** Developping the data layer core.
+* **Status:** Developping the data layer core + template system.
 * **Last updated:** January 15, 2020
 * **History:**
+	* (2020-12-02) Revisiting previous prototype and working on data extraction and template processing 
 	* (2020-01-15) Developping the data layer core.
 
 ### Multi page survey
 * Provide a configurable multi page form to accomodate a parametrable end of website visit survey.
-* **Project lead:** Eric Dunsworth (SC)
+* **Project lead:** Lucas Hay (SC) (was Eric Dunsworth (SC))
 * **Status:** Development of a functional prototype
-* **Last updated:** December 19, 2019
+* **Resource:**
+	* To explore: SurveyJS - https://surveyjs.io/
+	* Example with SurveyJS, show a concept - https://github.com/canada-ca/aia-eia-js
+* **Last updated:** December 2, 2020
 * **History:**
+	* (2020-12-02) Prototype created specific for the GC server. Still need to isolate feature and make them re-usable
 	* (2019-12-19) Working on developing a functional prototype
 
 ### Flat checkboxes and radio button for Canada.ca theme
 * Provide a better UX experience for people navigating content with fieldflow. 
-* **Project lead:** David Elisma (DTO) -Patrick Lajeunesse (DTO)-
-* **Status:** Project has split in smaller pieces, Apply explicit label-input pattern in wet-boew, Apply flat checkbox style, Apply change to fieldflow plugin to use the new explicit label-input pattern
-* **Last updated:** December 18, 2019
+* **Project lead:** David Elisma (DTO)
+* **Status:** Submitted as provisional feature for the explicit labels. Next is to do the support for the implicit label and adjust the in form styling for an harmonization of other form control.
+* **Last updated:** December 12, 2020
 * **History:**
-	* (2019-12-18) wet-boew change has been merged waiting for the wet-boew dependency update in GCweb
+	* (2020-12-02) Submitted as provisional feature for the explicit labels. Next is to do the support for the implicit label and adjust the in form styling for an harmonization of other form control. - https://wet-boew.github.io/themes-dist/GCWeb/component/gc-chckbxrdio-en.html ; 
+	* (2019-12-18) wet-boew change has been merged waiting for the wet-boew dependency update in GCweb. Project has split in smaller pieces, Apply explicit label-input pattern in wet-boew, Apply flat checkbox style, Apply change to fieldflow plugin to use the new explicit label-input pattern
 	* (2019-10-23) wet-boew change has been submited - Has some discussion to test the propose design pattern against WCAG 2.0 level AA conformance.
 	* (2019-09-20) Initiating this project tracking - On development WIP track on GCWeb PR, feature fragmented for a better integration in wet-boew and gcweb and make it more reusable.
 
@@ -271,11 +279,12 @@ Provide a visual indication that show the current forms steps.
 ### Chat bot
 Convert a form into a chat like interaction. The supporting use case is for GCWeb only for now.
 * **Project lead:** Francis Gorman
-* **Current status:** Functional high fidelity prototype and it's now ready to start the integration into wet-boew (docs + working example). Exploring to separate the "bubble" into it's own plugin.
+* **Current status:** Still in discussion about it's design. For the integration in AEM it's going to be through the upcomming méli-mélo.
 * **Others:** In the execution of this project, it's going to revive the step-form plugin previously submited into WET.
-* **Last update:** December 18, 2019
+* **Last update:** December 2, 2020
 * **History:**
-	* (2019-12-18) A working group was established to discuss about a GC wide solution for chat bots
+	* (2020-12-02) Separating the bubble from the chat wizard, in progress. The chat bot would most likely be push as a méli-mélo feature for now.
+	* (2019-12-18) A working group was established to discuss about a GC wide solution for chat bots. Functional high fidelity prototype and it's now ready to start the integration into wet-boew (docs + working example). Exploring to separate the "bubble" into it's own plugin.
 	* (2019-10-23) Renamed the project from "Chat wizard" to "Chat bot"
 	* (2019-06-20) Functionality planned to be released with GCWeb 5.2
 	* (2019-05-16) Status update
@@ -286,13 +295,14 @@ Convert a form into a chat like interaction. The supporting use case is for GCWe
 
 ### Step form
 This component provides the ability to break a form into steps. To be use when Web forms are long/contain lot of information.
-* **Last updated:** June 20, 2019
+* **Last updated:** December 2, 2020
 * **Github:** [PR #7913](https://github.com/wet-boew/wet-boew/pull/7913)
 * **Working example:** [TheKodester - Steps Form](https://www.thekodester.ca/wet/formvalid/steps)
 * **What left:** Apply the request of change of [PR #8645](https://github.com/wet-boew/wet-boew/pull/8645)
 * **Project integration lead:** Francis Gorman
-* **Current status:** Code base is under review and a few code adjustment are under development.
+* **Current status:** Merged as provisional plugin in wet-boew
 * **History:**
+	* (2020-12-02) Release as provisional plugin in wet-boew - https://wet-boew.github.io/wet-boew/demos/stepsform/stepsform-en.html
 	* (2019-06-20) Functionality planned to be released with wet-boew 4.0.32
 	* (2019-05-16) PR submited and there is some request of change to apply
 	* (2019-04-25) Now stabilized, PR almost ready to submit, need just a commits history re-write to preserve intellectual property merits.
@@ -306,8 +316,10 @@ We’re upgrading jQuery from version 2.2.4 to 3.3.1. Version 2.x is no longer s
 * **Project lead:** Neil Mispelaar
 * **Current status:** Did an initial scan of all the wet-boew code. Testing each working example and quickly reviewing the JS of each plugin. 
 * **Documentation:** [https://wet-boew.github.io/wet-boew-documentation/research/2019-16-jquery-3-migration.html](https://wet-boew.github.io/wet-boew-documentation/research/2019-16-jquery-3-migration.html)
-* **Last update:** May 16, 2019
+* **Idea:** Take a look at the jQuery Migration plugin to use as transition for some plugins or to use a shim plugin.
+* **Last update:** December 2, 2020
 * **History:**
+	* (2020-12-02) Talk about this project and see how we can move it forward
 	* (2019-07-24) Project still on hold
 	* (2019-05-16)
 		* We will create a separate package of WET-BOEW and GCWEb with jQuery 3 for testing
@@ -322,9 +334,10 @@ We’re upgrading jQuery from version 2.2.4 to 3.3.1. Version 2.x is no longer s
 Widget that can create an outlook like invitation on the fly to allow the user to add into its device calendar.
 
 * **Project lead:** Eric Guitar
-* **Current status:** New project, solution research ongoing
-* **Last update:** December 18, 2019
+* **Current status:** Prototype completed, preparing the PR for wet-boew
+* **Last update:** December 2, 2020
 * **History:**
+	* (2020-12-02) Prototype completed, preparing the PR for wet-boew
 	* (2019-12-18) Progressing in researching and documenting the approach
 	* (2019-10-23) Change the project lead from Francis Gorman to Eric Guitar
 	* (2019-05-16) Still in work in progress, a download function was added into the wet core in preparation of this plugin.
@@ -335,10 +348,11 @@ Widget that can create an outlook like invitation on the fly to allow the user t
 
 ### Design system
 Provide a central design system library.
-* **Last update:** December 18, 2019
+* **Last update:** December 2, 2020
 * **Tasks force:** Work are done in 3 area, UX experimentation/prototyping, Documentation, WET5 as an implementation reference.
-* **Current status:** Still in early stage, they are currently defining and refining the vocabulary used
+* **Current status:** A meeting will be orgarnized soon to try to make it happen considering our various competeting priority
 * **History:**
+	* (2020-12-02) A meeting will be orgarnized soon to try to make it happen considering our various competeting priority
 	* (2019-12-28) Review and get comments for the new WET5 architect. Re-engeneering the documentation template and looking forward to avoid confusion between wet-boew-styleguide, gcweb and design system.
 	* (2019-10-23) Still in early stage, they are currently defining and refining the vocabulary used
 
@@ -388,7 +402,7 @@ Simulate a datalist that work uniformly through browser implementation and conta
 * Be able to force the user to choose a displayed option
 * Be able to include a catch all default option that would always appear as an option
 * Fix datalist related [github issue](https://github.com/wet-boew/wet-boew/issues?q=is%3Aopen+is%3Aissue+label%3A%22Feature%3A+Datalist%22)
-* **Last updated:** July 26, 2018
+* **Last updated:** December 2, 2020
 * **Project lead and developper:** Pierre Dubois
 * **Collaborator:**
 	* Ivan Hughes - Refined the requirement and did initial environmental scan.
@@ -407,6 +421,7 @@ Simulate a datalist that work uniformly through browser implementation and conta
 	* [2018-05-28 - combobox prototype 10 - Fieldflow and default and async load - With reactive engine](research/2018-1-combobox-prototype-10.html)
 	* [2018-06-21 - Template playground prototype - Render UI by using the combobox templating system](research/2018-1-template-playground-prototype.html)
 * **History:**
+	* (2020-12-02) Simlar project has been communicated and added to the research project.
 	* (2018-08-24) Currently stale
 	* (2018-07-26) Still experimental, started to create independant set of working example pages. 
 	* (2018-06-20) Experimental stable plugin was released on Canada.ca. It support the conversion from a select to a combo box and added combo box render for fieldflow. Next is to create the docs and various working example. There is also a template playground which render a template from a JS object.
@@ -581,12 +596,18 @@ Need for more documentation on how WET can be integrated with Angular. For instr
 To have an easy way to compare multiple product side by side. A feature similar as we can found when a user want to buy a new camera on a web site and he want to compare side by side the specification for two different model of camera in order to decide which one would fit best his needs.
 
 ### Javascript AB testing framework
+
+**Last updated:** December 2, 2020
+
 Have a javascript that can show option A or B and be consistent for a period of 2-3 weeks.
 
 Chalenges:
 * What would be the basic interface.
 * Do we show option A, then after JS kick in we clear the visible DOM and show option B
 * Do we put option A inside a details summary, then when JS kick in we remove that details summary and show what-ever option for the user.
+
+Related:
+* Adobe Target is currently looked at to provide A/B testing in canada.ca
 
 Next step:
 * Define what is that basic interface 

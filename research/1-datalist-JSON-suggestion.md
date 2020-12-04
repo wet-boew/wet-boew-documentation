@@ -84,6 +84,11 @@ Here a list of similar tools that was found on a February 2018 research
 * [typeahead.js - Autocomplete library](http://twitter.github.com/typeahead.js/) ([Source Code](https://github.com/twitter/typeahead.js))
 * [DHX Combo - ComboBox with Autocomplete](https://dhtmlx.com/docs/products/dhtmlxCombo/)
 
+### Similar tools added on December 2nd 2020
+* [Alphagov (UK) - Accessible-autocomple](https://alphagov.github.io/accessible-autocomplete/examples/form.html) ([Other example](https://alphagov.github.io/accessible-autocomplete/examples/)) - [Github Source Code](https://github.com/alphagov/accessible-autocomplete/tree/master/dist)
+* [Webaxe - Accessible custom select dropdown](http://www.webaxe.org/accessible-custom-select-dropdowns/)
+
+
 ### Website using custom datalist
 * [http://wet-boew.github.io/themes-dist/GCWeb/demos/suggest/suggest-en.html](http://wet-boew.github.io/themes-dist/GCWeb/demos/suggest/suggest-en.html)
 * [http://www.btb.termiumplus.gc.ca/tpv2alpha/alpha-fra.html?lang=fra](http://www.btb.termiumplus.gc.ca/tpv2alpha/alpha-fra.html?lang=fra) - Reverse engenering suggestion for when typing in the field "Terme à cherche"

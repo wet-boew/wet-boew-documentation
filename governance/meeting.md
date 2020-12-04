@@ -10,6 +10,30 @@ Summary of what has been discussed at the meeting.
 
 ## Roadmap
 
+DD 13 - Approved
+
+2020-12-02 (6 participants)
+* Reviewed the project list status
+* The following Design decision was approved
+	* DD-11 - Resize
+	* DD-13 - Reduce aggressiveness of form validation plugin
+* Discussion about DD-12 - Double h1
+	* David E. want to add a paragraph about when to use this pattern and to only considerate it for special use case.
+	* Pierre D. will add a reference ot the screen reader test that was run.
+* DTO has updated the guidance on to not use the Carrousel. We would add it to the carrousel working example once we get the text.
+* The following provisional feature will become stable
+	* bg-img
+	* bg-cover
+	* bg-img-srcset
+	* randomize
+	* postback
+	* bg-center
+	* bg-darker - Will be moved into wet-boew core
+	* (GCWeb only) bg-gctheme
+	* (GCWeb only) alert-*
+	* (GCWeb only) gc-tickline
+
+
 2020-09-10 (10 participants)
 * Quick review of the list of projects.
 * Presentation of Design Decision #13; WCAG references must be added.
