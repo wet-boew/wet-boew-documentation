@@ -10,8 +10,6 @@ Summary of what has been discussed at the meeting.
 
 ## Roadmap
 
-DD 13 - Approved
-
 2020-12-02 (6 participants)
 * Reviewed the project list status
 * The following Design decision was approved
@@ -21,6 +19,7 @@ DD 13 - Approved
 	* David E. want to add a paragraph about when to use this pattern and to only considerate it for special use case.
 	* Pierre D. will add a reference ot the screen reader test that was run.
 * DTO has updated the guidance on to not use the Carrousel. We would add it to the carrousel working example once we get the text.
+* It was requested to re-word the Status column in the GCWeb Provisional features.
 * The following provisional feature will become stable
 	* bg-img
 	* bg-cover
@@ -32,7 +31,6 @@ DD 13 - Approved
 	* (GCWeb only) bg-gctheme
 	* (GCWeb only) alert-*
 	* (GCWeb only) gc-tickline
-
 
 2020-09-10 (10 participants)
 * Quick review of the list of projects.
