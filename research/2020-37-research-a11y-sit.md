@@ -10,37 +10,65 @@ modified: 2020-06-30
 * Status: Draft
 * Last updated: 2020-06-30
 * History:
+	* 2020-12-07 - @duboisp - Reformating and added screen reader test
 	* 2020-06-30 - @GormFrank - First draft
 
-## Early incomplete thought on the pattern
+## On this page and related links
+
+* [Github discussion - GCWeb #1627](https://github.com/wet-boew/GCWeb/issues/1627)
+* [Quick test with adaptive technology for double H1's](#quick-test-with-adaptive-technology-for-double-h1s) - 2020-02-27
+* [Web Accessibility Working Group first review](#evaluation-by-accessibility-accommodations--adaptative-computer-technology-aaact-program) - 2020-01-07
+	* [Additional issues, from WAWG](#additional-issues-from-wawg)
+		* [Issue A - reading sequence](#issue-a---reading-sequence)
+		* [Issue B - confusing layout](#issue-b---confusing-layout)
+	* [The solution suggested, from WAWG](#the-solution-suggested-from-wawg)
+* [Early comments, first perception](#early-comments-first-perception) - 2020-11-12
+* [References](#references)
+* [2020-40 - Evaluate the accessibility conformity of the Canada child benefit introduction page of Canada.ca](2020-40-a11y.html) assessment completed on January 2020
+* [2020-34 - Evaluate the accessibility conformity of the Canada child benefit apply page of Canada.ca](2020-34-a11y.html) assessment completed on January 2020
+
+## Quick test with adaptive technology for double H1's
+
+**From: WAWG - February 27, 2020**
+
+* **Completed by:** 1 person that use adaptive technology everyday.
+* **Question:** Do you find the use of two primary headings (H1) obfuscates the purpose of the page or makes it less clear?
+* **Answer:** No, clarity was fine. I went back and had another look with that in mind, but as I said no problem.
+* **Context:** The person tested with a page that was containing generic latin text. The latin containing text was mostly more confusing compared to the use of double h1.
+
+## Early comments, first perception
 
 **From: @duboisp - November 12, 2019**
 
-* I like the overall visual look.
-* I worry about the use of two heading level 1.
-	* I know that HTML5 (the specification) support that pattern, but as far that I know browser still don’t support it or badly support it.
-	* We need to keep in mind that we still need to support IE11. At my last check, last summer, IE11 represented more than 15% of all the traffic on Canada.ca
-* I understand the need of identifying uniformly a set of pages that belong to the same task. I think we should explore alternative markup that would create the same visual effect for desktop and mobile.
-	* I have a few idea and I think they will need to be prototyped too
-	* Instead of starting with an h1, we could start with an h2 (“Overarching topic”) followed by an h3 for the enumeration of section ("Steps") and then have the h1 (“Specific page name”).
-	* Use a paragraph for “Overarching topic” then an h2 for "Steps" and then the h1 (“Specific page name”).
-	* Include screen reader only text in the h1 (“Specific page name”) that is the “Overarching topic”.
-* Some aria-label was added, but I am unsure if it is actually needed as the main content, in this context there will only be 1 navigation section in the main element.
-	* I am suggesting to remove the aria-label
-* The navigation link (Steps_ are missing some semantic regarding which one are past, current and future steps. There is a visual indicator but it is not supported yet by semantic or content. This actually fail SC 1.4.1. To provide that contextual information I am suggesting to:
-	* Add some screen-reader only text, or
-	* Use some special wai-aria 1.1 state
-* The alert component example will be better if it was wrapped inside a section element.
-* There will be some documentation material to produce that would describe how to use it and the meaning of new CSS class like: gc-navseq and gc-nav-section
-	* I know that TBS –DTO currently work on a documentation template, but I would need technical documentation similar to the service and information component here: https://wet-boew.github.io/themes-dist/GCWeb/component/gc-srvinfo.html
+* I like the overall visual look. *(Bullet item 1)*
+* I worry about the use of two heading level 1. *(Bullet item 2)*
+	* I know that HTML5 (the specification) support that pattern, but as far that I know browser still don’t support it or badly support it. *(Bullet item 3)*
+	* We need to keep in mind that we still need to support IE11. At my last check, last summer, IE11 represented more than 15% of all the traffic on Canada.ca *(Bullet item 4)*
+* I understand the need of identifying uniformly a set of pages that belong to the same task. I think we should explore alternative markup that would create the same visual effect for desktop and mobile. *(Bullet item 5)*
+	* I have a few idea and I think they will need to be prototyped too *(Bullet item 6)*
+	* Instead of starting with an h1, we could start with an h2 (“Overarching topic”) followed by an h3 for the enumeration of section ("Steps") and then have the h1 (“Specific page name”). *(Bullet item 7)*
+	* Use a paragraph for “Overarching topic” then an h2 for "Steps" and then the h1 (“Specific page name”). *(Bullet item 8)*
+	* Include screen reader only text in the h1 (“Specific page name”) that is the “Overarching topic”. *(Bullet item 9)*
+* Some aria-label was added, but I am unsure if it is actually needed as the main content, in this context there will only be 1 navigation section in the main element. *(Bullet item 10)*
+	* I am suggesting to remove the aria-label *(Bullet item 11)*
+* The navigation link (Steps_ are missing some semantic regarding which one are past, current and future steps. There is a visual indicator but it is not supported yet by semantic or content. This actually fail SC 1.4.1. To provide that contextual information I am suggesting to: *(Bullet item 12)*
+	* Add some screen-reader only text, or *(Bullet item 13)*
+	* Use some special wai-aria 1.1 state *(Bullet item 14)*
+* The alert component example will be better if it was wrapped inside a section element. *(Bullet item 15)*
+* There will be some documentation material to produce that would describe how to use it and the meaning of new CSS class like: gc-navseq and gc-nav-section *(Bullet item 16)*
+	* I know that TBS –DTO currently work on a documentation template, but I would need technical documentation similar to the service and information component here: [https://wet-boew.github.io/themes-dist/GCWeb/component/gc-srvinfo.html](https://wet-boew.github.io/themes-dist/GCWeb/component/gc-srvinfo.html) *(Bullet item 17)*
 
-## Response
+## Evaluation by Accessibility, Accommodations & Adaptative Computer Technology (AAACT) Program 
 
 **From: Accessibility, Accommodations & Adaptative Computer Technology (AAACT) Program - January 7, 2020**
 
 Comments about the points raised.
 
-### I like the overall visual look
+### Bullet item 1
+
+> I like the overall visual look
+
+(*comment made by duboisp on November 12, 2020*)
 
 Strongly agreed.
 
@@ -56,11 +84,20 @@ The responsive design works perfectly as well. (I particularly liked how the lef
 {:.img-responsive}
 ![Previous and next navigation button]({{ "2020-37-assets/nav-buttons-2.png" }})
 
-### I worry about the use of two heading level 1. 
+
+### Bullet item 2
+
+> I worry about the use of two heading level 1.
+
+(*comment made by duboisp on November 12, 2020*)
 
 (PASS)
 
-#### I know that HTML5 (the specification) support that pattern, but as far that I know browser still don’t support it or badly support it.
+### Bullet item 3
+
+> I know that HTML5 (the specification) support that pattern, but as far that I know browser still don’t support it or badly support it.
+
+(*comment made by duboisp on November 12, 2020*)
 
 I researched this before. Apart from some best practice recommendations, I have **no evidence to suggest that only one h1 should be used on the same page**.
 
@@ -73,12 +110,12 @@ An official guidance about headings mentions the correct nesting practices and r
 
 [Accessibility concerns | Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements#Accessibility_concerns)
 
-##### From Mozilla:
+#### From Mozilla:
 
 “A common navigation technique for users of screen reading software is jumping from heading to heading to quickly determine the content of the page. Because of this, it is important to not skip one or more heading levels. Doing so may create confusion, as the person navigating this way may be left wondering where the missing heading is.”
 
 **Don't**
-{::nomarkdown}
+
 {% raw %}
 <pre>
 	<code>
@@ -88,10 +125,9 @@ An official guidance about headings mentions the correct nesting practices and r
 	</code>
 </pre>
 {% endraw %}
-{:/}
 
 **Do**
-{::nomarkdown}
+
 {% raw %}
 <pre>
 	<code>
@@ -101,25 +137,46 @@ An official guidance about headings mentions the correct nesting practices and r
 	</code>
 </pre>
 {% endraw %}
-{:/}
 
-#### We need to keep in mind that we still need to support IE11. At my last check, last summer, IE11 represented more than 15% of all the traffic on Canada.ca
+
+### Bullet item 4
+
+> We need to keep in mind that we still need to support IE11. At my last check, last summer, IE11 represented more than 15% of all the traffic on Canada.ca
+
+(*comment made by duboisp on November 12, 2020*)
 
 There seems to be no IE-related issues. I tested using IE11’s emulation tool and even IE6 seems to show everything almost the same, thanks to this css file: https://www.canada.ca/etc/designs/canada/wet-boew/css/ie8-theme.min.css
 
 Of course, a real IE6 browser might show otherwise, but I guess designing for anything less than IE9 is unnecessary.
 
-### I understand the need of identifying uniformly a set of pages that belong to the same task. I think we should explore alternative markup that would create the same visual effect for desktop and mobile
 
-#### I have a few idea and I think they will need to be prototyped too
+### Bullet item 5
 
-#### Instead of starting with an h1, we could start with an h2 (“Overarching topic”) followed by an h3 for the enumeration of section ("Steps") and then have the h1 (“Specific page name”)
+> I understand the need of identifying uniformly a set of pages that belong to the same task. I think we should explore alternative markup that would create the same visual effect for desktop and mobile
+
+(*comment made by duboisp on November 12, 2020*)
+
+### Bullet item 6
+
+> I have a few idea and I think they will need to be prototyped too
+
+(*comment made by duboisp on November 12, 2020*)
+
+### Bullet item 7
+
+> Instead of starting with an h1, we could start with an h2 (“Overarching topic”) followed by an h3 for the enumeration of section ("Steps") and then have the h1 (“Specific page name”)
+
+(*comment made by duboisp on November 12, 2020*)
 
 (FAIL LEVEL A 1.3.1)
 
 https://www.hhs.gov/web/section-508/making-files-accessible/html-required/index.html#_headings
 
-#### Use a paragraph for “Overarching topic” then an h2 for "Steps" and then the h1 (“Specific page name”)
+### Bullet item 8
+
+> Use a paragraph for “Overarching topic” then an h2 for "Steps" and then the h1 (“Specific page name”)
+
+(*comment made by duboisp on November 12, 2020*)
 
 The 2 ideas above are about using h1s later in the page. Although I could not find anything concrete against this usage, it will certainly create a tricky layout. Nesting the sections is the key here and I am afraid it will be prone to errors. Not starting with an h1 will puzzle both publishers and users. 
 
@@ -127,7 +184,11 @@ From https://webdesign.tutsplus.com/articles/the-truth-about-multiple-h1-tags-in
 
 There should always be a "h1" level heading between the opening "body" tag and the first content section, to label the overall document.
 
-#### Include screen reader only text in the h1 (“Specific page name”) that is the “Overarching topic”.
+### Bullet item 9
+
+> Include screen reader only text in the h1 (“Specific page name”) that is the “Overarching topic”.
+
+(*comment made by duboisp on November 12, 2020*)
 
 This will create a page without an h1 for the sighted users. Since the screen readers are supposed to read what the sighted users see, not some hidden information. I am not sure whether it will help.
 
@@ -135,15 +196,18 @@ This will create a page without an h1 for the sighted users. Since the screen re
 
 I cannot see what is wrong with the current heading structure. Perhaps we can discuss this altogether.
 
-### Some aria-label was added, but I am unsure if it is actually needed as the main content, in this context there will only be 1 navigation section in the "main" element
+### Bullet item 10 and 11
 
-#### I am suggesting to remove the aria-label
+> Some aria-label was added, but I am unsure if it is actually needed as the main content, in this context there will only be 1 navigation section in the "main" element
+>
+> I am suggesting to remove the aria-label
+
+(*comment made by duboisp on November 12, 2020*)
 
 ARIA usage is a tricky subject matter.
 
 If this code is what you are talking about
 
-{::nomarkdown}
 {% raw %}
 <pre>
 	<code>
@@ -151,19 +215,18 @@ If this code is what you are talking about
 	</code>
 </pre>
 {% endraw %}
-{:/}
 
-##### w3.org says: 
-“For most assistive technology it's fine to use aria-label or aria-labelledby on the nav, and main elements but not on footer, section, article, or header”
+#### w3.org says:
+
+> “For most assistive technology it's fine to use aria-label or aria-labelledby on the nav, and main elements but not on footer, section, article, or header”
 
 I think the ARIA usage is not incorrect in this case.
 
 A very relevant example is available at mozilla.org Here is what they say:
 
-##### Content from Mozilla: 
+#### Content from Mozilla: 
 
-**Repeated landmarks:**
-If a navigation landmark role or "nav" element in a document is repeated in a document, and both landmarks have identical content, use the same label for each landmark. An example of this would be repeating the main navigation at the top and bottom of the page.
+**Repeated landmarks:** If a navigation landmark role or "nav" element in a document is repeated in a document, and both landmarks have identical content, use the same label for each landmark. An example of this would be repeating the main navigation at the top and bottom of the page.
 
 {::nomarkdown}
 {% raw %}
@@ -185,8 +248,7 @@ If a navigation landmark role or "nav" element in a document is repeated in
 {% endraw %}
 {:/}
 
-**Redundant descriptions:**
-Screen readers will announce the type of role the landmark has. Because of this, you do not need to describe what the landmark is, in its label. For example, a declaration of role="navigation" with an aria-label="Primary navigation" may be announced redundantly as, "primary navigation navigation".
+**Redundant descriptions:** Screen readers will announce the type of role the landmark has. Because of this, you do not need to describe what the landmark is, in its label. For example, a declaration of role="navigation" with an aria-label="Primary navigation" may be announced redundantly as, "primary navigation navigation".
 
 In general, you are absolutely right, the existing aria-labels should be reconsidered one-by-one and those that are unnecessary should be removed. 
 The list below is from w3.org/TR/using-aria:
@@ -210,7 +272,11 @@ Consequently, these 3 ARIA codes should be removed from https://test.canada.ca/c
 
 The overreliance on ARIA causes many failures on many accessibility criteria, due to incorrect usages.
 
-### The navigation link (Steps_ are missing some semantic regarding which one are past, current and future steps. There is a visual indicator but it is not supported yet by semantic or content. This actually fail SC 1.4.1. 
+### Bullet item 12, 13 and 14
+
+> The navigation link (Steps_ are missing some semantic regarding which one are past, current and future steps. There is a visual indicator but it is not supported yet by semantic or content. This actually fail SC 1.4.1. 
+
+(*comment made by duboisp on November 12, 2020*)
 
 To provide that contextual information, @duboisp is suggesting to:
 
@@ -219,7 +285,11 @@ To provide that contextual information, @duboisp is suggesting to:
 
 There should be better solutions we can discuss. A low-tech solution might be adding tooltips for each step.
 
-### The alert component example will be better if it was wrapped inside a "section" element
+### Bullet item 15
+
+> The alert component example will be better if it was wrapped inside a "section" element
+
+(*comment made by duboisp on November 12, 2020*)
 
 You are absolutely right.
 
@@ -249,13 +319,19 @@ Then it becomes messy. Where does the alert begin and where does it end? I also 
 
 I personally don’t think removing the background improves anything.
 
-### There will be some documentation material to produce that would describe how to use it and the meaning of new CSS class like: gc-navseq and gc-nav-section
+### Bullet item 16 and 17
 
-#### I know that TBS –DTO currently work on a documentation template, but I would need technical documentation similar to the service and information component here: https://wet-boew.github.io/themes-dist/GCWeb/component/gc-srvinfo.html
+> There will be some documentation material to produce that would describe how to use it and the meaning of new CSS class like: gc-navseq and gc-nav-section
+>
+> I know that TBS –DTO currently work on a documentation template, but I would need technical documentation similar to the service and information component here: https://wet-boew.github.io/themes-dist/GCWeb/component/gc-srvinfo.html
 
-## Additional issues
+(*comment made by duboisp on November 12, 2020*)
 
-### The “correct reading sequence” is considered as reading from left to right and top to bottom. When there are 2 columns, the first column is read first and the second begins after the first ends.
+## Additional issues, from WAWG
+
+### Issue A - reading sequence
+
+**The “correct reading sequence” is considered as reading from left to right and top to bottom. When there are 2 columns, the first column is read first and the second begins after the first ends.**
 
 The existing focus order is marked with red numbers.
 
@@ -266,14 +342,18 @@ The existing focus order is marked with red numbers.
 {:.img-responsive}
 ![Focus sequence order on the new service initiation template page]({{ "2020-37-assets/initiation-tpl-5.png" }})
 
-### Accessibility concerns aside, to my opinion, this layout is somehow confusing even for the perfectly sighted people. It is difficult to understand which content is under which heading or how many topics there are.
+### Issue B - confusing layout
+
+**Accessibility concerns aside, to my opinion, this layout is somehow confusing even for the perfectly sighted people. It is difficult to understand which content is under which heading or how many topics there are.**
 
 {:.img-responsive}
 ![Canada Child Benefit: Contact the CRA page with new service initiation template]({{ "2020-37-assets/initiation-tpl-6.png" }})
 
 The page: https://test.canada.ca/canada-child-benefit-2/post-validation/revenue-agency/services/child-family-benefits/canada-child-benefit/contact.html#contact
 
-## The solution suggested – please see the very rough mock-up below
+## The solution suggested, from WAWG
+
+*(please see the very rough mock-up below)*
 
 To keep correct tab order in harmony with what is visible, the side navigation “Sections” on the right could have been made horizontal and inserted between “Canada Child Benefit” and “Contact the CRA” headings.
 
@@ -323,5 +403,5 @@ I think the medium-size screen shows the most linear layout:
 
 * https://test.canada.ca/cra/section-menu-design/section-menu-index.html (unavailable)
 * https://test.canada.ca/cra/section-menu-design/section-menu-pg3.html (unavailable)
-* https://test.canada.ca/canada-child-benefit-2/post-validation/revenue-agency/services/child-family-benefits/canada-child-benefit.html
-* https://test.canada.ca/canada-child-benefit-2/post-validation/revenue-agency/services/child-family-benefits/canada-child-benefit/apply.html
+* [https://test.canada.ca/canada-child-benefit-2/post-validation/revenue-agency/services/child-family-benefits/canada-child-benefit.html](https://test.canada.ca/canada-child-benefit-2/post-validation/revenue-agency/services/child-family-benefits/canada-child-benefit.html)
+* [https://test.canada.ca/canada-child-benefit-2/post-validation/revenue-agency/services/child-family-benefits/canada-child-benefit/apply.html](https://test.canada.ca/canada-child-benefit-2/post-validation/revenue-agency/services/child-family-benefits/canada-child-benefit/apply.html)
