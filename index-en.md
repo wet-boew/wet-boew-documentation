@@ -26,22 +26,22 @@ modified: 2019-06-30
 	* Browser compatibilty
 	* Assistive technologies
 	* Suggestion of assessement
-	* [AT support for detail / summary with suggestion](assessment/2018-1.html)
-	* [Short review of GCWEB THEME on its accessibility and usability for people with disabilities](research/2020-22-a11y-content-inst-service-performance.html)
-	* [Short review of https://wet-boew.github.io/themes-dist/GCWeb/demos/tables/tables-en.html on its accessibility and usability for people with disabilities](research/2020-23-a11y-tables.html)
-	* [Short review of https://wet-boew.github.io/themes-dist/GCWeb/demos/tabs/tabs-carousel-en.html on its accessibility and usability for people with disabilities](research/2020-24-a11y-tabs-carousel.html)
-	* [Short review of https://wet-boew.github.io/themes-dist/GCWeb/event-en.html on its accessibility and usability for people with disabilities](research/2020-25-a11y-event.html)
-	* [Short review of https://wet-boew.github.io/themes-dist/GCWeb/feedback-en.html on its accessibility and usability for people with disabilities](research/2020-26-a11y-feddback.html)
-	* [Short review of https://wet-boew.github.io/themes-dist/GCWeb/gc-audience-en.html on its accessibility and usability for people with disabilities](research/2020-27-a11y-audience.html)
-	* [Short review of https://wet-boew.github.io/themes-dist/GCWeb/institution-contact-en.html on its accessibility and usability for people with disabilities](research/2020-28-a11y-institution-contact.html)
-	* [Short review of https://wet-boew.github.io/themes-dist/GCWeb/ministerial-en.html on its accessibility and usability for people with disabilities](research/2020-29-a11y-ministerial.html)
-	* [Short review of https://wet-boew.github.io/themes-dist/GCWeb/theme-en.html on its accessibility and usability for people with disabilities](research/2020-30-a11y-theme.html)
-	* [Short review of Web Experience Toolkit on its accessibility and usability for people with disabilities](research/2020-31-a11y-topic-page.html)
-	* [Evaluate the accessibility conformity of the Canada child benefit introduction page of Canada.ca](research/research-2020-33-a11y.html)
-	* [Evaluate the accessibility conformity of the Canada child benefit apply page of Canada.ca](research/research-2020-34-a11y.html)
-	* [Evaluate the accessibility conformity of the homepage of Wet-Boew](research/2020-35-a11y-wet-boew.html)
-	* [Short review of the improved Service initiation template on its accessibility and usability for people with disabilities](research/2020-37-research-a11y-sit.html)
-	* [Resize text testing methodology with formal example](research/2020-38-a11y-zoom.html)
+	* [Assessment 2018-1 AT support for detail / summary with suggestion](assessment/2018-1.html)
+	* [2020-22 Short review of GCWEB THEME on its accessibility and usability for people with disabilities](research/2020-22-a11y-content-inst-service-performance.html)
+	* [2020-23 Short review of https://wet-boew.github.io/themes-dist/GCWeb/demos/tables/tables-en.html on its accessibility and usability for people with disabilities](research/2020-23-a11y-tables.html)
+	* [2020-24 Short review of https://wet-boew.github.io/themes-dist/GCWeb/demos/tabs/tabs-carousel-en.html on its accessibility and usability for people with disabilities](research/2020-24-a11y-tabs-carousel.html)
+	* [2020-25 Short review of https://wet-boew.github.io/themes-dist/GCWeb/event-en.html on its accessibility and usability for people with disabilities](research/2020-25-a11y-event.html)
+	* [2020-26 Short review of https://wet-boew.github.io/themes-dist/GCWeb/feedback-en.html on its accessibility and usability for people with disabilities](research/2020-26-a11y-feddback.html)
+	* [2020-27 Short review of https://wet-boew.github.io/themes-dist/GCWeb/gc-audience-en.html on its accessibility and usability for people with disabilities](research/2020-27-a11y-audience.html)
+	* [2020-28 Short review of https://wet-boew.github.io/themes-dist/GCWeb/institution-contact-en.html on its accessibility and usability for people with disabilities](research/2020-28-a11y-institution-contact.html)
+	* [2020-29 Short review of https://wet-boew.github.io/themes-dist/GCWeb/ministerial-en.html on its accessibility and usability for people with disabilities](research/2020-29-a11y-ministerial.html)
+	* [2020-30 Short review of https://wet-boew.github.io/themes-dist/GCWeb/theme-en.html on its accessibility and usability for people with disabilities](research/2020-30-a11y-theme.html)
+	* [2020-31 Short review of Web Experience Toolkit on its accessibility and usability for people with disabilities](research/2020-31-a11y-topic-page.html)
+	* [2020-40 Evaluate the accessibility conformity of the Canada child benefit introduction page of Canada.ca](research/2020-40-a11y.html)
+	* [2020-34 Evaluate the accessibility conformity of the Canada child benefit apply page of Canada.ca](research/2020-34-a11y.html)
+	* [2020-35 Evaluate the accessibility conformity of the homepage of Wet-Boew](research/2020-35-a11y-wet-boew.html)
+	* [2020-37 Short review of the improved Service initiation template on its accessibility and usability for people with disabilities](research/2020-37-research-a11y-sit.html)
+	* [2020-38 Resize text testing methodology with formal example](research/2020-38-a11y-zoom.html)
 
 * Test case
 	* AT support for heading in summary element
