@@ -94,17 +94,17 @@ $(document).on('scroll', function(){
 $(window).resize(function(){
   // On resize, both Max/Value attr needs to be calculated
   progressBar.attr({ max: getMax(), value: getValue() });
-}); 
+});
 
 } else {
 
-var progressBar = $('.progress-bar'), 
-	max = getMax(), 
+var progressBar = $('.progress-bar'),
+	max = getMax(),
 	value, width;
 
 var getWidth = function() {
   // Calculate width in percentage
-  value = getValue();            
+  value = getValue();
   width = (value/max) * 100;
   width = width + '%';
   return width;
@@ -131,7 +131,7 @@ Updated: 2020-01-15
 
 This is track the development of provisonal feature to support new beta design pattern.
 
-### Service information template
+### GC Service information template
 * Renewed template that visually better support a group a pages that relate to the same task.
 * **Last updated:** January 15, 2020
 * **Project Lead:** Chad Farquharson, CRA; Christopher Oakes, CRA
@@ -150,7 +150,7 @@ This is track the development of provisonal feature to support new beta design p
 	* (2020-01-09) Collaborative meeting with Principal Publisher, CRA, the accessibility working group, Treasury Board Secretariat (DTO) to identify what was required to have that innovative template be supported by GCWeb and on Canada.ca.
 	* (2019-12-18) Project lead is getting organized to address all the concern
 	* (2019-12) The review was forward to the project lead to address each concern.
-	* (2019-11) Principal publish and the web accessibility working group has done a quick accessibility review 
+	* (2019-11) Principal publish and the web accessibility working group has done a quick accessibility review
 	* (2019-10) Contacted Prinicpal Publisher to know the process of getting the CSS requirement for that new design available in Canada.ca
 	* (2019-08) Create a prototype with the refresh design pattern
 
@@ -194,14 +194,14 @@ Updated: 2019-12-18
 	* (2019-09-20) Test of WCAG 2.1 has started and documented in the [wet-boew root project #1](https://github.com/orgs/wet-boew/projects/1)
 	* (2018-08-24) Menu - Fixed the keyboard behviour of submenu (details/summary)
 	* (2018-07-26) Created a github project to triage accessibility related issue - [https://github.com/wet-boew/wet-boew/projects/2](https://github.com/wet-boew/wet-boew/projects/2)
-	* (2018-06-20) Tested a few issue reproducibility, fixed #8400 (Tabs on Google Chrome) 
+	* (2018-06-20) Tested a few issue reproducibility, fixed #8400 (Tabs on Google Chrome)
 	* (2018-05-17) WIP: #552 (Mobile checklist) and #8238 (Validation error in Mobile menu)
 	* (2018-04-10) PR submited for pie chart labeling
 	* (2018-03-14) On going - review github issues and fixing current open issue.
 	* (2018-02-13) Validation of issue labelled "Work: Accessibility" which are open and the closed ones with the label "State: Going Stale".
 
 <!--
-#### WET4 conformance to WCAG 2.1 
+#### WET4 conformance to WCAG 2.1
 * Review all WET4 feature and evaluate and make them compliant to WCAG 2.1
 * **Project lead:** TBD
 * **Status:** Defining and planning the project
@@ -213,7 +213,7 @@ Updated: 2019-12-18
 ### GCWeb Jekyll variant
 * Create a Jekyll variant of GCWeb to facilate the use of the Canada.ca theme to publish content on github pages
 * **Project lead:** David Elisma (DTO)
-* **Status:** In progress to create a working example in jekyll and refining the implementation based on the handlebar template in gcweb. 
+* **Status:** In progress to create a working example in jekyll and refining the implementation based on the handlebar template in gcweb.
 * **Github project:** https://github.com/wet-boew/gcweb-jekyll
 * **Last updated:** December 2, 2020
 * **History:**
@@ -226,7 +226,7 @@ Updated: 2019-12-18
 * **Status:** Developping the data layer core + template system.
 * **Last updated:** January 15, 2020
 * **History:**
-	* (2020-12-02) Revisiting previous prototype and working on data extraction and template processing 
+	* (2020-12-02) Revisiting previous prototype and working on data extraction and template processing
 	* (2020-01-15) Developping the data layer core.
 
 ### Multi page survey
@@ -242,12 +242,12 @@ Updated: 2019-12-18
 	* (2019-12-19) Working on developing a functional prototype
 
 ### Flat checkboxes and radio button for Canada.ca theme
-* Provide a better UX experience for people navigating content with fieldflow. 
+* Provide a better UX experience for people navigating content with fieldflow.
 * **Project lead:** David Elisma (DTO)
 * **Status:** Submitted as provisional feature for the explicit labels. Next is to do the support for the implicit label and adjust the in form styling for an harmonization of other form control.
 * **Last updated:** December 12, 2020
 * **History:**
-	* (2020-12-02) Submitted as provisional feature for the explicit labels. Next is to do the support for the implicit label and adjust the in form styling for an harmonization of other form control. - https://wet-boew.github.io/themes-dist/GCWeb/component/gc-chckbxrdio-en.html ; 
+	* (2020-12-02) Submitted as provisional feature for the explicit labels. Next is to do the support for the implicit label and adjust the in form styling for an harmonization of other form control. - https://wet-boew.github.io/themes-dist/GCWeb/component/gc-chckbxrdio-en.html ;
 	* (2019-12-18) wet-boew change has been merged waiting for the wet-boew dependency update in GCweb. Project has split in smaller pieces, Apply explicit label-input pattern in wet-boew, Apply flat checkbox style, Apply change to fieldflow plugin to use the new explicit label-input pattern
 	* (2019-10-23) wet-boew change has been submited - Has some discussion to test the propose design pattern against WCAG 2.0 level AA conformance.
 	* (2019-09-20) Initiating this project tracking - On development WIP track on GCWeb PR, feature fragmented for a better integration in wet-boew and gcweb and make it more reusable.
@@ -260,7 +260,7 @@ List of wet-boew component ready to be used in a .NET environment
 * **History:**
 	* (2019-04-23) Added the project in wet-boew organisation
 
-### Horizontal definition list  
+### Horizontal definition list
 Be able to specify a relative with for the definition title because the default one is sometime restrictive in some content design.
 * **Project lead:** Samar ElAmir
 * **Current status:** Protype created, starting the integration into WET-BOEW
@@ -276,20 +276,21 @@ Provide a visual indication that show the current forms steps.
 * **History:**
 	* (2019-01-22) Prototype created, starting the integration into GCWeb
 
-### Chat bot
+### Common chat experience
 Convert a form into a chat like interaction. The supporting use case is for GCWeb only for now.
 * **Project lead:** Francis Gorman
 * **Current status:** Still in discussion about it's design. For the integration in AEM it's going to be through the upcomming méli-mélo.
 * **Others:** In the execution of this project, it's going to revive the step-form plugin previously submited into WET.
-* **Last update:** December 2, 2020
+* **Last update:** February 25, 2021
 * **History:**
+	* (2021-02-25) Renamed from "Chat bot" to "Common chat experience"
 	* (2020-12-02) Separating the bubble from the chat wizard, in progress. The chat bot would most likely be push as a méli-mélo feature for now.
 	* (2019-12-18) A working group was established to discuss about a GC wide solution for chat bots. Functional high fidelity prototype and it's now ready to start the integration into wet-boew (docs + working example). Exploring to separate the "bubble" into it's own plugin.
 	* (2019-10-23) Renamed the project from "Chat wizard" to "Chat bot"
 	* (2019-06-20) Functionality planned to be released with GCWeb 5.2
 	* (2019-05-16) Status update
 	* (2019-04-25) Plugin stable, upcoming integration into wet-boew
-	* (2019-03-21) Functional high fidelity prototype and it's now ready to start the integration into wet-boew. 
+	* (2019-03-21) Functional high fidelity prototype and it's now ready to start the integration into wet-boew.
 	* (2019-02-20) Project status update (stable prototype)
 	* (2019-01-21) Initiated research 2019-15 - Exploration of a chat like design pattern
 
@@ -309,12 +310,16 @@ This component provides the ability to break a form into steps. To be use when W
 	* (2019-03-21) Re-activated this project and code base under review
 	* (2018-03-01) Move the project into inactive project list
 
+### Responsive table
+Develop a responsive table experience, like table saw or similar
+* **Last updated:** February 25, 2021
+
 ### jQuery 3 Migration
 
-We’re upgrading jQuery from version 2.2.4 to 3.3.1. Version 2.x is no longer supported, nor is it receiving any security patches or bug fixes. The idea is to release a beta version first for groups to test with, and then a full version shortly thereafter. 
+We’re upgrading jQuery from version 2.2.4 to 3.3.1. Version 2.x is no longer supported, nor is it receiving any security patches or bug fixes. The idea is to release a beta version first for groups to test with, and then a full version shortly thereafter.
 
 * **Project lead:** Neil Mispelaar
-* **Current status:** Did an initial scan of all the wet-boew code. Testing each working example and quickly reviewing the JS of each plugin. 
+* **Current status:** Did an initial scan of all the wet-boew code. Testing each working example and quickly reviewing the JS of each plugin.
 * **Documentation:** [https://wet-boew.github.io/wet-boew-documentation/research/2019-16-jquery-3-migration.html](https://wet-boew.github.io/wet-boew-documentation/research/2019-16-jquery-3-migration.html)
 * **Idea:** Take a look at the jQuery Migration plugin to use as transition for some plugins or to use a shim plugin.
 * **Last update:** December 2, 2020
@@ -324,7 +329,7 @@ We’re upgrading jQuery from version 2.2.4 to 3.3.1. Version 2.x is no longer s
 	* (2019-05-16)
 		* We will create a separate package of WET-BOEW and GCWEb with jQuery 3 for testing
 		* There is some jQuery 3 error for flot third party, we will maintain our own copy of it
-		* The download will be available in the download page as an experimental kind of package. 
+		* The download will be available in the download page as an experimental kind of package.
 	* (2019-04-25) Project on hold
 	* (2019-02-21) Did an initial scan of all the wet-boew code. Testing each working example and quickly reviewing the JS of each plugin.
 	* (2019-02-01) Initiate research 2019-16 - jQuery 3 migration
@@ -363,7 +368,7 @@ Design system to standardize the visual language and user experience of our digi
 * **Current project phase:** Unknow
 * **Deliverable:** Prototype downloadable in photoshop, Illustrator and Adobe XD files. And eventually the corresponding HTML code conforming to WCAG 2.0/2.1 Level AA.
 * **Notes:** That design system might replace the wet-boew style guide.
-* **Project homepage:** 
+* **Project homepage:**
 	* [Aurora](https://design.gccollab.ca/#!)
 	* [#GCDigital Design System](https://gctools-outilsgc.gitbooks.io/-gcdigital-design-system/content/)
 * **History:**
@@ -423,7 +428,7 @@ Simulate a datalist that work uniformly through browser implementation and conta
 * **History:**
 	* (2020-12-02) Simlar project has been communicated and added to the research project.
 	* (2018-08-24) Currently stale
-	* (2018-07-26) Still experimental, started to create independant set of working example pages. 
+	* (2018-07-26) Still experimental, started to create independant set of working example pages.
 	* (2018-06-20) Experimental stable plugin was released on Canada.ca. It support the conversion from a select to a combo box and added combo box render for fieldflow. Next is to create the docs and various working example. There is also a template playground which render a template from a JS object.
 	* (2018-05-17) Prototype fully working as expected, now it's code cleanup and optimisation
 	* (2018-04-18) Prototype working but a few improvement need to be done, see developer note and UX early testing note
@@ -610,7 +615,7 @@ Related:
 * Adobe Target is currently looked at to provide A/B testing in canada.ca
 
 Next step:
-* Define what is that basic interface 
+* Define what is that basic interface
 * What UX we want to provide before it gets progressive enhanced to whatever option.
 
 ## Completed
