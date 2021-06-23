@@ -10,6 +10,19 @@ Summary of what has been discussed at the meeting.
 
 ## Roadmap
 
+2021-06-23
+* (comming)
+
+2021-02-25 (6 participants)
+* Reviewed the project list status
+* Overview of the méli-mélo feature in development
+	* Mentioned that accentuated character don't exist on all keyboard, suggestion to have a grunt task un-accentuated.
+* Mention of creating a GCWeb Jekyll theme variant
+* Chat box was renamed to Common chat experience
+
+2021-01-13 (4 participants)
+* Reviewed the project list status
+
 2020-12-02 (6 participants)
 * Reviewed the project list status
 * The following Design decision was approved
@@ -47,7 +60,7 @@ Summary of what has been discussed at the meeting.
 * Presentation of Design Decision #12; an formal example must be added.
 	* Design Decision #11 was reviewed and content must be added.
 * Review of provisional features:
-	* ".bg-cover" will gradutate to stable; 
+	* ".bg-cover" will gradutate to stable;
 	* "data-wb-randomize" will graduate to stable, but will need documentation;
 	* ".bg-img-hdng" will be deprecated.
 * Round table:
@@ -88,7 +101,7 @@ Summary of what has been discussed at the meeting.
 	* Add to calendar project has a new lead: Eric Guitar
 * Approval of decision #7
 * Approval of decision #8
-* Presented decision #9 - Release early, release often (STR) 
+* Presented decision #9 - Release early, release often (STR)
 * Reviewed and approved to move all current bootstrap 4 gcweb experimental CSS into wet-beow stable
 
 2019-09-20 (6 participants)
@@ -127,7 +140,7 @@ Announced the creation of a Web Accessibility Working Group that will be assessi
 * Discussed on a deployement strategy for JQuery 3 migration which we will provide some experimental stable build.
 * Presented Design decision 6 on versionning
 * Presented Design decision 7 on experimental feature
-* WET Codefest 2019 event was put on hold/canceled but it will be reevaluated next August. 
+* WET Codefest 2019 event was put on hold/canceled but it will be reevaluated next August.
 
 2019-04-24 (2 participants)
 * Update project status
@@ -354,7 +367,7 @@ List of todo:
 * Develop a plan and a strategy to address concern between moving from WET 4 to WET 5.
 * Develop a plan and a strategy to address some WET user fears, like removing the jQuery library from WET core.
 
-Suggestion/Idea 
+Suggestion/Idea
 * Use a top bar overlay to advertise the user that he are in the Basic HTML mode
 * Having two build system, one for quick local developpement and the full build that may require nodeJS. Some opposition was expressed about having two different type of build.
 * Support and promote mobile first design
