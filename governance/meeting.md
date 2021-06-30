@@ -3,15 +3,43 @@ published: true
 layout: default-theme-wet-boew-en
 title: Meeting summary - WET-BOEW documentation
 description: Summary of what has been discussed at the meeting.
-modified: 2020-09-11
+modified: 2021-06-28
 ---
 
 Summary of what has been discussed at the meeting.
 
 ## Roadmap
 
-2021-06-23
-* (comming)
+2021-06-23 (10 participants)
+* Attendees separtment: PCO; TBS-DTO; ESDC-PP; ESDC; CRA; TBS; ESDC-CDTS
+* Went through the recent change we made to wet-boew and gcweb
+	* Releases
+	* Méli-mélo feature
+	* Thématique feature 
+	* Added/New features
+* Reviewed the project tracking lists
+* Marking the following provisional feature deprecated for move as méli-mélo feature this autumn:
+	* Background image heading
+	* Light warning icon
+	* Chat wizard
+* CRA raised a multimedia player issue for YouTube video when used with the do-action plugin. Github issue: #9123
+* Discussed about the provisional GC table and the idea of bring it as a core wet-boew feature.
+* Responsible table for mobile view was discussed.
+* Suggested by CRA to make gc-think-line the new baseline for the h1 underline
+
+<details>
+	<summary>Addtional notes</summary>
+	
+* Discussed on Product life cycle: Meli melo (~ alpha) > Provisional (~ beta) > Stable version.
+* Attendees are invited to Code sprint to discuss new projects. - https://github.com/wet-boew/wet-boew/wiki/WET-BOEW-Code-sprint
+* Suggested by Nick (TBS), to add a JS/CSS loader for Méli-mélo feature and GC Thématique feature
+* Testing (including accessibility standards assessment) should be completed by the contributor for méli-mélo and thématique feature. 
+* Peer review process was explained. 
+* When GCWeb is updated, GCWeb Jekyll will be updated/rebuilt accordingly.
+* David (TBS-DTO) is working on documenting GCWeb Jekyll according to it's API here: https://github.com/wet-boew/gcweb-jekyll/blob/master/api-publique.md 
+
+</details>
+
 
 2021-02-25 (6 participants)
 * Reviewed the project list status

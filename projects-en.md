@@ -4,7 +4,7 @@ layout: default-theme-wet-boew-en
 filename_fr: index-fr
 title: Projects - Web Experience Toolkit (WET) documentation
 description: List of projects related to WET.
-modified: 2020-01-15
+modified: 2021-06-28
 ---
 
 {::nomarkdown}
@@ -127,15 +127,15 @@ $(window).on('resize', function(){
 
 ## Provisory GCWeb feature
 
-Updated: 2020-01-15
+Updated: 2021-06-23
 
 This is track the development of provisonal feature to support new beta design pattern.
 
 ### GC Service information template
 * Renewed template that visually better support a group a pages that relate to the same task.
-* **Last updated:** January 15, 2020
-* **Project Lead:** Chad Farquharson, CRA; Christopher Oakes, CRA
-* **Current status:** Reviewing and addressing each accessibility concern and each design ambuiguity
+* **Last updated:** June 23, 2021
+* **Project Lead:** Chad Farquharson, CRA; Christopher Oakes, CRA; Francis Gorman, PP
+* **Current status:** Provisional feature available, still making a few adjustment and the guidance from TBS is on it's way
 * **Document/Research:** Under development
 	* Assistive Technology usability research - Produce a report that would evaluate if the new template with double h1 are usable for user that use assistive technology software. - Lead: Accessibilty working group (Brad)
 	* Research of expected results in google search results - Produce a report that would snapshoot a few page structure and make a corrolation on how the search result is organized. It is to expect the impact on search result when a web page have multiple h1 - Lead: Principal Publisher (Pierre)
@@ -143,10 +143,14 @@ This is track the development of provisonal feature to support new beta design p
 	* Prepare the integration work in GCWeb - Add the new CSS for that new pattern in the provisional feature - Lead: (unassigned)
 	* Publish the UX research - Create a public report that will expose the UX research configuration, the context and the finding - Lead: (unassigned)
 	* Create a documentation page and a series of working example - Create a central documentation page that would contain the information about the template and the usability research - Lead: CRA (Christopher)
-* **Github discussion/issue:**
+* **Github discussion/issue/examples:**
 	* [GCWeb issue #1627](https://github.com/wet-boew/GCWeb/issues/1627)
+	* [Working example - index - GC subway navigation](https://wet-boew.github.io/GCWeb/components/gc-subway/index-en.html)
+	* [Working example - page 1 - GC subway navigation](https://wet-boew.github.io/GCWeb/components/gc-subway/gc-subway-en.html)
+	* [Partial documentation - GC subway navigation](https://wet-boew.github.io/GCWeb/components/gc-subway/docs-en.html)
 * **History:**
-	* (2020-01-15) Some documents/research are going to be create to ensure the template are usable by acessitive technology and to ensure it will provide the expected result.
+	* (2021-06-23) Provisional feature available, still making a few adjustment and the guidance from TBS is on it's way
+	* (2020-01-15) Some documents/research are going to be create to ensure the template are usable by acessitive technology and to ensure it will provide the expected result. Reviewing and addressing each accessibility concern and each design ambuiguity
 	* (2020-01-09) Collaborative meeting with Principal Publisher, CRA, the accessibility working group, Treasury Board Secretariat (DTO) to identify what was required to have that innovative template be supported by GCWeb and on Canada.ca.
 	* (2019-12-18) Project lead is getting organized to address all the concern
 	* (2019-12) The review was forward to the project lead to address each concern.
@@ -156,10 +160,17 @@ This is track the development of provisonal feature to support new beta design p
 
 ### Institutional profile
 * Renewed institutional profile page inspired by the new Canada.ca home lauched in February 2019
-* **Last updated:** December 18, 2019
+* **Last updated:** June 23, 2021
 * **Project Lead:** Digital Transformation Office (DTO)
-* **Current status:** Prototype presented, wait for the request to start an accessibility review
+* **Current status:** Several provisional feature added used to build the institutional profile
+* **Links:**
+	* [Freatured link](https://wet-boew.github.io/GCWeb/components/gc-featured-link/gc-featured-link-en.html)
+	* [Contextual feature - Cohabit](https://wet-boew.github.io/GCWeb/components/gc-features/gc-features-en.html)
+	* [Well bold](https://wet-boew.github.io/GCWeb/components/well-bold/well-bold-en.html)
+	* [Institutional profile - provisional](https://wet-boew.github.io/GCWeb/templates/institutional/institution-landing-en.html)
 * **History:**
+	* (2021-06-29) Several provisional feature added used to build the institutional profile
+	* (2019-12-18) Prototype presented, wait for the request to start an accessibility review
 	* (2019-11-29) Presentation of the prototype as "beta" without testing for accessibility during the Canada.ca Fall update
 	* (2019-08) Prototype created
 
@@ -189,6 +200,7 @@ Updated: 2019-12-18
 	* Once completed: Move the notes inside the "Tested" and then submit your result to Pierre or Brad
 * **Progress check history**: 2019-10-23; 2019-09-20; 2018-10-18; 2018-08-24; 2018-07-26; 2018-06-20; 2018-05-17; 2018-04-10; 2018-04-03; 2018-03-14; 2018-02-27; 2018-02-20
 * **History:**
+	* (2021-06-23) No progress since 2020.
 	* (2020-01-15) Preparation work to publish the report created last summer.
 	* (2019-10-23) Items in testing column are tested, need to be published. Template testing is completed.
 	* (2019-09-20) Test of WCAG 2.1 has started and documented in the [wet-boew root project #1](https://github.com/orgs/wet-boew/projects/1)
@@ -212,11 +224,12 @@ Updated: 2019-12-18
 
 ### GCWeb Jekyll variant
 * Create a Jekyll variant of GCWeb to facilate the use of the Canada.ca theme to publish content on github pages
-* **Project lead:** David Elisma (DTO)
-* **Status:** In progress to create a working example in jekyll and refining the implementation based on the handlebar template in gcweb.
+* **Project lead:** David Elisma (DTO); Pierre Dubois (PP)
+* **Status:** GCWeb web site run through the gcweb-jekyll project. GCWeb Jekyll is updated through the Continuous Deployment script. David is documenting how to use it and how it can be customized for rapid prototyping.
 * **Github project:** https://github.com/wet-boew/gcweb-jekyll
-* **Last updated:** December 2, 2020
+* **Last updated:** June 23, 2021
 * **History:**
+	* (2021-06-23) GCWeb web site run through the gcweb-jekyll project. GCWeb Jekyll is updated through the Continuous Deployment script. David is documenting how to use it and how it can be customized for rapid prototyping.
  	* (2020-12-02) Project work, but still need to write documentation on how to use for user that don't know Jekyll
 	* (2020-01-15) In progress to create a working example in jekyll and refining the implementation based on the handlebar template in gcweb.
 
@@ -224,29 +237,39 @@ Updated: 2019-12-18
 * Create a new front-end framework in vanila javascript, CSS and HTML5.
 * **Project lead:** Pierre Dubois (SC)
 * **Status:** Developping the data layer core + template system.
-* **Last updated:** January 15, 2020
+* **Last updated:** June 23, 2021
 * **History:**
+	* (2021-06-23) Still in progress, but the GCWeb code architecture was rewritten to be component based, which is aligned with WET5 target source code organisation.
+	* (2020-01-15) Developping the data layer core + template system.
 	* (2020-12-02) Revisiting previous prototype and working on data extraction and template processing
 	* (2020-01-15) Developping the data layer core.
 
 ### Multi page survey
 * Provide a configurable multi page form to accomodate a parametrable end of website visit survey.
 * **Project lead:** Lucas Hay (SC) (was Eric Dunsworth (SC))
-* **Status:** Development of a functional prototype
+* **Status:** Working, but completed outside WET-BOEW and GCWeb. 
 * **Resource:**
 	* To explore: SurveyJS - https://surveyjs.io/
 	* Example with SurveyJS, show a concept - https://github.com/canada-ca/aia-eia-js
-* **Last updated:** December 2, 2020
+* **Last updated:** June 23, 2021
 * **History:**
+	* (2021-06-23) Specilized javascript code published as separate product in AEM. - https://www.canada.ca/etc/designs/canada/wet-boew/js/MWS-2000/gc-ts-survey.js
+	* (2021-06-23) Working, but completed outside WET-BOEW and GCWeb. Might contains interesting feature to be moved as coorporative feature.
 	* (2020-12-02) Prototype created specific for the GC server. Still need to isolate feature and make them re-usable
 	* (2019-12-19) Working on developing a functional prototype
 
 ### Flat checkboxes and radio button for Canada.ca theme
 * Provide a better UX experience for people navigating content with fieldflow.
 * **Project lead:** David Elisma (DTO)
-* **Status:** Submitted as provisional feature for the explicit labels. Next is to do the support for the implicit label and adjust the in form styling for an harmonization of other form control.
-* **Last updated:** December 12, 2020
+* **Status:** Feature stabilized, completed
+* **Last updated:** June 23, 2021
+* **Links:**
+	* [Working example](https://wet-boew.github.io/GCWeb/components/gc-chckbxrdio/gc-chckbxrdio-en.html)
+	* [Documentation](https://wet-boew.github.io/GCWeb/components/gc-chckbxrdio/gc-chckbxrdio-doc-en.html)
+	* [Source Code](https://github.com/wet-boew/GCWeb/tree/master/components/gc-chckbxrdio)
+	* [Guidance](https://design.canada.ca/common-design-patterns/checkboxes-radio-buttons.html)
 * **History:**
+	* (2021-06-23) Feature stabilized 
 	* (2020-12-02) Submitted as provisional feature for the explicit labels. Next is to do the support for the implicit label and adjust the in form styling for an harmonization of other form control. - https://wet-boew.github.io/themes-dist/GCWeb/component/gc-chckbxrdio-en.html ;
 	* (2019-12-18) wet-boew change has been merged waiting for the wet-boew dependency update in GCweb. Project has split in smaller pieces, Apply explicit label-input pattern in wet-boew, Apply flat checkbox style, Apply change to fieldflow plugin to use the new explicit label-input pattern
 	* (2019-10-23) wet-boew change has been submited - Has some discussion to test the propose design pattern against WCAG 2.0 level AA conformance.
@@ -274,6 +297,7 @@ Provide a visual indication that show the current forms steps.
 * **Current status:** Prototype created, starting the integration into GCWeb
 * **Last updated:** January 22, 2019
 * **History:**
+	* (2021-06-23) A [méli-mélo feature added with step indicator](https://wet-boew.github.io/GCWeb/m%C3%A9li-m%C3%A9lo/2021-05-steps/index.html). Unsure if there is link with this project.
 	* (2019-01-22) Prototype created, starting the integration into GCWeb
 
 ### Common chat experience
@@ -296,13 +320,13 @@ Convert a form into a chat like interaction. The supporting use case is for GCWe
 
 ### Step form
 This component provides the ability to break a form into steps. To be use when Web forms are long/contain lot of information.
-* **Last updated:** December 2, 2020
+* **Last updated:** June 23, 2021
 * **Github:** [PR #7913](https://github.com/wet-boew/wet-boew/pull/7913)
 * **Working example:** [TheKodester - Steps Form](https://www.thekodester.ca/wet/formvalid/steps)
-* **What left:** Apply the request of change of [PR #8645](https://github.com/wet-boew/wet-boew/pull/8645)
-* **Project integration lead:** Francis Gorman
-* **Current status:** Merged as provisional plugin in wet-boew
+* **Project lead:** The Kodester; Francis Gorman; Cris (CRA)
+* **Current status:** CRA work on improving this feature
 * **History:**
+	* (2021-06-23) CRA is working on improving this feature and fixing a few bugs.
 	* (2020-12-02) Release as provisional plugin in wet-boew - https://wet-boew.github.io/wet-boew/demos/stepsform/stepsform-en.html
 	* (2019-06-20) Functionality planned to be released with wet-boew 4.0.32
 	* (2019-05-16) PR submited and there is some request of change to apply
@@ -310,9 +334,18 @@ This component provides the ability to break a form into steps. To be use when W
 	* (2019-03-21) Re-activated this project and code base under review
 	* (2018-03-01) Move the project into inactive project list
 
-### Responsive table
+### Responsive table (`gc-table`)
 Develop a responsive table experience, like table saw or similar
-* **Last updated:** February 25, 2021
+* **Project lead:** Jenifer Mealing  (DTO)
+* **Last updated:** June 23, 2021
+* **Current status:** Feature added as provisional feature
+* **Links:** 
+	* [Working example](https://wet-boew.github.io/GCWeb/components/gc-table/gc-table-en.html)
+	* [Source code](https://github.com/wet-boew/GCWeb/tree/master/components/gc-table)
+	* [First pull request #1743](https://github.com/wet-boew/GCWeb/pull/1743)
+* **History:**
+	* (2021-06-23) Feature added as provisional feature
+	* (2021-02-25) Project added
 
 ### jQuery 3 Migration
 
@@ -339,9 +372,13 @@ We’re upgrading jQuery from version 2.2.4 to 3.3.1. Version 2.x is no longer s
 Widget that can create an outlook like invitation on the fly to allow the user to add into its device calendar.
 
 * **Project lead:** Eric Guitar
-* **Current status:** Prototype completed, preparing the PR for wet-boew
-* **Last update:** December 2, 2020
+* **Current status:** Added as provisional feature in wet-boew
+* **Last update:** June 23, 2021
+* **Links:**
+	* [Documentation](https://wet-boew.github.io/wet-boew/docs/ref/add-cal/add-cal-en.html)
+	* [Working example](https://wet-boew.github.io/wet-boew/demos/add-cal/add-cal-en.html)
 * **History:**
+	* (2021-06-23) Added as provisional feature in wet-boew
 	* (2020-12-02) Prototype completed, preparing the PR for wet-boew
 	* (2019-12-18) Progressing in researching and documenting the approach
 	* (2019-10-23) Change the project lead from Francis Gorman to Eric Guitar
