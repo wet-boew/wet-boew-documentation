@@ -79,13 +79,8 @@ To join: Contact Pierre Dubois, you can find his contact information on gccollab
 -->
 
 ### Roadmap
-Location: Place du Centre, 200 promenade du portage, Gatineau, suite 990, room 2D302
+Virtually via MS-Team, ask to join during our [weekly code sprint or technical review](https://github.com/wet-boew/wet-boew/wiki/WET-BOEW-Code-sprint)
 
-* July 2019 - To be determined
-* August 2019  - To be determined
-* September 2019  - To be determined
-* October 2019  - To be determined
-* November 2019  - To be determined
-* December 2019  - To be determined
+Schedule: Once per month
 
 [Read the summary of the previous meeting](governance/meeting.html)
