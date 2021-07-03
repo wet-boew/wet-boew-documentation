@@ -1,15 +1,17 @@
-<nav role="navigation" id="wb-bc" property="breadcrumb">
+<nav id="wb-bc" property="breadcrumb">
 	<h2>You are here:</h2>
 	<div class="container">
 		<div class="row">
 			<ol class="breadcrumb">
 				<li>
-					<a href="https://wet-boew.github.io/wet-boew/index-en.html">Home</a>
+					<a href="../../wet-boew/index-en.html">Home</a>
 				</li>
-{% unless page.url == '/index-en.html' %}
-<li><a href="https://wet-boew.github.io/wet-boew-documentation/index-en.html">Documentation</a></li>
-{% endunless %}
-<li>{{ page.title }}</li>
+				{% unless page.url == '/index-en.html' %}
+				<li>
+					<a href="../../wet-boew-documentation/index-en.html">WET Documentation</a>
+				</li>
+				{% endunless %}
+				<li>{{ page.title }}</li>
 			</ol>
 		</div>
 	</div>
