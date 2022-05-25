@@ -3,12 +3,30 @@ published: true
 layout: default-theme-wet-boew-en
 title: Meeting summary - WET-BOEW documentation
 description: Summary of what has been discussed at the meeting.
-modified: 2021-06-28
+modified: 2022-05-25
 ---
 
 Summary of what has been discussed at the meeting.
 
-## Roadmap
+## Monthly meeting
+
+2022-05-19 (19 participants)
+* Attendees separtment: PCO; TBS; TBS-DTO; ESDC; ESDC-PP; SSC; NRCAN; PWGSC; CRA
+* Went through the recent change we made to wet-boew and gcweb
+	* Releases: jQuery fix and others...
+	* Honourable mentions: Méli-mélo & Thématique feature + Documentation, ongoing enhancement of templates and components documentation, releases are possible within 1 week on Canada.ca, WET 5 is slowly moving forward
+* Reviewed the project tracking lists
+	* Accessibility project: Conformance to WCAG 2.2 AA (ongoing)
+* Going over provisional features, méli-mélos and thematics:
+	* Méli-mélos: Steps and conditional And/Or from CRA
+	* Thematic: Canada day from PCH
+	* Marking the following provisional feature deprecated for move as méli-mélo feature this autumn: Postponed to next Monthly meeting
+* Present and/or review Design decision:
+	* Postponed to next Monthly meeting
+* Questions, comments & notes:
+	*  Note: Utility is mispelled on the WET page
+	*  Suggestion from CRA: DOM Purify could have an exception for target blank if noopener and noreferrer are set
+	*  Suggestion from PCO: Look into two-factor authentication on GitHub
 
 2021-06-23 (10 participants)
 * Attendees separtment: PCO; TBS-DTO; ESDC-PP; ESDC; CRA; TBS; ESDC-CDTS
