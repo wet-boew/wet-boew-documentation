@@ -24,26 +24,26 @@ If you have any questions in regards of one of the above design decision, please
 		<li><a href="8.html">Design decision 8: Dual implementation of structured data with JSON-LD and RDFa Lite in a single web page</a></li>
 		<li><a href="9.html">Design decision 9: Release early, release often (<abbr title="Short-term release">STR</abbr>)</a></li>
 		<li><a href="10.html">Design decision 10: Provisional feature</a></li>
-	</ul>
-</section>
-
-<section>
-	<h2>Presented</h2>
-	<ul>
 		<li><a href="11.html">Design decision 11: Resize text testing methodology</a></li>
 		<li><a href="12.html">Design decision 12: Double H1 on a single page</a></li>
 		<li><a href="13.html">Design decision 13: Reduce aggressiveness of form validation plugin</a></li>
 	</ul>
 </section>
 
-<!--
+<section>
+	<h2>Presented</h2>
+	<ul>
+		<li><a href="14.html">Design decision 14: Semantic Versioning public API for wet-boew, GCWeb and GCWeb Jekyll</a></li>
+	</ul>
+</section>
+
 <section>
 	<h2>Proposed (Going to be presented)</h2>
 	<ul>
-		
+		<li>None</li>
 	</ul>
 </section>
--->
+
 
 <!--
 <section>
