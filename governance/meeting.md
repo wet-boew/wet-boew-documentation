@@ -10,8 +10,8 @@ Summary of what has been discussed at the meeting.
 
 ## Monthly meeting
 
-2022-09-22 (unknown number of participants)
-* Attendees department: TBS; TBS-DTO; ESDC; ESDC-PP; SSC; (incomplete)
+2022-09-22 (18 participants)
+* Attendees department: TBS; TBS (DTO); ESDC; ESDC (PP); ESDC (CDTS); ESDC (Accesibility) NRCAN; SSC;
 * Overview of the last release of GCWeb and of WET-BOEW.
 * Quick talk about méli-mélo project in GCWeb
 * Overview of the progress on our accessbility upgrade 2022 project. An initial assessment of a few wet-boew feature was already completed.
