@@ -10,8 +10,30 @@ Summary of what has been discussed at the meeting.
 
 ## Monthly meeting
 
+2022-09-22 (18 participants)
+* Attendees department: TBS; TBS (DTO); ESDC; ESDC (PP); ESDC (CDTS); ESDC (Accesibility) NRCAN; SSC;
+* Overview of the last release of GCWeb and of WET-BOEW.
+* Quick talk about méli-mélo project in GCWeb
+* Overview of the progress on our accessbility upgrade 2022 project. An initial assessment of a few wet-boew feature was already completed.
+* Quick presentation of our Accessibility Conformance Report in JSON-LD.
+* Demotion of untracked/stale provisional feature. We still have the intend to remove:
+	* Background image heading
+	* Light warning icon
+	* Chat wizard
+* Presented the update of the Design Decision draft 14 about an improvement of our semantic versioning API.
+* A member has mentionned about our issue tracker which is stale, not folllowed up and only grow bigger with the past year. The member would like Principal Publisher to take an action on this. Principal publisher are limited with the number of resouces available to work on it. The following are a braindstorm short list of the propostion to the adddress and fix reported issue.
+	* Close only the issue tracker.
+	* Make (reiterate) our management aware to find budget to tackle the backlog
+	* Associate the issue in a dedicated project to favorized community to find and fix issues.
+	* For each feature, automate the reported issue in its documentations.
+
+2022-06-23 (11 participants)
+* Attendees department: PCO; TBS; TBS-DTO; ESDC; ESDC-PP; SSC; CRA
+* Overview of the last release of GCWeb and WET-BOEW
+* Presented Design Decision 14 about an improvement of our semantic versionning API
+
 2022-05-19 (19 participants)
-* Attendees separtment: PCO; TBS; TBS-DTO; ESDC; ESDC-PP; SSC; NRCAN; PWGSC; CRA
+* Attendees department: PCO; TBS; TBS-DTO; ESDC; ESDC-PP; SSC; NRCAN; PWGSC; CRA
 * Went through the recent change we made to wet-boew and gcweb
 	* Releases: jQuery fix and others...
 	* Honourable mentions: Méli-mélo & Thématique feature + Documentation, ongoing enhancement of templates and components documentation, releases are possible within 1 week on Canada.ca, WET 5 is slowly moving forward
