@@ -40,7 +40,7 @@ If you have any questions in regards of one of the above design decision, please
 <section>
 	<h2>Proposed (Going to be presented)</h2>
 	<ul>
-		<li>None</li>
+		<li><a href="15.html">Design decision 15: Removal of trailing slash for void elements (self-closing tags)</a> - <a href="15-fr.html" lang="fr">Version Française</a></li>
 	</ul>
 </section>
 
