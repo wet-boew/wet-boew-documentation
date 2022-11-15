@@ -3,7 +3,7 @@ published: true
 layout: default-theme-wet-boew-en
 title: Internal project gouvernance - WET-BOEW documentatin
 description: Brief description of governance behind WET
-modified: 2018-02-13
+modified: 2022-11-15
 ---
 
 If you have any question please submit an github issue. If you want to participate, reach out [Pierre Dubois](https://github.com/duboisp) where you can find he's contact information on GCcollab, on GCconnect or send me a direct message on twitter.
@@ -12,9 +12,7 @@ If you have any question please submit an github issue. If you want to participa
 ## Technical review meeting
 
 * **Goal:** Review submitted PR and identify what is required to get it merged. Also other task related to the maintenance of WET and GCWeb codebase.
-* **Frequency:**
-	* One hour every two weeks on Wednesday at 11h00 am, starting on February 14.
-	* One hour every two weeks on Thursday at 10h00 am, starting on February 22.
+* **Frequency:** See our [Office Hours](https://github.com/wet-boew/wet-boew/wiki/WET-Office-hours,-Heures-de-service-de-la-BOEW) wiki page
 * **Requirement:** PR are only merged during this technical review otherwise it needs to be justified about why it can’t wait. Exception to editorial fixes (typos) for existing published content. For now this only apply to GCweb and wet-boew repository.
 
 Documents created via those meeting will be published on the wet-boew website.
@@ -28,7 +26,7 @@ Documents created via those meeting will be published on the wet-boew website.
   * Annual health checkup for all active repos under WET (variant, theme,…)
   * All WET related projects must be reported with at least a semi-annual health check
 
-Documents created via those meeting will be published on the wet-boew website.
+Documents created via those meeting will be published on the wet-boew website. See our [Office Hours](https://github.com/wet-boew/wet-boew/wiki/WET-Office-hours,-Heures-de-service-de-la-BOEW) wiki page for more information.
 
 
 
