@@ -3,15 +3,28 @@ published: true
 layout: default-theme-wet-boew-en
 title: Meeting summary - WET-BOEW documentation
 description: Summary of what has been discussed at the meeting.
-modified: 2022-05-25
+modified: 2022-11-15
 ---
 
 Summary of what has been discussed at the meeting.
 
 ## Monthly meeting
 
+2022-11-17
+* Will be added after the meeting
+
+2022-10-20 (13 participants)
+* Attendees department: TBS; TBS (DTO); ESDC; ESDC (PP); ESDC (Accessibility)
+* Quick overview of the changes from the last release
+* Github issue: We are brainstorming idea to find a way to follow up and eventually resolve reported issue.
+* Discuss about DD14 and that we are working on improving it.
+* PP will send a email for every major update that required author/implementer action or every 1-2 month. The message are going to be send to WET-BOEW monthly participant.
+* Revised schedule for the deployment of GCWeb on Canada.ca. Technical review are now on Monday, Releases on Tuesday and, upon Principal Publisher senior manager approval, we are aiming for a deployment on the following Thursday or the next Tuesday as a fallback.
+* WCAG update: Progressing slowly, still reviewing the completed assessment
+* GCWeb implementation: PP will review the documentation and make updates.
+
 2022-09-22 (18 participants)
-* Attendees department: TBS; TBS (DTO); ESDC; ESDC (PP); ESDC (CDTS); ESDC (Accesibility) NRCAN; SSC;
+* Attendees department: TBS; TBS (DTO); ESDC; ESDC (PP); ESDC (CDTS); ESDC (Accessibility); NRCAN; SSC;
 * Overview of the last release of GCWeb and of WET-BOEW.
 * Quick talk about méli-mélo project in GCWeb
 * Overview of the progress on our accessbility upgrade 2022 project. An initial assessment of a few wet-boew feature was already completed.
@@ -55,7 +68,7 @@ Summary of what has been discussed at the meeting.
 * Went through the recent change we made to wet-boew and gcweb
 	* Releases
 	* Méli-mélo feature
-	* Thématique feature 
+	* Thématique feature
 	* Added/New features
 * Reviewed the project tracking lists
 * Marking the following provisional feature deprecated for move as méli-mélo feature this autumn:
@@ -69,14 +82,14 @@ Summary of what has been discussed at the meeting.
 
 <details>
 	<summary>Addtional notes</summary>
-	
+
 * Discussed on Product life cycle: Meli melo (~ alpha) > Provisional (~ beta) > Stable version.
 * Attendees are invited to Code sprint to discuss new projects. - https://github.com/wet-boew/wet-boew/wiki/WET-BOEW-Code-sprint
 * Suggested by Nick (TBS), to add a JS/CSS loader for Méli-mélo feature and GC Thématique feature
-* Testing (including accessibility standards assessment) should be completed by the contributor for méli-mélo and thématique feature. 
-* Peer review process was explained. 
+* Testing (including accessibility standards assessment) should be completed by the contributor for méli-mélo and thématique feature.
+* Peer review process was explained.
 * When GCWeb is updated, GCWeb Jekyll will be updated/rebuilt accordingly.
-* David (TBS-DTO) is working on documenting GCWeb Jekyll according to it's API here: https://github.com/wet-boew/gcweb-jekyll/blob/master/api-publique.md 
+* David (TBS-DTO) is working on documenting GCWeb Jekyll according to it's API here: https://github.com/wet-boew/gcweb-jekyll/blob/master/api-publique.md
 
 </details>
 
