@@ -4,7 +4,7 @@ layout: default-theme-wet-boew-en
 filename_fr: index-fr
 title: Projects - Web Experience Toolkit (WET) documentation
 description: List of projects related to WET.
-modified: 2021-06-28
+modified: 2022-12-16
 ---
 
 {::nomarkdown}
@@ -131,7 +131,7 @@ Updated: 2021-06-23
 
 This is track the development of provisonal feature to support new beta design pattern.
 
-### GC Service information template
+### GC Subway template
 * Renewed template that visually better support a group a pages that relate to the same task.
 * **Last updated:** June 23, 2021
 * **Project Lead:** Chad Farquharson, CRA; Christopher Oakes, CRA; Francis Gorman, PP
@@ -144,11 +144,13 @@ This is track the development of provisonal feature to support new beta design p
 	* Publish the UX research - Create a public report that will expose the UX research configuration, the context and the finding - Lead: (unassigned)
 	* Create a documentation page and a series of working example - Create a central documentation page that would contain the information about the template and the usability research - Lead: CRA (Christopher)
 * **Github discussion/issue/examples:**
+	* [GCWeb pull request #2058](https://github.com/wet-boew/GCWeb/pull/2058)
 	* [GCWeb issue #1627](https://github.com/wet-boew/GCWeb/issues/1627)
 	* [Working example - index - GC subway navigation](https://wet-boew.github.io/GCWeb/components/gc-subway/index-en.html)
 	* [Working example - page 1 - GC subway navigation](https://wet-boew.github.io/GCWeb/components/gc-subway/gc-subway-en.html)
 	* [Partial documentation - GC subway navigation](https://wet-boew.github.io/GCWeb/components/gc-subway/docs-en.html)
 * **History:**
+	* (2022-12-16) Update title from "GC Service information template" to "GC Subway template"
 	* (2021-06-23) Provisional feature available, still making a few adjustment and the guidance from TBS is on it's way
 	* (2020-01-15) Some documents/research are going to be create to ensure the template are usable by acessitive technology and to ensure it will provide the expected result. Reviewing and addressing each accessibility concern and each design ambuiguity
 	* (2020-01-09) Collaborative meeting with Principal Publisher, CRA, the accessibility working group, Treasury Board Secretariat (DTO) to identify what was required to have that innovative template be supported by GCWeb and on Canada.ca.
@@ -185,10 +187,18 @@ This is track the development of provisonal feature to support new beta design p
 
 ## Active projects
 
-Updated: 2019-12-18
+Updated: 2022-12-16
 
 
 ### Accessibility
+* Accessibility upgrade to WCAG 2.1 and 2.2 level AA
+	* Review and test all components for conformance.
+	* Apply fixes
+	* Publish the ACR (Accessibility Conformance Report)
+* **Last updated:** December 15, 2022
+* **Project lead:** Pierre Dubois
+* **Project board:** [wet-boew root project #3](https://github.com/orgs/wet-boew/projects/3)
+* **Current status:** Gathering more resources to conduct some assessments.
 * Reviewing and validating open github issue
 * Documenting basic HTML design pattern
 * WCAG 2.1 Level AA conformance check for existing features in wet-boew
@@ -227,8 +237,9 @@ Updated: 2019-12-18
 * **Project lead:** David Elisma (DTO); Pierre Dubois (PP)
 * **Status:** GCWeb web site run through the gcweb-jekyll project. GCWeb Jekyll is updated through the Continuous Deployment script. David is documenting how to use it and how it can be customized for rapid prototyping.
 * **Github project:** https://github.com/wet-boew/gcweb-jekyll
-* **Last updated:** June 23, 2021
+* **Last updated:** December 15, 2022
 * **History:**
+	* (2022-12-16) Still in scope, slowely improving digital variant.
 	* (2021-06-23) GCWeb web site run through the gcweb-jekyll project. GCWeb Jekyll is updated through the Continuous Deployment script. David is documenting how to use it and how it can be customized for rapid prototyping.
  	* (2020-12-02) Project work, but still need to write documentation on how to use for user that don't know Jekyll
 	* (2020-01-15) In progress to create a working example in jekyll and refining the implementation based on the handlebar template in gcweb.
@@ -237,8 +248,9 @@ Updated: 2019-12-18
 * Create a new front-end framework in vanila javascript, CSS and HTML5.
 * **Project lead:** Pierre Dubois (SC)
 * **Status:** Developping the data layer core + template system.
-* **Last updated:** June 23, 2021
+* **Last updated:** December 15, 2022
 * **History:**
+	* (2022-12-15) No progress since last check.
 	* (2021-06-23) Still in progress, but the GCWeb code architecture was rewritten to be component based, which is aligned with WET5 target source code organisation.
 	* (2020-01-15) Developping the data layer core + template system.
 	* (2020-12-02) Revisiting previous prototype and working on data extraction and template processing
@@ -293,10 +305,11 @@ Be able to specify a relative with for the definition title because the default 
 
 ### Steps visual indicator
 Provide a visual indication that show the current forms steps.
-* **Project lead:** Samar ElAmir
+* **Project lead:** Christopher Oakes
 * **Current status:** Prototype created, starting the integration into GCWeb
-* **Last updated:** January 22, 2019
+* **Last updated:** December 15, 2022
 * **History:**
+	* (2022-12-16) Update project lead from Samar ElAmir to Christopher Oakes and made updates to the méli-mélo feature.
 	* (2021-06-23) A [méli-mélo feature added with step indicator](https://wet-boew.github.io/GCWeb/m%C3%A9li-m%C3%A9lo/2021-05-steps/index.html). Unsure if there is link with this project.
 	* (2019-01-22) Prototype created, starting the integration into GCWeb
 

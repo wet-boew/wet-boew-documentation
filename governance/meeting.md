@@ -3,12 +3,17 @@ published: true
 layout: default-theme-wet-boew-en
 title: Meeting summary - WET-BOEW documentation
 description: Summary of what has been discussed at the meeting.
-modified: 2022-11-15
+modified: 2022-12-16
 ---
 
 Summary of what has been discussed at the meeting.
 
 ## Monthly meeting
+
+2022-12-15
+* Attendees department: TBS; TBS (DTO); ESDC; ESDC (PP); ESDC (Accessibility), CRA, IRCC, PCO
+* Quick overview of the changes from the last release
+* Review and recap of design decision 12, 14 and 15. 
 
 2022-11-17
 * Will be added after the meeting
