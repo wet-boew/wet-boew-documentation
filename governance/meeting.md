@@ -10,13 +10,32 @@ Summary of what has been discussed at the meeting.
 
 ## Monthly meeting
 
-2022-12-15
-* Attendees department: TBS; TBS (DTO); ESDC; ESDC (PP); ESDC (Accessibility), CRA, IRCC, PCO
-* Quick overview of the changes from the last release
-* Review and recap of design decision 12, 14 and 15. 
+2022-12-15 (16 participants)
+* Attendees department: TBS; PCO; CRA; ESDC; SSC; IRCC
+* Went through recent changes released
+* Discussion about DD14 - Public API
+	* Proposed to split and redefine "Context of use" where "Context of use" explain where the component can be used and "Guidance" explain how to use it. Guidance remain out of scope of our public API event if we provide some instruction. Formal instruction will be provided by DTO for components used through GCWeb.
+	* Proposed to split and redefine "Interaction pattern" where "Essential component behaviour" will list of all essential interaction the component must support and "Function, callback and events" for how a JS API can interact with the component.
+	* Discussed about "Feature removal" step.
+		* Eric D. mentioned we should only search on Canada.ca publisher instance instead of author instance because ESDC are using the author instance for their offline archive.
+* Discussion about DD15 - Self-closing tag
+	* Link to the discussion posted, DD still in draft
+* Discussion about DD12 - Double h1
+	* Need to be mark as "Need to be review" because the HTML5 spec has been recently updated and a few discussion on document outline are closed.
+* Quickly review the project page.
 
-2022-11-17
-* Will be added after the meeting
+2022-11-17 (~12 participants)
+* Attendees department: TBS; TBS (DTO); PCO; ESDC; ESDC (PP); ESDC (Accessibility)
+* Presented the Design Decision 15 about self closing element coding practice. A new discussion will be created on wet-boew to gather more feedback.
+* Presented update to Design Decision 14 on versioning
+	* Includes essentials files in the public API
+	* Deprecation will last for at least 1 one year from a functional point of view but no gua
+* Asked for feedback on the first mailing on GCWeb update, it was sent only to members of the monthly meeting but others, limited to GC, can subscribe.
+* Major change described by GCWeb v12.0.0 must not be applied, please wait for GCWeb v13.0.0 and guidance from DTO
+* Went through all recents changes in wet-boew and GCWeb
+* David asked about whether "Bootstrap class names are the same in Bootstrap 4 vs 5:
+	* Further discussion will be needed in the future
+	* Migration script, at least the logic, will be available to implementer but not until at least after WET 5.0 is released.
 
 2022-10-20 (13 participants)
 * Attendees department: TBS; TBS (DTO); ESDC; ESDC (PP); ESDC (Accessibility)
