@@ -34,13 +34,14 @@ If you have any questions in regards of one of the above design decision, please
 	<h2>Presented</h2>
 	<ul>
 		<li><a href="14.html">Design decision 14: Semantic Versioning public API for wet-boew, GCWeb and GCWeb Jekyll</a></li>
+		<li><a href="15.html">Design decision 15: Removal of trailing slash for void elements (self-closing tags)</a> - <a href="15-fr.html" lang="fr">Version Française</a></li>
 	</ul>
 </section>
 
 <section>
 	<h2>Proposed (Going to be presented)</h2>
 	<ul>
-		<li><a href="15.html">Design decision 15: Removal of trailing slash for void elements (self-closing tags)</a> - <a href="15-fr.html" lang="fr">Version Française</a></li>
+		<li>None</li>
 	</ul>
 </section>
 
