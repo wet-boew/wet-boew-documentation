@@ -3,12 +3,35 @@ published: true
 layout: default-theme-wet-boew-en
 title: Meeting summary - WET-BOEW documentation
 description: Summary of what has been discussed at the meeting.
-modified: 2022-12-16
+modified: 2023-01-30
 ---
 
 Summary of what has been discussed at the meeting.
 
 ## Monthly meeting
+
+2023-01-26 (23 participants)
+* Attendees department: TBS; TBS (DTO); PCO; CRA; ESDC; ESDC (CDTS); ESDC (A11Y); SSC; NRCAN
+* General: 
+	* Debrief of recent releases;
+	* No honourable mentions.
+* Projects:
+	* Accessibility: PP working on a complete list of components to assess; aiming for having WET fully compliant with WCAG 2.1 AA with respect with the April 2024 timeline on new content being published
+* Experiments:
+	* Provided demo of SVG image map Méli-mélo
+* Registry:
+	* Reviewed DD-14: redefined and renamed parts of the API, such as:
+		* interaction patterns into two groups
+		* Measure changed to Dimension
+		* Visual impact on end-user (public) will be presented during the next monthly meeting
+	* DD-12 discussed: Stacked header will be revisited and research completed eventually
+		* Nick raised a vague temporal marker "last summer"
+	* DD-15 update: status-quo, awaiting next step
+		* Eric to add comment about this topic
+* Questions/Comments:
+	* Nick recommended better traceability for IE11 support
+	* Christopher proposed to have a banner for IE11 users, Pierre discussed feasibility but diverted the question to DTO (awaiting answer)
+	* Eric followed up with suggestion to add browser support as part of privacy links
 
 2022-12-15 (16 participants)
 * Attendees department: TBS; PCO; CRA; ESDC; SSC; IRCC
