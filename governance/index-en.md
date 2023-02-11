@@ -18,7 +18,7 @@ If you have any question please submit an github issue. If you want to participa
 Documents created via those meeting will be published on the wet-boew website.
 
 
-## Roadmap meeting
+## Monthly meeting
 
 * **Goal:** Manage the roadmap of WET, maintain the API versioning information and oversight projects/activities related to WET.
 * **Frequency:** One/two hours every month aimed for Thursday afternoon on the third week.
@@ -32,7 +32,7 @@ Documents created via those meeting will be published on the wet-boew website. S
 
 ## To participate
 * **Technical review meeting:** You can start by making contribution like submitting PR and participating in open issue.
-* **Roadmap meeting:** By pertinence for the wet-boew project.
+* **Monthly meeting:** By pertinence for the wet-boew project.
 
 
 

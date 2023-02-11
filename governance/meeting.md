@@ -2,11 +2,11 @@
 published: true
 layout: default-theme-wet-boew-en
 title: Meeting summary - WET-BOEW documentation
-description: Summary of what has been discussed at the meeting.
+description: Summary of what has been discussed at meetings.
 modified: 2023-01-30
 ---
 
-Summary of what has been discussed at the meeting.
+Summary of what has been discussed at meetings.
 
 ## Monthly meeting
 
