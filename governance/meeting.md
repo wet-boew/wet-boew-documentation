@@ -3,13 +3,33 @@ published: true
 layout: default-theme-wet-boew-en
 title: Meeting summary - WET-BOEW documentation
 description: Summary of what has been discussed at meetings.
-modified: 2023-01-30
+modified: 2023-03-03
 ---
 
 Summary of what has been discussed at meetings.
 
 ## Monthly meeting
-
+2023-02-23 (19 participants)
+* Attendees department: TBS; PCO; CRA; ESDC; SSC; NRCAN
+* General: 
+	* Debrief of recent releases; 
+    * Honorable mentions :  
+		* Json manager plugin Minor update (Added the web content extractor functionality during the json transformation)
+		* Apply fixes to GCSubway stabilization (not stable yet still working on its stabilization)
+		* Apply fixes to the doormat links (hotfix)
+		* Update the scrubbing script function to remove potential personal information from strings
+* Projects:
+    * Accessibility: PP prioritizing the assessment of the most used components (193 ) identified in the WCAG UPGRADE 2023 List : few assessments have been done so far, the remaining assessments components are still  in progress, and will be published for transparency 
+       * Reviewed Scaffolding page component new feature under the common components Section added recently 
+* Registry:
+    * Reviewed DD-14: No update needed since the last meeting: redefined and renamed parts of the API, such as:
+      * Measure has changed to Dimension
+      * Visual impact on end-user (public) still in Progress
+      * Evaluating additional options will be discussed in the next meeting (for instance adding a message on the top and the bottom of the page to inform users this page contains or uses provisional feature)
+* Questions/Comments:
+    * No questions or comments related to the recent or previous releases.
+    * discussions related to design systems.
+      
 2023-01-26 (23 participants)
 * Attendees department: TBS; TBS (DTO); PCO; CRA; ESDC; ESDC (CDTS); ESDC (A11Y); SSC; NRCAN
 * General: 
