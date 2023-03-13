@@ -28,7 +28,9 @@ Summary of what has been discussed at meetings.
       * Evaluating additional options will be discussed in the next meeting (for instance adding a message on the top and the bottom of the page to inform users this page contains or uses provisional feature)
 * Questions/Comments:
     * No questions or comments related to the recent or previous releases.
-    * discussions related to design systems.
+    * discussions related to design systems
+      * Questions about the submission process of a new component for experimentation
+      * Joining the wet office hours to get the assistance needed, and suggesting to do more meetings especially to discuss system design issues were proposed.  
       
 2023-01-26 (23 participants)
 * Attendees department: TBS; TBS (DTO); PCO; CRA; ESDC; ESDC (CDTS); ESDC (A11Y); SSC; NRCAN
