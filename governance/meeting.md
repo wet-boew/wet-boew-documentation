@@ -9,6 +9,26 @@ modified: 2023-03-03
 Summary of what has been discussed at meetings.
 
 ## Monthly meeting
+2023-03-29 (20 participants)
+* Attendees department: TBS; CRA; ESDC; NRCAN; SSC; PCO
+* General: 
+    * Honorable mentions in recent releases since the last monthly meeting in WET :  
+		* New provisional feature was added called Tag Filter plugin which is a good candidate to replace data table for a small set of data that is presented in a table, or in cards it allows to filter the data set needed.
+	* Honorable mentions in recent releases since the last monthly meeting in GCWEB:  
+		* Report a Problem minor update, the JSON manager was added to it.
+* Projects:
+    * A major release of GCWEB is planned to be done in the next few weeks: once the coming updates happening now in addition to the new footer variant are applied properly, a GCWEB version 13 can be released.
+    * The possibility of presenting a prototype of how we should use a provisional feature such as GC Subway is still in progress it will probably be presented in an upcoming monthly meeting. To ensure that the departement using it is aware of the risk of a breaking change in case it is not implemented the way that it was designed for.
+    * Working on improving the page feedback tool in order to implement a new feedback pattern to eventually replace the RAP. Thanks to the JSON manager, the RAP is more independent and can give us more information from the client side.
+    * Accessibility project is progressing, some assessments has been published in GCWEB such as the ADD TO CALENDAR report page published recently.
+    * Instructions/Guidance on how to produce a JSON-LD and accepted conference report were released last week.
+* Registry:
+    * Reviewed DD-14: Update since the last meeting: redefined and renamed parts of the API, such as:
+      * A new dimension was added for pattern recognition.
+      * Out of scope changes were defined and activity items were added.
+* Questions/Comments:
+    * No questions or comments related to the recent or previous releases.
+    
 2023-02-23 (19 participants)
 * Attendees department: TBS; PCO; CRA; ESDC; SSC; NRCAN
 * General: 
