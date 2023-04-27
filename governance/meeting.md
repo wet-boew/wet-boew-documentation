@@ -12,7 +12,6 @@ Summary of what has been discussed at meetings.
 2023-04-20 (12 participants)
 * Attendees department: ESDC; NRCAN
 * General:
-    * No Honorable mentions since the last monthly meeting :  
 	* GCweb major version 13 was released on April 18: Few more adjustments were made to the version V6 of the footer. Therefore, the veterans link needs to be updated according to the latest version of the footer if the free style template is used.
 	* The GC web version 13 could not be released in AEM because of the ongoing labour disruption.
 * Projects:
