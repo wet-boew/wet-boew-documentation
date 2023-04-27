@@ -13,7 +13,7 @@ Summary of what has been discussed at meetings.
 * Attendees department: ESDC; NRCAN
 * General:
 	* GCweb major version 13 was released on April 18: Few more adjustments were made to the version V6 of the footer. Therefore, the veterans link needs to be updated according to the latest version of the footer if the free style template is used.
-	* The GC web version 13 could not be released in AEM because of the ongoing labour disruption.
+	* The GC web version 13 could not be released in AEM because of the ongoing labour disruption, however this has no impact nor side effect whatsoever on AEM authors and end users.
 * Projects:
     * Accessibility: In progress no major update to report since the last monthly meeting.
     * A step-by-step accessibility instructions/ guidance in JSON-LD format report was added recently in wet-boew with the possibility to generate dynamically the pages in both language once we have one JSON-LD report.
