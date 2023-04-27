@@ -9,6 +9,25 @@ modified: 2023-03-03
 Summary of what has been discussed at meetings.
 
 ## Monthly meeting
+2023-04-20 (12 participants)
+* Attendees department: ESDC; NRCAN
+* General:
+    * No Honorable mentions since the last monthly meeting :  
+	* GCweb major version 13 was released on April 18: Few more adjustments were made to the version V6 of the footer. Therefore, the veterans link needs to be updated according to the latest version of the footer if the free style template is used.
+	* The GC web version 13 could not be released in AEM because of the ongoing labour disruption.
+* Projects:
+    * Accessibility: In progress no major update to report since the last monthly meeting.
+    * A step-by-step accessibility instructions/ guidance in JSON-LD format report was added recently in wet-boew with the possibility to generate dynamically the pages in both language once we have one JSON-LD report.
+    * The feedback tool still in progress. No major update since the last meeting.
+* Registry:
+    * Reviewed DD-15:
+      * Added section of usage of XML syntax in HTML was defined to alleviate concerns identified through discussions.
+    * Reviewed DD-14: Semantic Versioning public API for wet-boew, GCWeb and GCWeb Jekyll was presented, the work on this page is still in continuous progress to improve the appearance and accuracy of it.
+* Questions/Comments:
+    * No questions or comments related to the recent or previous releases.
+    * Discussions related to the accessibility project progress from other departments point of view:
+      * There is still a lot of work to do to improve the accessibility in the different departments but going relatively “well” overall. That said, as long infographics and PDFS are still used, the complexity of improving the accessibility is considerable.
+        
 2023-03-29 (20 participants)
 * Attendees department: TBS; CRA; ESDC; NRCAN; SSC; PCO
 * General: 
