@@ -3,12 +3,37 @@ published: true
 layout: default-theme-wet-boew-en
 title: Meeting summary - WET-BOEW documentation
 description: Summary of what has been discussed at meetings.
-modified: 2023-03-03
+modified: 2023-07-12
 ---
 
 Summary of what has been discussed at meetings.
 
 ## Monthly meeting
+2023-06-29 (19 participants)
+* Attendees department: ESDC; NRCAN; CER; CRA; PCO; SSC
+* General :
+     * Honorable mention:
+          * The changes listed in WET-BOEW release notes are from now on replicated in GCweb’s as well. Instead of having to read the release notes of both WET and GCWEB, we can now be aware of all the changes once we consult only the GCWEB release notes.
+     * Update of Some of the features added since the last meeting:
+          * Activated the provisional feature for data tables.
+          * Added an update for the Canada day style (Méli-mélo).
+          * Added a disclaimer update in the search template.
+          * Added a feature to JSON manager: which is a data layer that can transform the data presented from the client side allowing more flexibility.
+          * Updated the JSON fetch.
+          * Apply fixes to DATA-AJAX in order the trigger automatically the inserted WET content.
+* Projects:
+    * Accessibility: A big progress has been done so far since the last monthly meeting. All the components that are essential are almost done pre-assessing. Few more components might be split in order to make it easy to work on them.
+    * An accessibility conformance report will be created per component in order to assess the accuracy of the assessments completed; it is considered as a step-by-step methodology toward the performance report of WCAG 2.1 AA. This methodology allows subdividing the assessment into multiple small ones, the next step in this process will be the quality check according to the success criteria the work would be one of these three either (satisfied, not satisfied, or further testing needed).
+    * A new feature that allows to generate dynamically the pages in both languages (and multi languages if wanted) once we have one compliant JSON-LD report was added.
+    * A new feature that allows to add images or screen shots in the JSON file will be added soon, this feature is now under testing and will be included in one of the next releases of WET-BOEW.
+* Registry:
+    * Reviewed DD-14: For defining Semantic Versioning public API for wet-boew, in terms of which aspect or dimension we need to monitor to decide if it’s a major, minor, or a patch a few updates to describe the different type of changes were added, the work on this page is still in continuous progress to improve the appearance and accuracy of it.
+* Questions/Comments:
+   * No questions or comments related to the recent or previous releases.
+   * Discussion and questions related to the upcoming releases:
+      * Discussions related to the relevancy of the new feature coming soon of adding an image or a screenshot in the JSON file, further explanation was given to answer this question.
+      * Discussions related to the purpose of the “share this page” plugin and if it has been going into any recent review so we can remove it or change it. It’s been concluded that the plugin could be customizable/configurable so that one could decide which social media will be used to share the page.
+     
 2023-04-20 (12 participants)
 * Attendees department: ESDC; NRCAN
 * General:
