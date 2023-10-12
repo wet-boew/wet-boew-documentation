@@ -21,7 +21,6 @@ Summary of what has been discussed at meetings.
          * Horizontal description List: Fix left alignment for long descriptions and improve the horizontal styling.
          * New provisional feature added: Pagination plugin: It is now possible with this plugin to display pagination to data sets.
          * GC feature link used on the home page and on institutional pages:  Added different colors as requested by some institutions like the pink color or teal color for example.
-
      * Honorable mention:
         * A new section named “wet-boew” was added recently in the GCWeb home page which will contain from now on all the new features as well as the accessibility reports of wet-boew. This is a first step towards phasing out the WET-BOEW style guide.
 * Projects:
