@@ -3,12 +3,46 @@ published: true
 layout: default-theme-wet-boew-en
 title: Meeting summary - WET-BOEW documentation
 description: Summary of what has been discussed at meetings.
-modified: 2023-07-12
+modified: 2023-10-12
 ---
 
 Summary of what has been discussed at meetings.
 
 ## Monthly meeting
+2023-10-05 (14 participants)
+* Attendees department: TBS; CRA; ESDC; NRCAN; SSC
+* General :
+    * Update of Some of the important features added since the last meeting:
+         * The new plugin PFT (page feedback tool): is in the soft launch phase, the communication about that has not been sent yet, a few adjustments are still needed to stabilize the feature/plugin.
+         * Randomize plugin: Added attribute values in the randomization option: For instance, the ability to randomize the background image thanks to this new update.
+         * Data-json: added conditional template.
+         * Multimedia Player: Added full screen button to multimedia video controls for HTML and YouTube videos.
+         * Few patches were applied so far to the tag filter plugin which has been used recently in different projects and contexts such as the PSPC events calendar.
+         * Horizontal description List: Fix left alignment for long descriptions and improve the horizontal styling.
+         * New provisional feature added: Pagination plugin: It is now possible with this plugin to display pagination to data sets.
+         * GC feature link used on the home page and on institutional pages:  Added different colors as requested by some institutions like the pink color or teal color for example.
+     * Honorable mention:
+        * A new section named “wet-boew” was added recently in the GCWeb home page which will contain from now on all the new features as well as the accessibility reports of wet-boew. This is a first step towards phasing out the WET-BOEW style guide.
+* Projects:
+    * Accessibility project is ongoing, all the working examples that are missing have been added in GCWeb, there are some PRs that are still in progress, some essential components are still being assessed for producing the accessibility reports in conformance to the WCAG 2.2 AA success criterion.
+* Experiments :
+    * A new feature added recently is still under experimentation which allows us to know the distance in km between two locations, which will make it easy for users to select for example the nearest event to where they are located.
+    * The use of the term “Méli-mélo” will be replaced by a more self-explanatory name such as experimentation.
+    * It was explained during the meeting that the different “Méli-mélo” compilations are named after National Parks, for instance <b>Kejimkujik</b>.
+* Registry:
+    * Reviewed DD-14: Update since the last meeting: 
+      * Addition of the following dimension
+          * Basic HTML mode behaviour (testable)
+          * Technical accessibility consideration (informational)
+          * Other notable technical consideration (informational)
+      * Editorial change and defined some new terms to help with measuring and documenting the API state
+          * Renaming the defined “variant” for “change set”
+          * Renaming “Function, callback and events” for “logic”
+          * Term: variation, implementation, change set, iteration
+* Questions/Comments:     
+   * No questions or comments related to the recent or previous releases.
+   * Lively discussion related to the different design systems / styles; the move of DTO and CDS is estimated to have an impact on this situation, but nothing worth of mention yet. 
+   
 2023-06-29 (19 participants)
 * Attendees department: ESDC; NRCAN; CER; CRA; PCO; SSC
 * General :
