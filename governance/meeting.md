@@ -9,6 +9,27 @@ modified: 2023-10-12
 Summary of what has been discussed at meetings.
 
 ## Monthly meeting
+2023-11-02 (17 participants)
+* Attendees department: TBS; CRA; CER; ESDC; SSC
+* General :
+     * Honorable mention:
+        * PP was a part of a demo session of GC design system in action in collaboration with DTO recently.
+        * PFT: The plugin works well and ready to be released in AEM shortly.
+             * The major release that contains the PFT tool implementation is currently on hold, until an agreement between PP management, and DTO is settled.
+        * A newsletter will be sent just after the upcoming major release is live in Canada.ca, summarizing all the changes that have been done since the last major release of GCWeb, the last newsletter of the GCWeb v13.0.0 was sent in June.
+        * New documentation template developed and used in GCWeb documentation pages, for instance the documentation page of the page feedback tool where it is used to give instructions for different type of users/implementations: Standard mode (wet-boew), GCWeb Jekyll, and MWS users.
+    * Went over GitHub’s release notes added since the last meeting.
+* Projects:
+    * Accessibility project is still an active project among the priorities but no progress worth to mention yet since the last meeting.
+* Registry:
+   * DD-14: No update since the last meeting.
+* Questions/Comments:     
+  * No questions or comments related to the recent or previous releases.
+  * A question about the possibility to have a guidance on how to use the new documentation template, the exact date for that not known yet, since the feature is still under experimentation and testing.
+  * Questions related to the possibility of customizing or changing the PFT “theme”; in fact, on AEM the “theme” will be automatically determined from the URL, but a “section” still can be set.
+  * Also, the difference between RAP and the PFT was clarified as the PFT will be proactive in a way that collect feedback from the client side unlike the RAP section used previously.
+  * Again for PFT, it was confirmed that the title does carry “- Canada.ca” since it is part of the title element of all pages on Canada.ca.
+    
 2023-10-05 (14 participants)
 * Attendees department: TBS; CRA; ESDC; NRCAN; SSC
 * General :
