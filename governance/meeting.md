@@ -16,6 +16,7 @@ Summary of what has been discussed at meetings.
          * The major release of GCWeb was out officializing the stabilization of the Page Feedback Tool (PFT), removing the soft launch alert from the documentation, and officially deprecating the report a problem but the code base is still there for at least a year for anyone to continue using it. If one would like to monitor or track their pages with the PFT, then the Digital Transformation Office (DTO) guidance should be followed.
          * The GCWeb mailout for last major release v14.0.0 has been sent out successfully to its subscribers.
          * An update was applied to the top menu first-level “Canada and the world” link: changing http to https.
+         * Added a new feature: Application template. This is to better align with the CDTS product.
          * Its worth to mention that the recent release of this week has been deployed in GitHub only but won’t be deployed to AEM until around mid-January 2024.
 * Projects:
     * Accessibility conformance to WCAG 2.1 AA: No major update since the last meeting.
