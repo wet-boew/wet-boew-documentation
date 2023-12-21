@@ -3,12 +3,30 @@ published: true
 layout: default-theme-wet-boew-en
 title: Meeting summary - WET-BOEW documentation
 description: Summary of what has been discussed at meetings.
-modified: 2023-11-15
+modified: 2023-12-21
 ---
 
 Summary of what has been discussed at meetings.
 
 ## Monthly meeting
+2023-12-14 (19 participants)
+* Attendees department: TBS; CRA; ESDC; NRCAN; SSC; PCO
+* General :
+    * Update of Some of the important features added since the last meeting:
+         * The major release of GCWeb was out officializing the stabilization of the Page Feedback Tool (PFT), removing the soft launch alert from the documentation, and officially deprecating the report a problem but the code base is still there for at least a year for anyone to continue using it. If one would like to monitor or track their pages with the PFT, then the Digital Transformation Office (DTO) guidance should be followed.
+         * The GCWeb mailout for last major release v14.0.0 has been sent out successfully to its subscribers.
+         * An update was applied to the top menu first-level “Canada and the world” link: changing http to https.
+         * Its worth to mention that the recent release of this week has been deployed in GitHub only but won’t be deployed to AEM until around mid-January 2024.
+* Projects:
+    * Accessibility conformance to WCAG 2.1 AA: No major update since the last meeting.
+* Experiments :
+    * The use of the term “Méli-mélo” was replaced by a more self-explanatory name as explained previously: The term "Experimental” is now used instead, despite that the term “Méli-mélo” will remain at a deeper technical level.
+* Registry:
+    * DD-14: No update since the last meeting.
+* Questions/Comments:     
+   * No questions or comments related to the recent or previous releases.
+   * Active discussion about the exploration of Artificial Intelligence (AI) around the different departments; for coding support, text writing enhancements, and Generative AI amongst other subjects.
+
 2023-11-02 (17 participants)
 * Attendees department: TBS; CRA; CER; ESDC; SSC
 * General :
