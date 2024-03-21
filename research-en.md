@@ -79,4 +79,5 @@ List of finding and ongoing research related to WET and it's features
 * [2018-11 - WET 5 - Augmented Design - Early prototype presentation](research/2018-11-wet5-augmented-design-presentation.html)
 * [2018-3 - WET 5 kickoff documentation material](research/2018-3-wet5-kickoff.html)
 * [2018-2 - Browser usage and platform as March 2018](research/2018-2-browser-usage.html)
-* [2020-39 - Browser usage as September 2020](research/2020-39--browser-usage.html)
+* [2020-39 - Browser usage as of September 2020](research/2020-39--browser-usage.html)
+* [2024-41 - Browser usage as of March 2024](research/2024-41-browser-usage.html)
