@@ -10,18 +10,13 @@ modified: 2024-03-21
 
 Environmental scan of top browser statistic in order to provide guidance for testing and to better define what browser need to be supported. Usually, the browser supported include the popular ones and the latest version of every major browser.
 
-## List of top browser (Conclusion)
+## Conclusions
 
-1. Chrome
-2. Chrome mobile
-3. Safari
-4. Mobile Safari
-5. Firefox
-6. IE11
-7. Edge
+- The most used browsers are: **Chrome**, **Safari**, and **Edge**.
+- The most used screen size is **320x480**.
+- The most used device type is **mobile phones**.
 
 ## Source
-
 * Canada.ca, a Central agency
 * StatCounter Canada
 * StatCounter Global
