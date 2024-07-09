@@ -3,12 +3,29 @@ published: true
 layout: default-theme-wet-boew-en
 title: Meeting summary - WET-BOEW documentation
 description: Summary of what has been discussed at meetings.
-modified: 2023-12-21
+modified: 2024-07-09
 ---
 
 Summary of what has been discussed at meetings.
 
 ## Monthly meeting
+2024-06-27 (11 participants)
+* Attendees department: TBS; PSPC; SC; ESDC; SSC; NRCAN
+* General: 
+	* Debrief of recent releases; 
+    * Honorable mentions :
+		* In a collaboration between PP and CDT, the process of moving from WET-BOEW/GCWeb towards the Design System has been initiated.
+		* As an experimentation, an integration of the card pattern of the Design System using the grid has been initiated by PP. 
+		* For the next 12 months, Pierre and David will be working in ensuring that the look and feel of the GC Design System and GCWeb will be the same or as close as possible. When this is complete, GCWeb will be in maintenance only mode so the creation and migration of plugins will be in the Design System.
+	* Update of Some of the features added since the last meeting:
+		* Deprecation of V1 of the institutional landing page so in a year from now, related templates and CSS will be removed.
+		* Update of the "Canada and World" link in the footer.
+* Next coming weeks:
+		* Work on the topic and theme templates and integration to GCWeb and Canada.ca.
+* Questions/Comments:
+    * No questions or comments related to the recent or previous releases.
+    * discussions related to design systems.
+
 2023-12-14 (19 participants)
 * Attendees department: TBS; CRA; ESDC; NRCAN; SSC; PCO
 * General :
