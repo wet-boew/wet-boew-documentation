@@ -9,6 +9,27 @@ modified: 2024-07-09
 Summary of what has been discussed at meetings.
 
 ## Monthly meeting
+2024-10-31 (15 participants)
+* Attendees department: CRA; PSPC; ESDC; SSC; NRCAN
+* General: 
+	* Debrief of recent releases; 
+    * Honorable mentions :
+		* The topic page has been updated to the new template.
+		* The previous topic template will be deprecated during the next major release, expected in the coming month or early December. Custom styles used in version one will remain functional for at least one year following the official announcement email. After that period, the template will be removed unless further requests for extension are made or if it is determined that the old template is no longer in use. 
+		* The GC Design System (GCDS) is still in its alpha state but is expected to be available soon. Migration is underway, with a pilot program planned for AEM authors and users to test GCDS cards on live pages. This will help evaluate the authoring experience, quality control, and performance, as well as identify any gaps or issues that need addressing.
+	* Update of Some of the features added since the last meeting:
+		* Stacked Header Pattern: A new pattern for stacked headers has been added. This now supports the hgroup element, and the style is applied inside the element. Further details will be shared after the release of the major GCWeb version.
+		* Simplified Page Details: The "Share This Page" feature has been removed from the page details section for simplicity. The revised version now has a more streamlined design with a single column layout.
+        * Topic Template Update: Modifications have been made to stabilize the template, including the removal of provisional classes in the code.
+        * Contributors and Social Media Components: These components have been updated for better integration and functionality.
+        * Experimental Feature Checklist: The checklist has been updated with better descriptions of the requirements and impacts on the department and public when experimental feature changes are introduced.
+* Next coming weeks:
+		* The GCDS pilot program will begin, inviting AEM authors and users to test the new system and provide feedback on the user experience, quality control, and page performance.
+        * Final approval from senior management is required before going live with the GCDS cards in AEM.
+* Questions/Comments:
+    * No questions or comments related to the recent or previous releases.
+    * discussions related to design systems.
+      
 2024-06-27 (11 participants)
 * Attendees department: TBS; PSPC; SC; ESDC; SSC; NRCAN
 * General: 
